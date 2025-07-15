@@ -1,0 +1,31 @@
+﻿<ProjectConfiguration>
+  <Settings>
+    <HiddenComponentWarnings />
+    <IgnoredTests>
+      <NamedTestSelector>
+        <TestName>TDD_Course.FibonacciTests.TestFibonacci(1,1)</TestName>
+      </NamedTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>TDD_Course.FizzBuzzTests</FixtureName>
+      </FixtureTestSelector>
+      <NamedTestSelector>
+        <TestName>TDD_Course.FibonacciTests.TestFibonacci(1,2)</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>TDD_Course.FibonacciTests.TestFibonacci(2,3)</TestName>
+      </NamedTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>TDD_Course.FibonacciTests</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>TDD_Course.TicTacToeTests</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>TDD_Course.StackTests</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>TDD_Course.ImmutableStackTests</FixtureName>
+      </FixtureTestSelector>
+    </IgnoredTests>
+  </Settings>
+</ProjectConfiguration>

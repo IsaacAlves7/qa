@@ -1,0 +1,13 @@
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\TicTacToeGame.exe.config
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\TicTacToeGame.exe
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\TicTacToeGame.pdb
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\TDD-Course.exe
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\nunit.framework.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\TDD-Course.pdb
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\TDD-Course.exe.config
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\nunit.framework.pdb
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\bin\Debug\nunit.framework.xml
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\obj\Debug\TicTacToeGame.csprojResolveAssemblyReference.cache
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\obj\Debug\TicTacToeGame.csproj.CoreCompileInputs.cache
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\obj\Debug\TicTacToeGame.exe
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TicTacToeGame\obj\Debug\TicTacToeGame.pdb

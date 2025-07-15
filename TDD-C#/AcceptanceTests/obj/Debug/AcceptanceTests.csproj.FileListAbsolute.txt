@@ -1,0 +1,16 @@
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\AcceptanceTests.dll.config
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\AcceptanceTests.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\AcceptanceTests.pdb
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\Newtonsoft.Json.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\nunit.framework.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\System.ValueTuple.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\TDD-Course.exe
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\TechTalk.SpecFlow.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\TDD-Course.pdb
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\TDD-Course.exe.config
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\Newtonsoft.Json.xml
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\bin\Debug\nunit.framework.xml
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\obj\Debug\AcceptanceTests.csprojResolveAssemblyReference.cache
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\obj\Debug\AcceptanceTests.csproj.CoreCompileInputs.cache
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\obj\Debug\AcceptanceTests.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\AcceptanceTests\obj\Debug\AcceptanceTests.pdb

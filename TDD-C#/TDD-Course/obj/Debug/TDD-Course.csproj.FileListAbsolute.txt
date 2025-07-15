@@ -1,0 +1,20 @@
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\bin\Debug\TDD-Course.exe.config
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\bin\Debug\TDD-Course.exe
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\bin\Debug\TDD-Course.pdb
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\obj\Debug\TDD-Course.csprojResolveAssemblyReference.cache
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\obj\Debug\TDD-Course.csproj.CoreCompileInputs.cache
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\obj\Debug\TDD-Course.exe
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\obj\Debug\TDD-Course.pdb
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\bin\Debug\nunit.framework.dll
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\bin\Debug\nunit.framework.pdb
+c:\users\илья\documents\visual studio 2017\Projects\TDD-Course\TDD-Course\bin\Debug\nunit.framework.xml
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\bin\Debug\TDD-Course.exe.config
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\bin\Debug\TDD-Course.exe
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\bin\Debug\TDD-Course.pdb
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\bin\Debug\nunit.framework.dll
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\bin\Debug\nunit.framework.pdb
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\bin\Debug\nunit.framework.xml
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\obj\Debug\TDD-Course.csprojResolveAssemblyReference.cache
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\obj\Debug\TDD-Course.csproj.CoreCompileInputs.cache
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\obj\Debug\TDD-Course.exe
+Q:\OneDrive\Documents\Udemy-Course\12-TDD-App\TDD-Course-Current\TDD-Course\obj\Debug\TDD-Course.pdb
