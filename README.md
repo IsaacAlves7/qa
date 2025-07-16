@@ -189,12 +189,15 @@ Scenario: Login com credenciais válidas
 Exemplo 2: Pesquisar produto
 
 ```gherkin
-Feature: Pesquisar produto
+Funcionalidade: Pesquisar produto
+  Eu como cliente
+  Quero fazer pesquisas no site da OLX
+  Para buscar por produtos
 
-Scenario: Buscar produto com sucesso
-  Given: 
-  When: 
-  Then:
+Cenário: Buscar produto com sucesso
+  Dado que estou no site da OLX como um comprador de SP
+  Quando eu fizer uma busca por um produto
+  Então serão exibidos os resultados de busca para o produto em SP
 ```
 
 5. **Ferramentas de BDD**: Existem várias ferramentas que suportam BDD, ajudando a automatizar as especificações executáveis. Algumas das ferramentas populares incluem <a href="">Cucumber</a> (para várias linguagens como Java, Ruby), <a href="">SpecFlow</a> (para .NET), <a href="">Behave</a> (para Python), entre outras.
