@@ -21,6 +21,19 @@ Vantagens dos testes:
 - Evitar a continuação dos bugs
 - Redução de Custos
 
+A definição de “pronto” nada mais é do que um contrato firmado entre o time e o PO, que lista de forma clara os requisitos que determinam que uma User Story está completa.
+
+E a resposta é simples: normalmente, quando perguntam se uma funcionalidade ou story está pronta, respondem: “sim, mas falta testar…”.
+
+ Isso significa que ao definir o conceito de “pronto”, é importante que o QA – que faz parte do time – esteja envolvido e possa sensibilizar os membros do time e PO para que os testes façam parte deste conceito.
+
+Dessa forma, garantimos:
+
+- Integração entre desenvolvedores e QA;
+- Maior qualidade do time;
+- Que não haja desentendimentos desnecessários;
+- Story testada e com aceite formal. 
+
 ## [QA] Custos x Fases
 Regra 10 de Myers
 
