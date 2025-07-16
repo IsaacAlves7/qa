@@ -1,4 +1,4 @@
-# QA - Assurance
+# 👨🏾‍🔬 QA - Assurance
 No antigo Egito, há aproximadamente 4 mil anos, para que as construções fossem feitas com **qualidade**, definiu-se o cúbito, que era a distância do cotovelo à ponta do indicador do faraó.
 
 Uma das primeiras tentativas da humanidade de _padronizar_ as medidas, gerando qualidade nas construções.
