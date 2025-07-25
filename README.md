@@ -1,7 +1,5 @@
-# 👨🏾‍🔬 QA - Assurance
-No antigo Egito, há aproximadamente 4 mil anos, para que as construções fossem feitas com **qualidade**, definiu-se o cúbito, que era a distância do cotovelo à ponta do indicador do faraó.
-
-Uma das primeiras tentativas da humanidade de _padronizar_ as medidas, gerando qualidade nas construções.
+# 👨🏾‍🔬 QA - Quality Assurance
+No antigo Egito, há aproximadamente 4 mil anos, para que as construções fossem feitas com **qualidade**, definiu-se o cúbito, que era a distância do cotovelo à ponta do indicador do faraó. Uma das primeiras tentativas da humanidade de _padronizar_ as medidas, gerando qualidade nas construções.
 
 Nesta escultura, temos na base um compilado com as regras e leis a serem seguidas, impostas por Hamurabi, Rei da Babilônia, que era aplicada a cidadãos livres, comerciantes, escravos, etc. Uma das primeiras tentativas de _padronizar_ as regras de convívio da sociedade, há aproximadamente 3.800 anos atrás.
 
