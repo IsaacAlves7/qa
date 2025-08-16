@@ -1,11 +1,14 @@
 # 👨🏾‍🔬 QA - Quality Assurance
 Imagine-se como um entusiasta da tecnologia, ansioso por entender como um software pode ser eficaz e confiável. Como garantir que um software atenda às expectativas dos usuários e funcione sem falhas? Esse dilema cria um conflito cognitivo que nos impulsiona a mergulhar mais fundo.
 
-A história da Qualidade de Software nos mostra a evolução dos processos, desde as abordagens mais tradicionais até as metodologias ágeis modernas. Aprender sobre modelos de qualidade, como o ISO 25000, e as dimensões da qualidade, como funcionalidade e usabilidade, enriquece nossa compreensão. As peças se encaixam, transformando a questão inicial em um quebra-cabeça conceitual.
+A história da **Qualidade de Software** nos mostra a evolução dos processos, desde as abordagens mais tradicionais até as metodologias ágeis modernas. Aprender sobre modelos de qualidade, como o ISO 25000, e as dimensões da qualidade, como funcionalidade e usabilidade, enriquece nossa compreensão. As peças se encaixam, transformando a questão inicial em um quebra-cabeça conceitual.
  
 Imagine que você é um membro de uma equipe de desenvolvimento de software. Você é desafiado a aplicar os conceitos aprendidos em um cenário real. Você participa de revisões, que são análises colaborativas do código, e auditorias, que avaliam os processos utilizados. Essa simulação o coloca no ambiente profissional, onde as decisões têm impacto direto na qualidade do software.
 
 Ao concluir as revisões e auditorias, você reflete sobre os processos e a eficácia das técnicas aplicadas. Reconhece a importância de identificar falhas cedo e como as revisões sistemáticas podem prevenir erros custosos. Você compreende que, assim como o software, o aprendizado é um processo contínuo (Continuous Learning). E à medida que você assimila esses conceitos, torna-se mais apto a contribuir para o desenvolvimento de software de alta qualidade, solidificando sua jornada na compreensão da Qualidade de Software
+
+> [!Tip]
+> Vamos recordar a importância das boas práticas de programação como um elemento essencial na busca pela qualidade de software. Revisitarmos a noção de código limpo e bem estruturado, que não só facilita a manutenção, mas também reduz erros e falhas futuras. Recordar como padrões de nomenclatura consistentes, comentários claros e modularização do código são cruciais para criar um produto de software robusto e de fácil compreensão. Isso nos lembrará que a qualidade não se limita apenas aos processos de teste, mas começa desde a concepção do código-fonte.
 
 No antigo Egito, há aproximadamente 4 mil anos, para que as construções fossem feitas com **qualidade**, definiu-se o cúbito, que era a distância do cotovelo à ponta do indicador do faraó. Uma das primeiras tentativas da humanidade de _padronizar_ as medidas, gerando qualidade nas construções.
 
