@@ -144,6 +144,336 @@ Com as alterações que realizamos o tempo todo em nosso software, como podemos 
 - Desempenho bom em testes;
 - Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
+## [QA] Unit testing
+<img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Mock-pass-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white">
+
+<img src="https://em-content.zobj.net/source/microsoft-teams/363/test-tube_1f9ea.png" height="77" align="right">
+
+Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
+
+Portanto, são testes que verificam se uma parte específica do código, costumeiramente a nível de função, está funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. 
+
+> 🧪 Os testes de unidade verificam unidades, como métodos, funções e componentes dentro do software. São os testes mais rápidos, baratos de escrever e sua manutenção é simples. Para verificar o <a href="">comportamento</a> dessas pequenas partes isoladas do sistema sem dependências externas como banco de dados, APIs, arquivos ou rede. Por isso, eles são rápidos de executar, baratos de manter e oferecem feedback imediato durante o desenvolvimento. Como testam unidades isoladas, são fundamentais para garantir a estabilidade do código à medida que ele evolui.
+
+Uma **unidade** (unit) é a menor parte testável de um programa de computador, no programação procedural uma unidade pode ser uma função individual ou um procedimento do nosso código, imagine que toda função é uma pequena fábrica que fabrica alguma coisa que pode sair, sem a necessidade de entrar algo. Idealmente, cada teste de unidade é independente dos demais, o que possibilita ao programador testar cada módulo isoladamente.
+
+Relação de conceitos de testes de unidade: 
+
+**I/O Input-Output** (Entrada e Saída): são todas as entradas e saídas existentes na programação. Portanto, os testes de unidade servem para front-end e back-end. Eles são uma prática essencial no desenvolvimento de software, pois ajudam a garantir a qualidade do código e a facilitar a manutenção. Os testes de unidade são realizados em pequenas unidades de código, como funções, componentes ou módulos. Eles são projetados para testar a funcionalidade e a lógica dessas unidades de forma isolada. Isso significa que os testes de unidade não dependem de outros componentes ou módulos para funcionar.
+
+No **front-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de componentes de interface do usuário, como botões, formulários e listas. Eles também são usados para testar a interação entre componentes.
+
+No **back-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de serviços, APIs e outros componentes de back-end. Eles também são usados para testar a integração entre componentes de back-end.
+
+Os testes de unidade oferecem uma série de benefícios, incluindo:
+
+<img src="https://uploads.toptal.io/blog/image/91302/toptal-blog-image-1434578005589-4e6897ec04cc0b3c7075b9b011ee915c.gif" height="377" align="right">
+
+- Aumento da qualidade do código: Os testes de unidade ajudam a identificar erros e bugs no código antes que eles sejam integrados ao sistema. Isso resulta em um código mais confiável e estável.
+
+- Facilidade de manutenção: Os testes de unidade facilitam a manutenção do código, pois permitem verificar se as alterações não afetaram o funcionamento de outras partes do código.
+
+- Agilidade no desenvolvimento: Os testes de unidade permitem que os desenvolvedores tenham mais confiança ao realizar refatorações ou adicionar novos recursos. Isso permite que as equipes desenvolvam de forma mais rápida e eficiente.
+
+Portanto, os testes de unidade são uma prática importante para qualquer desenvolvedor, independentemente da área de atuação. 
+
+Sobre os processos de desenvolvimento de software, no terceiro passo no nível de queda do modelo cascata e no quarto passo do modelo RAPID, entramos na parte de codificação e testes unitários. Ou seja, é a construção do sistema em si. Então, só depois de eu entender todo o problema, só depois de eu saber das necessidades e se é possível ou viável para começar a desenvolver. Muitas vezes, para começar a gente se pergunta se é para pegar logo no processo de codificação, ou seja, a desenvolver logo a aplicação o mais rápido possível. No entanto, percebe-se que o tanto de retrabalho que isso gerava, fazia não valer a pena. E fazia com que estourasse muito o orçamento nesse custo. Então, depois deu definir os requisitos, depois de realizar meus modelos de projetos e provar que aquilo é viável, eu então começo o desenvolvimento do meu software em si.
+
+Após o desenvolvimento e junto com o desenvolvimento, entram os testes unitários (unit tests - testes de unidade) que são definidos pelo próprio desenvolvedor onde eles tendem a testar a menor unidade do sistema. Por exemplo: Se eu estou desenvolvendo um sistema de cadastro de cliente, não importa o tipo do sistema (mercadinho, farmácia, padaria, comércio ou de uma grande empresa) e esse desenvolvedor que está escrevendo essas linhas de código de cadastrar um único usuário ou funcionário, por exemplo, ele vai desenvolver um caso de teste para que dado uma entrada (input), ele possa receber uma saída (output) esperada que seria: "usuário cadastrado com sucesso".
+
+Os frameworks de teste de unidade mais populares para **React.js** são:
+
+- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele é rápido, fácil de usar e oferece uma variedade de recursos, como testes de snapshot, mocking e asserções.
+
+- <a href="">Testing Library</a>: A Testing Library é uma biblioteca de utilitários para testes de componentes React. Ela fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
+
+- <a href="">Enzyme</a>: O Enzyme é uma biblioteca de teste de componentes React que fornece uma API poderosa e flexível para manipular o DOM e testar eventos.
+
+A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Jest é uma boa opção para projetos simples, enquanto frameworks como a Testing Library ou o Enzyme podem ser mais adequados para projetos mais complexos.
+
+Os frameworks de teste de unidade mais populares para **Vue.js** são:
+
+- <a href="">Vue Test Utils</a>: O Vue Test Utils é um conjunto de utilitários para testes de componentes Vue.js. Ele fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
+
+- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele também pode ser usado para testes de unidade em Vue.js.
+
+- <a href="">Karma</a>: O Karma é um framework de teste de unidade JavaScript que pode ser usado para executar testes em uma variedade de navegadores. Ele também pode ser usado para testes de unidade em Vue.js.
+
+A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Vue Test Utils é uma boa opção para projetos simples, enquanto frameworks como o Jest ou o Karma podem ser mais adequados para projetos mais complexos.
+
+O framework Python para web back-end chamado **Django** fornece um framework de teste padrão, chamado de **unittest**. Esse framework é baseado na biblioteca padrão unittest do Python e é adequado para testes unitários e de integração.
+
+Além do unittest, existem outros frameworks de teste de unidade disponíveis para Django. Alguns dos frameworks mais populares incluem:
+
+- <a href="">Pytest</a>: O Pytest é um framework de teste de unidade completo e flexível que oferece uma variedade de recursos, como assertion fixtures, parametrização de testes e testes de desempenho.
+
+- <a href="">Mock</a>: O Mock é um framework de mocking que permite simular o comportamento de objetos externos. Isso pode ser útil para testar a funcionalidade de componentes que dependem de outros componentes ou APIs externas.
+
+- <a href="">Selenium</a>: O Selenium é um framework de automação de testes que permite testar a interação com um navegador web. Isso pode ser útil para testar a funcionalidade de componentes de front-end.
+
+A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O unittest é uma boa opção para projetos simples, enquanto frameworks como Pytest e Mock podem ser mais adequados para projetos mais complexos.
+
+Sobre os conceitos técnicos a respeito de testes de unidades, temos:
+
+[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Java](https://img.shields.io/badge/java-17%2B-blue)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+[![Release](https://img.shields.io/github/release/rife2/tests-badge.svg)](https://github.com/rife2/tests-badge/releases/latest)
+[![GitHub CI](https://github.com/rife2/tests-badge/actions/workflows/bld.yml/badge.svg)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
+[![Tests](https://rife2.com/tests-badge/badge/com.uwyn/tests-badge)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/f92b16ca-c0a0-40ab-ab33-f8ec9f4cf619" height="77" align="right">
+
+✅ **Testes Válidos** (`pass`): São entradas e saídas de dados comuns ao sistema e pertencem ao processo normal. Não apresentam tratamento além do normal já programado. No caso de retorno deverá seguir os padrões estabelecidos e não permitir retornos fora das regras especificadas. Em testes unitários, estamos nos referindo a casos de teste que exercitam o comportamento correto e esperado da unidade de código sob condições normais (válidas), ou seja: Situações em que tudo ocorre como deveria. São aqueles testes que usam entradas válidas e esperadas, esperam resultados corretos, sem exceções ou erros. Confirmam que o comportamento da função está conforme o esperado.
+
+Características de testes válidos:
+
+| Característica              | Exemplo prático                                           |
+| --------------------------- | --------------------------------------------------------- |
+| Entrada no domínio esperado | CPF válido, número positivo, email formatado corretamente |
+| Estado inicial válido       | Usuário existente, banco conectado, produto em estoque    |
+| Fluxo normal do código      | Sem exceções, erros, ou retornos inesperados              |
+| Resultado esperado          | Retorno certo, estado alterado corretamente               |
+
+Exemplo simples em JavaScript: Aqui, `2` e `3` são valores válidos, e o retorno esperado (`5`) confirma o comportamento correto da função.
+
+<img src="https://img.shields.io/badge/Jest-1_pass_0_fail-limegreen?style=flat&logo=jest&logoColor=white">
+
+```javascript
+function somar(a: number, b: number): number {
+  return a + b;
+}
+
+test("soma dois números positivos", () => {
+  expect(somar(2, 3)).toBe(5); // ✅ teste válido
+});
+```
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/1e50bc84-048c-40c7-b7b8-98dfdeec38a2" height="77" align="right">
+
+❌ **Testes Inválidos** (`fail`): São entradas e saídas de dados não comuns ao sistema. Apresentam tratamento para validar o tipo de dado inválido ou situação. Pode apresentar até dois retornos, uma mensagem para um log no sistema e uma mensagem com formatação e escrita adequada ao usuário. São tão importantes quanto os testes válidos, porque ajudam a garantir que sua função se defenda bem contra entradas erradas, estados incorretos ou fluxos inesperados. São testes que usam entradas inválidas, incorretas ou fora do esperado; Esperam que o código falhe corretamente (com exceção, erro, ou retorno de falha); Verificam se o sistema é robusto contra dados errados ou uso indevido da função.
+
+Exemplo:
+
+```txt
+Dividir (x int,y int)=z int
+```
+
+Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma mensagem ao usuário, avisando que a operação é inválida. Caso a expressão seja um dado comum do sistema, a autorização para tal validação deverá ser do usuário, pois faz parte do conjunto de regras de negócio. Não existe retorno inválido sem um tratamento. O tratamento genérico será apenas para condições não visíveis na regra e uso do sistema.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/c0328294-f3e5-489f-8521-0d634275f7ae" height="77" align="right">
+
+👁️‍🗨️ **Domínio**: No domínio de testes, usamos testes unitários para validar a funcionalidade de cada componente do nosso domínio de negócio, refere-se à parte do sistema que é testada para garantir que a lógica de negócio e a funcionalidade do código estão corretas, os testes unitários focam em componentes individuais desse domínio.
+
+> [!Important]
+> É importante ressaltar sobre um termo muito conhecido em ciência da computação, chamado **domínio** (domain), cujo a diferença está no nível de abstração e no foco de cada conceito. A palavra "domínio" realmente aparece em contextos diferentes e pode causar confusão se não for bem delimitada.
+>
+> No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes — ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
+>
+> Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso — é a área de interesse do sistema, como logística, financeiro, saúde, etc.
+>
+> No caso de arquiteturas como Clean Architecture ou Ports & Adapters, "domínio" é uma camada bem definida e isolada que representa as regras puras do negócio, ou seja, aquilo que não muda mesmo que a tecnologia mude; é o núcleo da aplicação.
+>
+> Já em TDD e BDD, o termo "domínio" aparece implicitamente quando você escreve testes voltados para comportamentos do sistema, especialmente no BDD que foca na linguagem ubíqua e no comportamento esperado do domínio de negócio, enquanto o TDD tende a atuar mais no detalhe técnico e no design emergente.
+>
+> Por fim, em design de software e design patterns, o "domínio" pode surgir como contexto onde os padrões são aplicados, mas o foco desses conceitos é mais estrutural e de solução técnica do que modelagem de negócio em si.
+> 
+> Então, "domínio" em DDD e arquiteturas limpas é o coração das regras do negócio, enquanto em testes e padrões, é mais o cenário onde você aplica as práticas, muitas vezes sem foco explícito em representar o negócio como um modelo coeso.
+
+Você pode dizer: 
+
+> "Nos nossos testes de unidade, verificamos se os métodos da entidade `Pedido` calculam corretamente o total do pedido."
+
+Focado na verificação da funcionalidade de unidades isoladas de código (geralmente métodos ou funções), tem como objetivo garantir que cada parte do software funcione conforme esperado de maneira isolada. O contexto aqui é mais técnico e voltado para a qualidade do código e a prevenção de regressões.
+
+Pode ser um campo, uma assinatura, um I/O, ou qualquer tipo de local que receba valores externos ao sistema. Todo domínio deve realizar consistências de dados válidos e inválidos. Um domínio só permite dados com a formatação igual ao que será armazenado.
+
+Ex.: Campo DDD deverá permitir números de até quatro casas não negativas ou a base de dados deve impedir a entrada de valores inválidos. Receber e guardar o mesmo tipo de dado, o tamanho do campo que recebe os dados deve ser menor ou igual ao campo que irá armazenar os dados (em raros casos os campos de armazenamento são menores que os de exibição).
+
+Em suma, domínio é o tipo de valor válido para cada campo. Como exemplo podemos citar: Campo nome: Dominio = tipo: string; tamanho:50. Ao aplicarmos o particionamento por equivalência e a análise por valor limite, poderemos criar as seguintes classes de testes.
+
+Particionamento por Equivalência: campo nome:
+
+- valor em branco (BLANK); Cenário Negativo
+- `valor > 50`; Cenário Negativo
+- qualquer valor de `1` a `50`; Cenário Positivo
+
+Análise por Valor Limite:
+
+campo nome: valor em branco; valores 49,50,51; 
+
+Usamos um valor exatamente inferior e exatamente posterior ao valor do campo, devido ao fato dos erros aparecerem nas fronteiras da aplicação.
+
+O domínio de testes unitários, o domínio de DDD (Domain-Driven Design) e o domínio de microsserviços podem estar inter-relacionados, mas não são exatamente o mesmo domínio. Embora o domínio de testes unitários, o domínio de DDD e o domínio de microsserviços não sejam exatamente o mesmo, eles estão inter-relacionados e podem se complementar. Testes unitários verificam a funcionalidade do código, DDD foca na modelagem do domínio de negócios, e microsserviços organizam a aplicação em componentes pequenos e independentes. Quando usados juntos, esses conceitos podem ajudar a criar sistemas robustos, bem projetados e testados. Você pode ter uma comunicação mais assertiva com o seu time falando da maneira proposta acima que eles irão entender de qual tipo de domínio se trata.
+
+Quando você combina esses três conceitos, você pode comunicar algo como: 
+
+> "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/3963eb3d-ea61-4557-92cb-2f097cfed79a" height="77" align="right">
+
+Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste.
+
+Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
+
+Tipos comuns de Test Doubles:
+
+<img src="https://github.com/user-attachments/assets/475699e2-bce6-4101-acad-741da09c5f68" height="277" align="right">
+
+**Mocking** (Mockado) é uma técnica usada em testes de software para simular o comportamento de dependências externas, como serviços, bancos de dados, ou APIs, dentro de uma unidade de código que você está testando. Ao invés de usar as implementações reais dessas dependências, você cria "mocks" (objetos falsos) que imitam o comportamento esperado, permitindo testar o código de forma isolada. O principal benefício do mocking é garantir que o teste foque apenas no comportamento da unidade de código em questão, sem se preocupar com o comportamento ou estado das dependências externas.
+
+Exemplo: Se você estiver testando um serviço que depende de um repositório de dados, você pode usar um mock para simular as respostas do repositório, em vez de acessar o banco de dados real.
+
+Mocking e testes unitários são diferentes, mas se complementam para testar unidades isoladas do código. Os testes unitários tem o objetivo de testar uma unidade de código (como uma função ou método) de forma independente, garantindo que ela funcione corretamente em diferentes cenários. Em um teste unitário, você se preocupa apenas com o comportamento interno dessa unidade. Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
+
+## [QA] Automation testing
+![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
+![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
+![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
+![xUnit](https://img.shields.io/badge/-xUnit-EF2D5E?style=badge&logo=.NET&logoColor=white) 
+![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white)
+![Selenium](https://img.shields.io/badge/-Selenium-limegreen?style=badge&logo=Selenium&logoColor=white)
+![Appium](https://img.shields.io/badge/-Appium-EE376D?style=badge&logo=Appium&logoColor=white)
+![Apache JMeter](https://img.shields.io/badge/-Apache--JMeter-D22128?style=badge&logo=apachejmeter&logoColor=white)
+![Cypress](https://img.shields.io/badge/-Cypress-505050?style=badge&logo=cypress&logoColor=white)
+![Robot Framework](https://img.shields.io/badge/-Robot_Framework-000000?style=badge&logo=robotframework&logoColor=white)
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/7ae43145-a45f-49a5-98ae-693912faae5d" align="right" height="77">
+
+Conforme o tempo passa a tecnologia segue avançando e os sistemas que são desenvolvidos por pessoas da área de TI estão cada vez mais completos. Antigamente os testes manuais eram os mais utilizados, mas eles já não suprem mais às demandas das empresas e acabam sendo suscetíveis a erros. Então, as organizações precisam desenvolver mais e com melhor qualidade, é aí que entram os **testes automatizados** que são programas que executam testes em softwares que estão em construção de uma forma padronizada, sem ser necessário a intervenção humana.
+
+Pois, tais testes possuem funcionalidades capazes de testar de forma automática todos os aspectos de uma plataforma, com o intuito de assegurar um desempenho adequado. Ou seja, a automação de teste é o uso de software para controlar a execução do teste de software, a comparação dos resultados esperados com os resultados reais, a configuração das pré-condições de teste e outras funções de controle e relatório de teste. 
+
+Tal procedimento, gera muito mais eficácia e agilidade na etapa de testes, permitindo que o profissional encontre de uma maneira mais fácil as falhas de segurança, bugs e demais erros que possam comprometer o uso da aplicação.
+
+> Quando o profissional notar que está gastando muito tempo com tarefas repetitivas e quando o software está muito grande, pode ser a hora de automatizar. Mas, é necessário também questionar a viabilidade dessa ação, sendo essencial analisar se com a automação a equipe irá obter ganho de tempo e se conseguirão reduzir custos e manter a qualidade.
+
+Testes automatizados são uma das práticas mais fundamentais no desenvolvimento de software moderno, pois garantem confiabilidade, reduzem bugs em produção, facilitam refatorações e melhoram a documentação viva do sistema. Para construir testes automatizados realmente bons, é preciso compreender não só as ferramentas, mas também o processo como um todo — desde a fase de planejamento até a execução contínua. Tudo começa pela compreensão dos **níveis de teste**: 
+
+<img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="177" align="right"> 
+
+1. testes de unidade (isolam pequenas partes do código),
+2. testes de integração (verificam a comunicação entre partes),
+3. testes de sistema (validam o sistema como um todo) e
+4. testes end-to-end (simulam o comportamento real do usuário).
+
+Cada nível exige atenção diferente e ferramentas específicas:
+
+No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios claros de cobertura: o que está sendo testado, por que está sendo testado e o que não precisa ser testado. Bons testes não são só aqueles que passam, mas aqueles que falham quando o comportamento do código foge do esperado. Para isso, as asserções precisam ser claras, específicas e rastreáveis. Boas práticas incluem escrever testes que sejam rápidos, isolados, determinísticos e legíveis. Um teste bom é aquele que alguém consegue entender o que ele verifica só de ler o seu nome e o corpo, sem necessidade de ir até a implementação testada.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="277" align="right"> 
+
+A fase de **ferramentas** é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
+
+Na construção de um bom teste automatizado, o primeiro passo é **nomear corretamente o que está sendo testado**, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim. Depois, **seguir o padrão AAA** (Arrange, Act, Assert) é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
+
+Outro pilar crucial é a **integração com pipelines de CI/CD**. Automatizar os testes via GitHub Actions, GitLab CI, Jenkins ou Azure DevOps garante que os testes rodam a cada push ou PR, evitando regressões. Um teste que só roda localmente é praticamente inútil em um time com múltiplos desenvolvedores.
+
+Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de coverage (cobertura de código) como **Istanbul**, **Coverlet** ou **Codecov** ajudam a visualizar o quanto do código está sendo testado, embora **cobertura alta não signifique qualidade alta** — é possível ter 100% de cobertura e testes inúteis. O ideal é buscar cobertura útil, ou seja, testes que validam fluxos importantes, limites, erros e casos reais de uso.
+
+Por fim, construir um teste automatizado bom exige prática, disciplina e conhecimento. Não é só sobre ferramentas, mas sobre escrever código de teste que seja confiável, fácil de manter e que reflita as regras de negócio do sistema. É preciso ter clareza sobre o que vale a pena testar, manter a suíte de testes rápida e identificar o ponto de equilíbrio entre cobertura e custo de manutenção. Testes automatizados são investimento — e como todo investimento, precisam de foco, consistência e revisão contínua para darem retorno real.
+
+O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes. Veja algumas ferramentas para automação de testes:
+
+1. **Selenium**: é um framework portátil para testar aplicativos web. O Selenium fornece uma ferramenta de reprodução para a criação de testes funcionais sem a necessidade de aprender uma linguagem de script de teste.
+  
+2. TestComplete:
+
+3. Telerik Test Studio:
+
+4. Robotium:
+
+5. **Robot Framework**: é uma estrutura genérica de automação de teste para testes de aceitação e desenvolvimento orientado a testes de aceitação. É uma estrutura de teste orientada por palavras-chave que usa a sintaxe de dados de teste tabular. 
+
+6. HPE Unified Functional Testing:
+
+7. Ranorex:
+
+8. Cucumber:
+
+9. Visual Studio Test Professional:
+
+10. TestingWhiz:
+
+Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
+
+1. **Frameworks de Teste Unitário**:
+  
+  - **JUnit**: Framework de testes unitários para Java. 
+  
+  - **NUnit**: Framework de testes unitários para .NET.
+
+  - **PyTest**: Framework de testes para Python.
+
+  - **Mocha**: Framework de testes para JavaScript e Node.js.
+  
+  - **RSpec**: Framework de testes para Ruby.
+
+  - **TestNG**: Outro framework de testes para Java.
+
+2. **Ferramentas de Teste de Integração e Funcional**:
+
+  - **Selenium**: Automação de navegadores para testes de aplicações web.
+  
+  - **Cypress**: Ferramenta de teste de front-end para aplicações web modernas.
+  
+  - **Protractor**: Ferramenta de teste de end-to-end para aplicações Angular.
+
+  - **Watir**: Ferramenta de automação de testes para aplicações web.
+
+3. **Ferramentas de Teste de Interface de Usuário (UI)**:
+  
+  - **Appium**: Framework de automação para aplicações móveis (iOS e Android).
+  
+  - **TestComplete**: Ferramenta de automação de testes para aplicações desktop, web e móveis.
+  
+  - **Ranorex**: Ferramenta de automação de testes para desktop, web e dispositivos móveis.
+
+4. **Ferramentas de Teste de Performance e Carga**:
+  
+  - **JMeter**: Ferramenta para testes de carga e performance.
+  
+  - **Gatling**: Ferramenta de teste de carga focada em aplicações web.
+  
+  - **LoadRunner**: Ferramenta de teste de carga e performance da Micro Focus.
+
+5. **Ferramentas de Teste de Segurança**:
+  
+  - **OWASP ZAP**: Ferramenta para testes de penetração de aplicações web.
+  
+  - **Burp Suite**: Ferramenta de teste de segurança para aplicações web.
+  
+  - **Acunetix**: Ferramenta de varredura de segurança para aplicações web.
+
+6. **Ferramentas de Teste de APIs**:
+  
+  - **Postman**: Ferramenta para teste de APIs RESTful.
+  
+  - **SoapUI**: Ferramenta de teste para serviços web SOAP e REST.
+  
+  - **RestAssured**: Biblioteca para teste de APIs REST em Java.
+
+7. **Ferramentas de Integração Contínua**:
+  
+  - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
+  
+  - **GitHub Actions**: Serviço de integração e entrega contínua integrado ao GitHub.
+
+  - **GitLab CI/CD**: Ferramenta de integração contínua e entrega contínua do GitLab.
+
+  - **CircleCI**: Serviço de integração contínua e entrega contínua.
+
+8. **Ferramentas de Análise de Código e Cobertura de Testes**:
+
+   - **SonarQube**: Ferramenta de análise estática de código que também mede a cobertura de testes.
+
+   - **JaCoCo**: Ferramenta de cobertura de testes para Java.
+
+   - **Cobertura**: Ferramenta de cobertura de testes para Java.
+
+   - **Istanbul**: Ferramenta de cobertura de testes para JavaScript.
+
+Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
@@ -412,333 +742,3 @@ O propósito é reduzir ambiguidades que frequentemente aparecem em métodos tra
 Dessa forma, o SDD busca criar um fluxo em que a especificação é a fonte da verdade. Em muitas implementações dessa prática, as especificações podem ser escritas em formatos que permitam serem executadas ou verificadas, como contratos formais, modelos lógicos ou até arquivos que depois geram código de suporte, documentação ou casos de teste. Isso cria uma forte ligação entre o que o cliente espera, o que o time desenvolve e o que é testado. Diferente do TDD (Test-Driven Development), que coloca os testes como guia para a implementação, ou do BDD (Behavior-Driven Development), que enfatiza a escrita de cenários de comportamento em linguagem quase natural, o SDD é mais rígido e sistemático, focando na **especificação técnica ou formal** como ponto de convergência, de forma que a implementação não seja “interpretada” pelos desenvolvedores, mas derivada da especificação.
 
 Essa abordagem é especialmente útil em domínios onde erros de interpretação podem ser críticos, como sistemas financeiros, governamentais, industriais e médicos, porque minimiza a distância entre o que foi pedido e o que é entregue. Além disso, o SDD facilita auditorias, compliance e rastreabilidade, já que a especificação pode ser usada tanto como documento de contrato entre as partes quanto como mecanismo técnico para validar que o software está aderente às regras. Por outro lado, aplicar SDD de forma efetiva exige disciplina, ferramentas adequadas e equipes acostumadas a lidar com formalismo maior do que em metodologias mais flexíveis, o que pode ser uma barreira em times ágeis que preferem rapidez de iteração.
-
-## [QA] Automation testing
-![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
-![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
-![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
-![xUnit](https://img.shields.io/badge/-xUnit-EF2D5E?style=badge&logo=.NET&logoColor=white) 
-![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white)
-![Selenium](https://img.shields.io/badge/-Selenium-limegreen?style=badge&logo=Selenium&logoColor=white)
-![Appium](https://img.shields.io/badge/-Appium-EE376D?style=badge&logo=Appium&logoColor=white)
-![Apache JMeter](https://img.shields.io/badge/-Apache--JMeter-D22128?style=badge&logo=apachejmeter&logoColor=white)
-![Cypress](https://img.shields.io/badge/-Cypress-505050?style=badge&logo=cypress&logoColor=white)
-![Robot Framework](https://img.shields.io/badge/-Robot_Framework-000000?style=badge&logo=robotframework&logoColor=white)
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/7ae43145-a45f-49a5-98ae-693912faae5d" align="right" height="77">
-
-Conforme o tempo passa a tecnologia segue avançando e os sistemas que são desenvolvidos por pessoas da área de TI estão cada vez mais completos. Antigamente os testes manuais eram os mais utilizados, mas eles já não suprem mais às demandas das empresas e acabam sendo suscetíveis a erros. Então, as organizações precisam desenvolver mais e com melhor qualidade, é aí que entram os **testes automatizados** que são programas que executam testes em softwares que estão em construção de uma forma padronizada, sem ser necessário a intervenção humana.
-
-Pois, tais testes possuem funcionalidades capazes de testar de forma automática todos os aspectos de uma plataforma, com o intuito de assegurar um desempenho adequado. Ou seja, a automação de teste é o uso de software para controlar a execução do teste de software, a comparação dos resultados esperados com os resultados reais, a configuração das pré-condições de teste e outras funções de controle e relatório de teste. 
-
-Tal procedimento, gera muito mais eficácia e agilidade na etapa de testes, permitindo que o profissional encontre de uma maneira mais fácil as falhas de segurança, bugs e demais erros que possam comprometer o uso da aplicação.
-
-> Quando o profissional notar que está gastando muito tempo com tarefas repetitivas e quando o software está muito grande, pode ser a hora de automatizar. Mas, é necessário também questionar a viabilidade dessa ação, sendo essencial analisar se com a automação a equipe irá obter ganho de tempo e se conseguirão reduzir custos e manter a qualidade.
-
-Testes automatizados são uma das práticas mais fundamentais no desenvolvimento de software moderno, pois garantem confiabilidade, reduzem bugs em produção, facilitam refatorações e melhoram a documentação viva do sistema. Para construir testes automatizados realmente bons, é preciso compreender não só as ferramentas, mas também o processo como um todo — desde a fase de planejamento até a execução contínua. Tudo começa pela compreensão dos **níveis de teste**: 
-
-<img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="177" align="right"> 
-
-1. testes de unidade (isolam pequenas partes do código),
-2. testes de integração (verificam a comunicação entre partes),
-3. testes de sistema (validam o sistema como um todo) e
-4. testes end-to-end (simulam o comportamento real do usuário).
-
-Cada nível exige atenção diferente e ferramentas específicas:
-
-No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios claros de cobertura: o que está sendo testado, por que está sendo testado e o que não precisa ser testado. Bons testes não são só aqueles que passam, mas aqueles que falham quando o comportamento do código foge do esperado. Para isso, as asserções precisam ser claras, específicas e rastreáveis. Boas práticas incluem escrever testes que sejam rápidos, isolados, determinísticos e legíveis. Um teste bom é aquele que alguém consegue entender o que ele verifica só de ler o seu nome e o corpo, sem necessidade de ir até a implementação testada.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="277" align="right"> 
-
-A fase de **ferramentas** é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
-
-Na construção de um bom teste automatizado, o primeiro passo é **nomear corretamente o que está sendo testado**, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim. Depois, **seguir o padrão AAA** (Arrange, Act, Assert) é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
-
-Outro pilar crucial é a **integração com pipelines de CI/CD**. Automatizar os testes via GitHub Actions, GitLab CI, Jenkins ou Azure DevOps garante que os testes rodam a cada push ou PR, evitando regressões. Um teste que só roda localmente é praticamente inútil em um time com múltiplos desenvolvedores.
-
-Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de coverage (cobertura de código) como **Istanbul**, **Coverlet** ou **Codecov** ajudam a visualizar o quanto do código está sendo testado, embora **cobertura alta não signifique qualidade alta** — é possível ter 100% de cobertura e testes inúteis. O ideal é buscar cobertura útil, ou seja, testes que validam fluxos importantes, limites, erros e casos reais de uso.
-
-Por fim, construir um teste automatizado bom exige prática, disciplina e conhecimento. Não é só sobre ferramentas, mas sobre escrever código de teste que seja confiável, fácil de manter e que reflita as regras de negócio do sistema. É preciso ter clareza sobre o que vale a pena testar, manter a suíte de testes rápida e identificar o ponto de equilíbrio entre cobertura e custo de manutenção. Testes automatizados são investimento — e como todo investimento, precisam de foco, consistência e revisão contínua para darem retorno real.
-
-O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes. Veja algumas ferramentas para automação de testes:
-
-1. **Selenium**: é um framework portátil para testar aplicativos web. O Selenium fornece uma ferramenta de reprodução para a criação de testes funcionais sem a necessidade de aprender uma linguagem de script de teste.
-  
-2. TestComplete:
-
-3. Telerik Test Studio:
-
-4. Robotium:
-
-5. **Robot Framework**: é uma estrutura genérica de automação de teste para testes de aceitação e desenvolvimento orientado a testes de aceitação. É uma estrutura de teste orientada por palavras-chave que usa a sintaxe de dados de teste tabular. 
-
-6. HPE Unified Functional Testing:
-
-7. Ranorex:
-
-8. Cucumber:
-
-9. Visual Studio Test Professional:
-
-10. TestingWhiz:
-
-Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
-
-1. **Frameworks de Teste Unitário**:
-  
-  - **JUnit**: Framework de testes unitários para Java. 
-  
-  - **NUnit**: Framework de testes unitários para .NET.
-
-  - **PyTest**: Framework de testes para Python.
-
-  - **Mocha**: Framework de testes para JavaScript e Node.js.
-  
-  - **RSpec**: Framework de testes para Ruby.
-
-  - **TestNG**: Outro framework de testes para Java.
-
-2. **Ferramentas de Teste de Integração e Funcional**:
-
-  - **Selenium**: Automação de navegadores para testes de aplicações web.
-  
-  - **Cypress**: Ferramenta de teste de front-end para aplicações web modernas.
-  
-  - **Protractor**: Ferramenta de teste de end-to-end para aplicações Angular.
-
-  - **Watir**: Ferramenta de automação de testes para aplicações web.
-
-3. **Ferramentas de Teste de Interface de Usuário (UI)**:
-  
-  - **Appium**: Framework de automação para aplicações móveis (iOS e Android).
-  
-  - **TestComplete**: Ferramenta de automação de testes para aplicações desktop, web e móveis.
-  
-  - **Ranorex**: Ferramenta de automação de testes para desktop, web e dispositivos móveis.
-
-4. **Ferramentas de Teste de Performance e Carga**:
-  
-  - **JMeter**: Ferramenta para testes de carga e performance.
-  
-  - **Gatling**: Ferramenta de teste de carga focada em aplicações web.
-  
-  - **LoadRunner**: Ferramenta de teste de carga e performance da Micro Focus.
-
-5. **Ferramentas de Teste de Segurança**:
-  
-  - **OWASP ZAP**: Ferramenta para testes de penetração de aplicações web.
-  
-  - **Burp Suite**: Ferramenta de teste de segurança para aplicações web.
-  
-  - **Acunetix**: Ferramenta de varredura de segurança para aplicações web.
-
-6. **Ferramentas de Teste de APIs**:
-  
-  - **Postman**: Ferramenta para teste de APIs RESTful.
-  
-  - **SoapUI**: Ferramenta de teste para serviços web SOAP e REST.
-  
-  - **RestAssured**: Biblioteca para teste de APIs REST em Java.
-
-7. **Ferramentas de Integração Contínua**:
-  
-  - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
-  
-  - **GitHub Actions**: Serviço de integração e entrega contínua integrado ao GitHub.
-
-  - **GitLab CI/CD**: Ferramenta de integração contínua e entrega contínua do GitLab.
-
-  - **CircleCI**: Serviço de integração contínua e entrega contínua.
-
-8. **Ferramentas de Análise de Código e Cobertura de Testes**:
-
-   - **SonarQube**: Ferramenta de análise estática de código que também mede a cobertura de testes.
-
-   - **JaCoCo**: Ferramenta de cobertura de testes para Java.
-
-   - **Cobertura**: Ferramenta de cobertura de testes para Java.
-
-   - **Istanbul**: Ferramenta de cobertura de testes para JavaScript.
-
-Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
-
-## [QA] Unit testing
-<img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Mock-pass-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white">
-
-<img src="https://em-content.zobj.net/source/microsoft-teams/363/test-tube_1f9ea.png" height="77" align="right">
-
-Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
-
-Portanto, são testes que verificam se uma parte específica do código, costumeiramente a nível de função, está funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. 
-
-> 🧪 Os testes de unidade verificam unidades, como métodos, funções e componentes dentro do software. São os testes mais rápidos, baratos de escrever e sua manutenção é simples. Para verificar o <a href="">comportamento</a> dessas pequenas partes isoladas do sistema sem dependências externas como banco de dados, APIs, arquivos ou rede. Por isso, eles são rápidos de executar, baratos de manter e oferecem feedback imediato durante o desenvolvimento. Como testam unidades isoladas, são fundamentais para garantir a estabilidade do código à medida que ele evolui.
-
-Uma **unidade** (unit) é a menor parte testável de um programa de computador, no programação procedural uma unidade pode ser uma função individual ou um procedimento do nosso código, imagine que toda função é uma pequena fábrica que fabrica alguma coisa que pode sair, sem a necessidade de entrar algo. Idealmente, cada teste de unidade é independente dos demais, o que possibilita ao programador testar cada módulo isoladamente.
-
-Relação de conceitos de testes de unidade: 
-
-**I/O Input-Output** (Entrada e Saída): são todas as entradas e saídas existentes na programação. Portanto, os testes de unidade servem para front-end e back-end. Eles são uma prática essencial no desenvolvimento de software, pois ajudam a garantir a qualidade do código e a facilitar a manutenção. Os testes de unidade são realizados em pequenas unidades de código, como funções, componentes ou módulos. Eles são projetados para testar a funcionalidade e a lógica dessas unidades de forma isolada. Isso significa que os testes de unidade não dependem de outros componentes ou módulos para funcionar.
-
-No **front-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de componentes de interface do usuário, como botões, formulários e listas. Eles também são usados para testar a interação entre componentes.
-
-No **back-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de serviços, APIs e outros componentes de back-end. Eles também são usados para testar a integração entre componentes de back-end.
-
-Os testes de unidade oferecem uma série de benefícios, incluindo:
-
-<img src="https://uploads.toptal.io/blog/image/91302/toptal-blog-image-1434578005589-4e6897ec04cc0b3c7075b9b011ee915c.gif" height="377" align="right">
-
-- Aumento da qualidade do código: Os testes de unidade ajudam a identificar erros e bugs no código antes que eles sejam integrados ao sistema. Isso resulta em um código mais confiável e estável.
-
-- Facilidade de manutenção: Os testes de unidade facilitam a manutenção do código, pois permitem verificar se as alterações não afetaram o funcionamento de outras partes do código.
-
-- Agilidade no desenvolvimento: Os testes de unidade permitem que os desenvolvedores tenham mais confiança ao realizar refatorações ou adicionar novos recursos. Isso permite que as equipes desenvolvam de forma mais rápida e eficiente.
-
-Portanto, os testes de unidade são uma prática importante para qualquer desenvolvedor, independentemente da área de atuação. 
-
-Sobre os processos de desenvolvimento de software, no terceiro passo no nível de queda do modelo cascata e no quarto passo do modelo RAPID, entramos na parte de codificação e testes unitários. Ou seja, é a construção do sistema em si. Então, só depois de eu entender todo o problema, só depois de eu saber das necessidades e se é possível ou viável para começar a desenvolver. Muitas vezes, para começar a gente se pergunta se é para pegar logo no processo de codificação, ou seja, a desenvolver logo a aplicação o mais rápido possível. No entanto, percebe-se que o tanto de retrabalho que isso gerava, fazia não valer a pena. E fazia com que estourasse muito o orçamento nesse custo. Então, depois deu definir os requisitos, depois de realizar meus modelos de projetos e provar que aquilo é viável, eu então começo o desenvolvimento do meu software em si.
-
-Após o desenvolvimento e junto com o desenvolvimento, entram os testes unitários (unit tests - testes de unidade) que são definidos pelo próprio desenvolvedor onde eles tendem a testar a menor unidade do sistema. Por exemplo: Se eu estou desenvolvendo um sistema de cadastro de cliente, não importa o tipo do sistema (mercadinho, farmácia, padaria, comércio ou de uma grande empresa) e esse desenvolvedor que está escrevendo essas linhas de código de cadastrar um único usuário ou funcionário, por exemplo, ele vai desenvolver um caso de teste para que dado uma entrada (input), ele possa receber uma saída (output) esperada que seria: "usuário cadastrado com sucesso".
-
-Os frameworks de teste de unidade mais populares para **React.js** são:
-
-- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele é rápido, fácil de usar e oferece uma variedade de recursos, como testes de snapshot, mocking e asserções.
-
-- <a href="">Testing Library</a>: A Testing Library é uma biblioteca de utilitários para testes de componentes React. Ela fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
-
-- <a href="">Enzyme</a>: O Enzyme é uma biblioteca de teste de componentes React que fornece uma API poderosa e flexível para manipular o DOM e testar eventos.
-
-A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Jest é uma boa opção para projetos simples, enquanto frameworks como a Testing Library ou o Enzyme podem ser mais adequados para projetos mais complexos.
-
-Os frameworks de teste de unidade mais populares para **Vue.js** são:
-
-- <a href="">Vue Test Utils</a>: O Vue Test Utils é um conjunto de utilitários para testes de componentes Vue.js. Ele fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
-
-- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele também pode ser usado para testes de unidade em Vue.js.
-
-- <a href="">Karma</a>: O Karma é um framework de teste de unidade JavaScript que pode ser usado para executar testes em uma variedade de navegadores. Ele também pode ser usado para testes de unidade em Vue.js.
-
-A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Vue Test Utils é uma boa opção para projetos simples, enquanto frameworks como o Jest ou o Karma podem ser mais adequados para projetos mais complexos.
-
-O framework Python para web back-end chamado **Django** fornece um framework de teste padrão, chamado de **unittest**. Esse framework é baseado na biblioteca padrão unittest do Python e é adequado para testes unitários e de integração.
-
-Além do unittest, existem outros frameworks de teste de unidade disponíveis para Django. Alguns dos frameworks mais populares incluem:
-
-- <a href="">Pytest</a>: O Pytest é um framework de teste de unidade completo e flexível que oferece uma variedade de recursos, como assertion fixtures, parametrização de testes e testes de desempenho.
-
-- <a href="">Mock</a>: O Mock é um framework de mocking que permite simular o comportamento de objetos externos. Isso pode ser útil para testar a funcionalidade de componentes que dependem de outros componentes ou APIs externas.
-
-- <a href="">Selenium</a>: O Selenium é um framework de automação de testes que permite testar a interação com um navegador web. Isso pode ser útil para testar a funcionalidade de componentes de front-end.
-
-A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O unittest é uma boa opção para projetos simples, enquanto frameworks como Pytest e Mock podem ser mais adequados para projetos mais complexos.
-
-Sobre os conceitos técnicos a respeito de testes de unidades, temos:
-
-[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Java](https://img.shields.io/badge/java-17%2B-blue)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-[![Release](https://img.shields.io/github/release/rife2/tests-badge.svg)](https://github.com/rife2/tests-badge/releases/latest)
-[![GitHub CI](https://github.com/rife2/tests-badge/actions/workflows/bld.yml/badge.svg)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
-[![Tests](https://rife2.com/tests-badge/badge/com.uwyn/tests-badge)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/f92b16ca-c0a0-40ab-ab33-f8ec9f4cf619" height="77" align="right">
-
-✅ **Testes Válidos** (`pass`): São entradas e saídas de dados comuns ao sistema e pertencem ao processo normal. Não apresentam tratamento além do normal já programado. No caso de retorno deverá seguir os padrões estabelecidos e não permitir retornos fora das regras especificadas. Em testes unitários, estamos nos referindo a casos de teste que exercitam o comportamento correto e esperado da unidade de código sob condições normais (válidas), ou seja: Situações em que tudo ocorre como deveria. São aqueles testes que usam entradas válidas e esperadas, esperam resultados corretos, sem exceções ou erros. Confirmam que o comportamento da função está conforme o esperado.
-
-Características de testes válidos:
-
-| Característica              | Exemplo prático                                           |
-| --------------------------- | --------------------------------------------------------- |
-| Entrada no domínio esperado | CPF válido, número positivo, email formatado corretamente |
-| Estado inicial válido       | Usuário existente, banco conectado, produto em estoque    |
-| Fluxo normal do código      | Sem exceções, erros, ou retornos inesperados              |
-| Resultado esperado          | Retorno certo, estado alterado corretamente               |
-
-Exemplo simples em JavaScript: Aqui, `2` e `3` são valores válidos, e o retorno esperado (`5`) confirma o comportamento correto da função.
-
-<img src="https://img.shields.io/badge/Jest-1_pass_0_fail-limegreen?style=flat&logo=jest&logoColor=white">
-
-```javascript
-function somar(a: number, b: number): number {
-  return a + b;
-}
-
-test("soma dois números positivos", () => {
-  expect(somar(2, 3)).toBe(5); // ✅ teste válido
-});
-```
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/1e50bc84-048c-40c7-b7b8-98dfdeec38a2" height="77" align="right">
-
-❌ **Testes Inválidos** (`fail`): São entradas e saídas de dados não comuns ao sistema. Apresentam tratamento para validar o tipo de dado inválido ou situação. Pode apresentar até dois retornos, uma mensagem para um log no sistema e uma mensagem com formatação e escrita adequada ao usuário. São tão importantes quanto os testes válidos, porque ajudam a garantir que sua função se defenda bem contra entradas erradas, estados incorretos ou fluxos inesperados. São testes que usam entradas inválidas, incorretas ou fora do esperado; Esperam que o código falhe corretamente (com exceção, erro, ou retorno de falha); Verificam se o sistema é robusto contra dados errados ou uso indevido da função.
-
-Exemplo:
-
-```txt
-Dividir (x int,y int)=z int
-```
-
-Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma mensagem ao usuário, avisando que a operação é inválida. Caso a expressão seja um dado comum do sistema, a autorização para tal validação deverá ser do usuário, pois faz parte do conjunto de regras de negócio. Não existe retorno inválido sem um tratamento. O tratamento genérico será apenas para condições não visíveis na regra e uso do sistema.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/c0328294-f3e5-489f-8521-0d634275f7ae" height="77" align="right">
-
-👁️‍🗨️ **Domínio**: No domínio de testes, usamos testes unitários para validar a funcionalidade de cada componente do nosso domínio de negócio, refere-se à parte do sistema que é testada para garantir que a lógica de negócio e a funcionalidade do código estão corretas, os testes unitários focam em componentes individuais desse domínio.
-
-> [!Important]
-> É importante ressaltar sobre um termo muito conhecido em ciência da computação, chamado **domínio** (domain), cujo a diferença está no nível de abstração e no foco de cada conceito. A palavra "domínio" realmente aparece em contextos diferentes e pode causar confusão se não for bem delimitada.
->
-> No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes — ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
->
-> Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso — é a área de interesse do sistema, como logística, financeiro, saúde, etc.
->
-> No caso de arquiteturas como Clean Architecture ou Ports & Adapters, "domínio" é uma camada bem definida e isolada que representa as regras puras do negócio, ou seja, aquilo que não muda mesmo que a tecnologia mude; é o núcleo da aplicação.
->
-> Já em TDD e BDD, o termo "domínio" aparece implicitamente quando você escreve testes voltados para comportamentos do sistema, especialmente no BDD que foca na linguagem ubíqua e no comportamento esperado do domínio de negócio, enquanto o TDD tende a atuar mais no detalhe técnico e no design emergente.
->
-> Por fim, em design de software e design patterns, o "domínio" pode surgir como contexto onde os padrões são aplicados, mas o foco desses conceitos é mais estrutural e de solução técnica do que modelagem de negócio em si.
-> 
-> Então, "domínio" em DDD e arquiteturas limpas é o coração das regras do negócio, enquanto em testes e padrões, é mais o cenário onde você aplica as práticas, muitas vezes sem foco explícito em representar o negócio como um modelo coeso.
-
-Você pode dizer: 
-
-> "Nos nossos testes de unidade, verificamos se os métodos da entidade `Pedido` calculam corretamente o total do pedido."
-
-Focado na verificação da funcionalidade de unidades isoladas de código (geralmente métodos ou funções), tem como objetivo garantir que cada parte do software funcione conforme esperado de maneira isolada. O contexto aqui é mais técnico e voltado para a qualidade do código e a prevenção de regressões.
-
-Pode ser um campo, uma assinatura, um I/O, ou qualquer tipo de local que receba valores externos ao sistema. Todo domínio deve realizar consistências de dados válidos e inválidos. Um domínio só permite dados com a formatação igual ao que será armazenado.
-
-Ex.: Campo DDD deverá permitir números de até quatro casas não negativas ou a base de dados deve impedir a entrada de valores inválidos. Receber e guardar o mesmo tipo de dado, o tamanho do campo que recebe os dados deve ser menor ou igual ao campo que irá armazenar os dados (em raros casos os campos de armazenamento são menores que os de exibição).
-
-Em suma, domínio é o tipo de valor válido para cada campo. Como exemplo podemos citar: Campo nome: Dominio = tipo: string; tamanho:50. Ao aplicarmos o particionamento por equivalência e a análise por valor limite, poderemos criar as seguintes classes de testes.
-
-Particionamento por Equivalência: campo nome:
-
-- valor em branco (BLANK); Cenário Negativo
-- `valor > 50`; Cenário Negativo
-- qualquer valor de `1` a `50`; Cenário Positivo
-
-Análise por Valor Limite:
-
-campo nome: valor em branco; valores 49,50,51; 
-
-Usamos um valor exatamente inferior e exatamente posterior ao valor do campo, devido ao fato dos erros aparecerem nas fronteiras da aplicação.
-
-O domínio de testes unitários, o domínio de DDD (Domain-Driven Design) e o domínio de microsserviços podem estar inter-relacionados, mas não são exatamente o mesmo domínio. Embora o domínio de testes unitários, o domínio de DDD e o domínio de microsserviços não sejam exatamente o mesmo, eles estão inter-relacionados e podem se complementar. Testes unitários verificam a funcionalidade do código, DDD foca na modelagem do domínio de negócios, e microsserviços organizam a aplicação em componentes pequenos e independentes. Quando usados juntos, esses conceitos podem ajudar a criar sistemas robustos, bem projetados e testados. Você pode ter uma comunicação mais assertiva com o seu time falando da maneira proposta acima que eles irão entender de qual tipo de domínio se trata.
-
-Quando você combina esses três conceitos, você pode comunicar algo como: 
-
-> "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/3963eb3d-ea61-4557-92cb-2f097cfed79a" height="77" align="right">
-
-Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste.
-
-Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
-
-Tipos comuns de Test Doubles:
-
-<img src="https://github.com/user-attachments/assets/475699e2-bce6-4101-acad-741da09c5f68" height="277" align="right">
-
-**Mocking** (Mockado) é uma técnica usada em testes de software para simular o comportamento de dependências externas, como serviços, bancos de dados, ou APIs, dentro de uma unidade de código que você está testando. Ao invés de usar as implementações reais dessas dependências, você cria "mocks" (objetos falsos) que imitam o comportamento esperado, permitindo testar o código de forma isolada. O principal benefício do mocking é garantir que o teste foque apenas no comportamento da unidade de código em questão, sem se preocupar com o comportamento ou estado das dependências externas.
-
-Exemplo: Se você estiver testando um serviço que depende de um repositório de dados, você pode usar um mock para simular as respostas do repositório, em vez de acessar o banco de dados real.
-
-Mocking e testes unitários são diferentes, mas se complementam para testar unidades isoladas do código. Os testes unitários tem o objetivo de testar uma unidade de código (como uma função ou método) de forma independente, garantindo que ela funcione corretamente em diferentes cenários. Em um teste unitário, você se preocupa apenas com o comportamento interno dessa unidade. Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
