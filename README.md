@@ -28,9 +28,9 @@ Historicamente, o conceito de qualidade está ligado à ideia de atender padrõe
 
 Os aspectos históricos da qualidade de software nos mostram como essa área evoluiu ao longo do tempo. Desde a década de 1970, a qualidade de software vem sendo debatida e estudada, e hoje em dia é um tema muito importante em empresas de desenvolvimento de software.
 
-Os **requisitos** são funcionalidades que o produto precisa ter para atender às expectativas e necessidades das partes interessadas.
+1. Os **requisitos** são funcionalidades que o produto precisa ter para atender às expectativas e necessidades das partes interessadas.
 
-O **escopo** é o conjunto de características desejadas que descrevem o resultado final do projeto.
+2. O **escopo** é o conjunto de características desejadas que descrevem o resultado final do projeto.
 
 Portanto, o **teste de software** para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
 
@@ -54,6 +54,16 @@ Dessa forma, garantimos:
 - Story testada e com aceite formal. 
 
 ## [QA] Custos x Fases
+Custos de controle em qualidade de software se referem aos gastos necessários para prevenir defeitos e garantir a qualidade dos produtos de software, bem como para corrigir quaisquer defeitos encontrados durante as fases de desenvolvimento 
+e teste. 
+
+Esses custos podem incluir investimentos em treinamento, ferramentas de teste, testes manuais e automatizados, revisões de código e outras atividades de garantia de qualidade. 
+
+Ao investir em custos de controle, as organizações podem reduzir o número de defeitos encontrados nos produtos de software (custos de prevenção) e, consequentemente, minimizar os custos associados a falhas de software, como retrabalho, atrasos no cronograma, perda de receita e reputação negativa (custos de avaliação).
+ 
+As falhas internas são aquelas que acontecem dentro da empresa, antes do produto final ser entregue ao cliente. Elas podem ser causadas por diversos motivos, como falta de capacitação da equipe, problemas de comunicação, dentre outros. Essas falhas podem levar a retrabalho, atrasos na entrega e insatisfação do cliente.
+
+Já as falhas externas são aquelas que ocorrem após a entrega do produto final ao cliente. Elas podem ser causadas por problemas na codificação, falhas de segurança, dentre outros fatores. Essas falhas podem gerar custos altíssimos para a empresa, como a necessidade de retrabalho, de suporte técnico, de processos judiciais e até mesmo a perda de clientes
 
 > [!Warning]
 > Para aprofundar seu conhecimento sobre os custos de qualidade de software, você pode se perguntar: quais são as principais causas de falhas internas e externas? Como a qualidade do software pode influenciar nos custos da empresa? Como é possível reduzir esses custos e melhorar a qualidade do produto final?
