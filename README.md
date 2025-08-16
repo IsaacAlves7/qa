@@ -263,6 +263,14 @@ Cenário: Buscar produto com sucesso
 
    - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
+## [QA] ATTD - Acceptance Test-Driven Development
+
+O **ATTD - Acceptance Test-Driven Development** é uma prática e uma variação do desenvolvimento orientado a testes (TDD) que coloca o **teste de aceitação** como ponto central do ciclo. Enquanto no TDD tradicional o desenvolvedor escreve primeiro testes unitários para depois implementar o código que os satisfaz, no ATTD o processo começa com a definição dos testes de aceitação, geralmente descritos em linguagem mais próxima do negócio, representando os critérios que o sistema precisa cumprir para ser aceito pelo cliente ou pelo usuário final.
+
+A ideia é alinhar desde o início o que será construído com o que realmente tem valor para o negócio. Os testes de aceitação funcionam como especificações executáveis: descrevem cenários, entradas, saídas e comportamentos esperados do sistema em termos que os stakeholders entendem. Depois disso, os desenvolvedores implementam o código necessário para fazer esses testes passarem. Em muitos casos, ferramentas como Cucumber, SpecFlow ou Behave são usadas para escrever cenários em Gherkin (“Given, When, Then”), permitindo que as próprias partes interessadas consigam validar e até revisar os testes.
+
+Na prática, o ATTD acaba funcionando como uma ponte entre BDD e TDD. Ele compartilha com o BDD a preocupação de usar exemplos de negócio como base para o desenvolvimento, mas mantém a disciplina do TDD de usar testes automatizados como motor do ciclo. Isso ajuda a garantir que o software entregue não só funcione tecnicamente, mas também atenda ao valor esperado pelos usuários, reduzindo retrabalho e mal-entendidos.
+
 ## [QA] DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
