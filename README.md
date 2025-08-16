@@ -127,6 +127,19 @@ Uma boa gestão de qualidade pode ser a chave para minimizar os custos relaciona
 > [!Important]
 > **Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção**: Para aprofundar seus conhecimentos sobre avaliação de atributos de qualidade, recomendamos a leitura do livro Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção é um livro escrito por Alexandre Kherroubi e Adalberto Cavalcanti. O livro aborda a importância da qualidade de software na redução dos custos de manutenção e explora estratégias práticas para melhorar a qualidade do software, resultando em um impacto positivo nos custos de manutenção ao longo do ciclo de vida do software.
 
+## [QA] Self testing
+<img src="https://www.pcloudy.com/wp-content/uploads/2019/07/functional-testing.png" align="right" height="277"> 
+
+Estudamos os branches, os workflows e concluímos que dentro da prática da integração contínua, devemos nos afastar o mínimo possível do nosso trunk master principal.
+
+Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
+
+- Testes fazem parte da construção do software;
+- Devem ser realizados antes do commit;
+- TDD pode ajudar neste processo;
+- Desempenho bom em testes;
+- Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
+
 ## [QA] DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
@@ -259,7 +272,7 @@ Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outr
 
 Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um sistema. Seu foco é na modelagem das entidades principais de negócio usando a linguagem adequada daquele domínio para facilitar a manutenção, extensão e entendimento. Particularmente, eu não seguiria à risca o padrão, até porque existem inúmeros padrões e variações de modelagem OO. Estude os princípios por detrás desses padrões, pois eles são geralmente parecidos e veja o que funciona melhor para cada projeto.
 
-## [CI] TDD - Test-Driven Development 
+## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
 ![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
