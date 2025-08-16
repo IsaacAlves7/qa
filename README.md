@@ -12,6 +12,9 @@ Ao concluir as revisões e auditorias, você reflete sobre os processos e a efic
 
 Primeiro, precisamos entender que a qualidade de software é uma área de grande importância no mercado de tecnologia da informação. E para garantir a qualidade de um software, é preciso conhecer seus fundamentos, entender sua história, compreender os custos envolvidos, realizar atividades de apoio, seguir padrões e avaliar seus atributos. A seguir, apresentamos alguns desses atributos:
 
+> [!Important]
+> **Definição**: “_Qualidade_ é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
+
 > [!Note]
 > **FUNDAMENTOS DA QUALIDADE DE SOFTWARE**: Incluem a definição de requisitos, o planejamento de testes e a execução de testes de forma sistemática. Esses processos são essenciais para garantir que o software desenvolvido atenda às necessidades do usuário e atinja a qualidade esperada.
 
@@ -19,10 +22,9 @@ No antigo Egito, há aproximadamente 4 mil anos, para que as construções fosse
 
 Nesta escultura, temos na base um compilado com as regras e leis a serem seguidas, impostas por Hamurabi, Rei da Babilônia, que era aplicada a cidadãos livres, comerciantes, escravos, etc. Uma das primeiras tentativas de _padronizar_ as regras de convívio da sociedade, há aproximadamente 3.800 anos atrás.
 
-> [!Important]
-> **Definição**: “Qualidade é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
-
 Historicamente, o conceito de qualidade está ligado à ideia de atender padrões e requisitos acordados, com base em comunicação clara e objetivos definidos, seja na qualidade do ar, qualidade da água, da qualidade de vida ou qualidade do software. Portanto, a qualidade de software é a investigação do software a fim de fornecer informações sobre sua qualidade em relação ao contexto em que ele deve operar.
+
+Os aspectos históricos da qualidade de software nos mostram como essa área evoluiu ao longo do tempo. Desde a década de 1970, a qualidade de software vem sendo debatida e estudada, e hoje em dia é um tema muito importante em empresas de desenvolvimento de software.
 
 Os **requisitos** são funcionalidades que o produto precisa ter para atender às expectativas e necessidades das partes interessadas.
 
