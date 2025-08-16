@@ -28,9 +28,19 @@ Historicamente, o conceito de qualidade está ligado à ideia de atender padrõe
 
 Os aspectos históricos da qualidade de software nos mostram como essa área evoluiu ao longo do tempo. Desde a década de 1970, a qualidade de software vem sendo debatida e estudada, e hoje em dia é um tema muito importante em empresas de desenvolvimento de software.
 
-1. Os **requisitos** são funcionalidades que o produto precisa ter para atender às expectativas e necessidades das partes interessadas.
+Para aprofundar seus conhecimentos sobre qualidade de software, você pode se perguntar: como garantir que um software seja de qualidade? Uma resposta é adotar processos de garantia de qualidade, que englobam atividades como revisões, testes e inspeções para identificar e corrigir defeitos. Além disso, é importante definir critérios de qualidade e medir a qualidade do software com base nesses critérios.
+ 
+Uma ilustração que pode ajudar a entender a importância da qualidade de software é pensar em um aplicativo de banco que apresenta erros constantemente. Isso certamente afetaria a confiança do usuário no aplicativo e, consequentemente, na instituição financeira. Por isso, a qualidade do software é fundamental para garantir a satisfação e fidelização do usuário.
 
-2. O **escopo** é o conjunto de características desejadas que descrevem o resultado final do projeto.
+Fundamentos de teste de software se referem a um conjunto de práticas e técnicas utilizadas para garantir que um software seja capaz de atender aos requisitos e expectativas dos usuários, além de estar livre de erros e falhas. Para ser eficaz, o teste de software deve ser planejado, executado e gerenciado de forma adequada. Isso envolve identificar e definir os objetivos do teste, estabelecer critérios de aceitação, selecionar as técnicas e ferramentas adequadas e documentar todo o processo.
+
+Entre os fundamentos do teste de software estão:
+
+1. **Identificação de requisitos**: Os requisitos são funcionalidades que o produto precisa ter para atender às expectativas e necessidades das partes interessadas. É importante que todos os requisitos do software estejam claramente definidos e documentados antes do início do teste. Essa etapa é crucial para garantir que o software atenda às expectativas dos usuários. O escopo é o conjunto de características desejadas que descrevem o resultado final do projeto.
+
+2. **Planejamento de teste**: o planejamento do teste deve ser feito de forma estruturada e detalhada, incluindo a definição dos objetivos, recursos, cronograma, técnicas e critérios de aceitação.
+
+3. **Projeto de casos de teste**: os casos de teste devem ser projetados de acordo com os requisitos e objetivos do teste, de forma a garantir a cobertura de todos os aspectos do software.
 
 Portanto, o **teste de software** para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
 
