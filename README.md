@@ -140,6 +140,124 @@ Com as alterações que realizamos o tempo todo em nosso software, como podemos 
 - Desempenho bom em testes;
 - Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
+## [QA] TDD - Test-Driven Development 
+![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
+![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
+![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
+![xUnit](https://img.shields.io/badge/-xUnit-EF2D5E?style=badge&logo=.NET&logoColor=white) 
+![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=jest&logoColor=white)
+![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=mocha&logoColor=white)
+![JUnit5](https://img.shields.io/badge/-JUnit5-00D564?style=badge&logo=JUnit5&logoColor=white) 
+![Jest](https://img.shields.io/badge/-Jest-FFDF6F?style=badge&logo=jest&logoColor=black)
+![Mocha](https://img.shields.io/badge/-Mocha-FFDF6F?style=badge&logo=mocha&logoColor=black)
+![JUnit5](https://img.shields.io/badge/-JUnit5-FFDF6F?style=badge&logo=JUnit5&logoColor=black) 
+![JUnit5](https://img.shields.io/badge/-xUnit-FFDF6F?style=badge&logo=.NET&logoColor=black) 
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/555d9d87-5698-46e3-b39f-713da277205e" align="right" height="77">
+
+O **TDD - Test-Driven Development**, ou em português "Desenvolvimento guiado por testes" ou Desenvolvimento Orientado a testes ou Desenvolvimento digirido por testes, é uma técnica de desenvolvimento de software que se relaciona com o conceito de verificação e validação e se baseia em um ciclo curto de repetições: Primeiramente o desenvolvedor escreve um caso de teste automatizado que define uma melhoria desejada ou uma nova funcionalidade. Então, é produzido código que possa ser validado pelo teste para posteriormente o código ser refatorado para um código sob padrões aceitáveis. Basicamente, ela ajuda a aumentar a produtividade a partir de testes já consolidados. O TDD (Test-Driven Development) foca em um tipo específico de teste chamado <a href="">teste de unidade</a>. No entanto, ele pode influenciar outros tipos de testes durante o ciclo de desenvolvimento.
+
+Kent Beck, considerado o criador ou o 'descobridor' da técnica, declarou em 2003 que TDD encoraja designs de código simples e inspira confiança. Desenvolvimento dirigido por testes é relacionado a conceitos de programação de <a href="">XP - Extreme Programming</a>, iniciado em 1999, mas recentemente tem-se criado maior interesse pela mesma em função de seus próprios ideais. Através de TDD, programadores podem aplicar o conceito de melhorar e depurar código legado desenvolvido a partir de técnicas antigas.
+
+> O TDD é considerado uma técnica ou metodologia, muito adotada nos times de desenvolvimento. Isso porque ele é direcionado ao desenvolvimento de softwares. Contudo, pelo fato de inverter a ordem dos trabalhos – do teste para o código – é um pouco impopular entre os Devs. No entanto, após pegar o jeito, o desenvolvimento ganha um up, e a técnica traz muitos resultados positivos ao projeto.
+
+O TDD segue a lógica do ciclo: Red, Green e Refactor. Este ciclo é uma abordagem estruturada para escrever e melhorar código de software de maneira incremental, garantindo que ele seja testável, funcional e de alta qualidade. Aqui está uma explicação detalhada de cada fase do ciclo:
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/63318aff-ad59-4c3e-b858-172ec4154f85" align="right" height="277">
+
+🔴 **Red**: Escreva um teste que apresenta erros, que falhe. Ação: você começa escrevendo um teste automatizado para a funcionalidade que deseja implementar. Este teste é baseado nos requisitos e especificações do que o código deve fazer. Resultado: O teste falha, pois a funcionalidade ainda não foi implementada. A falha confirma que o teste é válido e que a funcionalidade não existe no momento.
+
+🟢 **Green**: Logo após, escreva um código que passe no teste, que funcione e faça o teste passar. Ação: Escrever a quantidade mínima de código necessário para fazer o teste passar. Nesta fase, o foco está em implementar a funcionalidade de maneira rápida e simples, sem se preocupar muito com a qualidade ou elegância do código. Resultado: O teste passa, indicando que a funcionalidade básica foi implementada corretamente.
+
+🟡 **Refactor**: Depois disso, "refatorar" o que foi feito, ou seja, eliminar a redundância e melhorar a qualidade do código, ou seja, melhorar e otimizar o código sem alterar sua funcionalidade, mantendo todos os testes passando. Ação: Refatorar o código escrito na fase anterior para torná-lo mais limpo com princípios de <a href="">Código Limpo (Clean Code)</a>, eficiente e fácil de manter. Isso pode incluir a remoção de duplicações, melhoria da legibilidade, e conformidade com padrões de design. Resultado: O código é melhorado sem alterar seu comportamento externo. Os testes (novos e antigos) continuam passando, garantindo que a funcionalidade permanece correta após as melhorias. 
+
+<img src="https://github.com/user-attachments/assets/620b69eb-5d3b-4339-ad75-7d4dc78839d1" align="right" height="177">
+
+A **Refatoração** é o processo de reestruturar o código de um software para melhorar sua qualidade interna, sem alterar seu comportamento externo. A principal finalidade da refatoração é tornar o código mais limpo, legível, e fácil de manter, otimizando aspectos como desempenho, organização e modularidade. Ela costuma envolver a remoção de duplicação de código, simplificação de estruturas complexas, e melhoria na nomenclatura de variáveis, classes e funções, além de aplicar padrões de design e princípios como o <a href="">SOLID</a>. Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decisões de design ou implementação apressadas criam problemas futuros. Em metodologias ágeis, a refatoração é geralmente integrada ao processo de desenvolvimento contínuo, sendo realizada entre ciclos de implementação de novas funcionalidades. Portanto, a refatoração se encaixa como uma prática regular dentro da fase de desenvolvimento, especificamente na etapa de Integração Contínua (CI), que foca na qualidade do código e na automação de testes.
+
+Por mais de vinte anos, programadores experientes no mundo inteiro contaram com o livro **Refatoração: Aperfeiçoando o Design de Códigos Existentes** de Martin Fowler para aperfeiçoar o design de códigos existentes e melhorar a manutenibilidade do software, assim como para deixar o código existente mais fácil de entender. Essa nova edição ansiosamente esperada foi atualizada por completo para refletir mudanças vitais no domínio da programação. Refatoração 2ª edição contém um catálogo atualizado das refatorações e inclui exemplos de código JavaScript bem como novos exemplos funcionais que demonstram a refatoração sem classes. Assim como na edição original, este livro explica o que é refatoração, por que você deve refatorar, como reorganizar um código que precise de refatoração e como fazer isso de forma bem-sucedida, independentemente da linguagem usada.
+
+Após ler este livro, você será capaz de:
+
+- Entenda o processo e os princípios básicos da refatoração;
+- Aplique rapidamente refatorações convenientes para deixar um programa mais fácil de entender e de alterar;
+- Reconheça “maus cheiros” no código que sinalizam oportunidades para refatorar;
+- Explore as refatorações, cada uma com suas explicações, a motivação, o mecanismo e exemplos simples;
+- Escreva testes robustos para suas refatorações;
+- Reconheça as contrapartidas e os obstáculos para a refatoração.
+
+O Desenvolvimento dirigido por testes requer dos desenvolvedores criar testes automatizados que definam requisitos em código antes de escrever o código da aplicação. Os testes contém asserções que podem ser verdadeiras ou falsas. Após as mesmas serem consideradas verdadeiras após sua execução, os testes confirmam o comportamento correto, permitindo os desenvolvedores evoluir e refatorar o código. Normalmente todos os testes são efetuados de forma continua de acordo com o desenvolvimento cada funcionalidade criada deve ser acompanhada de um teste bem descrito e projetado, então deve-se escolher a área do projeto ou requisitos da tarefa para melhor orientar o desenvolvimento destes testes.
+
+Desenvolvedores normalmente usam frameworks de testes, como **xUnit**, para criar e executar automaticamente uma série de casos de teste.
+
+> As empresas esperam que seus colaboradores sejam realmente muito bons em testes unitários e a melhor forma de garantir isso é pedindo TDD. Muitas pessoas aprendem testes de forma muito superficial, mas um profissional que já praticou TDD em alguma codebase real tem uma vantagem sobre os outros, pois já enfrentou diversos problemas e sabe como contorná-los.
+
+<img src="https://caelum-online-public.s3.amazonaws.com/1629+-+integracao_continua/03/3_1_1_design.png" height="177" align="right">
+
+Os testes em integração contínua são sobre **feedback do software**, como a maioria dos métodos ágeis. Feedback é o ponto chave para um desenvolvimento com qualidade, seja ele a nível técnico, de gestão ou pessoal. O Feedback é o ponto chave para um desenvolvimento com qualidade, seja ele a nível técnico, de gestão ou pessoal.
+
+> Bom, muito provavelmente não fui eu quem inventou o nome Ciclo de Feedback para desenvolvimento de Software mas estou adicionando o guiado a Testes. Legal mas o que isso quer dizer? Quer dizer que, quando trabalhando no desenvolvimento de uma tarefa qualquer, que seja guiada a testes, nós temos que trabalhar em cima do feedback que os testes nos trazem e não com o pensamento de que temos apenas que codar a `feature` e adicionar testes para garanti-las. Realizar uma tarefa guiada a testes com esse pensamento é disperdiçar boa parte do potencial da abordagem do TDD.
+
+![tdd,bdd,ddd](https://github.com/user-attachments/assets/999df44a-f250-4287-b80c-e7725401d917)
+
+## [QA] BDD - Behavior-Driven Development
+![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
+
+<img src="https://github.com/user-attachments/assets/51f4d9a0-47ce-49a9-baeb-f8b9d4c15b3e" align="right" height="77">
+
+O **BDD - Behavior-Driven Development** (Desenvolvimento Orientado a Comportamento), é uma metodologia de desenvolvimento ágil que tem como foco a colaboração entre desenvolvedores, QA (Quality Assurance) e partes interessadas não técnicas para criar uma compreensão compartilhada do comportamento desejado de um software. O BDD é uma evolução do TDD (Test-Driven Development) e adiciona uma ênfase maior na comunicação e na clareza dos requisitos. Em resumo, o BDD promove uma abordagem colaborativa para o desenvolvimento de software, focando em comportamentos e resultados esperados do sistema, o que ajuda a garantir que o software entregue atenda às necessidades reais dos usuários e stakeholders.
+
+Aqui estão os componentes chave do BDD:
+
+1. **Foco no Comportamento**: Em vez de se concentrar apenas na implementação técnica e nos testes de unidade, o BDD foca em como o software deve se comportar sob várias condições, incluindo o comportamento do usuário final.
+
+2. **Linguagem Ubíqua (Ubiquitous Language)**: Utiliza uma linguagem comum (frequentemente baseada em linguagens naturais como o inglês) que pode ser compreendida por todos os membros da equipe, incluindo desenvolvedores, QA, e stakeholders não técnicos. Isso ajuda a reduzir ambiguidades e garantir que todos tenham a mesma compreensão dos requisitos. A Linguagem Ubíqua (Ubiquitous Language) é um conceito central no <a href="">Design Orientado a Domínio (DDD)</a> que visa criar uma linguagem comum entre todos os envolvidos em um projeto, seja para os especialistas no domínio, desenvolvedores, ou mesmo os usuários finais. Essa linguagem comum facilita a comunicação e colaboração, reduzindo a possibilidade de mal-entendidos e melhorando a qualidade do desenvolvimento. 
+
+3. **Especificações Executáveis**: No BDD, os requisitos são escritos em forma de especificações que podem ser executadas como testes. Essas especificações geralmente seguem um formato estruturado, como <a href="">Gherkin</a> que é uma linguagem de domínio específico usada para descrever comportamentos esperados de um sistema de forma clara e compreensível por todos os envolvidos no desenvolvimento de software, incluindo pessoas não técnicas, que usa palavras-chave como "`Given`" (Dado), "`When`" (Quando), e "`Then`" (Então) para descrever cenários de teste:
+
+   - `Given` (Dado): Descreve o contexto inicial ou o estado do sistema antes de uma ação específica.
+   - `When` (Quando): Descreve a ação ou evento que ocorre.
+   - `Then` (Então): Descreve o resultado esperado ou o comportamento do sistema após a ação.
+
+Exemplo: Login no Sistema
+   
+```gherkin
+Feature: Login no Sistema
+
+Scenario: Login com credenciais válidas
+  Given: o usuário está na página de login
+  When: o usuário insere suas credenciais válidas
+  Then: o usuário é redirecionado para a página inicial
+```
+
+Exemplo 2: Pesquisar produto
+
+```gherkin
+Funcionalidade: Pesquisar produto
+  Eu como cliente
+  Quero fazer pesquisas no site da OLX
+  Para buscar por produtos
+
+Cenário: Buscar produto com sucesso
+  Dado que estou no site da OLX como um comprador de SP
+  Quando eu fizer uma busca por um produto
+  Então serão exibidos os resultados de busca para o produto em SP
+```
+
+5. **Ferramentas de BDD**: Existem várias ferramentas que suportam BDD, ajudando a automatizar as especificações executáveis. Algumas das ferramentas populares incluem <a href="">Cucumber</a> (para várias linguagens como Java, Ruby), <a href="">SpecFlow</a> (para .NET), <a href="">Behave</a> (para Python), entre outras.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/93228869-20dc-414f-b89e-4ae549ac96b4" align="right" height="277">
+
+5. **Benefícios do BDD**: Uma das maiores virtudes do BDD - Behavior-Driven Development é unir os dois mundos TDD e DDD, de fato é representar uma interseção entre TDD (Test-Driven Development) e DDD (Domain-Driven Design), pois ele nasce da necessidade de alinhar o desenvolvimento técnico com o entendimento do negócio, garantindo que o software reflita o comportamento esperado do sistema a partir da perspectiva do usuário ou domínio. BDD pode ser visto como a interseção onde a clareza de intenção do domínio (trazida pelo DDD) se encontra com a prática de testar antes de desenvolver (como propõe o TDD).
+
+   - **Melhor Comunicação**: Facilita a comunicação entre todos os membros da equipe, garantindo que todos entendam os requisitos de maneira clara e compartilhada.
+
+   - **Desenvolvimento Orientado a Valor**: Foca no que realmente importa para os usuários finais e stakeholders, ajudando a priorizar o desenvolvimento de funcionalidades de maior valor.
+
+   - **Menos Retrabalho**: Reduz ambiguidades nos requisitos, diminuindo o risco de desenvolvimento de funcionalidades incorretas ou desnecessárias.
+
+   - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
+
 ## [QA] DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
@@ -271,124 +389,6 @@ O DDD deve ajudar na modelagem das classes mais importantes e mais centrais do s
 Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outros sistemas, as rotinas de integração que recebem ou disponibilizam dados para outros sistemas não devem ser "inteligentes". Muitos desenvolvedores acabam modelando suas classes de negócios tentando resolver as questões internas do sistema e, ao mesmo tempo, pensando em como essas classes serão expostas para outros sistemas. Padrões como DTO (Data Transfer Object) que usam objetos "burros" são mais adequados para isso.
 
 Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um sistema. Seu foco é na modelagem das entidades principais de negócio usando a linguagem adequada daquele domínio para facilitar a manutenção, extensão e entendimento. Particularmente, eu não seguiria à risca o padrão, até porque existem inúmeros padrões e variações de modelagem OO. Estude os princípios por detrás desses padrões, pois eles são geralmente parecidos e veja o que funciona melhor para cada projeto.
-
-## [QA] TDD - Test-Driven Development 
-![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
-![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
-![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
-![xUnit](https://img.shields.io/badge/-xUnit-EF2D5E?style=badge&logo=.NET&logoColor=white) 
-![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=jest&logoColor=white)
-![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=mocha&logoColor=white)
-![JUnit5](https://img.shields.io/badge/-JUnit5-00D564?style=badge&logo=JUnit5&logoColor=white) 
-![Jest](https://img.shields.io/badge/-Jest-FFDF6F?style=badge&logo=jest&logoColor=black)
-![Mocha](https://img.shields.io/badge/-Mocha-FFDF6F?style=badge&logo=mocha&logoColor=black)
-![JUnit5](https://img.shields.io/badge/-JUnit5-FFDF6F?style=badge&logo=JUnit5&logoColor=black) 
-![JUnit5](https://img.shields.io/badge/-xUnit-FFDF6F?style=badge&logo=.NET&logoColor=black) 
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/555d9d87-5698-46e3-b39f-713da277205e" align="right" height="77">
-
-O **TDD - Test-Driven Development**, ou em português "Desenvolvimento guiado por testes" ou Desenvolvimento Orientado a testes ou Desenvolvimento digirido por testes, é uma técnica de desenvolvimento de software que se relaciona com o conceito de verificação e validação e se baseia em um ciclo curto de repetições: Primeiramente o desenvolvedor escreve um caso de teste automatizado que define uma melhoria desejada ou uma nova funcionalidade. Então, é produzido código que possa ser validado pelo teste para posteriormente o código ser refatorado para um código sob padrões aceitáveis. Basicamente, ela ajuda a aumentar a produtividade a partir de testes já consolidados. O TDD (Test-Driven Development) foca em um tipo específico de teste chamado <a href="">teste de unidade</a>. No entanto, ele pode influenciar outros tipos de testes durante o ciclo de desenvolvimento.
-
-Kent Beck, considerado o criador ou o 'descobridor' da técnica, declarou em 2003 que TDD encoraja designs de código simples e inspira confiança. Desenvolvimento dirigido por testes é relacionado a conceitos de programação de <a href="">XP - Extreme Programming</a>, iniciado em 1999, mas recentemente tem-se criado maior interesse pela mesma em função de seus próprios ideais. Através de TDD, programadores podem aplicar o conceito de melhorar e depurar código legado desenvolvido a partir de técnicas antigas.
-
-> O TDD é considerado uma técnica ou metodologia, muito adotada nos times de desenvolvimento. Isso porque ele é direcionado ao desenvolvimento de softwares. Contudo, pelo fato de inverter a ordem dos trabalhos – do teste para o código – é um pouco impopular entre os Devs. No entanto, após pegar o jeito, o desenvolvimento ganha um up, e a técnica traz muitos resultados positivos ao projeto.
-
-O TDD segue a lógica do ciclo: Red, Green e Refactor. Este ciclo é uma abordagem estruturada para escrever e melhorar código de software de maneira incremental, garantindo que ele seja testável, funcional e de alta qualidade. Aqui está uma explicação detalhada de cada fase do ciclo:
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/63318aff-ad59-4c3e-b858-172ec4154f85" align="right" height="277">
-
-🔴 **Red**: Escreva um teste que apresenta erros, que falhe. Ação: você começa escrevendo um teste automatizado para a funcionalidade que deseja implementar. Este teste é baseado nos requisitos e especificações do que o código deve fazer. Resultado: O teste falha, pois a funcionalidade ainda não foi implementada. A falha confirma que o teste é válido e que a funcionalidade não existe no momento.
-
-🟢 **Green**: Logo após, escreva um código que passe no teste, que funcione e faça o teste passar. Ação: Escrever a quantidade mínima de código necessário para fazer o teste passar. Nesta fase, o foco está em implementar a funcionalidade de maneira rápida e simples, sem se preocupar muito com a qualidade ou elegância do código. Resultado: O teste passa, indicando que a funcionalidade básica foi implementada corretamente.
-
-🟡 **Refactor**: Depois disso, "refatorar" o que foi feito, ou seja, eliminar a redundância e melhorar a qualidade do código, ou seja, melhorar e otimizar o código sem alterar sua funcionalidade, mantendo todos os testes passando. Ação: Refatorar o código escrito na fase anterior para torná-lo mais limpo com princípios de <a href="">Código Limpo (Clean Code)</a>, eficiente e fácil de manter. Isso pode incluir a remoção de duplicações, melhoria da legibilidade, e conformidade com padrões de design. Resultado: O código é melhorado sem alterar seu comportamento externo. Os testes (novos e antigos) continuam passando, garantindo que a funcionalidade permanece correta após as melhorias. 
-
-<img src="https://github.com/user-attachments/assets/620b69eb-5d3b-4339-ad75-7d4dc78839d1" align="right" height="177">
-
-A **Refatoração** é o processo de reestruturar o código de um software para melhorar sua qualidade interna, sem alterar seu comportamento externo. A principal finalidade da refatoração é tornar o código mais limpo, legível, e fácil de manter, otimizando aspectos como desempenho, organização e modularidade. Ela costuma envolver a remoção de duplicação de código, simplificação de estruturas complexas, e melhoria na nomenclatura de variáveis, classes e funções, além de aplicar padrões de design e princípios como o <a href="">SOLID</a>. Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decisões de design ou implementação apressadas criam problemas futuros. Em metodologias ágeis, a refatoração é geralmente integrada ao processo de desenvolvimento contínuo, sendo realizada entre ciclos de implementação de novas funcionalidades. Portanto, a refatoração se encaixa como uma prática regular dentro da fase de desenvolvimento, especificamente na etapa de Integração Contínua (CI), que foca na qualidade do código e na automação de testes.
-
-Por mais de vinte anos, programadores experientes no mundo inteiro contaram com o livro **Refatoração: Aperfeiçoando o Design de Códigos Existentes** de Martin Fowler para aperfeiçoar o design de códigos existentes e melhorar a manutenibilidade do software, assim como para deixar o código existente mais fácil de entender. Essa nova edição ansiosamente esperada foi atualizada por completo para refletir mudanças vitais no domínio da programação. Refatoração 2ª edição contém um catálogo atualizado das refatorações e inclui exemplos de código JavaScript bem como novos exemplos funcionais que demonstram a refatoração sem classes. Assim como na edição original, este livro explica o que é refatoração, por que você deve refatorar, como reorganizar um código que precise de refatoração e como fazer isso de forma bem-sucedida, independentemente da linguagem usada.
-
-Após ler este livro, você será capaz de:
-
-- Entenda o processo e os princípios básicos da refatoração;
-- Aplique rapidamente refatorações convenientes para deixar um programa mais fácil de entender e de alterar;
-- Reconheça “maus cheiros” no código que sinalizam oportunidades para refatorar;
-- Explore as refatorações, cada uma com suas explicações, a motivação, o mecanismo e exemplos simples;
-- Escreva testes robustos para suas refatorações;
-- Reconheça as contrapartidas e os obstáculos para a refatoração.
-
-O Desenvolvimento dirigido por testes requer dos desenvolvedores criar testes automatizados que definam requisitos em código antes de escrever o código da aplicação. Os testes contém asserções que podem ser verdadeiras ou falsas. Após as mesmas serem consideradas verdadeiras após sua execução, os testes confirmam o comportamento correto, permitindo os desenvolvedores evoluir e refatorar o código. Normalmente todos os testes são efetuados de forma continua de acordo com o desenvolvimento cada funcionalidade criada deve ser acompanhada de um teste bem descrito e projetado, então deve-se escolher a área do projeto ou requisitos da tarefa para melhor orientar o desenvolvimento destes testes.
-
-Desenvolvedores normalmente usam frameworks de testes, como **xUnit**, para criar e executar automaticamente uma série de casos de teste.
-
-> As empresas esperam que seus colaboradores sejam realmente muito bons em testes unitários e a melhor forma de garantir isso é pedindo TDD. Muitas pessoas aprendem testes de forma muito superficial, mas um profissional que já praticou TDD em alguma codebase real tem uma vantagem sobre os outros, pois já enfrentou diversos problemas e sabe como contorná-los.
-
-<img src="https://caelum-online-public.s3.amazonaws.com/1629+-+integracao_continua/03/3_1_1_design.png" height="177" align="right">
-
-Os testes em integração contínua são sobre **feedback do software**, como a maioria dos métodos ágeis. Feedback é o ponto chave para um desenvolvimento com qualidade, seja ele a nível técnico, de gestão ou pessoal. O Feedback é o ponto chave para um desenvolvimento com qualidade, seja ele a nível técnico, de gestão ou pessoal.
-
-> Bom, muito provavelmente não fui eu quem inventou o nome Ciclo de Feedback para desenvolvimento de Software mas estou adicionando o guiado a Testes. Legal mas o que isso quer dizer? Quer dizer que, quando trabalhando no desenvolvimento de uma tarefa qualquer, que seja guiada a testes, nós temos que trabalhar em cima do feedback que os testes nos trazem e não com o pensamento de que temos apenas que codar a `feature` e adicionar testes para garanti-las. Realizar uma tarefa guiada a testes com esse pensamento é disperdiçar boa parte do potencial da abordagem do TDD.
-
-![tdd,bdd,ddd](https://github.com/user-attachments/assets/999df44a-f250-4287-b80c-e7725401d917)
-
-## [QA] BDD - Behavior-Driven Development
-![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
-
-<img src="https://github.com/user-attachments/assets/51f4d9a0-47ce-49a9-baeb-f8b9d4c15b3e" align="right" height="77">
-
-O **BDD - Behavior-Driven Development** (Desenvolvimento Orientado a Comportamento), é uma metodologia de desenvolvimento ágil que tem como foco a colaboração entre desenvolvedores, QA (Quality Assurance) e partes interessadas não técnicas para criar uma compreensão compartilhada do comportamento desejado de um software. O BDD é uma evolução do TDD (Test-Driven Development) e adiciona uma ênfase maior na comunicação e na clareza dos requisitos. Em resumo, o BDD promove uma abordagem colaborativa para o desenvolvimento de software, focando em comportamentos e resultados esperados do sistema, o que ajuda a garantir que o software entregue atenda às necessidades reais dos usuários e stakeholders.
-
-Aqui estão os componentes chave do BDD:
-
-1. **Foco no Comportamento**: Em vez de se concentrar apenas na implementação técnica e nos testes de unidade, o BDD foca em como o software deve se comportar sob várias condições, incluindo o comportamento do usuário final.
-
-2. **Linguagem Ubíqua (Ubiquitous Language)**: Utiliza uma linguagem comum (frequentemente baseada em linguagens naturais como o inglês) que pode ser compreendida por todos os membros da equipe, incluindo desenvolvedores, QA, e stakeholders não técnicos. Isso ajuda a reduzir ambiguidades e garantir que todos tenham a mesma compreensão dos requisitos. A Linguagem Ubíqua (Ubiquitous Language) é um conceito central no <a href="">Design Orientado a Domínio (DDD)</a> que visa criar uma linguagem comum entre todos os envolvidos em um projeto, seja para os especialistas no domínio, desenvolvedores, ou mesmo os usuários finais. Essa linguagem comum facilita a comunicação e colaboração, reduzindo a possibilidade de mal-entendidos e melhorando a qualidade do desenvolvimento. 
-
-3. **Especificações Executáveis**: No BDD, os requisitos são escritos em forma de especificações que podem ser executadas como testes. Essas especificações geralmente seguem um formato estruturado, como <a href="">Gherkin</a> que é uma linguagem de domínio específico usada para descrever comportamentos esperados de um sistema de forma clara e compreensível por todos os envolvidos no desenvolvimento de software, incluindo pessoas não técnicas, que usa palavras-chave como "`Given`" (Dado), "`When`" (Quando), e "`Then`" (Então) para descrever cenários de teste:
-
-   - `Given` (Dado): Descreve o contexto inicial ou o estado do sistema antes de uma ação específica.
-   - `When` (Quando): Descreve a ação ou evento que ocorre.
-   - `Then` (Então): Descreve o resultado esperado ou o comportamento do sistema após a ação.
-
-Exemplo: Login no Sistema
-   
-```gherkin
-Feature: Login no Sistema
-
-Scenario: Login com credenciais válidas
-  Given: o usuário está na página de login
-  When: o usuário insere suas credenciais válidas
-  Then: o usuário é redirecionado para a página inicial
-```
-
-Exemplo 2: Pesquisar produto
-
-```gherkin
-Funcionalidade: Pesquisar produto
-  Eu como cliente
-  Quero fazer pesquisas no site da OLX
-  Para buscar por produtos
-
-Cenário: Buscar produto com sucesso
-  Dado que estou no site da OLX como um comprador de SP
-  Quando eu fizer uma busca por um produto
-  Então serão exibidos os resultados de busca para o produto em SP
-```
-
-5. **Ferramentas de BDD**: Existem várias ferramentas que suportam BDD, ajudando a automatizar as especificações executáveis. Algumas das ferramentas populares incluem <a href="">Cucumber</a> (para várias linguagens como Java, Ruby), <a href="">SpecFlow</a> (para .NET), <a href="">Behave</a> (para Python), entre outras.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/93228869-20dc-414f-b89e-4ae549ac96b4" align="right" height="277">
-
-5. **Benefícios do BDD**: Uma das maiores virtudes do BDD - Behavior-Driven Development é unir os dois mundos TDD e DDD, de fato é representar uma interseção entre TDD (Test-Driven Development) e DDD (Domain-Driven Design), pois ele nasce da necessidade de alinhar o desenvolvimento técnico com o entendimento do negócio, garantindo que o software reflita o comportamento esperado do sistema a partir da perspectiva do usuário ou domínio. BDD pode ser visto como a interseção onde a clareza de intenção do domínio (trazida pelo DDD) se encontra com a prática de testar antes de desenvolver (como propõe o TDD).
-
-   - **Melhor Comunicação**: Facilita a comunicação entre todos os membros da equipe, garantindo que todos entendam os requisitos de maneira clara e compartilhada.
-
-   - **Desenvolvimento Orientado a Valor**: Foca no que realmente importa para os usuários finais e stakeholders, ajudando a priorizar o desenvolvimento de funcionalidades de maior valor.
-
-   - **Menos Retrabalho**: Reduz ambiguidades nos requisitos, diminuindo o risco de desenvolvimento de funcionalidades incorretas ou desnecessárias.
-
-   - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
 ## [QA] Automation testing
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
