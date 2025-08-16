@@ -26,7 +26,9 @@ Nesta escultura, temos na base um compilado com as regras e leis a serem seguida
 
 Historicamente, o conceito de qualidade está ligado à ideia de atender padrões e requisitos acordados, com base em comunicação clara e objetivos definidos, seja na qualidade do ar, qualidade da água, da qualidade de vida ou qualidade do software. Portanto, a qualidade de software é a investigação do software a fim de fornecer informações sobre sua qualidade em relação ao contexto em que ele deve operar.
 
-A busca por qualidade não é algo novo. Desde os primórdios, o ser humano busca aprimorar suas criações e produções, seja para torná-las mais duráveis, funcionais ou esteticamente agradáveis. Com o advento da Revolução Industrial, essa busca se intensificou, principalmente no que diz respeito à produção em massa. Mas foi somente com a Segunda Guerra Mundial que a qualidade passou a ser vista como uma questão estratégica, com a necessidade de se produzir em larga escala produtos de alta qualidade para suprir as demandas militares. A partir daí, a qualidade começou a ser tratada como um processo e a ser estudada de forma mais sistemática. A evolução histórica da qualidade de software pode ser dividida em várias fases:
+A busca por qualidade não é algo novo. Desde os primórdios, o ser humano busca aprimorar suas criações e produções, seja para torná-las mais duráveis, funcionais ou esteticamente agradáveis. Com o advento da Revolução Industrial, essa busca se intensificou, principalmente no que diz respeito à produção em massa. 
+
+Mas foi somente com a Segunda Guerra Mundial que a qualidade passou a ser vista como uma questão estratégica, com a necessidade de se produzir em larga escala produtos de alta qualidade para suprir as demandas militares. A partir daí, a qualidade começou a ser tratada como um processo e a ser estudada de forma mais sistemática. A evolução histórica da qualidade de software pode ser dividida em várias fases:
 
 1. **PRIMEIRA FASE**: Conhecida como era dos “programadores heróis”, ocorreu na década de 1940 a 1950, quando o foco era na programação manual e não havia processos formais de garantia de qualidade.
 
