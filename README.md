@@ -26,7 +26,15 @@ Nesta escultura, temos na base um compilado com as regras e leis a serem seguida
 
 Historicamente, o conceito de qualidade está ligado à ideia de atender padrões e requisitos acordados, com base em comunicação clara e objetivos definidos, seja na qualidade do ar, qualidade da água, da qualidade de vida ou qualidade do software. Portanto, a qualidade de software é a investigação do software a fim de fornecer informações sobre sua qualidade em relação ao contexto em que ele deve operar.
 
-Os aspectos históricos da qualidade de software nos mostram como essa área evoluiu ao longo do tempo. Desde a década de 1970, a qualidade de software vem sendo debatida e estudada, e hoje em dia é um tema muito importante em empresas de desenvolvimento de software.
+A busca por qualidade não é algo novo. Desde os primórdios, o ser humano busca aprimorar suas criações e produções, seja para torná-las mais duráveis, funcionais ou esteticamente agradáveis. Com o advento da Revolução Industrial, essa busca se intensificou, principalmente no que diz respeito à produção em massa. Mas foi somente com a Segunda Guerra Mundial que a qualidade passou a ser vista como uma questão estratégica, com a necessidade de se produzir em larga escala produtos de alta qualidade para suprir as demandas militares. A partir daí, a qualidade começou a ser tratada como um processo e a ser estudada de forma mais sistemática. A evolução histórica da qualidade de software pode ser dividida em várias fases:
+
+1. **PRIMEIRA FASE**: Conhecida como era dos “programadores heróis”, ocorreu na década de 1940 a 1950, quando o foco era na programação manual e não havia processos formais de garantia de qualidade.
+
+2. **SEGUNDA FASE**: Foi a era dos “produtos de software”, que teve início nos anos 1960 e trouxe a necessidade de se preocupar com a qualidade dos softwares produzidos, mas ainda sem muita formalização.
+
+3. **TERCEIRA FASE**: A era da “engenharia de software”, teve início nos anos 1970 e marcou o surgimento de processos formais de desenvolvimento de software e de metodologias para garantir a qualidade do produto final. Nesta fase, foi criada a ISO 9000, que estabeleceu padrões de qualidade para empresas e serviços em geral.
+
+Portanto, os aspectos históricos da qualidade de software nos mostram como essa área evoluiu ao longo do tempo. Desde a década de 1970, a qualidade de software vem sendo debatida e estudada, e hoje em dia é um tema muito importante em empresas de desenvolvimento de software.
 
 Para aprofundar seus conhecimentos sobre qualidade de software, você pode se perguntar: como garantir que um software seja de qualidade? Uma resposta é adotar processos de garantia de qualidade, que englobam atividades como revisões, testes e inspeções para identificar e corrigir defeitos. Além disso, é importante definir critérios de qualidade e medir a qualidade do software com base nesses critérios.
  
