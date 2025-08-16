@@ -126,6 +126,8 @@ Em outras palavras, a Regra 10 de Myers enfatiza  que o custo da correção de d
 
 Uma boa gestão de qualidade pode ser a chave para minimizar os custos relacionados às falhas em software. Investir em capacitação da equipe, em boas práticas de desenvolvimento e em testes constantes pode ajudar a evitar falhas internas e externas e, consequentemente, reduzir os custos para a empresa.
 
+<img align="right" height="177" alt="image" src="https://github.com/user-attachments/assets/b99bfaa0-07bf-4497-b544-d45d91f1fe50" />
+
 > [!Important]
 > **Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção**: Para aprofundar seus conhecimentos sobre avaliação de atributos de qualidade, recomendamos a leitura do livro Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção é um livro escrito por Alexandre Kherroubi e Adalberto Cavalcanti. O livro aborda a importância da qualidade de software na redução dos custos de manutenção e explora estratégias práticas para melhorar a qualidade do software, resultando em um impacto positivo nos custos de manutenção ao longo do ciclo de vida do software.
 
