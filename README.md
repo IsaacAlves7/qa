@@ -36,6 +36,19 @@ Mas foi somente com a Segunda Guerra Mundial que a qualidade passou a ser vista 
 
 3. **TERCEIRA FASE**: A era da “engenharia de software”, teve início nos anos 1970 e marcou o surgimento de processos formais de desenvolvimento de software e de metodologias para garantir a qualidade do produto final. Nesta fase, foi criada a ISO 9000, que estabeleceu padrões de qualidade para empresas e serviços em geral.
 
+4. **QUALIDADE TOTAL**: Teve início na década de 1980, trouxe a ideia de que a qualidade não é responsabilidade apenas da área de desenvolvimento de software, mas sim de toda a organização. Foram estabelecidos processos de melhoria contínua e a necessidade de se envolver todos os departamentos e funcionários na busca pela qualidade.
+
+5. **QUALIDADE DE SOFTWARE**: Teve início nos anos 1990, trouxe a necessidade de se preocupar com a qualidade do processo de desenvolvimento do software, e não apenas com o produto final. Surgiram novas metodologias e modelos de maturidade, como o Capability Matu
+rity Model Integration (CMMI) e o ISO/IEC 12207, que buscam garantir a qualidade do processo de desenvolvimento.
+
+No início da década de 1980, o governo dos Estados Unidos reconheceu a necessidade de padronizar a qualidade do software. Em 1986, foi publicado o padrão IEEE 610.12, que definiu a terminologia básica usada em engenharia de software, incluindo definições de qualidade de software. Essas definições incluem “qualidade de software” como o grau em que um sistema, componente ou processo atende aos requisitos especificados e/ou implícitos e às necessidades ou expectativas do usuário.
+
+A partir de então, a qualidade de software se tornou um foco importante na indústria de TI e foi acompanhada pelo surgimento de várias ferramentas e técnicas de teste e garantia de qualidade de software. A demanda por softwares confiáveis e de alta qualidade é cada vez maior, uma vez que muitos negócios e serviços dependem de sistemas de software em seus processos diários.
+
+Hoje em dia, a busca pela qualidade de software continua em constante evolução, com a introdução de novas tecnologias e metodologias, como a integração contínua e o desenvolvimento ágil, e inteligência artificial que buscam garantir a qualidade do software de forma mais eficiente e rápida.
+
+No entanto, a busca pela qualidade de software ainda é um desafio constante. Novas tecnologias e metodologias surgem a cada dia, e os desenvolvedores de software devem estar atualizados sobre as novas tendências e ferramentas disponíveis. Além disso, a complexidade dos sistemas de software modernos também torna o controle de qualidade mais difícil, exigindo uma abordagem mais estruturada e orientada a processos.
+
 Portanto, os aspectos históricos da qualidade de software nos mostram como essa área evoluiu ao longo do tempo. Desde a década de 1970, a qualidade de software vem sendo debatida e estudada, e hoje em dia é um tema muito importante em empresas de desenvolvimento de software.
 
 Para aprofundar seus conhecimentos sobre qualidade de software, você pode se perguntar: como garantir que um software seja de qualidade? Uma resposta é adotar processos de garantia de qualidade, que englobam atividades como revisões, testes e inspeções para identificar e corrigir defeitos. Além disso, é importante definir critérios de qualidade e medir a qualidade do software com base nesses critérios.
@@ -87,7 +100,9 @@ Dessa forma, garantimos:
 - Story testada e com aceite formal. 
 
 ## [QA] Custos x Fases
-Custos de controle em qualidade de software se referem aos gastos necessários para prevenir defeitos e garantir a qualidade dos produtos de software, bem como para corrigir quaisquer defeitos encontrados durante as fases de desenvolvimento 
+<img width="524" height="241" align="right" src="https://github.com/user-attachments/assets/a3aaded7-0fad-4ba5-9b0a-9d664bf0dc8e" />
+
+Você sabia que a qualidade de um software pode impactar diretamente nos custos de uma empresa? Os **Custos de controle** em qualidade de software se referem aos gastos necessários para prevenir defeitos e garantir a qualidade dos produtos de software, bem como para corrigir quaisquer defeitos encontrados durante as fases de desenvolvimento 
 e teste. 
 
 Esses custos podem incluir investimentos em treinamento, ferramentas de teste, testes manuais e automatizados, revisões de código e outras atividades de garantia de qualidade. 
@@ -96,7 +111,7 @@ Ao investir em custos de controle, as organizações podem reduzir o número de 
  
 As falhas internas são aquelas que acontecem dentro da empresa, antes do produto final ser entregue ao cliente. Elas podem ser causadas por diversos motivos, como falta de capacitação da equipe, problemas de comunicação, dentre outros. Essas falhas podem levar a retrabalho, atrasos na entrega e insatisfação do cliente.
 
-Já as falhas externas são aquelas que ocorrem após a entrega do produto final ao cliente. Elas podem ser causadas por problemas na codificação, falhas de segurança, dentre outros fatores. Essas falhas podem gerar custos altíssimos para a empresa, como a necessidade de retrabalho, de suporte técnico, de processos judiciais e até mesmo a perda de clientes
+Já as **falhas externas** são aquelas que ocorrem após a entrega do produto final ao cliente. Elas podem ser causadas por problemas na codificação, falhas de segurança, dentre outros fatores. Essas falhas podem gerar custos altíssimos para a empresa, como a necessidade de retrabalho, de suporte técnico, de processos judiciais e até mesmo a perda de clientes
 
 > [!Warning]
 > Para aprofundar seu conhecimento sobre os custos de qualidade de software, você pode se perguntar: quais são as principais causas de falhas internas e externas? Como a qualidade do software pode influenciar nos custos da empresa? Como é possível reduzir esses custos e melhorar a qualidade do produto final?
