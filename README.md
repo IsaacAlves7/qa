@@ -54,7 +54,15 @@ Dessa forma, garantimos:
 - Story testada e com aceite formal. 
 
 ## [QA] Custos x Fases
-Regra 10 de Myers
+
+> [!Warning]
+> Para aprofundar seu conhecimento sobre os custos de qualidade de software, você pode se perguntar: quais são as principais causas de falhas internas e externas? Como a qualidade do software pode influenciar nos custos da empresa? Como é possível reduzir esses custos e melhorar a qualidade do produto final?
+
+A **Regra 10 de Myers**, criada em 2004 por Glenford Myers, é uma importante diretriz para os analistas de teste de software. Essa regra afirma que toda falha no software deve ser rastreável a uma ação ou decisão específica tomada durante o desenvolvimento do software.
+
+Em outras palavras, a Regra 10 de Myers enfatiza  que o custo da correção de defeitos é bem mais custoso quanto mais tarde o defeito é encontrado, ou seja, um defeito encontrado em produção custa muito mais do que se fosse encontrado na fase de análise ou em modelos de dados.
+
+Uma boa gestão de qualidade pode ser a chave para minimizar os custos relacionados às falhas em software. Investir em capacitação da equipe, em boas práticas de desenvolvimento e em testes constantes pode ajudar a evitar falhas internas e externas e, consequentemente, reduzir os custos para a empresa.
 
 ## [QA] DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
