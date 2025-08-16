@@ -42,6 +42,16 @@ Entre os fundamentos do teste de software estão:
 
 3. **Projeto de casos de teste**: os casos de teste devem ser projetados de acordo com os requisitos e objetivos do teste, de forma a garantir a cobertura de todos os aspectos do software.
 
+4. **Execução de testes**: a execução dos testes deve ser feita de forma sistemática e controlada, registrando todas as falhas encontradas.
+
+5. **Avaliação de resultados**: os resultados dos testes devem ser avaliados de acordo com os critérios de aceitação para determinar se o software atendeu aos requisitos.
+
+6. **Relatórios e documentação**: todos os resultados e conclusões do teste devem ser documentados de forma clara e concisa para permitir que outras pessoas entendam e repliquem o processo.
+
+Além desses fundamentos básicos, existem diversas técnicas e ferramentas de teste que podem ser utilizadas para tornar o processo mais eficiente e eficaz. Essas incluem testes funcionais, testes de desempenho, testes de segurança, testes de usabilidade, dentre outros. É importante que o testador esteja familiarizado com as diferentes técnicas e saiba selecionar a mais adequada para cada situação. 
+
+Outro aspecto importante dos fundamentos de qualidade de software é a colaboração entre as equipes envolvidas no desenvolvimento. É preciso que todos os membros trabalhem em conjunto para garantir a qualidade do produto final. Isso inclui desde a comunicação eficiente entre os desenvolvedores e os testadores até a participação do usuário em testes de aceitação.
+
 Portanto, o **teste de software** para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
 
 Vantagens dos testes:
