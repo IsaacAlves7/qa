@@ -10,11 +10,17 @@ Ao concluir as revisões e auditorias, você reflete sobre os processos e a efic
 > [!Tip]
 > Vamos recordar a importância das boas práticas de programação como um elemento essencial na busca pela qualidade de software. Revisitarmos a noção de código limpo e bem estruturado, que não só facilita a manutenção, mas também reduz erros e falhas futuras. Recordar como padrões de nomenclatura consistentes, comentários claros e modularização do código são cruciais para criar um produto de software robusto e de fácil compreensão. Isso nos lembrará que a qualidade não se limita apenas aos processos de teste, mas começa desde a concepção do código-fonte.
 
+Primeiro, precisamos entender que a qualidade de software é uma área de grande importância no mercado de tecnologia da informação. E para garantir a qualidade de um software, é preciso conhecer seus fundamentos, entender sua história, compreender os custos envolvidos, realizar atividades de apoio, seguir padrões e avaliar seus atributos. A seguir, apresentamos alguns desses atributos:
+
+> [!Note]
+> **FUNDAMENTOS DA QUALIDADE DE SOFTWARE**: Incluem a definição de requisitos, o planejamento de testes e a execução de testes de forma sistemática. Esses processos são essenciais para garantir que o software desenvolvido atenda às necessidades do usuário e atinja a qualidade esperada.
+
 No antigo Egito, há aproximadamente 4 mil anos, para que as construções fossem feitas com **qualidade**, definiu-se o cúbito, que era a distância do cotovelo à ponta do indicador do faraó. Uma das primeiras tentativas da humanidade de _padronizar_ as medidas, gerando qualidade nas construções.
 
 Nesta escultura, temos na base um compilado com as regras e leis a serem seguidas, impostas por Hamurabi, Rei da Babilônia, que era aplicada a cidadãos livres, comerciantes, escravos, etc. Uma das primeiras tentativas de _padronizar_ as regras de convívio da sociedade, há aproximadamente 3.800 anos atrás.
 
-> Definição: “Qualidade é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
+> [!Important]
+> **Definição**: “Qualidade é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
 
 Historicamente, o conceito de qualidade está ligado à ideia de atender padrões e requisitos acordados, com base em comunicação clara e objetivos definidos, seja na qualidade do ar, qualidade da água, da qualidade de vida ou qualidade do software. Portanto, a qualidade de software é a investigação do software a fim de fornecer informações sobre sua qualidade em relação ao contexto em que ele deve operar.
 
