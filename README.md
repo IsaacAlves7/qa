@@ -544,9 +544,7 @@ Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes 
 
 <img src="https://em-content.zobj.net/source/microsoft-teams/363/test-tube_1f9ea.png" height="77" align="right">
 
-Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). 
-
-Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
+Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
 
 Portanto, são testes que verificam se uma parte específica do código, costumeiramente a nível de função, está funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. 
 
