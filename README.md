@@ -604,6 +604,27 @@ A ideia é alinhar desde o início o que será construído com o que realmente t
 
 Na prática, o ATTD acaba funcionando como uma ponte entre BDD e TDD. Ele compartilha com o BDD a preocupação de usar exemplos de negócio como base para o desenvolvimento, mas mantém a disciplina do TDD de usar testes automatizados como motor do ciclo. Isso ajuda a garantir que o software entregue não só funcione tecnicamente, mas também atenda ao valor esperado pelos usuários, reduzindo retrabalho e mal-entendidos.
 
+## [QA] SDD - Specification-Driven Development
+<img height="277" align="right" src="https://github.com/user-attachments/assets/f1d7c1dc-adde-4604-b310-f8dd82f287f6" />
+
+O **SDD - Specification-Driven Development** é uma abordagem de desenvolvimento de software em que o ponto de partida e o guia principal de todo o ciclo de criação é a especificação formal e clara do sistema a ser construído. 
+
+Em vez de começar direto pela implementação de código ou até mesmo pelos testes, a ideia central do SDD é produzir especificações bem definidas que podem ser documentos estruturados, contratos formais, modelos de comportamento ou até DSLs (linguagens específicas de domínio) e a partir delas orientar o design, os testes e a implementação. 
+
+No desenvolvimento tradicional, o código vem primeiro, seguido pela documentação, testes e explicação.
+
+Mas no desenvolvimento orientado a especificações, invertemos o roteiro. A especificação se torna a fonte da verdade e o código flui a partir dela. Com a IA no circuito, esse fluxo de trabalho se torna ainda mais poderoso. Gera especificações a partir da intenção do usuário. Deriva código a partir de especificações e valida a lógica com linguagem natural.
+
+Neste tópico, você aprenderá como fluxos de trabalho com tecnologia de IA permitem sistemas mais rápidos, seguros e modulares, especialmente para aplicações embarcadas e distribuídas na borda. O desenvolvimento orientado a especificações começa definindo o que o sistema deve fazer.
+
+Antes de tocar no código, as especificações podem delinear o comportamento funcional, relacionamentos de entrada/saída, casos extremos (edge cases), failure cases, Temporal logic e.g. do x, y, and z.
+
+O propósito é reduzir ambiguidades que frequentemente aparecem em métodos tradicionais, onde requisitos em linguagem natural muitas vezes dão margem a interpretações diferentes por desenvolvedores, testadores e stakeholders. No SDD, a especificação não é apenas um requisito no papel, mas sim um artefato executável ou validável, que pode ser usado para gerar código, validar regras de negócio automaticamente ou servir de referência inequívoca para testes.
+
+Dessa forma, o SDD busca criar um fluxo em que a especificação é a fonte da verdade. Em muitas implementações dessa prática, as especificações podem ser escritas em formatos que permitam serem executadas ou verificadas, como contratos formais, modelos lógicos ou até arquivos que depois geram código de suporte, documentação ou casos de teste. Isso cria uma forte ligação entre o que o cliente espera, o que o time desenvolve e o que é testado. Diferente do TDD (Test-Driven Development), que coloca os testes como guia para a implementação, ou do BDD (Behavior-Driven Development), que enfatiza a escrita de cenários de comportamento em linguagem quase natural, o SDD é mais rígido e sistemático, focando na **especificação técnica ou formal** como ponto de convergência, de forma que a implementação não seja “interpretada” pelos desenvolvedores, mas derivada da especificação.
+
+Essa abordagem é especialmente útil em domínios onde erros de interpretação podem ser críticos, como sistemas financeiros, governamentais, industriais e médicos, porque minimiza a distância entre o que foi pedido e o que é entregue. Além disso, o SDD facilita auditorias, compliance e rastreabilidade, já que a especificação pode ser usada tanto como documento de contrato entre as partes quanto como mecanismo técnico para validar que o software está aderente às regras. Por outro lado, aplicar SDD de forma efetiva exige disciplina, ferramentas adequadas e equipes acostumadas a lidar com formalismo maior do que em metodologias mais flexíveis, o que pode ser uma barreira em times ágeis que preferem rapidez de iteração.
+
 ## [QA] DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
@@ -736,24 +757,3 @@ O DDD deve ajudar na modelagem das classes mais importantes e mais centrais do s
 Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outros sistemas, as rotinas de integração que recebem ou disponibilizam dados para outros sistemas não devem ser "inteligentes". Muitos desenvolvedores acabam modelando suas classes de negócios tentando resolver as questões internas do sistema e, ao mesmo tempo, pensando em como essas classes serão expostas para outros sistemas. Padrões como DTO (Data Transfer Object) que usam objetos "burros" são mais adequados para isso.
 
 Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um sistema. Seu foco é na modelagem das entidades principais de negócio usando a linguagem adequada daquele domínio para facilitar a manutenção, extensão e entendimento. Particularmente, eu não seguiria à risca o padrão, até porque existem inúmeros padrões e variações de modelagem OO. Estude os princípios por detrás desses padrões, pois eles são geralmente parecidos e veja o que funciona melhor para cada projeto.
-
-## [QA] SDD - Specification-Driven Development
-<img height="277" align="right" src="https://github.com/user-attachments/assets/f1d7c1dc-adde-4604-b310-f8dd82f287f6" />
-
-O **SDD - Specification-Driven Development** é uma abordagem de desenvolvimento de software em que o ponto de partida e o guia principal de todo o ciclo de criação é a especificação formal e clara do sistema a ser construído. 
-
-Em vez de começar direto pela implementação de código ou até mesmo pelos testes, a ideia central do SDD é produzir especificações bem definidas que podem ser documentos estruturados, contratos formais, modelos de comportamento ou até DSLs (linguagens específicas de domínio) e a partir delas orientar o design, os testes e a implementação. 
-
-No desenvolvimento tradicional, o código vem primeiro, seguido pela documentação, testes e explicação.
-
-Mas no desenvolvimento orientado a especificações, invertemos o roteiro. A especificação se torna a fonte da verdade e o código flui a partir dela. Com a IA no circuito, esse fluxo de trabalho se torna ainda mais poderoso. Gera especificações a partir da intenção do usuário. Deriva código a partir de especificações e valida a lógica com linguagem natural.
-
-Neste tópico, você aprenderá como fluxos de trabalho com tecnologia de IA permitem sistemas mais rápidos, seguros e modulares, especialmente para aplicações embarcadas e distribuídas na borda. O desenvolvimento orientado a especificações começa definindo o que o sistema deve fazer.
-
-Antes de tocar no código, as especificações podem delinear o comportamento funcional, relacionamentos de entrada/saída, casos extremos (edge cases), failure cases, Temporal logic e.g. do x, y, and z.
-
-O propósito é reduzir ambiguidades que frequentemente aparecem em métodos tradicionais, onde requisitos em linguagem natural muitas vezes dão margem a interpretações diferentes por desenvolvedores, testadores e stakeholders. No SDD, a especificação não é apenas um requisito no papel, mas sim um artefato executável ou validável, que pode ser usado para gerar código, validar regras de negócio automaticamente ou servir de referência inequívoca para testes.
-
-Dessa forma, o SDD busca criar um fluxo em que a especificação é a fonte da verdade. Em muitas implementações dessa prática, as especificações podem ser escritas em formatos que permitam serem executadas ou verificadas, como contratos formais, modelos lógicos ou até arquivos que depois geram código de suporte, documentação ou casos de teste. Isso cria uma forte ligação entre o que o cliente espera, o que o time desenvolve e o que é testado. Diferente do TDD (Test-Driven Development), que coloca os testes como guia para a implementação, ou do BDD (Behavior-Driven Development), que enfatiza a escrita de cenários de comportamento em linguagem quase natural, o SDD é mais rígido e sistemático, focando na **especificação técnica ou formal** como ponto de convergência, de forma que a implementação não seja “interpretada” pelos desenvolvedores, mas derivada da especificação.
-
-Essa abordagem é especialmente útil em domínios onde erros de interpretação podem ser críticos, como sistemas financeiros, governamentais, industriais e médicos, porque minimiza a distância entre o que foi pedido e o que é entregue. Além disso, o SDD facilita auditorias, compliance e rastreabilidade, já que a especificação pode ser usada tanto como documento de contrato entre as partes quanto como mecanismo técnico para validar que o software está aderente às regras. Por outro lado, aplicar SDD de forma efetiva exige disciplina, ferramentas adequadas e equipes acostumadas a lidar com formalismo maior do que em metodologias mais flexíveis, o que pode ser uma barreira em times ágeis que preferem rapidez de iteração.
