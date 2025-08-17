@@ -594,6 +594,7 @@ Cenário: Buscar produto com sucesso
    - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
 ## [QA] ATTD - Acceptance Test-Driven Development
+<img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
 
 O **ATTD - Acceptance Test-Driven Development** é uma prática e uma variação do desenvolvimento orientado a testes (TDD) que coloca o **teste de aceitação** como ponto central do ciclo. Enquanto no TDD tradicional o desenvolvedor escreve primeiro testes unitários para depois implementar o código que os satisfaz, no ATTD o processo começa com a definição dos testes de aceitação, geralmente descritos em linguagem mais próxima do negócio, representando os critérios que o sistema precisa cumprir para ser aceito pelo cliente ou pelo usuário final.
 
@@ -737,7 +738,9 @@ Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um
 ## [QA] SDD - Specification-Driven Development
 <img height="277" align="right" src="https://github.com/user-attachments/assets/f1d7c1dc-adde-4604-b310-f8dd82f287f6" />
 
-O **SDD - Specification-Driven Development** é uma abordagem de desenvolvimento de software em que o ponto de partida e o guia principal de todo o ciclo de criação é a especificação formal e clara do sistema a ser construído. Em vez de começar direto pela implementação de código ou até mesmo pelos testes, a ideia central do SDD é produzir especificações bem definidas que podem ser documentos estruturados, contratos formais, modelos de comportamento ou até DSLs (linguagens específicas de domínio) e a partir delas orientar o design, os testes e a implementação. 
+O **SDD - Specification-Driven Development** é uma abordagem de desenvolvimento de software em que o ponto de partida e o guia principal de todo o ciclo de criação é a especificação formal e clara do sistema a ser construído. 
+
+Em vez de começar direto pela implementação de código ou até mesmo pelos testes, a ideia central do SDD é produzir especificações bem definidas que podem ser documentos estruturados, contratos formais, modelos de comportamento ou até DSLs (linguagens específicas de domínio) e a partir delas orientar o design, os testes e a implementação. 
 
 No desenvolvimento tradicional, o código vem primeiro, seguido pela documentação, testes e explicação.
 
