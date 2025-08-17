@@ -86,7 +86,13 @@ Outro aspecto importante dos fundamentos de qualidade de software é a colabora�
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
 
-Portanto, o **teste de software** (Software testing) para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
+Portanto, o **teste de software** (Software testing) para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional. 
+
+O *teste de software* é a prática concreta que os profissionais de QA (no papel de testers, engenheiros de teste ou SDETs) usam para avaliar se o produto realmente cumpre o que deveria cumprir, tanto sob o ponto de vista técnico (estabilidade, performance, segurança) quanto funcional (se as regras de negócio e requisitos do usuário estão atendidos).
+
+Dentro da distinção clássica entre *QA (Quality Assurance)* e **QC (Quality Control)**, os testes de software se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em **detectar e validar defeitos no resultado tangível** — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
+
+Portanto, sim: quando falamos em **testes manuais, automatizados, de integração, de aceitação, de regressão, de performance, etc.**, estamos atuando dentro da **camada de QC**. Eles são o mecanismo pelo qual conseguimos transformar “expectativas de qualidade” em **evidências objetivas** de que o software funciona (ou não) como esperado.
 
 Vantagens dos testes:
 
@@ -96,7 +102,7 @@ Vantagens dos testes:
 
 A definição de “pronto” nada mais é do que um contrato firmado entre o time e o PO, que lista de forma clara os requisitos que determinam que uma User Story está completa.
 
-E a resposta é simples: normalmente, quando perguntam se uma funcionalidade ou story está pronta, respondem: “sim, mas falta testar…”.
+> E a resposta é simples: normalmente, quando perguntam se uma funcionalidade ou story está pronta, respondem: “sim, mas falta testar…”.
 
 Isso significa que ao definir o conceito de “pronto”, é importante que o QA – que faz parte do time – esteja envolvido e possa sensibilizar os membros do time e PO para que os testes façam parte deste conceito.
 
