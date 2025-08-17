@@ -84,7 +84,7 @@ Outro aspecto importante dos fundamentos de qualidade de software é a colabora�
 > [!Important]
 > **Software Engineering: A Practitioner's Approach**: Para aprofundar seus conhecimentos sobre qualidade de software, você pode recorrer a materiais como artigos científicos, livros e cursos on-line. Uma indicação de leitura é o livro Software Engineering: A Practitioner's Approach, de Roger Pressman, que aborda temas como garantia de qualidade, medição de qualidade e processos de software. Em resumo, entender os fundamentos de qualidade de software é essencial para garantir o sucesso de projetos de desenvolvimento. Isso inclui a compreensão do conceito de qualidade, a adoção de processos de garantia de qualidade, a definição de critérios de qualidade e a colaboração entre as equipes. Aprofundar seus conhecimentos neste tema é fundamental para se destacar no mercado de trabalho e garantir a satisfação do usuário.
 
-<img width="408" height="405" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
+<img height="277" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
 
 Portanto, o **teste de software** (Software testing) para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
 
