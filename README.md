@@ -850,6 +850,8 @@ Em resumo, o BDD promove uma abordagem colaborativa para o desenvolvimento de so
 
 Aqui estão os componentes chave do BDD:
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/1886b145-5f12-4bc5-b096-fe3d0849e991" />
+
 1. **Foco no Comportamento**: Em vez de se concentrar apenas na implementação técnica e nos testes de unidade, o BDD foca em como o software deve se comportar sob várias condições, incluindo o comportamento do usuário final.
 
 2. **Linguagem Ubíqua (Ubiquitous Language)**: Utiliza uma linguagem comum (frequentemente baseada em linguagens naturais como o inglês) que pode ser compreendida por todos os membros da equipe, incluindo desenvolvedores, QA, e stakeholders não técnicos. Isso ajuda a reduzir ambiguidades e garantir que todos tenham a mesma compreensão dos requisitos. A Linguagem Ubíqua (Ubiquitous Language) é um conceito central no <a href="">Design Orientado a Domínio (DDD)</a> que visa criar uma linguagem comum entre todos os envolvidos em um projeto, seja para os especialistas no domínio, desenvolvedores, ou mesmo os usuários finais. Essa linguagem comum facilita a comunicação e colaboração, reduzindo a possibilidade de mal-entendidos e melhorando a qualidade do desenvolvimento. 
@@ -857,7 +859,9 @@ Aqui estão os componentes chave do BDD:
 3. **Especificações Executáveis**: No BDD, os requisitos são escritos em forma de especificações que podem ser executadas como testes. Essas especificações geralmente seguem um formato estruturado, como <a href="">Gherkin</a> que é uma linguagem de domínio específico usada para descrever comportamentos esperados de um sistema de forma clara e compreensível por todos os envolvidos no desenvolvimento de software, incluindo pessoas não técnicas, que usa palavras-chave como "`Given`" (Dado), "`When`" (Quando), e "`Then`" (Então) para descrever cenários de teste:
 
    - `Given` (Dado): Descreve o contexto inicial ou o estado do sistema antes de uma ação específica.
+
    - `When` (Quando): Descreve a ação ou evento que ocorre.
+
    - `Then` (Então): Descreve o resultado esperado ou o comportamento do sistema após a ação.
 
 Exemplo: Login no Sistema
