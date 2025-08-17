@@ -593,10 +593,10 @@ Cenário: Buscar produto com sucesso
 
    - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
-## [QA] ATTD - Acceptance Test-Driven Development
+## [QA] ATDD - Acceptance Test-Driven Development
 <img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
 
-O **ATTD - Acceptance Test-Driven Development** é uma prática e uma variação do desenvolvimento orientado a testes (TDD) que coloca o **teste de aceitação** como ponto central do ciclo. Enquanto no TDD tradicional o desenvolvedor escreve primeiro testes unitários para depois implementar o código que os satisfaz, no ATTD o processo começa com a definição dos testes de aceitação, geralmente descritos em linguagem mais próxima do negócio, representando os critérios que o sistema precisa cumprir para ser aceito pelo cliente ou pelo usuário final.
+O **ATDD - Acceptance Test-Driven Development** é uma prática e uma variação do desenvolvimento orientado a testes (TDD) que coloca o **teste de aceitação** como ponto central do ciclo. Enquanto no TDD tradicional o desenvolvedor escreve primeiro testes unitários para depois implementar o código que os satisfaz, no ATTD o processo começa com a definição dos testes de aceitação, geralmente descritos em linguagem mais próxima do negócio, representando os critérios que o sistema precisa cumprir para ser aceito pelo cliente ou pelo usuário final.
 
 A ideia é alinhar desde o início o que será construído com o que realmente tem valor para o negócio. Os testes de aceitação funcionam como especificações executáveis: descrevem cenários, entradas, saídas e comportamentos esperados do sistema em termos que os stakeholders entendem. Depois disso, os desenvolvedores implementam o código necessário para fazer esses testes passarem. Em muitos casos, ferramentas como Cucumber, SpecFlow ou Behave são usadas para escrever cenários em Gherkin (“Given, When, Then”), permitindo que as próprias partes interessadas consigam validar e até revisar os testes.
 
