@@ -471,6 +471,97 @@ Para testes de integração, você pode optar por:
 | E2E web   | Playwright, Cypress, Puppeteer                 |
 | APIs      | RestAssured, Insomnia, HTTPX, Supertest        |
 
+## [CI] Functional Testing
+<img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="177" align="right">
+
+Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente.
+
+O que é importante pensarmos é no tempo de execução de testes que teremos. Os testes de unidade existem desde o início do projeto, qualquer commit deveria ser acompanhada por um teste.
+
+É comum que o desenvolvedor que queria concluir um projeto rapidamente deixe de fazer testes para otimizar o tempo. Como resolver esse impasse? Antes do commit, devemos executar todos os testes, embora saibamos que isso é em um plano ideal, e muitas vezes desnecessário dependendo da modificação que foi realizada. Até mesmo executar todos os testes unitários pode ser complicado.
+
+Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de **uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente**. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
+
+Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
+
+## [CI] E2E - End-to-end
+<img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/5c4e2a17-1197-42fb-b43a-d32d15bf5be5" align="right" height="77">
+
+O **E2E - End-to-end** refere-se a um tipo de teste ou processo que envolve a verificação de um sistema ou fluxo de trabalho em sua totalidade, desde o início até o fim, simulando as condições reais de uso pelo usuário final. Em resumo, "end-to-end" se refere à abordagem de teste que abrange todo o sistema ou processo, do início ao fim, para garantir seu funcionamento correto e eficaz.
+
+O E2E verifica se todos os componentes de um sistema (front-end, back-end, bancos de dados, APIs externas, etc.) funcionam juntos conforme esperado, do início ao fim. Em um contexto de desenvolvimento de software, os testes end-to-end são realizados para garantir que todas as partes do sistema estejam funcionando corretamente juntas, desde a interface do usuário até o backend, incluindo integrações com outros sistemas, se aplicável. Isso é feito para garantir que o sistema esteja se comportando conforme o esperado e atendendo aos requisitos do usuário final.
+
+Os testes end-to-end são frequentemente usados para validar fluxos de trabalho completos em um aplicativo ou site, simulando a interação do usuário final com o sistema. Eles podem envolver a automação de cliques de mouse, preenchimento de formulários, navegação entre páginas e verificação de resultados. No entanto, a validação é um conceito que se aplica a múltiplos níveis de teste, incluindo o E2E, mas não é exclusiva dele. 
+
+As principais ferramentas para testes *E2E (End-to-End)* e soluções complementares (como Zod) para validação de dados, organizadas por contexto de uso:
+
+Ferramentas Especializadas em E2E:
+
+1. **Para Aplicações Web**  
+   - **Cypress**: Framework completo para testes E2E em navegadores, com suporte a simulação de interações (cliques, formulários) e debug em tempo real. Inclui **Cypress Testing Library** para boas práticas de seleção de elementos.  
+
+   - **Playwright**: Suporta múltiplos navegadores (Chromium, Firefox, WebKit) e linguagens (JS/TS, Python, .NET). Recursos como auto-wait, gravação de testes e testes em paralelo. O Playwright é uma biblioteca de automação de código aberto para testes de navegador e web scraping desenvolvida pela Microsoft e lançada em 31 de janeiro de 2020, que desde então se tornou popular entre programadores e desenvolvedores web.
+
+    - **Selenium**: Mais antigo, mas ainda usado em projetos legados. Requer mais configuração (WebDriver).  
+
+3. **Para APIs**  
+   - **Supertest** (Node.js): Biblioteca para testar APIs HTTP integrada ao Jest/Mocha. Valida status codes, responses e headers.  
+   - **Postman/Newman**: Coleções de requisições podem ser automatizadas como testes E2E (com scripts em JavaScript).  
+
+4. **Para Mobile**  
+   - **Appium**: Framework open-source para testes E2E em aplicativos Android/iOS.  
+   - **Detox**: Focado em React Native e aplicações nativas, com suporte a sincronização automática.  
+
+5. **Para Desktop**  
+   - **Spectron** (para Electron): Integra Selenium com o Electron para testar aplicações desktop.  
+
+Ferramentas Complementares (como Zod):
+
+1. **Validação de Dados em Testes E2E**  
+   - **Zod**: Valida esquemas de respostas de API ou estados da UI durante testes. Exemplo:  
+       ```typescript  
+       const LoginResponseSchema = z.object({ token: z.string() });  
+       const data = LoginResponseSchema.parse(await response.json());  
+       ```  
+   - **Joi**: Similar ao Zod, mas mais usado em back-end (Node.js) para validar objetos.  
+
+2. **Mock de Dados/APIs**  
+   - **MSW (Mock Service Worker)**:  
+     - Intercepta requisições HTTP em testes E2E para simular APIs sem depender do back-end real.  
+   - **JSON Server**:  
+     - Cria uma API fake baseada em um arquivo JSON para testes iniciais.  
+
+3. **Asserções Avançadas**  
+   - **Jest/Vitest**:  
+     - Oferecem matchers (como `.toMatchObject()`) para validar estruturas de dados em testes.  
+   - **Chai**:  
+     - Biblioteca de asserções para Mocha, com sintaxe legível (ex.: `expect(user).to.have.property('name')`).  
+
+4. **Monitoramento e Relatórios**  
+   - **Allure Report**:  
+     - Gera relatórios visuais detalhados de testes E2E.  
+   - **Sentry**:  
+     - Captura erros em tempo real durante testes (útil para debug em CI/CD).  
+
+Exemplo de Fluxo com Ferramentas Combinadas
+
+1. **Playwright** simula um usuário fazendo login.  
+2. **MSW** mocka a API de login (opcional).  
+3. **Zod** valida se a resposta da API contém `{ token: string }`.  
+4. **Allure Report** gera um dashboard com os resultados.  
+
+Quando Usar Cada Uma?
+
+- **Testes de UI Completa**: Cypress/Playwright.  
+- **APIs**: Supertest + Zod/Joi.  
+- **Mobile**: Appium/Detox.  
+- **Validação de Dados**: Zod (TypeScript) ou Joi (JavaScript).  
+- **Mock**: MSW ou JSON Server.  
+
+Essas ferramentas podem ser combinadas para cobrir todos os aspectos de testes E2E, desde a interação do usuário até a integridade dos dados.
+
 ## [QA] Automation testing
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
