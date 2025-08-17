@@ -84,9 +84,9 @@ Outro aspecto importante dos fundamentos de qualidade de software é a colabora�
 > [!Important]
 > **Software Engineering: A Practitioner's Approach**: Para aprofundar seus conhecimentos sobre qualidade de software, você pode recorrer a materiais como artigos científicos, livros e cursos on-line. Uma indicação de leitura é o livro Software Engineering: A Practitioner's Approach, de Roger Pressman, que aborda temas como garantia de qualidade, medição de qualidade e processos de software. Em resumo, entender os fundamentos de qualidade de software é essencial para garantir o sucesso de projetos de desenvolvimento. Isso inclui a compreensão do conceito de qualidade, a adoção de processos de garantia de qualidade, a definição de critérios de qualidade e a colaboração entre as equipes. Aprofundar seus conhecimentos neste tema é fundamental para se destacar no mercado de trabalho e garantir a satisfação do usuário.
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
-
 Portanto, o **teste de software** (Software testing) para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional. 
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
 
 O *teste de software* é a prática concreta que os profissionais de QA (no papel de testers, engenheiros de teste ou SDETs) usam para avaliar se o produto realmente cumpre o que deveria cumprir, tanto sob o ponto de vista técnico (estabilidade, performance, segurança) quanto funcional (se as regras de negócio e requisitos do usuário estão atendidos).
 
@@ -175,6 +175,23 @@ O grande benefício é que, quanto mais cedo um bug é descoberto, menor o impac
 
 > [!Important]
 > **Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção**: Para aprofundar seus conhecimentos sobre avaliação de atributos de qualidade, recomendamos a leitura do livro Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção é um livro escrito por Alexandre Kherroubi e Adalberto Cavalcanti. O livro aborda a importância da qualidade de software na redução dos custos de manutenção e explora estratégias práticas para melhorar a qualidade do software, resultando em um impacto positivo nos custos de manutenção ao longo do ciclo de vida do software.
+
+## [QA] PADRÕES DE QUALIDADE DE SOFTWARE
+Os padrões de qualidade de software são conjuntos de práticas, regras e diretrizes que visam garantir a qualidade do software produzido. Eles são uma referência para desenvolvedores e equipes de qualidade, ajudando a garantir que o software produzido seja confiável, seguro e atenda aos requisitos do usuário.
+
+Os padrões de qualidade de software podem ser baseados em normas internacionais , como a ISO/IEC 12207 e a ISO/IEC 9126, ou podem ser específicos para uma indústria ou empresa. Eles podem cobrir todos os aspectos do ciclo de vida do software, desde a especificação de requisitos até a manutenção e evolução do software.
+
+Os padrões de qualidade de software podem ser baseados em normas internacionais.
+
+> VOCÊ SABE RESPONDER? Como os padrões de qualidade de software podem ajudar a melhorar a confiabilidade e segurança do software?
+
+Um dos principais benefícios dos padrões de qualidade de software é que eles fornecem uma base sólida para a avaliação da qualidade do software (GALINAC, 2013). Os padrões de qualidade de software, como o **CMM (Capability Maturity Model)** e o **MPS-BR  (Melhoria de Processo do Software Brasileiro)**, foram desenvolvidos para melhorar a qualidade dos processos e produtos de software.
+
+O CMM foi criado pelo SEI (Software Engineering Institute) nos anos 1990, com o objetivo de estabelecer um modelo de maturidade para avaliar a capacidade dos processos de software em uma organização (CMMI-DEV V2.0, 2018). 
+
+O modelo é baseado em cinco níveis, que representam um aumento gradual da maturidade do processo, desde o nível 1, que é o mais baixo, até o nível 5, que é o mais alto. Cada nível tem seus próprios objetivos, práticas e áreas de processo. 
+
+O CMM é amplamente utilizado para avaliar a maturidade dos processos de software em organizações governamentais e privadas em todo o mundo.
 
 ## [QA] Self testing
 <img src="https://www.pcloudy.com/wp-content/uploads/2019/07/functional-testing.png" align="right" height="277"> 
