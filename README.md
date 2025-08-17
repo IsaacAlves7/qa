@@ -471,7 +471,7 @@ Para testes de integração, você pode optar por:
 | E2E web   | Playwright, Cypress, Puppeteer                 |
 | APIs      | RestAssured, Insomnia, HTTPX, Supertest        |
 
-## [CI] Functional Testing
+## [QA] Functional Testing
 <img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="177" align="right">
 
 Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente.
@@ -484,7 +484,7 @@ Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, t
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
 
-## [CI] E2E - End-to-end
+## [QA] E2E - End-to-end
 <img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
 
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/5c4e2a17-1197-42fb-b43a-d32d15bf5be5" align="right" height="77">
