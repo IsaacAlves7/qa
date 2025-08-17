@@ -98,7 +98,7 @@ A definição de “pronto” nada mais é do que um contrato firmado entre o ti
 
 E a resposta é simples: normalmente, quando perguntam se uma funcionalidade ou story está pronta, respondem: “sim, mas falta testar…”.
 
- Isso significa que ao definir o conceito de “pronto”, é importante que o QA – que faz parte do time – esteja envolvido e possa sensibilizar os membros do time e PO para que os testes façam parte deste conceito.
+Isso significa que ao definir o conceito de “pronto”, é importante que o QA – que faz parte do time – esteja envolvido e possa sensibilizar os membros do time e PO para que os testes façam parte deste conceito.
 
 Dessa forma, garantimos:
 
@@ -106,6 +106,27 @@ Dessa forma, garantimos:
 - Maior qualidade do time;
 - Que não haja desentendimentos desnecessários;
 - Story testada e com aceite formal. 
+
+As atividades de apoio da qualidade de software, como revisões, auditorias e inspeções, são essenciais para garantir que o software seja produzido de acordo com os padrões de qualidade estabelecidos. Essas atividades podem ser realizadas em diferentes momentos do ciclo de vida do software, desde a análise de requisitos até a manutenção.
+ 
+As **revisões** são uma das atividades de apoio mais comuns e envolvem a análise do software por um grupo de pessoas para detectar erros e possíveis me
+lhorias. Existem diferentes tipos de revisões, como revisões de código (Code Reviews), revisões de documentos e revisões de design.
+ 
+As **auditorias** são semelhantes às revisões, mas geralmente são realizadas por equipes independentes de pessoas com habilidades específicas para avaliar o software em relação a padrões e regulamentações específicos. As auditorias podem ser internas ou externas e podem ser realizadas em diferentes fases do ciclo de vida do software (BRITO, 2006).
+
+Já as **inspeções** são atividades mais formais e estruturadas, que seguem um processo específico para avaliar o software em relação a determinados padrões e especificações. As inspeções geralmente envolvem uma equipe multidisciplinar e podem ser realizadas em diferentes fases do ciclo de vida do software.
+
+Essas atividades de apoio da qualidade de software são importantes porque ajudam a identificar problemas no software antes que ele seja lançado, reduzindo assim os custos e os riscos associados a falhas no software. Além disso, elas também podem ajudar a melhorar a eficiência e a eficácia do processo de desenvolvimento de software (SHAMA, 2016).
+
+Para aprofundar seu conhecimento sobre atividades de apoio da qualidade de software, você pode se perguntar: 
+
+■ Quais são as diferenças entre as atividades de revisão, auditoria e inspeção? 
+
+■ Como as atividades de apoio podem ser integradas ao processo de desenvolvimento de software? 
+
+■ Qual é o papel dos diferentes membros da equipe na execução dessas atividades?
+
+Além disso, uma ilustração útil pode ser um diagrama que mostre a relação entre as atividades de apoio da qualidade de software e outras atividades do ciclo de vida do software, como desenvolvimento, teste e implantação. Isso pode ajudar a entender como as atividades de apoio se encaixam no processo geral de desenvolvimento de software e como elas podem contribuir para a melhoria da qualidade do produto final.
 
 ## [QA] Custos x Fases
 <img width="524" height="241" align="right" src="https://github.com/user-attachments/assets/a3aaded7-0fad-4ba5-9b0a-9d664bf0dc8e" />
