@@ -19,7 +19,7 @@ Ao concluir as revisões e auditorias, você reflete sobre os processos e a efic
 Primeiro, precisamos entender que a qualidade de software é uma área de grande importância no mercado de tecnologia da informação. E para garantir a qualidade de um software, é preciso conhecer seus fundamentos, entender sua história, compreender os custos envolvidos, realizar atividades de apoio, seguir padrões e avaliar seus atributos. A seguir, apresentamos alguns desses atributos:
 
 > [!Important]
-> **Definição**: “_Qualidade_ é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
+> **Definição**: Qualidade é a característica ou atributo que define algo ou alguém em termos de excelência, valor, ou nível de desempenho. Pode se referir a propriedades como durabilidade, eficiência, eficácia, ou valor percebido. “_Qualidade_ é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
 
 > [!Note]
 > **FUNDAMENTOS DA QUALIDADE DE SOFTWARE**: Incluem a definição de requisitos, o planejamento de testes e a execução de testes de forma sistemática. Esses processos são essenciais para garantir que o software desenvolvido atenda às necessidades do usuário e atinja a qualidade esperada.
