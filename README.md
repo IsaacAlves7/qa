@@ -540,7 +540,9 @@ Os testes em integração contínua são sobre **feedback do software**, como a 
 
 <img src="https://github.com/user-attachments/assets/51f4d9a0-47ce-49a9-baeb-f8b9d4c15b3e" align="right" height="77">
 
-O **BDD - Behavior-Driven Development** (Desenvolvimento Orientado a Comportamento), é uma metodologia de desenvolvimento ágil que tem como foco a colaboração entre desenvolvedores, QA (Quality Assurance) e partes interessadas não técnicas para criar uma compreensão compartilhada do comportamento desejado de um software. O BDD é uma evolução do TDD (Test-Driven Development) e adiciona uma ênfase maior na comunicação e na clareza dos requisitos. Em resumo, o BDD promove uma abordagem colaborativa para o desenvolvimento de software, focando em comportamentos e resultados esperados do sistema, o que ajuda a garantir que o software entregue atenda às necessidades reais dos usuários e stakeholders.
+O **BDD - Behavior-Driven Development** (Desenvolvimento Orientado a Comportamento), é uma metodologia de desenvolvimento ágil que tem como foco a colaboração entre desenvolvedores, QA (Quality Assurance) e partes interessadas não técnicas para criar uma compreensão compartilhada do comportamento desejado de um software. O BDD é uma evolução do TDD (Test-Driven Development) e adiciona uma ênfase maior na comunicação e na clareza dos requisitos.
+
+Em resumo, o BDD promove uma abordagem colaborativa para o desenvolvimento de software, focando em comportamentos e resultados esperados do sistema, o que ajuda a garantir que o software entregue atenda às necessidades reais dos usuários e stakeholders.
 
 Aqui estão os componentes chave do BDD:
 
