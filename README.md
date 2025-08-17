@@ -134,6 +134,14 @@ Uma boa gestão de qualidade pode ser a chave para minimizar os custos relaciona
 ## [QA] Self testing
 <img src="https://www.pcloudy.com/wp-content/uploads/2019/07/functional-testing.png" align="right" height="277"> 
 
+O conceito de **self-testing** em software vem da ideia de que o próprio sistema deve ter meios embutidos para validar se está funcionando corretamente, sem depender de verificações externas e ocasionais. Em essência, é a noção de que a aplicação deve trazer consigo a capacidade de se “autoavaliar”. Isso pode se manifestar de formas diferentes dependendo do contexto: em nível de código, por meio de uma suíte de testes automatizados que é executada sempre que o sistema é construído ou implantado; em nível operacional, com health checks, métricas, logs e alertas que confirmam se o serviço está íntegro; ou ainda em processos de QA, onde o produto é constantemente validado contra critérios de aceitação definidos.
+
+Dentro desse conceito, **testes automatizados** são o núcleo natural do self-testing, porque permitem verificar de forma contínua e repetível se o código ainda atende às especificações à medida que evolui. É nesse ponto que práticas como **TDD** se encaixam perfeitamente: ao escrever primeiro o teste e depois o código, o desenvolvedor garante que cada parte do sistema já nasce coberta por verificações, criando um software que já vem com seus próprios “exames de saúde”. Além disso, TDD gera uma rede de segurança de regressão, que torna o sistema mais resistente a falhas ao longo do tempo.
+
+Já os **testes manuais** também podem existir em um cenário de self-testing, mas não cumprem totalmente a proposta. Eles servem bem em situações exploratórias, de usabilidade ou de descoberta de casos não previstos, mas não garantem a automação e a repetibilidade que o conceito prega. Em outras palavras, um sistema pode até contar com testes manuais complementares, mas não se considera realmente “self-testing” se depende só deles, porque não há como o software se validar sozinho sem a intervenção humana.
+
+Portanto, podemos dizer que o self-testing **aceita testes manuais como complemento**, mas a essência dele está nos **testes automatizados**, preferencialmente guiados por boas práticas como TDD ou ATDD, que dão disciplina e cobertura consistente ao ciclo de desenvolvimento.
+
 Estudamos os branches, os workflows e concluímos que dentro da prática da integração contínua, devemos nos afastar o mínimo possível do nosso trunk master principal.
 
 Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
