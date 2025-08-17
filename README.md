@@ -128,6 +128,8 @@ Já as **falhas externas** são aquelas que ocorrem após a entrega do produto f
 
 A **Regra 10 de Myers**, criada em 2004 por Glenford Myers, é uma importante diretriz para os analistas de teste de software. Essa regra afirma que toda falha no software deve ser rastreável a uma ação ou decisão específica tomada durante o desenvolvimento do software.
 
+> A ilustração mostra um gráfico que representa os custos de correção associados a cada estágio do ciclo de desenvolvimento de software. No lado esquerdo, há uma linha vertical que corresponde ao eixo Y, onde está inscrito "Custo da correção do defeito". Na parte inferior, há uma linha horizontal que se junta à linha vertical, formando uma grade para marcar os estágios do ciclo no eixo X. Abaixo dessa linha vertical está escrito da esquerda para a direita: Análise, Especificação, Construção, Testes e Produção. No interior do gráfico há uma linha vermelha com cinco círculos amarelos.
+
 Em outras palavras, a Regra 10 de Myers enfatiza  que o custo da correção de defeitos é bem mais custoso quanto mais tarde o defeito é encontrado, ou seja, um defeito encontrado em produção custa muito mais do que se fosse encontrado na fase de análise ou em modelos de dados.
 
 Uma boa gestão de qualidade pode ser a chave para minimizar os custos relacionados às falhas em software. Investir em capacitação da equipe, em boas práticas de desenvolvimento e em testes constantes pode ajudar a evitar falhas internas e externas e, consequentemente, reduzir os custos para a empresa.
