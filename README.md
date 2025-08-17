@@ -484,7 +484,7 @@ Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, t
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
 
-## [CI] Regression testing
+## [QA] Regression testing
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/8d0cb7bf-a902-4268-8633-73d0e06a2adc" align="right" height="77">
 
 O **teste de regressão** é uma técnica do teste de software que consiste na aplicação de versões mais recentes do software, para garantir que não surgiram novos defeitos em componentes já analisados. Regression testing, ou teste de regressão, é um tipo de teste de software realizado para garantir que mudanças recentes no código, como correções de bugs, novas funcionalidades ou outras modificações, não introduzam novos defeitos ou causem falhas em partes já existentes do software. Este processo é essencial para manter a integridade do software após qualquer tipo de alteração. 
