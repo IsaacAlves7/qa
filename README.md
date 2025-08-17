@@ -1,4 +1,4 @@
-# 👨🏾‍🔬 QA - Quality Assurance
+# 👨🏾‍🔬 QA/QC - Quality Assurance and Quality Control
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> 
 
 <a href=""><img src="https://em-content.zobj.net/source/microsoft-teams/363/man-scientist-medium-dark-skin-tone_1f468-1f3fe-200d-1f52c.png" align="right" height="77"></a>
@@ -84,7 +84,9 @@ Outro aspecto importante dos fundamentos de qualidade de software é a colabora�
 > [!Important]
 > **Software Engineering: A Practitioner's Approach**: Para aprofundar seus conhecimentos sobre qualidade de software, você pode recorrer a materiais como artigos científicos, livros e cursos on-line. Uma indicação de leitura é o livro Software Engineering: A Practitioner's Approach, de Roger Pressman, que aborda temas como garantia de qualidade, medição de qualidade e processos de software. Em resumo, entender os fundamentos de qualidade de software é essencial para garantir o sucesso de projetos de desenvolvimento. Isso inclui a compreensão do conceito de qualidade, a adoção de processos de garantia de qualidade, a definição de critérios de qualidade e a colaboração entre as equipes. Aprofundar seus conhecimentos neste tema é fundamental para se destacar no mercado de trabalho e garantir a satisfação do usuário.
 
-Portanto, o **teste de software** para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
+<img width="408" height="405" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
+
+Portanto, o **teste de software** (Software testing) para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
 
 Vantagens dos testes:
 
@@ -1077,5 +1079,3 @@ O DDD deve ajudar na modelagem das classes mais importantes e mais centrais do s
 Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outros sistemas, as rotinas de integração que recebem ou disponibilizam dados para outros sistemas não devem ser "inteligentes". Muitos desenvolvedores acabam modelando suas classes de negócios tentando resolver as questões internas do sistema e, ao mesmo tempo, pensando em como essas classes serão expostas para outros sistemas. Padrões como DTO (Data Transfer Object) que usam objetos "burros" são mais adequados para isso.
 
 Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um sistema. Seu foco é na modelagem das entidades principais de negócio usando a linguagem adequada daquele domínio para facilitar a manutenção, extensão e entendimento. Particularmente, eu não seguiria à risca o padrão, até porque existem inúmeros padrões e variações de modelagem OO. Estude os princípios por detrás desses padrões, pois eles são geralmente parecidos e veja o que funciona melhor para cada projeto.
-
-# QC - Quality Control
