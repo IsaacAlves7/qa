@@ -484,6 +484,69 @@ Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, t
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
 
+## [CI] Regression testing
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/8d0cb7bf-a902-4268-8633-73d0e06a2adc" align="right" height="77">
+
+O **teste de regressão** é uma técnica do teste de software que consiste na aplicação de versões mais recentes do software, para garantir que não surgiram novos defeitos em componentes já analisados. Regression testing, ou teste de regressão, é um tipo de teste de software realizado para garantir que mudanças recentes no código, como correções de bugs, novas funcionalidades ou outras modificações, não introduzam novos defeitos ou causem falhas em partes já existentes do software. Este processo é essencial para manter a integridade do software após qualquer tipo de alteração. 
+
+Em resumo, regression testing é uma prática crucial no desenvolvimento de software que visa assegurar que novas mudanças não comprometam funcionalidades existentes, contribuindo para a estabilidade e qualidade contínua do sistema.
+
+Objetivos do Regression Testing:
+
+1. **Verificar Estabilidade**: Assegurar que as novas mudanças não impactaram negativamente o comportamento existente do software.
+
+2. **Identificar Regressões**: Detectar rapidamente qualquer falha que possa ter sido introduzida devido a mudanças recentes.
+
+3. **Manter Qualidade**: Garantir que o software continua funcionando conforme esperado, mantendo a qualidade e a confiabilidade.
+
+Quando Realizar Regression Testing:
+
+- **Após Correções de Bugs**: Sempre que um bug é corrigido, é importante garantir que a correção não tenha introduzido novos problemas.
+
+- **Após Adição de Novas Funcionalidades**: Novas funcionalidades podem afetar o funcionamento existente, por isso testes de regressão são necessários.
+
+- **Durante Refatoração de Código**: A refatoração melhora o design interno do código, mas pode inadvertidamente introduzir erros.
+
+- **Em Atualizações de Dependências**: Mudanças em bibliotecas ou frameworks subjacentes podem afetar o comportamento do software.
+
+Métodos de Regression Testing:
+
+1. **Reexecução Completa**: Executar todos os testes existentes para garantir que o software inteiro funcione corretamente. Isso é muitas vezes impraticável para grandes sistemas devido ao tempo e recursos necessários.
+
+2. **Seleção de Casos de Teste**: Escolher um subconjunto de testes que são mais relevantes para as áreas do código que foram alteradas.
+
+3. **Teste de Prioridade**: Focar nos testes mais críticos e mais propensos a serem afetados pelas mudanças.
+
+4. **Automação de Testes**: Usar ferramentas de automação para executar testes de regressão de forma eficiente e repetível.
+
+Ferramentas Comuns para Regression Testing:
+
+- **Selenium**: Para automação de testes de interface de usuário em aplicações web.
+
+- **JUnit/NUnit/PyTest**: Para testes unitários automatizados.
+
+- **Jenkins/GitLab CI**: Para integração contínua e execução automatizada de testes.
+
+- **Robot Framework**: Para testes automatizados em diversos contextos.
+
+- **TestNG**: Para organização e execução de testes em Java.
+
+Benefícios do Regression Testing:
+
+- **Detecção Precoce de Defeitos**: Permite a identificação e correção rápida de novos problemas.
+
+- **Redução de Riscos**: Minimiza o risco de introdução de erros ao modificar o software.
+
+- **Qualidade Contínua**: Mantém a qualidade do software ao longo de todo o ciclo de desenvolvimento.
+
+Desafios do Regression Testing:
+
+- **Manutenção de Testes**: Manter um conjunto de testes atualizado pode ser desafiador à medida que o software evolui.
+
+- **Tempo e Recursos**: A execução de um grande conjunto de testes pode ser demorada e consumir muitos recursos.
+
+- **Falsos Positivos/Negativos**: Pode haver casos onde testes falham ou passam erroneamente, exigindo investigação adicional.
+
 ## [QA] E2E - End-to-end
 <img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
 
