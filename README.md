@@ -935,7 +935,9 @@ Aqui estão os componentes chave do BDD:
    - `Then` (Então): Descreve o resultado esperado ou o comportamento do sistema após a ação.
 
 Exemplo: Login no Sistema
-   
+
+[![Login.feature](https://img.shields.io/badge/-Login.feature-pink?style=social&logo=googledocs&logoColor=purple)](#)
+
 ```gherkin
 Feature: Login no Sistema
 
@@ -946,6 +948,8 @@ Scenario: Login com credenciais válidas
 ```
 
 Exemplo 2: Pesquisar produto
+
+[![Pesquisar.feature](https://img.shields.io/badge/-Pesquisar.feature-pink?style=social&logo=googledocs&logoColor=purple)](#)
 
 ```gherkin
 Funcionalidade: Pesquisar produto
