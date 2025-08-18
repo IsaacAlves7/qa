@@ -1,4 +1,12 @@
-# 👨🏾‍🔬 QA/QC - Quality Assurance and Quality Control
+[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Java](https://img.shields.io/badge/java-17%2B-blue)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+[![Release](https://img.shields.io/github/release/rife2/tests-badge.svg)](https://github.com/rife2/tests-badge/releases/latest)
+[![GitHub CI](https://github.com/rife2/tests-badge/actions/workflows/bld.yml/badge.svg)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
+[![Tests](https://rife2.com/tests-badge/badge/com.uwyn/tests-badge)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
+
+<a href="https://github.com/IsaacAlves7/qa"><img width="1920" height="500" alt="image" src="https://github.com/user-attachments/assets/7675c835-51aa-4d5d-b46b-8d8b81d948a8" /></a>
+
+# QA/QC - Quality Assurance and Quality Control 👨🏾‍🔬
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> 
 
 <a href=""><img src="https://em-content.zobj.net/source/microsoft-teams/363/man-scientist-medium-dark-skin-tone_1f468-1f3fe-200d-1f52c.png" align="right" height="77"></a>
@@ -289,12 +297,6 @@ Além do unittest, existem outros frameworks de teste de unidade disponíveis pa
 A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O unittest é uma boa opção para projetos simples, enquanto frameworks como Pytest e Mock podem ser mais adequados para projetos mais complexos.
 
 Sobre os conceitos técnicos a respeito de testes de unidades, temos:
-
-[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Java](https://img.shields.io/badge/java-17%2B-blue)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-[![Release](https://img.shields.io/github/release/rife2/tests-badge.svg)](https://github.com/rife2/tests-badge/releases/latest)
-[![GitHub CI](https://github.com/rife2/tests-badge/actions/workflows/bld.yml/badge.svg)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
-[![Tests](https://rife2.com/tests-badge/badge/com.uwyn/tests-badge)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
 
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/f92b16ca-c0a0-40ab-ab33-f8ec9f4cf619" height="77" align="right">
 
