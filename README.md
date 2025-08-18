@@ -660,22 +660,19 @@ Ferramentas Complementares (como Zod):
    - **Joi**: Similar ao Zod, mas mais usado em back-end (Node.js) para validar objetos.  
 
 2. **Mock de Dados/APIs**  
-   - **MSW (Mock Service Worker)**:  
-     - Intercepta requisições HTTP em testes E2E para simular APIs sem depender do back-end real.  
-   - **JSON Server**:  
-     - Cria uma API fake baseada em um arquivo JSON para testes iniciais.  
+   - **MSW (Mock Service Worker)**: Intercepta requisições HTTP em testes E2E para simular APIs sem depender do back-end real.  
 
-3. **Asserções Avançadas**  
-   - **Jest/Vitest**:  
-     - Oferecem matchers (como `.toMatchObject()`) para validar estruturas de dados em testes.  
-   - **Chai**:  
-     - Biblioteca de asserções para Mocha, com sintaxe legível (ex.: `expect(user).to.have.property('name')`).  
+   - **JSON Server**: Cria uma API fake baseada em um arquivo JSON para testes iniciais.  
 
-4. **Monitoramento e Relatórios**  
-   - **Allure Report**:  
-     - Gera relatórios visuais detalhados de testes E2E.  
-   - **Sentry**:  
-     - Captura erros em tempo real durante testes (útil para debug em CI/CD).  
+4. **Asserções Avançadas**  
+   - **Jest/Vitest**: Oferecem matchers (como `.toMatchObject()`) para validar estruturas de dados em testes.  
+
+   - **Chai**: Biblioteca de asserções para Mocha, com sintaxe legível (ex.: `expect(user).to.have.property('name')`).  
+
+6. **Monitoramento e Relatórios**  
+   - **Allure Report**: Gera relatórios visuais detalhados de testes E2E.  
+
+   - **Sentry**: Captura erros em tempo real durante testes (útil para debug em CI/CD).  
 
 Exemplo de Fluxo com Ferramentas Combinadas
 
