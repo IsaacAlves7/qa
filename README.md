@@ -309,7 +309,7 @@ Características de testes válidos:
 | Fluxo normal do código      | Sem exceções, erros, ou retornos inesperados              |
 | Resultado esperado          | Retorno certo, estado alterado corretamente               |
 
-Exemplo simples em JavaScript: Aqui, `2` e `3` são valores válidos, e o retorno esperado (`5`) confirma o comportamento correto da função.
+Exemplo: Teste manual simples em JavaScript - Aqui, `2` e `3` são valores válidos, e o retorno esperado (`5`) confirma o comportamento correto da função.
 
 <img src="https://img.shields.io/badge/Jest-1_pass_0_fail-limegreen?style=flat&logo=jest&logoColor=white">
 
