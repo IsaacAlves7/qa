@@ -863,6 +863,11 @@ Kent Beck, considerado o criador ou o 'descobridor' da técnica, declarou em 200
 
 > O TDD é considerado uma técnica ou metodologia, muito adotada nos times de desenvolvimento. Isso porque ele é direcionado ao desenvolvimento de softwares. Contudo, pelo fato de inverter a ordem dos trabalhos – do teste para o código – é um pouco impopular entre os Devs. No entanto, após pegar o jeito, o desenvolvimento ganha um up, e a técnica traz muitos resultados positivos ao projeto.
 
+<img src="https://github.com/user-attachments/assets/08e14244-2f2f-42eb-8e9f-049efca12ce5" align="right" height="177">
+
+> [!Important]
+> O livro **Test-Driven Development: By Example** do Kent Beck, é considerado a obra fundamental sobre TDD (Test-Driven Development). Ele é importante por alguns motivos históricos e práticos. Primeiro, porque o Kent Beck foi um dos criadores originais do TDD como prática estruturada dentro do movimento Extreme Programming (XP) e um dos autores do Manifesto Ágil. Ou seja, ele não só ajudou a popularizar o conceito, como também foi quem deu a forma mais clara e prática para sua aplicação. Segundo, porque esse livro é didático e prático: Beck explica a ideia de TDD usando exemplos pequenos, progressivos e reais. Ele mostra o famoso ciclo do TDD — Red, Green, Refactor — de maneira muito detalhada, quase como se estivesse pair programming com o leitor. Ele começa com problemas bem simples, como implementar uma calculadora de dinheiro com operações básicas, e vai aumentando a complexidade, até chegar em casos mais sofisticados.
+
 O TDD segue a lógica do ciclo: Red, Green e Refactor. Este ciclo é uma abordagem estruturada para escrever e melhorar código de software de maneira incremental, garantindo que ele seja testável, funcional e de alta qualidade. Aqui está uma explicação detalhada de cada fase do ciclo:
 
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/63318aff-ad59-4c3e-b858-172ec4154f85" align="right" height="277">
