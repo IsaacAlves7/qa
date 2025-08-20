@@ -585,7 +585,9 @@ O **Stub** é um objeto que fornece respostas pré-determinadas para chamadas fe
 
 São similares aos fakes e aos spies, mas, ao contrário destes, ele consegue alterar seu comportamento com base na maneira como ele foi chamado no teste.
 
-Isso permite que mais de um cenário para uma única dependência seja representado no teste.
+O stub também é uma forma de teste duplo usado para fornecer uma resposta controlada das dependências de um componente. Esse tipo de teste duplo pode ser usado para fornecer uma resposta controlada sem fazer nenhuma lógica real. Os stubs geralmente não dão nenhuma resposta fora do que está programado no teste. Isso permite que mais de um cenário para uma única dependência seja representado no teste.
+
+Qual é a diferença entre Mock e Stub? A julgar pela definição de mock e stub, parece que mock e stub são a mesma coisa. Isso ocorre porque uma simulação pode ser considerada uma extensão de um esboço. Um stub é apenas uma implementação simples usada para fornecer uma resposta controlada. Enquanto isso, a simulação não funciona apenas como um stub, mas também verifica o comportamento de um componente e sua interação com o objeto que a simulação cria.
 
 <img src="https://github.com/user-attachments/assets/bea4e6c6-07b1-412c-94e5-6134080d38e1" height="277" align="right">
 
