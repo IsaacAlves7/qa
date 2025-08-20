@@ -549,7 +549,7 @@ O ideal seria existir algo que possibilitasse que os testes trouxessem os melhor
 
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/3963eb3d-ea61-4557-92cb-2f097cfed79a" height="77" align="right">
 
-Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste.
+Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste. Termo genérico para qualquer substituição de objeto de produção em testes.
 
 De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro.
 
@@ -566,6 +566,12 @@ Eles são fundamentais para testes automatizados, principalmente testes unitári
 <a href="https://pt.slideshare.net/slideshow/sc-mad-tdd-workshop-test-doubles-36543998/36543998"><img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right"></a>
 
 Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas:
+
+- `Dummy`: Passado mas nunca usado; listas de parâmetros de preenchimentos
+- `Fake`: tem uma implementação funcional, mas não é adequado para produção
+- `Stub`: Fornece respostas prontas para chamadas feitas durante o teste
+- `Spy`: Um esboço que registra informações sobre como foi chamado
+- `Mock`: Pré-programado com expectativas, formando uma especificação das chamadas esperadas
 
 O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
 
