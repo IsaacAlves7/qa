@@ -559,7 +559,7 @@ Talvez você não esteja familiarizado com o termo test double. É que, às veze
 
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
 
-<img width="687" height="408" align="right" src="https://github.com/user-attachments/assets/157b8c32-38bf-4145-a476-89192a1d4804" />
+<img width="682" height="402" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
 
 Tipos comuns de Test Doubles: Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas.
 
