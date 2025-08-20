@@ -563,7 +563,9 @@ Talvez você não esteja familiarizado com o termo test double. É que, às veze
 
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
 
-Tipos comuns de Test Doubles: Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas.
+<img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right">
+
+Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas:
 
 O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
 
@@ -610,6 +612,21 @@ Por fim, existe o **Spy**, que é uma espécie de híbrido. Ele é um objeto rea
 Um spy age como um espião sob a implementação real e, como o mock, consegue verificar as interações entre os métodos.
 
 A diferença para o mock é que o spy chama a implementação real para todos os métodos da interface mockada, a não ser que para algum método este seja configurado para retornar algo específico diferente da implementação real.
+
+Existem boas práticas bem consolidadas no uso de *test doubles*, e as imagens refletem parte disso. A primeira mostra uma distinção clássica: **mocks (e spies)** são usados mais em **commands** (ações que mudam estado), enquanto **stubs (stubs, dummies, fakes)** são usados em **queries** (consultas que retornam dados). Essa prática vem da ideia de **Command Query Separation (CQS)**, que sugere que comandos devem ter efeitos colaterais e não retornar valores, enquanto queries retornam valores mas não mudam estado. Se você usa stubs para queries, você só garante dados de entrada controlados; já mocks para comandos te permitem verificar se uma ação realmente ocorreu.
+
+Na segunda imagem, vemos os test doubles categorizados em um “universo” com sobreposições. A ideia é reforçar que **Dummy, Stub, Fake, Spy e Mock** são variações de substitutos que usamos em testes, mas cada um tem um propósito específico. A boa prática aqui é **usar o double mais simples possível que resolva o problema do teste**. Por exemplo, se você só precisa preencher um parâmetro, use um dummy. Se precisa de dados controlados, use um stub. Se quer uma implementação leve mas funcional (como um banco em memória), use um fake. Se precisa verificar chamadas, use um mock. Se precisa capturar interações sem substituir toda a lógica, use um spy. O erro comum é usar mocks para tudo, gerando testes frágeis, acoplados demais ao código interno.
+
+Outra boa prática é manter os doubles **próximos do contexto do teste** e não generalizá-los cedo demais. Doubles genéricos compartilhados entre muitos testes podem virar fonte de inconsistência ou dificultar a leitura. Em TDD, por exemplo, é comum criar o double dentro do próprio teste e só refatorar para reaproveitar se realmente houver repetição.
+
+Também é importante lembrar que test doubles são **ferramentas para testes de unidade**, onde o isolamento é crucial. Em testes de integração ou end-to-end, eles devem ser usados com cautela, pois nesses níveis o objetivo é justamente validar a interação real entre componentes. Usar doubles nesses contextos pode dar uma falsa sensação de segurança, porque o código passa no teste, mas falha no ambiente real.
+
+Por fim, existe uma máxima importante: **“don’t mock what you don’t own”** — ou seja, evite criar mocks para dependências externas de terceiros, como APIs de bibliotecas que você não controla. Isso acopla seus testes a detalhes que podem mudar fora do seu controle. Em vez disso, prefira abstrair essas dependências atrás de interfaces próprias e mockar essas interfaces. Isso deixa seus testes mais estáveis e mantém o acoplamento sob seu domínio.
+
+Ou seja, as boas práticas são: usar mocks para comandos e stubs para queries, escolher o double mais simples possível para o cenário, não abusar de mocks em todos os lugares, restringir o uso a testes de unidade, e nunca mockar diretamente dependências externas que você não controla.
+
+Quer que eu te monte um “textão” explicando um exemplo prático, com código, que mostra como aplicar todas essas boas práticas juntas em um cenário de teste com TDD?
+
 
 ## [QA] Integration Testing
 <img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
