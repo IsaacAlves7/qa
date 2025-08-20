@@ -571,9 +571,21 @@ Como uso de dummies é possível diminuir a complexidade durante a escrita de um
 
 <img height="277" align="right" alt="fake" src="https://github.com/user-attachments/assets/f81524ad-936f-4b9e-9822-05c32d02489c" />
 
-Os **fakes** são test doubles que têm implementações reais diferentes àquelas que existem em produção. é uma implementação funcional simplificada de um componente real. Ele realmente executa algo, mas de maneira controlada e menos complexa. Um exemplo clássico é um banco de dados em memória usado nos testes em vez de um banco de produção, ou um servidor HTTP falso que responde rapidamente sem precisar de rede. Os fakes aceleram os testes e evitam dependências externas pesadas. Podemos considerá-los como um “atalho”, algo implementado para deixar a execução do teste mais dinâmica frente ao que é colocado no ar de fato.
+Os **fakes** são test doubles que têm implementações reais diferentes àquelas que existem em produção. é uma implementação funcional simplificada de um componente real. Ele realmente executa algo, mas de maneira controlada e menos complexa.
+
+Um exemplo clássico é um banco de dados em memória usado nos testes em vez de um banco de produção, ou um servidor HTTP falso que responde rapidamente sem precisar de rede. 
+
+Os fakes aceleram os testes e evitam dependências externas pesadas. Podemos considerá-los como um “atalho”, algo implementado para deixar a execução do teste mais dinâmica frente ao que é colocado no ar de fato.
 
 Basicamente, não há lógica em um fake — ele retorna um valor determinado por quem o implementa e, justamente por isso, não é um elemento adequado para ir à produção. Contudo, ele elimina a necessidade de implementar uma funcionalidade real, o que seria bem mais complexo.
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/4f994eed-d9b0-44fd-8272-3d54b28a4e27" />
+
+O **Stub** é um objeto que fornece respostas pré-determinadas para chamadas feitas durante o teste. Ele não tem lógica real, apenas retorna o que foi configurado. Os stubs são muito úteis quando você quer garantir que o teste receba certos dados sem depender de sistemas externos, como simular uma API retornando um JSON fixo.
+
+São similares aos fakes e aos spies, mas, ao contrário destes, ele consegue alterar seu comportamento com base na maneira como ele foi chamado no teste.
+
+Isso permite que mais de um cenário para uma única dependência seja representado no teste.
 
 <img src="https://github.com/user-attachments/assets/bea4e6c6-07b1-412c-94e5-6134080d38e1" height="277" align="right">
 
