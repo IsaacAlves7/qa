@@ -255,10 +255,10 @@ Testes automatizados são uma das práticas mais fundamentais no desenvolvimento
 
 <img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="177" align="right"> 
 
-1. testes de unidade (isolam pequenas partes do código),
-2. testes de integração (verificam a comunicação entre partes),
-3. testes de sistema (validam o sistema como um todo) e
-4. testes end-to-end (simulam o comportamento real do usuário).
+1. Testes de unidade (isolam pequenas partes do código),
+2. Testes de integração (verificam a comunicação entre partes),
+3. Testes de sistema (validam o sistema como um todo) e
+4. Testes end-to-end (simulam o comportamento real do usuário).
 
 Cada nível exige atenção diferente e ferramentas específicas:
 
@@ -278,93 +278,95 @@ Por fim, construir um teste automatizado bom exige prática, disciplina e conhec
 
 O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes. Veja algumas ferramentas para automação de testes:
 
-1. **Selenium**: é um framework portátil para testar aplicativos web. O Selenium fornece uma ferramenta de reprodução para a criação de testes funcionais sem a necessidade de aprender uma linguagem de script de teste.
-  
-2. TestComplete:
+<img src="https://github.com/user-attachments/assets/3c87b05b-6715-4178-8166-9bf528c4e3ff" height="77" align="right"> 
 
-3. Telerik Test Studio:
+1. **Selenium**: é um framework portátil para testar aplicativos web. O Selenium fornece uma ferramenta de reprodução para a criação de testes funcionais sem a necessidade de aprender uma linguagem de script de teste. É provavelmente a ferramenta de automação de testes mais conhecida e utilizada no mundo, especialmente quando o foco são aplicações web. Diferente de soluções comerciais como Ranorex, UFT ou TestComplete, ele é open source, o que significa que não há custo de licença e ele pode ser adaptado de acordo com as necessidades do time. Esse fator, aliado à sua flexibilidade, fez do Selenium uma espécie de padrão de fato em automação de testes web, sendo adotado desde startups até grandes corporações.
 
-4. Robotium:
+2. **Robot Framework**: é uma estrutura genérica de automação de teste para testes de aceitação e desenvolvimento orientado a testes de aceitação. É uma estrutura de teste orientada por palavras-chave que usa a sintaxe de dados de teste tabular. 
 
-5. **Robot Framework**: é uma estrutura genérica de automação de teste para testes de aceitação e desenvolvimento orientado a testes de aceitação. É uma estrutura de teste orientada por palavras-chave que usa a sintaxe de dados de teste tabular. 
+3. **Robotium**: é um framework open source de automação de testes voltado especificamente para aplicações Android. Ele surgiu como uma resposta à necessidade de se criar testes funcionais e de interface de forma mais prática e menos trabalhosa do que o que era oferecido nativamente pela API de testes do Android. Diferente de soluções que focam em testes unitários ou apenas em pequenas partes da aplicação, o Robotium foi desenhado para permitir que você crie testes que simulam a interação real de um usuário com o aplicativo, clicando em botões, digitando em campos, navegando por telas e validando os resultados exibidos. Ele funciona essencialmente como uma camada que se apoia no JUnit e traz uma API mais rica e amigável para lidar com a interface de usuário.
 
-6. HPE Unified Functional Testing:
+4. **Cucumber**: é uma ferramenta de automação de testes que se popularizou por trazer uma abordagem muito forte de BDD (Behavior-Driven Development) para o dia a dia do desenvolvimento de software. Diferente de frameworks mais técnicos, que focam em testes unitários ou funcionais a partir do código, o Cucumber tem como diferencial a ideia de que os testes devem ser escritos em uma linguagem acessível a todos do time — não apenas a desenvolvedores. Ele utiliza a sintaxe Gherkin, que é baseada em descrições de comportamento no formato de cenários, usando estruturas como Dado–Quando–Então. Isso permite que pessoas de negócio, analistas de QA e desenvolvedores conversem sobre o sistema usando a mesma forma de especificação, diminuindo ambiguidades e garantindo que todos entendam da mesma maneira o que está sendo implementado.
 
-7. Ranorex:
+5. TestComplete: é uma ferramenta comercial de automação de testes desenvolvida pela SmartBear que tem como foco facilitar a criação, execução e manutenção de testes funcionais em diferentes tipos de aplicações, desde desktop, web até mobile. A grande proposta dela é oferecer uma plataforma robusta que permite tanto a quem tem experiência em programação quanto a quem não programa criar testes de forma eficiente. Isso é possível porque ela oferece duas formas de trabalho: por um lado, há a possibilidade de construir scripts completos em linguagens como Python, JavaScript, VBScript e outras suportadas, o que dá liberdade total para quem tem familiaridade com código; por outro lado, ela também disponibiliza recursos de gravação e reprodução, em que o testador interage com a aplicação e o TestComplete grava essas interações para gerar um script automaticamente, que depois pode ser reutilizado e refinado.
 
-8. Cucumber:
+6. Telerik Test Studio: é uma ferramenta de automação de testes desenvolvida pela Progress, criada para simplificar e acelerar o processo de validação de software em diferentes tipos de aplicações, desde web, desktop até aplicativos responsivos e mobile. O grande diferencial dela é o foco em ser acessível para equipes que não necessariamente têm profundo conhecimento em programação, ao mesmo tempo em que entrega recursos avançados que podem ser explorados por engenheiros de testes mais experientes. Assim como outras soluções comerciais, a proposta é unir praticidade, estabilidade e integração com o ciclo de desenvolvimento.
 
-9. Visual Studio Test Professional:
+7. HPE Unified Functional Testing: anteriormente conhecido como HP QuickTest Professional (QTP), é uma das ferramentas mais tradicionais e consolidadas de automação de testes funcionais. Ele foi desenvolvido pela Hewlett-Packard (hoje Micro Focus, depois da aquisição da divisão de software da HPE) e é amplamente utilizado em grandes corporações que precisam validar aplicações complexas, que muitas vezes envolvem uma mistura de sistemas legados, aplicações web modernas e até integrações entre diferentes tecnologias. O grande diferencial do UFT sempre foi a abrangência tecnológica: ele suporta automação em aplicações desktop, web, SAP, Oracle, PeopleSoft, aplicações client-server, APIs e até mobile, tudo em uma única plataforma, reduzindo a necessidade de várias ferramentas diferentes.
 
-10. TestingWhiz:
+8. Ranorex: é uma ferramenta comercial de automação de testes que ganhou bastante destaque justamente por tentar simplificar e unificar a automação em diferentes tipos de aplicações, cobrindo desde softwares desktop, sistemas web até aplicativos mobile. Ele é muito utilizado em ambientes corporativos onde existe a necessidade de automatizar aplicações complexas, que muitas vezes envolvem tecnologias legadas misturadas com plataformas modernas. Seu grande diferencial é oferecer uma interface visual poderosa, que permite a criação de testes sem exigir conhecimento avançado em programação, mas ao mesmo tempo dar liberdade para quem domina código escrever scripts mais sofisticados em linguagens como C# e VB.NET, já que o Ranorex é baseado no ecossistema .NET.
+
+9. Visual Studio Test Professional: é uma edição do Visual Studio voltada especificamente para gestão e execução de testes de software dentro do ecossistema da Microsoft. Ele não é apenas um IDE, mas uma suíte de ferramentas pensada para equipes de QA e de desenvolvimento que precisam trabalhar de forma integrada em projetos com práticas ágeis e DevOps. Enquanto versões como o Visual Studio Enterprise são mais amplas e englobam todo o ciclo de desenvolvimento, o Test Professional é um produto direcionado para o ciclo de vida de testes, oferecendo recursos de planejamento, acompanhamento e execução.
+
+10. TestingWhiz: é uma ferramenta de automação de testes voltada principalmente para equipes que buscam praticidade e velocidade na criação de testes, sem depender fortemente de programação. Diferente de frameworks open source como Selenium, que exigem bastante conhecimento técnico e montagem de infraestrutura, o TestingWhiz aposta em uma abordagem codeless, baseada em uma interface visual intuitiva onde o testador pode construir fluxos de teste arrastando e configurando blocos de ações pré-definidas. Isso o torna bastante atraente para equipes de QA funcionais ou para empresas que querem introduzir automação de forma rápida, sem exigir que todo o time saiba programar.
 
 Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
 
 1. **Frameworks de Teste Unitário**:
   
-  - **JUnit**: Framework de testes unitários para Java. 
+   - **JUnit**: Framework de testes unitários para Java. 
   
-  - **NUnit**: Framework de testes unitários para .NET.
+   - **NUnit**: Framework de testes unitários para .NET.
 
-  - **PyTest**: Framework de testes para Python.
+   - **PyTest**: Framework de testes para Python.
 
-  - **Mocha**: Framework de testes para JavaScript e Node.js.
+   - **Mocha**: Framework de testes para JavaScript e Node.js.
   
-  - **RSpec**: Framework de testes para Ruby.
+   - **RSpec**: Framework de testes para Ruby.
 
-  - **TestNG**: Outro framework de testes para Java.
+   - **TestNG**: Outro framework de testes para Java.
 
 2. **Ferramentas de Teste de Integração e Funcional**:
 
-  - **Selenium**: Automação de navegadores para testes de aplicações web.
+   - **Selenium**: Automação de navegadores para testes de aplicações web.
   
-  - **Cypress**: Ferramenta de teste de front-end para aplicações web modernas.
-  
-  - **Protractor**: Ferramenta de teste de end-to-end para aplicações Angular.
+   - **Cypress**: Ferramenta de teste de front-end para aplicações web modernas.
+   
+   - **Protractor**: Ferramenta de teste de end-to-end para aplicações Angular.
 
-  - **Watir**: Ferramenta de automação de testes para aplicações web.
+   - **Watir**: Ferramenta de automação de testes para aplicações web.
 
 3. **Ferramentas de Teste de Interface de Usuário (UI)**:
   
-  - **Appium**: Framework de automação para aplicações móveis (iOS e Android).
+   - **Appium**: Framework de automação para aplicações móveis (iOS e Android).
+   
+   - **TestComplete**: Ferramenta de automação de testes para aplicações desktop, web e móveis.
   
-  - **TestComplete**: Ferramenta de automação de testes para aplicações desktop, web e móveis.
-  
-  - **Ranorex**: Ferramenta de automação de testes para desktop, web e dispositivos móveis.
+   - **Ranorex**: Ferramenta de automação de testes para desktop, web e dispositivos móveis.
 
 4. **Ferramentas de Teste de Performance e Carga**:
   
-  - **JMeter**: Ferramenta para testes de carga e performance.
+   - **JMeter**: Ferramenta para testes de carga e performance.
   
-  - **Gatling**: Ferramenta de teste de carga focada em aplicações web.
+   - **Gatling**: Ferramenta de teste de carga focada em aplicações web.
   
-  - **LoadRunner**: Ferramenta de teste de carga e performance da Micro Focus.
+   - **LoadRunner**: Ferramenta de teste de carga e performance da Micro Focus.
 
 5. **Ferramentas de Teste de Segurança**:
   
-  - **OWASP ZAP**: Ferramenta para testes de penetração de aplicações web.
+   - **OWASP ZAP**: Ferramenta para testes de penetração de aplicações web.
   
-  - **Burp Suite**: Ferramenta de teste de segurança para aplicações web.
+   - **Burp Suite**: Ferramenta de teste de segurança para aplicações web.
   
-  - **Acunetix**: Ferramenta de varredura de segurança para aplicações web.
+   - **Acunetix**: Ferramenta de varredura de segurança para aplicações web.
 
 6. **Ferramentas de Teste de APIs**:
   
-  - **Postman**: Ferramenta para teste de APIs RESTful.
+   - **Postman**: Ferramenta para teste de APIs RESTful.
   
-  - **SoapUI**: Ferramenta de teste para serviços web SOAP e REST.
+   - **SoapUI**: Ferramenta de teste para serviços web SOAP e REST.
   
-  - **RestAssured**: Biblioteca para teste de APIs REST em Java.
+   - **RestAssured**: Biblioteca para teste de APIs REST em Java.
 
 7. **Ferramentas de Integração Contínua**:
   
-  - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
+   - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
   
-  - **GitHub Actions**: Serviço de integração e entrega contínua integrado ao GitHub.
+   - **GitHub Actions**: Serviço de integração e entrega contínua integrado ao GitHub.
 
-  - **GitLab CI/CD**: Ferramenta de integração contínua e entrega contínua do GitLab.
+   - **GitLab CI/CD**: Ferramenta de integração contínua e entrega contínua do GitLab.
 
-  - **CircleCI**: Serviço de integração contínua e entrega contínua.
+   - **CircleCI**: Serviço de integração contínua e entrega contínua.
 
 8. **Ferramentas de Análise de Código e Cobertura de Testes**:
 
