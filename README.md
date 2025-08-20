@@ -625,9 +625,6 @@ Por fim, existe uma máxima importante: **“don’t mock what you don’t own�
 
 Ou seja, as boas práticas são: usar mocks para comandos e stubs para queries, escolher o double mais simples possível para o cenário, não abusar de mocks em todos os lugares, restringir o uso a testes de unidade, e nunca mockar diretamente dependências externas que você não controla.
 
-Quer que eu te monte um “textão” explicando um exemplo prático, com código, que mostra como aplicar todas essas boas práticas juntas em um cenário de teste com TDD?
-
-
 ## [QA] Integration Testing
 <img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
 
