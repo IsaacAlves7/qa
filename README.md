@@ -543,9 +543,13 @@ Quando você combina esses três conceitos, você pode comunicar algo como:
 
 Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste.
 
+Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar.
+
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
 
 Tipos comuns de Test Doubles:
+
+Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas. O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
 
 <img src="https://github.com/user-attachments/assets/475699e2-bce6-4101-acad-741da09c5f68" height="277" align="right">
 
