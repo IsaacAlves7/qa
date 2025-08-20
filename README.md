@@ -555,6 +555,8 @@ De acordo com Martin Fowler, test doubles é um conceito usado quando, para viab
 
 Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar. Fazendo um paralelo simplista, eles são como dublês de atores em um filme: substituem aplicações reais durante a realização de um teste por simular sua aparência e comportamento. Isso traz menos complexidade ao teste, além de permitir verificar uma parte de um sistema sem ficar preso em todas as suas outras porções.
 
+Em resumo, as duplicatas de teste (test doubles) são usadas para criar testes rápidos, independentes, determinísticos e confiáveis. Eles representam componentes reais, semelhante à forma como os dublês são usados nos filmes.
+
 <img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
 
 Talvez você não esteja familiarizado com o termo test double. É que, às vezes, eles são generalizados pela palavra mock, ou então pela expressão “mockar” . O fato é que mock é apenas um dos exemplos de test doubles dentro de uma família muito maior. Além dos mocks, existem, por exemplo, os fakes, os stubs, os dummies… Abaixo, explico alguns deles.
@@ -600,6 +602,14 @@ Exemplo: Se você estiver testando um serviço que depende de um repositório de
 Mocking e testes unitários são diferentes, mas se complementam para testar unidades isoladas do código. Os testes unitários tem o objetivo de testar uma unidade de código (como uma função ou método) de forma independente, garantindo que ela funcione corretamente em diferentes cenários. Em um teste unitário, você se preocupa apenas com o comportamento interno dessa unidade. 
 
 Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
+
+<img src="" height="277" align="right">
+
+Por fim, existe o **Spy**, que é uma espécie de híbrido. Ele é um objeto real, mas que tem a capacidade de registrar as chamadas que recebeu, permitindo inspecionar posteriormente como foi utilizado. Diferente do mock, o spy não necessariamente substitui a lógica real; ele executa de verdade, mas deixa rastros que podem ser verificados.
+
+Um spy age como um espião sob a implementação real e, como o mock, consegue verificar as interações entre os métodos.
+
+A diferença para o mock é que o spy chama a implementação real para todos os métodos da interface mockada, a não ser que para algum método este seja configurado para retornar algo específico diferente da implementação real.
 
 ## [QA] Integration Testing
 <img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
