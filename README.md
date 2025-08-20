@@ -589,7 +589,7 @@ O stub também é uma forma de teste duplo usado para fornecer uma resposta cont
 
 Qual é a diferença entre Mock e Stub? A julgar pela definição de mock e stub, parece que mock e stub são a mesma coisa. Isso ocorre porque uma simulação pode ser considerada uma extensão de um esboço. Um stub é apenas uma implementação simples usada para fornecer uma resposta controlada. Enquanto isso, a simulação não funciona apenas como um stub, mas também verifica o comportamento de um componente e sua interação com o objeto que a simulação cria.
 
-<img src="https://github.com/user-attachments/assets/bea4e6c6-07b1-412c-94e5-6134080d38e1" height="277" align="right">
+<img src="https://github.com/user-attachments/assets/4024470e-6396-4b5b-849c-ec7a86e2bc54" height="277" align="right">
 
 Os **mocks** tem expectativas sobre o jeito que deve ser chamado e, caso ele não seja chamado da forma correta, o teste deve falhar. Eles são usados para testar interações entre métodos e são úteis onde não há como verificar algumas mudanças de estado ou retornos do método testado diretamente.
 
