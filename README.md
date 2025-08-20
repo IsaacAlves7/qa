@@ -539,7 +539,7 @@ Quando você combina esses três conceitos, você pode comunicar algo como:
 
 > "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
 
-Imagine que você precisa validar o funcionamento de sua aplicação em um determinado cenário, mas este cenário só funciona se integrado com uma aplicação de terceiros específica, a qual você não tem total acesso.
+Agora, imagine que você precisa validar o funcionamento de sua aplicação em um determinado cenário, mas este cenário só funciona se integrado com uma aplicação de terceiros específica, a qual você não tem total acesso.
 
 O fato de você não ter acesso traz um dilema: ou você ignora a integração e roda o teste, inviabilizando a obtenção de resultados assertivos, ou não testa de modo algum.
 
