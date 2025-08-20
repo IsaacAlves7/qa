@@ -539,17 +539,33 @@ Quando você combina esses três conceitos, você pode comunicar algo como:
 
 > "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
 
+Imagine que você precisa validar o funcionamento de sua aplicação em um determinado cenário, mas este cenário só funciona se integrado com uma aplicação de terceiros específica, a qual você não tem total acesso.
+
+O fato de você não ter acesso traz um dilema: ou você ignora a integração e roda o teste, inviabilizando a obtenção de resultados assertivos, ou não testa de modo algum.
+
+Nenhuma das opções é realmente a escolha ideal, mesmo se você encarar aquele ditado “feito é melhor que perfeito”. Afinal, é muito tênue a linha entre não trazer os resultados corretos e não testar.
+
+O ideal seria existir algo que possibilitasse que os testes trouxessem os melhores resultados, mesmo sem acesso à tecnologia necessária. A boa notícia é que existe! Estamos falando dos _test doubles_.
+
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/3963eb3d-ea61-4557-92cb-2f097cfed79a" height="77" align="right">
 
 Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste.
 
-Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar.
+De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro.
+
+Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar. Fazendo um paralelo simplista, eles são como dublês de atores em um filme: substituem aplicações reais durante a realização de um teste por simular sua aparência e comportamento. Isso traz menos complexidade ao teste, além de permitir verificar uma parte de um sistema sem ficar preso em todas as suas outras porções.
+
+Talvez você não esteja familiarizado com o termo test double. É que, às vezes, eles são generalizados pela palavra mock, ou então pela expressão “mockar” . O fato é que mock é apenas um dos exemplos de test doubles dentro de uma família muito maior. Além dos mocks, existem, por exemplo, os fakes, os stubs, os dummies… Abaixo, explico alguns deles.
 
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
 
-Tipos comuns de Test Doubles:
+Tipos comuns de Test Doubles: Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas.
 
-Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas. O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
+O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
+
+Os dummies são dados que substituem dados reais, mas que não chegam a ser realmente utilizados no teste. São normalmente usados para satisfazer determinados parâmetros.
+
+Como uso de dummies é possível diminuir a complexidade durante a escrita de um teste, ignorando o que não é relevante no cenário e focando no que realmente importa.
 
 <img src="https://github.com/user-attachments/assets/475699e2-bce6-4101-acad-741da09c5f68" height="277" align="right">
 
