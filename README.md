@@ -569,6 +569,12 @@ Os dummies são dados que substituem dados reais, mas que não chegam a ser real
 
 Como uso de dummies é possível diminuir a complexidade durante a escrita de um teste, ignorando o que não é relevante no cenário e focando no que realmente importa.
 
+<img height="277" align="right" alt="fake" src="https://github.com/user-attachments/assets/f81524ad-936f-4b9e-9822-05c32d02489c" />
+
+Os **fakes** são test doubles que têm implementações reais diferentes àquelas que existem em produção. Podemos considerá-los como um “atalho”, algo implementado para deixar a execução do teste mais dinâmica frente ao que é colocado no ar de fato.
+
+Basicamente, não há lógica em um fake — ele retorna um valor determinado por quem o implementa e, justamente por isso, não é um elemento adequado para ir à produção. Contudo, ele elimina a necessidade de implementar uma funcionalidade real, o que seria bem mais complexo.
+
 <img src="https://github.com/user-attachments/assets/bea4e6c6-07b1-412c-94e5-6134080d38e1" height="277" align="right">
 
 Os **mocks** tem expectativas sobre o jeito que deve ser chamado e, caso ele não seja chamado da forma correta, o teste deve falhar. Eles são usados para testar interações entre métodos e são úteis onde não há como verificar algumas mudanças de estado ou retornos do método testado diretamente.
