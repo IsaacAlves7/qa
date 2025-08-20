@@ -571,7 +571,7 @@ Como uso de dummies é possível diminuir a complexidade durante a escrita de um
 
 <img height="277" align="right" alt="fake" src="https://github.com/user-attachments/assets/f81524ad-936f-4b9e-9822-05c32d02489c" />
 
-Os **fakes** são test doubles que têm implementações reais diferentes àquelas que existem em produção. Podemos considerá-los como um “atalho”, algo implementado para deixar a execução do teste mais dinâmica frente ao que é colocado no ar de fato.
+Os **fakes** são test doubles que têm implementações reais diferentes àquelas que existem em produção. é uma implementação funcional simplificada de um componente real. Ele realmente executa algo, mas de maneira controlada e menos complexa. Um exemplo clássico é um banco de dados em memória usado nos testes em vez de um banco de produção, ou um servidor HTTP falso que responde rapidamente sem precisar de rede. Os fakes aceleram os testes e evitam dependências externas pesadas. Podemos considerá-los como um “atalho”, algo implementado para deixar a execução do teste mais dinâmica frente ao que é colocado no ar de fato.
 
 Basicamente, não há lógica em um fake — ele retorna um valor determinado por quem o implementa e, justamente por isso, não é um elemento adequado para ir à produção. Contudo, ele elimina a necessidade de implementar uma funcionalidade real, o que seria bem mais complexo.
 
