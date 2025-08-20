@@ -555,11 +555,11 @@ De acordo com Martin Fowler, test doubles é um conceito usado quando, para viab
 
 Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar. Fazendo um paralelo simplista, eles são como dublês de atores em um filme: substituem aplicações reais durante a realização de um teste por simular sua aparência e comportamento. Isso traz menos complexidade ao teste, além de permitir verificar uma parte de um sistema sem ficar preso em todas as suas outras porções.
 
+<img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
+
 Talvez você não esteja familiarizado com o termo test double. É que, às vezes, eles são generalizados pela palavra mock, ou então pela expressão “mockar” . O fato é que mock é apenas um dos exemplos de test doubles dentro de uma família muito maior. Além dos mocks, existem, por exemplo, os fakes, os stubs, os dummies… Abaixo, explico alguns deles.
 
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
-
-<img width="682" height="402" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
 
 Tipos comuns de Test Doubles: Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas.
 
