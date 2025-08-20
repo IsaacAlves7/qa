@@ -603,7 +603,7 @@ Mocking e testes unitários são diferentes, mas se complementam para testar uni
 
 Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
 
-<img src="" height="277" align="right">
+<img src="https://github.com/user-attachments/assets/0f2ecf0d-35de-4fe4-a7b7-24530745efd0" height="277" align="right">
 
 Por fim, existe o **Spy**, que é uma espécie de híbrido. Ele é um objeto real, mas que tem a capacidade de registrar as chamadas que recebeu, permitindo inspecionar posteriormente como foi utilizado. Diferente do mock, o spy não necessariamente substitui a lógica real; ele executa de verdade, mas deixa rastros que podem ser verificados.
 
