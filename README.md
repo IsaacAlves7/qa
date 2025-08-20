@@ -559,6 +559,8 @@ Talvez você não esteja familiarizado com o termo test double. É que, às veze
 
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
 
+<img width="687" height="408" align="right" src="https://github.com/user-attachments/assets/157b8c32-38bf-4145-a476-89192a1d4804" />
+
 Tipos comuns de Test Doubles: Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas.
 
 O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
@@ -575,7 +577,9 @@ Os **mocks** tem expectativas sobre o jeito que deve ser chamado e, caso ele nã
 
 Exemplo: Se você estiver testando um serviço que depende de um repositório de dados, você pode usar um mock para simular as respostas do repositório, em vez de acessar o banco de dados real.
 
-Mocking e testes unitários são diferentes, mas se complementam para testar unidades isoladas do código. Os testes unitários tem o objetivo de testar uma unidade de código (como uma função ou método) de forma independente, garantindo que ela funcione corretamente em diferentes cenários. Em um teste unitário, você se preocupa apenas com o comportamento interno dessa unidade. Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
+Mocking e testes unitários são diferentes, mas se complementam para testar unidades isoladas do código. Os testes unitários tem o objetivo de testar uma unidade de código (como uma função ou método) de forma independente, garantindo que ela funcione corretamente em diferentes cenários. Em um teste unitário, você se preocupa apenas com o comportamento interno dessa unidade. 
+
+Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
 
 ## [QA] Integration Testing
 <img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
