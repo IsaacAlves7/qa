@@ -569,6 +569,8 @@ Como uso de dummies é possível diminuir a complexidade durante a escrita de um
 
 <img src="https://github.com/user-attachments/assets/bea4e6c6-07b1-412c-94e5-6134080d38e1" height="277" align="right">
 
+Os **mocks** tem expectativas sobre o jeito que deve ser chamado e, caso ele não seja chamado da forma correta, o teste deve falhar. Eles são usados para testar interações entre métodos e são úteis onde não há como verificar algumas mudanças de estado ou retornos do método testado diretamente.
+
 **Mocking** (Mockado) é uma técnica usada em testes de software para simular o comportamento de dependências externas, como serviços, bancos de dados, ou APIs, dentro de uma unidade de código que você está testando. Ao invés de usar as implementações reais dessas dependências, você cria "mocks" (objetos falsos) que imitam o comportamento esperado, permitindo testar o código de forma isolada. O principal benefício do mocking é garantir que o teste foque apenas no comportamento da unidade de código em questão, sem se preocupar com o comportamento ou estado das dependências externas.
 
 Exemplo: Se você estiver testando um serviço que depende de um repositório de dados, você pode usar um mock para simular as respostas do repositório, em vez de acessar o banco de dados real.
