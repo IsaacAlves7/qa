@@ -922,6 +922,25 @@ Quando você junta as três abordagens, tem um fluxo bastante poderoso: o DDD te
 
 <img width="1200" height="635" alt="Test-driven-development-cycle-Cybus-Nordic-APIs" src="https://github.com/user-attachments/assets/c1a8a96e-1c48-4152-95e3-003afbdcd210" />
 
+Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-refactor” clássico, conectando os diferentes níveis de testes (caixa preta, cinza e branca) dentro do ciclo de desenvolvimento. Vou destrinchar o que ele está representando.
+
+À esquerda, temos a **Black Box**, que é onde entram os **testes de aceitação**. Eles validam se o sistema, como um todo, faz o que o usuário ou o negócio espera. É aqui que entra aquele “Dado–Quando–Então” do BDD, por exemplo. 
+
+1. Esse é o primeiro passo (1): escrever o teste de aceitação que vai falhar porque o sistema ainda não implementa a funcionalidade.
+
+2. Na sequência (2), entra a parte de **testes funcionais**, ainda numa visão de alto nível. Eles descrevem como cada funcionalidade deve se comportar dentro do sistema. É a ponte entre aceitação e código.
+
+3.4 Indo para a direita, temos a **White Box**, com **testes unitários**. Esse é o núcleo do TDD clássico: para cada pequena parte do código (função, método, classe), você escreve um teste que falha (3), implementa o código mínimo para passar (4) e depois refatora (ciclo interno de unidade).
+
+5. Depois de escrever e passar os testes unitários, você volta para os **testes funcionais** (5), garantindo que aquela unidade está contribuindo corretamente para o comportamento esperado.
+
+6. Daqui em diante, surgem os **testes de integração** (6), que validam se as diferentes partes do sistema trabalham bem juntas (por exemplo, se um serviço conversa com outro via API, se a camada de aplicação integra corretamente com o banco).
+
+6.7 Os testes funcionais e de integração se retroalimentam (6 e 7), porque quando você conecta módulos, é comum ajustar tanto o comportamento funcional quanto a integração.
+
+8. Por fim, quando tudo isso passa, você retorna para os **testes de aceitação** (8). Se eles agora passam, significa que o sistema como um todo está atendendo ao que foi pedido. Se ainda falham, o ciclo recomeça até que os critérios de aceitação estejam cumpridos.
+
+Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–código–refatora), mas pode ser entendido como um **encadeamento de ciclos em diferentes camadas**: começa com aceitação (visão do usuário), vai para funcional (visão do sistema), integrações (módulos se falando) e finalmente unidades (blocos de código). É um processo iterativo que desce do mais abstrato até o mais concreto e depois sobe de volta, validando em todos os níveis.
 
 ## [QA] BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
