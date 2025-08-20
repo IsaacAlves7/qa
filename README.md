@@ -237,7 +237,7 @@ Com as alterações que realizamos o tempo todo em nosso software, como podemos 
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white)
 ![Selenium](https://img.shields.io/badge/-Selenium-limegreen?style=badge&logo=Selenium&logoColor=white)
 ![Appium](https://img.shields.io/badge/-Appium-EE376D?style=badge&logo=Appium&logoColor=white)
-![Apache JMeter](https://img.shields.io/badge/-Apache--JMeter-D22128?style=badge&logo=apachejmeter&logoColor=white)
+![Apache JMeter](https://img.shields.io/badge/-Apache_JMeter-D22128?style=badge&logo=apachejmeter&logoColor=white)
 ![Cypress](https://img.shields.io/badge/-Cypress-505050?style=badge&logo=cypress&logoColor=white)
 ![Robot Framework](https://img.shields.io/badge/-Robot_Framework-000000?style=badge&logo=robotframework&logoColor=white)
 
