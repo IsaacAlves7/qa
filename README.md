@@ -519,7 +519,13 @@ Pode ser um campo, uma assinatura, um I/O, ou qualquer tipo de local que receba 
 
 Ex.: Campo DDD deverá permitir números de até quatro casas não negativas ou a base de dados deve impedir a entrada de valores inválidos. Receber e guardar o mesmo tipo de dado, o tamanho do campo que recebe os dados deve ser menor ou igual ao campo que irá armazenar os dados (em raros casos os campos de armazenamento são menores que os de exibição).
 
-Em suma, domínio é o tipo de valor válido para cada campo. Como exemplo podemos citar: Campo nome: Dominio = tipo: string; tamanho:50. Ao aplicarmos o particionamento por equivalência e a análise por valor limite, poderemos criar as seguintes classes de testes.
+Em suma, domínio é o tipo de valor válido para cada campo. Como exemplo podemos citar: 
+
+```txt
+Campo nome: Dominio = tipo: string; tamanho:50
+```
+
+Ao aplicarmos o particionamento por equivalência e a análise por valor limite, poderemos criar as seguintes classes de testes.
 
 Particionamento por Equivalência: campo nome:
 
@@ -529,7 +535,9 @@ Particionamento por Equivalência: campo nome:
 
 Análise por Valor Limite:
 
+```txt
 campo nome: valor em branco; valores 49,50,51; 
+```
 
 Usamos um valor exatamente inferior e exatamente posterior ao valor do campo, devido ao fato dos erros aparecerem nas fronteiras da aplicação.
 
