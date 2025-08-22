@@ -207,7 +207,7 @@ O modelo é baseado em cinco níveis, que representam um aumento gradual da matu
 O CMM é amplamente utilizado para avaliar a maturidade dos processos de software em organizações governamentais e privadas em todo o mundo.
 
 ## [QA] Self testing
-<img src="https://www.pcloudy.com/wp-content/uploads/2019/07/functional-testing.png" align="right" height="277"> 
+<a href="https://martinfowler.com/articles/practical-test-pyramid.html"><img src="https://www.pcloudy.com/wp-content/uploads/2019/07/functional-testing.png" align="right" height="277"></a>
 
 O conceito de **self-testing** em software vem da ideia de que o próprio sistema deve ter meios embutidos para validar se está funcionando corretamente, sem depender de verificações externas e ocasionais. Em essência, é a noção de que a aplicação deve trazer consigo a capacidade de se “autoavaliar”. 
 
