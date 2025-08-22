@@ -113,17 +113,20 @@ Dentro da distinção clássica entre *QA (Quality Assurance)* e **QC (Quality C
 
 Portanto, sim: quando falamos em **testes manuais, automatizados, de integração, de aceitação, de regressão, de performance, etc.**, estamos atuando dentro da **camada de QC**. Eles são o mecanismo pelo qual conseguimos transformar “expectativas de qualidade” em **evidências objetivas** de que o software funciona (ou não) como esperado.
 
-Vantagens dos testes de software:
+<img src="https://github.com/user-attachments/assets/bcc83195-9916-4d3a-8fe9-22a87ccf18f8" align="right" height="177">
 
-- Qualidade
-- Suporte ao time
-- Feedback constante
-- Produtividade
-- Documentação viva
-- Alinhamento com o negócio
-- Disseminação de conhecimento
-- Prevenção de bugs: Evitar a continuação dos bugs
-- Redução de Custos
+> [!Important]
+> Vantagens dos testes de software: Se você quer evoluir em testes de software e entender como integrar qualidade de forma colaborativa e contínua em equipes ágeis, o livro **"Agile Testing: A Practical Guide for Testers and Agile Teams"**, escrito por Lisa Crispin e Janet Gregory, é uma leitura essencial para transformar a teoria em prática.
+> 
+> - Qualidade
+> - Suporte ao time
+> - Feedback constante
+> - Produtividade
+> - Documentação viva
+> - Alinhamento com o negócio
+> - Disseminação de conhecimento
+> - Prevenção de bugs: Evitar a continuação dos bugs
+> - Redução de Custos
 
 A definição de “pronto” nada mais é do que um contrato firmado entre o time e o PO, que lista de forma clara os requisitos que determinam que uma User Story está completa.
 
