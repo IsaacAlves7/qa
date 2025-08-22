@@ -70,7 +70,7 @@ Para aprofundar seus conhecimentos sobre qualidade de software, você pode se pe
  
 Uma ilustração que pode ajudar a entender a importância da qualidade de software é pensar em um aplicativo de banco que apresenta erros constantemente. Isso certamente afetaria a confiança do usuário no aplicativo e, consequentemente, na instituição financeira. Por isso, a qualidade do software é fundamental para garantir a satisfação e fidelização do usuário.
 
-Os fundamentos de teste de software se referem a um conjunto de práticas e técnicas utilizadas para garantir que um software seja capaz de atender aos requisitos e expectativas dos usuários, além de estar livre de erros e falhas. Para ser eficaz, o teste de software deve ser planejado, executado e gerenciado de forma adequada. Isso envolve identificar e definir os objetivos do teste, estabelecer critérios de aceitação, selecionar as técnicas e ferramentas adequadas e documentar todo o processo.
+Os fundamentos de **teste de software** (Software Testing) se referem a um conjunto de práticas e técnicas utilizadas para garantir que um software seja capaz de atender aos requisitos e expectativas dos usuários, além de estar livre de erros e falhas. Para ser eficaz, o teste de software deve ser planejado, executado e gerenciado de forma adequada. Isso envolve identificar e definir os objetivos do teste, estabelecer critérios de aceitação, selecionar as técnicas e ferramentas adequadas e documentar todo o processo.
 
 Entre os fundamentos do teste de software estão:
 
@@ -109,7 +109,7 @@ Já o “caminho testável” pode ter interpretações ligeiramente diferentes 
 
 Portanto, quando você ouve falar de “caminho feliz”, é um subconjunto do “caminho testável”. O caminho feliz prova que o básico funciona; o caminho testável inclui todas as outras possibilidades para dar robustez à aplicação.
 
-Dentro da distinção clássica entre *QA (Quality Assurance)* e **QC (Quality Control)**, os testes de software se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em **detectar e validar defeitos no resultado tangível** — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
+Dentro da distinção clássica entre *QA (Quality Assurance)* e **QC (Quality Control)**, os testes de software se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em detectar e validar defeitos no resultado tangível — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
 
 Portanto, sim: quando falamos em **testes manuais, automatizados, de integração, de aceitação, de regressão, de performance, etc.**, estamos atuando dentro da **camada de QC**. Eles são o mecanismo pelo qual conseguimos transformar “expectativas de qualidade” em **evidências objetivas** de que o software funciona (ou não) como esperado.
 
