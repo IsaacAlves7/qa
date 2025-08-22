@@ -155,6 +155,12 @@ Além disso, uma ilustração útil pode ser um diagrama que mostre a relação 
 
 <div align="center"><img width="551" height="351" alt="image" src="https://github.com/user-attachments/assets/d9decc9c-a526-4733-bf66-c5cd63aaba1e" /></div>
 
+É importante destacar que a observabilidade (observability) não é exatamente parte do QA no sentido tradicional, mas ela se conecta de forma muito natural com a qualidade do software. QA (Quality Assurance) historicamente é voltado para prevenção de defeitos, validação e verificação de requisitos, testes funcionais, não funcionais e processos que garantem que o produto atenda ao que foi especificado. Observabilidade, por outro lado, nasceu com foco na operação e na confiabilidade: é a capacidade de entender o que está acontecendo em um sistema, em tempo real, a partir de sinais como logs, métricas e traces. Ela vai além de simplesmente monitorar: é sobre ser capaz de responder perguntas desconhecidas sobre o comportamento do sistema.
+
+A relação entre as duas áreas está no fato de que quanto mais observável um sistema é, mais fácil fica detectar, diagnosticar e corrigir problemas que impactam a qualidade. QA tradicional muitas vezes termina antes da aplicação ir para produção, mas bugs e falhas ainda podem aparecer em ambientes reais. Com observabilidade, você complementa os testes com uma visão contínua, onde é possível acompanhar a saúde, a performance, os gargalos e até o comportamento do usuário. Para equipes modernas, especialmente em DevOps e SRE, a linha entre QA e observabilidade se mistura um pouco, pois qualidade não é mais só “testar antes de subir”, mas também garantir que o produto em execução esteja saudável, rastreável e confiável.
+
+Portanto, observabilidade pode ser vista como complementar ao QA, não substitui testes e processos de qualidade, mas amplia a segurança e o controle. Muitas equipes de alto desempenho hoje tratam a observabilidade como parte essencial da estratégia de qualidade, especialmente quando o sistema é distribuído, usa microsserviços, filas, integrações externas ou precisa de alta disponibilidade. Quer que eu aprofunde e explique como observabilidade e QA podem se unir num pipeline de CI/CD moderno?
+
 ## [QA] Custos x Fases
 <img width="524" height="241" align="right" src="https://github.com/user-attachments/assets/a3aaded7-0fad-4ba5-9b0a-9d664bf0dc8e" />
 
