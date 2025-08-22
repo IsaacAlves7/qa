@@ -215,6 +215,8 @@ Isso pode se manifestar de formas diferentes dependendo do contexto: em nível d
 
 Dentro desse conceito, **testes automatizados** são o núcleo natural do self-testing, porque permitem verificar de forma contínua e repetível se o código ainda atende às especificações à medida que evolui. É nesse ponto que práticas como **TDD** se encaixam perfeitamente: ao escrever primeiro o teste e depois o código, o desenvolvedor garante que cada parte do sistema já nasce coberta por verificações, criando um software que já vem com seus próprios “exames de saúde”. Além disso, TDD gera uma rede de segurança de regressão, que torna o sistema mais resistente a falhas ao longo do tempo.
 
+> "Descobrir o inesperado é mais importante do que confirmar o conhecido." - George E.P.Box
+
 Já os **testes manuais** também podem existir em um cenário de self-testing, mas não cumprem totalmente a proposta. Eles servem bem em situações exploratórias, de usabilidade ou de descoberta de casos não previstos, mas não garantem a automação e a repetibilidade que o conceito prega. Em outras palavras, um sistema pode até contar com testes manuais complementares, mas não se considera realmente “self-testing” se depende só deles, porque não há como o software se validar sozinho sem a intervenção humana.
 
 Portanto, podemos dizer que o self-testing **aceita testes manuais como complemento**, mas a essência dele está nos **testes automatizados**, preferencialmente guiados por boas práticas como TDD ou ATDD, que dão disciplina e cobertura consistente ao ciclo de desenvolvimento.
