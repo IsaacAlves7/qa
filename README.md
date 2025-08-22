@@ -70,7 +70,7 @@ Para aprofundar seus conhecimentos sobre qualidade de software, você pode se pe
  
 Uma ilustração que pode ajudar a entender a importância da qualidade de software é pensar em um aplicativo de banco que apresenta erros constantemente. Isso certamente afetaria a confiança do usuário no aplicativo e, consequentemente, na instituição financeira. Por isso, a qualidade do software é fundamental para garantir a satisfação e fidelização do usuário.
 
-Fundamentos de teste de software se referem a um conjunto de práticas e técnicas utilizadas para garantir que um software seja capaz de atender aos requisitos e expectativas dos usuários, além de estar livre de erros e falhas. Para ser eficaz, o teste de software deve ser planejado, executado e gerenciado de forma adequada. Isso envolve identificar e definir os objetivos do teste, estabelecer critérios de aceitação, selecionar as técnicas e ferramentas adequadas e documentar todo o processo.
+Os fundamentos de teste de software se referem a um conjunto de práticas e técnicas utilizadas para garantir que um software seja capaz de atender aos requisitos e expectativas dos usuários, além de estar livre de erros e falhas. Para ser eficaz, o teste de software deve ser planejado, executado e gerenciado de forma adequada. Isso envolve identificar e definir os objetivos do teste, estabelecer critérios de aceitação, selecionar as técnicas e ferramentas adequadas e documentar todo o processo.
 
 Entre os fundamentos do teste de software estão:
 
@@ -95,11 +95,19 @@ Outro aspecto importante dos fundamentos de qualidade de software é a colabora�
 > [!Important]
 > **Software Engineering: A Practitioner's Approach**: Para aprofundar seus conhecimentos sobre qualidade de software, você pode recorrer a materiais como artigos científicos, livros e cursos on-line. Uma indicação de leitura é o livro Software Engineering: A Practitioner's Approach, de Roger Pressman, que aborda temas como garantia de qualidade, medição de qualidade e processos de software. Em resumo, entender os fundamentos de qualidade de software é essencial para garantir o sucesso de projetos de desenvolvimento. Isso inclui a compreensão do conceito de qualidade, a adoção de processos de garantia de qualidade, a definição de critérios de qualidade e a colaboração entre as equipes. Aprofundar seus conhecimentos neste tema é fundamental para se destacar no mercado de trabalho e garantir a satisfação do usuário.
 
-Portanto, o **teste de software** (Software testing) para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional. 
+Portanto, o teste de software (Software testing) para os profissionais de QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional. 
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
 
 O *teste de software* é a prática concreta que os profissionais de QA (no papel de testers, engenheiros de teste ou SDETs) usam para avaliar se o produto realmente cumpre o que deveria cumprir, tanto sob o ponto de vista técnico (estabilidade, performance, segurança) quanto funcional (se as regras de negócio e requisitos do usuário estão atendidos).
+
+> "Descobrir o inesperado é mais importante do que confirmar o conhecido." - George E.P.Box
+
+Quando falamos de testes de software usamos bastante os conceitos de _caminho testável_ e _caminho feliz_, mas cada um tem um propósito diferente dentro da estratégia de validação do sistema. O chamado “caminho feliz” (ou “happy path”) é aquele fluxo idealizado em que tudo acontece como esperado, sem erros, exceções ou desvios. É o cenário perfeito, onde o usuário ou o sistema segue exatamente o que foi planejado, com entradas válidas, comportamento conforme os requisitos e saída correta. É fundamental porque garante que a funcionalidade principal está realmente atendendo ao objetivo esperado quando usada da maneira correta, e por isso é quase sempre o primeiro caso de teste escrito, seja em testes manuais, automatizados, unitários ou de integração.
+
+Já o “caminho testável” pode ter interpretações ligeiramente diferentes dependendo do contexto, mas normalmente é usado para se referir a qualquer rota dentro do código ou do fluxo da aplicação que pode ser exercitada por um teste. É o conjunto de caminhos possíveis que o teste consegue alcançar, incluindo o caminho feliz e também as rotas alternativas, os cenários de exceção, entradas inválidas, erros de negócio, falhas de integração, entre outros. Em outras palavras, não é só garantir que a função principal funciona, mas também que o sistema se comporta corretamente quando algo sai do esperado. É aí que entram testes negativos, de borda, de falha, de performance ou até mesmo de segurança, que exercitam a aplicação de forma mais ampla e realista.
+
+Portanto, quando você ouve falar de “caminho feliz”, é um subconjunto do “caminho testável”. O caminho feliz prova que o básico funciona; o caminho testável inclui todas as outras possibilidades para dar robustez à aplicação.
 
 Dentro da distinção clássica entre *QA (Quality Assurance)* e **QC (Quality Control)**, os testes de software se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em **detectar e validar defeitos no resultado tangível** — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
 
