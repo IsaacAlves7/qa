@@ -230,6 +230,17 @@ O modelo é baseado em cinco níveis, que representam um aumento gradual da matu
 O CMM é amplamente utilizado para avaliar a maturidade dos processos de software em organizações governamentais e privadas em todo o mundo.
 
 ## [QA] Self testing
+![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
+![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
+![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
+![xUnit](https://img.shields.io/badge/-xUnit-EF2D5E?style=badge&logo=.NET&logoColor=white) 
+![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white)
+![Selenium](https://img.shields.io/badge/-Selenium-limegreen?style=badge&logo=Selenium&logoColor=white)
+![Appium](https://img.shields.io/badge/-Appium-EE376D?style=badge&logo=Appium&logoColor=white)
+![Apache JMeter](https://img.shields.io/badge/-Apache_JMeter-D22128?style=badge&logo=apachejmeter&logoColor=white)
+![Cypress](https://img.shields.io/badge/-Cypress-505050?style=badge&logo=cypress&logoColor=white)
+![Robot Framework](https://img.shields.io/badge/-Robot_Framework-000000?style=badge&logo=robotframework&logoColor=white)
+
 <a href="https://martinfowler.com/articles/practical-test-pyramid.html"><img src="https://www.pcloudy.com/wp-content/uploads/2019/07/functional-testing.png" align="right" height="277"></a>
 
 O conceito de **self-testing** em software vem da ideia de que o próprio sistema deve ter meios embutidos para validar se está funcionando corretamente, sem depender de verificações externas e ocasionais. Em essência, é a noção de que a aplicação deve trazer consigo a capacidade de se “autoavaliar”. 
