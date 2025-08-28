@@ -289,20 +289,23 @@ Tal procedimento, gera muito mais eficácia e agilidade na etapa de testes, perm
 
 Testes automatizados são uma das práticas mais fundamentais no desenvolvimento de software moderno, pois garantem confiabilidade, reduzem bugs em produção, facilitam refatorações e melhoram a documentação viva do sistema. Para construir testes automatizados realmente bons, é preciso compreender não só as ferramentas, mas também o processo como um todo — desde a fase de planejamento até a execução contínua. Tudo começa pela compreensão dos **níveis de teste**: 
 
-<img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="177" align="right"> 
+<img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="277" align="right"> 
 
-1. Testes de unidade (isolam pequenas partes do código),
-2. Testes de integração (verificam a comunicação entre partes),
-3. Testes de sistema (validam o sistema como um todo) e
-4. Testes end-to-end (simulam o comportamento real do usuário).
+1. **Testes de unidade** (isolam pequenas partes do código),
+
+2. **Testes de integração** (verificam a comunicação entre partes),
+
+3. **Testes de sistema** (validam o sistema como um todo) e
+
+4. **Testes end-to-end** (simulam o comportamento real do usuário).
 
 Cada nível exige atenção diferente e ferramentas específicas:
 
 No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios claros de cobertura: o que está sendo testado, por que está sendo testado e o que não precisa ser testado. Bons testes não são só aqueles que passam, mas aqueles que falham quando o comportamento do código foge do esperado. Para isso, as asserções precisam ser claras, específicas e rastreáveis. Boas práticas incluem escrever testes que sejam rápidos, isolados, determinísticos e legíveis. Um teste bom é aquele que alguém consegue entender o que ele verifica só de ler o seu nome e o corpo, sem necessidade de ir até a implementação testada.
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="277" align="right"> 
+A fase de ferramentas é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
 
-A fase de **ferramentas** é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="277" align="right"> 
 
 Na construção de um bom teste automatizado, o primeiro passo é **nomear corretamente o que está sendo testado**, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim. Depois, **seguir o padrão AAA** (Arrange, Act, Assert) é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
 
