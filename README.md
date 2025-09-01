@@ -1020,6 +1020,8 @@ Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decis
 
 Após ler este livro, você será capaz de:
 
+<img src="https://github.com/user-attachments/assets/77f87103-de9e-49e9-85d2-b29a8ed47608" align="right" height="177">
+
 - Entenda o processo e os princípios básicos da refatoração;
 - Aplique rapidamente refatorações convenientes para deixar um programa mais fácil de entender e de alterar;
 - Reconheça “maus cheiros” no código que sinalizam oportunidades para refatorar;
