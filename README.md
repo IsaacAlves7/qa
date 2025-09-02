@@ -344,7 +344,7 @@ O desenvolvimento, inspeção e o teste de unidade são as três partes do teste
 Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
 
 1. **Frameworks de Teste Unitário**:
-  <img height="77" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
+  <img height="377" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
 
    - **JUnit**: Framework de testes unitários para Java. 
   
