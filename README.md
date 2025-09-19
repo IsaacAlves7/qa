@@ -1183,6 +1183,18 @@ O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem
 
 É um tipo de <a href="">modelagem de software</a> e um <a href="">design de software</a> orientado a objetos (OOP) que procura reforçar conceitos e boas práticas relacionadas à OOP e surgiu como uma resposta às dificuldades enfrentadas por desenvolvedores ao lidarem com sistemas complexos, especialmente em domínios de negócio onde a lógica e os requisitos mudam frequentemente. Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. 
 
+O DDD (Domain-Driven Design) entra no fluxo do desenvolvimento de produto antes do MVP, como um alicerce. Ele não é um artefato de entrega como MVP, UAT ou Release, mas sim uma abordagem de modelagem que orienta como o software deve ser desenhado para refletir o domínio do problema.
+
+Se você pensar em sequência, o fluxo ficaria assim:
+
+1. **DDD – Domain-Driven Design**: Aqui você faz a imersão no domínio de negócio, conversa com especialistas e stakeholders, descobre a linguagem ubíqua e modela o sistema em termos que façam sentido para o negócio. É nessa etapa que surgem conceitos como entidades, agregados, bounded contexts e eventos de domínio. O objetivo é garantir que a estrutura do software nasça aderente à realidade que ele pretende resolver.
+
+2. **MVP – Minimum Viable Product**: Uma vez que o domínio esteja bem modelado, você constrói o MVP. Esse MVP já se beneficia do DDD, porque mesmo sendo mínimo, ele está fundamentado em um design que respeita a linguagem e as regras do negócio. Isso evita que o MVP vire um “protótipo descartável” e aumenta a chance de evoluir para produto de verdade.
+
+3. **QA interno** → **UAT** → **Release** → **Continuous Delivery**: Depois disso, o fluxo segue normalmente como te expliquei antes.
+
+Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é o mapa que garante que esse valor seja o certo**, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
+
 O DDD nos permite planejar uma arquitetura de microsserviços decompondo o sistema maior em unidades independentes, compreendendo as responsabilidades de cada uma e identificando seus relacionamentos, ele não é um design pattern específico, mas sim uma importante abordagem de design de software, com foco na modelagem de software para corresponder a um **domínio** de acordo com as informações dos especialistas desse domínio. O Domain-Driven Design (DDD) surgiu como uma metodologia revolucionária para a modelagem de software, desenvolvida com o intuito de refinar e otimizar a correspondência entre o design do software e o domínio do software e o domínio do problema que ele busca resolver.
 
 > Os microsserviços são a forma mais escalável de desenvolver software. Mas você precisa de um bom design que permita que as equipes de desenvolvedores trabalhem de forma autônoma e implementem sem atrapalhar umas às outras, caso contrário, você perderá os benefícios de escalabilidade. O DDD ajuda a delimitar responsabilidades claras entre os serviços, o que permite que equipes atuem de forma independente e coordenada.
