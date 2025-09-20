@@ -215,7 +215,9 @@ O grande benefício é que, quanto mais cedo um bug é descoberto, menor o impac
 > **Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção**: Para aprofundar seus conhecimentos sobre avaliação de atributos de qualidade, recomendamos a leitura do livro Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção é um livro escrito por Alexandre Kherroubi e Adalberto Cavalcanti. O livro aborda a importância da qualidade de software na redução dos custos de manutenção e explora estratégias práticas para melhorar a qualidade do software, resultando em um impacto positivo nos custos de manutenção ao longo do ciclo de vida do software.
 
 ## [QA] Padrões de Qualidade de Software
-Os padrões de qualidade de software são conjuntos de práticas, regras e diretrizes que visam garantir a qualidade do software produzido. Eles são uma referência para desenvolvedores e equipes de qualidade, ajudando a garantir que o software produzido seja confiável, seguro e atenda aos requisitos do usuário.
+<img height="177" align="right" src="https://github.com/user-attachments/assets/23634a8a-fa08-411f-b723-7115f8b03f9b" />
+
+Os **padrões de qualidade de software** são conjuntos de práticas, regras e diretrizes que visam garantir a qualidade do software produzido. Eles são uma referência para desenvolvedores e equipes de qualidade, ajudando a garantir que o software produzido seja confiável, seguro e atenda aos requisitos do usuário.
 
 Os padrões de qualidade de software podem ser baseados em normas internacionais , como a ISO/IEC 12207 e a ISO/IEC 9126, ou podem ser específicos para uma indústria ou empresa. Eles podem cobrir todos os aspectos do ciclo de vida do software, desde a especificação de requisitos até a manutenção e evolução do software.
 
