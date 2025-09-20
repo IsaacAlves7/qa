@@ -972,6 +972,186 @@ Quando Usar Cada Uma?
 
 Essas ferramentas podem ser combinadas para cobrir todos os aspectos de testes E2E, desde a interação do usuário até a integridade dos dados.
 
+## [QA] UAT - User Acceptance Testing
+<img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
+
+<img src="https://github.com/user-attachments/assets/280f6440-0109-4b54-98b4-f664b2e9af9b" align="right" height="77">
+
+O **User Acceptance Testing (UAT)**, ou Teste de Aceitação do Usuário, é uma etapa final e crucial dentro do ciclo de testes de software. Ele acontece quando o sistema já passou por testes internos como unitários, de integração, funcionais e de sistema e está teoricamente pronto para ser colocado em produção. A ideia do UAT é validar se o software realmente atende às necessidades do usuário final e aos requisitos de negócio. Aqui, o foco não é tanto verificar se o código funciona sem erros técnicos, mas se a solução é útil, intuitiva e cumpre aquilo que foi solicitado e esperado. Por isso, normalmente é realizado pelos próprios usuários, clientes, stakeholders ou representantes do negócio, com o suporte da equipe de QA.
+
+Dentro do ecossistema de QA, o UAT se integra como a camada de validação final que coroa todo o pipeline de testes. Em um fluxo típico, o software passa por testes unitários para verificar pequenos blocos de código isolados, depois vai para testes de integração para garantir que os módulos funcionem em conjunto, segue para testes funcionais e de sistema que avaliam requisitos e comportamento completo, pode ainda passar por testes não funcionais como performance, segurança e usabilidade. Só depois desse ciclo é que entra o UAT, pois não faria sentido colocar o usuário para validar algo que ainda tem falhas básicas de funcionamento ou de estabilidade.
+
+O UAT funciona quase como um “filtro de realidade”: ele conecta a linguagem técnica do QA com a linguagem de negócio do cliente. Muitas vezes, mesmo um sistema tecnicamente correto pode falhar no UAT se não atender ao fluxo real que o usuário precisa seguir no dia a dia. É comum, por exemplo, que durante o UAT se descubra que um processo está tecnicamente certo, mas exige muitos cliques desnecessários, ou não reflete a forma como o trabalho é feito na prática. Assim, ele serve para alinhar expectativas, corrigir ajustes de usabilidade e garantir que, no momento do go-live, o software não só funcione, mas também seja aceito pelo público a que se destina.
+
+Em termos de QA, você pode pensar no UAT como o elo entre testes de qualidade técnica e testes de valor de negócio. Ele não substitui os outros, mas se apoia neles: se os testes anteriores garantem que o software é confiável, o UAT garante que ele é útil e aprovado pelo cliente.
+
+Muita gente acaba confundindo os papéis de **UAT, MVP, Release e Continuous Delivery**, porque todos estão ligados à entrega e validação do software, mas cada um tem uma posição e função distintas dentro do ciclo de desenvolvimento. Para não misturar os conceitos, vale enxergar como uma sequência natural, onde cada etapa se apoia na anterior.
+
+O ciclo começa antes mesmo do UAT, com a concepção do **MVP (Minimum Viable Product)**. Aqui o objetivo é construir a versão mínima do produto que já entrega valor real para o usuário, mesmo que com funcionalidades limitadas. Esse MVP é fruto de testes técnicos e de negócio, mas ainda não é a versão que vai para produção de forma plena — ele serve como uma forma de validar hipóteses, ganhar feedback rápido e evitar investimentos pesados em algo que o usuário não queira.
+
+Uma vez que o MVP esteja pronto em termos técnicos, entra o *UAT (User Acceptance Testing)*. É nessa fase que o usuário final, ou representantes de negócio, testam se o que foi construído atende de fato às suas necessidades. É o momento de validar se o software não só funciona, mas se está *apto a ser aceito*. Esse ponto é delicado: não se deve liberar uma Release ou acionar um pipeline de Continuous Delivery antes de o UAT aprovar. O UAT funciona como um “checkpoint” de aceitação.
+
+Com o UAT aprovado, abre-se espaço para a **Release**, que é a entrega oficial de uma versão do software. A Release pode ser do próprio MVP (caso aprovado), ou de incrementos posteriores. Aqui o software deixa o ambiente de homologação/teste e vai para produção. É importante diferenciar: Release não é sinônimo de deploy. O deploy pode ser frequente (parte do CD), mas a Release é uma decisão de negócio, de colocar uma versão nas mãos do cliente com um pacote de funcionalidades definido.
+
+O **Continuous Delivery (CD)** é a engrenagem que sustenta tudo isso. Ele garante que o software esteja sempre em condição de ser liberado: builds automatizados, testes automatizados, pipelines de integração e entrega prontos. O CD assegura que qualquer mudança de código possa ser validada e empacotada rapidamente para uma possível Release, mas não substitui a decisão de liberar, que continua dependendo de critérios como UAT e estratégia de produto.
+
+O passo a passo adequado, sem bagunça, pode ser entendido assim: primeiro você constrói o MVP para validar hipóteses → depois submete esse MVP (ou incrementos subsequentes) ao UAT para validação de negócio → com o UAT aprovado, gera uma Release oficial que pode ser entregue aos usuários finais → e todo esse processo é sustentado pelo Continuous Delivery, que dá agilidade e confiabilidade ao ciclo.
+
+Ou seja, MVP é o “o quê” inicial, UAT é o “pode ser aceito?”, Release é o “vai para produção”, e Continuous Delivery é o “como fazer isso de forma contínua e confiável”.
+
+## [QA] DDD - Domain-Driven Design
+<img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
+
+<a href=""><img src="https://em-content.zobj.net/source/microsoft-teams/363/ferris-wheel_1f3a1.png" align="right" height="77"></a>
+
+O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem de desenvolvimento de software que se concentra em entender o **domínio do negócio** e modelar o software em torno desses conceitos e regras de negócio. 
+
+É um tipo de <a href="">modelagem de software</a> e um <a href="">design de software</a> orientado a objetos (OOP) que procura reforçar conceitos e boas práticas relacionadas à OOP e surgiu como uma resposta às dificuldades enfrentadas por desenvolvedores ao lidarem com sistemas complexos, especialmente em domínios de negócio onde a lógica e os requisitos mudam frequentemente. Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. 
+
+O DDD (Domain-Driven Design) entra no fluxo do desenvolvimento de produto antes do MVP, como um alicerce. Ele não é um artefato de entrega como MVP, UAT ou Release, mas sim uma abordagem de modelagem que orienta como o software deve ser desenhado para refletir o domínio do problema.
+
+Se você pensar em sequência, o fluxo ficaria assim:
+
+1. **DDD – Domain-Driven Design**: Aqui você faz a imersão no domínio de negócio, conversa com especialistas e stakeholders, descobre a linguagem ubíqua e modela o sistema em termos que façam sentido para o negócio. É nessa etapa que surgem conceitos como entidades, agregados, bounded contexts e eventos de domínio. O objetivo é garantir que a estrutura do software nasça aderente à realidade que ele pretende resolver.
+
+2. **MVP – Minimum Viable Product**: Uma vez que o domínio esteja bem modelado, você constrói o MVP. Esse MVP já se beneficia do DDD, porque mesmo sendo mínimo, ele está fundamentado em um design que respeita a linguagem e as regras do negócio. Isso evita que o MVP vire um “protótipo descartável” e aumenta a chance de evoluir para produto de verdade.
+
+3. **QA interno** → **UAT** → **Release** → **Continuous Delivery**: Depois disso, o fluxo segue normalmente como te expliquei antes.
+
+Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é o mapa que garante que esse valor seja o certo**, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
+
+O DDD nos permite planejar uma arquitetura de microsserviços decompondo o sistema maior em unidades independentes, compreendendo as responsabilidades de cada uma e identificando seus relacionamentos, ele não é um design pattern específico, mas sim uma importante abordagem de design de software, com foco na modelagem de software para corresponder a um **domínio** de acordo com as informações dos especialistas desse domínio. O Domain-Driven Design (DDD) surgiu como uma metodologia revolucionária para a modelagem de software, desenvolvida com o intuito de refinar e otimizar a correspondência entre o design do software e o domínio do software e o domínio do problema que ele busca resolver.
+
+> Os microsserviços são a forma mais escalável de desenvolver software. Mas você precisa de um bom design que permita que as equipes de desenvolvedores trabalhem de forma autônoma e implementem sem atrapalhar umas às outras, caso contrário, você perderá os benefícios de escalabilidade. O DDD ajuda a delimitar responsabilidades claras entre os serviços, o que permite que equipes atuem de forma independente e coordenada.
+
+<a href=""><img src="https://github.com/user-attachments/assets/47723806-ab10-490c-844f-6c5e8980e08f" align="right" height="177"></a>
+
+> [!Important]
+> Foi popularizado por Eric Evans em seu livro **Domain-Driven Design: Tackling Complexity in the Heart of Software**, publicado em 2003. Esse livro não é leve, especialmente se você ainda está no início da jornada. Ele exige uma certa base em desenvolvimento orientado a objetos (OOP), arquitetura de software e experiência prática com projetos reais. Geralmente, ele é mais proveitoso depois que você já trabalhou em sistemas mais complexos ou com arquitetura em camadas.
+
+O DDD acaba aparecendo muito em code reviews (revisões de código) porque ele não é só um conjunto de padrões técnicos, mas uma maneira de organizar o raciocínio e o design do sistema a partir do domínio de negócio. Diferente de TDD e BDD, que são mais voltados ao como testar e como validar comportamento, o DDD toca no como estruturar o código para refletir a realidade do problema que a aplicação resolve.
+
+Num code review, o time não está apenas olhando se o código “funciona”, mas se ele está legível, sustentável e alinhado ao domínio. É aí que DDD se torna um guia. Por exemplo, quando você define entidades e value objects, o revisor consegue avaliar se você está representando o domínio corretamente ou se misturou regras de negócio com detalhes de infraestrutura. Se você trabalha com bounded contexts, o code review ajuda a garantir que cada módulo está respeitando suas fronteiras e não está acoplando responsabilidades que deveriam estar separadas. E quando se usa a linguagem ubíqua, qualquer pessoa envolvida no projeto pode bater o olho no código e identificar termos familiares do negócio, reduzindo ambiguidades.
+
+Isso muda o tom da revisão: em vez de ser só “esse método está mal nomeado” ou “esse if pode virar um switch”, passa a ser “essa entidade realmente pertence a este contexto?” ou “essa regra deveria estar no domínio ou no serviço de aplicação?”. São discussões de mais alto nível, que evitam dívida técnica e fortalecem a coerência do sistema. Por isso, times que adotam DDD costumam ter code reviews mais ricos, que não param na forma, mas questionam se a essência do código está fiel ao problema que ele resolve.
+
+Sem levar em conta o DDD, as **técnicas de modelagem de domínio** são métodos utilizados na engenharia de software para compreender e representar o domínio de um problema específico. O domínio refere-se à área de conhecimento, contexto ou setor de negócios em que o software está sendo desenvolvido. A modelagem de domínio tem como objetivo capturar os conceitos, regras e relacionamentos do domínio em um formato compreensível e utilizável pelos desenvolvedores. Então, o DDD (Domain-Driven Design) é uma abordagem para o desenvolvimento de software que combina conceitos de design de software e técnicas de modelagem de domínio. Não é considerado um design pattern específico, mas sim uma abordagem geral para projetar e estruturar sistemas de software. Domain-Driven Design (DDD) é um método de design de software em que os desenvolvedores constroem modelos para entender os requisitos de negócios de um domínio. Esses modelos servem como base conceitual para o desenvolvimento de software.
+
+No entanto, suas raízes vêm de práticas e ideias que estavam sendo discutidas na indústria desde os anos 1990. Durante esse período, muitas empresas estavam adotando metodologias ágeis e enfrentando problemas ao construir sistemas que não apenas funcionassem, mas que também fossem fáceis de entender, modificar e expandir. Um dos grandes desafios era a chamada "lacuna semântica" entre os especialistas de domínio (pessoas que entendem o negócio) e os desenvolvedores (que implementam soluções técnicas). Essa lacuna frequentemente levava a softwares que funcionavam de forma errada ou que eram difíceis de adaptar a mudanças nos requisitos.
+
+A ideia inicial do DDD é voltar à uma modelagem OO mais pura, por assim dizer. Devemos esquecer de como os dados são persistidos e nos preocupar em como representar melhor as necessidades de negócio em classes e comportamentos (métodos). Isso significa que em DDD um `Cliente` pode não ter um *setter* para os seus atributos comuns, mas pode ter métodos com lógica de negócio que neste domínio de negócio pertencem ao `cliente`, como `void associarNovoCartao(Cartao)` ou `Conta recuperarInformacoesConta()`. Em resumo, as classes modeladas e os seus métodos deveriam representar o negócio da empresa, usando inclusive a mesma nomenclatura. A persistência dos dados é colocada em segundo plano, sendo apenas uma camada complementar.
+
+O DDD nasceu da necessidade de aproximar esses dois mundos. Eric Evans observou que o software bem-sucedido em contextos complexos era construído em torno de um **modelo de domínio** que capturava com precisão o conhecimento do negócio. Ele também percebeu que os sistemas mais sustentáveis utilizavam linguagens comuns entre especialistas e desenvolvedores, além de técnicas para isolar a complexidade e tornar o código mais alinhado com as regras do domínio.
+
+Com a evolução do desenvolvimento de softwares e no aumento da complexidade dos requisitos da aplicação, é extremamente relevante definirmos uma comunicação clara entre as várias partes envolvidas em um projeto de software. É bastante comum haver conflitos entre os termos técnicos utilizados pelas diferentes áreas, seja entre analistas de negócios, desenvolvedores, especialistas financeiros ou de vendas. Nada mais natural haja visto que as equipes estão cada vez mais multidisciplinares. Para auxiliar em uma comunicação fluida, os conceitos do DDD — Domain Driven Design, propõem como um dos seus pilares a definição de uma _Linguagem Ubíqua_.
+
+<a href=""><img src="https://github.com/user-attachments/assets/4873d674-b778-448b-a311-26f9307e624f"></a>
+
+O DDD formalizou essas práticas ao introduzir conceitos como **Ubiquitous Language** (Linguagem Ubíqua), o cerne do DDD, que promove a criação de uma linguagem compartilhada entre todas as partes interessadas, e **Bounded Contexts** (Contextos Limitados), que ajudam a dividir sistemas grandes e complexos em partes menores e mais compreensíveis. Além disso, o DDD trouxe atenção para padrões arquiteturais que dão suporte ao domínio, como **Entidades** (Entity), **Agregados** (), **Repositórios** () e **Serviços de Domínio** (), estabelecendo um design centrado na lógica de negócios em vez de nas tecnologias subjacentes.
+
+Para que possamos iniciar uma compreensão acerca de Linguagem Ubíqua (Ubiquitous Language), podemos nos valer da análise semântica do termo ubíquo: `u-bí-quo` (latim _ubiquus_, -a, -um), adjetivo:
+
+- Que está ao mesmo tempo em toda a parte. = `ONIPRESENTE`
+- Que tem dom da ubiquidade. = `ONIPRESENTE`
+- Que está difundido em todo o lado. = `GERAL, UNIVERSAL`.
+
+De forma conceitual, a linguagem ubíqua é o conjunto de termos e inter-relações que fornecem a semântica da comunicação do domínio, que reflete a visão do negócio. E de forma prática, ao se trabalhar com DDD, entende-se como comunicação de mesma linguagem, em um único modelo, de forma que todos os envolvidos no projeto tenham a mesma compreensão acerca dos termos utilizados. Linguagem ubíqua pode parecer um termo complexo de se compreender, mas outro termo também utilizado para identificar este tipo de comunicação, nos auxilia em uma melhor compreensão: _Linguagem Onipresente_.
+
+**Linguagem Onipresente** é essencialmente os termos, palavras e definições utilizadas por todo o domínio do projeto. É o idioma utilizado no cotidiano da empresa, as terminologias da realidade do negócio. Quando um projeto não respeita a **linguagem do domínio** diversos problemas de comunicação surgem, dificultando o desenvolvimento, implantação e sustentação da solução.
+
+Quando termos utilizados no projeto vão sendo traduzidos, de acordo com o uso em cada departamento, a comunicação se torna anêmica e a assimilação do conhecimento disperso. Em seu livro Domain Driven Design — Atacando as Complexidades no Coração do Software, Eric Evans descreve de maneira clara esta problemática:
+
+> O custo de toda a tradução, além do risco de entendimento errado, é simplesmente muito alto. Um projeto precisa de uma linguagem em comum que seja mais robusta que o mínimo denominador comum.
+
+<a href=""><img src="https://github.com/user-attachments/assets/5ac09617-ba80-4f3f-955a-62bd9dfe77ee" align="right" height="77"></a>
+
+A Linguagem Onipresente (ubiquitous language) não está limitada a diagramas em <a href="">UML (Unified Modeling Languages, ou Linguagem de Modelagem Unificada)</a>, mas principalmente, define em seu vocabulário nome das classes e operações de destaque. Inclui regras para implantar um dicionário uniforme e explícito para o modelo, para que o mesmo possa ser utilizado com o máximo de eficiência possível.
+
+O **Diagram as code** (Diagrama como código) é uma abordagem de criação de diagramas que utiliza código, em vez de ferramentas gráficas, para desenhar e manter diagramas. Essa abordagem permite que os diagramas sejam criados e atualizados utilizando linguagens de programação ou marcadores, em vez de ferramentas de desenho gráfico. A prática de "Diagram as code" (Diagrama como código) pode auxiliar no Domain-Driven Design (DDD), pois é uma prática útil no DDD que ajuda a manter a documentação atualizada, facilita a colaboração, fornece controle de versão e permite a geração automática de diagramas. Vantagens do "Diagram as code" no DDD:
+
+1. **Melhor documentação**: Com o "Diagram as code", você pode manter a documentação do seu modelo de domínio atualizada e sincronizada com o código. Isso ajuda a garantir que a documentação seja precisa e refletida nas mudanças no código.
+2. **Modelagem colaborativa**: O "Diagram as code" permite que os membros da equipe colaborativamente trabalhem no modelo de domínio, tornando mais fácil para os desenvolvedores, especialistas em domínio e outros stakeholders discutirem e refinarem o modelo.
+3. **Versão e controle**: Com o "Diagram as code", você pode usar sistemas de controle de versão (como Git) para rastrear as alterações no modelo de domínio. Isso ajuda a garantir que todas as alterações sejam documentadas e possam ser revertidas se necessário.
+4. **Geração automática de diagramas**: Muitas ferramentas de "Diagram as code" permitem que você gere diagramas automaticamente a partir do código. Isso pode economizar tempo e reduzir a chance de erros manuais.
+5. **Integração com o ciclo de desenvolvimento**: O "Diagram as code" pode ser integrado ao ciclo de desenvolvimento de software, permitindo que os desenvolvedores trabalhem no modelo de domínio em paralelo com o desenvolvimento do código.
+
+As ferramentas permitem que você crie diagramas como código, utilizando sintaxes específicas para desenhar os diagramas. Em seguida, elas geram imagens ou diagramas a partir do código. Algumas ferramentas populares para "Diagram as code" incluem:
+
+<a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa700003"><img src="https://github.com/user-attachments/assets/cd3deff0-176a-4d9b-8735-0a1b2b1d2a33" align="right" height="77"></a>
+
+- Mermaid
+- **PlantUML**
+- Graphviz
+- C4 (abordagem de modelagem de software)
+
+Normalmente os especialistas de um domínio, diretores, administradores, analistas, técnicos, possuem pouca familiaridade com o jargão técnico utilizado no desenvolvimento de software, mas utilizam os jargões próprios de sua área de atuação. A partir desta realidade, os especialistas de um domínio descrevem superficialmente o que necessitam, fazendo com que desenvolvedores criem abstrações que sustentem o design da aplicação. Com isso, uma compreensão uniforme vai se deteriorando exponencialmente.
+
+<a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa700003"><img src="https://github.com/user-attachments/assets/d51f18a5-193c-49ef-8a83-83f42f1924f5" align="right" height="277"></a>
+
+Como solução a esta dispersão na comunicação, devemos usar a linguagem baseada no modelo de forma exaustiva até que a comunicação seja fluida e compreensível entre os diversos setores envolvidos no projeto. Para que possamos alcançar esta fluência, os especialistas do domínio devem vetar termos ou estruturas que não transmitam uma compreensão clara acerca das funcionalidades envolvidas; os desenvolvedores devem se empenhar no cuidado com ambiguidades ou inconsistências que possam corromper o modelo proposto. Ou seja, é um esforço conjunto entre todos os envolvidos, mas, é essencialmente necessário que ocorra.
+
+Como identificar os especialistas de domínio? Especialistas de domínio são os profissionais envolvidos no dia a dia da operação, nos mais diferentes setores, ou seja, são os “conhecedores” do negócio (stakeholders). Normalmente estes especialistas são analistas, técnicos, engenheiros, podendo ser todo aquele que possui a compreensão acerca do fluxo de operação da empresa. Os especialistas de domínio detém o conhecimento sobre as necessidades e requisitos necessários para o processamento das atividades organizacionais.
+
+<img src="https://github.com/user-attachments/assets/3e5b0f4e-5517-4b6d-a8a8-cd650c6f577d" align="right" height="277">
+
+Em essência, o DDD surgiu para enfrentar a complexidade inerente ao desenvolvimento de software em domínios desafiadores, permitindo que os sistemas sejam projetados de forma que o código seja uma expressão direta das regras e processos do negócio. Com o tempo, o DDD ganhou popularidade e passou a ser usado em diversos contextos, especialmente em sistemas corporativos onde o domínio de negócio é complexo e sujeito a constantes mudanças.
+
+Para o sucesso de um projeto de software, o DDD sugere que tanto especialistas de domínio quanto desenvolvedores devem falar a mesma língua.
+
+A figura acima, ilustra a existência de termos que só os especialistas de domínio conhecem e apresentam expressões somente de caráter tecnológico, os quais são de uso apenas do time de desenvolvimento. Contudo, é necessário que exista um conjunto de termos que devem ser de conhecimento universal, no que se refere ao domínio da aplicação, formando a Linguagem Ubíqua do sistema. A definição de uma linguagem onipresente objetiva principalmente dois propósitos:
+
+- Possibilitar uma comunicação fluida entre os membros de equipes multidisciplinares; Nomear elementos do código da aplicação, como classes, métodos, variáveis, funções, módulos, tabelas de bancos de dados, rotas de APIs, etc.
+
+- Ademais a padronização na comunicação propõe elucidar o significado dos termos, de um forma simples, objetiva e compreensível para facilitar os relacionamentos e associações entre todos módulos necessários.
+
+Qualquer pessoa técnica contribuindo para o modelo deve programar, pelo menos tocar no código, independente do papel desempenhado no projeto. Um responsável por mudar o código deve sempre aprender a expressar o modelo através do código. Todo desenvolvedor deve estar envolvido na discussão sobre o modelo e ter contato com os especialistas do domínio. (EVANS, 2016).
+
+Em seu livro Implementando Domain Driven Design, Vaughn Vernon, pontua que um especialista de domínio tem uma forte influência sobre a linguagem utilizada, devido ao maior conhecimento acerca do negócio, que no final é o contexto imperativo de todo projeto. Estes especialistas tendem a ser influenciados pelos padrões da indústria, contudo, uma linguagem universal deve ser centrada em como o próprio negócio pensa e opera. Ou seja, cada empresa possui seu próprio domínio acerca da execução de seus processos.
+
+Não entenda Linguagem Ubíqua como um conjunto de jargões de negócios sendo impostos ao time de desenvolvimento, e nem mesmo uma sobreposição de termos técnicos sobre o contexto de negócio, mas sim, uma linguagem real que é criada por toda a equipe e que é propagada por toda a corporação.
+
+Compreende-se que haverá discordâncias em relação aos termos utilizados e que estão na mente dos especialistas, mas, a partir do uso aberto da linguagem, a evolução é natural e consolidada por este processo de maturação da comunicação.
+
+O DDD enfatiza a compreensão profunda do domínio do problema e o uso de uma linguagem ubíqua compartilhada entre as equipes de desenvolvimento e especialistas do domínio. Ele propõe a organização do código em torno do domínio do problema, separando-o dos detalhes técnicos e infraestrutura. 
+
+Embora o DDD não seja um design pattern em si, ele pode ser combinado com vários design patterns e princípios de design, como Agregado, Repositório, Especificação, Event Sourcing, entre outros. O DDD fornece diretrizes e conceitos para ajudar na criação de uma arquitetura de software robusta e flexível.
+
+Portanto, podemos dizer que o DDD é uma abordagem de design e uma metodologia de modelagem que pode ser aplicada em diferentes arquiteturas de software, como arquitetura em camadas, arquitetura hexagonal, arquitetura de microsserviços, entre outras. Ele fornece princípios e práticas para projetar e estruturar o código em torno do domínio do problema, visando um modelo de domínio rico, desacoplamento e flexibilidade.
+
+É uma abordagem mais ampla para o design de software que abrange vários conceitos e técnicas. DDD enfatiza a modelagem do domínio, a colaboração entre especialistas do domínio e desenvolvedores, e a criação de um código baseado em um entendimento profundo do domínio do problema.
+
+No contexto do DDD, existem design patterns específicos que são frequentemente utilizados para ajudar a implementar os conceitos e princípios do DDD. Alguns desses padrões incluem:
+
+<a href=""><img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/0ade6281-cdca-47d3-8b95-57e81b61d04a" align="right" height="377"></a>
+
+1. <a href="">Agregado</a>: Se refere a um padrão de design que agrupa um conjunto de objetos relacionados em uma única unidade coesa. O Agregado é uma das principais construções utilizadas para modelar e organizar o domínio em DDD;
+
+2. <a href="">Repositório</a>: Fornece uma interface para acessar coleções de objetos agregados, permitindo que o domínio permaneça livre de preocupações com persistência. Ele atua como uma camada intermediária entre o domínio e a fonte de dados (como bancos de dados).
+
+3. <a href="">Serviço de Domínio</a>: Representa operações ou ações do domínio que não pertencem naturalmente a uma única entidade ou value object. Encapsula lógica de negócio que depende de múltiplos objetos.
+
+4. <a href="">Value Object</a>: Objetos que não possuem identidade própria e são definidos apenas por seus atributos. São imutáveis e usados para representar conceitos como dinheiro, coordenadas ou medidas.
+
+5. <a href="">Entidade</a>: Objetos do domínio que possuem identidade própria (geralmente um ID) e um ciclo de vida distinto. Diferente de value objects, entidades podem mudar seus atributos ao longo do tempo.
+
+6. <a href="">Factory</a>: Padrão responsável por encapsular a lógica de criação complexa de objetos, especialmente agregados. Evita a poluição do construtor com lógica de montagem de objetos.
+
+7. <a href="">Especificação</a>: Define regras de negócio reutilizáveis e combináveis para verificar se um objeto atende a determinados critérios. É útil para separação de responsabilidades e clareza das regras de domínio.
+
+8. <a href="">Event Sourcing</a>: Técnica onde o estado do sistema é determinado por uma sequência de eventos (ao invés de snapshots de dados). Permite reconstruir o estado do sistema e ter um histórico detalhado das mudanças.
+
+9. <a href="">Injeção de Dependência (DI - Dependency Injection)</a>: Técnica que permite desacoplar componentes do sistema, facilitando testes, manutenção e extensibilidade. No DDD, é comum para injetar repositórios, serviços de domínio e unidades de trabalho nos agregados e serviços de aplicação.
+
+Esses padrões, juntamente com outros conceitos e técnicas, podem ser aplicados para construir uma arquitetura que segue os princípios do DDD. O DDD, portanto, não é um design pattern em si, mas uma abordagem que pode ser implementada usando diversos padrões de design específicos.
+
+Quando não usar DDD? Às vezes só é necessário um CRUD! DDD não é uma solução para tudo. A maioria dos sistemas possui uma boa parte composta por cadastros básicos (CRUD) e não seria adequado usar DDD para isso.
+
+O DDD deve ajudar na modelagem das classes mais importantes e mais centrais do sistema de forma e diminuir a complexidade e ajudar na manutenção das mesmas, afinal este é o objetivo dos princípios de orientação a objetos.
+
+Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outros sistemas, as rotinas de integração que recebem ou disponibilizam dados para outros sistemas não devem ser "inteligentes". Muitos desenvolvedores acabam modelando suas classes de negócios tentando resolver as questões internas do sistema e, ao mesmo tempo, pensando em como essas classes serão expostas para outros sistemas. Padrões como DTO (Data Transfer Object) que usam objetos "burros" são mais adequados para isso.
+
+Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um sistema. Seu foco é na modelagem das entidades principais de negócio usando a linguagem adequada daquele domínio para facilitar a manutenção, extensão e entendimento. Particularmente, eu não seguiria à risca o padrão, até porque existem inúmeros padrões e variações de modelagem OO. Estude os princípios por detrás desses padrões, pois eles são geralmente parecidos e veja o que funciona melhor para cada projeto.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
@@ -1173,183 +1353,3 @@ O propósito é reduzir ambiguidades que frequentemente aparecem em métodos tra
 Dessa forma, o SDD busca criar um fluxo em que a especificação é a fonte da verdade. Em muitas implementações dessa prática, as especificações podem ser escritas em formatos que permitam serem executadas ou verificadas, como contratos formais, modelos lógicos ou até arquivos que depois geram código de suporte, documentação ou casos de teste. Isso cria uma forte ligação entre o que o cliente espera, o que o time desenvolve e o que é testado. Diferente do TDD (Test-Driven Development), que coloca os testes como guia para a implementação, ou do BDD (Behavior-Driven Development), que enfatiza a escrita de cenários de comportamento em linguagem quase natural, o SDD é mais rígido e sistemático, focando na **especificação técnica ou formal** como ponto de convergência, de forma que a implementação não seja “interpretada” pelos desenvolvedores, mas derivada da especificação.
 
 Essa abordagem é especialmente útil em domínios onde erros de interpretação podem ser críticos, como sistemas financeiros, governamentais, industriais e médicos, porque minimiza a distância entre o que foi pedido e o que é entregue. Além disso, o SDD facilita auditorias, compliance e rastreabilidade, já que a especificação pode ser usada tanto como documento de contrato entre as partes quanto como mecanismo técnico para validar que o software está aderente às regras. Por outro lado, aplicar SDD de forma efetiva exige disciplina, ferramentas adequadas e equipes acostumadas a lidar com formalismo maior do que em metodologias mais flexíveis, o que pode ser uma barreira em times ágeis que preferem rapidez de iteração.
-
-## [QA] DDD - Domain-Driven Design
-<img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
-
-<a href=""><img src="https://em-content.zobj.net/source/microsoft-teams/363/ferris-wheel_1f3a1.png" align="right" height="77"></a>
-
-O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem de desenvolvimento de software que se concentra em entender o **domínio do negócio** e modelar o software em torno desses conceitos e regras de negócio. 
-
-É um tipo de <a href="">modelagem de software</a> e um <a href="">design de software</a> orientado a objetos (OOP) que procura reforçar conceitos e boas práticas relacionadas à OOP e surgiu como uma resposta às dificuldades enfrentadas por desenvolvedores ao lidarem com sistemas complexos, especialmente em domínios de negócio onde a lógica e os requisitos mudam frequentemente. Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. 
-
-O DDD (Domain-Driven Design) entra no fluxo do desenvolvimento de produto antes do MVP, como um alicerce. Ele não é um artefato de entrega como MVP, UAT ou Release, mas sim uma abordagem de modelagem que orienta como o software deve ser desenhado para refletir o domínio do problema.
-
-Se você pensar em sequência, o fluxo ficaria assim:
-
-1. **DDD – Domain-Driven Design**: Aqui você faz a imersão no domínio de negócio, conversa com especialistas e stakeholders, descobre a linguagem ubíqua e modela o sistema em termos que façam sentido para o negócio. É nessa etapa que surgem conceitos como entidades, agregados, bounded contexts e eventos de domínio. O objetivo é garantir que a estrutura do software nasça aderente à realidade que ele pretende resolver.
-
-2. **MVP – Minimum Viable Product**: Uma vez que o domínio esteja bem modelado, você constrói o MVP. Esse MVP já se beneficia do DDD, porque mesmo sendo mínimo, ele está fundamentado em um design que respeita a linguagem e as regras do negócio. Isso evita que o MVP vire um “protótipo descartável” e aumenta a chance de evoluir para produto de verdade.
-
-3. **QA interno** → **UAT** → **Release** → **Continuous Delivery**: Depois disso, o fluxo segue normalmente como te expliquei antes.
-
-Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é o mapa que garante que esse valor seja o certo**, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
-
-O DDD nos permite planejar uma arquitetura de microsserviços decompondo o sistema maior em unidades independentes, compreendendo as responsabilidades de cada uma e identificando seus relacionamentos, ele não é um design pattern específico, mas sim uma importante abordagem de design de software, com foco na modelagem de software para corresponder a um **domínio** de acordo com as informações dos especialistas desse domínio. O Domain-Driven Design (DDD) surgiu como uma metodologia revolucionária para a modelagem de software, desenvolvida com o intuito de refinar e otimizar a correspondência entre o design do software e o domínio do software e o domínio do problema que ele busca resolver.
-
-> Os microsserviços são a forma mais escalável de desenvolver software. Mas você precisa de um bom design que permita que as equipes de desenvolvedores trabalhem de forma autônoma e implementem sem atrapalhar umas às outras, caso contrário, você perderá os benefícios de escalabilidade. O DDD ajuda a delimitar responsabilidades claras entre os serviços, o que permite que equipes atuem de forma independente e coordenada.
-
-<a href=""><img src="https://github.com/user-attachments/assets/47723806-ab10-490c-844f-6c5e8980e08f" align="right" height="177"></a>
-
-> [!Important]
-> Foi popularizado por Eric Evans em seu livro **Domain-Driven Design: Tackling Complexity in the Heart of Software**, publicado em 2003. Esse livro não é leve, especialmente se você ainda está no início da jornada. Ele exige uma certa base em desenvolvimento orientado a objetos (OOP), arquitetura de software e experiência prática com projetos reais. Geralmente, ele é mais proveitoso depois que você já trabalhou em sistemas mais complexos ou com arquitetura em camadas.
-
-O DDD acaba aparecendo muito em code reviews (revisões de código) porque ele não é só um conjunto de padrões técnicos, mas uma maneira de organizar o raciocínio e o design do sistema a partir do domínio de negócio. Diferente de TDD e BDD, que são mais voltados ao como testar e como validar comportamento, o DDD toca no como estruturar o código para refletir a realidade do problema que a aplicação resolve.
-
-Num code review, o time não está apenas olhando se o código “funciona”, mas se ele está legível, sustentável e alinhado ao domínio. É aí que DDD se torna um guia. Por exemplo, quando você define entidades e value objects, o revisor consegue avaliar se você está representando o domínio corretamente ou se misturou regras de negócio com detalhes de infraestrutura. Se você trabalha com bounded contexts, o code review ajuda a garantir que cada módulo está respeitando suas fronteiras e não está acoplando responsabilidades que deveriam estar separadas. E quando se usa a linguagem ubíqua, qualquer pessoa envolvida no projeto pode bater o olho no código e identificar termos familiares do negócio, reduzindo ambiguidades.
-
-Isso muda o tom da revisão: em vez de ser só “esse método está mal nomeado” ou “esse if pode virar um switch”, passa a ser “essa entidade realmente pertence a este contexto?” ou “essa regra deveria estar no domínio ou no serviço de aplicação?”. São discussões de mais alto nível, que evitam dívida técnica e fortalecem a coerência do sistema. Por isso, times que adotam DDD costumam ter code reviews mais ricos, que não param na forma, mas questionam se a essência do código está fiel ao problema que ele resolve.
-
-Sem levar em conta o DDD, as **técnicas de modelagem de domínio** são métodos utilizados na engenharia de software para compreender e representar o domínio de um problema específico. O domínio refere-se à área de conhecimento, contexto ou setor de negócios em que o software está sendo desenvolvido. A modelagem de domínio tem como objetivo capturar os conceitos, regras e relacionamentos do domínio em um formato compreensível e utilizável pelos desenvolvedores. Então, o DDD (Domain-Driven Design) é uma abordagem para o desenvolvimento de software que combina conceitos de design de software e técnicas de modelagem de domínio. Não é considerado um design pattern específico, mas sim uma abordagem geral para projetar e estruturar sistemas de software. Domain-Driven Design (DDD) é um método de design de software em que os desenvolvedores constroem modelos para entender os requisitos de negócios de um domínio. Esses modelos servem como base conceitual para o desenvolvimento de software.
-
-No entanto, suas raízes vêm de práticas e ideias que estavam sendo discutidas na indústria desde os anos 1990. Durante esse período, muitas empresas estavam adotando metodologias ágeis e enfrentando problemas ao construir sistemas que não apenas funcionassem, mas que também fossem fáceis de entender, modificar e expandir. Um dos grandes desafios era a chamada "lacuna semântica" entre os especialistas de domínio (pessoas que entendem o negócio) e os desenvolvedores (que implementam soluções técnicas). Essa lacuna frequentemente levava a softwares que funcionavam de forma errada ou que eram difíceis de adaptar a mudanças nos requisitos.
-
-A ideia inicial do DDD é voltar à uma modelagem OO mais pura, por assim dizer. Devemos esquecer de como os dados são persistidos e nos preocupar em como representar melhor as necessidades de negócio em classes e comportamentos (métodos). Isso significa que em DDD um `Cliente` pode não ter um *setter* para os seus atributos comuns, mas pode ter métodos com lógica de negócio que neste domínio de negócio pertencem ao `cliente`, como `void associarNovoCartao(Cartao)` ou `Conta recuperarInformacoesConta()`. Em resumo, as classes modeladas e os seus métodos deveriam representar o negócio da empresa, usando inclusive a mesma nomenclatura. A persistência dos dados é colocada em segundo plano, sendo apenas uma camada complementar.
-
-O DDD nasceu da necessidade de aproximar esses dois mundos. Eric Evans observou que o software bem-sucedido em contextos complexos era construído em torno de um **modelo de domínio** que capturava com precisão o conhecimento do negócio. Ele também percebeu que os sistemas mais sustentáveis utilizavam linguagens comuns entre especialistas e desenvolvedores, além de técnicas para isolar a complexidade e tornar o código mais alinhado com as regras do domínio.
-
-Com a evolução do desenvolvimento de softwares e no aumento da complexidade dos requisitos da aplicação, é extremamente relevante definirmos uma comunicação clara entre as várias partes envolvidas em um projeto de software. É bastante comum haver conflitos entre os termos técnicos utilizados pelas diferentes áreas, seja entre analistas de negócios, desenvolvedores, especialistas financeiros ou de vendas. Nada mais natural haja visto que as equipes estão cada vez mais multidisciplinares. Para auxiliar em uma comunicação fluida, os conceitos do DDD — Domain Driven Design, propõem como um dos seus pilares a definição de uma _Linguagem Ubíqua_.
-
-<a href=""><img src="https://github.com/user-attachments/assets/4873d674-b778-448b-a311-26f9307e624f"></a>
-
-O DDD formalizou essas práticas ao introduzir conceitos como **Ubiquitous Language** (Linguagem Ubíqua), o cerne do DDD, que promove a criação de uma linguagem compartilhada entre todas as partes interessadas, e **Bounded Contexts** (Contextos Limitados), que ajudam a dividir sistemas grandes e complexos em partes menores e mais compreensíveis. Além disso, o DDD trouxe atenção para padrões arquiteturais que dão suporte ao domínio, como **Entidades** (Entity), **Agregados** (), **Repositórios** () e **Serviços de Domínio** (), estabelecendo um design centrado na lógica de negócios em vez de nas tecnologias subjacentes.
-
-Para que possamos iniciar uma compreensão acerca de Linguagem Ubíqua (Ubiquitous Language), podemos nos valer da análise semântica do termo ubíquo: `u-bí-quo` (latim _ubiquus_, -a, -um), adjetivo:
-
-- Que está ao mesmo tempo em toda a parte. = `ONIPRESENTE`
-- Que tem dom da ubiquidade. = `ONIPRESENTE`
-- Que está difundido em todo o lado. = `GERAL, UNIVERSAL`.
-
-De forma conceitual, a linguagem ubíqua é o conjunto de termos e inter-relações que fornecem a semântica da comunicação do domínio, que reflete a visão do negócio. E de forma prática, ao se trabalhar com DDD, entende-se como comunicação de mesma linguagem, em um único modelo, de forma que todos os envolvidos no projeto tenham a mesma compreensão acerca dos termos utilizados. Linguagem ubíqua pode parecer um termo complexo de se compreender, mas outro termo também utilizado para identificar este tipo de comunicação, nos auxilia em uma melhor compreensão: _Linguagem Onipresente_.
-
-**Linguagem Onipresente** é essencialmente os termos, palavras e definições utilizadas por todo o domínio do projeto. É o idioma utilizado no cotidiano da empresa, as terminologias da realidade do negócio. Quando um projeto não respeita a **linguagem do domínio** diversos problemas de comunicação surgem, dificultando o desenvolvimento, implantação e sustentação da solução.
-
-Quando termos utilizados no projeto vão sendo traduzidos, de acordo com o uso em cada departamento, a comunicação se torna anêmica e a assimilação do conhecimento disperso. Em seu livro Domain Driven Design — Atacando as Complexidades no Coração do Software, Eric Evans descreve de maneira clara esta problemática:
-
-> O custo de toda a tradução, além do risco de entendimento errado, é simplesmente muito alto. Um projeto precisa de uma linguagem em comum que seja mais robusta que o mínimo denominador comum.
-
-<a href=""><img src="https://github.com/user-attachments/assets/5ac09617-ba80-4f3f-955a-62bd9dfe77ee" align="right" height="77"></a>
-
-A Linguagem Onipresente (ubiquitous language) não está limitada a diagramas em <a href="">UML (Unified Modeling Languages, ou Linguagem de Modelagem Unificada)</a>, mas principalmente, define em seu vocabulário nome das classes e operações de destaque. Inclui regras para implantar um dicionário uniforme e explícito para o modelo, para que o mesmo possa ser utilizado com o máximo de eficiência possível.
-
-O **Diagram as code** (Diagrama como código) é uma abordagem de criação de diagramas que utiliza código, em vez de ferramentas gráficas, para desenhar e manter diagramas. Essa abordagem permite que os diagramas sejam criados e atualizados utilizando linguagens de programação ou marcadores, em vez de ferramentas de desenho gráfico. A prática de "Diagram as code" (Diagrama como código) pode auxiliar no Domain-Driven Design (DDD), pois é uma prática útil no DDD que ajuda a manter a documentação atualizada, facilita a colaboração, fornece controle de versão e permite a geração automática de diagramas. Vantagens do "Diagram as code" no DDD:
-
-1. **Melhor documentação**: Com o "Diagram as code", você pode manter a documentação do seu modelo de domínio atualizada e sincronizada com o código. Isso ajuda a garantir que a documentação seja precisa e refletida nas mudanças no código.
-2. **Modelagem colaborativa**: O "Diagram as code" permite que os membros da equipe colaborativamente trabalhem no modelo de domínio, tornando mais fácil para os desenvolvedores, especialistas em domínio e outros stakeholders discutirem e refinarem o modelo.
-3. **Versão e controle**: Com o "Diagram as code", você pode usar sistemas de controle de versão (como Git) para rastrear as alterações no modelo de domínio. Isso ajuda a garantir que todas as alterações sejam documentadas e possam ser revertidas se necessário.
-4. **Geração automática de diagramas**: Muitas ferramentas de "Diagram as code" permitem que você gere diagramas automaticamente a partir do código. Isso pode economizar tempo e reduzir a chance de erros manuais.
-5. **Integração com o ciclo de desenvolvimento**: O "Diagram as code" pode ser integrado ao ciclo de desenvolvimento de software, permitindo que os desenvolvedores trabalhem no modelo de domínio em paralelo com o desenvolvimento do código.
-
-As ferramentas permitem que você crie diagramas como código, utilizando sintaxes específicas para desenhar os diagramas. Em seguida, elas geram imagens ou diagramas a partir do código. Algumas ferramentas populares para "Diagram as code" incluem:
-
-<a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa700003"><img src="https://github.com/user-attachments/assets/cd3deff0-176a-4d9b-8735-0a1b2b1d2a33" align="right" height="77"></a>
-
-- Mermaid
-- **PlantUML**
-- Graphviz
-- C4 (abordagem de modelagem de software)
-
-Normalmente os especialistas de um domínio, diretores, administradores, analistas, técnicos, possuem pouca familiaridade com o jargão técnico utilizado no desenvolvimento de software, mas utilizam os jargões próprios de sua área de atuação. A partir desta realidade, os especialistas de um domínio descrevem superficialmente o que necessitam, fazendo com que desenvolvedores criem abstrações que sustentem o design da aplicação. Com isso, uma compreensão uniforme vai se deteriorando exponencialmente.
-
-<a href="https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa700003"><img src="https://github.com/user-attachments/assets/d51f18a5-193c-49ef-8a83-83f42f1924f5" align="right" height="277"></a>
-
-Como solução a esta dispersão na comunicação, devemos usar a linguagem baseada no modelo de forma exaustiva até que a comunicação seja fluida e compreensível entre os diversos setores envolvidos no projeto. Para que possamos alcançar esta fluência, os especialistas do domínio devem vetar termos ou estruturas que não transmitam uma compreensão clara acerca das funcionalidades envolvidas; os desenvolvedores devem se empenhar no cuidado com ambiguidades ou inconsistências que possam corromper o modelo proposto. Ou seja, é um esforço conjunto entre todos os envolvidos, mas, é essencialmente necessário que ocorra.
-
-Como identificar os especialistas de domínio? Especialistas de domínio são os profissionais envolvidos no dia a dia da operação, nos mais diferentes setores, ou seja, são os “conhecedores” do negócio (stakeholders). Normalmente estes especialistas são analistas, técnicos, engenheiros, podendo ser todo aquele que possui a compreensão acerca do fluxo de operação da empresa. Os especialistas de domínio detém o conhecimento sobre as necessidades e requisitos necessários para o processamento das atividades organizacionais.
-
-<img src="https://github.com/user-attachments/assets/3e5b0f4e-5517-4b6d-a8a8-cd650c6f577d" align="right" height="277">
-
-Em essência, o DDD surgiu para enfrentar a complexidade inerente ao desenvolvimento de software em domínios desafiadores, permitindo que os sistemas sejam projetados de forma que o código seja uma expressão direta das regras e processos do negócio. Com o tempo, o DDD ganhou popularidade e passou a ser usado em diversos contextos, especialmente em sistemas corporativos onde o domínio de negócio é complexo e sujeito a constantes mudanças.
-
-Para o sucesso de um projeto de software, o DDD sugere que tanto especialistas de domínio quanto desenvolvedores devem falar a mesma língua.
-
-A figura acima, ilustra a existência de termos que só os especialistas de domínio conhecem e apresentam expressões somente de caráter tecnológico, os quais são de uso apenas do time de desenvolvimento. Contudo, é necessário que exista um conjunto de termos que devem ser de conhecimento universal, no que se refere ao domínio da aplicação, formando a Linguagem Ubíqua do sistema. A definição de uma linguagem onipresente objetiva principalmente dois propósitos:
-
-- Possibilitar uma comunicação fluida entre os membros de equipes multidisciplinares; Nomear elementos do código da aplicação, como classes, métodos, variáveis, funções, módulos, tabelas de bancos de dados, rotas de APIs, etc.
-
-- Ademais a padronização na comunicação propõe elucidar o significado dos termos, de um forma simples, objetiva e compreensível para facilitar os relacionamentos e associações entre todos módulos necessários.
-
-Qualquer pessoa técnica contribuindo para o modelo deve programar, pelo menos tocar no código, independente do papel desempenhado no projeto. Um responsável por mudar o código deve sempre aprender a expressar o modelo através do código. Todo desenvolvedor deve estar envolvido na discussão sobre o modelo e ter contato com os especialistas do domínio. (EVANS, 2016).
-
-Em seu livro Implementando Domain Driven Design, Vaughn Vernon, pontua que um especialista de domínio tem uma forte influência sobre a linguagem utilizada, devido ao maior conhecimento acerca do negócio, que no final é o contexto imperativo de todo projeto. Estes especialistas tendem a ser influenciados pelos padrões da indústria, contudo, uma linguagem universal deve ser centrada em como o próprio negócio pensa e opera. Ou seja, cada empresa possui seu próprio domínio acerca da execução de seus processos.
-
-Não entenda Linguagem Ubíqua como um conjunto de jargões de negócios sendo impostos ao time de desenvolvimento, e nem mesmo uma sobreposição de termos técnicos sobre o contexto de negócio, mas sim, uma linguagem real que é criada por toda a equipe e que é propagada por toda a corporação.
-
-Compreende-se que haverá discordâncias em relação aos termos utilizados e que estão na mente dos especialistas, mas, a partir do uso aberto da linguagem, a evolução é natural e consolidada por este processo de maturação da comunicação.
-
-O DDD enfatiza a compreensão profunda do domínio do problema e o uso de uma linguagem ubíqua compartilhada entre as equipes de desenvolvimento e especialistas do domínio. Ele propõe a organização do código em torno do domínio do problema, separando-o dos detalhes técnicos e infraestrutura. 
-
-Embora o DDD não seja um design pattern em si, ele pode ser combinado com vários design patterns e princípios de design, como Agregado, Repositório, Especificação, Event Sourcing, entre outros. O DDD fornece diretrizes e conceitos para ajudar na criação de uma arquitetura de software robusta e flexível.
-
-Portanto, podemos dizer que o DDD é uma abordagem de design e uma metodologia de modelagem que pode ser aplicada em diferentes arquiteturas de software, como arquitetura em camadas, arquitetura hexagonal, arquitetura de microsserviços, entre outras. Ele fornece princípios e práticas para projetar e estruturar o código em torno do domínio do problema, visando um modelo de domínio rico, desacoplamento e flexibilidade.
-
-É uma abordagem mais ampla para o design de software que abrange vários conceitos e técnicas. DDD enfatiza a modelagem do domínio, a colaboração entre especialistas do domínio e desenvolvedores, e a criação de um código baseado em um entendimento profundo do domínio do problema.
-
-No contexto do DDD, existem design patterns específicos que são frequentemente utilizados para ajudar a implementar os conceitos e princípios do DDD. Alguns desses padrões incluem:
-
-<a href=""><img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/0ade6281-cdca-47d3-8b95-57e81b61d04a" align="right" height="377"></a>
-
-1. <a href="">Agregado</a>: Se refere a um padrão de design que agrupa um conjunto de objetos relacionados em uma única unidade coesa. O Agregado é uma das principais construções utilizadas para modelar e organizar o domínio em DDD;
-
-2. <a href="">Repositório</a>: Fornece uma interface para acessar coleções de objetos agregados, permitindo que o domínio permaneça livre de preocupações com persistência. Ele atua como uma camada intermediária entre o domínio e a fonte de dados (como bancos de dados).
-
-3. <a href="">Serviço de Domínio</a>: Representa operações ou ações do domínio que não pertencem naturalmente a uma única entidade ou value object. Encapsula lógica de negócio que depende de múltiplos objetos.
-
-4. <a href="">Value Object</a>: Objetos que não possuem identidade própria e são definidos apenas por seus atributos. São imutáveis e usados para representar conceitos como dinheiro, coordenadas ou medidas.
-
-5. <a href="">Entidade</a>: Objetos do domínio que possuem identidade própria (geralmente um ID) e um ciclo de vida distinto. Diferente de value objects, entidades podem mudar seus atributos ao longo do tempo.
-
-6. <a href="">Factory</a>: Padrão responsável por encapsular a lógica de criação complexa de objetos, especialmente agregados. Evita a poluição do construtor com lógica de montagem de objetos.
-
-7. <a href="">Especificação</a>: Define regras de negócio reutilizáveis e combináveis para verificar se um objeto atende a determinados critérios. É útil para separação de responsabilidades e clareza das regras de domínio.
-
-8. <a href="">Event Sourcing</a>: Técnica onde o estado do sistema é determinado por uma sequência de eventos (ao invés de snapshots de dados). Permite reconstruir o estado do sistema e ter um histórico detalhado das mudanças.
-
-9. <a href="">Injeção de Dependência (DI - Dependency Injection)</a>: Técnica que permite desacoplar componentes do sistema, facilitando testes, manutenção e extensibilidade. No DDD, é comum para injetar repositórios, serviços de domínio e unidades de trabalho nos agregados e serviços de aplicação.
-
-Esses padrões, juntamente com outros conceitos e técnicas, podem ser aplicados para construir uma arquitetura que segue os princípios do DDD. O DDD, portanto, não é um design pattern em si, mas uma abordagem que pode ser implementada usando diversos padrões de design específicos.
-
-Quando não usar DDD? Às vezes só é necessário um CRUD! DDD não é uma solução para tudo. A maioria dos sistemas possui uma boa parte composta por cadastros básicos (CRUD) e não seria adequado usar DDD para isso.
-
-O DDD deve ajudar na modelagem das classes mais importantes e mais centrais do sistema de forma e diminuir a complexidade e ajudar na manutenção das mesmas, afinal este é o objetivo dos princípios de orientação a objetos.
-
-Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outros sistemas, as rotinas de integração que recebem ou disponibilizam dados para outros sistemas não devem ser "inteligentes". Muitos desenvolvedores acabam modelando suas classes de negócios tentando resolver as questões internas do sistema e, ao mesmo tempo, pensando em como essas classes serão expostas para outros sistemas. Padrões como DTO (Data Transfer Object) que usam objetos "burros" são mais adequados para isso.
-
-Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um sistema. Seu foco é na modelagem das entidades principais de negócio usando a linguagem adequada daquele domínio para facilitar a manutenção, extensão e entendimento. Particularmente, eu não seguiria à risca o padrão, até porque existem inúmeros padrões e variações de modelagem OO. Estude os princípios por detrás desses padrões, pois eles são geralmente parecidos e veja o que funciona melhor para cada projeto.
-
-## [QA] UAT - User Acceptance Testing
-<img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
-
-<img src="https://github.com/user-attachments/assets/280f6440-0109-4b54-98b4-f664b2e9af9b" align="right" height="77">
-
-O **User Acceptance Testing (UAT)**, ou Teste de Aceitação do Usuário, é uma etapa final e crucial dentro do ciclo de testes de software. Ele acontece quando o sistema já passou por testes internos como unitários, de integração, funcionais e de sistema e está teoricamente pronto para ser colocado em produção. A ideia do UAT é validar se o software realmente atende às necessidades do usuário final e aos requisitos de negócio. Aqui, o foco não é tanto verificar se o código funciona sem erros técnicos, mas se a solução é útil, intuitiva e cumpre aquilo que foi solicitado e esperado. Por isso, normalmente é realizado pelos próprios usuários, clientes, stakeholders ou representantes do negócio, com o suporte da equipe de QA.
-
-Dentro do ecossistema de QA, o UAT se integra como a camada de validação final que coroa todo o pipeline de testes. Em um fluxo típico, o software passa por testes unitários para verificar pequenos blocos de código isolados, depois vai para testes de integração para garantir que os módulos funcionem em conjunto, segue para testes funcionais e de sistema que avaliam requisitos e comportamento completo, pode ainda passar por testes não funcionais como performance, segurança e usabilidade. Só depois desse ciclo é que entra o UAT, pois não faria sentido colocar o usuário para validar algo que ainda tem falhas básicas de funcionamento ou de estabilidade.
-
-O UAT funciona quase como um “filtro de realidade”: ele conecta a linguagem técnica do QA com a linguagem de negócio do cliente. Muitas vezes, mesmo um sistema tecnicamente correto pode falhar no UAT se não atender ao fluxo real que o usuário precisa seguir no dia a dia. É comum, por exemplo, que durante o UAT se descubra que um processo está tecnicamente certo, mas exige muitos cliques desnecessários, ou não reflete a forma como o trabalho é feito na prática. Assim, ele serve para alinhar expectativas, corrigir ajustes de usabilidade e garantir que, no momento do go-live, o software não só funcione, mas também seja aceito pelo público a que se destina.
-
-Em termos de QA, você pode pensar no UAT como o elo entre testes de qualidade técnica e testes de valor de negócio. Ele não substitui os outros, mas se apoia neles: se os testes anteriores garantem que o software é confiável, o UAT garante que ele é útil e aprovado pelo cliente.
-
-Muita gente acaba confundindo os papéis de **UAT, MVP, Release e Continuous Delivery**, porque todos estão ligados à entrega e validação do software, mas cada um tem uma posição e função distintas dentro do ciclo de desenvolvimento. Para não misturar os conceitos, vale enxergar como uma sequência natural, onde cada etapa se apoia na anterior.
-
-O ciclo começa antes mesmo do UAT, com a concepção do **MVP (Minimum Viable Product)**. Aqui o objetivo é construir a versão mínima do produto que já entrega valor real para o usuário, mesmo que com funcionalidades limitadas. Esse MVP é fruto de testes técnicos e de negócio, mas ainda não é a versão que vai para produção de forma plena — ele serve como uma forma de validar hipóteses, ganhar feedback rápido e evitar investimentos pesados em algo que o usuário não queira.
-
-Uma vez que o MVP esteja pronto em termos técnicos, entra o *UAT (User Acceptance Testing)*. É nessa fase que o usuário final, ou representantes de negócio, testam se o que foi construído atende de fato às suas necessidades. É o momento de validar se o software não só funciona, mas se está *apto a ser aceito*. Esse ponto é delicado: não se deve liberar uma Release ou acionar um pipeline de Continuous Delivery antes de o UAT aprovar. O UAT funciona como um “checkpoint” de aceitação.
-
-Com o UAT aprovado, abre-se espaço para a **Release**, que é a entrega oficial de uma versão do software. A Release pode ser do próprio MVP (caso aprovado), ou de incrementos posteriores. Aqui o software deixa o ambiente de homologação/teste e vai para produção. É importante diferenciar: Release não é sinônimo de deploy. O deploy pode ser frequente (parte do CD), mas a Release é uma decisão de negócio, de colocar uma versão nas mãos do cliente com um pacote de funcionalidades definido.
-
-O **Continuous Delivery (CD)** é a engrenagem que sustenta tudo isso. Ele garante que o software esteja sempre em condição de ser liberado: builds automatizados, testes automatizados, pipelines de integração e entrega prontos. O CD assegura que qualquer mudança de código possa ser validada e empacotada rapidamente para uma possível Release, mas não substitui a decisão de liberar, que continua dependendo de critérios como UAT e estratégia de produto.
-
-O passo a passo adequado, sem bagunça, pode ser entendido assim: primeiro você constrói o MVP para validar hipóteses → depois submete esse MVP (ou incrementos subsequentes) ao UAT para validação de negócio → com o UAT aprovado, gera uma Release oficial que pode ser entregue aos usuários finais → e todo esse processo é sustentado pelo Continuous Delivery, que dá agilidade e confiabilidade ao ciclo.
-
-Ou seja, MVP é o “o quê” inicial, UAT é o “pode ser aceito?”, Release é o “vai para produção”, e Continuous Delivery é o “como fazer isso de forma contínua e confiável”.
