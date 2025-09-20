@@ -1333,6 +1333,20 @@ A ideia é alinhar desde o início o que será construído com o que realmente t
 
 Na prática, o ATTD acaba funcionando como uma ponte entre BDD e TDD. Ele compartilha com o BDD a preocupação de usar exemplos de negócio como base para o desenvolvimento, mas mantém a disciplina do TDD de usar testes automatizados como motor do ciclo. Isso ajuda a garantir que o software entregue não só funcione tecnicamente, mas também atenda ao valor esperado pelos usuários, reduzindo retrabalho e mal-entendidos.
 
+O *ATDD (Acceptance Test-Driven Development)* é uma prática de desenvolvimento guiada por *testes de aceitação*, escritos antes do código, em colaboração entre desenvolvedores, QA e stakeholders. O foco dele é garantir que o software atenda aos critérios de aceitação do negócio. Em essência, ele antecipa o que seria validado lá na frente pelo *UAT (User Acceptance Testing)*, mas de forma automatizada e contínua, desde o início do ciclo.
+
+O **TDD (Test-Driven Development)** é mais granular: foca no nível do código. Primeiro você escreve um teste unitário que falha, depois escreve o mínimo de código para passar no teste e, por fim, refatora. Ele garante qualidade técnica, mas não necessariamente que o software atenda ao que o usuário quer.
+
+Já o **UAT (User Acceptance Testing)** é uma fase final, manual ou semi-manual, em que os usuários ou representantes de negócio validam se o sistema está de acordo com suas expectativas. Ele é mais subjetivo e humano, enquanto ATDD tenta trazer essa visão de aceitação para dentro do ciclo técnico.
+
+Dá pra pensar assim:
+
+* O **ATDD** cria um **ciclo colaborativo** (negócio + dev + QA) para escrever critérios de aceitação como testes automatizados.
+* O **TDD** atua no detalhe técnico para garantir que cada unidade de código funciona.
+* O **UAT** é a validação real pelo usuário antes da release.
+
+Ou seja, o ATDD não é o UAT implementado dentro do ciclo TDD, mas ele **faz uma ponte**: traz os critérios de aceitação (que seriam verificados no UAT) para dentro do desenvolvimento, lado a lado com o TDD. Em um fluxo maduro, você teria TDD para o nível de código, ATDD para o nível de aceitação de requisitos, e UAT no fim para validar com pessoas reais.
+
 ## [QA] SDD - Specification-Driven Development
 <img height="277" align="right" src="https://github.com/user-attachments/assets/f1d7c1dc-adde-4604-b310-f8dd82f287f6" />
 
