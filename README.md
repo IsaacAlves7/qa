@@ -1003,6 +1003,71 @@ O passo a passo adequado, sem bagunça, pode ser entendido assim: primeiro você
 
 Ou seja, MVP é o “o quê” inicial, UAT é o “pode ser aceito?”, Release é o “vai para produção”, e Continuous Delivery é o “como fazer isso de forma contínua e confiável”.
 
+Nos diferentes ecossistemas de linguagens, o conceito de testes de aceitação varia bastante, mas em geral envolve frameworks que permitem validar o comportamento da aplicação do ponto de vista do usuário final, muitas vezes com suporte a **BDD (Behavior Driven Development)** ou integração com navegadores. Vou listar os mais conhecidos em cada um dos ecossistemas:
+
+**C/C++** Como o foco dessas linguagens é mais baixo nível, há menos ferramentas prontas para testes de aceitação de aplicações web. Ainda assim, existem opções:
+
+* **CppUnit** – mais voltado para testes de unidade, mas pode ser usado em cenários de aceitação.
+* **Cucumber-Cpp** – integração do Cucumber com C++, permite escrever testes de aceitação em Gherkin.
+* **GoogleTest (gtest)** – é mais unitário, mas com a disciplina certa pode ser usado para aceitação.
+
+**C# (.NET)** O ecossistema .NET tem um conjunto forte de ferramentas de testes de aceitação:
+
+* **SpecFlow** – equivalente ao Cucumber, usa Gherkin para BDD.
+* **Selenium WebDriver** – para testes de aceitação de interfaces web.
+* **Playwright for .NET** – automação de browsers moderna, usada também em testes de aceitação.
+* **xBehave.net** – extensão do xUnit para BDD.
+
+**Ruby** É um dos ecossistemas mais ricos nesse aspecto:
+
+* **Capybara** – padrão de fato em Rails para testes de aceitação.
+* **Cucumber** – BDD com escrita em Gherkin.
+* **RSpec + Capybara** – combinação clássica para acceptance testing.
+* **Turnip** – DSL alternativa integrada ao RSpec para cenários de aceitação.
+
+**PHP** A comunidade PHP tem boas ferramentas para BDD e acceptance testing:
+
+* **Behat** – inspirado no Cucumber, usa Gherkin.
+* **Codeception** – framework poderoso que cobre testes unitários, funcionais e de aceitação.
+* **Laravel Dusk** – no ecossistema Laravel, usado para testes de aceitação com browser automation.
+
+**JavaScript (Node.js e frontend)** Um dos ecossistemas mais ativos em testes de aceitação:
+
+* **Cypress** – muito popular para testes end-to-end e aceitação de aplicações web.
+* **Playwright** – concorrente moderno do Cypress, altamente estável.
+* **Puppeteer** – automação do Chrome/Chromium, usado para acceptance testing.
+* **Nightwatch.js** – framework baseado em Selenium.
+* **Jest + Testing Library (React Testing Library, por exemplo)** – pode ser usado para acceptance em SPAs.
+
+**Python** A comunidade Python também é forte em BDD e testes de aceitação:
+
+* **Behave** – equivalente ao Cucumber, usa Gherkin.
+* **Lettuce** – BDD inspirado no Cucumber.
+* **Robot Framework** – muito popular para acceptance testing, com DSL própria.
+* **pytest-bdd** – extensão do pytest para BDD.
+* **Selenium / Playwright Python** – para automação de browser em testes de aceitação.
+
+**Go (Golang)** Go tende a ser mais pragmático, mas há bibliotecas para acceptance/BDD:
+
+* **Godog** – equivalente ao Cucumber, com Gherkin.
+* **Agouti** – para acceptance testing com integração a Selenium e PhantomJS.
+* **Ginkgo** – framework BDD muito usado, ainda que mais comum em unit/integração.
+
+**Rust** Rust ainda está amadurecendo em testes de aceitação, mas já há ferramentas:
+
+* **Cucumber-rs** – implementação do Cucumber para Rust.
+* **cucumber (new)** – projeto moderno para BDD em Rust.
+* **assert\_cmd** + **predicates** – muitas vezes usados juntos para acceptance testing de CLIs.
+* **Thirtyfour** – WebDriver client para Rust (similar ao Selenium).
+
+**Elixir** O ecossistema Elixir tem boas ferramentas alinhadas ao Phoenix (framework web):
+
+* **Wallaby** – biblioteca para acceptance testing de aplicações web com browser automation.
+* **Hound** – wrapper em Elixir para Selenium/WebDriver.
+* **ExUnit + BDD-style DSLs** – muitas vezes usado diretamente com helpers de alto nível.
+
+Se você reparar, há um padrão: quase todos os ecossistemas têm algum tipo de integração com **Cucumber/Gherkin** para cenários de aceitação e ferramentas ligadas a **browser automation** (Selenium, Playwright, Cypress etc.), e depois cada comunidade cria bibliotecas mais idiomáticas para seu ambiente.
+
 ## [QA] DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
