@@ -263,11 +263,11 @@ Estudamos os branches, os workflows e concluímos que dentro da prática da inte
 
 Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
 
-Para isso algumas regras e padrões são necessários para manter o fluxo saudável e o caminho feliz em todas as fases:
+Para isso, algumas regras e padrões são necessários para manter o fluxo saudável e o caminho feliz em todas as fases:
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/2428e394-db35-454e-bdc5-add66d850f53" />
 
-O Build vem antes da etapa de teste/QA. Pensa assim: o build é o processo de pegar o código-fonte (em .NET, Java, etc.) e transformá-lo em um artefato executável ou implantável (um .dll, .exe, .jar, container Docker, pacote NuGet, etc.). Só depois que esse artefato é gerado é que você consegue rodar os testes de verdade, seja unitário, de integração, ou QA manual/automatizado.
+O Build vem antes da etapa de teste/QA. Pensa assim: o build é o processo de pegar o código-fonte (em .NET, Java, etc.) e transformá-lo em um artefato executável ou implantável (um `.dll`, `.exe`, `.jar`, container Docker, pacote NuGet, etc.). Só depois que esse artefato é gerado é que você consegue rodar os testes de verdade, seja unitário, de integração, ou QA manual/automatizado.
 
 A sequência clássica em pipelines CI/CD é mais ou menos assim:
 
