@@ -263,13 +263,40 @@ Estudamos os branches, os workflows e concluímos que dentro da prática da inte
 
 Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
 
+Para isso algumas regras e padrões são necessários para manter o fluxo saudável e o caminho feliz em todas as fases:
+
 <img height="177" align="right" src="https://github.com/user-attachments/assets/2428e394-db35-454e-bdc5-add66d850f53" />
 
-- O Build vem antes da etapa de teste/QA.
-- Testes fazem parte da construção do software;
-- Devem ser realizados antes do commit;
+O Build vem antes da etapa de teste/QA. Pensa assim: o build é o processo de pegar o código-fonte (em .NET, Java, etc.) e transformá-lo em um artefato executável ou implantável (um .dll, .exe, .jar, container Docker, pacote NuGet, etc.). Só depois que esse artefato é gerado é que você consegue rodar os testes de verdade, seja unitário, de integração, ou QA manual/automatizado.
+
+A sequência clássica em pipelines CI/CD é mais ou menos assim:
+
+1. **Code** → desenvolvedor escreve o código.
+2. **Build** → o código é compilado e empacotado.
+3. **Test/QA** → o artefato gerado é validado (testes automatizados, estáticos, integração, QA manual).
+4. **Release/Deploy** → se passou em QA, o build é promovido para homologação ou produção.
+
+Claro que existem nuances: testes unitários às vezes rodam já na fase de build (porque são rápidos e podem rodar junto da compilação), mas testes de QA completos (funcionais, integração, performance) dependem do build estar pronto. Então, em termos de pipeline: `Build → Test/QA → Deploy`.
+
+Mas existem dois cenários, aí entra uma confusão comum, e é legal esclarecer. O **build** em si — no sentido técnico de compilar e gerar um artefato executável — **não depende de teste nenhum**. Você pode rodar `dotnet build`, `mvn package` ou `npm run build` mesmo sem nenhum teste, e o código vai gerar binário, JAR ou bundle normalmente.
+
+O que acontece é que em **pipelines modernos de CI/CD** (Azure DevOps, GitHub Actions, GitLab CI, Jenkins etc.), muita gente coloca testes logo após ou até durante o build. Isso dá a impressão de que “sem teste o build não roda”, mas na prática é só uma regra do pipeline que impede a entrega se os testes falharem.
+
+Ou seja:
+
+* **Build cru** = compila e empacota. Independe de teste.
+* **Build no pipeline CI** = compila, empacota e executa testes obrigatórios (unitários, integração rápida). Se algum falhar, o pipeline cancela e o build não é promovido para as próximas fases (QA, deploy).
+
+Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipelines, eles caminham juntos, porque é mais eficiente falhar cedo se os testes não passarem.
+
+- **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. E mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”.;
+
+- **Devem ser realizados antes do commit**: Aqui você está descrevendo o que chamamos de pré-validação local. O ideal é que o desenvolvedor rode testes (unitários pelo menos) antes de commitar, garantindo que não quebrou nada básico. Isso pode ser cultural (boa prática individual) ou técnico (com pre-commit hooks no Git, que bloqueiam commit se os testes falharem). Dessa forma, o código que chega ao repositório central já tem uma garantia mínima.;
+
 - TDD pode ajudar neste processo;
+
 - Desempenho bom em testes;
+
 - Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
 ## [QA] Automation testing
