@@ -265,6 +265,7 @@ Com as alterações que realizamos o tempo todo em nosso software, como podemos 
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/2428e394-db35-454e-bdc5-add66d850f53" />
 
+- O Build vem antes da etapa de teste/QA.
 - Testes fazem parte da construção do software;
 - Devem ser realizados antes do commit;
 - TDD pode ajudar neste processo;
