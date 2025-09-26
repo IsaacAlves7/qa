@@ -111,7 +111,9 @@ Portanto, quando você ouve falar de “caminho feliz”, é um subconjunto do �
 
 <img height="377" align="right" src="https://github.com/user-attachments/assets/0ec5b719-1df3-47b4-9d9d-b8c2db2adb1c" />
 
-Dentro da distinção clássica entre *QA (Quality Assurance)* e **QC (Quality Control)**, os testes de software se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em detectar e validar defeitos no resultado tangível — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
+Dentro da distinção clássica entre *QA (Quality Assurance)* e **QC (Quality Control)**, os testes de software se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. 
+
+QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em detectar e validar defeitos no resultado tangível — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
 
 Portanto, sim: quando falamos em **testes manuais, automatizados, de integração, de aceitação, de regressão, de performance, etc.**, estamos atuando dentro da **camada de QC**. Eles são o mecanismo pelo qual conseguimos transformar “expectativas de qualidade” em **evidências objetivas** de que o software funciona (ou não) como esperado.
 
