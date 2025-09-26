@@ -74,7 +74,7 @@ Os fundamentos de **teste de software** (Software Testing) se referem a um conju
 
 Entre os fundamentos do teste de software estão:
 
-1. **Identificação de requisitos**: Os requisitos são funcionalidades que o produto precisa ter para atender às expectativas e necessidades das partes interessadas. É importante que todos os requisitos do software estejam claramente definidos e documentados antes do início do teste. Essa etapa é crucial para garantir que o software atenda às expectativas dos usuários. O escopo é o conjunto de características desejadas que descrevem o resultado final do projeto.
+1. **Identificação de requisitos**: Os **requisitos** (requirements) são funcionalidades que o produto precisa ter para atender às expectativas e necessidades das partes interessadas. É importante que todos os requisitos do software estejam claramente definidos e documentados antes do início do teste. Essa etapa é crucial para garantir que o software atenda às expectativas dos usuários e construir MVPs (Mínimo Produto Viável). O **escopo** é o conjunto de características desejadas que descrevem o resultado final do projeto.
 
 2. **Planejamento de teste**: o planejamento do teste deve ser feito de forma estruturada e detalhada, incluindo a definição dos objetivos, recursos, cronograma, técnicas e critérios de aceitação.
 
