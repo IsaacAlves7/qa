@@ -267,7 +267,7 @@ Para isso, algumas regras e padrões são necessários para manter o fluxo saud�
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/2428e394-db35-454e-bdc5-add66d850f53" />
 
-O Build vem antes da etapa de teste/QA. Pensa assim: o build é o processo de pegar o código-fonte (em .NET, Java, etc.) e transformá-lo em um artefato executável ou implantável (um `.dll`, `.exe`, `.jar`, container Docker, pacote NuGet, etc.). Só depois que esse artefato é gerado é que você consegue rodar os testes de verdade, seja unitário, de integração, ou QA manual/automatizado.
+O **Build** vem antes da etapa de teste/QA. Pensa assim: o build é o processo de pegar o código-fonte (em .NET, Java, etc.) e transformá-lo em um artefato executável ou implantável (um `.dll`, `.exe`, `.jar`, container Docker, pacote NuGet, etc.). Só depois que esse artefato é gerado é que você consegue rodar os testes de verdade, seja unitário, de integração, ou QA manual/automatizado.
 
 A questão é não é que "sem teste, não tem build", mas sim "do que adianta build sem teste?". Tecnicamente, dá pra fazer build sem teste, mas aí a pergunta é exatamente essa: “de que adianta gerar um binário, se eu não sei se ele funciona?”. É como fabricar um carro e não ligar o motor pra ver se anda. O artefato até existe, mas não tem valor de verdade, porque ninguém pode confiar nele. 
 
