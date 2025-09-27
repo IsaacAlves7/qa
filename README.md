@@ -124,7 +124,7 @@ O QA atua como um guardião da qualidade, definindo e implementando processos, p
 - Prevenir defeitos: Implementar medidas preventivas para evitar que erros e defeitos sejam introduzidos no software, como revisões de código, testes unitários e análise estática de código.
 - Promover a cultura de qualidade: Incentivar a colaboração, a comunicação e o feedback entre os membros da equipe, criando um ambiente onde a qualidade é valorizada e priorizada.
 
-Quality Control (QC): Detectando e Corrigindo os Bugs
+**Quality Control (QC)**: Detectando e Corrigindo os Bugs
 
 Agora, imagine um inspetor de qualidade que examina cada cômodo da casa já construída, verificando se tudo está de acordo com o projeto e se não há nenhum problema. Essa é a essência do QC, um processo reativo que se concentra em detectar e corrigir defeitos no software após ele ter sido desenvolvido.
 
@@ -135,7 +135,11 @@ O QC atua como um detetive, buscando por bugs e falhas que podem comprometer a q
 - Verificar as correções: Após a correção dos bugs, o QC realiza novos testes para garantir que os problemas foram resolvidos e que não foram introduzidos novos bugs.
 - Monitorar a qualidade do software: Acompanhar o desempenho do software em produção, coletando dados e feedback dos usuários para identificar e corrigir problemas.
 
-Dentro da distinção clássica entre *QA (Quality Assurance)* e *QC (Quality Control)*, os **testes de software** se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. 
+QA e QC: Um Time Imbatível. QA e QC são como duas faces da mesma moeda, trabalhando em conjunto para garantir a qualidade do software. Enquanto o QA se concentra na prevenção de defeitos, o QC se concentra na detecção e correção dos problemas. A sinergia entre esses dois processos é essencial para construir um software robusto, confiável e que atenda às expectativas dos usuários.
+
+Compreender a diferença entre QA e QC é fundamental para construir uma estratégia de qualidade de software eficaz. Ao integrar as práticas de QA e QC em todo o ciclo de desenvolvimento, as empresas podem garantir que seus softwares sejam desenvolvidos com qualidade, eficiência e segurança, satisfazendo os usuários e impulsionando o sucesso do negócio.
+
+E dentro da distinção clássica entre *QA (Quality Assurance)* e *QC (Quality Control)*, os **testes de software** se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. 
 
 QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em detectar e validar defeitos no resultado tangível — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
 
@@ -192,7 +196,7 @@ Além disso, uma ilustração útil pode ser um diagrama que mostre a relação 
 
 <div align="center"><img width="551" height="351" alt="image" src="https://github.com/user-attachments/assets/d9decc9c-a526-4733-bf66-c5cd63aaba1e" /></div>
 
-É importante destacar que a observabilidade (observability) não é exatamente parte do QA no sentido tradicional, mas ela se conecta de forma muito natural com a qualidade do software. QA (Quality Assurance) historicamente é voltado para prevenção de defeitos, validação e verificação de requisitos, testes funcionais, não funcionais e processos que garantem que o produto atenda ao que foi especificado. Observabilidade, por outro lado, nasceu com foco na operação e na confiabilidade: é a capacidade de entender o que está acontecendo em um sistema, em tempo real, a partir de sinais como logs, métricas e traces. Ela vai além de simplesmente monitorar: é sobre ser capaz de responder perguntas desconhecidas sobre o comportamento do sistema.
+É importante destacar que a **observabilidade** (observability) não é exatamente parte do QA no sentido tradicional, mas ela se conecta de forma muito natural com a qualidade do software. QA (Quality Assurance) historicamente é voltado para prevenção de defeitos, validação e verificação de requisitos, testes funcionais, não funcionais e processos que garantem que o produto atenda ao que foi especificado. Observabilidade, por outro lado, nasceu com foco na operação e na confiabilidade: é a capacidade de entender o que está acontecendo em um sistema, em tempo real, a partir de sinais como logs, métricas e traces. Ela vai além de simplesmente monitorar: é sobre ser capaz de responder perguntas desconhecidas sobre o comportamento do sistema.
 
 A relação entre as duas áreas está no fato de que quanto mais observável um sistema é, mais fácil fica detectar, diagnosticar e corrigir problemas que impactam a qualidade. QA tradicional muitas vezes termina antes da aplicação ir para produção, mas bugs e falhas ainda podem aparecer em ambientes reais. Com observabilidade, você complementa os testes com uma visão contínua, onde é possível acompanhar a saúde, a performance, os gargalos e até o comportamento do usuário. Para equipes modernas, especialmente em DevOps e SRE, a linha entre QA e observabilidade se mistura um pouco, pois qualidade não é mais só “testar antes de subir”, mas também garantir que o produto em execução esteja saudável, rastreável e confiável.
 
