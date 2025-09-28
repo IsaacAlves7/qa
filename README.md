@@ -4,7 +4,6 @@
 [![GitHub CI](https://github.com/rife2/tests-badge/actions/workflows/bld.yml/badge.svg)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
 [![Tests](https://rife2.com/tests-badge/badge/com.uwyn/tests-badge)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
 [![Tests](https://rife2.com/tests-badge/badge/com.uwyn/tests-badge)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
-[![Tests](https://rife2.com/tests-badge/badge/com.uwyn/tests-badge)](https://github.com/rife2/tests-badge/actions/workflows/bld.yml)
 
 <a href="https://github.com/IsaacAlves7/qa"><img width="1920" height="500" alt="image" src="https://github.com/user-attachments/assets/7675c835-51aa-4d5d-b46b-8d8b81d948a8" /></a>
 
