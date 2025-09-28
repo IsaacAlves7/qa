@@ -890,7 +890,7 @@ Para testes de integração, você pode optar por:
 | APIs      | RestAssured, Insomnia, HTTPX, Supertest        |
 
 ## [QA] Functional Testing
-<img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="177" align="right">
+<img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
 
 Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente.
 
