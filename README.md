@@ -766,6 +766,8 @@ Portanto, testes de integração são uma fase do processo de teste de software 
 
 Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
 
+<img height="277" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
+
 - `Módulo A`: Autenticação
 
 - `Módulo B`: Catálogo de produtos
@@ -799,7 +801,7 @@ Então, nos testes de integração, o objetivo é:
 
 Se você quer conhecer todas as principais ferramentas e frameworks de testes de integração, aqui vai um apanhado completo, organizado e atualizado, abrangendo múltiplas linguagens e stacks modernas — incluindo ferramentas de propósito geral, específicas para APIs, banco de dados, E2E (fim a fim), e ambientes complexos como microserviços.
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/fc63a3ad-8a9f-4841-bc0c-9855af158009" align="right" height="277">
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/fc63a3ad-8a9f-4841-bc0c-9855af158009" align="right" height="377">
 
 **JavaScript / TypeScript**:
 
