@@ -982,6 +982,8 @@ As principais ferramentas para testes *E2E (End-to-End)* e soluções complement
 
 Ferramentas Especializadas em E2E:
 
+<img height="277" align="right" src="https://github.com/user-attachments/assets/b2033462-bc2a-46e7-bdaf-2db51a548358" />
+
 1. **Para Aplicações Web**  
    - **Cypress**: Framework completo para testes E2E em navegadores, com suporte a simulação de interações (cliques, formulários) e debug em tempo real. Inclui **Cypress Testing Library** para boas práticas de seleção de elementos.  
 
