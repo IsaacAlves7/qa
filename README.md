@@ -136,6 +136,8 @@ O QC atua como um detetive, buscando por bugs e falhas que podem comprometer a q
 - Verificar as correções: Após a correção dos bugs, o QC realiza novos testes para garantir que os problemas foram resolvidos e que não foram introduzidos novos bugs.
 - Monitorar a qualidade do software: Acompanhar o desempenho do software em produção, coletando dados e feedback dos usuários para identificar e corrigir problemas.
 
+<img src="https://github.com/user-attachments/assets/7f699e28-254b-4bdd-9028-c2c2b7b75ac0" align="right" height="377">
+
 QA e QC: Um Time Imbatível. QA e QC são como duas faces da mesma moeda, trabalhando em conjunto para garantir a qualidade do software. Enquanto o QA se concentra na prevenção de defeitos, o QC se concentra na detecção e correção dos problemas. A sinergia entre esses dois processos é essencial para construir um software robusto, confiável e que atenda às expectativas dos usuários.
 
 Compreender a diferença entre QA e QC é fundamental para construir uma estratégia de qualidade de software eficaz. Ao integrar as práticas de QA e QC em todo o ciclo de desenvolvimento, as empresas podem garantir que seus softwares sejam desenvolvidos com qualidade, eficiência e segurança, satisfazendo os usuários e impulsionando o sucesso do negócio.
