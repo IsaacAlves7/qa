@@ -33,6 +33,52 @@ Primeiro, precisamos entender que a qualidade de software é uma área de grande
 > [!Important]
 > **Definição**: Qualidade é a característica ou atributo que define algo ou alguém em termos de excelência, valor, ou nível de desempenho. Pode se referir a propriedades como durabilidade, eficiência, eficácia, ou valor percebido. “Qualidade é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
 
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/ff221b02-782f-4525-8375-b3d672c6eb05" align="right" height="77">
+
+Desde muito tempo, muitos engenheiros de software e empresas desenvolveram softwares de modo casual, por acreditarem que a criação de programas não podia seguir regras, normas ou padrões. Porém, o poder da comunidade eletrônica característica do século XXI, criada por redes de computadores e softwares, instituiu a era da troca de informação e conhecimentos em todo o mundo.
+
+Sendo assim, destaca-se a área de Engenharia de Software, que auxilia o entendimento do processo de desenvolvimento de softwares. Desta forma, nos processos de qualidade de software, a gerência de risco e o teste de software são pontos fundamentais para a garantia da qualidade do produto gerado.
+
+A proposta da disciplina é oferecer a você um guia quanto à importância de as empresas implementarem normas e modelos que permitam a garantia e a correta avaliação de qualidade de produtos e de processos de desenvolvimento de software.
+
+O objetivo da função de qualidade e testes de software é:
+
+- Reconhecer a necessidade de se adotar um processo de testes para garantir a qualidade do desenvolvimento de software, bem como as métricas utilizadas nos testes;
+- Desenvolver um plano de qualidade de software (SQA) que esteja em conformidade com normas e padrões de qualidade, bem como usar ferramentas para garantir a qualidade no seu desenvolvimento;
+- Produzir planos de mitigação de riscos e identificar qual modelo se adapta para cada tipo de software.
+
+Antes de passarmos para os modelos de integração, discutiremos brevemente sobre os VCS, Modelos de controle de versão.
+
+Em uma equipe de desenvolvimento, precisaremos de uma ajuda para sincronizar e manter o histórico do código, de maneira concreta utilizamos ferramentas como **Git** e SVN.
+
+A integração contínua não possui necessidade de muitas ferramentas, em tese, mas alguns auxílios que são padrão em práticas de desenvolvimento são requiridos.
+
+O **Git** é o mais popular em integração hoje em dia, mas não precisamos utiliza-lo, basta que tenhamos algum modelo de controle de versão de nossa escolha.
+
+A ferramenta em si não importa, mas o que devemos inserir em nosso sistema de controle? De maneira geral, deve conter tudo aquilo que é necessário para a construção do projeto.
+
+- código
+- scripts
+- migrações, schemas
+- IDE Configs
+- Devemos definir uma formatação de código para a equipe. Para começarmos um projeto é necessário fazer o clone - a cópia local - e o comando unificado (deve ser fácil).
+- Não significa que devemos comitar o artefato de construção, ou seja, no caso de um desenvolvedor Ruby ou Gem não deveria estar dentro do repositório, o mesmo ocorre no mundo Java. Resultados da construção do software não são comitados como gem, jar, image e modules.
+
+Sabemos o que comitar e o que não comitar, então seguiremos estudando os modelos de repositório que exitem no mercado. Então, o que deve conter no repositório?
+
+- **Scripts de testes**, os testes são uma parte essencial da aplicação. Os testes também são códigos, e scripts relacionados a eles devem entrar no repositório;
+- **Database Schema**, faz parte da aplicação e é preciso para construir e executar o projeto.
+
+Contudo, como organizar nossos repositórios? Em uma empresa encontramos mais de um projeto por vez, e é importante que saibamos como representar estes projetos dentro do repositório.
+
+O que é mais natural é utilizar um repositório para cada projeto, de um tamanho razoável com escopo bem definido. Essa forma de organização é chamada **Multi-repo**.
+
+No entanto, nos últimos anos, surgiu uma nova forma de organização dos nossos projetos dentro de repositórios. Empresas grandes de tecnologia como Google e Facebook não utilizam o esquema Multi-repo, porque são empresas que trabalham em inúmeros projetos de maneira concomitante. Empresas que atuam com outra dimensão de projetos utilizam o **Mono-repo**, ou seja, um único e gigantesco repositório que acumula todos os projetos.
+
+A desvantagem do segundo modelo é o repositório precisará ser realmente grande, e o *build* pode ser lento, talvez nem o Git seja mais a ferramenta adequada para fazer o controle de versões para esta situação. Contudo, como temos apenas um grande repositório temos uma administração relativamente mais simples, então a verificação de padrões é facilitada. As refatorações são globais, afinal estão todos dentro da mesma base.
+
+Vamos trabalhar com o Multi-repo, afinal é o mais comum no dia a dia da maioria dos desenvolvedores.
+
 > [!Note]
 > **FUNDAMENTOS DA QUALIDADE DE SOFTWARE**: Incluem a definição de requisitos, o planejamento de testes e a execução de testes de forma sistemática. Esses processos são essenciais para garantir que o software desenvolvido atenda às necessidades do usuário e atinja a qualidade esperada.
 
