@@ -382,7 +382,7 @@ No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios 
 
 A fase de ferramentas é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="277" align="right"> 
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="377" align="right"> 
 
 Na construção de um bom teste automatizado, o primeiro passo é **nomear corretamente o que está sendo testado**, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim. Depois, **seguir o padrão AAA** (Arrange, Act, Assert) é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
 
