@@ -726,6 +726,10 @@ São similares aos fakes e aos spies, mas, ao contrário destes, ele consegue al
 
 O stub também é uma forma de teste duplo usado para fornecer uma resposta controlada das dependências de um componente. Esse tipo de teste duplo pode ser usado para fornecer uma resposta controlada sem fazer nenhuma lógica real. Os stubs geralmente não dão nenhuma resposta fora do que está programado no teste. Isso permite que mais de um cenário para uma única dependência seja representado no teste.
 
+As dependências externas podem não se limitar apenas às classes, mas também a certos métodos. O **stubbing de método** deve ser feito quando sua função está chamando uma função externa em sua implementação. Nesse caso, você faz com que essa função retorne o valor que você deseja em vez de chamar o método real.
+
+Por exemplo, o método que você está testando (A) está chamando um método externo (B) em sua implementação. B faz uma consulta ao banco de dados, buscando todos os alunos com notas maiores que 80. Fazer uma chamada real ao banco de dados não é uma boa prática aqui. Portanto, você faz um stub do método e o faz retornar uma lista fictícia de alunos que você precisa para testar.
+
 Qual é a diferença entre Mock e Stub? A julgar pela definição de mock e stub, parece que mock e stub são a mesma coisa. Isso ocorre porque uma simulação pode ser considerada uma extensão de um esboço. Um stub é apenas uma implementação simples usada para fornecer uma resposta controlada. Enquanto isso, a simulação não funciona apenas como um stub, mas também verifica o comportamento de um componente e sua interação com o objeto que a simulação cria.
 
 <img src="https://github.com/user-attachments/assets/4024470e-6396-4b5b-849c-ec7a86e2bc54" height="277" align="right">
