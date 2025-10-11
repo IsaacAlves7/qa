@@ -352,7 +352,9 @@ Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipel
 
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/7ae43145-a45f-49a5-98ae-693912faae5d" align="right" height="77">
 
-Conforme o tempo passa a tecnologia segue avançando e os sistemas que são desenvolvidos por pessoas da área de TI estão cada vez mais completos. Antigamente os testes manuais eram os mais utilizados, mas eles já não suprem mais às demandas das empresas e acabam sendo suscetíveis a erros. Então, as organizações precisam desenvolver mais e com melhor qualidade, é aí que entram os **testes automatizados** que são programas que executam testes em softwares que estão em construção de uma forma padronizada, sem ser necessário a intervenção humana.
+Uma vez que o código é integrado, a próxima etapa é o **teste automatizado** que envolve a execução de um conjunto de testes para garantir que as alterações de código sejam funcionais, atendam aos padrões de qualidade esperados e estejam livres de defeitos. Essa etapa ajuda a identificar problemas no início do processo de desenvolvimento, permitindo que os desenvolvedores os corrijam de maneira rápida e eficiente.
+
+Conforme o tempo passa a tecnologia segue avançando e os sistemas que são desenvolvidos por pessoas da área de TI estão cada vez mais completos. Antigamente os testes manuais eram os mais utilizados, mas eles já não suprem mais às demandas das empresas e acabam sendo suscetíveis a erros. Então, as organizações precisam desenvolver mais e com melhor qualidade, é aí que entram os *testes automatizados* que são programas que executam testes em softwares que estão em construção de uma forma padronizada, sem ser necessário a intervenção humana.
 
 Pois, tais testes possuem funcionalidades capazes de testar de forma automática todos os aspectos de uma plataforma, com o intuito de assegurar um desempenho adequado. Ou seja, a automação de teste é o uso de software para controlar a execução do teste de software, a comparação dos resultados esperados com os resultados reais, a configuração das pré-condições de teste e outras funções de controle e relatório de teste. 
 
