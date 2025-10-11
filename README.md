@@ -570,6 +570,13 @@ Além do unittest, existem outros frameworks de teste de unidade disponíveis pa
 
 A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O unittest é uma boa opção para projetos simples, enquanto frameworks como Pytest e Mock podem ser mais adequados para projetos mais complexos.
 
+Lembre-se das seguintes diretrizes ao escrever testes para seus métodos:
+
+- Teste se a saída esperada de um método corresponde à saída real.
+- Teste se as funções chamadas dentro do método estão ocorrendo o número desejado de vezes.
+- Não tente testar código que não faça parte do método que está sendo testado.
+- Não faça chamadas de API, conexões de banco de dados ou solicitações de rede ao escrever seus testes.
+
 Sobre os conceitos técnicos a respeito de testes de unidades, temos:
 
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/f92b16ca-c0a0-40ab-ab33-f8ec9f4cf619" height="77" align="right">
