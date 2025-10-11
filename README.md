@@ -736,7 +736,11 @@ Qual é a diferença entre Mock e Stub? A julgar pela definição de mock e stub
 
 Os **mocks** tem expectativas sobre o jeito que deve ser chamado e, caso ele não seja chamado da forma correta, o teste deve falhar. Eles são usados para testar interações entre métodos e são úteis onde não há como verificar algumas mudanças de estado ou retornos do método testado diretamente.
 
-**Mocking** (Mockado) é uma técnica usada em testes de software para simular o comportamento de dependências externas, como serviços, bancos de dados, ou APIs, dentro de uma unidade de código que você está testando. Ao invés de usar as implementações reais dessas dependências, você cria "mocks" (objetos falsos) que imitam o comportamento esperado, permitindo testar o código de forma isolada. O principal benefício do mocking é garantir que o teste foque apenas no comportamento da unidade de código em questão, sem se preocupar com o comportamento ou estado das dependências externas.
+**Mocking** (Mockado) é uma técnica usada em testes de software para simular o comportamento de dependências externas, como serviços, bancos de dados, ou APIs, dentro de uma unidade de código que você está testando. Ao invés de usar as implementações reais dessas dependências, você cria "mocks" (objetos falsos) que imitam o comportamento esperado, permitindo testar o código de forma isolada. 
+
+O principal benefício do mocking é garantir que o teste foque apenas no comportamento da unidade de código em questão, sem se preocupar com o comportamento ou estado das dependências externas. A classe cujos métodos você está testando pode ter algumas dependências externas. Como mencionado anteriormente, você não deve tentar testar código que não faça parte da função que está sendo testada.
+
+Nos casos em que sua função usa uma classe externa, porém, é uma boa prática fazer um mock dessa classe, ou seja, ter valores de mock-up (algo como "simulações", em português) em vez dos valores reais. Usaremos a biblioteca **Mockito** para esse fim.
 
 Exemplo: Se você estiver testando um serviço que depende de um repositório de dados, você pode usar um mock para simular as respostas do repositório, em vez de acessar o banco de dados real.
 
