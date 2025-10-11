@@ -370,9 +370,11 @@ Testes automatizados são uma das práticas mais fundamentais no desenvolvimento
 
 2. **Testes de integração** (verificam a comunicação entre partes),
 
-3. **Testes de sistema** (validam o sistema como um todo) e
+3. **Testes funcionais**
 
-4. **Testes end-to-end** (simulam o comportamento real do usuário).
+4. **Testes de sistema** (validam o sistema como um todo)
+
+5. **Testes end-to-end** (simulam o comportamento real do usuário).
 
 Cada nível exige atenção diferente e ferramentas específicas:
 
