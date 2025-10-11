@@ -599,6 +599,10 @@ test("soma dois números positivos", () => {
 });
 ```
 
+As _afirmações_ (em inglês, **assertions**) determinam se seu teste é `aprovado` ou `reprovado`. Elas comparam o valor de retorno esperado de um método com o valor real. Há uma série de afirmações que você pode fazer no final do seu teste.
+
+A classe `Assertions` no JUnit consiste em métodos estáticos que fornecem várias condições para decidir se o teste é aprovado ou não. Veremos esses métodos à medida que eu o guie por cada exemplo.
+
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/1e50bc84-048c-40c7-b7b8-98dfdeec38a2" height="77" align="right">
 
 ❌ **Testes Inválidos** (`fail`): São entradas e saídas de dados não comuns ao sistema. Apresentam tratamento para validar o tipo de dado inválido ou situação. Pode apresentar até dois retornos, uma mensagem para um log no sistema e uma mensagem com formatação e escrita adequada ao usuário. São tão importantes quanto os testes válidos, porque ajudam a garantir que sua função se defenda bem contra entradas erradas, estados incorretos ou fluxos inesperados. São testes que usam entradas inválidas, incorretas ou fora do esperado; Esperam que o código falhe corretamente (com exceção, erro, ou retorno de falha); Verificam se o sistema é robusto contra dados errados ou uso indevido da função.
