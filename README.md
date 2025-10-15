@@ -556,6 +556,8 @@ Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplica�
 
 Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
 
+No unitário, cada parte do sistema ganha uma atenção devida e detalhada, de modo a otimizar o processo de identificação de erros. O objetivo é ajudar a rastrear os bugs e impedir que eles retornem depois que alterações forem feitas no produto.
+
 Portanto, são testes que verificam se uma parte específica do código, costumeiramente a nível de função, está funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. 
 
 > 🧪 Os testes de unidade verificam unidades, como métodos, funções e componentes dentro do software. São os testes mais rápidos, baratos de escrever e sua manutenção é simples. Para verificar o <a href="">comportamento</a> dessas pequenas partes isoladas do sistema sem dependências externas como banco de dados, APIs, arquivos ou rede. Por isso, eles são rápidos de executar, baratos de manter e oferecem feedback imediato durante o desenvolvimento. Como testam unidades isoladas, são fundamentais para garantir a estabilidade do código à medida que ele evolui.
@@ -871,6 +873,8 @@ Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
 - `Módulo D`: Pagamento
 
 No teste de integração, você testaria coisas como:
+
+![integration-testing](https://github.com/user-attachments/assets/2fcdee58-77a5-42d9-a61f-9b07aab4f16c)
 
 - ✅ Se um usuário autenticado consegue adicionar produtos ao carrinho (A + C).
 
