@@ -829,7 +829,7 @@ Por fim, existe uma máxima importante: **“don’t mock what you don’t own�
 
 Ou seja, as boas práticas são: usar mocks para comandos e stubs para queries, escolher o double mais simples possível para o cenário, não abusar de mocks em todos os lugares, restringir o uso a testes de unidade, e nunca mockar diretamente dependências externas que você não controla.
 
-<div align="right"><img alt="sociable-vs-solitary" src="https://github.com/user-attachments/assets/c355f0c9-a037-42cb-83a9-bdf46e865df5" /></div>
+<div align="center"><img alt="sociable-vs-solitary" src="https://github.com/user-attachments/assets/c355f0c9-a037-42cb-83a9-bdf46e865df5" /></div>
 
 Pouca gente conhece bem essa distinção, embora ela seja bem importante quando o assunto é qualidade e isolamento de testes unitários. Os termos *solitary tests* e *sociable tests* vêm de uma classificação proposta por **Gerard Meszaros** no livro *xUnit Test Patterns*. A ideia é entender como os testes unitários se relacionam com outras unidades de código e até que ponto o teste realmente está isolando a unidade sob teste (o chamado *System Under Test* — SUT). A diferença entre sociable tests e solitary tests praticamente gira em torno de quando e como você usa test doubles.
 
