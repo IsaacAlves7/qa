@@ -759,7 +759,7 @@ Por exemplo, um programa que utiliza um servidor de banco de dados é relativame
 
 Um test double também pode ser usado para testar parte do sistema que está pronta para teste, mesmo que suas dependências não estejam.
 
-Por exemplo, em um sistema com os módulos Login, Home e User, suponha que Login esteja pronto para teste, mas os outros dois não. As funções consumidas de Home e User podem ser implementadas como test doubles para que Login possa ser testado.
+Por exemplo, em um sistema com os módulos `Login`, `Home` e `User`, suponha que `Login` esteja pronto para teste, mas os outros dois não. As funções consumidas de `Home` e `User` podem ser implementadas como test doubles para que `Login` possa ser testado.
 
 Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar. 
 
