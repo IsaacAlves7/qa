@@ -741,11 +741,25 @@ O ideal seria existir algo que possibilitasse que os testes trouxessem os melhor
 
 Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste. Termo genérico para qualquer substituição de objeto de produção em testes.
 
-De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro.
+De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro. O termo vem da analogia com os “dublês de cinema”: quando você não pode (ou não deve) usar um componente real em um teste, você o substitui por uma versão simulada que cumpre o mesmo papel de forma controlada e previsível. Os *test doubles* podem ser aplicados **a qualquer dependência externa ou componente cuja execução real atrapalhe o isolamento do teste**.
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/b3dfda90-1d63-4672-adfe-67e334ee45cd" />
 
 Em resumo, as duplicatas de teste (test doubles) são usadas para criar testes rápidos, independentes, determinísticos e confiáveis. Eles representam componentes reais, semelhante à forma como os dublês são usados nos filmes. Um test double pode ser usado para simplificar testes, aumentar a velocidade de execução ou permitir resultados determinísticos de uma ação.
+
+Na prática, isso inclui **APIs externas**, **bancos de dados**, **requisições HTTP**, **filas de mensageria (como RabbitMQ)**, **sistemas de cache (Redis, por exemplo)**, **consultas SQL complexas**, **chamadas a LLMs (modelos de linguagem)** e até **funções, classes e métodos internos** que geram efeitos colaterais ou dependem de recursos não determinísticos (como hora do sistema, aleatoriedade, IO ou threads).
+
+Por exemplo, em um teste unitário que precisa validar a lógica de negócio de uma função que consome uma API REST, você não quer depender de uma chamada real — isso tornaria o teste lento, sujeito a falhas de rede e dependente de algo fora do seu controle. Nesse caso, você cria um **mock** da API, que retorna uma resposta previsível. Da mesma forma, se a função lê dados de um banco, você cria um **stub** ou **fake** para simular a consulta.
+
+Martin Fowler classifica os test doubles em cinco tipos:
+
+* **Dummy**, usado apenas para preencher parâmetros, sem comportamento algum.
+* **Stub**, que retorna respostas fixas ou predefinidas.
+* **Fake**, que tem uma implementação funcional, mas simplificada (por exemplo, um banco de dados em memória).
+* **Spy**, que registra chamadas e argumentos para verificação posterior.
+* **Mock**, que define expectativas explícitas de comportamento (quantas vezes deve ser chamado, com quais parâmetros etc.).
+
+Então, resumindo: o conceito de *test doubles* se aplica a **qualquer camada do sistema** — desde uma função pura até integrações complexas com APIs, bancos ou modelos de IA — sempre que o objetivo é **isolar o teste da dependência real** para torná-lo **determinístico, rápido e confiável**.
 
 Por exemplo, um programa que utiliza um servidor de banco de dados é relativamente lento e consome recursos significativos do sistema, o que prejudica a produtividade dos testes. Um teste pode exigir dados do banco de dados que, sob atividade normal do sistema, estão em constante alteração, fornecendo, assim, saídas não determinísticas para qualquer consulta. Um test double pode fornecer um valor estático em vez de acessar um banco de dados real, evitando tanto chamadas de rede ou do sistema quanto dados em constante mudança.
 
