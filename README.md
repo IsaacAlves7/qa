@@ -874,9 +874,9 @@ No contexto de testes de integração, **módulos** são partes distintas de um 
 
 Em testes de integração, módulos são as **unidades de software intermediárias**, partes funcionais do sistema que já foram testadas isoladamente (em testes de unidade) e agora precisam ser verificadas em conjunto para garantir que **interajam corretamente** umas com as outras. Em outras palavras, quando falamos em módulos, estamos nos referindo a componentes do sistema que possuem fronteiras bem definidas e trocam dados entre si, como classes, serviços, APIs, repositórios, adaptadores, filas, ou até microservices.
 
-Por exemplo, imagine uma aplicação ASP.NET Core com RabbitMQ. Você pode ter:
-
 <img height="177" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
+
+Por exemplo, imagine uma aplicação ASP.NET Core com RabbitMQ. Você pode ter:
 
 * Um **módulo de Producer**, responsável por publicar mensagens.
 * Um **módulo de Consumer**, responsável por ler e processar essas mensagens.
