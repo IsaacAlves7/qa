@@ -745,13 +745,15 @@ De acordo com Martin Fowler, test doubles é um conceito usado quando, para viab
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/b3dfda90-1d63-4672-adfe-67e334ee45cd" />
 
+Em resumo, as duplicatas de teste (test doubles) são usadas para criar testes rápidos, independentes, determinísticos e confiáveis. Eles representam componentes reais, semelhante à forma como os dublês são usados nos filmes.
+
 Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar. 
 
 Fazendo um paralelo simplista, eles são como dublês de atores em um filme: substituem aplicações reais durante a realização de um teste por simular sua aparência e comportamento. Isso traz menos complexidade ao teste, além de permitir verificar uma parte de um sistema sem ficar preso em todas as suas outras porções.
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
+Embora os test doubles sejam frequentemente usados para facilitar o teste de unidade, existem limitações em seu uso, a principal sendo que a conectividade real ao banco de dados ou outros acessos externos não é comprovada por esses testes. Para evitar erros que podem passar despercebidos por isso, são necessários outros testes que instanciem o código com as implementações "reais" das interfaces mencionadas acima. Esses riscos de integração geralmente são cobertos por testes de integração, testes de sistema ou testes de integração de sistema.
 
-Em resumo, as duplicatas de teste (test doubles) são usadas para criar testes rápidos, independentes, determinísticos e confiáveis. Eles representam componentes reais, semelhante à forma como os dublês são usados nos filmes.
+<img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
 
 Talvez você não esteja familiarizado com o termo test double. É que, às vezes, eles são generalizados pela palavra mock, ou então pela expressão “mockar” . O fato é que mock é apenas um dos exemplos de test doubles dentro de uma família muito maior. Além dos mocks, existem, por exemplo, os fakes, os stubs, os dummies… Abaixo, explico alguns deles.
 
