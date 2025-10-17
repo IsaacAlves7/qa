@@ -876,7 +876,7 @@ Portanto, testes de integração são uma fase do processo de teste de software 
 
 Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
 
 - `Módulo A`: Autenticação
 
@@ -888,7 +888,7 @@ Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
 
 No teste de integração, você testaria coisas como:
 
-![integration-testing](https://github.com/user-attachments/assets/2fcdee58-77a5-42d9-a61f-9b07aab4f16c)
+<img height="177" align="right" src="https://github.com/user-attachments/assets/2fcdee58-77a5-42d9-a61f-9b07aab4f16c" />
 
 - ✅ Se um usuário autenticado consegue adicionar produtos ao carrinho (A + C).
 
