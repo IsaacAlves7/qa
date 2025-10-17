@@ -751,13 +751,7 @@ Na prática, isso inclui **APIs externas**, **bancos de dados**, **requisições
 
 Por exemplo, em um teste unitário que precisa validar a lógica de negócio de uma função que consome uma API REST, você não quer depender de uma chamada real — isso tornaria o teste lento, sujeito a falhas de rede e dependente de algo fora do seu controle. Nesse caso, você cria um **mock** da API, que retorna uma resposta previsível. Da mesma forma, se a função lê dados de um banco, você cria um **stub** ou **fake** para simular a consulta.
 
-Martin Fowler classifica os test doubles em cinco tipos:
-
-* **Dummy**, usado apenas para preencher parâmetros, sem comportamento algum.
-* **Stub**, que retorna respostas fixas ou predefinidas.
-* **Fake**, que tem uma implementação funcional, mas simplificada (por exemplo, um banco de dados em memória).
-* **Spy**, que registra chamadas e argumentos para verificação posterior.
-* **Mock**, que define expectativas explícitas de comportamento (quantas vezes deve ser chamado, com quais parâmetros etc.).
+<img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
 
 Então, resumindo: o conceito de *test doubles* se aplica a **qualquer camada do sistema** — desde uma função pura até integrações complexas com APIs, bancos ou modelos de IA — sempre que o objetivo é **isolar o teste da dependência real** para torná-lo **determinístico, rápido e confiável**.
 
@@ -773,21 +767,19 @@ Fazendo um paralelo simplista, eles são como dublês de atores em um filme: sub
 
 Advertências: Embora os test doubles sejam frequentemente usados para facilitar o teste de unidade, existem limitações em seu uso, a principal sendo que a conectividade real ao banco de dados ou outros acessos externos não é comprovada por esses testes. Para evitar erros que podem passar despercebidos por isso, são necessários outros testes que instanciem o código com as implementações "reais" das interfaces mencionadas acima. Esses riscos de integração geralmente são cobertos por testes de integração, testes de sistema ou testes de integração de sistema.
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
-
 Talvez você não esteja familiarizado com o termo test double. É que, às vezes, eles são generalizados pela palavra mock, ou então pela expressão “mockar” . O fato é que mock é apenas um dos exemplos de test doubles dentro de uma família muito maior. Além dos mocks, existem, por exemplo, os fakes, os stubs, os dummies… Abaixo, explico alguns deles.
 
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
 
-Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas:
+Martin Fowler classifica os test doubles em cinco tipos, que são os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas:
 
 <a href="https://pt.slideshare.net/slideshow/sc-mad-tdd-workshop-test-doubles-36543998/36543998"><img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right"></a>
 
-- `Dummy`: Passado mas nunca usado; listas de parâmetros de preenchimentos
-- `Fake`: tem uma implementação funcional, mas não é adequado para produção
-- `Stub`: Fornece respostas prontas para chamadas feitas durante o teste
-- `Spy`: Um esboço que registra informações sobre como foi chamado
-- `Mock`: Pré-programado com expectativas, formando uma especificação das chamadas esperadas
+1. `Dummy`: Passado mas nunca usado; listas de parâmetros de preenchimentos. usado apenas para preencher parâmetros, sem comportamento algum.
+2. `Fake`: tem uma implementação funcional, mas não é adequado para produção. que tem uma implementação funcional, mas simplificada (por exemplo, um banco de dados em memória).
+3. `Stub`: Fornece respostas prontas para chamadas feitas durante o teste. que retorna respostas fixas ou predefinidas.
+4. `Spy`: Um esboço que registra informações sobre como foi chamado. que registra chamadas e argumentos para verificação posterior.
+5. `Mock`: Pré-programado com expectativas, formando uma especificação das chamadas esperadas. que define expectativas explícitas de comportamento (quantas vezes deve ser chamado, com quais parâmetros etc.).
 
 O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
 
