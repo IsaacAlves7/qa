@@ -757,9 +757,9 @@ Talvez você não esteja familiarizado com o termo test double. É que, às veze
 
 Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
 
-<a href="https://pt.slideshare.net/slideshow/sc-mad-tdd-workshop-test-doubles-36543998/36543998"><img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right"></a>
-
 Os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas:
+
+<a href="https://pt.slideshare.net/slideshow/sc-mad-tdd-workshop-test-doubles-36543998/36543998"><img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right"></a>
 
 - `Dummy`: Passado mas nunca usado; listas de parâmetros de preenchimentos
 - `Fake`: tem uma implementação funcional, mas não é adequado para produção
