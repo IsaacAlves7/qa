@@ -872,11 +872,28 @@ São testes que verificam se _módulos_ diferentes do sistema funcionam corretam
 
 No contexto de testes de integração, **módulos** são partes distintas de um sistema que têm responsabilidade própria (ex: autenticação, pagamentos, cadastro), podem ou não ser executadas separadamente e precisam se comunicar entre si para o sistema funcionar corretamente. Módulo, em testes de integração, se refere a qualquer parte autônoma do sistema (seja uma classe, serviço, camada ou microserviço) que precisa se comunicar com outras partes para o sistema funcionar. Testes de integração são o que garantem que essas partes realmente funcionam bem juntas, usando dados reais, banco de dados, APIs, filas, etc. Os testes de integração avaliam se a comunicação entre esses módulos está funcionando como esperado.
 
+Em testes de integração, módulos são as **unidades de software intermediárias**, partes funcionais do sistema que já foram testadas isoladamente (em testes de unidade) e agora precisam ser verificadas em conjunto para garantir que **interajam corretamente** umas com as outras. Em outras palavras, quando falamos em módulos, estamos nos referindo a componentes do sistema que possuem fronteiras bem definidas e trocam dados entre si, como classes, serviços, APIs, repositórios, adaptadores, filas, ou até microservices.
+
+Por exemplo, imagine uma aplicação ASP.NET Core com RabbitMQ. Você pode ter:
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
+
+* Um **módulo de Producer**, responsável por publicar mensagens.
+* Um **módulo de Consumer**, responsável por ler e processar essas mensagens.
+* Um **módulo de persistência**, que grava os dados no banco.
+  Cada um desses módulos pode ser testado separadamente (testes unitários), mas o **teste de integração** se preocupa em verificar o comportamento **entre eles** — por exemplo, se o producer realmente publica no RabbitMQ e se o consumer consome e processa corretamente a mensagem publicada.
+
+O conceito de módulo em integração é relativo: em um projeto monolítico, um módulo pode ser um **conjunto de classes coesas**; em uma arquitetura de microsserviços, um módulo pode ser **um serviço inteiro**. O importante é que o módulo tenha **interfaces de comunicação claras** (como endpoints HTTP, filas, métodos públicos, etc.), porque os testes de integração se baseiam exatamente nessas fronteiras.
+
+No fundo, o teste de integração responde à pergunta: 
+
+> “Esses módulos, quando combinados, ainda funcionam corretamente como um todo?” — garantindo que o comportamento do sistema emergente seja coerente, e que os dados fluam corretamente entre as partes.
+
 Portanto, testes de integração são uma fase do processo de teste de software em que módulos ou componentes são combinados e testados em grupo. Ela sucede o teste de unidade, em que os módulos são testados individualmente, e antecede o teste de sistema, em que o sistema completo é testado num ambiente que simula o ambiente de produção. Os testes de integração têm como objetivo verificar a funcionalidade e a comunicação entre módulos. Eles são projetados para identificar erros de integração, que são erros que ocorrem quando dois ou mais módulos são combinados.
 
 Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/2fcdee58-77a5-42d9-a61f-9b07aab4f16c" />
 
 - `Módulo A`: Autenticação
 
@@ -886,9 +903,7 @@ Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
 
 - `Módulo D`: Pagamento
 
-No teste de integração, você testaria coisas como:
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/2fcdee58-77a5-42d9-a61f-9b07aab4f16c" />
+No teste de integração, você testaria coisas como: 
 
 - ✅ Se um usuário autenticado consegue adicionar produtos ao carrinho (A + C).
 
