@@ -775,11 +775,15 @@ Martin Fowler classifica os test doubles em cinco tipos, que são os tipos mais 
 
 <a href="https://pt.slideshare.net/slideshow/sc-mad-tdd-workshop-test-doubles-36543998/36543998"><img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right"></a>
 
-1. `Dummy`: Passado mas nunca usado; listas de parâmetros de preenchimentos. usado apenas para preencher parâmetros, sem comportamento algum.
-2. `Fake`: tem uma implementação funcional, mas não é adequado para produção. que tem uma implementação funcional, mas simplificada (por exemplo, um banco de dados em memória).
-3. `Stub`: Fornece respostas prontas para chamadas feitas durante o teste. que retorna respostas fixas ou predefinidas.
-4. `Spy`: Um esboço que registra informações sobre como foi chamado. que registra chamadas e argumentos para verificação posterior.
-5. `Mock`: Pré-programado com expectativas, formando uma especificação das chamadas esperadas. que define expectativas explícitas de comportamento (quantas vezes deve ser chamado, com quais parâmetros etc.).
+1. `Dummy` (Boneco de simulação): Passado mas nunca usado; listas de parâmetros de preenchimentos. Usado apenas para preencher parâmetros, sem comportamento algum. Objetos de preenchimento e sem funcionalidade.
+
+2. `Fake` (Falso): tem uma implementação funcional, mas não é adequado para produção. Que tem uma implementação funcional, mas simplificada (por exemplo, um banco de dados em memória). Implementação simplificada e funcionalidade básica.
+
+3. `Stub` (Simulacro): Fornece respostas prontas para chamadas feitas durante o teste. Que retorna respostas fixas ou predefinidas. Respostas pré-determinadas e imita o comportamento real.
+
+4. `Spy` (Espião): Um esboço que registra informações sobre como foi chamado. Que registra chamadas e argumentos para verificação posterior. Monitoramento de interações e observa o comportamento.
+
+5. `Mock` (Simulado): Pré-programado com expectativas, formando uma especificação das chamadas esperadas. Que define expectativas explícitas de comportamento (quantas vezes deve ser chamado, com quais parâmetros etc.). Verificação de comportamento e rastreamento de chamadas de métodos.
 
 O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
 
