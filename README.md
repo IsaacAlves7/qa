@@ -376,6 +376,8 @@ Ou seja:
 
 Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipelines, eles caminham juntos, porque é mais eficiente falhar cedo se os testes não passarem.
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/b22f3aba-0a19-43b7-9da4-fdca9afa4231" />
+
 - **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. E mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”.;
 
 - **Devem ser realizados antes do commit**: Aqui você está descrevendo o que chamamos de pré-validação local. O ideal é que o desenvolvedor rode testes (unitários pelo menos) antes de commitar, garantindo que não quebrou nada básico. Isso pode ser cultural (boa prática individual) ou técnico (com pre-commit hooks no Git, que bloqueiam commit se os testes falharem). Dessa forma, o código que chega ao repositório central já tem uma garantia mínima.;
