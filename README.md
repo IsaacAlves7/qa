@@ -849,6 +849,8 @@ Na segunda imagem, vemos os test doubles categorizados em um “universo” com 
 
 Outra boa prática é manter os doubles **próximos do contexto do teste** e não generalizá-los cedo demais. Doubles genéricos compartilhados entre muitos testes podem virar fonte de inconsistência ou dificultar a leitura. Em TDD, por exemplo, é comum criar o double dentro do próprio teste e só refatorar para reaproveitar se realmente houver repetição.
 
+<img width="734" height="361" alt="image_thumb_1789" src="https://github.com/user-attachments/assets/e6816068-49e9-4e62-aee1-690b4c834267" />
+
 Também é importante lembrar que test doubles são **ferramentas para testes de unidade**, onde o isolamento é crucial. Em testes de integração ou end-to-end, eles devem ser usados com cautela, pois nesses níveis o objetivo é justamente validar a interação real entre componentes. Usar doubles nesses contextos pode dar uma falsa sensação de segurança, porque o código passa no teste, mas falha no ambiente real.
 
 Por fim, existe uma máxima importante: **“don’t mock what you don’t own”** — ou seja, evite criar mocks para dependências externas de terceiros, como APIs de bibliotecas que você não controla. Isso acopla seus testes a detalhes que podem mudar fora do seu controle. Em vez disso, prefira abstrair essas dependências atrás de interfaces próprias e mockar essas interfaces. Isso deixa seus testes mais estáveis e mantém o acoplamento sob seu domínio.
