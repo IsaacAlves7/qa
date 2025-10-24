@@ -674,24 +674,24 @@ Dividir (x int,y int)=z int
 
 Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma mensagem ao usuário, avisando que a operação é inválida. Caso a expressão seja um dado comum do sistema, a autorização para tal validação deverá ser do usuário, pois faz parte do conjunto de regras de negócio. Não existe retorno inválido sem um tratamento. O tratamento genérico será apenas para condições não visíveis na regra e uso do sistema.
 
-<img src="https://github.com/user-attachments/assets/d1508d5e-a0f6-412f-8c12-d2f6237caef1" height="77" align="right">
+<img src="https://github.com/user-attachments/assets/e80b1013-dd61-4dc1-a997-8addb2209c4e" height="177" align="right">
 
 👁️‍🗨️ **Domínio**: No domínio de testes, usamos testes unitários para validar a funcionalidade de cada componente do nosso domínio de negócio, refere-se à parte do sistema que é testada para garantir que a lógica de negócio e a funcionalidade do código estão corretas, os testes unitários focam em componentes individuais desse domínio.
 
 > [!Important]
 > É importante ressaltar sobre um termo muito conhecido em ciência da computação, chamado **domínio** (domain), cujo a diferença está no nível de abstração e no foco de cada conceito. A palavra "domínio" realmente aparece em contextos diferentes e pode causar confusão se não for bem delimitada.
->
-> No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes — ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
->
-> Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso — é a área de interesse do sistema, como logística, financeiro, saúde, etc.
->
-> No caso de arquiteturas como Clean Architecture ou Ports & Adapters, "domínio" é uma camada bem definida e isolada que representa as regras puras do negócio, ou seja, aquilo que não muda mesmo que a tecnologia mude; é o núcleo da aplicação.
->
-> Já em TDD e BDD, o termo "domínio" aparece implicitamente quando você escreve testes voltados para comportamentos do sistema, especialmente no BDD que foca na linguagem ubíqua e no comportamento esperado do domínio de negócio, enquanto o TDD tende a atuar mais no detalhe técnico e no design emergente.
->
-> Por fim, em design de software e design patterns, o "domínio" pode surgir como contexto onde os padrões são aplicados, mas o foco desses conceitos é mais estrutural e de solução técnica do que modelagem de negócio em si.
-> 
-> Então, "domínio" em DDD e arquiteturas limpas é o coração das regras do negócio, enquanto em testes e padrões, é mais o cenário onde você aplica as práticas, muitas vezes sem foco explícito em representar o negócio como um modelo coeso.
+
+No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes — ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
+
+Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso — é a área de interesse do sistema, como logística, financeiro, saúde, etc.
+
+No caso de arquiteturas como Clean Architecture ou Ports & Adapters, "domínio" é uma camada bem definida e isolada que representa as regras puras do negócio, ou seja, aquilo que não muda mesmo que a tecnologia mude; é o núcleo da aplicação.
+
+Já em TDD e BDD, o termo "domínio" aparece implicitamente quando você escreve testes voltados para comportamentos do sistema, especialmente no BDD que foca na linguagem ubíqua e no comportamento esperado do domínio de negócio, enquanto o TDD tende a atuar mais no detalhe técnico e no design emergente.
+
+Por fim, em design de software e design patterns, o "domínio" pode surgir como contexto onde os padrões são aplicados, mas o foco desses conceitos é mais estrutural e de solução técnica do que modelagem de negócio em si.
+
+Então, "domínio" em DDD e arquiteturas limpas é o coração das regras do negócio, enquanto em testes e padrões, é mais o cenário onde você aplica as práticas, muitas vezes sem foco explícito em representar o negócio como um modelo coeso.
 
 Você pode dizer: 
 
