@@ -849,15 +849,15 @@ Na segunda imagem, vemos os test doubles categorizados em um “universo” com 
 
 Outra boa prática é manter os doubles **próximos do contexto do teste** e não generalizá-los cedo demais. Doubles genéricos compartilhados entre muitos testes podem virar fonte de inconsistência ou dificultar a leitura. Em TDD, por exemplo, é comum criar o double dentro do próprio teste e só refatorar para reaproveitar se realmente houver repetição.
 
-<img width="734" height="361" alt="image_thumb_1789" src="https://github.com/user-attachments/assets/e6816068-49e9-4e62-aee1-690b4c834267" />
-
-<img width="729" height="356" alt="image_thumb_2124" src="https://github.com/user-attachments/assets/a82df8dd-4b3f-444a-bbae-667bef34d27a" />
-
-<img width="733" height="362" alt="image_thumb124" src="https://github.com/user-attachments/assets/56f79bdd-c770-4a02-af69-6b08a4623f24" />
-
-<img width="734" height="341" alt="image_thumb789" src="https://github.com/user-attachments/assets/ed92616b-0163-4fd5-946c-a8277d867352" />
-
-<img width="727" height="497" alt="image_thumbqqq" src="https://github.com/user-attachments/assets/e8328b45-74e9-49f6-9470-1c115b57d299" />
+<table>
+ <tr>
+  <td><img width="734" height="361" alt="image_thumb_1789" src="https://github.com/user-attachments/assets/e6816068-49e9-4e62-aee1-690b4c834267" /></td>
+  <td><img width="729" height="356" alt="image_thumb_2124" src="https://github.com/user-attachments/assets/a82df8dd-4b3f-444a-bbae-667bef34d27a" /></td>
+  <td><img width="733" height="362" alt="image_thumb124" src="https://github.com/user-attachments/assets/56f79bdd-c770-4a02-af69-6b08a4623f24" /></td>
+  <td><img width="734" height="341" alt="image_thumb789" src="https://github.com/user-attachments/assets/ed92616b-0163-4fd5-946c-a8277d867352" /></td>
+  <td><img width="727" height="497" alt="image_thumbqqq" src="https://github.com/user-attachments/assets/e8328b45-74e9-49f6-9470-1c115b57d299" /></td>
+ </tr>
+</table>
 
 Também é importante lembrar que test doubles são **ferramentas para testes de unidade**, onde o isolamento é crucial. Em testes de integração ou end-to-end, eles devem ser usados com cautela, pois nesses níveis o objetivo é justamente validar a interação real entre componentes. Usar doubles nesses contextos pode dar uma falsa sensação de segurança, porque o código passa no teste, mas falha no ambiente real.
 
