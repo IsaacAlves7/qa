@@ -1628,7 +1628,7 @@ Dá pra pensar assim:
 Ou seja, o ATDD não é o UAT implementado dentro do ciclo TDD, mas ele **faz uma ponte**: traz os critérios de aceitação (que seriam verificados no UAT) para dentro do desenvolvimento, lado a lado com o TDD. Em um fluxo maduro, você teria TDD para o nível de código, ATDD para o nível de aceitação de requisitos, e UAT no fim para validar com pessoas reais.
 
 ## [QA] SDD - Specification-Driven Development
-<img height="277" align="right" src="https://github.com/user-attachments/assets/f1d7c1dc-adde-4604-b310-f8dd82f287f6" />
+<img height="377" align="right" src="https://github.com/user-attachments/assets/f1d7c1dc-adde-4604-b310-f8dd82f287f6" />
 
 O **SDD - Specification-Driven Development** é uma abordagem de desenvolvimento de software em que o ponto de partida e o guia principal de todo o ciclo de criação é a especificação formal e clara do sistema a ser construído. 
 
