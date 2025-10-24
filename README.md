@@ -674,7 +674,7 @@ Dividir (x int,y int)=z int
 
 Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma mensagem ao usuário, avisando que a operação é inválida. Caso a expressão seja um dado comum do sistema, a autorização para tal validação deverá ser do usuário, pois faz parte do conjunto de regras de negócio. Não existe retorno inválido sem um tratamento. O tratamento genérico será apenas para condições não visíveis na regra e uso do sistema.
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/c0328294-f3e5-489f-8521-0d634275f7ae" height="77" align="right">
+<img src="https://github.com/user-attachments/assets/d1508d5e-a0f6-412f-8c12-d2f6237caef1" height="77" align="right">
 
 👁️‍🗨️ **Domínio**: No domínio de testes, usamos testes unitários para validar a funcionalidade de cada componente do nosso domínio de negócio, refere-se à parte do sistema que é testada para garantir que a lógica de negócio e a funcionalidade do código estão corretas, os testes unitários focam em componentes individuais desse domínio.
 
