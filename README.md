@@ -1432,6 +1432,8 @@ No contexto do DDD, existem design patterns específicos que são frequentemente
 
 Esses padrões, juntamente com outros conceitos e técnicas, podem ser aplicados para construir uma arquitetura que segue os princípios do DDD. O DDD, portanto, não é um design pattern em si, mas uma abordagem que pode ser implementada usando diversos padrões de design específicos.
 
+<img width="2250" height="2840" alt="unnamed" src="https://github.com/user-attachments/assets/c7b24ba8-f883-4fcf-a89b-6b864209ccd4" />
+
 Quando não usar DDD? Às vezes só é necessário um CRUD! DDD não é uma solução para tudo. A maioria dos sistemas possui uma boa parte composta por cadastros básicos (CRUD) e não seria adequado usar DDD para isso.
 
 O DDD deve ajudar na modelagem das classes mais importantes e mais centrais do sistema de forma e diminuir a complexidade e ajudar na manutenção das mesmas, afinal este é o objetivo dos princípios de orientação a objetos.
