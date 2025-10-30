@@ -1492,6 +1492,17 @@ Este artigo se concentrará em como estruturamos o código de acordo com DDD e C
 
 Primeiro, dividimos o sistema em partes independentes menores em torno dos subdomínios de negócios por meio de algumas iterações (ferramentas <a href="https://vaadin.com/blog/ddd-part-1-strategic-domain-driven-design">estratégicas de DDD</a>, como tempestade de eventos, narrativa e muito mais). Idealmente, essas partes devem ser implantáveis de forma independente (microsserviços), mas nem sempre é esse o caso. Muitas vezes, podemos ter um código legado que não podemos alterar facilmente, então temos que mantê-lo por um tempo. Nesses casos, temos esses subdomínios em um único projeto (monólito), com cada subdomínio em uma pasta ou pacote separado.
 
+**Estrutura de código de contexto limitado**: Depois de dividir o domínio extenso em partes menores, também chamadas de subdomínios. Em seguida, tentamos resolver cada subdomínio; Um "contexto limitado" implementará um subdomínio. Cada contexto limitado pode ser um microsserviço separado ou um pacote separado que encapsula esse contexto limitado dentro de um serviço atual. Então, vamos falar sobre essa parte agora, como projetamos cada contexto limitado, quantas camadas de alto nível temos e como elas se comunicariam juntas.
+
+Exemplos de contextos limitados em um sistema de comércio eletrônico
+
+```txt
+├───wallet       
+├───orderManagement
+├───shipping  
+├───..
+```
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
