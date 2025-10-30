@@ -1477,6 +1477,21 @@ Os eventos de domínio existem no centro de domínio de alto nível de um diagra
 
 Para que um usuário interaja com um sistema e para que ele seja útil, precisamos ser capazes de fazer duas coisas. A primeira é exibir informações para o usuário.
 
+O Clean Architecture (CA) é a diretriz de arquitetura de sistemas proposta por Robert C. Martin (Uncle Bob) derivada de muitas diretrizes arquitetônicas como Hexagonal Architecture e Onion Architecture, entre outras.
+
+Eric Evans introduziu o conceito de Domain-Driven Design (DDD). Ele escreveu sobre isso em seu livro Domain-driven Design em 2004 (também conhecido como "The Big Blue Book").
+
+O Design Orientado a Domínio é uma abordagem para o desenvolvimento de software que centra o desenvolvimento na programação de um modelo de domínio com uma rica compreensão dos processos e regras de um domínio.
+
+Comecei com minha equipe na Taager.com a adotar o Domain-Driven Design (DDD) em nosso trabalho, e nossa missão era tirar o máximo proveito do DDD e do CA, se possível. À medida que a adoção cresce, estamos cada vez mais perto do negócio e do domínio que estamos abordando; começamos a falar a linguagem onipresente do domínio. Este artigo é um excelente começo para obter mais conhecimento sobre DDD.
+
+> [!Note]
+> Não existe tal arquitetura que sirva para todos. Toda arquitetura ou padrão de desenvolvimento de software tem prós e contras; Baseie sua decisão no projeto, no escopo e na equipe. Vamos descrever o caminho que tomamos.
+
+Este artigo se concentrará em como estruturamos o código de acordo com DDD e Clean Architecture, para que o código também fale a linguagem onipresente do domínio com mais facilidade.
+
+Primeiro, dividimos o sistema em partes independentes menores em torno dos subdomínios de negócios por meio de algumas iterações (ferramentas <a href="https://vaadin.com/blog/ddd-part-1-strategic-domain-driven-design">estratégicas de DDD</a>, como tempestade de eventos, narrativa e muito mais). Idealmente, essas partes devem ser implantáveis de forma independente (microsserviços), mas nem sempre é esse o caso. Muitas vezes, podemos ter um código legado que não podemos alterar facilmente, então temos que mantê-lo por um tempo. Nesses casos, temos esses subdomínios em um único projeto (monólito), com cada subdomínio em uma pasta ou pacote separado.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
