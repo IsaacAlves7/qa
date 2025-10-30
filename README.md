@@ -1432,6 +1432,33 @@ Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outr
 
 Portanto, o DDD não tenta resolver todos os problemas de todas as camadas de um sistema. Seu foco é na modelagem das entidades principais de negócio usando a linguagem adequada daquele domínio para facilitar a manutenção, extensão e entendimento. Particularmente, eu não seguiria à risca o padrão, até porque existem inúmeros padrões e variações de modelagem OO. Estude os princípios por detrás desses padrões, pois eles são geralmente parecidos e veja o que funciona melhor para cada projeto.
 
+A maioria dos softwares não quebra por causa de erros de sintaxe ou lógica if-else falha.
+
+Ele quebra porque as equipes perdem o alinhamento com o problema de negócios que deveriam resolver. Os sistemas se emaranham com suposições técnicas que envelhecem mal. Os recursos são implementados sem considerações de design adequadas. E com o tempo, cada novo requisito cria mais problemas que continuam se acumulando.
+
+Muitas vezes, isso não é um problema de ferramentas. É um problema de modelagem.
+
+O DDD (Design Controlado por Domínio) tenta resolver esse problema de frente. Em sua essência, o DDD é uma maneira de projetar software que mantém o domínio de negócios, não o esquema de banco de dados ou a estrutura mais recente, no centro da tomada de decisões. Ele insiste que os engenheiros colaborem profundamente com especialistas de domínio durante o ciclo de vida do projeto, não apenas para reunir requisitos uma vez e desaparecer nos tickets do Jira. Ele fornece às equipes o vocabulário, os padrões e os limites para modelar sistemas complexos sem serem enterrados na complexidade acidental.
+
+Claro, o DDD não é uma bala de prata. Ele não gera código e não conserta magicamente um monólito legado. Mas oferece algo mais valioso a longo prazo: clareza sobre o que o sistema deve fazer e onde pode mudar.
+
+Essa abordagem se torna especialmente valiosa quando:
+
+- O domínio não é trivial e continua evoluindo. Pense em finanças, saúde, logística ou mercados gigantes.
+- Várias equipes estão trabalhando em partes sobrepostas do sistema.
+- O código precisa refletir o comportamento do mundo real, não construções técnicas abstratas.
+
+O DDD não se importa se a arquitetura é monolítica ou baseada em microsserviços. O que importa é se o modelo reflete as regras e a linguagem do mundo real do domínio e se esse modelo pode evoluir com segurança à medida que o domínio muda.
+
+Exploramos as ideias centrais do DDD (como Contextos Limitados, Agregados e Linguagem Ubíqua) e explicamos como eles funcionam juntos na prática. Também veremos como o DDD se encaixa nos sistemas do mundo real, onde ele brilha e onde pode falhar.
+
+<table>
+ <tr>
+  <td><img src="https://github.com/user-attachments/assets/40876f04-b257-4eca-a7b0-72af3adc66a6" /></td>
+  <td><img src="https://github.com/user-attachments/assets/6f12e517-635b-4959-ac10-0d1c2af6aa25" /></td>
+ </tr>
+</table>
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
