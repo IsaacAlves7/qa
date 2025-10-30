@@ -1467,6 +1467,14 @@ Exploramos as ideias centrais do DDD (como Contextos Limitados, Agregados e Ling
  </tr>
 </table>
 
+**DDD - Segregação de Responsabilidade de Consulta de Comando (CQRS)** os comandos são complexos, as consultas são simples, anteriormente, examinamos as Entidades DDD, que têm **estado**, e **Eventos**, onde o estado muda. Para reduzir a complexidade, podemos ser específicos sobre o que tem estado e encapsular onde ele muda. Os eventos são códigos de alto nível, situados no meio da Onion Architecture. Veremos como os comandos de nível inferior vinculam a interface do usuário ou a API a eventos para permitir que os usuários alterem o estado.
+
+Os eventos de domínio existem no centro de domínio de alto nível de um diagrama Onion Architecture, coberto por Robert C. Martin em Clean Architecture. A camada externa da cebola contém detalhes de baixo nível, entradas e saídas, como armazenamento, interfaces de usuário e APIs. Os comandos estão em algum lugar no meio, vinculando as entradas ao domínio de nível superior para que os usuários possam acionar os eventos para alterar o estado.
+
+<img width="720" height="313" alt="image" src="https://github.com/user-attachments/assets/2ed856b3-baf7-49f2-bf70-c4d3c52e17f2" />
+
+Para que um usuário interaja com um sistema e para que ele seja útil, precisamos ser capazes de fazer duas coisas. A primeira é exibir informações para o usuário.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
