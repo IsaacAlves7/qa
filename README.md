@@ -1462,8 +1462,8 @@ Exploramos as ideias centrais do DDD (como Contextos Limitados, Agregados e Ling
 
 <table>
  <tr>
-  <td><img src="https://github.com/user-attachments/assets/40876f04-b257-4eca-a7b0-72af3adc66a6" height="377" /></td>
-  <td><img src="https://github.com/user-attachments/assets/6f12e517-635b-4959-ac10-0d1c2af6aa25" height="377" /></td>
+  <td><img src="https://github.com/user-attachments/assets/40876f04-b257-4eca-a7b0-72af3adc66a6" height="777" /></td>
+  <td><img src="https://github.com/user-attachments/assets/6f12e517-635b-4959-ac10-0d1c2af6aa25" height="777" /></td>
  </tr>
 </table>
 
