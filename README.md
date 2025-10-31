@@ -146,13 +146,13 @@ Portanto, o teste de software (Software testing) para os profissionais de QA’s
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
 
-O *teste de software* é a prática concreta que os profissionais de QA (no papel de testers, engenheiros de teste ou SDETs) usam para avaliar se o produto realmente cumpre o que deveria cumprir, tanto sob o ponto de vista técnico (estabilidade, performance, segurança) quanto funcional (se as regras de negócio e requisitos do usuário estão atendidos).
+O **teste de software** é a prática concreta que os profissionais de QA (no papel de testers, engenheiros de teste ou SDETs) usam para avaliar se o produto realmente cumpre o que deveria cumprir, tanto sob o ponto de vista técnico (estabilidade, performance, segurança) quanto funcional (se as regras de negócio e requisitos do usuário estão atendidos).
 
 O desenvolvimento de software tem várias fases. Quando começamos a construir software, primeiro precisamos definir o que planejamos construir. Definimos alguns limites para o escopo do software que estamos construindo, definimos processos intermediários e marcos para colocar alguns pontos de verificação sobre se estamos indo na direção certa durante o processo de desenvolvimento e definimos critérios de sucesso para que o software saiba o que construímos é o que queríamos. O termo mais amplo e sofisticado "Garantia de Qualidade" lida com o estabelecimento de limites e pontos de verificação, e "Teste" é um subconjunto do processo geral de garantia de qualidade que lida com a validação de que tudo isso se juntou para culminar em um produto final que deixará as partes interessadas felizes (principalmente). Se tudo isso é muito abstrato, não tema, explicaremos com um exemplo mais concreto em breve.
 
 <img height="600" align="right" src="https://github.com/user-attachments/assets/75d2ef4f-90d7-4011-a58d-e0ad1c904967" />
 
-Digamos que temos uma ambição simples - queremos aceitar alguma entrada do usuário e imprimi-la de volta no console. A vida não poderia ser mais simples do que isso, pode? Vamos ver como isso se traduz no processo SDLC. Duvido que uma explicação seja necessária, mas aqui está, no entanto - não é um exemplo da vida real, mas simplificado demais para ilustrar o processo de pensamento e também por que o teste de aplicativos evoluiu como uma disciplina separada do desenvolvimento. Aqui está o código java que realizará o trabalho (ou será?):
+Digamos que temos uma ambição simples - queremos aceitar alguma entrada do usuário e imprimi-la de volta no console. A vida não poderia ser mais simples do que isso, pode? Vamos ver como isso se traduz no processo SDLC. Duvido que uma explicação seja necessária, mas aqui está, no entanto - não é um exemplo da vida real, mas simplificado demais para ilustrar o processo de pensamento e também por que o teste de aplicativos evoluiu como uma disciplina separada do desenvolvimento. 
 
 > "Descobrir o inesperado é mais importante do que confirmar o conhecido." - George E.P.Box
 
