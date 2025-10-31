@@ -1294,6 +1294,12 @@ O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem
 
 É um tipo de <a href="">modelagem de software</a> e um <a href="">design de software</a> orientado a objetos (OOP) que procura reforçar conceitos e boas práticas relacionadas à OOP e surgiu como uma resposta às dificuldades enfrentadas por desenvolvedores ao lidarem com sistemas complexos, especialmente em domínios de negócio onde a lógica e os requisitos mudam frequentemente. Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. 
 
+A definição mais simples que encontrei foi ao ler o livro Fundamentals of Software Architecture de Neal Ford e Mark Richards:
+
+> O design orientado a domínio (DDD) é uma técnica de modelagem que permite a decomposição organizada de domínios de problemas complexos. - Neal Ford e Mark Richards. Fundamentos da Arquitetura de Software. 2020.
+
+O objetivo do DDD é, em primeiro lugar, adquirir conhecimento sobre o problema para identificar a solução. Em seguida, concordaremos com os vários componentes desta solução para implementá-la. Esse objetivo é alcançado por meio dos padrões fundamentais do DDD: padrões estratégicos e táticos. Os padrões estratégicos respondem à pergunta: "Por que estamos construindo este software e quais são seus componentes?". Por outro lado, os padrões táticos dão a resposta à pergunta: "Como esses componentes são implementados?"
+
 Em seu livro Clean Architecture: A Craftsman's Guide to Software Structure and Design, Uncle Bob chama uma arquitetura que informa ao leitor sobre o sistema, não as estruturas usadas no sistema, de "Arquitetura Gritante".
 
 Então, faz sentido para mim pensar em design de software como design gritante quando fala alto e claro sobre o domínio do problema. Geralmente, o ativo mais crítico no design de uma solução é adquirir conhecimento sobre os problemas que estamos tentando resolver, o processo que queremos automatizar ou as dificuldades que queremos facilitar. Então, para nos aproximarmos da solução, tínhamos que já estar próximos do problema.
@@ -1311,6 +1317,8 @@ Se você pensar em sequência, o fluxo ficaria assim:
 3. **QA interno** → **UAT** → **Release** → **Continuous Delivery**: Depois disso, o fluxo segue normalmente como te expliquei antes.
 
 Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é o mapa que garante que esse valor seja o certo**, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
+
+<img width="720" height="267" alt="image" src="https://github.com/user-attachments/assets/cc8dad6f-afc7-4b1b-8ebd-30df9b57b557" />
 
 O DDD nos permite planejar uma arquitetura de microsserviços decompondo o sistema maior em unidades independentes, compreendendo as responsabilidades de cada uma e identificando seus relacionamentos, ele não é um design pattern específico, mas sim uma importante abordagem de design de software, com foco na modelagem de software para corresponder a um **domínio** de acordo com as informações dos especialistas desse domínio. O Domain-Driven Design (DDD) surgiu como uma metodologia revolucionária para a modelagem de software, desenvolvida com o intuito de refinar e otimizar a correspondência entre o design do software e o domínio do software e o domínio do problema que ele busca resolver.
 
