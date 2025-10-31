@@ -1290,9 +1290,9 @@ Se você reparar, há um padrão: quase todos os ecossistemas têm algum tipo de
 
 <a href=""><img src="https://em-content.zobj.net/source/microsoft-teams/363/ferris-wheel_1f3a1.png" align="right" height="77"></a>
 
-O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem de desenvolvimento de software que se concentra em entender o **domínio do negócio** e modelar o software em torno desses conceitos e regras de negócio. 
+O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem de desenvolvimento de software que se concentra em entender o **domínio do negócio** e modelar o software em torno desses conceitos e regras de negócio. É um tipo de <a href="">modelagem de software</a> e um <a href="">design de software</a> orientado a objetos (OOP) que procura reforçar conceitos e boas práticas relacionadas à OOP e surgiu como uma resposta às dificuldades enfrentadas por desenvolvedores ao lidarem com sistemas complexos, especialmente em domínios de negócio onde a lógica e os requisitos mudam frequentemente. 
 
-É um tipo de <a href="">modelagem de software</a> e um <a href="">design de software</a> orientado a objetos (OOP) que procura reforçar conceitos e boas práticas relacionadas à OOP e surgiu como uma resposta às dificuldades enfrentadas por desenvolvedores ao lidarem com sistemas complexos, especialmente em domínios de negócio onde a lógica e os requisitos mudam frequentemente. Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. 
+Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. 
 
 A definição mais simples que encontrei foi ao ler o livro Fundamentals of Software Architecture de Neal Ford e Mark Richards:
 
