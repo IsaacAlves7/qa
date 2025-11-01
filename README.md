@@ -1326,7 +1326,7 @@ Os padrões estratégicos lidam com a obtenção de uma visão geral do domínio
 
 > Estritamente falando, as regras de negócios são regras ou procedimentos que fazem ou economizam o dinheiro da empresa. — Tio Bob, Arquitetura Limpa: Guia de um Artesão para Estrutura e Design de Software
 
-<img height="1280" align="right" src="https://github.com/user-attachments/assets/e10458c3-c96c-46aa-8007-27e1a11c0282" />
+<img height="777" align="right" src="https://github.com/user-attachments/assets/e10458c3-c96c-46aa-8007-27e1a11c0282" />
 
 Em outras palavras, as regras de negócios são os recursos funcionais que requerem desenvolvimento. No entanto, existem diferentes tipos de regras de negócios. Existem urgentes e importantes. Ainda assim, outros não são urgentes, mas são importantes. Coletar e reagrupar essas regras de forma significativa ajuda a decompor a complexidade do domínio de negócios em subdomínios: subdomínios principais, genéricos e de suporte.
 
