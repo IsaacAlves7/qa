@@ -1320,6 +1320,20 @@ Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é 
 
 <img width="720" height="267" alt="image" src="https://github.com/user-attachments/assets/cc8dad6f-afc7-4b1b-8ebd-30df9b57b557" />
 
+Os padrões estratégicos lidam com a obtenção de uma visão geral do domínio de negócios, o que inclui decompô-lo em regras de negócios.
+
+> Estritamente falando, as regras de negócios são regras ou procedimentos que fazem ou economizam o dinheiro da empresa. — Tio Bob, Arquitetura Limpa: Guia de um Artesão para Estrutura e Design de Software
+
+Em outras palavras, as regras de negócios são os recursos funcionais que requerem desenvolvimento. No entanto, existem diferentes tipos de regras de negócios. Existem urgentes e importantes. Ainda assim, outros não são urgentes, mas são importantes. Coletar e reagrupar essas regras de forma significativa ajuda a decompor a complexidade do domínio de negócios em subdomínios: subdomínios principais, genéricos e de suporte.
+
+O subdomínio principal contém as regras de negócios que oferecem vantagem competitiva e destacam a diferença entre as empresas que trabalham no mesmo domínio de negócios. Ele incorpora uma lógica de negócios altamente complexa e volátil. Portanto, ele deve estar aberto a mudanças na lógica de negócios, o que pode envolver a adição de novos requisitos, a atualização dos antigos ou até mesmo a remoção de alguns deles. Em seguida, ele deve ser cuidadosamente implementado internamente para permitir que essas alterações ocorram de forma eficiente sem causar muitos problemas em todo o software.
+
+A conclusão das regras de negócios do subdomínio principal requer outras regras de negócios que não envolvem lógica altamente complexa nem volátil. Em vez disso, eles apenas apoiam os negócios da empresa sem invocar nenhuma vantagem competitiva, pois estão resolvendo um problema muito óbvio. Eles são desenvolvidos internamente e podem ser terceirizados. Aqui, falamos sobre o subdomínio de suporte. No entanto, o subdomínio genérico consiste em regras de negócios relacionadas a um problema já resolvido para que ele possa ser comprado ou adotado.
+
+Ao destilar o domínio de negócios em busca de subdomínios, devemos falar a mesma língua para nos entendermos. Devemos, portanto, usar o mesmo termo para nos referirmos a um determinado objeto, comportamento ou campo. Na terminologia do DDD, é chamada de linguagem onipresente. Aqui, estamos evocando um dos ingredientes indispensáveis para construir uma solução de software: comunicação eficaz entre as diferentes partes interessadas do projeto, incluindo desenvolvedores, especialistas de domínio, analistas de negócios, gerentes de projeto, gerentes de marketing, etc.
+
+Como desenvolvedores de software, devemos garantir que nossas suposições estejam alinhadas com o conhecimento dos especialistas do domínio. Alberto Brandolini, que é um consultor versátil na área de Tecnologia da Informação, disse uma vez:
+
 O DDD nos permite planejar uma arquitetura de microsserviços decompondo o sistema maior em unidades independentes, compreendendo as responsabilidades de cada uma e identificando seus relacionamentos, ele não é um design pattern específico, mas sim uma importante abordagem de design de software, com foco na modelagem de software para corresponder a um **domínio** de acordo com as informações dos especialistas desse domínio. O Domain-Driven Design (DDD) surgiu como uma metodologia revolucionária para a modelagem de software, desenvolvida com o intuito de refinar e otimizar a correspondência entre o design do software e o domínio do software e o domínio do problema que ele busca resolver.
 
 > Os microsserviços são a forma mais escalável de desenvolver software. Mas você precisa de um bom design que permita que as equipes de desenvolvedores trabalhem de forma autônoma e implementem sem atrapalhar umas às outras, caso contrário, você perderá os benefícios de escalabilidade. O DDD ajuda a delimitar responsabilidades claras entre os serviços, o que permite que equipes atuem de forma independente e coordenada.
