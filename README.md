@@ -1320,13 +1320,17 @@ Se você pensar em sequência, o fluxo ficaria assim:
 
 Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é o mapa que garante que esse valor seja o certo**, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
 
+![3b3440cb8ab10a00e04a8c80772a3553](https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c)
+
+![331b710fe2256b165fde86e2f6782c96](https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f)
+
 <img width="720" height="267" alt="image" src="https://github.com/user-attachments/assets/cc8dad6f-afc7-4b1b-8ebd-30df9b57b557" />
 
 Os padrões estratégicos lidam com a obtenção de uma visão geral do domínio de negócios, o que inclui decompô-lo em regras de negócios.
 
 > Estritamente falando, as regras de negócios são regras ou procedimentos que fazem ou economizam o dinheiro da empresa. — Tio Bob, Arquitetura Limpa: Guia de um Artesão para Estrutura e Design de Software
 
-<img height="777" align="right" src="https://github.com/user-attachments/assets/e10458c3-c96c-46aa-8007-27e1a11c0282" />
+<img height="977" align="right" src="https://github.com/user-attachments/assets/e10458c3-c96c-46aa-8007-27e1a11c0282" />
 
 Em outras palavras, as regras de negócios são os recursos funcionais que requerem desenvolvimento. No entanto, existem diferentes tipos de regras de negócios. Existem urgentes e importantes. Ainda assim, outros não são urgentes, mas são importantes. Coletar e reagrupar essas regras de forma significativa ajuda a decompor a complexidade do domínio de negócios em subdomínios: subdomínios principais, genéricos e de suporte.
 
