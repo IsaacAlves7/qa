@@ -1320,9 +1320,12 @@ Se você pensar em sequência, o fluxo ficaria assim:
 
 Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é o mapa que garante que esse valor seja o certo**, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
 
-![3b3440cb8ab10a00e04a8c80772a3553](https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c)
-
-![331b710fe2256b165fde86e2f6782c96](https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f)
+<table>
+ <tr>
+  <td><img src="https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c"></td>
+  <td><img src="https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f"></td>
+ </tr>
+</table>
 
 <img width="720" height="267" alt="image" src="https://github.com/user-attachments/assets/cc8dad6f-afc7-4b1b-8ebd-30df9b57b557" />
 
