@@ -1322,8 +1322,8 @@ Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é 
 
 <table>
  <tr>
-  <td><img src="https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c"></td>
-  <td><img src="https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f"></td>
+  <td><img src="https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c" height="777"></td>
+  <td><img src="https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f" height="777"></td>
  </tr>
 </table>
 
