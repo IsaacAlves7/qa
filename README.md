@@ -442,7 +442,11 @@ A fase de ferramentas é tão importante quanto o planejamento. Para testes de u
 
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="377" align="right"> 
 
-Na construção de um bom teste automatizado, o primeiro passo é **nomear corretamente o que está sendo testado**, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim. Depois, **seguir o padrão AAA** (Arrange, Act, Assert) é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
+Na construção de um bom teste automatizado:
+
+1. o primeiro passo é nomear corretamente o que está sendo testado, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim.
+2. Depois, seguir o <a href="">padrão AAA (Arrange, Act, Assert)</a> é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado.
+3. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
 
 Outro pilar crucial é a **integração com pipelines de CI/CD**. Automatizar os testes via GitHub Actions, GitLab CI, Jenkins ou Azure DevOps garante que os testes rodam a cada push ou PR, evitando regressões. Um teste que só roda localmente é praticamente inútil em um time com múltiplos desenvolvedores.
 
