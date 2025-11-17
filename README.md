@@ -934,7 +934,7 @@ Por exemplo, imagine uma aplicação ASP.NET Core com RabbitMQ. Você pode ter:
 * Um **módulo de Producer**, responsável por publicar mensagens.
 * Um **módulo de Consumer**, responsável por ler e processar essas mensagens.
 * Um **módulo de persistência**, que grava os dados no banco.
-  Cada um desses módulos pode ser testado separadamente (testes unitários), mas o **teste de integração** se preocupa em verificar o comportamento **entre eles** — por exemplo, se o producer realmente publica no RabbitMQ e se o consumer consome e processa corretamente a mensagem publicada.
+  Cada um desses módulos pode ser testado separadamente (testes unitários), mas o **teste de integração** se preocupa em verificar o comportamento **entre eles**, por exemplo, se o producer realmente publica no RabbitMQ e se o consumer consome e processa corretamente a mensagem publicada.
 
 O conceito de módulo em integração é relativo: em um projeto monolítico, um módulo pode ser um **conjunto de classes coesas**; em uma arquitetura de microsserviços, um módulo pode ser **um serviço inteiro**. O importante é que o módulo tenha **interfaces de comunicação claras** (como endpoints HTTP, filas, métodos públicos, etc.), porque os testes de integração se baseiam exatamente nessas fronteiras.
 
