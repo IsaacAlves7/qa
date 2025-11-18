@@ -749,6 +749,7 @@ O domínio de testes unitários, o domínio de DDD (Domain-Driven Design) e o do
 
 Quando você combina esses três conceitos, você pode comunicar algo como: 
 
+> [!Tip]
 > "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
 
 Agora, imagine que você precisa validar o funcionamento de sua aplicação em um determinado cenário, mas este cenário só funciona se integrado com uma aplicação de terceiros específica, a qual você não tem total acesso.
