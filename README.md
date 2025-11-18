@@ -230,11 +230,11 @@ Dessa forma, garantimos:
 
 As atividades de apoio da qualidade de software, como revisões, auditorias e inspeções, são essenciais para garantir que o software seja produzido de acordo com os padrões de qualidade estabelecidos. Essas atividades podem ser realizadas em diferentes momentos do ciclo de vida do software, desde a análise de requisitos até a manutenção.
 
-<img src="https://github.com/user-attachments/assets/db8e6f84-e537-4e7d-86a8-904f7d2ad212" align="right" height="477">
-
 As **revisões** são uma das atividades de apoio mais comuns e envolvem a análise do software por um grupo de pessoas para detectar erros e possíveis me
 lhorias. Existem diferentes tipos de revisões, como revisões de código (Code Reviews), revisões de documentos e revisões de design.
- 
+
+<img src="https://github.com/user-attachments/assets/db8e6f84-e537-4e7d-86a8-904f7d2ad212">
+
 As **auditorias** são semelhantes às revisões, mas geralmente são realizadas por equipes independentes de pessoas com habilidades específicas para avaliar o software em relação a padrões e regulamentações específicos. As auditorias podem ser internas ou externas e podem ser realizadas em diferentes fases do ciclo de vida do software (BRITO, 2006).
 
 Já as **inspeções** são atividades mais formais e estruturadas, que seguem um processo específico para avaliar o software em relação a determinados padrões e especificações. As inspeções geralmente envolvem uma equipe multidisciplinar e podem ser realizadas em diferentes fases do ciclo de vida do software.
