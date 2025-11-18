@@ -517,6 +517,8 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
   
    - **Ranorex**: Ferramenta de automação de testes para desktop, web e dispositivos móveis.
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/348f013b-b987-414b-9761-d50698a99649" />
+
 4. **Ferramentas de Teste de Performance e Carga**:
   
    - **JMeter**: Ferramenta para testes de carga e performance.
