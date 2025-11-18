@@ -732,7 +732,7 @@ Particionamento por Equivalência: campo `nome`:
 ```diff
 - valor em branco (BLANK); Cenário Negativo
 - valor > 50; Cenário Negativo
-- qualquer valor de 1 a 50; Cenário Positivo
++ qualquer valor de 1 a 50; Cenário Positivo
 ```
 
 Análise por Valor Limite:
