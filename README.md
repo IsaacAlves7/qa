@@ -725,7 +725,7 @@ Campo nome: Dominio = tipo: string; tamanho:50
 
 Ao aplicarmos o particionamento por equivalência e a análise por valor limite, poderemos criar as seguintes classes de testes.
 
-<img height="77" align="right" src="https://github.com/user-attachments/assets/ff8414d7-6bb9-402e-9e02-75ee279d3008" />
+<img height="177" align="right" src="https://github.com/user-attachments/assets/ff8414d7-6bb9-402e-9e02-75ee279d3008" />
 
 Particionamento por Equivalência: campo `nome`:
 
