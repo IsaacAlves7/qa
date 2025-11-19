@@ -71,6 +71,8 @@ Sabemos o que comitar e o que não comitar, então seguiremos estudando os model
 
 Contudo, como organizar nossos repositórios? Em uma empresa encontramos mais de um projeto por vez, e é importante que saibamos como representar estes projetos dentro do repositório.
 
+![repository_strategy](https://github.com/user-attachments/assets/0dd4cca2-3b76-41ee-be91-06549c9b3249)
+
 O que é mais natural é utilizar um repositório para cada projeto, de um tamanho razoável com escopo bem definido. Essa forma de organização é chamada **Multi-repo**.
 
 No entanto, nos últimos anos, surgiu uma nova forma de organização dos nossos projetos dentro de repositórios. Empresas grandes de tecnologia como Google e Facebook não utilizam o esquema Multi-repo, porque são empresas que trabalham em inúmeros projetos de maneira concomitante. Empresas que atuam com outra dimensão de projetos utilizam o **Mono-repo**, ou seja, um único e gigantesco repositório que acumula todos os projetos.
