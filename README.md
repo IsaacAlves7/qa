@@ -81,6 +81,8 @@ A desvantagem do segundo modelo é o repositório precisará ser realmente grand
 
 Vamos trabalhar com o Multi-repo, afinal é o mais comum no dia a dia da maioria dos desenvolvedores.
 
+![b8c290d4d4680506a14e00e58a4e0c72](https://github.com/user-attachments/assets/6402db4f-2617-4038-8526-6952c1f14bad)
+
 > [!Note]
 > **FUNDAMENTOS DA QUALIDADE DE SOFTWARE**: Incluem a definição de requisitos, o planejamento de testes e a execução de testes de forma sistemática. Esses processos são essenciais para garantir que o software desenvolvido atenda às necessidades do usuário e atinja a qualidade esperada.
 
