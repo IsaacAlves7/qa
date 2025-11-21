@@ -1093,7 +1093,7 @@ Para testes de integração, você pode optar por:
 | APIs      | RestAssured, Insomnia, HTTPX, Supertest        |
 
 ## [QA] Functional Testing
-<img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
+<img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
 
 Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente.
 
@@ -1103,7 +1103,7 @@ O que é importante pensarmos é no tempo de execução de testes que teremos. O
 
 Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
 
-<img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
+<img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
 
