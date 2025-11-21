@@ -910,7 +910,7 @@ Na prática, bons conjuntos de testes costumam mesclar os dois: **solitary tests
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/2ce9382a-b065-4853-a708-6f41db155961" />
 
-O **Arrange–Act–Assert Pattern (AAA)** é um padrão de estruturação de testes extremamente usado em <a href="">TDD</a>, **unit tests** e qualquer cenário onde você quer garantir clareza, previsibilidade e legibilidade nos testes. Ele não é um framework nem uma tecnologia, mas sim uma *disciplina mental*, uma *organização lógica* para que cada teste seja fácil de entender, manter e evoluir. A ideia é que, em vez de escrever um teste como um bloco monolítico confuso, você o divide em três momentos distintos que imitam o raciocínio humano ao validar um comportamento.
+O **Arrange–Act–Assert Pattern (AAA)** é um padrão de estruturação de testes extremamente usado em <a href="https://github.com/IsaacAlves7/qa?tab=readme-ov-file#qa-tdd---test-driven-development">TDD</a>, **unit tests** e qualquer cenário onde você quer garantir clareza, previsibilidade e legibilidade nos testes. Ele não é um framework nem uma tecnologia, mas sim uma *disciplina mental*, uma *organização lógica* para que cada teste seja fácil de entender, manter e evoluir. A ideia é que, em vez de escrever um teste como um bloco monolítico confuso, você o divide em três momentos distintos que imitam o raciocínio humano ao validar um comportamento.
 
 O padrão Arrange-Act-Assert, também conhecido como padrão AAA ou 3A, é uma abordagem amplamente reconhecida para estruturar testes. Foi originalmente proposto por Bill Wake em 2001 e depois mencionado no influente livro de Kent Beck, "Test Driven Development: By Example", em 2002.
 
