@@ -456,7 +456,7 @@ Na construção de um bom teste automatizado:
 
 1. o primeiro passo é nomear corretamente o que está sendo testado, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim.
 
-2. Depois, seguir o <a href="">padrão AAA (Arrange, Act, Assert)</a> é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado.
+2. Depois, seguir o <a href="https://github.com/IsaacAlves7/qa?tab=readme-ov-file#qa-unit-testing">padrão AAA (Arrange, Act, Assert)</a> é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado.
 
 3. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
 
