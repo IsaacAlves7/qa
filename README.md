@@ -1103,6 +1103,8 @@ O que é importante pensarmos é no tempo de execução de testes que teremos. O
 
 Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de **uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente**. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
 
+<img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
+
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
 
 ## [QA] Regression testing
