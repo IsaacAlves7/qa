@@ -1099,18 +1099,25 @@ Para testes de integração, você pode optar por:
 ## [QA] Functional Testing
 <img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
 
-Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída.
-É a técnica mais utilizada no dia a dia.
+Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída. É a técnica mais utilizada no dia a dia. Responsável: Analista de Qualidade
 
-Responsável: Analista de Qualidade
+Functional Testing e Black-box Testing não são a mesma coisa, embora estejam intimamente relacionados. A melhor forma de entender é pensar que um deles é um tipo de teste, enquanto o outro é uma abordagem que pode ser aplicada a vários tipos de testes. Explicando em um textão fluido.
+
+Quando você fala de Functional Testing, você está se referindo à prática de testar o que o software faz, ou seja, suas funcionalidades, requisitos, comportamentos esperados, regras de negócio, entradas e saídas. Nesse tipo de teste, o objetivo não é saber como o código foi escrito, mas sim verificar se o sistema cumpre aquilo que promete. Functional Testing é, portanto, uma categoria de testes, englobando vários métodos como testes de sistema, testes de integração funcional, testes de aceitação, testes E2E e até cenários automatizados que validam fluxos completos. Ele sempre olha o software de fora para dentro, garantindo que cada ação realizada devolva o resultado esperado.
+
+Black-box Testing, por outro lado, é um **método**, uma forma de enxergar o sistema. É uma abordagem onde você não olha o código interno, não vê classes, funções, bancos de dados, nem algoritmos. Você apenas observa entradas e saídas, como uma caixa preta. Vários tipos de teste podem ser feitos como caixa preta: testes funcionais, testes não funcionais, testes de usabilidade, testes de performance em nível de comportamento e até testes exploratórios. A caixa preta significa ignorar o interior e se concentrar apenas na interação externa. Portanto, Black-box é um estilo de avaliação que pode ser aplicado a várias categorias de teste, e não um tipo de teste em si.
+
+O ponto de união entre os dois é que, na prática de mercado, **quase todo teste funcional é executado como Black-box**, porque testar funcionalidades sem olhar o código faz parte da natureza desses testes. Contudo, isso não significa que eles sejam sinônimos. Todo Functional Testing utiliza a abordagem Black-box, mas nem todo Black-box Testing é necessariamente funcional. Por exemplo, um teste de performance que mede tempo de resposta sem olhar o código é caixa preta, mas não é funcional. Da mesma forma, um teste de usabilidade, um teste de segurança black-box ou um teste de carga são todos caixa preta sem serem testes funcionais. Pense em Functional Testing como o “o que testar” e Black-box como o “como testar”.
+
+Assim, eles caminham juntos, se alimentam um do outro, mas ocupam categorias diferentes dentro da engenharia de software.
 
 O que é importante pensarmos é no tempo de execução de testes que teremos. Os testes de unidade existem desde o início do projeto, qualquer commit deveria ser acompanhada por um teste.
 
 É comum que o desenvolvedor que queria concluir um projeto rapidamente deixe de fazer testes para otimizar o tempo. Como resolver esse impasse? Antes do commit, devemos executar todos os testes, embora saibamos que isso é em um plano ideal, e muitas vezes desnecessário dependendo da modificação que foi realizada. Até mesmo executar todos os testes unitários pode ser complicado.
 
-Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
-
 <img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
+
+Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
 
