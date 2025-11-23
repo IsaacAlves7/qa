@@ -1177,6 +1177,8 @@ Ferramentas Comuns para Regression Testing:
 
 Benefícios do Regression Testing:
 
+<img height="277" align="right" src="https://github.com/user-attachments/assets/c15d4ab9-69c4-4633-84ba-0387ddde2908" />
+
 - **Detecção Precoce de Defeitos**: Permite a identificação e correção rápida de novos problemas.
 
 - **Redução de Riscos**: Minimiza o risco de introdução de erros ao modificar o software.
