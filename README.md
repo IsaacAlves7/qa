@@ -930,6 +930,8 @@ O padrão AAA promove clareza ao recomendar que os testes sejam estruturados em 
 
 3. Por fim, o **Assert** é o momento de verificar se o comportamento observado corresponde ao comportamento esperado. Afirme os resultados esperados. É onde você compara o resultado com o valor correto, valida estado final, confirma se exceções foram lançadas, ou se eventos foram registrados. É nesse bloco que você diz explicitamente qual era o contrato esperado daquele código. E, por isso, todo *Assert* deve ser claro e direto: um teste que não deixa explícito o que está sendo validado é um teste que não comunica nada.
 
+<img src="https://github.com/user-attachments/assets/72cd305f-1b35-4cab-92c8-b461eb7bce1f" align="right" height="177">
+
 O padrão AAA melhora a legibilidade e a manutenibilidade, espelhando de perto a estrutura Given-What-When-Then desenvolvida por Daniel Terhorst-North e Chris Matts como parte do BDD (Behavior-Driven Development). Hoje, quase todas as ferramentas modernas de teste unitário com sintaxe BDD incentivam o uso do padrão AAA.
 
 A beleza do AAA é que ele espelha como pensamos quando analisamos um comportamento: primeiro preparamos, depois fazemos, depois verificamos. É tão natural que, quando bem aplicado, qualquer pessoa — até alguém que nunca viu o projeto — consegue ler e entender o teste como se estivesse lendo uma narrativa estruturada. Além disso, frameworks como xUnit, NUnit, JUnit, Jest, PyTest e tantos outros encaixam-se naturalmente nele, porque a ideia é totalmente agnóstica de linguagem.
