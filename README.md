@@ -57,6 +57,8 @@ O **Git** é o mais popular em integração hoje em dia, mas não precisamos uti
 
 A ferramenta em si não importa, mas o que devemos inserir em nosso sistema de controle? De maneira geral, deve conter tudo aquilo que é necessário para a construção do projeto.
 
+<img src="https://github.com/user-attachments/assets/03f21461-b420-431d-a67c-a3b33987bc0e" align="right" height="177">
+
 - código
 - scripts
 - migrações, schemas
