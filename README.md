@@ -302,7 +302,9 @@ Em outras palavras, a Regra 10 de Myers enfatiza  que o custo da correção de d
 
 Uma boa gestão de qualidade pode ser a chave para minimizar os custos relacionados às falhas em software. Investir em capacitação da equipe, em boas práticas de desenvolvimento e em testes constantes pode ajudar a evitar falhas internas e externas e, consequentemente, reduzir os custos para a empresa.
 
-O **Shift Left Testing** é um conceito dentro da engenharia de software e de testes que significa **trazer as atividades de teste para mais cedo no ciclo de desenvolvimento**. Tradicionalmente, em modelos como o *waterfall*, os testes só aconteciam no fim, depois que o código já estava implementado. Isso levava a atrasos, altos custos de correção e acúmulo de defeitos. O movimento de “shift left” (deslocar para a esquerda, no cronograma) é justamente antecipar a validação de qualidade para as fases iniciais — análise de requisitos, design e até antes de escrever código — com o objetivo de encontrar problemas cedo, quando ainda são baratos de corrigir.
+<img height="177" align="right" src="https://github.com/user-attachments/assets/c8050abe-69db-4dc7-b368-aa37a3087aac" />
+
+O **Shift Left Testing** é um conceito dentro da engenharia de software e de testes que significa *trazer as atividades de teste para mais cedo no ciclo de desenvolvimento*. Tradicionalmente, em modelos como o *waterfall*, os testes só aconteciam no fim, depois que o código já estava implementado. Isso levava a atrasos, altos custos de correção e acúmulo de defeitos. O movimento de “shift left” (deslocar para a esquerda, no cronograma) é justamente antecipar a validação de qualidade para as fases iniciais — análise de requisitos, design e até antes de escrever código — com o objetivo de encontrar problemas cedo, quando ainda são baratos de corrigir.
 
 E isso se conecta com a famosa Regra de 10 de Myers (ou Myers’ Rule of Ten). A regra, proposta por Glenford Myers, diz que:
 
