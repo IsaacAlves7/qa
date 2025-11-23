@@ -1194,7 +1194,9 @@ Desafios do Regression Testing:
 - **Falsos Positivos/Negativos**: Pode haver casos onde testes falham ou passam erroneamente, exigindo investigação adicional.
 
 ## [QA] Performance testing
-**Testes de performance** são uma categoria de testes cujo foco não está na lógica funcional do software, mas na sua capacidade de operar sob condições reais ou extremas de uso, revelando como o sistema se comporta quando é pressionado, forçado, saturado ou submetido a cargas crescentes de usuários, requisições, dados ou processamento. Eles não buscam apenas descobrir se algo funciona, mas se funciona bem, rápido, de forma estável e consistente mesmo quando o mundo real faz força contra ele. A essência desse tipo de teste é observar o comportamento sistêmico, medindo tempos de resposta, consumo de recursos, throughput, concorrência, latência, estabilidade e capacidade de absorver picos sem degradação crítica. Ao contrário dos testes funcionais, que respondem “o sistema faz o que deveria?”, os testes de performance respondem “ele continua fazendo o que deveria quando é estressado, pressionado e exigido no limite?”.
+**Testes de performance** são uma categoria de testes cujo foco não está na lógica funcional do software, mas na sua capacidade de operar sob condições reais ou extremas de uso, revelando como o sistema se comporta quando é pressionado, forçado, saturado ou submetido a cargas crescentes de usuários, requisições, dados ou processamento. Eles não buscam apenas descobrir se algo funciona, mas se funciona bem, rápido, de forma estável e consistente mesmo quando o mundo real faz força contra ele. 
+
+A essência desse tipo de teste é observar o comportamento sistêmico, medindo tempos de resposta, consumo de recursos, throughput, concorrência, latência, estabilidade e capacidade de absorver picos sem degradação crítica. Ao contrário dos testes funcionais, que respondem “o sistema faz o que deveria?”, os testes de performance respondem “ele continua fazendo o que deveria quando é estressado, pressionado e exigido no limite?”.
 
 Responsável: Analista de Qualidade com acompanhamento do time de Infra/ Banco/ Desenvolvimento e em alguns casos DevOps
 
