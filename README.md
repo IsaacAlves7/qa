@@ -1809,7 +1809,7 @@ Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–c
 
 <img width="450" height="450" alt="laboratory-3d-icon-png-download-9544272" src="https://github.com/user-attachments/assets/ab2c41b2-7dd4-43d1-9299-5347f3387434" />
 
-<img width="572" height="322" alt="image" src="https://github.com/user-attachments/assets/2aa25dee-d49e-4604-8568-1cdb14a7bda0" />
+<img width="567" height="321" alt="517882112-2aa25dee-d49e-4604-8568-1cdb14a7bda0" src="https://github.com/user-attachments/assets/68b12fc8-eb35-4b9b-8012-29e5b4d7548d" />
 
 ## [QA] BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
