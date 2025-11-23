@@ -368,8 +368,6 @@ Com as alterações que realizamos o tempo todo em nosso software, como podemos 
 
 Para isso, algumas regras e padrões são necessários para manter o fluxo saudável e o caminho feliz em todas as fases:
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/2428e394-db35-454e-bdc5-add66d850f53" />
-
 O **Build** vem antes da etapa de teste/QA. Pensa assim: o build é o processo de pegar o código-fonte (em .NET, Java, etc.) e transformá-lo em um artefato executável ou implantável (um `.dll`, `.exe`, `.jar`, container Docker, pacote NuGet, etc.). Só depois que esse artefato é gerado é que você consegue rodar os testes de verdade, seja unitário, de integração, ou QA manual/automatizado.
 
 > A questão é não é que "sem teste, não tem build", mas sim **"do que adianta build sem teste?"**. 
@@ -380,9 +378,14 @@ Tecnicamente, dá pra fazer build sem teste, mas aí a pergunta é exatamente es
 
 A sequência clássica em pipelines CI/CD é mais ou menos assim:
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/2428e394-db35-454e-bdc5-add66d850f53" />
+
 1. **Code** → desenvolvedor escreve o código.
+
 2. **Build** → o código é compilado e empacotado.
+
 3. **Test/QA** → o artefato gerado é validado (testes automatizados, estáticos, integração, QA manual).
+
 4. **Release/Deploy** → se passou em QA, o build é promovido para homologação ou produção.
 
 Claro que existem nuances: testes unitários às vezes rodam já na fase de build (porque são rápidos e podem rodar junto da compilação), mas testes de QA completos (funcionais, integração, performance) dependem do build estar pronto. Então, em termos de pipeline: `Build → Test/QA → Deploy`.
