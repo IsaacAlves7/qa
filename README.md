@@ -1203,6 +1203,19 @@ Testes de performance, portanto, não são apenas uma atividade complementar, ma
 - Teste de Stress: Testa o software sob condições extremas  de uso. Grande volume de transações e usuários simultâneos. Picos excessivos de carga em curtos períodos de tempo.
 - Teste de Estabilidade: Testa se o sistema se mantém funcionando de maneira satisfatória após um período de uso.
 
+## [QA] System testing
+<img height="77" align="right" src="https://github.com/user-attachments/assets/7def68be-e65a-413f-af11-774ae592b7c3" />
+
+**Teste de sistema** é uma etapa da qualidade de software em que você avalia o produto inteiro funcionando como um todo, exatamente como um usuário ou outro sistema o utilizaria, verificando se todos os componentes front-end, back-end, banco de dados, integrações, filas, APIs externas, autenticação, permissões, serviços…estão cooperando corretamente.
+
+É o primeiro momento em que o software é testado **de ponta a ponta**, já integrado, e não mais isolado em módulos individuais.
+
+Num textão contínuo, como você prefere, a ideia central do teste de sistema é garantir que o comportamento observado corresponde ao comportamento esperado quando todos os elementos estão reunidos. Em contraste com o teste unitário, que valida partes pequenas e isoladas, e o teste de integração, que valida dois ou mais módulos conversando entre si, o teste de sistema procura validar o fluxo completo. Isso inclui desde a interface visual até o armazenamento de dados e a comunicação com serviços externos. Ele é executado em um ambiente que simula o mais fielmente possível o ambiente de produção, com configurações reais de rede, segurança, dependências e infraestrutura. Seu objetivo não é apenas encontrar defeitos funcionais, mas também falhas de usabilidade, desempenho, estabilidade e comportamento sob carga, além de verificar regras de negócio em contextos complexos, edge cases que só aparecem quando vários módulos se combinam e dependências externas que podem falhar ou se comportar de forma inesperada. 
+
+O teste de sistema é essencial porque confirma que o produto final atende aos requisitos especificados — requisitos que, muitas vezes, só fazem sentido quando vistos como um fluxo contínuo. Ele também serve como uma última proteção antes do teste de aceitação do usuário, onde o cliente ou área de negócio valida se aquilo corresponde ao necessário. Em suma, teste de sistema é a verificação holística do software funcionando completamente integrado, garantindo que o resultado global do sistema seja confiável, coerente e pronto para ser apresentado ao usuário real.
+
+<img height="77" align="right" src="https://github.com/user-attachments/assets/0a580dcb-a6b3-4396-8b93-c4d032a9cea2" />
+
 ## [QA] E2E - End-to-end
 <img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
 
