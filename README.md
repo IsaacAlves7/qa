@@ -1208,8 +1208,12 @@ Ferramentas como JMeter, k6, Gatling, Locust e Artillery entram justamente nesse
 
 Testes de performance, portanto, não são apenas uma atividade complementar, mas uma forma de garantir que o software sobreviva ao mundo real. Eles antecipam falhas antes que os usuários as vivam, ajudam a dimensionar infraestruturas, revelam gargalos invisíveis no desenvolvimento, evitam que sistemas caiam em momentos críticos, fortalecem a confiabilidade e tornam previsível o comportamento de uma aplicação quando a demanda aumenta. No final, mais do que medir números, eles medem maturidade, robustez e resiliência de um sistema.
 
+<img src="https://github.com/user-attachments/assets/302f9516-4729-4517-80a2-a9fea7e8d554" align="right" height="177">
+
 - Teste de Carga: Testa o software sob as condições normais de uso. Ex.: tempo de resposta, número de transações por minuto, usuários simultâneos, etc.
+
 - Teste de Stress: Testa o software sob condições extremas  de uso. Grande volume de transações e usuários simultâneos. Picos excessivos de carga em curtos períodos de tempo.
+
 - Teste de Estabilidade: Testa se o sistema se mantém funcionando de maneira satisfatória após um período de uso.
 
 ## [QA] System testing
