@@ -376,9 +376,9 @@ Tecnicamente, dá pra fazer build sem teste, mas aí a pergunta é exatamente es
 
 É por isso que, na prática, no ciclo de engenharia de software moderno, teste e build se fundem. O pipeline só chama aquilo de “build válido” se os testes passaram. Tanto que em muitas empresas você vê até a nomenclatura “Build & Test” como uma única fase.
 
-A sequência clássica em pipelines CI/CD é mais ou menos assim:
-
 <img height="177" align="right" src="https://github.com/user-attachments/assets/2428e394-db35-454e-bdc5-add66d850f53" />
+
+A sequência clássica em pipelines CI/CD é mais ou menos assim:
 
 1. **Code** → desenvolvedor escreve o código.
 
