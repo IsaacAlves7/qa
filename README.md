@@ -1095,7 +1095,10 @@ Para testes de integração, você pode optar por:
 ## [QA] Functional Testing
 <img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
 
-Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente.
+Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída.
+É a técnica mais utilizada no dia a dia.
+
+Responsável: Analista de Qualidade
 
 O que é importante pensarmos é no tempo de execução de testes que teremos. Os testes de unidade existem desde o início do projeto, qualquer commit deveria ser acompanhada por um teste.
 
@@ -1106,6 +1109,11 @@ Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, t
 <img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
+
+## [QA] Teste da Caixa Branca
+Testa tendo conhecimento do código fonte, os resultados esperados de acordo com os requisitos acordados, padrões adotados. Deve-se passar por todos os fluxos esperados.
+
+Responsável: Desenvolvedor
 
 ## [QA] Regression testing
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/8d0cb7bf-a902-4268-8633-73d0e06a2adc" align="right" height="77">
