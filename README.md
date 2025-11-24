@@ -1327,8 +1327,6 @@ Ferramentas Complementares (como Zod):
 
 Exemplo de Fluxo com Ferramentas Combinadas
 
-<img width="450" height="450" alt="lab-bottle-3d-icon-png-download-4577206" src="https://github.com/user-attachments/assets/f21ec8fe-f144-45dd-a1e3-2278ed47db76" />
-
 1. **Playwright** simula um usuário fazendo login.  
 2. **MSW** mocka a API de login (opcional).  
 3. **Zod** valida se a resposta da API contém `{ token: string }`.  
@@ -1374,6 +1372,8 @@ O passo a passo adequado, sem bagunça, pode ser entendido assim: primeiro você
 Ou seja, MVP é o “o quê” inicial, UAT é o “pode ser aceito?”, Release é o “vai para produção”, e Continuous Delivery é o “como fazer isso de forma contínua e confiável”.
 
 Nos diferentes ecossistemas de linguagens, o conceito de testes de aceitação varia bastante, mas em geral envolve frameworks que permitem validar o comportamento da aplicação do ponto de vista do usuário final, muitas vezes com suporte a **BDD (Behavior Driven Development)** ou integração com navegadores. Vou listar os mais conhecidos em cada um dos ecossistemas:
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/f21ec8fe-f144-45dd-a1e3-2278ed47db76" />
 
 **C/C++** Como o foco dessas linguagens é mais baixo nível, há menos ferramentas prontas para testes de aceitação de aplicações web. Ainda assim, existem opções:
 
