@@ -1258,6 +1258,7 @@ Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilha
 
 <img width="450" height="450" alt="chemical-reaction-3d-icon-png-download-9645881" src="https://github.com/user-attachments/assets/2a6f0cbe-4f5b-4e1f-a934-f41dd7599944" />
 <img width="450" height="450" alt="microscope-3d-icon-png-download-9802663" src="https://github.com/user-attachments/assets/cc567416-c3a9-4106-b037-32a77b1804ee" />
+![chemical-reaction-3d-icon-png-download-12568930](https://github.com/user-attachments/assets/3dc426c6-4eb9-4bc8-8aca-ed0473c0ebd9)
 
 ## [QA] E2E - End-to-end testing
 <img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
@@ -1320,6 +1321,8 @@ Ferramentas Complementares (como Zod):
    - **Sentry**: Captura erros em tempo real durante testes (útil para debug em CI/CD).  
 
 Exemplo de Fluxo com Ferramentas Combinadas
+
+<img width="450" height="450" alt="lab-bottle-3d-icon-png-download-4577206" src="https://github.com/user-attachments/assets/f21ec8fe-f144-45dd-a1e3-2278ed47db76" />
 
 1. **Playwright** simula um usuário fazendo login.  
 2. **MSW** mocka a API de login (opcional).  
