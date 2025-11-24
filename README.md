@@ -1817,7 +1817,7 @@ Quando você junta as três abordagens, tem um fluxo bastante poderoso: o DDD te
 
 Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-refactor” clássico, conectando os diferentes níveis de testes (caixa preta, cinza e branca) dentro do ciclo de desenvolvimento. Destrinchando o que ele está representando:
 
-<img width="1200" height="635" alt="Test-driven-development-cycle-Cybus-Nordic-APIs" src="https://github.com/user-attachments/assets/c1a8a96e-1c48-4152-95e3-003afbdcd210" />
+<img width="1200" height="635" alt="Test-driven-development-cycle-Cybus-Nordic-APIs" src="https://github.com/user-attachments/assets/c1a8a96e-1c48-4152-95e3-003afbdcd210" /><br />
 
 À esquerda, temos a **Black Box**, que é onde entram os **testes de aceitação**. Eles validam se o sistema, como um todo, faz o que o usuário ou o negócio espera. É aqui que entra aquele “Dado–Quando–Então” do BDD, por exemplo. 
 
