@@ -567,7 +567,7 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
    - **RestAssured**: Biblioteca para teste de APIs REST em Java.
 
 7. **Ferramentas de Integração Contínua**:
-<img width="450" height="450" alt="laboratory-test-3d-icon-png-download-11919121" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" />
+<img height="450" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" />
 
    - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
   
