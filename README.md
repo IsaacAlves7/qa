@@ -1821,6 +1821,8 @@ Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-ref
 
 À esquerda, temos a **Black Box**, que é onde entram os **testes de aceitação**. Eles validam se o sistema, como um todo, faz o que o usuário ou o negócio espera. É aqui que entra aquele “Dado–Quando–Então” do BDD, por exemplo. 
 
+<img height="321" align="right" src="https://github.com/user-attachments/assets/68b12fc8-eb35-4b9b-8012-29e5b4d7548d" />
+
 1. Esse é o primeiro passo (1): escrever o teste de aceitação que vai falhar porque o sistema ainda não implementa a funcionalidade.
 
 2. Na sequência (2), entra a parte de **testes funcionais**, ainda numa visão de alto nível. Eles descrevem como cada funcionalidade deve se comportar dentro do sistema. É a ponte entre aceitação e código.
@@ -1842,8 +1844,6 @@ Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–c
 <img width="450" height="450" alt="chemistry-3d-icon-png-download-9544280" src="https://github.com/user-attachments/assets/1f1e90ed-6d18-4742-b426-d470c6833a50" />
 
 <img width="450" height="450" alt="laboratory-3d-icon-png-download-9544272" src="https://github.com/user-attachments/assets/ab2c41b2-7dd4-43d1-9299-5347f3387434" />
-
-<img height="321" align="right" src="https://github.com/user-attachments/assets/68b12fc8-eb35-4b9b-8012-29e5b4d7548d" />
 
 ## [QA] BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
