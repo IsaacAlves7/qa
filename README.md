@@ -722,9 +722,11 @@ Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma 
 
 No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes — ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
 
-Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso — é a área de interesse do sistema, como logística, financeiro, saúde, etc.
+Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso, é a área de interesse do sistema, como logística, financeiro, saúde, etc.
 
 No caso de arquiteturas como Clean Architecture ou Ports & Adapters, "domínio" é uma camada bem definida e isolada que representa as regras puras do negócio, ou seja, aquilo que não muda mesmo que a tecnologia mude; é o núcleo da aplicação.
+
+<img src="https://github.com/user-attachments/assets/7a218751-4342-464b-a375-c0528a72dc50" align="right" height="177">
 
 Já em TDD e BDD, o termo "domínio" aparece implicitamente quando você escreve testes voltados para comportamentos do sistema, especialmente no BDD que foca na linguagem ubíqua e no comportamento esperado do domínio de negócio, enquanto o TDD tende a atuar mais no detalhe técnico e no design emergente.
 
