@@ -1482,7 +1482,7 @@ Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é 
  </tr>
 </table>
 
-O AOP pode fortalecer muito as boas práticas de DDD, BDD e TDD, e essa conexão faz bastante sentido quando entendemos o papel de cada um desses paradigmas dentro de uma arquitetura limpa e organizada. A orientação a aspectos não substitui nenhum deles, mas funciona como uma espécie de tecido estrutural que mantém o código limpo, modular e fiel aos princípios que essas abordagens defendem.
+O AOP - Aspect-Oriented Programming pode fortalecer muito as boas práticas de DDD, BDD e TDD, e essa conexão faz bastante sentido quando entendemos o papel de cada um desses paradigmas dentro de uma arquitetura limpa e organizada. A orientação a aspectos não substitui nenhum deles, mas funciona como uma espécie de tecido estrutural que mantém o código limpo, modular e fiel aos princípios que essas abordagens defendem.
 
 O DDD se beneficia especialmente porque a regra número um do design orientado ao domínio é manter o domínio puro, expressivo e livre de detalhes técnicos acoplados. O AOP ajuda justamente a retirar do domínio tudo aquilo que não é domínio: logs, transações, auditorias, repetição de validações estruturais, políticas de segurança, métricas e qualquer outra funcionalidade transversal. Ao deslocar essas responsabilidades para aspectos, o modelo de domínio permanece limpo e orientado exclusivamente à lógica do negócio, sem anotações excessivas, sem serviços utilitários misturados e sem ruídos que atrapalhem a clareza conceitual do código. Isso deixa o domínio mais próximo da linguagem ubíqua, mais fácil de evoluir e mais coerente com o propósito principal do DDD, que é representar conhecimento e regras do negócio de forma elegante e sustentável.
 
@@ -1733,7 +1733,7 @@ Exemplos de contextos limitados em um sistema de comércio eletrônico
 ├───..
 ```
 
-Padrões de Arquitetura de Integração Empresarial - Redações sobre arquitetura
+**Padrões de Arquitetura de Integração Empresarial - Redações sobre arquitetura**
 
 <img width="720" height="484" alt="image" src="https://github.com/user-attachments/assets/0943cefd-3069-43a6-8c6f-e9609ca22a56" />
 
@@ -1753,8 +1753,7 @@ A integração de sistemas é cara e frequentemente o ponto de falha. Assim como
 2. A falta de importância de saber como algo funciona ou fornece informação (acoplamento frouxo)
 3. Uma comunalidade de linguagem (protocolos padronizados)
 
-Como pensar em integração
-Integração não é apenas HTTP, REST e algum FTP ou SQLNet antigo em segundo plano. É uma área arquitetônica e disciplina interessante e complexa. Não existe uma única forma de encarar isso. Eu vejo isso sob seis pontos de vista que nos permitem criar requisitos sólidos de arquitetura de integração, declarações de problemas e soluções.
+**Como pensar em integração**: Integração não é apenas HTTP, REST e algum FTP ou SQLNet antigo em segundo plano. É uma área arquitetônica e disciplina interessante e complexa. Não existe uma única forma de encarar isso. Eu vejo isso sob seis pontos de vista que nos permitem criar requisitos sólidos de arquitetura de integração, declarações de problemas e soluções.
 
 Esses pontos de vista de integração, dos mais amplos aos mais detalhados, são
 
