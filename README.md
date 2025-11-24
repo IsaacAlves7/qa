@@ -405,15 +405,15 @@ Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipel
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/b22f3aba-0a19-43b7-9da4-fdca9afa4231" />
 
-- **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. E mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”.;
+1. **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. E mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”.;
 
-- **Devem ser realizados antes do commit**: Aqui você está descrevendo o que chamamos de pré-validação local. O ideal é que o desenvolvedor rode testes (unitários pelo menos) antes de commitar, garantindo que não quebrou nada básico. Isso pode ser cultural (boa prática individual) ou técnico (com pre-commit hooks no Git, que bloqueiam commit se os testes falharem). Dessa forma, o código que chega ao repositório central já tem uma garantia mínima.;
+2. **Devem ser realizados antes do commit**: Aqui você está descrevendo o que chamamos de pré-validação local. O ideal é que o desenvolvedor rode testes (unitários pelo menos) antes de commitar, garantindo que não quebrou nada básico. Isso pode ser cultural (boa prática individual) ou técnico (com pre-commit hooks no Git, que bloqueiam commit se os testes falharem). Dessa forma, o código que chega ao repositório central já tem uma garantia mínima.;
 
-- TDD pode ajudar neste processo;
+3. TDD pode ajudar neste processo;
 
-- Desempenho bom em testes;
+4. Desempenho bom em testes;
 
-- Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
+5. Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
 ## [QA] Automation testing
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
