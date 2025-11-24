@@ -113,6 +113,8 @@ No início da década de 1980, o governo dos Estados Unidos reconheceu a necessi
 
 A partir de então, a qualidade de software se tornou um foco importante na indústria de TI e foi acompanhada pelo surgimento de várias ferramentas e técnicas de teste e garantia de qualidade de software. A demanda por softwares confiáveis e de alta qualidade é cada vez maior, uma vez que muitos negócios e serviços dependem de sistemas de software em seus processos diários.
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/f8eb96da-4172-4942-b93d-621e9941605e" />
+
 Hoje em dia, a busca pela qualidade de software continua em constante evolução, com a introdução de novas tecnologias e metodologias, como a integração contínua e o desenvolvimento ágil, e inteligência artificial que buscam garantir a qualidade do software de forma mais eficiente e rápida.
 
 No entanto, a busca pela qualidade de software ainda é um desafio constante. Novas tecnologias e metodologias surgem a cada dia, e os desenvolvedores de software devem estar atualizados sobre as novas tendências e ferramentas disponíveis. Além disso, a complexidade dos sistemas de software modernos também torna o controle de qualidade mais difícil, exigindo uma abordagem mais estruturada e orientada a processos.
