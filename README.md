@@ -1908,6 +1908,10 @@ Cenário: Buscar produto com sucesso
 
    - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
+![flask-incubator-3d-icon-png-download-9707689](https://github.com/user-attachments/assets/f016afab-d430-4b65-a327-9a2b141bdfed)
+![test-tube-3d-icon-png-download-9707694](https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c)
+
+
 ## [QA] ATDD - Acceptance Test-Driven Development
 <img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
 
