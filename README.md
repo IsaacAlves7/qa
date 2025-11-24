@@ -1733,6 +1733,39 @@ Exemplos de contextos limitados em um sistema de comércio eletrônico
 ├───..
 ```
 
+Padrões de Arquitetura de Integração Empresarial - Redações sobre arquitetura
+
+<img width="720" height="484" alt="image" src="https://github.com/user-attachments/assets/0943cefd-3069-43a6-8c6f-e9609ca22a56" />
+
+A perspectiva: Sistemas de TI interagem e, portanto, se integram pelos mesmos motivos que as pessoas.
+
+1. Quando precisamos de informações de outras pessoas para o nosso trabalho
+2. Quando precisamos de alguém para fazer algo por nós
+3. Quando queremos socializar com alguém
+
+Os exemplos correspondentes de TI são uma chamada de API para uma consulta, uma operação e um cheeping de keep-alive/checagem de saúde (com IA, pode surgir uma verdadeira socialização entre sistemas de TI). Eles também são os tipos de interação mais comuns para os menos comuns.
+
+A empresa se preocupa com a interação entre sistemas tecnológicos e os humanos envolvidos nos processos de negócios. Estes últimos podem ser clientes, funcionários e parceiros. Nem tudo pode ser automatizado, e há humanos nas extremidades ou dentro de sequências de eventos, e precisamos torná-los igualmente parte da solução.
+
+A integração de sistemas é cara e frequentemente o ponto de falha. Assim como nas pessoas, os seguintes princípios tornam a interação entre os sistemas rápida, eficiente e espaçosa.
+
+1. A especialização de responsabilidades (coesão)
+2. A falta de importância de saber como algo funciona ou fornece informação (acoplamento frouxo)
+3. Uma comunalidade de linguagem (protocolos padronizados)
+
+Como pensar em integração
+Integração não é apenas HTTP, REST e algum FTP ou SQLNet antigo em segundo plano. É uma área arquitetônica e disciplina interessante e complexa. Não existe uma única forma de encarar isso. Eu vejo isso sob seis pontos de vista que nos permitem criar requisitos sólidos de arquitetura de integração, declarações de problemas e soluções.
+
+Esses pontos de vista de integração, dos mais amplos aos mais detalhados, são
+
+Escopo da integração empresarial → Hierarquia de padrões de integração empresarial → Padrões de integração de aplicações → Integração horizontal das camadas dos sistemas → integração sem estado versus com estado → Segurança da integração
+
+(Usaremos terminologia arquitetonicamente relevante do Design Orientado por Domínio, especialmente os termos específicos de DDD para camadas — UI, Aplicação, Domínio e Infraestrutura. Outros termos DDD estão em itálico. Por favor, consulte meus artigos sobre Arquitetura Orientada por Domínio Parte I e II.)
+
+Uma vez que você entenda a integração sob os pontos de vista abaixo, poderá definir e resolver problemas de integração de forma holística, eficiente e eficaz.
+
+(Todas as imagens usadas estão neste PPT que você pode baixar para melhor visualização. Você pode usá-los com atribuição.)
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
