@@ -721,7 +721,7 @@ Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma 
 > [!Important]
 > É importante ressaltar sobre um termo muito conhecido em ciência da computação, chamado **domínio** (domain), cujo a diferença está no nível de abstração e no foco de cada conceito. A palavra "domínio" realmente aparece em contextos diferentes e pode causar confusão se não for bem delimitada.
 
-No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes — ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
+No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes, ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
 
 Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso, é a área de interesse do sistema, como logística, financeiro, saúde, etc.
 
