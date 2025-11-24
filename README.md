@@ -1167,6 +1167,8 @@ Quando Realizar Regression Testing:
 
 Métodos de Regression Testing:
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/6e1292a6-9162-44e2-89c6-30d003f0867f" />
+
 1. **Reexecução Completa**: Executar todos os testes existentes para garantir que o software inteiro funcione corretamente. Isso é muitas vezes impraticável para grandes sistemas devido ao tempo e recursos necessários.
 
 2. **Seleção de Casos de Teste**: Escolher um subconjunto de testes que são mais relevantes para as áreas do código que foram alteradas.
