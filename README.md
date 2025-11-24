@@ -445,19 +445,17 @@ Testes automatizados são uma das práticas mais fundamentais no desenvolvimento
 
 1. **Testes de unidade** (isolam pequenas partes do código),
 
-
 2. **Testes de integração** (verificam a comunicação entre partes),
 
+3. **Testes funcionais** (validam funções específicas do sistema a partir dos requisitos, checando o que o software deve fazer, independentemente de como é implementado),
 
-3. **Testes funcionais**
-
-
-4. **Testes de sistema** (validam o sistema como um todo)
-
+4. **Testes de sistema** (validam o sistema como um todo),
 
 5. **Testes end-to-end** (simulam o comportamento real do usuário).
 
-Cada nível exige atenção diferente e ferramentas específicas: No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios claros de cobertura: o que está sendo testado, por que está sendo testado e o que não precisa ser testado. Bons testes não são só aqueles que passam, mas aqueles que falham quando o comportamento do código foge do esperado. Para isso, as asserções precisam ser claras, específicas e rastreáveis. Boas práticas incluem escrever testes que sejam rápidos, isolados, determinísticos e legíveis. Um teste bom é aquele que alguém consegue entender o que ele verifica só de ler o seu nome e o corpo, sem necessidade de ir até a implementação testada.
+Cada nível exige atenção diferente e ferramentas específicas: No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios claros de cobertura: o que está sendo testado, por que está sendo testado e o que não precisa ser testado. 
+
+Bons testes não são só aqueles que passam, mas aqueles que falham quando o comportamento do código foge do esperado. Para isso, as asserções precisam ser claras, específicas e rastreáveis. Boas práticas incluem escrever testes que sejam rápidos, isolados, determinísticos e legíveis. Um teste bom é aquele que alguém consegue entender o que ele verifica só de ler o seu nome e o corpo, sem necessidade de ir até a implementação testada.
 
 A fase de ferramentas é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
 
