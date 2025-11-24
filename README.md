@@ -292,7 +292,7 @@ Já as **falhas externas** são aquelas que ocorrem após a entrega do produto f
 > [!Warning]
 > Para aprofundar seu conhecimento sobre os custos de qualidade de software, você pode se perguntar: quais são as principais causas de falhas internas e externas? Como a qualidade do software pode influenciar nos custos da empresa? Como é possível reduzir esses custos e melhorar a qualidade do produto final?
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/4d60adb8-9629-4605-ae7f-8b97798f7699" />
+<a href=""><img src="https://github.com/user-attachments/assets/4d60adb8-9629-4605-ae7f-8b97798f7699" /></a>
 
 A **Regra 10 de Myers**, criada em 2004 por Glenford Myers, é uma importante diretriz para os analistas de teste de software. Essa regra afirma que toda falha no software deve ser rastreável a uma ação ou decisão específica tomada durante o desenvolvimento do software.
 
