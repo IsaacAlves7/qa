@@ -1778,6 +1778,87 @@ A imagem abaixo ilustra esse ponto de vista:
 
 **Diretrizes**: Considere cada tipo de integração acima separadamente por suas características e os cinco pontos de vista abaixo para personalizar as arquiteturas de integração.
 
+**Ponto de Vista 2: Hierarquia dos padrões de integração empresarial - Hierarquia de funções de negócio**
+
+**BPM** — A gestão de processos de negócios coordena pessoas, sistemas, informações e coisas para produzir resultados de negócios para os domínios e subdomínios da empresa. Exemplos são design de produto, fabricação, marketing, aquisição de clientes, vendas, etc. A arquitetura BPM automatiza a integração dinâmica dos processos de negócios na máxima medida possível para fornecer resultados bem definidos, repetíveis, eficientes e confiáveis.
+
+**Fluxo de trabalho** — Um fluxo de trabalho é uma sequência definida de tarefas realizadas por sistemas e humanos trabalhando juntos para entregar uma tarefa de negócio. Pode ser considerado um subconjunto de um processo de negócios. Um exemplo é o fluxo de aprovação de um empréstimo empresarial. A arquitetura de workflow integra sistemas de TI e humanos para a iniciação, roteamento, suporte analítico à decisão, etapas manuais, tarefas automatizadas, coordenação e monitoramento dos fluxos de trabalho.
+
+**Integração de sistemas** — Em um cenário de TI bem projetado, a funcionalidade é dividida em sistemas coesos que mapeiam capacidades de domínio e subdomínio de negócio. Esses sistemas devem trabalhar juntos para entregar resultados úteis para fluxos de trabalho e processos de negócios. A integração de sistemas automatiza a cooperação dinâmica deles. (Leia este artigo para saber mais sobre os tipos de sistemas que precisam ser integrados → Uma Abstração Prática de Sistemas de TI Funcionais.)
+
+**Integração de componentes** — Todos os sistemas de TI são segregados internamente em componentes e subcomponentes coesos e fracamente acoplados. Esses são integrados usando padrões padrão (veja ponto de vista #4 abaixo) para entregar as funções externamente úteis do sistema.
+
+A imagem abaixo ilustra esse enquadramento:
+
+![1_3RtjdjHqylQ18CN8N9WmGw](https://github.com/user-attachments/assets/d758ba0e-a9ea-4ed2-b1a8-e1ce9f679682)
+
+**Hierarquia técnica de funções**: A integração é cara e deve ser o mais simples possível. O quão difícil e propenso a problemas será depende da maturidade dos sistemas de TI (ou seja, aplicações). Quando sistemas/serviços cliente e servidor se comunicam como parte de um processo de negócio, algumas ou todas as seguintes funções podem ser necessárias.
+
+1. **Retentando** — o servidor não responde na primeira tentativa
+2. **Mensagens** — o servidor não pode ser contatado diretamente
+3. **Gerenciamento de carga** (fila, balanceamento, pooling de conexão) — o servidor pode responder a um número limitado de solicitações por unidade de tempo
+4. **Publicar-assinar** — o servidor possui informações que um ou mais consumidores podem obter enquanto estão atualizadas
+5. **Transformação de objetos** — o cliente e o servidor trabalham com pacotes de dados suficientes, porém diferentes.
+6. **Transformação de protocolo** — cliente e servidor não usam o mesmo protocolo de comunicação
+7. **Conversão sincronizada** — o cliente espera uma resposta online enquanto o servidor é projetado para uma resposta offline ou espera uma resposta offline enquanto o servidor é projetado para uma resposta online.
+8. **Fusão de funções ou dados** — o cliente deve ser atendido a partir de uma combinação de mais de uma operação ou repositório de informações.
+9. **Roteamento** — o servidor correto deve ser alcançado com base em regras
+10. **Orquestração** — uma sequência de operações deve ser realizada para responder ao cliente, e a lógica está em um único lugar. (Coreografia é um conceito relacionado, onde a lógica de ação e sequência são distribuídas nos serviços participantes; no entanto, sua capacidade funcional é limitada, e geralmente há um orquestrador centralizado de algum tipo, mesmo que seja apenas um conjunto de regras de referência passivo.)
+11. **Gerenciamento de versões** — diferentes clientes precisam de versões diferentes da mesma operação
+12. **Segurança** (veja ponto de vista #6 abaixo) — o cliente e o servidor precisam ser protegidos de uma ou mais maneiras
+
+Quanto mais dessas necessidades os sistemas cliente e servidor atendem internamente, menos o arquiteto de integração precisa fornecê-las externamente. Em outras palavras, a arquitetura da aplicação e da informação influenciam significativamente a complexidade e o custo da arquitetura de integração para construir e operar.
+
+Normalmente, haverá algumas funções de integração externas que precisamos atender. Mas quanto mais direta e simples a integração, melhor.
+
+**Padrões e plataformas de soluções de integração intermediária**: Os padrões de solução de integração externa são os seguintes, em ordem crescente de escopo. Tecnicamente, eles não são padrões arquitetônicos, e alguns se sobrepõem funcionalmente. Então, compreenda as diferenças deles e use os termos com cuidado.
+
+1. **RPC** — uma chamada de procedimento remoto (RPC) é quando um programa de computador faz com que um procedimento (sub-rotina) seja executado em um espaço de endereçamento diferente (comumente em outro computador em uma rede compartilhada), codificado como se fosse uma chamada de procedimento comum (local), para simplificar a programação e não precisar lidar com detalhes de rede, protocolo e sistema operacional, etc.
+
+2. **Integração intra-app** — interações entre as camadas de UI, aplicação, domínio e repositório de um sistema (termos DDD; ou UI, lógica de negócio e camadas de banco de dados em terminologia mais antiga), por exemplo, entre a interface e a camada de lógica de negócios (usando protocolos HTTP(s)) e entre a lógica de negócio e a camada de banco de dados (usando TNS/TTC sobre protocolos TCP/IP para o Oracle DB).
+
+3. **API de Leitura (DAL)** — uma API de leitura ou Camada de Acesso a Dados é uma camada comum de integração em Fontes de Dados Operacionais (ODS), Bancos de Dados de Sistemas de Informação de Gestão (MIS DBs) e camadas de negócios de BI acessadas por transações de leitura OLTP e OLAP.
+
+4. **API** — Uma Interface de Programação de Aplicações é uma interface de software para comunicação entre sistemas de TI. Uma API geralmente suporta múltiplas operações. O projeto é guiado pela padronização das assinaturas de funções e protocolos de rede, e um documento de especificação da API é publicado. APIs frequentemente possuem várias versões disponíveis para diferentes clientes. A descoberta dinâmica e a vinculação de APIs e operações por clientes durante a execução também podem ser suportadas.
+
+5. **API GW** — um API Gateway realiza uma combinação de padrões arquitetônicos como fachada, adaptador, mediador e (reverso) proxy. Ele recebe chamadas de clientes e as roteia para os serviços que estão por detrás dele, enquanto fornece funções como roteamento, limitação de taxa, transformação de protocolo, agregação, segurança, versionamento, logs, etc.
+
+6. **Sistemas de Mensagens** — o padrão de integração de mensagens permite que os sistemas sejam acoplados de forma fraca por meio da comunicação assíncrona, tornando a comunicação mais confiável porque os dois sistemas não precisam funcionar simultaneamente. O sistema de mensagens é responsável por transferir dados de um sistema para outro, para que possam focar nas informações que precisam compartilhar e não gerenciar a interação ativamente. É como um serviço de cartas postal.
+
+7. **Sistemas de Fila (de Mensagens)** — o padrão de fila estende o padrão de comunicação assíncrona da Mensagem, fornecendo um pipeline onde múltiplas mensagens podem ser armazenadas sequencialmente por sistemas clientes ou servidores até que sejam consumidas, geralmente em um sistema de Primeiro Entrado, Primeiro a Sair (FIFO), ou se tornem obsoletas. Mensagens de solicitação são colocadas em filas pelos sistemas clientes e captadas e atendidas com mensagens em filas de resposta pelos sistemas de serviço. Filas aumentam a confiabilidade e o throughput líquido e reduzem a perda de dados. Esse acoplamento frouxo permite o desenvolvimento independente e ágil dos sistemas. Gerenciar as filas e seu conteúdo, envelhecimento, escalonamento, registro, etc., são funções fornecidas pela plataforma de fila de mensagens. É como fazer fila para comprar um ingresso para um filme.
+
+8. **Sistemas de Publicação-Assinatura** — o padrão de publicação é um padrão de comunicação assíncrono e fracamente acoplado para que um sistema de serviço disponibilize informações ou funções às quais clientes interessados possam se inscrever. É como publicar jornais e assinar por leitores interessados.
+
+9. **ESBs** — Um Barramento de Serviços Empresariais combina múltiplas funções de integração, como mensagens, fila, publicação-assinatura, roteamento, transformação de protocolo, transformação de objetos, etc., em uma única plataforma de software. Elas são uma das plataformas EAI mais comuns (veja abaixo).
+
+10. **Plataformas EAI** — de modo geral, as plataformas de Integração de Aplicações Empresariais podem fornecer todas as 12 funções de integração abordadas na seção de Hierarquia de Funções Técnicas acima e os tipos de solução 2 a 9 acima.
+
+11. **Gerentes de Fluxo de Trabalho** — Plataformas de fluxo de trabalho integram os sistemas e as pessoas para a iniciação, roteamento, suporte à decisão, ações manuais, tarefas automatizadas, coordenação e monitoramento da sequência de etapas realizadas por sistemas e humanos juntos para uma tarefa de negócio.
+
+12. **Gerentes de Processos de Negócios** — Plataformas BPM automatizam a integração dinâmica dos processos de negócios para fornecer resultados bem definidos, repetíveis, eficientes e confiáveis. Eles geralmente cobrem serviços de descoberta, análise e otimização.
+
+**Diretrizes**: O que é necessário para a integração surge organicamente da arquitetura de aplicações e informações e dos processos e fluxos de trabalho de negócios que eles atendem. Mas, às vezes, há uma decisão a ser tomada se devemos refatorar aplicações para melhor integração ou usar uma plataforma externa.
+
+O teste de tornasol mostrado abaixo nos ajuda a identificar a necessidade de apoio externo. Se a pontuação for baixa, é recomendável refatorar as candidaturas.
+
+![1_PK-NK06VqiotZH4pAYFX1w](https://github.com/user-attachments/assets/af65c83d-26d1-47af-a9fb-8a851c2426d8)
+
+**Ponto de Vista 3: Padrões de integração de aplicativos**: Desde o início, os padrões de design de aplicações incluíram padrões de integração. Alguns desses fatores estão alinhados com o pensamento arquitetônico; Podemos nos adaptar e adotá-los. O livro 'Gang of Four' sobre Padrões de Design de Aplicações aborda os seguintes temas arquitetonicamente relevantes, que são brevemente descrevidos. Como arquiteto de aplicações e integração, aprenda e use esses padrões.
+
+**Facade** — Fornece uma interface unificada para um conjunto de interfaces em um subsistema. A Facade define uma interface de nível superior que torna o subsistema mais fácil de usar. Por exemplo, uma fachada de API para Order reúne as interfaces de múltiplos subsistemas subjacentes, como ManageStock, CheckPayment, FulfilOrder, etc.
+
+**Adapter** — Converte a interface de uma classe em outra interface que os clientes esperam. O adaptador permite que classes trabalhem juntas que, de outra forma, não poderiam por causa de interfaces incompatíveis. Em termos arquitetônicos, pense em sistema, aplicação, componente ou subcomponente em vez de classe. Por exemplo, um PaymentGWAdapter preenche um campo de tipo cliente obrigatório exigido por uma interface de sistema de pagamento com um valor padrão para um cliente que não o fornece.
+
+**Proxy** — Fornece um substituto ou substituto para outro objeto controlar o acesso a ele. Funcionalmente, eles podem ser ainda divididos em Proxy Remoto (representação local de uma API remota), Proxy Virtual (fornece cache e acesso backend sob demanda), Proxy de Proteção (acesso de controle baseado em funções e regras) e Proxy Auxiliar (fornece serviços adicionais como contagem, registro, etc.). Por exemplo, uma CDN (rede de entrega de conteúdo) usa um proxy reverso para segurança, balanceamento de carga e escalabilidade.
+
+**Observer** (também conhecido como Publicar-Assinar) — Define uma dependência de um para muitos entre objetos para que todos os seus dependentes sejam notificados e atualizados automaticamente quando um objeto muda de estado. (O padrão de Arquitetura Orientada a Eventos é um caso de um padrão de integração de aplicação por observador ou publicação-assinatura.) Por exemplo, se o cronograma de voo de uma companhia aérea (assunto) mudar e vários portais de viagem (observadores) precisarem saber disso, um padrão de Observador ou Publicar-Assinar os integra usando notificações, solicitações, etc.
+
+**Mediator** — Define um objeto que encapsula como um conjunto de objetos interage. Mediador promove o acoplamento frouxo ao impedir que objetos se refiram explicitamente uns aos outros e permitir que você varie sua interação de forma independente. Por exemplo, uma plataforma de comércio eletrônico se comunica com vários gateways de pagamento por meio de um mediador para que todos possam mudar de forma independente.
+
+**Camada Anticorrupção** (esse padrão vem do DDD) — Quando sistemas baseados em diferentes modelos são combinados, a necessidade do novo sistema se adaptar à semântica do outro sistema pode levar à corrupção do modelo do novo sistema. Crie uma camada isolante para fornecer aos clientes funcionalidades em termos do modelo de domínio deles. A camada se comunica com o outro sistema por meio de sua interface existente, exigindo pouca ou nenhuma modificação no outro sistema. Internamente, a camada se desloca em ambas as direções conforme necessário entre os dois modelos. Por exemplo, um aplicativo de banco móvel comunica-se com um sistema bancário central legado por meio de uma ACL que separa a verificação de crédito das ordens combinadas em uma única função no sistema legado.
+
+**Diretrizes**: Adote o <a href="https://medium.com/analysts-corner/domain-driven-architecture-design-for-excellent-it-systems-ii-primer-5ae6c6b8f7de">Design de Arquitetura Orientado por Domínio</a>, pois ele leva naturalmente aos contextos limitados, arquiteturas de subdomínio e mapas de contexto que orientam a escolha dos padrões de integração intra e inter-sistema.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
