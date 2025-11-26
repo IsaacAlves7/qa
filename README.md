@@ -1492,7 +1492,7 @@ Sobre o BDD, o AOP também se encaixa de maneira natural, porque o BDD exige cla
 
 Assim, quando você coloca tudo isso junto, percebe que AOP não é um acessório técnico, mas uma ferramenta arquitetural que sustenta a separação de responsabilidades, reduz acoplamento e melhora a manutenção do sistema como um todo. Ele permite que o domínio seja domínio, que os testes sejam testes e que o comportamento da aplicação seja descrito de maneira simples e coerente. O AOP acaba se tornando um verdadeiro aliado para sistemas que queiram adotar DDD, TDD e BDD de forma madura, escalável e profissional, principalmente em ambientes como o ecossistema Java/Kotlin, onde essa abordagem é amplamente consolidada através de frameworks como o Spring.
 
-<img width="720" height="267" alt="image" src="https://github.com/user-attachments/assets/cc8dad6f-afc7-4b1b-8ebd-30df9b57b557" />
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/cc8dad6f-afc7-4b1b-8ebd-30df9b57b557" />
 
 Os padrões estratégicos lidam com a obtenção de uma visão geral do domínio de negócios, o que inclui decompô-lo em regras de negócios.
 
@@ -1764,7 +1764,19 @@ Escopo da integração empresarial → Hierarquia de padrões de integração em
 
 Uma vez que você entenda a integração sob os pontos de vista abaixo, poderá definir e resolver problemas de integração de forma holística, eficiente e eficaz.
 
-(Todas as imagens usadas estão neste PPT que você pode baixar para melhor visualização. Você pode usá-los com atribuição.)
+**Ponto de Vista 1: O escopo da integração empresarial**: É útil começar com uma visão de onde as interações estão acontecendo, pois isso influencia sua natureza e soluções.
+
+**Intra-Domínio**: Integrações dentro de um domínio de negócios são as mais comuns. Eles conectam sistemas relacionados com arquitetura e modelos de design semelhantes (assumindo o Domain Driven Design). Isso permite mapas de contexto mais simples entre contextos limitados e integrações mais diretas, com menos preocupações de capacidade e escalabilidade: por exemplo, integração entre um sistema de Gestão de Estoque e um Sistema de Compras.
+
+**Interdomínio**: As integrações entre domínios de negócio são menores, mas apresentam mais desafios. A Linguagem Ubíqua provavelmente diferirá em cada domínio, e a carga útil de dados e os objetos de resposta frequentemente precisam ser transformados nas interações. A infraestrutura também pode ser separada um pouco ou muito, introduzindo a necessidade de várias funções de suporte (veja ponto de vista #2 abaixo) para uma integração bem-sucedida, por exemplo, integração entre um Sistema de Gerenciamento de Pedidos no domínio de vendas com um Sistema de Gerenciamento de Relacionamento com o Cliente no domínio de atendimento ao cliente.
+
+**Inter-Empresas**: A integração entre empresas parceiras em cenários B2B e B2B2C está aumentando exponencialmente com os serviços modernos de web e digitais. Felizmente, os padrões de integração de serviços e serviços em nuvem acompanharam as arquiteturas emergentes da web, mobile e digital, atendendo às necessidades de serviços integrados confiáveis, rápidos e rápidos em escala, seguros e ágeis, desenvolvendo serviços integrados que abrangem de duas a dezenas de empresas em ecossistemas como eCommerce, logística, viagens, automotivo, manufatura, companhia aérea, bancos e serviços financeiros.
+
+A imagem abaixo ilustra esse ponto de vista:
+
+![1_z2eWnKg4fEFYP58W-pwNiQ](https://github.com/user-attachments/assets/fb4185f4-7d02-47bb-9583-f5b74695f830)
+
+**Diretrizes**: Considere cada tipo de integração acima separadamente por suas características e os cinco pontos de vista abaixo para personalizar as arquiteturas de integração.
 
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
