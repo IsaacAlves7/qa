@@ -1859,6 +1859,16 @@ O teste de tornasol mostrado abaixo nos ajuda a identificar a necessidade de apo
 
 **Diretrizes**: Adote o <a href="https://medium.com/analysts-corner/domain-driven-architecture-design-for-excellent-it-systems-ii-primer-5ae6c6b8f7de">Design de Arquitetura Orientado por Domínio</a>, pois ele leva naturalmente aos contextos limitados, arquiteturas de subdomínio e mapas de contexto que orientam a escolha dos padrões de integração intra e inter-sistema.
 
+**Ponto de Vista 4: Integração horizontal das camadas dos sistemas**
+
+**Integração horizontal na camada UI**: As integrações horizontais na camada de UI estão aumentando, impulsionadas pela tendência de 'montar' aplicações combinando serviços prontos para uso, como buscas de produtos, portais de comércio eletrônico, gateways de pagamento, etc. Vamos considerar isso nos três tipos típicos de interfaces.
+
+1. **Aplicações Estáticas de Página Única (SPAs)** — São aplicativos mais simples, onde toda a funcionalidade está contida em uma única página, totalmente atendida por um ou mais sistemas backend. Por exemplo, Gmail, Google Maps, Twitter, Facebook, etc. A integração de interface horizontal é menos comum em SPAs.
+2. **Aplicações Multi Page Estáticas (SMPAs)** — Cada página nessas interfaces fornece um conjunto coeso de funcionalidades do usuário, por exemplo, uma interface ERP. Existem diferentes páginas para contas de usuário, pedidos, suporte, etc. Cada página pode ser bastante independente das outras e conectada a um componente backend separado ou a sistemas parceiros 'white label'. Eles estão integrados de forma frouxa em um portal web ou aplicativo móvel, mas o visual e a sensação são consistentes em todas as páginas.
+3. **Aplicações Dinâmicas Multi Página (DMPAs)** — Nessas aplicações, existe um conjunto central de páginas conectadas aos componentes principais do backend, mas as tarefas do usuário também percorrem páginas povoadas por sistemas em outros domínios da mesma empresa ou por sistemas de parceiros, todos os quais podem não ser 'white label'. Por exemplo, um site de comércio eletrônico. Nesses casos, a aparência e a sensação das páginas externas podem ser um pouco ou muito diferentes e mudar com o tempo. Também pode variar entre versões web e mobile da mesma tarefa.
+
+A maior parte da integração horizontal da camada de interface é realizada pela integração horizontal da camada de aplicação (DDD) conforme abaixo, incluindo projetos como portais com uma coleção de portlets de diferentes sistemas.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
