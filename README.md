@@ -1977,9 +1977,9 @@ Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-ref
 
 8. Por fim, quando tudo isso passa, você retorna para os **testes de aceitação** (8). Se eles agora passam, significa que o sistema como um todo está atendendo ao que foi pedido. Se ainda falham, o ciclo recomeça até que os critérios de aceitação estejam cumpridos.
 
-Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–código–refatora), mas pode ser entendido como um **encadeamento de ciclos em diferentes camadas**: começa com aceitação (visão do usuário), vai para funcional (visão do sistema), integrações (módulos se falando) e finalmente unidades (blocos de código). É um processo iterativo que desce do mais abstrato até o mais concreto e depois sobe de volta, validando em todos os níveis.
+<img src="https://github.com/user-attachments/assets/f148fe20-8d58-4655-aa11-0a4cda7ec9c3" align="right" height="177">
 
-![chemical-3d-icon-png-download-9684967](https://github.com/user-attachments/assets/f148fe20-8d58-4655-aa11-0a4cda7ec9c3)
+Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–código–refatora), mas pode ser entendido como um **encadeamento de ciclos em diferentes camadas**: começa com aceitação (visão do usuário), vai para funcional (visão do sistema), integrações (módulos se falando) e finalmente unidades (blocos de código). É um processo iterativo que desce do mais abstrato até o mais concreto e depois sobe de volta, validando em todos os níveis.
 
 <img width="450" height="450" alt="chemistry-3d-icon-png-download-9544280" src="https://github.com/user-attachments/assets/1f1e90ed-6d18-4742-b426-d470c6833a50" />
 
