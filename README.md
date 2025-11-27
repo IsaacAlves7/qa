@@ -1267,9 +1267,10 @@ Playwright é outra evolução desse conceito, permitindo testar múltiplos nave
 
 Quando há robôs de interface que automatizam fluxos completos, RPA como UiPath podem executar testes de sistema em nível empresarial. No mundo .NET, é comum usar Playwright, Selenium ou Cypress integrados ao pipeline do Azure DevOps, GitHub Actions ou GitLab CI, validando a aplicação como um todo após o deploy em ambiente de staging. Para microserviços orquestrados com Docker Compose ou Kubernetes, a combinação de testes em Postman/Newman, Karate DSL e ferramentas de workflow como Robot Framework fornece um arsenal capaz de simular fluxos complexos de ponta a ponta, incluindo eventos em fila, mensagens assíncronas e APIs encadeadas. Finalmente, para sistemas que exigem automação de tela desktop, existem soluções como WinAppDriver ou TestComplete.
 
+<img height="77" align="right" src="https://github.com/user-attachments/assets/cc567416-c3a9-4106-b037-32a77b1804ee" />
+
 Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilham a mesma essência: validar que o sistema completo funciona integrado, como um organismo vivo, garantindo que a experiência final seja coerente, confiável e alinhada ao que o usuário espera.
 
-<img width="450" height="450" alt="microscope-3d-icon-png-download-9802663" src="https://github.com/user-attachments/assets/cc567416-c3a9-4106-b037-32a77b1804ee" />
 ![chemical-reaction-3d-icon-png-download-12568930](https://github.com/user-attachments/assets/3dc426c6-4eb9-4bc8-8aca-ed0473c0ebd9)
 
 ## [QA] E2E - End-to-end testing
