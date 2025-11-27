@@ -1137,7 +1137,9 @@ Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, t
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
 
-## [QA] Teste da Caixa Branca
+## [QA] White-box testing
+<img src="https://github.com/user-attachments/assets/990d67a2-0bb0-4066-900f-ff760507fe39" align="right" height="77">
+
 O **Teste da Caixa Branca**, também conhecido como Teste de Caixa de Vidro ou Estrutural, é uma abordagem de teste de software que examina as entranhas do sistema, sua estrutura interna, sua lógica de programação e seu código-fonte. Diferente do Teste da Caixa Preta, onde o testador enxerga o software apenas como um usuário final, sem conhecimento da implementação interna, o teste de caixa branca exige que o profissional tenha acesso e compreensão profunda do código, dos algoritmos, dos fluxos de dados e da arquitetura do sistema. O seu nome é uma analogia direta: se na caixa preta você testa sem ver o que há dentro, na caixa branca a caixa é transparente, e você analisa minuciosamente os mecanismos internos para garantir que cada engrenagem funcione corretamente.
 
 Testa tendo conhecimento do código fonte, os resultados esperados de acordo com os requisitos acordados, padrões adotados. Deve-se passar por todos os fluxos esperados. Responsável: Desenvolvedor
