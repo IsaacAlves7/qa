@@ -1472,7 +1472,9 @@ Falaremos sobre a maneira de se aproximar do problema e da solução: o caminho 
 
 O DDD (Domain-Driven Design) entra no fluxo do desenvolvimento de produto antes do MVP, como um alicerce. Ele não é um artefato de entrega como MVP, UAT ou Release, mas sim uma abordagem de modelagem que orienta como o software deve ser desenhado para refletir o domínio do problema.
 
-Se você pensar em sequência, o fluxo ficaria assim:
+Se você pensar em sequência, o fluxo ficaria assim: Engenharia de domínio + Design orientado por domínio
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/29d08cac-4445-4200-be35-d46f5e822991" />
 
 1. **DDD – Domain-Driven Design**: Aqui você faz a imersão no domínio de negócio, conversa com especialistas e stakeholders, descobre a linguagem ubíqua e modela o sistema em termos que façam sentido para o negócio. É nessa etapa que surgem conceitos como entidades, agregados, bounded contexts e eventos de domínio. O objetivo é garantir que a estrutura do software nasça aderente à realidade que ele pretende resolver.
 
@@ -1480,7 +1482,13 @@ Se você pensar em sequência, o fluxo ficaria assim:
 
 3. **QA interno** → **UAT** → **Release** → **Continuous Delivery**: Depois disso, o fluxo segue normalmente como te expliquei antes.
 
-Então, se o MVP é o “primeiro produto que entrega valor real”, o **DDD é o mapa que garante que esse valor seja o certo**, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
+Então, se o MVP é o “primeiro produto que entrega valor real”, o *DDD é o mapa que garante que esse valor seja o certo*, modelando desde o início com consistência e visão de futuro. Sem o DDD, corre-se o risco de o MVP ser feito de qualquer jeito e depois ser difícil ou custoso de evoluir.
+
+Um conceito fundamental para tudo isso é a **Engenharia de domínio** que é todo o processo de reutilização do conhecimento de domínio na produção de novos sistemas de software. É um conceito-chave no reuso sistemático de software e na engenharia de linhas de produtos. Uma ideia-chave na reutilização sistemática de software é o domínio. A maioria das organizações atua em apenas alguns domínios. Eles constroem repetidamente sistemas semelhantes dentro de um determinado domínio, com variações para atender a diferentes necessidades dos clientes. Em vez de construir cada nova variante do zero, economias significativas podem ser alcançadas reutilizando partes de sistemas anteriores no domínio para construir novos.
+
+O processo de identificar domínios, delimitá-los e descobrir semelhanças e variáveis entre os sistemas do domínio é chamado de análise de domínio. Essas informações são capturadas em modelos usados na fase de implementação do domínio para criar artefatos como componentes reutilizáveis, uma linguagem específica de domínio ou geradores de aplicações que podem ser usados para construir novos sistemas no domínio.
+
+Na engenharia de linhas de produtos, conforme definido por ISO26550:2015, a Engenharia de Domínios é complementada pela Engenharia de Aplicações, que cuida do ciclo de vida dos produtos individuais derivados da linha de produtos. 
 
 DDD só funciona plenamente quando **anda alinhado** com design de software, design de sistemas e arquitetura, não porque eles sejam a mesma coisa, mas porque o DDD sozinho não consegue se sustentar sem uma estrutura técnica que dê corpo às suas ideias. O ponto central é que o Domain-Driven Design é uma abordagem profundamente conceitual: ele organiza o pensamento sobre o domínio, define limites claros, introduz linguagens específicas, identifica contextos independentes e estabelece modelos consistentes. Só que tudo isso precisa inevitavelmente se materializar em código, fluxos, integrações, decisões de infraestrutura, modularização e comunicação entre serviços. Se esse materializar não acompanha a lógica do domínio, o DDD implode, ou vira apenas documentação bonita.
 
