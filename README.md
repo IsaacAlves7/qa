@@ -1982,11 +1982,13 @@ Desenvolvedores normalmente usam frameworks de testes, como **xUnit**, para cria
 
 Os testes em integração contínua são sobre **feedback do software**, como a maioria dos métodos ágeis. Feedback é o ponto chave para um desenvolvimento com qualidade, seja ele a nível técnico, de gestão ou pessoal. O Feedback é o ponto chave para um desenvolvimento com qualidade, seja ele a nível técnico, de gestão ou pessoal.
 
-Bom, muito provavelmente não fui eu quem inventou o nome Ciclo de Feedback para desenvolvimento de Software mas estou adicionando o guiado a Testes. Legal mas o que isso quer dizer? Quer dizer que, quando trabalhando no desenvolvimento de uma tarefa qualquer, que seja guiada a testes, nós temos que trabalhar em cima do feedback que os testes nos trazem e não com o pensamento de que temos apenas que codar a `feature` e adicionar testes para garanti-las. Realizar uma tarefa guiada a testes com esse pensamento é disperdiçar boa parte do potencial da abordagem do TDD.
+Bom, muito provavelmente não fui eu quem inventou o nome Ciclo de Feedback para desenvolvimento de Software mas estou adicionando o guiado a Testes. 
+
+Legal mas o que isso quer dizer? Quer dizer que, quando trabalhando no desenvolvimento de uma tarefa qualquer, que seja guiada a testes, nós temos que trabalhar em cima do feedback que os testes nos trazem e não com o pensamento de que temos apenas que codar a `feature` e adicionar testes para garanti-las. Realizar uma tarefa guiada a testes com esse pensamento é disperdiçar boa parte do potencial da abordagem do TDD.
+
+Então, o DDD, TDD e BDD são três abordagens diferentes que se complementam no desenvolvimento de software:
 
 ![tdd,bdd,ddd](https://github.com/user-attachments/assets/999df44a-f250-4287-b80c-e7725401d917)
-
-Então, o TDD, BDD e DDD são três abordagens diferentes que se complementam no desenvolvimento de software:
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/35be875e-12ff-40ad-8042-0ef55700f62b" />
 
