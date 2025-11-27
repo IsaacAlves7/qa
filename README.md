@@ -1463,29 +1463,27 @@ O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem
 
 Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. O design orientado por domínio (DDD) é uma abordagem importante de design de software, focada em modelar software para corresponder a um domínio de acordo com a contribuição dos especialistas desse domínio. A DDD é contra a ideia de ter um modelo unificado único; em vez disso, divide um grande sistema em contextos limitados, cada um com seu próprio modelo. 
 
+O termo foi cunhado por Eric Evans em seu livro de mesmo nome, publicado em 2003. No entanto, a definição mais simples que encontrei foi ao ler o livro Fundamentals of Software Architecture de Neal Ford e Mark Richards:
+
+> O design orientado a domínio (DDD) é uma técnica de modelagem que permite a decomposição organizada de domínios de problemas complexos. - Neal Ford e Mark Richards. Fundamentos da Arquitetura de Software. 2020.
+
+Embora o design orientado a domínio (DDD) exista desde 2004, o conceito não foi capaz de se espalhar excessivamente em todo esse tempo. Nos últimos anos, no entanto, o termo experimentou uma segunda primavera. Onde o desenvolvimento de software não é um fim em si mesmo. Em vez disso, o software é desenvolvido para resolver problemas técnicos do mundo real. Isso requer tecnologia, mas esse não é o foco, é apenas um meio para um fim. O foco real está no assunto, o **domínio** (domain)! Portanto, uma boa compreensão disso é essencial para um desenvolvimento bem-sucedido e direcionado.
+
 Sob design orientado por domínio, a estrutura e a linguagem do código de software (nomes de classes, métodos de classe, variáveis de classe) devem corresponder ao domínio de negócio. Por exemplo: se o software processa solicitações de empréstimo, pode ter classes como "`solicitação de empréstimo`", "`clientes`" e métodos como "`aceitar oferta`" e "`retirar`".
 
 DDD só funciona plenamente quando *anda alinhado* com design de software, design de sistemas e arquitetura, não porque eles sejam a mesma coisa, mas porque o DDD sozinho não consegue se sustentar sem uma estrutura técnica que dê corpo às suas ideias. O ponto central é que o Domain-Driven Design é uma abordagem profundamente conceitual: ele organiza o pensamento sobre o domínio, define limites claros, introduz linguagens específicas, identifica contextos independentes e estabelece modelos consistentes. 
 
 Só que tudo isso precisa inevitavelmente se materializar em código, fluxos, integrações, decisões de infraestrutura, modularização e comunicação entre serviços. Se esse materializar não acompanha a lógica do domínio, o DDD implode, ou vira apenas documentação bonita.
 
-O design orientado por domínio baseia-se nos seguintes objetivos:
+O objetivo do DDD é, em primeiro lugar, adquirir conhecimento sobre o problema para identificar a solução. Em seguida, concordaremos com os vários componentes desta solução para implementá-la. Esse objetivo é alcançado por meio dos padrões fundamentais do DDD: padrões estratégicos e táticos. Os padrões estratégicos respondem à pergunta: "Por que estamos construindo este software e quais são seus componentes?". Por outro lado, os padrões táticos dão a resposta à pergunta: "Como esses componentes são implementados?"
+
+Portanto, o design orientado por domínio baseia-se nos seguintes objetivos:
 
 1. Colocando o foco principal do projeto no domínio central e na camada de lógica de domínio;
 2. Basear projetos complexos em um modelo do domínio;
 3. Iniciando uma colaboração criativa entre especialistas técnicos e especialistas do domínio para refinar iterativamente um modelo conceitual que aborde problemas específicos do domínio.
 
 Críticos do design orientado por domínio argumentam que os desenvolvedores normalmente precisam implementar uma grande quantidade de isolamento e encapsulamento para manter o modelo como uma construção pura e útil. Embora o design orientado por domínio ofereça benefícios como manutenção, a Microsoft o recomenda apenas para domínios complexos onde o modelo oferece benefícios claros na formulação de uma compreensão comum do domínio.
-
-O termo foi cunhado por Eric Evans em seu livro de mesmo nome, publicado em 2003. No entanto, a definição mais simples que encontrei foi ao ler o livro Fundamentals of Software Architecture de Neal Ford e Mark Richards:
-
-> O design orientado a domínio (DDD) é uma técnica de modelagem que permite a decomposição organizada de domínios de problemas complexos. - Neal Ford e Mark Richards. Fundamentos da Arquitetura de Software. 2020.
-
-O objetivo do DDD é, em primeiro lugar, adquirir conhecimento sobre o problema para identificar a solução. Em seguida, concordaremos com os vários componentes desta solução para implementá-la. Esse objetivo é alcançado por meio dos padrões fundamentais do DDD: padrões estratégicos e táticos. Os padrões estratégicos respondem à pergunta: "Por que estamos construindo este software e quais são seus componentes?". Por outro lado, os padrões táticos dão a resposta à pergunta: "Como esses componentes são implementados?"
-
-Embora o design orientado a domínio (DDD) exista desde 2004, o conceito não foi capaz de se espalhar excessivamente em todo esse tempo. Nos últimos anos, no entanto, o termo experimentou uma segunda primavera. Portanto, é hora de perguntar o que é design orientado a domínio.
-
-O desenvolvimento de software não é um fim em si mesmo. Em vez disso, o software é desenvolvido para resolver problemas técnicos do mundo real. Isso requer tecnologia, mas esse não é o foco, é apenas um meio para um fim. O foco real está no assunto (o domínio)! Portanto, uma boa compreensão disso é essencial para um desenvolvimento bem-sucedido e direcionado.
 
 A exigência de construir um entendimento profissional também se aplica aos desenvolvedores. Uma boa compreensão do assunto (domínio) surge da comunicação regular e de uma linguagem comum, o que representa um desafio, principalmente em equipes interdisciplinares: Afinal, cada disciplina tem sua linguagem técnica, por isso os mal-entendidos são inevitáveis.
 
