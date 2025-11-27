@@ -1499,7 +1499,7 @@ Falaremos sobre a maneira de se aproximar do problema e da solução: o caminho 
 
 O DDD (Domain-Driven Design) entra no fluxo do desenvolvimento de produto antes do MVP, como um alicerce. Ele não é um artefato de entrega como MVP, UAT ou Release, mas sim uma abordagem de modelagem que orienta como o software deve ser desenhado para refletir o domínio do problema.
 
-Se você pensar em sequência, o fluxo ficaria assim: Engenharia de domínio + Design orientado por domínio
+Se você pensar em sequência, o fluxo ficaria assim: Engenharia de domínio + Design orientado por domínio + Design Evolutivo + Arquitetura de aplicações
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/29d08cac-4445-4200-be35-d46f5e822991" />
 
