@@ -1463,7 +1463,19 @@ O **DDD - Domain-Driven Design** (Projeto Orientado a Domínio) é uma abordagem
 
 Isso vem em contrapartida com o uso comum do <a href="">Data-Driven Design</a> (Projeto Orientado a Dados), que a maioria dos desenvolvedores usa sem mesmo ter consciência disso. O design orientado por domínio (DDD) é uma abordagem importante de design de software, focada em modelar software para corresponder a um domínio de acordo com a contribuição dos especialistas desse domínio. A DDD é contra a ideia de ter um modelo unificado único; em vez disso, divide um grande sistema em contextos limitados, cada um com seu próprio modelo. 
 
-A definição mais simples que encontrei foi ao ler o livro Fundamentals of Software Architecture de Neal Ford e Mark Richards:
+Sob design orientado por domínio, a estrutura e a linguagem do código de software (nomes de classes, métodos de classe, variáveis de classe) devem corresponder ao domínio de negócio. Por exemplo: se o software processa solicitações de empréstimo, pode ter classes como "`solicitação de empréstimo`", "`clientes`" e métodos como "`aceitar oferta`" e "`retirar`".
+
+DDD só funciona plenamente quando *anda alinhado* com design de software, design de sistemas e arquitetura, não porque eles sejam a mesma coisa, mas porque o DDD sozinho não consegue se sustentar sem uma estrutura técnica que dê corpo às suas ideias. O ponto central é que o Domain-Driven Design é uma abordagem profundamente conceitual: ele organiza o pensamento sobre o domínio, define limites claros, introduz linguagens específicas, identifica contextos independentes e estabelece modelos consistentes. Só que tudo isso precisa inevitavelmente se materializar em código, fluxos, integrações, decisões de infraestrutura, modularização e comunicação entre serviços. Se esse materializar não acompanha a lógica do domínio, o DDD implode, ou vira apenas documentação bonita.
+
+O design orientado por domínio baseia-se nos seguintes objetivos:
+
+- Colocando o foco principal do projeto no domínio central e na camada de lógica de domínio;
+- Basear projetos complexos em um modelo do domínio;
+- Iniciando uma colaboração criativa entre especialistas técnicos e especialistas do domínio para refinar iterativamente um modelo conceitual que aborde problemas específicos do domínio.
+
+Críticos do design orientado por domínio argumentam que os desenvolvedores normalmente precisam implementar uma grande quantidade de isolamento e encapsulamento para manter o modelo como uma construção pura e útil. Embora o design orientado por domínio ofereça benefícios como manutenção, a Microsoft o recomenda apenas para domínios complexos onde o modelo oferece benefícios claros na formulação de uma compreensão comum do domínio.
+
+O termo foi cunhado por Eric Evans em seu livro de mesmo nome, publicado em 2003. No entanto, a definição mais simples que encontrei foi ao ler o livro Fundamentals of Software Architecture de Neal Ford e Mark Richards:
 
 > O design orientado a domínio (DDD) é uma técnica de modelagem que permite a decomposição organizada de domínios de problemas complexos. - Neal Ford e Mark Richards. Fundamentos da Arquitetura de Software. 2020.
 
@@ -1545,10 +1557,6 @@ Implementação de domínio é a criação de um processo e de ferramentas para 
 
 > [!Warning]
 > Quando não usar DDD? Às vezes só é necessário um CRUD! DDD não é uma solução para tudo. A maioria dos sistemas possui uma boa parte composta por cadastros básicos (CRUD) e não seria adequado usar DDD para isso. A engenharia de domínios tem sido criticada por focar demais em "engenharia para reutilização" ou "engenharia com reutilização" de recursos genéricos de software, em vez de se concentrar em "engenharia para uso", de modo que a visão de mundo, linguagem ou contexto de um indivíduo seja integrado ao design do software.
-
-
-
-DDD só funciona plenamente quando *anda alinhado* com design de software, design de sistemas e arquitetura, não porque eles sejam a mesma coisa, mas porque o DDD sozinho não consegue se sustentar sem uma estrutura técnica que dê corpo às suas ideias. O ponto central é que o Domain-Driven Design é uma abordagem profundamente conceitual: ele organiza o pensamento sobre o domínio, define limites claros, introduz linguagens específicas, identifica contextos independentes e estabelece modelos consistentes. Só que tudo isso precisa inevitavelmente se materializar em código, fluxos, integrações, decisões de infraestrutura, modularização e comunicação entre serviços. Se esse materializar não acompanha a lógica do domínio, o DDD implode, ou vira apenas documentação bonita.
 
 Um domínio bem modelado só tem efeito se o design de software respeita a coesão do modelo, preserva invariantes, mantém consistência interna e evita que detalhes técnicos vazem para áreas onde não deveriam. Se o design de software decide misturar responsabilidades, criar acoplamentos arbitrários, espalhar regras por camadas que não conversam com o domínio ou ignorar o Ubiquitous Language, então o DDD perde força, porque o código deixa de refletir as estruturas conceituais. O resultado é um sistema que só “parece DDD no papel”, mas opera como um monólito acoplado, com entidades sem significado e casos de uso sem fronteiras.
 
