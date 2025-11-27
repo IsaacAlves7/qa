@@ -1255,19 +1255,20 @@ Ele é executado em um ambiente que simula o mais fielmente possível o ambiente
 
 O teste de sistema é essencial porque confirma que o produto final atende aos requisitos especificados — requisitos que, muitas vezes, só fazem sentido quando vistos como um fluxo contínuo. Ele também serve como uma última proteção antes do teste de aceitação do usuário, onde o cliente ou área de negócio valida se aquilo corresponde ao necessário. Em suma, teste de sistema é a verificação holística do software funcionando completamente integrado, garantindo que o resultado global do sistema seja confiável, coerente e pronto para ser apresentado ao usuário real.
 
+<img height="77" align="right" src="https://github.com/user-attachments/assets/0a580dcb-a6b3-4396-8b93-c4d032a9cea2" />
+
 Ferramentas de **teste de sistema** variam conforme o tipo de aplicação (web, desktop, mobile, APIs, microserviços, filas, integrações), mas existem plataformas amplamente usadas para validar o sistema completo, ponta a ponta, simulando exatamente o que um usuário real ou outro sistema faria. Abaixo vai um textão contínuo, sem tópicos, como você prefere.
 
 Quando falamos de teste de sistema, entramos no território de ferramentas capazes de orquestrar fluxos completos, interagir com interfaces reais, executar chamadas autenticadas, validar integrações, lidar com filas como RabbitMQ ou Kafka, e observar o comportamento do sistema como um todo. No universo de aplicações web, por exemplo, Selenium se tornou um clássico porque permite controlar navegadores reais e validar o comportamento da aplicação como um usuário. Hoje, ferramentas modernas como Cypress oferecem testes mais rápidos, estáveis e com integração profunda com JavaScript, além de uma experiência visual forte, sendo amplamente usadas para testes End-to-End que também funcionam como testes de sistema. 
 
-<img height="77" align="right" src="https://github.com/user-attachments/assets/0a580dcb-a6b3-4396-8b93-c4d032a9cea2" />
-
 Playwright é outra evolução desse conceito, permitindo testar múltiplos navegadores com mais confiabilidade, além de suportar testes em APIs, mobile web e fluxos completos. Quando o sistema possui APIs e múltiplos serviços, ferramentas como Postman e sua versão automatizada, o Newman, permitem rodar coleções completas de chamadas simulando sequências reais do sistema, sendo muito usadas em pipelines CI/CD. Para validar comportamento distribuído, ferramentas como K6 permitem simular usuários simultâneos e comportamentos sob carga, atuando tanto como teste de sistema quanto de performance. Em ambientes corporativos e integrações pesadas, SoapUI e ReadyAPI são fortes, pois fazem testes completos de SOAP, REST, GraphQL, autenticação complexa e cenários de orquestração. Para aplicações mobile, Appium permite testar o sistema inteiro interagindo com apps Android e iOS reais. 
+
+<img height="77" align="right" src="https://github.com/user-attachments/assets/2a6f0cbe-4f5b-4e1f-a934-f41dd7599944" />
 
 Quando há robôs de interface que automatizam fluxos completos, RPA como UiPath podem executar testes de sistema em nível empresarial. No mundo .NET, é comum usar Playwright, Selenium ou Cypress integrados ao pipeline do Azure DevOps, GitHub Actions ou GitLab CI, validando a aplicação como um todo após o deploy em ambiente de staging. Para microserviços orquestrados com Docker Compose ou Kubernetes, a combinação de testes em Postman/Newman, Karate DSL e ferramentas de workflow como Robot Framework fornece um arsenal capaz de simular fluxos complexos de ponta a ponta, incluindo eventos em fila, mensagens assíncronas e APIs encadeadas. Finalmente, para sistemas que exigem automação de tela desktop, existem soluções como WinAppDriver ou TestComplete.
 
 Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilham a mesma essência: validar que o sistema completo funciona integrado, como um organismo vivo, garantindo que a experiência final seja coerente, confiável e alinhada ao que o usuário espera.
 
-<img width="450" height="450" alt="chemical-reaction-3d-icon-png-download-9645881" src="https://github.com/user-attachments/assets/2a6f0cbe-4f5b-4e1f-a934-f41dd7599944" />
 <img width="450" height="450" alt="microscope-3d-icon-png-download-9802663" src="https://github.com/user-attachments/assets/cc567416-c3a9-4106-b037-32a77b1804ee" />
 ![chemical-reaction-3d-icon-png-download-12568930](https://github.com/user-attachments/assets/3dc426c6-4eb9-4bc8-8aca-ed0473c0ebd9)
 
