@@ -1503,6 +1503,7 @@ Essa divisão natural acaba sendo organizada em três grandes agrupamentos: uma 
  <tr>
   <td><img src="https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c" height="777"></td>
   <td><img src="https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f" height="777"></td>
+  <td><img src="https://github.com/user-attachments/assets/c7b24ba8-f883-4fcf-a89b-6b864209ccd4" height="777"></td>
  </tr>
 </table>
 
@@ -1709,8 +1710,6 @@ Embora o DDD não seja um design pattern em si, ele pode ser combinado com vári
 Portanto, podemos dizer que o DDD é uma abordagem de design e uma metodologia de modelagem que pode ser aplicada em diferentes arquiteturas de software, como arquitetura em camadas, arquitetura hexagonal, arquitetura de microsserviços, entre outras. Ele fornece princípios e práticas para projetar e estruturar o código em torno do domínio do problema, visando um modelo de domínio rico, desacoplamento e flexibilidade.
 
 É uma abordagem mais ampla para o design de software que abrange vários conceitos e técnicas. DDD enfatiza a modelagem do domínio, a colaboração entre especialistas do domínio e desenvolvedores, e a criação de um código baseado em um entendimento profundo do domínio do problema.
-
-<img width="2250" height="2840" alt="unnamed" src="https://github.com/user-attachments/assets/c7b24ba8-f883-4fcf-a89b-6b864209ccd4" />
 
 > [!Important]
 > Quando não usar DDD? Às vezes só é necessário um CRUD! DDD não é uma solução para tudo. A maioria dos sistemas possui uma boa parte composta por cadastros básicos (CRUD) e não seria adequado usar DDD para isso.
