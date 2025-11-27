@@ -1494,8 +1494,6 @@ Os conceitos e práticas do DDD são dividos em camadas de domínio: Quando voc�
 
 Na prática, quando falamos de camadas em DDD, normalmente estamos falando do conjunto de estruturas conceituais que separa o coração do domínio (onde vivem as regras de negócio puras) das partes infraestruturais, externas ou acopladas a tecnologia. O domínio fica isolado, limpo, autocontido, enquanto o resto da aplicação orbita em volta dele, servindo-o, protegendo-o e garantindo que ele se mantenha expressivo e imutável diante das mudanças tecnológicas. Essa divisão natural acaba sendo organizada em três grandes agrupamentos: uma camada de domínio, uma camada de aplicação e uma camada de infraestrutura. Mas, novamente, isso não é um dogma do DDD — é apenas a forma como as ideias do DDD funcionam melhor em arquiteturas limpas e separadas.
 
-O coração é sempre o domínio: entidades, objetos-valor, agregados, repositórios como contratos e os serviços de domínio quando algo não cabe numa entidade específica. Aqui não existe conhecimento técnico como banco de dados, HTTP, mensageria ou UI. É o código que sobrevive quando se troca tudo ao redor. É onde o vocabulário ubíquo vive, onde o modelo mental da empresa vira código executável. É a camada mais estável e a mais valiosa de todas:
-
 <table>
  <tr>
   <td><img src="https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c" height="777"></td>
@@ -1503,9 +1501,35 @@ O coração é sempre o domínio: entidades, objetos-valor, agregados, repositó
  </tr>
 </table>
 
+No contexto do DDD, existem design patterns específicos que são frequentemente utilizados para ajudar a implementar os conceitos e princípios do DDD. Alguns desses padrões incluem:
+
+1. <a href="">Agregado</a>: Se refere a um padrão de design que agrupa um conjunto de objetos relacionados em uma única unidade coesa. O Agregado é uma das principais construções utilizadas para modelar e organizar o domínio em DDD;
+
+2. <a href="">Repositório</a>: Fornece uma interface para acessar coleções de objetos agregados, permitindo que o domínio permaneça livre de preocupações com persistência. Ele atua como uma camada intermediária entre o domínio e a fonte de dados (como bancos de dados).
+
+3. <a href="">Serviço de Domínio</a>: Representa operações ou ações do domínio que não pertencem naturalmente a uma única entidade ou value object. Encapsula lógica de negócio que depende de múltiplos objetos.
+
+4. <a href="">Value Object</a>: Objetos que não possuem identidade própria e são definidos apenas por seus atributos. São imutáveis e usados para representar conceitos como dinheiro, coordenadas ou medidas.
+
+5. <a href="">Entidade</a>: Objetos do domínio que possuem identidade própria (geralmente um ID) e um ciclo de vida distinto. Diferente de value objects, entidades podem mudar seus atributos ao longo do tempo.
+
+6. <a href="">Factory</a>: Padrão responsável por encapsular a lógica de criação complexa de objetos, especialmente agregados. Evita a poluição do construtor com lógica de montagem de objetos.
+
+7. <a href="">Especificação</a>: Define regras de negócio reutilizáveis e combináveis para verificar se um objeto atende a determinados critérios. É útil para separação de responsabilidades e clareza das regras de domínio.
+
+8. <a href="">Event Sourcing</a>: Técnica onde o estado do sistema é determinado por uma sequência de eventos (ao invés de snapshots de dados). Permite reconstruir o estado do sistema e ter um histórico detalhado das mudanças.
+
+9. <a href="">Injeção de Dependência (DI - Dependency Injection)</a>: Técnica que permite desacoplar componentes do sistema, facilitando testes, manutenção e extensibilidade. No DDD, é comum para injetar repositórios, serviços de domínio e unidades de trabalho nos agregados e serviços de aplicação.
+
+Esses padrões, juntamente com outros conceitos e técnicas, podem ser aplicados para construir uma arquitetura que segue os princípios do DDD. O DDD, portanto, não é um design pattern em si, mas uma abordagem que pode ser implementada usando diversos padrões de design específicos.
+
+<a href=""><img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/0ade6281-cdca-47d3-8b95-57e81b61d04a" align="right" height="377"></a>
+
+O coração é sempre o **domínio**: entidades, objetos-valor, agregados, repositórios como contratos e os serviços de domínio quando algo não cabe numa entidade específica. Aqui não existe conhecimento técnico como banco de dados, HTTP, mensageria ou UI. É o código que sobrevive quando se troca tudo ao redor. É onde o vocabulário ubíquo vive, onde o modelo mental da empresa vira código executável. É a camada mais estável e a mais valiosa de todas:
+
 Quando você fala dessas **“camadas do domínio”** — entidades, objetos-valor, agregados, repositórios e serviços de domínio — na verdade você está descrevendo **os blocos estruturais internos do próprio Domain Model**, isto é, os elementos que compõem o **núcleo** do DDD. Eles não são camadas no sentido arquitetural, mas sim *componentes conceituais do modelo*, cada um representando um papel distinto dentro da lógica de negócio. E essa distinção é crucial, porque o domínio só fica expressivo e coerente quando cada peça é usada para aquilo que foi criada.
 
-Dentro do domínio, as **entidades** representam conceitos que têm identidade persistente ao longo do tempo, mesmo que seus atributos mudem. Elas capturam comportamentos essenciais ligados a um identificador único, como um Cliente, um Pedido ou um Veículo. Já os **objetos-valor** são as estruturas que descrevem características imutáveis, conceituais, que não têm identidade própria, mas têm significado. Eles existem para impedir que o domínio fique cheio de tipos primitivos sem sentido, substituindo-os por tipos ricos, como Email, CPF, Placa, Endereço ou Dinheiro. Essa relação entre entidades e objetos-valor sustenta a expressividade do vocabulário ubíquo dentro do código.
+Dentro do domínio, as **entidades** representam conceitos que têm identidade persistente ao longo do tempo, mesmo que seus atributos mudem. Elas capturam comportamentos essenciais ligados a um identificador único, como um `Cliente`, um `Pedido` ou um `Veículo`. Já os **objetos-valor** são as estruturas que descrevem características imutáveis, conceituais, que não têm identidade própria, mas têm significado. Eles existem para impedir que o domínio fique cheio de tipos primitivos sem sentido, substituindo-os por tipos ricos, como `Email`, `CPF`, `Placa`, `Endereço` ou `Dinheiro`. Essa relação entre entidades e objetos-valor sustenta a expressividade do vocabulário ubíquo dentro do código.
 
 Quando o sistema cresce e você percebe que certas entidades começam a formar agrupamentos naturais de regras e invariantes, entra o conceito de **agregado**. Ele funciona como um limite de consistência: um conjunto de entidades e objetos-valor que sempre deve ser manipulado de forma coerente. O agregado garante que você não mexa em partes internas que não deveriam ser alteradas isoladamente e que toda modificação passe por uma única entidade-raiz. Essa raiz é quem expõe métodos públicos e controla as regras internas do agregado, protegendo sua integridade lógica.
 
@@ -1514,7 +1538,6 @@ Já os **repositórios** são contratos dentro do domínio — e isso é importa
 Por fim, os **serviços de domínio** são como espaços auxiliares dentro do modelo. Eles só existem quando uma regra de negócio não pertence naturalmente a nenhuma entidade ou objeto-valor. São operações puramente de domínio, mas sem estado próprio, que coordenam comportamentos entre objetos. Muitas vezes representam cálculos, validações complexas, políticas ou decisões de negócio que não cabem dentro de um único agregado. O fato de eles existirem mostra maturidade na modelagem, porque impede que entidades se tornem “deuses” com responsabilidades demais.
 
 O que você chamou de “camadas” é, portanto, o conjunto de **padrões que estruturam o modelo de domínio** internamente. Eles servem para que o núcleo do sistema represente a realidade de negócio de forma organizada, expressiva e coerente. Cada um desempenha um papel específico e todos se combinam para formar o coração do DDD. Esses elementos não vivem separados por fronteiras técnicas — eles convivem dentro do mesmo contexto, mas com funções bem definidas. E é exatamente essa organização interna que permite ao domínio permanecer sólido mesmo quando todo o resto do sistema muda.
-
 
 Ao redor do domínio está a camada de aplicação, que não contém regras de negócio, mas coordena casos de uso. Ela funciona como um orquestrador, chamando o domínio e o que está fora dele para cumprir um fluxo. Esse nível também permanece relativamente estável, mas já conhece elementos mais concretos, como serviços de email, notificações ou repositórios que serão implementados no mundo técnico. Essa camada é a ponte entre a intenção de negócio e a execução tecnológica.
 
@@ -1679,30 +1702,6 @@ Embora o DDD não seja um design pattern em si, ele pode ser combinado com vári
 Portanto, podemos dizer que o DDD é uma abordagem de design e uma metodologia de modelagem que pode ser aplicada em diferentes arquiteturas de software, como arquitetura em camadas, arquitetura hexagonal, arquitetura de microsserviços, entre outras. Ele fornece princípios e práticas para projetar e estruturar o código em torno do domínio do problema, visando um modelo de domínio rico, desacoplamento e flexibilidade.
 
 É uma abordagem mais ampla para o design de software que abrange vários conceitos e técnicas. DDD enfatiza a modelagem do domínio, a colaboração entre especialistas do domínio e desenvolvedores, e a criação de um código baseado em um entendimento profundo do domínio do problema.
-
-No contexto do DDD, existem design patterns específicos que são frequentemente utilizados para ajudar a implementar os conceitos e princípios do DDD. Alguns desses padrões incluem:
-
-<a href=""><img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/0ade6281-cdca-47d3-8b95-57e81b61d04a" align="right" height="377"></a>
-
-1. <a href="">Agregado</a>: Se refere a um padrão de design que agrupa um conjunto de objetos relacionados em uma única unidade coesa. O Agregado é uma das principais construções utilizadas para modelar e organizar o domínio em DDD;
-
-2. <a href="">Repositório</a>: Fornece uma interface para acessar coleções de objetos agregados, permitindo que o domínio permaneça livre de preocupações com persistência. Ele atua como uma camada intermediária entre o domínio e a fonte de dados (como bancos de dados).
-
-3. <a href="">Serviço de Domínio</a>: Representa operações ou ações do domínio que não pertencem naturalmente a uma única entidade ou value object. Encapsula lógica de negócio que depende de múltiplos objetos.
-
-4. <a href="">Value Object</a>: Objetos que não possuem identidade própria e são definidos apenas por seus atributos. São imutáveis e usados para representar conceitos como dinheiro, coordenadas ou medidas.
-
-5. <a href="">Entidade</a>: Objetos do domínio que possuem identidade própria (geralmente um ID) e um ciclo de vida distinto. Diferente de value objects, entidades podem mudar seus atributos ao longo do tempo.
-
-6. <a href="">Factory</a>: Padrão responsável por encapsular a lógica de criação complexa de objetos, especialmente agregados. Evita a poluição do construtor com lógica de montagem de objetos.
-
-7. <a href="">Especificação</a>: Define regras de negócio reutilizáveis e combináveis para verificar se um objeto atende a determinados critérios. É útil para separação de responsabilidades e clareza das regras de domínio.
-
-8. <a href="">Event Sourcing</a>: Técnica onde o estado do sistema é determinado por uma sequência de eventos (ao invés de snapshots de dados). Permite reconstruir o estado do sistema e ter um histórico detalhado das mudanças.
-
-9. <a href="">Injeção de Dependência (DI - Dependency Injection)</a>: Técnica que permite desacoplar componentes do sistema, facilitando testes, manutenção e extensibilidade. No DDD, é comum para injetar repositórios, serviços de domínio e unidades de trabalho nos agregados e serviços de aplicação.
-
-Esses padrões, juntamente com outros conceitos e técnicas, podem ser aplicados para construir uma arquitetura que segue os princípios do DDD. O DDD, portanto, não é um design pattern em si, mas uma abordagem que pode ser implementada usando diversos padrões de design específicos.
 
 <img width="2250" height="2840" alt="unnamed" src="https://github.com/user-attachments/assets/c7b24ba8-f883-4fcf-a89b-6b864209ccd4" />
 
