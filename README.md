@@ -1226,7 +1226,7 @@ A essência desse tipo de teste é observar o comportamento sistêmico, medindo 
 
 Responsável: Analista de Qualidade com acompanhamento do time de Infra/ Banco/ Desenvolvimento e em alguns casos DevOps
 
-<img height="177" align="right" src="https://github.com/user-attachments/assets/02b287c1-adc4-4db5-aaac-7bb33c17c663" />
+<img height="77" align="right" src="https://github.com/user-attachments/assets/02b287c1-adc4-4db5-aaac-7bb33c17c663" />
 
 Esse tipo de teste investiga nuances invisíveis no dia a dia do desenvolvimento, mas extremamente importantes quando sistemas entram em produção. Imagine uma API que responde perfeitamente em ambiente de testes, mas colapsa quando recebe cinquenta requisições simultâneas. Ou um fluxo de pagamento que funciona sem falhas durante simulações, mas se torna lento e inconsistente quando mil usuários clicam ao mesmo tempo em “finalizar compra” durante uma promoção. A performance, nesse sentido, não é apenas velocidade, mas previsibilidade, estabilidade e capacidade de manter a mesma qualidade enquanto a carga aumenta. O software robusto não é aquele que funciona só no cenário ideal, mas o que continua funcionando no cenário real.
 
