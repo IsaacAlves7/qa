@@ -1496,19 +1496,6 @@ Portanto, o design orientado por domínio baseia-se nos seguintes objetivos:
 2. Basear projetos complexos em um modelo do domínio;
 3. Iniciando uma colaboração criativa entre especialistas técnicos e especialistas do domínio para refinar iterativamente um modelo conceitual que aborde problemas específicos do domínio.
 
-> [!Warning]
-> Quando não usar DDD? Às vezes só é necessário um CRUD! DDD não é uma solução para tudo. A maioria dos sistemas possui uma boa parte composta por cadastros básicos (CRUD) e não seria adequado usar DDD para isso. A engenharia de domínios tem sido criticada por focar demais em "engenharia para reutilização" ou "engenharia com reutilização" de recursos genéricos de software, em vez de se concentrar em "engenharia para uso", de modo que a visão de mundo, linguagem ou contexto de um indivíduo seja integrado ao design do software.
-
-Críticos do design orientado por domínio argumentam que os desenvolvedores normalmente precisam implementar uma grande quantidade de isolamento e encapsulamento para manter o modelo como uma construção pura e útil. Embora o design orientado por domínio ofereça benefícios como manutenção, a Microsoft o recomenda apenas para domínios complexos onde o modelo oferece benefícios claros na formulação de uma compreensão comum do domínio.
-
-A exigência de construir um entendimento profissional também se aplica aos desenvolvedores. Uma boa compreensão do assunto (domínio) surge da comunicação regular e de uma linguagem comum, o que representa um desafio, principalmente em equipes interdisciplinares: Afinal, cada disciplina tem sua linguagem técnica, por isso os mal-entendidos são inevitáveis.
-
-Num <a href="">code review</a>, o time não está apenas olhando se o código “funciona”, mas se ele está legível, sustentável e alinhado ao domínio. É aí que DDD se torna um guia. Por exemplo, quando você define entidades e value objects, o revisor consegue avaliar se você está representando o domínio corretamente ou se misturou regras de negócio com detalhes de infraestrutura. Se você trabalha com bounded contexts, o code review ajuda a garantir que cada módulo está respeitando suas fronteiras e não está acoplando responsabilidades que deveriam estar separadas. E quando se usa a linguagem ubíqua, qualquer pessoa envolvida no projeto pode bater o olho no código e identificar termos familiares do negócio, reduzindo ambiguidades.
-
-A ideia central é trazer o domínio (o sujeito, a razão) à tona...O <a href="https://unibo-dtm-se.github.io/course-slides/ddd/#/">DDD</a> acaba aparecendo muito em code reviews (revisões de código) porque ele não é só um conjunto de padrões técnicos, mas uma maneira de organizar o raciocínio e o design do sistema a partir do domínio de negócio. Diferente de TDD e BDD, que são mais voltados ao como testar e como validar comportamento, o DDD toca no como estruturar o código para refletir a realidade do problema que a aplicação resolve.
-
-Isso muda o tom da revisão: em vez de ser só “esse método está mal nomeado” ou “esse if pode virar um switch”, passa a ser “essa entidade realmente pertence a este contexto?” ou “essa regra deveria estar no domínio ou no serviço de aplicação?”. São discussões de mais alto nível, que evitam dívida técnica e fortalecem a coerência do sistema. Por isso, times que adotam DDD costumam ter code reviews mais ricos, que não param na forma, mas questionam se a essência do código está fiel ao problema que ele resolve.
-
 <img src="https://github.com/user-attachments/assets/038eb886-2db7-456a-a67c-3707b7020c31" align="right" height="177">
 
 > [!Important]
@@ -1517,6 +1504,19 @@ Isso muda o tom da revisão: em vez de ser só “esse método está mal nomeado
 Então, faz sentido para mim pensar em design de software como design gritante quando fala alto e claro sobre o domínio do problema. Geralmente, o ativo mais crítico no design de uma solução é adquirir conhecimento sobre os problemas que estamos tentando resolver, o processo que queremos automatizar ou as dificuldades que queremos facilitar. Então, para nos aproximarmos da solução, tínhamos que já estar próximos do problema.
 
 Falaremos sobre a maneira de se aproximar do problema e da solução: o caminho do Domain-Driven Design (DDD) em direção a um design gritante, o design que informa ao leitor sobre o domínio do negócio, não sobre os frameworks usados.
+
+> [!Warning]
+> Quando não usar DDD? Às vezes só é necessário um CRUD! DDD não é uma solução para tudo. A maioria dos sistemas possui uma boa parte composta por cadastros básicos (CRUD) e não seria adequado usar DDD para isso. A engenharia de domínios tem sido criticada por focar demais em "engenharia para reutilização" ou "engenharia com reutilização" de recursos genéricos de software, em vez de se concentrar em "engenharia para uso", de modo que a visão de mundo, linguagem ou contexto de um indivíduo seja integrado ao design do software.
+
+Críticos do design orientado por domínio argumentam que os desenvolvedores normalmente precisam implementar uma grande quantidade de isolamento e encapsulamento para manter o modelo como uma construção pura e útil. Embora o design orientado por domínio ofereça benefícios como manutenção, a Microsoft o recomenda apenas para domínios complexos onde o modelo oferece benefícios claros na formulação de uma compreensão comum do domínio.
+
+A exigência de construir um entendimento profissional também se aplica aos desenvolvedores. Uma boa compreensão do assunto (domínio) surge da comunicação regular e de uma linguagem comum, o que representa um desafio, principalmente em equipes interdisciplinares: Afinal, cada disciplina tem sua linguagem técnica, por isso os mal-entendidos são inevitáveis.
+
+Num <a href="">Code Review</a>, o time não está apenas olhando se o código “funciona”, mas se ele está legível, sustentável e alinhado ao domínio. É aí que DDD se torna um guia. Por exemplo, quando você define entidades e value objects, o revisor consegue avaliar se você está representando o domínio corretamente ou se misturou regras de negócio com detalhes de infraestrutura. Se você trabalha com bounded contexts, o code review ajuda a garantir que cada módulo está respeitando suas fronteiras e não está acoplando responsabilidades que deveriam estar separadas. E quando se usa a linguagem ubíqua, qualquer pessoa envolvida no projeto pode bater o olho no código e identificar termos familiares do negócio, reduzindo ambiguidades.
+
+A ideia central é trazer o domínio (o sujeito, a razão) à tona...O <a href="https://unibo-dtm-se.github.io/course-slides/ddd/#/">DDD</a> acaba aparecendo muito em code reviews (revisões de código) porque ele não é só um conjunto de padrões técnicos, mas uma maneira de organizar o raciocínio e o design do sistema a partir do domínio de negócio. Diferente de TDD e BDD, que são mais voltados ao como testar e como validar comportamento, o DDD toca no como estruturar o código para refletir a realidade do problema que a aplicação resolve.
+
+Isso muda o tom da revisão: em vez de ser só “esse método está mal nomeado” ou “esse if pode virar um switch”, passa a ser “essa entidade realmente pertence a este contexto?” ou “essa regra deveria estar no domínio ou no serviço de aplicação?”. São discussões de mais alto nível, que evitam dívida técnica e fortalecem a coerência do sistema. Por isso, times que adotam DDD costumam ter code reviews mais ricos, que não param na forma, mas questionam se a essência do código está fiel ao problema que ele resolve.
 
 O DDD (Domain-Driven Design) entra no fluxo do desenvolvimento de produto antes do MVP, como um alicerce. Ele não é um artefato de entrega como MVP, UAT ou Release, mas sim uma abordagem de modelagem que orienta como o software deve ser desenhado para refletir o domínio do problema.
 
