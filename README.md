@@ -1494,7 +1494,7 @@ Os conceitos e práticas do DDD são dividos em camadas de domínio: Quando voc�
 
 Na prática, quando falamos de camadas em DDD, normalmente estamos falando do conjunto de estruturas conceituais que separa o coração do domínio (onde vivem as regras de negócio puras) das partes infraestruturais, externas ou acopladas a tecnologia. O domínio fica isolado, limpo, autocontido, enquanto o resto da aplicação orbita em volta dele, servindo-o, protegendo-o e garantindo que ele se mantenha expressivo e imutável diante das mudanças tecnológicas. 
 
-Essa divisão natural acaba sendo organizada em três grandes agrupamentos: uma **camada de domínio**, uma **camada de aplicação** e uma **camada de infraestrutura**. Mas, novamente, isso não é um dogma do DDD — é apenas a forma como as ideias do DDD funcionam melhor em arquiteturas limpas e separadas:
+Essa divisão natural acaba sendo organizada em três grandes agrupamentos: uma **camada de domínio**, uma **camada de aplicação** e uma **camada de infraestrutura**. Mas, novamente, isso não é um dogma do DDD, é apenas a forma como as ideias do DDD funcionam melhor em arquiteturas limpas e separadas:
 
 <table>
  <tr>
