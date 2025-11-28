@@ -1580,88 +1580,6 @@ Os conceitos e práticas do DDD são dividos em camadas de domínio: Quando voc�
 
 Na prática, quando falamos de camadas em DDD, normalmente estamos falando do conjunto de estruturas conceituais que separa o coração do domínio (onde vivem as regras de negócio puras) das partes infraestruturais, externas ou acopladas a tecnologia. O domínio fica isolado, limpo, autocontido, enquanto o resto da aplicação orbita em volta dele, servindo-o, protegendo-o e garantindo que ele se mantenha expressivo e imutável diante das mudanças tecnológicas. 
 
-Essa divisão natural acaba sendo organizada em três grandes agrupamentos: uma **camada de domínio**, uma **camada de aplicação** e uma **camada de infraestrutura**. Mas, novamente, isso não é um dogma do DDD, é apenas a forma como as ideias do DDD funcionam melhor em arquiteturas limpas e separadas:
-
-<table>
- <tr>
-  <td><img src="https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c" height="777"></td>
-  <td><img src="https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f" height="777"></td>
-  <td><img src="https://github.com/user-attachments/assets/c7b24ba8-f883-4fcf-a89b-6b864209ccd4" height="777"></td>
- </tr>
-</table>
-
-No contexto do DDD, existem design patterns específicos que são frequentemente utilizados para ajudar a implementar os conceitos e princípios do DDD. Alguns desses padrões incluem:
-
-1. <a href="">Agregado</a>: Se refere a um padrão de design que agrupa um conjunto de objetos relacionados em uma única unidade coesa. O Agregado é uma das principais construções utilizadas para modelar e organizar o domínio em DDD;
-
-2. <a href="">Repositório</a>: Fornece uma interface para acessar coleções de objetos agregados, permitindo que o domínio permaneça livre de preocupações com persistência. Ele atua como uma camada intermediária entre o domínio e a fonte de dados (como bancos de dados).
-
-3. <a href="">Serviço de Domínio</a>: Representa operações ou ações do domínio que não pertencem naturalmente a uma única entidade ou value object. Encapsula lógica de negócio que depende de múltiplos objetos.
-
-4. <a href="">Value Object</a>: Objetos que não possuem identidade própria e são definidos apenas por seus atributos. São imutáveis e usados para representar conceitos como dinheiro, coordenadas ou medidas.
-
-5. <a href="">Entidade</a>: Objetos do domínio que possuem identidade própria (geralmente um ID) e um ciclo de vida distinto. Diferente de value objects, entidades podem mudar seus atributos ao longo do tempo.
-
-6. <a href="">Factory</a>: Padrão responsável por encapsular a lógica de criação complexa de objetos, especialmente agregados. Evita a poluição do construtor com lógica de montagem de objetos.
-
-7. <a href="">Especificação</a>: Define regras de negócio reutilizáveis e combináveis para verificar se um objeto atende a determinados critérios. É útil para separação de responsabilidades e clareza das regras de domínio.
-
-8. <a href="">Event Sourcing</a>: Técnica onde o estado do sistema é determinado por uma sequência de eventos (ao invés de snapshots de dados). Permite reconstruir o estado do sistema e ter um histórico detalhado das mudanças.
-
-9. <a href="">Injeção de Dependência (DI - Dependency Injection)</a>: Técnica que permite desacoplar componentes do sistema, facilitando testes, manutenção e extensibilidade. No DDD, é comum para injetar repositórios, serviços de domínio e unidades de trabalho nos agregados e serviços de aplicação.
-
-Esses padrões, juntamente com outros conceitos e técnicas, podem ser aplicados para construir uma arquitetura que segue os princípios do DDD. O DDD, portanto, não é um design pattern em si, mas uma abordagem que pode ser implementada usando diversos padrões de design específicos.
-
-<a href=""><img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/0ade6281-cdca-47d3-8b95-57e81b61d04a" align="right" height="377"></a>
-
-O coração é sempre o **domínio**: entidades, objetos-valor, agregados, repositórios como contratos e os serviços de domínio quando algo não cabe numa entidade específica. Aqui não existe conhecimento técnico como banco de dados, HTTP, mensageria ou UI. É o código que sobrevive quando se troca tudo ao redor. É onde o vocabulário ubíquo vive, onde o modelo mental da empresa vira código executável. É a camada mais estável e a mais valiosa de todas:
-
-Quando você fala dessas **“camadas do domínio”**: entidades, objetos-valor, agregados, repositórios e serviços de domínio, na verdade você está descrevendo **os blocos estruturais internos do próprio Domain Model**, isto é, os elementos que compõem o **núcleo** do DDD. Eles não são camadas no sentido arquitetural, mas sim *componentes conceituais do modelo*, cada um representando um papel distinto dentro da lógica de negócio. E essa distinção é crucial, porque o domínio só fica expressivo e coerente quando cada peça é usada para aquilo que foi criada.
-
-O design orientado por domínio reconhece múltiplos tipos de modelos. Por exemplo, uma entidade é um objeto definido não por seus atributos, mas por sua identidade. Por exemplo, a maioria das companhias aéreas atribui um número único aos assentos de cada voo: essa é a identidade do assento. Em contraste, um objeto valor é um objeto imutável que contém atributos, mas não possui identidade conceitual. Quando as pessoas trocam cartões de visita, por exemplo, elas se importam apenas com as informações do cartão (seus atributos), em vez de tentar distinguir entre cada cartão único.
-
-<img src="https://github.com/user-attachments/assets/28e98845-bfde-4ecb-a5f7-84b24328cdb3" align="right">
-
-Dentro do domínio, as **entidades** representam conceitos que têm identidade persistente ao longo do tempo, mesmo que seus atributos mudem. Elas capturam comportamentos essenciais ligados a um identificador único, como um `Cliente`, um `Pedido` ou um `Veículo`. Já os **objetos-valor** são as estruturas que descrevem características imutáveis, conceituais, que não têm identidade própria, mas têm significado. Eles existem para impedir que o domínio fique cheio de tipos primitivos sem sentido, substituindo-os por tipos ricos, como `Email`, `CPF`, `Placa`, `Endereço` ou `Dinheiro`. Essa relação entre entidades e objetos-valor sustenta a expressividade do vocabulário ubíquo dentro do código.
-
-Modelos também podem definir **eventos** (algo que aconteceu no passado). Um evento de domínio é um evento pelo qual especialistas de domínio se importam. Modelos podem ser ligados por uma entidade raiz para se tornarem um agregado. Objetos fora do agregado podem conter referências à raiz, mas não a qualquer outro objeto do agregado. A raiz agregada verifica a consistência das mudanças no agregado. Os motoristas, por exemplo, não precisam controlar individualmente cada roda de um carro: eles simplesmente dirigem o carro. Nesse contexto, um carro é um conjunto de vários outros objetos (o motor, os freios, os faróis, etc.).
-
-Quando o sistema cresce e você percebe que certas entidades começam a formar agrupamentos naturais de regras e invariantes, entra o conceito de **agregado**. Ele funciona como um limite de consistência: um conjunto de entidades e objetos-valor que sempre deve ser manipulado de forma coerente. O agregado garante que você não mexa em partes internas que não deveriam ser alteradas isoladamente e que toda modificação passe por uma única entidade-raiz. Essa raiz é quem expõe métodos públicos e controla as regras internas do agregado, protegendo sua integridade lógica.
-
-No design orientado por domínio, a criação de um objeto frequentemente é separada do próprio objeto.
-
-Um repositório, por exemplo, é um objeto com métodos para recuperar objetos de domínio de um armazenamento de dados (por exemplo, um banco de dados). De forma semelhante, uma fábrica é um objeto com métodos para criar diretamente objetos de domínio. Já os **repositórios** são contratos dentro do domínio — e isso é importante: contratos, não implementações. Eles definem as operações necessárias para persistir e recuperar agregados, mas não sabem nada sobre banco de dados, ORM, SQL ou infraestrutura. Eles expressam apenas a intenção: “preciso obter esse agregado”, “preciso persistir esse agregado”. A tecnologia que faz isso acontecer vive fora do domínio. O repositório é o ponto de contato mais importante entre o núcleo do domínio e o resto da aplicação, porque permite que o domínio permaneça independente e limpo.
-
-Por fim, os **serviços de domínio** são como espaços auxiliares dentro do modelo. Eles só existem quando uma regra de negócio não pertence naturalmente a nenhuma entidade ou objeto-valor. São operações puramente de domínio, mas sem estado próprio, que coordenam comportamentos entre objetos. Muitas vezes representam cálculos, validações complexas, políticas ou decisões de negócio que não cabem dentro de um único agregado. O fato de eles existirem mostra maturidade na modelagem, porque impede que entidades se tornem “deuses” com responsabilidades demais. Quando parte da funcionalidade de um programa não pertence conceitualmente a nenhum objeto, ela normalmente é expressa como um *serviço*.
-
-Existem diferentes tipos de eventos no DDD, e as opiniões sobre sua classificação podem variar. Segundo Yan Cui, existem duas categorias-chave de eventos:
-
-- **Eventos de domínio** significam ocorrências importantes dentro de um domínio de negócios específico. Esses eventos são restritos a um contexto limitado e são vitais para preservar a lógica de negócios. Normalmente, eventos de domínio têm cargas úteis mais leves, contendo apenas as informações necessárias para o processamento. Isso ocorre porque os ouvintes de eventos geralmente estão dentro do mesmo serviço, onde seus requisitos são mais claramente compreendidos.
-
-- Por outro lado, **eventos de integração** servem para comunicar mudanças entre diferentes contextos limitados. Eles são cruciais para garantir a consistência dos dados em todo o sistema. Eventos de integração tendem a ter cargas úteis mais complexas com atributos adicionais, pois as necessidades dos ouvintes potenciais podem variar significativamente. Isso frequentemente leva a uma abordagem mais completa da comunicação, resultando em excesso de comunicação para garantir que todas as informações relevantes sejam compartilhadas de forma eficaz.
-
-O que você chamou de “camadas” é, portanto, o conjunto de **padrões que estruturam o modelo de domínio** internamente. Eles servem para que o núcleo do sistema represente a realidade de negócio de forma organizada, expressiva e coerente. Cada um desempenha um papel específico e todos se combinam para formar o coração do DDD. Esses elementos não vivem separados por fronteiras técnicas — eles convivem dentro do mesmo contexto, mas com funções bem definidas. E é exatamente essa organização interna que permite ao domínio permanecer sólido mesmo quando todo o resto do sistema muda.
-
-Ao redor do domínio está a camada de aplicação, que não contém regras de negócio, mas coordena casos de uso. Ela funciona como um orquestrador, chamando o domínio e o que está fora dele para cumprir um fluxo. Esse nível também permanece relativamente estável, mas já conhece elementos mais concretos, como serviços de email, notificações ou repositórios que serão implementados no mundo técnico. Essa camada é a ponte entre a intenção de negócio e a execução tecnológica.
-
-Por fim, a infraestrutura é a camada que toca na realidade: banco de dados, HTTP, mensageria, arquivos, serviços externos, ORM, drivers, tudo que é acoplado à tecnologia. Aqui ficam as implementações concretas dos contratos definidos nas camadas superiores. A infraestrutura depende do domínio, mas o domínio nunca depende dela — essa é a inversão fundamental que mantém a modelagem limpa. Quando se aplica arquitetura hexagonal ou Onion Architecture, o domínio fica no centro e a infraestrutura fica nas bordas, o que reforça a mesma ideia.
-
-Então, quando se fala que DDD tem camadas, a verdade é que ele inspira a criação de camadas porque a modelagem orientada ao domínio exige separação clara entre regras de negócio e tecnologia. É por isso que tantos times que aplicam DDD acabam automaticamente usando Clean Architecture, Hexagonal Architecture ou Onion Architecture: essas estruturas preservam o modelo de domínio e permitem que ele evolua sem ser destruído por detalhes técnicos.
-
-DDD não existe sem essa separação. Ele até poderia ser aplicado em uma bagunça de código monolítico distribuído, mas não funcionaria. O poder do DDD acontece justamente quando o domínio é posto no centro e protegido por camadas que impedem que a tecnologia engula as regras de negócio. Essa divisão natural acaba sendo percebida como “camadas do DDD”, apesar de tecnicamente elas pertencerem mais a estilos arquiteturais compatíveis com DDD do que ao DDD em si.
-
-<img src="https://github.com/user-attachments/assets/b2544370-f786-49e5-8b98-162d68e232b5" align="right" height="377">
-
-O **AOP - Aspect-Oriented Programming** pode fortalecer muito as boas práticas de DDD, TDD e BDD, e essa conexão faz bastante sentido quando entendemos o papel de cada um desses paradigmas dentro de uma arquitetura limpa e organizada. A orientação a aspectos não substitui nenhum deles, mas funciona como uma espécie de tecido estrutural que mantém o código limpo, modular e fiel aos princípios que essas abordagens defendem.
-
-O DDD se beneficia especialmente porque a regra número um do design orientado ao domínio é manter o domínio puro, expressivo e livre de detalhes técnicos acoplados. O AOP ajuda justamente a retirar do domínio tudo aquilo que não é domínio: logs, transações, auditorias, repetição de validações estruturais, políticas de segurança, métricas e qualquer outra funcionalidade transversal. Ao deslocar essas responsabilidades para aspectos, o modelo de domínio permanece limpo e orientado exclusivamente à lógica do negócio, sem anotações excessivas, sem serviços utilitários misturados e sem ruídos que atrapalhem a clareza conceitual do código. Isso deixa o domínio mais próximo da linguagem ubíqua, mais fácil de evoluir e mais coerente com o propósito principal do DDD, que é representar conhecimento e regras do negócio de forma elegante e sustentável.
-
-No caso do TDD, o AOP traz uma contribuição igualmente importante. Quando usamos TDD, queremos testar a lógica de forma isolada, sem que camadas externas interfiram no comportamento esperado. Se o código estiver poluído com logs, tratamentos repetitivos ou preocupações técnicas envolvendo transações ou autenticação, o ato de testar se torna mais difícil, mais lento e mais sujeito a falhas colaterais. O AOP limpa esse cenário ao remover grande parte desse ruído estrutural, permitindo que você escreva testes focados apenas na lógica essencial. Além disso, como os aspectos podem ser desativados ou simulados durante os testes, você consegue um ambiente de testes mais controlado, determinístico e alinhado com o espírito do TDD, que exige ciclos rápidos, previsíveis e com feedback imediato sobre a execução da regra de negócio.
-
-Sobre o BDD, o AOP também se encaixa de maneira natural, porque o BDD exige clareza comportamental e foco na história do usuário ou no comportamento esperado de uma funcionalidade. Quando você descreve um comportamento no formato Given-When-Then, espera que o código reflita essa lógica de forma limpa, sem camadas técnicas misturadas. O AOP impede que esses comportamentos de alto nível fiquem escondidos ou embrulhados por detalhes de infraestrutura, preservando a naturalidade da leitura tanto no código quanto nos testes comportamentais. Isso torna os cenários mais fiéis à linguagem de negócio, diminui ruídos e deixa as tratativas técnicas centralizadas fora do fluxo principal. Em outras palavras, o BDD ganha em clareza, o TDD ganha em eficácia e o DDD ganha em pureza — tudo porque o AOP protege a regra de negócio de interferências externas.
-
-Assim, quando você coloca tudo isso junto, percebe que AOP não é um acessório técnico, mas uma ferramenta arquitetural que sustenta a separação de responsabilidades, reduz acoplamento e melhora a manutenção do sistema como um todo. Ele permite que o domínio seja domínio, que os testes sejam testes e que o comportamento da aplicação seja descrito de maneira simples e coerente. O AOP acaba se tornando um verdadeiro aliado para sistemas que queiram adotar DDD, TDD e BDD de forma madura, escalável e profissional, principalmente em ambientes como o ecossistema Java/Kotlin, onde essa abordagem é amplamente consolidada através de frameworks como o Spring.
-
 <img width="100%" alt="image" src="https://github.com/user-attachments/assets/cc8dad6f-afc7-4b1b-8ebd-30df9b57b557" />
 
 Os padrões estratégicos lidam com a obtenção de uma visão geral do domínio de negócios, o que inclui decompô-lo em regras de negócios.
@@ -1787,7 +1705,6 @@ Portanto, podemos dizer que o DDD é uma abordagem de design e uma metodologia d
 
 É uma abordagem mais ampla para o design de software que abrange vários conceitos e técnicas. DDD enfatiza a modelagem do domínio, a colaboração entre especialistas do domínio e desenvolvedores, e a criação de um código baseado em um entendimento profundo do domínio do problema.
 
-
 O DDD deve ajudar na modelagem das classes mais importantes e mais centrais do sistema de forma e diminuir a complexidade e ajudar na manutenção das mesmas, afinal este é o objetivo dos princípios de orientação a objetos.
 
 Outro ponto é sobre nós desenvolvedores estarmos compartilhando dados com outros sistemas, as rotinas de integração que recebem ou disponibilizam dados para outros sistemas não devem ser "inteligentes". Muitos desenvolvedores acabam modelando suas classes de negócios tentando resolver as questões internas do sistema e, ao mesmo tempo, pensando em como essas classes serão expostas para outros sistemas. Padrões como DTO (Data Transfer Object) que usam objetos "burros" são mais adequados para isso.
@@ -1813,6 +1730,88 @@ Essa abordagem se torna especialmente valiosa quando:
 O DDD não se importa se a arquitetura é monolítica ou baseada em microsserviços. O que importa é se o modelo reflete as regras e a linguagem do mundo real do domínio e se esse modelo pode evoluir com segurança à medida que o domínio muda.
 
 Exploramos as ideias centrais do DDD (como Contextos Limitados, Agregados e Linguagem Ubíqua) e explicamos como eles funcionam juntos na prática. Também veremos como o DDD se encaixa nos sistemas do mundo real, onde ele brilha e onde pode falhar.
+
+Essa divisão natural acaba sendo organizada em três grandes agrupamentos: uma **camada de domínio**, uma **camada de aplicação** e uma **camada de infraestrutura**. Mas, novamente, isso não é um dogma do DDD, é apenas a forma como as ideias do DDD funcionam melhor em arquiteturas limpas e separadas:
+
+<table>
+ <tr>
+  <td><img src="https://github.com/user-attachments/assets/ee84d4c8-e5d3-4469-9a41-8eed9718659c" height="777"></td>
+  <td><img src="https://github.com/user-attachments/assets/29d64a52-176c-46d9-8b54-68b9c6be717f" height="777"></td>
+  <td><img src="https://github.com/user-attachments/assets/c7b24ba8-f883-4fcf-a89b-6b864209ccd4" height="777"></td>
+ </tr>
+</table>
+
+No contexto do DDD, existem design patterns específicos que são frequentemente utilizados para ajudar a implementar os conceitos e princípios do DDD. Alguns desses padrões incluem:
+
+1. <a href="">Agregado</a>: Se refere a um padrão de design que agrupa um conjunto de objetos relacionados em uma única unidade coesa. O Agregado é uma das principais construções utilizadas para modelar e organizar o domínio em DDD;
+
+2. <a href="">Repositório</a>: Fornece uma interface para acessar coleções de objetos agregados, permitindo que o domínio permaneça livre de preocupações com persistência. Ele atua como uma camada intermediária entre o domínio e a fonte de dados (como bancos de dados).
+
+3. <a href="">Serviço de Domínio</a>: Representa operações ou ações do domínio que não pertencem naturalmente a uma única entidade ou value object. Encapsula lógica de negócio que depende de múltiplos objetos.
+
+4. <a href="">Value Object</a>: Objetos que não possuem identidade própria e são definidos apenas por seus atributos. São imutáveis e usados para representar conceitos como dinheiro, coordenadas ou medidas.
+
+5. <a href="">Entidade</a>: Objetos do domínio que possuem identidade própria (geralmente um ID) e um ciclo de vida distinto. Diferente de value objects, entidades podem mudar seus atributos ao longo do tempo.
+
+6. <a href="">Factory</a>: Padrão responsável por encapsular a lógica de criação complexa de objetos, especialmente agregados. Evita a poluição do construtor com lógica de montagem de objetos.
+
+7. <a href="">Especificação</a>: Define regras de negócio reutilizáveis e combináveis para verificar se um objeto atende a determinados critérios. É útil para separação de responsabilidades e clareza das regras de domínio.
+
+8. <a href="">Event Sourcing</a>: Técnica onde o estado do sistema é determinado por uma sequência de eventos (ao invés de snapshots de dados). Permite reconstruir o estado do sistema e ter um histórico detalhado das mudanças.
+
+9. <a href="">Injeção de Dependência (DI - Dependency Injection)</a>: Técnica que permite desacoplar componentes do sistema, facilitando testes, manutenção e extensibilidade. No DDD, é comum para injetar repositórios, serviços de domínio e unidades de trabalho nos agregados e serviços de aplicação.
+
+Esses padrões, juntamente com outros conceitos e técnicas, podem ser aplicados para construir uma arquitetura que segue os princípios do DDD. O DDD, portanto, não é um design pattern em si, mas uma abordagem que pode ser implementada usando diversos padrões de design específicos.
+
+<a href=""><img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/0ade6281-cdca-47d3-8b95-57e81b61d04a" align="right" height="377"></a>
+
+O coração é sempre o **domínio**: entidades, objetos-valor, agregados, repositórios como contratos e os serviços de domínio quando algo não cabe numa entidade específica. Aqui não existe conhecimento técnico como banco de dados, HTTP, mensageria ou UI. É o código que sobrevive quando se troca tudo ao redor. É onde o vocabulário ubíquo vive, onde o modelo mental da empresa vira código executável. É a camada mais estável e a mais valiosa de todas:
+
+Quando você fala dessas **“camadas do domínio”**: entidades, objetos-valor, agregados, repositórios e serviços de domínio, na verdade você está descrevendo **os blocos estruturais internos do próprio Domain Model**, isto é, os elementos que compõem o **núcleo** do DDD. Eles não são camadas no sentido arquitetural, mas sim *componentes conceituais do modelo*, cada um representando um papel distinto dentro da lógica de negócio. E essa distinção é crucial, porque o domínio só fica expressivo e coerente quando cada peça é usada para aquilo que foi criada.
+
+O design orientado por domínio reconhece múltiplos tipos de modelos. Por exemplo, uma entidade é um objeto definido não por seus atributos, mas por sua identidade. Por exemplo, a maioria das companhias aéreas atribui um número único aos assentos de cada voo: essa é a identidade do assento. Em contraste, um objeto valor é um objeto imutável que contém atributos, mas não possui identidade conceitual. Quando as pessoas trocam cartões de visita, por exemplo, elas se importam apenas com as informações do cartão (seus atributos), em vez de tentar distinguir entre cada cartão único.
+
+<img src="https://github.com/user-attachments/assets/28e98845-bfde-4ecb-a5f7-84b24328cdb3" align="right">
+
+Dentro do domínio, as **entidades** representam conceitos que têm identidade persistente ao longo do tempo, mesmo que seus atributos mudem. Elas capturam comportamentos essenciais ligados a um identificador único, como um `Cliente`, um `Pedido` ou um `Veículo`. Já os **objetos-valor** são as estruturas que descrevem características imutáveis, conceituais, que não têm identidade própria, mas têm significado. Eles existem para impedir que o domínio fique cheio de tipos primitivos sem sentido, substituindo-os por tipos ricos, como `Email`, `CPF`, `Placa`, `Endereço` ou `Dinheiro`. Essa relação entre entidades e objetos-valor sustenta a expressividade do vocabulário ubíquo dentro do código.
+
+Modelos também podem definir **eventos** (algo que aconteceu no passado). Um evento de domínio é um evento pelo qual especialistas de domínio se importam. Modelos podem ser ligados por uma entidade raiz para se tornarem um agregado. Objetos fora do agregado podem conter referências à raiz, mas não a qualquer outro objeto do agregado. A raiz agregada verifica a consistência das mudanças no agregado. Os motoristas, por exemplo, não precisam controlar individualmente cada roda de um carro: eles simplesmente dirigem o carro. Nesse contexto, um carro é um conjunto de vários outros objetos (o motor, os freios, os faróis, etc.).
+
+Quando o sistema cresce e você percebe que certas entidades começam a formar agrupamentos naturais de regras e invariantes, entra o conceito de **agregado**. Ele funciona como um limite de consistência: um conjunto de entidades e objetos-valor que sempre deve ser manipulado de forma coerente. O agregado garante que você não mexa em partes internas que não deveriam ser alteradas isoladamente e que toda modificação passe por uma única entidade-raiz. Essa raiz é quem expõe métodos públicos e controla as regras internas do agregado, protegendo sua integridade lógica.
+
+No design orientado por domínio, a criação de um objeto frequentemente é separada do próprio objeto.
+
+Um repositório, por exemplo, é um objeto com métodos para recuperar objetos de domínio de um armazenamento de dados (por exemplo, um banco de dados). De forma semelhante, uma fábrica é um objeto com métodos para criar diretamente objetos de domínio. Já os **repositórios** são contratos dentro do domínio — e isso é importante: contratos, não implementações. Eles definem as operações necessárias para persistir e recuperar agregados, mas não sabem nada sobre banco de dados, ORM, SQL ou infraestrutura. Eles expressam apenas a intenção: “preciso obter esse agregado”, “preciso persistir esse agregado”. A tecnologia que faz isso acontecer vive fora do domínio. O repositório é o ponto de contato mais importante entre o núcleo do domínio e o resto da aplicação, porque permite que o domínio permaneça independente e limpo.
+
+Por fim, os **serviços de domínio** são como espaços auxiliares dentro do modelo. Eles só existem quando uma regra de negócio não pertence naturalmente a nenhuma entidade ou objeto-valor. São operações puramente de domínio, mas sem estado próprio, que coordenam comportamentos entre objetos. Muitas vezes representam cálculos, validações complexas, políticas ou decisões de negócio que não cabem dentro de um único agregado. O fato de eles existirem mostra maturidade na modelagem, porque impede que entidades se tornem “deuses” com responsabilidades demais. Quando parte da funcionalidade de um programa não pertence conceitualmente a nenhum objeto, ela normalmente é expressa como um *serviço*.
+
+Existem diferentes tipos de eventos no DDD, e as opiniões sobre sua classificação podem variar. Segundo Yan Cui, existem duas categorias-chave de eventos:
+
+- **Eventos de domínio** significam ocorrências importantes dentro de um domínio de negócios específico. Esses eventos são restritos a um contexto limitado e são vitais para preservar a lógica de negócios. Normalmente, eventos de domínio têm cargas úteis mais leves, contendo apenas as informações necessárias para o processamento. Isso ocorre porque os ouvintes de eventos geralmente estão dentro do mesmo serviço, onde seus requisitos são mais claramente compreendidos.
+
+- Por outro lado, **eventos de integração** servem para comunicar mudanças entre diferentes contextos limitados. Eles são cruciais para garantir a consistência dos dados em todo o sistema. Eventos de integração tendem a ter cargas úteis mais complexas com atributos adicionais, pois as necessidades dos ouvintes potenciais podem variar significativamente. Isso frequentemente leva a uma abordagem mais completa da comunicação, resultando em excesso de comunicação para garantir que todas as informações relevantes sejam compartilhadas de forma eficaz.
+
+O que você chamou de “camadas” é, portanto, o conjunto de **padrões que estruturam o modelo de domínio** internamente. Eles servem para que o núcleo do sistema represente a realidade de negócio de forma organizada, expressiva e coerente. Cada um desempenha um papel específico e todos se combinam para formar o coração do DDD. Esses elementos não vivem separados por fronteiras técnicas — eles convivem dentro do mesmo contexto, mas com funções bem definidas. E é exatamente essa organização interna que permite ao domínio permanecer sólido mesmo quando todo o resto do sistema muda.
+
+Ao redor do domínio está a camada de aplicação, que não contém regras de negócio, mas coordena casos de uso. Ela funciona como um orquestrador, chamando o domínio e o que está fora dele para cumprir um fluxo. Esse nível também permanece relativamente estável, mas já conhece elementos mais concretos, como serviços de email, notificações ou repositórios que serão implementados no mundo técnico. Essa camada é a ponte entre a intenção de negócio e a execução tecnológica.
+
+Por fim, a infraestrutura é a camada que toca na realidade: banco de dados, HTTP, mensageria, arquivos, serviços externos, ORM, drivers, tudo que é acoplado à tecnologia. Aqui ficam as implementações concretas dos contratos definidos nas camadas superiores. A infraestrutura depende do domínio, mas o domínio nunca depende dela — essa é a inversão fundamental que mantém a modelagem limpa. Quando se aplica arquitetura hexagonal ou Onion Architecture, o domínio fica no centro e a infraestrutura fica nas bordas, o que reforça a mesma ideia.
+
+Então, quando se fala que DDD tem camadas, a verdade é que ele inspira a criação de camadas porque a modelagem orientada ao domínio exige separação clara entre regras de negócio e tecnologia. É por isso que tantos times que aplicam DDD acabam automaticamente usando Clean Architecture, Hexagonal Architecture ou Onion Architecture: essas estruturas preservam o modelo de domínio e permitem que ele evolua sem ser destruído por detalhes técnicos.
+
+DDD não existe sem essa separação. Ele até poderia ser aplicado em uma bagunça de código monolítico distribuído, mas não funcionaria. O poder do DDD acontece justamente quando o domínio é posto no centro e protegido por camadas que impedem que a tecnologia engula as regras de negócio. Essa divisão natural acaba sendo percebida como “camadas do DDD”, apesar de tecnicamente elas pertencerem mais a estilos arquiteturais compatíveis com DDD do que ao DDD em si.
+
+<img src="https://github.com/user-attachments/assets/b2544370-f786-49e5-8b98-162d68e232b5" align="right" height="377">
+
+O **AOP - Aspect-Oriented Programming** pode fortalecer muito as boas práticas de DDD, TDD e BDD, e essa conexão faz bastante sentido quando entendemos o papel de cada um desses paradigmas dentro de uma arquitetura limpa e organizada. A orientação a aspectos não substitui nenhum deles, mas funciona como uma espécie de tecido estrutural que mantém o código limpo, modular e fiel aos princípios que essas abordagens defendem.
+
+O DDD se beneficia especialmente porque a regra número um do design orientado ao domínio é manter o domínio puro, expressivo e livre de detalhes técnicos acoplados. O AOP ajuda justamente a retirar do domínio tudo aquilo que não é domínio: logs, transações, auditorias, repetição de validações estruturais, políticas de segurança, métricas e qualquer outra funcionalidade transversal. Ao deslocar essas responsabilidades para aspectos, o modelo de domínio permanece limpo e orientado exclusivamente à lógica do negócio, sem anotações excessivas, sem serviços utilitários misturados e sem ruídos que atrapalhem a clareza conceitual do código. Isso deixa o domínio mais próximo da linguagem ubíqua, mais fácil de evoluir e mais coerente com o propósito principal do DDD, que é representar conhecimento e regras do negócio de forma elegante e sustentável.
+
+No caso do TDD, o AOP traz uma contribuição igualmente importante. Quando usamos TDD, queremos testar a lógica de forma isolada, sem que camadas externas interfiram no comportamento esperado. Se o código estiver poluído com logs, tratamentos repetitivos ou preocupações técnicas envolvendo transações ou autenticação, o ato de testar se torna mais difícil, mais lento e mais sujeito a falhas colaterais. O AOP limpa esse cenário ao remover grande parte desse ruído estrutural, permitindo que você escreva testes focados apenas na lógica essencial. Além disso, como os aspectos podem ser desativados ou simulados durante os testes, você consegue um ambiente de testes mais controlado, determinístico e alinhado com o espírito do TDD, que exige ciclos rápidos, previsíveis e com feedback imediato sobre a execução da regra de negócio.
+
+Sobre o BDD, o AOP também se encaixa de maneira natural, porque o BDD exige clareza comportamental e foco na história do usuário ou no comportamento esperado de uma funcionalidade. Quando você descreve um comportamento no formato Given-When-Then, espera que o código reflita essa lógica de forma limpa, sem camadas técnicas misturadas. O AOP impede que esses comportamentos de alto nível fiquem escondidos ou embrulhados por detalhes de infraestrutura, preservando a naturalidade da leitura tanto no código quanto nos testes comportamentais. Isso torna os cenários mais fiéis à linguagem de negócio, diminui ruídos e deixa as tratativas técnicas centralizadas fora do fluxo principal. Em outras palavras, o BDD ganha em clareza, o TDD ganha em eficácia e o DDD ganha em pureza — tudo porque o AOP protege a regra de negócio de interferências externas.
+
+Assim, quando você coloca tudo isso junto, percebe que AOP não é um acessório técnico, mas uma ferramenta arquitetural que sustenta a separação de responsabilidades, reduz acoplamento e melhora a manutenção do sistema como um todo. Ele permite que o domínio seja domínio, que os testes sejam testes e que o comportamento da aplicação seja descrito de maneira simples e coerente. O AOP acaba se tornando um verdadeiro aliado para sistemas que queiram adotar DDD, TDD e BDD de forma madura, escalável e profissional, principalmente em ambientes como o ecossistema Java/Kotlin, onde essa abordagem é amplamente consolidada através de frameworks como o Spring.
 
 <table>
  <tr>
