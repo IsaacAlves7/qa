@@ -1512,6 +1512,8 @@ Críticos do design orientado por domínio argumentam que os desenvolvedores nor
 
 A exigência de construir um entendimento profissional também se aplica aos desenvolvedores. Uma boa compreensão do assunto (domínio) surge da comunicação regular e de uma linguagem comum, o que representa um desafio, principalmente em equipes interdisciplinares: Afinal, cada disciplina tem sua linguagem técnica, por isso os mal-entendidos são inevitáveis.
 
+<img height="413" align="right" src="https://github.com/user-attachments/assets/e2c65dfd-24ff-473c-9007-4d1256554953" />
+
 Num <a href="">Code Review</a>, o time não está apenas olhando se o código “funciona”, mas se ele está legível, sustentável e alinhado ao domínio. É aí que DDD se torna um guia. Por exemplo, quando você define entidades e value objects, o revisor consegue avaliar se você está representando o domínio corretamente ou se misturou regras de negócio com detalhes de infraestrutura. Se você trabalha com bounded contexts, o code review ajuda a garantir que cada módulo está respeitando suas fronteiras e não está acoplando responsabilidades que deveriam estar separadas. E quando se usa a linguagem ubíqua, qualquer pessoa envolvida no projeto pode bater o olho no código e identificar termos familiares do negócio, reduzindo ambiguidades.
 
 A ideia central é trazer o domínio (o sujeito, a razão) à tona...O <a href="https://unibo-dtm-se.github.io/course-slides/ddd/#/">DDD</a> acaba aparecendo muito em code reviews (revisões de código) porque ele não é só um conjunto de padrões técnicos, mas uma maneira de organizar o raciocínio e o design do sistema a partir do domínio de negócio. Diferente de TDD e BDD, que são mais voltados ao como testar e como validar comportamento, o DDD toca no como estruturar o código para refletir a realidade do problema que a aplicação resolve.
@@ -1564,7 +1566,7 @@ Implementação de domínio é a criação de um processo e de ferramentas para 
 
 Um domínio bem modelado só tem efeito se o design de software respeita a coesão do modelo, preserva invariantes, mantém consistência interna e evita que detalhes técnicos vazem para áreas onde não deveriam. Se o design de software decide misturar responsabilidades, criar acoplamentos arbitrários, espalhar regras por camadas que não conversam com o domínio ou ignorar o Ubiquitous Language, então o DDD perde força, porque o código deixa de refletir as estruturas conceituais. O resultado é um sistema que só “parece DDD no papel”, mas opera como um monólito acoplado, com entidades sem significado e casos de uso sem fronteiras.
 
-<img height="413" align="right" src="https://github.com/user-attachments/assets/e2c65dfd-24ff-473c-9007-4d1256554953" />
+<img height="413" align="right" src="https://github.com/user-attachments/assets/d4500284-4180-420e-b551-056dbe5a17d0" />
 
 Ao mesmo tempo, DDD também depende do design de sistemas, porque os **Bounded Contexts**, para existirem de verdade, precisam de fronteiras técnicas: precisam ser isolados, ter seus próprios modelos, seus próprios fluxos de dados, sua própria vida. É o <a href="">design de sistemas (System design)</a> que decide como esses contextos conversam, se por eventos, filas, APIs, contratos assíncronos ou mensagens. O DDD diz *“esses dois contextos são independentes e têm linguagens diferentes”*; o design de sistemas transforma essa independência em topologia real e se ele falha nisso, os contextos se fundem, o sistema fica acoplado e a proposta de modularidade do DDD desaparece.
 
