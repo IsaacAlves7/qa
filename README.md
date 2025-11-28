@@ -1819,7 +1819,12 @@ Exploramos as ideias centrais do DDD (como Contextos Limitados, Agregados e Ling
  </tr>
 </table>
 
-<img width="2321" height="1295" alt="image" src="https://github.com/user-attachments/assets/99724450-0a18-4e9e-b5e6-f80af13c47d5" />
+<table>
+ <tr>
+  <td><img src="https://github.com/user-attachments/assets/6ed3f6e0-e3ec-4cf2-a2ae-cc486f510748" height="777"></td>
+  <td><img src="https://github.com/user-attachments/assets/99724450-0a18-4e9e-b5e6-f80af13c47d5" height="777" /></td>
+ </tr>
+</table>
 
 **DDD - Segregação de Responsabilidade de Consulta de Comando (CQRS)** os comandos são complexos, as consultas são simples, anteriormente, examinamos as Entidades DDD, que têm **estado**, e **Eventos**, onde o estado muda. Para reduzir a complexidade, podemos ser específicos sobre o que tem estado e encapsular onde ele muda. Os eventos são códigos de alto nível, situados no meio da Onion Architecture. Veremos como os comandos de nível inferior vinculam a interface do usuário ou a API a eventos para permitir que os usuários alterem o estado.
 
