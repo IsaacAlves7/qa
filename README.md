@@ -1845,8 +1845,9 @@ O Clean Architecture (CA) é a diretriz de arquitetura de sistemas proposta por 
  </tr>
 </table>
 
+Comecei com minha equipe a adotar o Domain-Driven Design (DDD) em nosso trabalho, e nossa missão era tirar o máximo proveito do DDD e do CA, se possível. À medida que a adoção cresce, estamos cada vez mais perto do negócio e do domínio que estamos abordando; começamos a falar a linguagem onipresente do domínio.
 
-Comecei com minha equipe na Taager.com a adotar o Domain-Driven Design (DDD) em nosso trabalho, e nossa missão era tirar o máximo proveito do DDD e do CA, se possível. À medida que a adoção cresce, estamos cada vez mais perto do negócio e do domínio que estamos abordando; começamos a falar a linguagem onipresente do domínio. Este artigo é um excelente começo para obter mais conhecimento sobre DDD.
+<img width="800" height="310" alt="hexagonal-architecture-vs-clean-architecture-2 v4-800x310" src="https://github.com/user-attachments/assets/293ade6d-7009-4466-be85-f404646b82aa" />
 
 > [!Note]
 > Não existe tal arquitetura que sirva para todos. Toda arquitetura ou padrão de desenvolvimento de software tem prós e contras; Baseie sua decisão no projeto, no escopo e na equipe. Vamos descrever o caminho que tomamos.
