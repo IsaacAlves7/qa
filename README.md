@@ -1836,11 +1836,15 @@ Os eventos de domínio existem no centro de domínio de alto nível de um diagra
 
 Para que um usuário interaja com um sistema e para que ele seja útil, precisamos ser capazes de fazer duas coisas. A primeira é exibir informações para o usuário.
 
-O Clean Architecture (CA) é a diretriz de arquitetura de sistemas proposta por Robert C. Martin (Uncle Bob) derivada de muitas diretrizes arquitetônicas como Hexagonal Architecture e Onion Architecture, entre outras.
+O Clean Architecture (CA) é a diretriz de arquitetura de sistemas proposta por Robert C. Martin (Uncle Bob) derivada de muitas diretrizes arquitetônicas como Hexagonal Architecture e Onion Architecture, entre outras. Eric Evans introduziu o conceito de Domain-Driven Design (DDD). Ele escreveu sobre isso em seu livro Domain-driven Design em 2004 (também conhecido como "The Big Blue Book"). O Design Orientado a Domínio é uma abordagem para o desenvolvimento de software que centra o desenvolvimento na programação de um modelo de domínio com uma rica compreensão dos processos e regras de um domínio.
 
-Eric Evans introduziu o conceito de Domain-Driven Design (DDD). Ele escreveu sobre isso em seu livro Domain-driven Design em 2004 (também conhecido como "The Big Blue Book").
+<table>
+ <tr>
+  <td><img src="https://github.com/user-attachments/assets/5cf836ff-c109-4afe-9dec-8fb33455bb30" height="777"></td>
+  <td><img src="https://github.com/user-attachments/assets/26e7d71b-c8bc-407c-8370-2914904f0306" height="777" /></td>
+ </tr>
+</table>
 
-O Design Orientado a Domínio é uma abordagem para o desenvolvimento de software que centra o desenvolvimento na programação de um modelo de domínio com uma rica compreensão dos processos e regras de um domínio.
 
 Comecei com minha equipe na Taager.com a adotar o Domain-Driven Design (DDD) em nosso trabalho, e nossa missão era tirar o máximo proveito do DDD e do CA, se possível. À medida que a adoção cresce, estamos cada vez mais perto do negócio e do domínio que estamos abordando; começamos a falar a linguagem onipresente do domínio. Este artigo é um excelente começo para obter mais conhecimento sobre DDD.
 
