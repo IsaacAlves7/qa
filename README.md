@@ -1634,7 +1634,7 @@ Por fim, os **serviços de domínio** são como espaços auxiliares dentro do mo
 
 Existem diferentes tipos de eventos no DDD, e as opiniões sobre sua classificação podem variar. Segundo Yan Cui, existem duas categorias-chave de eventos:
 
-- **Eventos de domínio** significam ocorrências importantes dentro de um domínio de negócios específico. Esses eventos são restritos a um contexto limitado e são vitais para preservar a lógica de negócios. Normalmente, eventos de domínio têm cargas úteis mais leves, contendo apenas as informações necessárias para o processamento. Isso ocorre porque os ouvintes de eventos geralmente estão dentro do mesmo serviço, onde seus requisitos são mais claramente compreendidos. [6]
+- **Eventos de domínio** significam ocorrências importantes dentro de um domínio de negócios específico. Esses eventos são restritos a um contexto limitado e são vitais para preservar a lógica de negócios. Normalmente, eventos de domínio têm cargas úteis mais leves, contendo apenas as informações necessárias para o processamento. Isso ocorre porque os ouvintes de eventos geralmente estão dentro do mesmo serviço, onde seus requisitos são mais claramente compreendidos.
 
 - Por outro lado, **eventos de integração** servem para comunicar mudanças entre diferentes contextos limitados. Eles são cruciais para garantir a consistência dos dados em todo o sistema. Eventos de integração tendem a ter cargas úteis mais complexas com atributos adicionais, pois as necessidades dos ouvintes potenciais podem variar significativamente. Isso frequentemente leva a uma abordagem mais completa da comunicação, resultando em excesso de comunicação para garantir que todas as informações relevantes sejam compartilhadas de forma eficaz.
 
