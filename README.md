@@ -1568,7 +1568,7 @@ Um domínio bem modelado só tem efeito se o design de software respeita a coes�
 
 <img height="413" align="right" src="https://github.com/user-attachments/assets/d4500284-4180-420e-b551-056dbe5a17d0" />
 
-Ao mesmo tempo, DDD também depende do design de sistemas, porque os **Bounded Contexts**, para existirem de verdade, precisam de fronteiras técnicas: precisam ser isolados, ter seus próprios modelos, seus próprios fluxos de dados, sua própria vida. É o <a href="">design de sistemas (System design)</a> que decide como esses contextos conversam, se por eventos, filas, APIs, contratos assíncronos ou mensagens. O DDD diz *“esses dois contextos são independentes e têm linguagens diferentes”*; o design de sistemas transforma essa independência em topologia real e se ele falha nisso, os contextos se fundem, o sistema fica acoplado e a proposta de modularidade do DDD desaparece.
+Ao mesmo tempo, DDD também depende do design de sistemas, porque os **Bounded Contexts** (Contextos limitados), para existirem de verdade, precisam de fronteiras técnicas: precisam ser isolados, ter seus próprios modelos, seus próprios fluxos de dados, sua própria vida. É o <a href="">design de sistemas (System design)</a> que decide como esses contextos conversam, se por eventos, filas, APIs, contratos assíncronos ou mensagens. O DDD diz *“esses dois contextos são independentes e têm linguagens diferentes”*; o design de sistemas transforma essa independência em topologia real e se ele falha nisso, os contextos se fundem, o sistema fica acoplado e a proposta de modularidade do DDD desaparece.
 
 E por fim, a arquitetura de software é o alicerce onde o DDD se apoia. É ela que escolhe padrões como microservices, monólito modular, event-driven, CQRS, event sourcing, hexagonal ou clean architecture, que definem como as partes se organizam, como as dependências fluem, como proteções ao domínio são criadas. A arquitetura é o meio técnico que permite que o domínio respire. Quando a arquitetura é mal desenhada, a equipe tenta aplicar DDD sobre um terreno instável, e o domínio acaba se adaptando aos problemas arquiteturais em vez de a arquitetura se adaptar ao domínio. DDD, nesse cenário, vira ornamento.
 
@@ -1857,7 +1857,7 @@ Este artigo se concentrará em como estruturamos o código de acordo com DDD e C
 
 Primeiro, dividimos o sistema em partes independentes menores em torno dos subdomínios de negócios por meio de algumas iterações (ferramentas <a href="https://vaadin.com/blog/ddd-part-1-strategic-domain-driven-design">estratégicas de DDD</a>, como tempestade de eventos, narrativa e muito mais). Idealmente, essas partes devem ser implantáveis de forma independente (microsserviços), mas nem sempre é esse o caso. Muitas vezes, podemos ter um código legado que não podemos alterar facilmente, então temos que mantê-lo por um tempo. Nesses casos, temos esses subdomínios em um único projeto (monólito), com cada subdomínio em uma pasta ou pacote separado.
 
-**Estrutura de código de contexto limitado**: Depois de dividir o domínio extenso em partes menores, também chamadas de subdomínios. Em seguida, tentamos resolver cada subdomínio; Um "contexto limitado" implementará um subdomínio. Cada contexto limitado pode ser um microsserviço separado ou um pacote separado que encapsula esse contexto limitado dentro de um serviço atual. Então, vamos falar sobre essa parte agora, como projetamos cada contexto limitado, quantas camadas de alto nível temos e como elas se comunicariam juntas.
+**Estrutura de código de contexto limitado (Bounded Contexts)**: Depois de dividir o domínio extenso em partes menores, também chamadas de subdomínios. Em seguida, tentamos resolver cada subdomínio; Um "contexto limitado" implementará um subdomínio. Cada contexto limitado pode ser um microsserviço separado ou um pacote separado que encapsula esse contexto limitado dentro de um serviço atual. Então, vamos falar sobre essa parte agora, como projetamos cada contexto limitado, quantas camadas de alto nível temos e como elas se comunicariam juntas.
 
 Exemplos de contextos limitados em um sistema de comércio eletrônico
 
@@ -1866,6 +1866,64 @@ Exemplos de contextos limitados em um sistema de comércio eletrônico
 ├───orderManagement
 ├───shipping  
 ├───..
+```
+
+**Comando vs. Consulta (CQRS)**: A primeira camada que temos em cada contexto limitado são comandos e consultas. O que eles significam?
+
+Todo caso de uso em um sistema pode ser considerado um Comando ou Consulta, onde um Comando é qualquer caso de uso que altera o estado atual do sistema, enquanto uma Consulta é qualquer caso de uso que busca o estado atual SEM mudar o estado atual. Como esses dois têm preocupações diferentes, decidimos usar o padrão CQRS (Command Query Responsibility Segregation)
+
+Então, temos pastas de nível muito alto; Cada uma contém o restante das camadas, que discutiremos mais adiante nesta página para isolar essas duas preocupações.
+
+```txt
+├───shipping
+|   ├───commands
+|   ├───queries
+```
+
+![1_NhYnWZBipwZNvxuZXolaPg](https://github.com/user-attachments/assets/bbbd4c71-4a40-475a-aecb-f934ad00bd1d)
+
+**Camadas de Arquitetura**: Ter camadas claras em nosso código onde cada camada tem responsabilidade clara torna adequado para nós identificar a direção da dependência, testar facilmente o código, trabalhar em paralelo sem esperar uns pelos outros, e muito mais.
+
+Concordamos em ter as seguintes camadas
+
+- Camada de domínio
+- Camada de Aplicação
+- Camada de Infraestrutura
+
+```txt
+├───shipping
+    ├───commands
+        ├───application
+        ├───domain
+        ├───infrastructure
+    ├───queries
+        ├───application
+        ├───infrastructure
+```
+
+Você provavelmente percebeu que a subpasta de consultas não tem camada de domínio! A seção a seguir explicará os motivos por isso.
+
+**Camada de domínio**: A camada de domínio é a parte central de um contexto limitado, contendo o domínio central e todos os invariantes de negócios e a lógica para esse contexto limitado. Não deve depender de nenhuma camada ou biblioteca ou framework de terceiros. Em vez disso, todas as camadas dependem disso. O conteúdo típico nessa camada é o seguinte.
+
+```txt
+├───shipping
+    ├───commands
+        ├───domain
+            ├───models
+               ├───Shipment
+               ├───Order
+               ├───ShippingCompany
+               ├───OrderStatus
+               ├───Receiver
+            ├───services
+               ├───ShippingService
+            ├───events
+                ├───ShipmentCreated
+                ├───ShipmentDelievered
+            ├───contracts
+                ├───ShipmentRepo
+                ├───OrderRepo
+                ├───ShippingCompanyProvider
 ```
 
 **Padrões de Arquitetura de Integração Empresarial - Redações sobre arquitetura**
