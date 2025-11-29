@@ -1868,6 +1868,8 @@ Exemplos de contextos limitados em um sistema de comércio eletrônico
 ├───..
 ```
 
+<img src="https://github.com/user-attachments/assets/bbbd4c71-4a40-475a-aecb-f934ad00bd1d" align="right">
+
 **Comando vs. Consulta (CQRS)**: A primeira camada que temos em cada contexto limitado são comandos e consultas. O que eles significam?
 
 Todo caso de uso em um sistema pode ser considerado um Comando ou Consulta, onde um Comando é qualquer caso de uso que altera o estado atual do sistema, enquanto uma Consulta é qualquer caso de uso que busca o estado atual SEM mudar o estado atual. Como esses dois têm preocupações diferentes, decidimos usar o padrão CQRS (Command Query Responsibility Segregation)
@@ -1879,8 +1881,6 @@ Então, temos pastas de nível muito alto; Cada uma contém o restante das camad
 |   ├───commands
 |   ├───queries
 ```
-
-![1_NhYnWZBipwZNvxuZXolaPg](https://github.com/user-attachments/assets/bbbd4c71-4a40-475a-aecb-f934ad00bd1d)
 
 **Camadas de Arquitetura**: Ter camadas claras em nosso código onde cada camada tem responsabilidade clara torna adequado para nós identificar a direção da dependência, testar facilmente o código, trabalhar em paralelo sem esperar uns pelos outros, e muito mais.
 
@@ -1960,6 +1960,50 @@ Uma camada típica de aplicação consiste em duas pastas, conforme segue:
 |           ├───models
 |              ├───ListShipmentsQuery
 ```
+
+Implementamos uma classe separada por caso de uso; Cada classe contém um único método chamado executar algo como <a href="https://refactoring.guru/design-patterns/command">padrão de comando</a>
+
+Existem três tipos de casos de uso:
+
+1. **Solicitar para fazer algo** (`CriarEnvio`, `AtualizarStatusEnvio`)
+2. **Consultar algo** (`GetShipments`)
+3. **Manipulador de Eventos** (`OrderReceivedEventHandler`)
+
+**Camada de infraestrutura**: O trabalho da infraestrutura é fornecer capacidades técnicas para outras partes da nossa aplicação. Ele contém qualquer implementação de banco de dados, IOs ou rede, como MongoDB, Postgres, serviços analíticos, controladores, acesso ao sistema de arquivos ou cache de memória.
+
+É útil manter uma mentalidade de Princípio da Inversão de Dependência. Então, onde quer que as camadas de aplicação ou domínio precisem de detalhes de infraestrutura, dependemos de interfaces. Então, quando um caso de uso de aplicação consulta um repositório, ele dependerá apenas da interface do modelo de domínio, mas usando a implementação da infraestrutura.
+
+Um diagrama simples para ilustrar como isso funciona é o seguinte.
+
+![1_avfevQaNbjyHxKj9D4YYJQ](https://github.com/user-attachments/assets/09dd1b31-43f0-4a0b-9345-170c40d48d99)
+
+O Serviço de Aplicação depende da interface do Repositório do modelo de domínio, mas utiliza a classe de implementação da infraestrutura. Os pacotes abrangem amplas responsabilidades.
+
+```
+├───shipping
+|   ├───commands
+|       ├───infrastructure
+|           ├───controllers
+|           ├───services
+|           ├───repositories
+|           ├───..
+```
+
+**Repositórios**: Repositórios são classes ou componentes que encapsulam a lógica necessária para acessar fontes de dados. Eles centralizam funcionalidades comuns de acesso a dados, proporcionando melhor manutenção e desacoplando a infraestrutura ou tecnologia usada para acessar bancos de dados a partir da camada do modelo de domínio.
+
+Para cada agregado ou raiz agregada, você deve criar uma classe de repositório.
+
+Criamos uma classe de repositório para cada agregado ou raiz agregada, já que a raiz agregada não permite acesso direto às suas entidades filhas para impor variantes agregadas. Precisamos puxar todo o agregado do banco de dados, realizar ações e salvá-lo.
+
+> Dito isso, tenha cuidado ao projetar seu agregado para evitar penalidades de desempenho. Por exemplo, não projete uma raiz agregada contendo uma lista de entidades que aumenta ao longo do tempo. Você precisará extrair uma parte significativa dos dados toda vez que operar com esse agregado. Como resultado, você pode acabar com uma operação muito lenta e, pior ainda, OutOfMemory!.
+
+Algo como uma raiz agregada de carteira com uma lista de transações é um exemplo de um design ruim desse tipo; A transação de uma carteira aumenta com o tempo. Existem múltiplas soluções para esses casos; Uma delas é usar event sourcing.
+
+O último ponto a mencionar aqui é que o repositório esconde diferentes fontes de dados usadas da camada de domínio para que possa usar MongoDB e Redis sem alterações na interface.
+
+**Controladores**:
+- Nos esforçamos para ter um único controlador por API. Por exemplo, `GetUserController` e `SaveUserController`. Um controlador único por API mantém os controladores menores e diretos ao ponto.
+- Um controlador recebe a solicitação, a mapeia para o modelo de Aplicação, chama o caso de uso apropriado da aplicação e mapeia o resultado para a entidade de resposta desejada.
 
 **Padrões de Arquitetura de Integração Empresarial - Redações sobre arquitetura**
 
