@@ -1926,6 +1926,41 @@ Você provavelmente percebeu que a subpasta de consultas não tem camada de dom�
                 ├───ShippingCompanyProvider
 ```
 
+**Componentes do Domínio**: Resumindo, temos modelos de domínio, serviços de domínio, eventos e contratos. Existem principalmente três tipos de modelos de domínio que envolvem a lógica de negócios:
+
+- AggregateRoot,
+- Entidade, e
+- Objeto de valor.
+
+E qualquer código que não se encaixe em nenhum desses modelos deve ir para um serviço de domínio. Também temos os eventos produzidos pelo **AggregateRoots** sempre que algo muda no modelo. E, por fim, os contratos/interfaces para qualquer domínio de implementação de infraestrutura que possam precisar.
+
+**Camada de aplicação**: Essa camada fina atua como uma API que expõe as funcionalidades do contexto limitado por meio de casos de uso.
+
+É o cliente direto do modelo de domínio, responsável pela coordenação de tarefas (orquestração) dos fluxos de casos de uso. Além disso, ao usar um banco de dados ACID, a camada de aplicação controla as transações, garantindo que a aplicação persista atômicamente as transições de estado do modelo.
+
+> [!Note]
+> Nota: É um erro considerar o caso de uso da Aplicação igual ao dos **Serviços de Domínio**. Eles não são. O contraste deve ser marcante. Devemos nos esforçar para colocar toda a lógica de domínio de negócios no modelo de domínio, seja em Agregados, Objetos de Valor ou Serviços de Domínio. Mantenha os Serviços de Aplicação enxutos, usando-os apenas para coordenar tarefas no modelo. (Vaughn Vernon)
+
+Uma camada típica de aplicação consiste em duas pastas, conforme segue:
+
+```txt
+├───shipping
+|   ├───commands
+|       ├───application
+|           ├───usecases
+|              ├───CreateShipment
+|              ├───OrderConfirmedEventHandler
+|           ├───models
+|               ├───CreateShipmentRequest
+|               ├───OrderConfirmedEvent
+|   ├───queries
+|       ├───application
+|           ├───usecases
+|              ├───ListShipments
+|           ├───models
+|              ├───ListShipmentsQuery
+```
+
 **Padrões de Arquitetura de Integração Empresarial - Redações sobre arquitetura**
 
 <img width="720" height="484" alt="image" src="https://github.com/user-attachments/assets/0943cefd-3069-43a6-8c6f-e9609ca22a56" />
