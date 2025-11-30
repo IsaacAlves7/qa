@@ -2476,7 +2476,6 @@ Cenário: Buscar produto com sucesso
 
    - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
-![flask-incubator-3d-icon-png-download-9707689](https://github.com/user-attachments/assets/f016afab-d430-4b65-a327-9a2b141bdfed)
 ![test-tube-3d-icon-png-download-9707694](https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c)
 
 
@@ -2496,6 +2495,8 @@ O **TDD (Test-Driven Development)** é mais granular: foca no nível do código.
 Já o **UAT (User Acceptance Testing)** é uma fase final, manual ou semi-manual, em que os usuários ou representantes de negócio validam se o sistema está de acordo com suas expectativas. Ele é mais subjetivo e humano, enquanto ATDD tenta trazer essa visão de aceitação para dentro do ciclo técnico.
 
 Dá pra pensar assim:
+
+<img src="https://github.com/user-attachments/assets/f016afab-d430-4b65-a327-9a2b141bdfed" align="right" height="177">
 
 * O **ATDD** cria um **ciclo colaborativo** (negócio + dev + QA) para escrever critérios de aceitação como testes automatizados.
 * O **TDD** atua no detalhe técnico para garantir que cada unidade de código funciona.
