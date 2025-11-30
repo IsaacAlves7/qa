@@ -2018,13 +2018,16 @@ O último ponto a mencionar aqui é que o repositório esconde diferentes fontes
 
 **Como é um fluxo completo?** Os dois diagramas a seguir explicam a implementação de cada fluxo típico.
 
-Fluxo Típico de Comando:
-
-![1_8Dl73lo_Z1KYL-vnuTmtUw](https://github.com/user-attachments/assets/105e10ee-f3ab-45fe-a6de-5ca671d335c2)
-
-Fluxo típico de consulta:
-
-![1_qq4ANBMm4wnhJ4s1CSThbg](https://github.com/user-attachments/assets/e356aba1-7408-4b5a-86d3-af8bc880a1aa)
+<table>
+ <tr>
+  <td>Fluxo Típico de Comando:</td>
+  <td>Fluxo típico de consulta:</td>
+ </tr>
+ <tr>
+  <td><img src="https://github.com/user-attachments/assets/105e10ee-f3ab-45fe-a6de-5ca671d335c2"></td>
+  <td><img src="https://github.com/user-attachments/assets/1dbbc0f6-9d52-4a4a-9136-8ea68e554d93"></td>
+ </tr>
+</table>
 
 Novamente, não existe uma arquitetura que sirva para todos. Toda arquitetura ou padrão de desenvolvimento de software tem prós e contras; Baseie sua decisão no projeto, no escopo e na equipe.
 
