@@ -2005,6 +2005,18 @@ O último ponto a mencionar aqui é que o repositório esconde diferentes fontes
 - Nos esforçamos para ter um único controlador por API. Por exemplo, `GetUserController` e `SaveUserController`. Um controlador único por API mantém os controladores menores e diretos ao ponto.
 - Um controlador recebe a solicitação, a mapeia para o modelo de Aplicação, chama o caso de uso apropriado da aplicação e mapeia o resultado para a entidade de resposta desejada.
 
+**Como é um fluxo completo?** Os dois diagramas a seguir explicam a implementação de cada fluxo típico.
+
+Fluxo Típico de Comando:
+
+![1_8Dl73lo_Z1KYL-vnuTmtUw](https://github.com/user-attachments/assets/105e10ee-f3ab-45fe-a6de-5ca671d335c2)
+
+Fluxo típico de consulta:
+
+![1_qq4ANBMm4wnhJ4s1CSThbg](https://github.com/user-attachments/assets/e356aba1-7408-4b5a-86d3-af8bc880a1aa)
+
+Novamente, não existe uma arquitetura que sirva para todos. Toda arquitetura ou padrão de desenvolvimento de software tem prós e contras; Baseie sua decisão no projeto, no escopo e na equipe.
+
 **Padrões de Arquitetura de Integração Empresarial - Redações sobre arquitetura**
 
 <img width="720" height="484" alt="image" src="https://github.com/user-attachments/assets/0943cefd-3069-43a6-8c6f-e9609ca22a56" />
