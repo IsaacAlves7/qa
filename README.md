@@ -2257,7 +2257,7 @@ GET /accounts/12345 HTTP/1.1
 Host: bank.example.com
 ```
 
-```json
+```http
 HTTP/1.1 200 OK
 
 {
