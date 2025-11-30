@@ -1848,7 +1848,7 @@ O Clean Architecture (CA) é a diretriz de arquitetura de sistemas proposta por 
 
 <table>
  <tr>
-  <td>Hexagonal Architecture (Ports & Adapters) + DDD</td>
+  <td>Hexagonal Architecture + DDD</td>
   <td>Hexagonal Architecture + Clean Architecture + DDD</td>
  </tr>
  <tr>
