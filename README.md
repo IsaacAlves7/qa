@@ -2415,11 +2415,11 @@ Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-ref
 
 6. Daqui em diante, surgem os **testes de integração** (6), que validam se as diferentes partes do sistema trabalham bem juntas (por exemplo, se um serviço conversa com outro via API, se a camada de aplicação integra corretamente com o banco).
 
+<img src="https://github.com/user-attachments/assets/f148fe20-8d58-4655-aa11-0a4cda7ec9c3" align="right" height="177">
+
 6.7 Os testes funcionais e de integração se retroalimentam (6 e 7), porque quando você conecta módulos, é comum ajustar tanto o comportamento funcional quanto a integração.
 
 8. Por fim, quando tudo isso passa, você retorna para os **testes de aceitação** (8). Se eles agora passam, significa que o sistema como um todo está atendendo ao que foi pedido. Se ainda falham, o ciclo recomeça até que os critérios de aceitação estejam cumpridos.
-
-<img src="https://github.com/user-attachments/assets/f148fe20-8d58-4655-aa11-0a4cda7ec9c3" align="right" height="177">
 
 Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–código–refatora), mas pode ser entendido como um **encadeamento de ciclos em diferentes camadas**: começa com aceitação (visão do usuário), vai para funcional (visão do sistema), integrações (módulos se falando) e finalmente unidades (blocos de código). É um processo iterativo que desce do mais abstrato até o mais concreto e depois sobe de volta, validando em todos os níveis.
 
