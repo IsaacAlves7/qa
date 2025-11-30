@@ -2216,12 +2216,12 @@ https://MyDomainName.my.salesforce.com/services/oauth2/authorize?response_type=t
 
 Aqui está um exemplo de uma requisição e uma resposta RESTful sem estado com informações e opções válidas de URI para ação de próximo estado. Ela mostra a essência das informações de 'representação' e 'transferência de estado' que se tornam as escolhas de informação e ações da interface ao longo da camada de aplicação. Este é o projeto Hypermedia as the Engine of Application State (HATEOAS) do padrão da arquitetura REST.
 
-```require
+```http
 GET /accounts/12345 HTTP/1.1
 Host: bank.example.com
 ```
 
-```response
+```md
 HTTP/1.1 200 OK
 
 {
@@ -2240,6 +2240,52 @@ HTTP/1.1 200 OK
     }
 }
 ```
+
+Veja esta imagem para uma ilustração dessa arquitetura geral típica de integração web.
+
+![1_ymzSEsfc5PXuaIOvSljiTg](https://github.com/user-attachments/assets/7209d6df-4f35-4962-aaa1-58eacf107bf4)
+
+**EDA - Orientado por Eventos**: O aspecto de integração da arquitetura é essencialmente uma variação do padrão de integração public-subscribe que suporta o uso assíncrono do modelo REST, essencial na maioria das grandes soluções digitais. Os principais aspectos do EDA são: diferenciar eventos de notificações e tópicos, enviar em vez de sondar/puxar mudanças, catalogar eventos, classificar interações sincronizadas/assíncronas, refatorar aplicativos para publicar/assinar, linguagem Ubiquitous Orientada por Domínio para semântica de tópicos, brokers de eventos, malhas de eventos e preferência por coreografia em vez de orquestração. A ilustração abaixo mostra o conceito em um nível geral.
+
+![1_DxXRWDHEAFpL2ibS7cWWRg](https://github.com/user-attachments/assets/08f7336e-6b21-49b8-9cda-14d8005b0810)
+
+**Diretrizes**: A arquitetura de aplicações digitais/web e da informação mais adequada deve ser decidida para os componentes e repositórios de dados com estado e sem estado. Depois, as decisões sobre a arquitetura de integração virão naturalmente. Interações RESTful seriam a norma, usando cargas úteis JSON, XML e HTML.
+
+**Arquitetura do Sistema DDD REST — uma visão geral**: A combinação das arquiteturas DDD e REST resulta no interessante modelo prático de aplicação e arquitetura de integração ilustrado abaixo. Estude-a com atenção e considere a web digital, arquitetura móvel e frameworks de desenvolvimento de software existentes.
+
+![1_8IYc-rMI40qYL6BEy_93xQ](https://github.com/user-attachments/assets/09292308-0e26-4551-a122-de44516dcc90)
+
+**Ponto de Vista 6: Padrões de Segurança de Integração**: De modo geral, há três áreas que uma empresa precisa garantir:
+
+- Informações empresariais nas lojas
+- Informações do usuário nas lojas
+- Qualquer tipo de informação em voo
+
+A terceira é de particular preocupação para o arquiteto da integração. Quando pessoas ou sistemas se comunicam, precisamos assegurar cinco coisas a eles:
+
+1. Eles não podem ser ouvidos ou espionados (privacidade, fornecida por redes privadas e criptografia)
+2. Eles estão conversando com uma pessoa ou sistema que conhecem (autenticação, fornecida por 1/2/3 fatores)
+3. A pessoa ou sistema tem direito à informação ou ação solicitada (autorização, fornecida pelos papéis)
+4. Se algo der errado, isso pode ser investigado (não repudiação e outros detalhes fornecidos pela contabilidade)
+5. Ataques são prevenidos ou resistidos durante a comunicação (proteção contra vários tipos de ameaças)
+
+Os mecanismos de integração devem atender às necessidades de segurança acima, que podemos abreviar como PAAAP.
+
+Essas necessidades aparecem nos canais de interação humano-sistema e sistema para sistema, conforme abaixo.
+
+1. **De humano para máquina** — teclado, mouse, caneta stylus, toque, fala e biometria.
+2. **Máquina a máquina** — As sete camadas de rede OSI, de cima a baixo: Aplicação, Apresentação, Sessão, Transporte, Rede, Enlace de Dados e Física.
+
+Sendo um ensaio de arquitetura, não discutiremos os mecanismos e tecnologias do PAAAP. O leitor interessado encontrará facilmente a informação em outro lugar. A tabela abaixo resume os padrões típicos de soluções de segurança para entregar PAAAP em cada camada.
+
+(Por favor, note que as camadas OSI e as soluções de segurança não são arquitetônicas nem imutáveis. Use a tabela apenas para pensamento de aspectos e princípios.)
+
+![1_V9i3Chyj_75savQGGh4tzA](https://github.com/user-attachments/assets/ddc32509-eab0-4a73-8e81-1b200884366f)
+
+**Diretrizes**: Considere os padrões de segurança da organização, os frameworks de segurança da indústria como o SABSA, as arquiteturas de referência de segurança (por exemplo, AWS, Cisco) e a necessidade particular de cada interface no escopo da solução para decidir a arquitetura, o design e a tecnologia de segurança.
+
+> [!Note]
+> Esses padrões e pontos de vista da arquitetura de integração resistirão ao teste do tempo. Gosto de estudar e descrever ideias estáveis pelo seu valor prático. Veja as formas fundamentais pelas quais as coisas interagem; Tudo flui a partir daí. Vá em frente e arquitete, arquiteto.
 
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
