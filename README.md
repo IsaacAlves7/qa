@@ -2216,6 +2216,31 @@ https://MyDomainName.my.salesforce.com/services/oauth2/authorize?response_type=t
 
 Aqui está um exemplo de uma requisição e uma resposta RESTful sem estado com informações e opções válidas de URI para ação de próximo estado. Ela mostra a essência das informações de 'representação' e 'transferência de estado' que se tornam as escolhas de informação e ações da interface ao longo da camada de aplicação. Este é o projeto Hypermedia as the Engine of Application State (HATEOAS) do padrão da arquitetura REST.
 
+```require
+GET /accounts/12345 HTTP/1.1
+Host: bank.example.com
+```
+
+```response
+HTTP/1.1 200 OK
+
+{
+    "account": {
+        "account_number": 12345,
+        "balance": {
+            "currency": "usd",
+            "value": 100.00
+        },
+        "links": {
+            "deposits": "/accounts/12345/deposits",
+            "withdrawals": "/accounts/12345/withdrawals",
+            "transfers": "/accounts/12345/transfers",
+            "close-requests": "/accounts/12345/close-requests"
+        }
+    }
+}
+```
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
