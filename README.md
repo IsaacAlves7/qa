@@ -1869,6 +1869,8 @@ Comecei com minha equipe a adotar o Domain-Driven Design (DDD) em nosso trabalho
 > [!Note]
 > Não existe tal arquitetura que sirva para todos. Toda arquitetura ou padrão de desenvolvimento de software tem prós e contras; Baseie sua decisão no projeto, no escopo e na equipe. Vamos descrever o caminho que tomamos.
 
+<img height="777" align="right" src="https://github.com/user-attachments/assets/e5af5f61-d5e1-4d2f-af36-cab98828ac36" />
+
 Nos concentraremos em como estruturamos o código de acordo com DDD e Clean Architecture, para que o código também fale a linguagem onipresente do domínio com mais facilidade:
 
 Primeiro, dividimos o sistema em partes independentes menores em torno dos subdomínios de negócios por meio de algumas iterações (ferramentas <a href="https://vaadin.com/blog/ddd-part-1-strategic-domain-driven-design">estratégicas de DDD</a>, como tempestade de eventos, narrativa e muito mais). Idealmente, essas partes devem ser implantáveis de forma independente (microsserviços), mas nem sempre é esse o caso. Muitas vezes, podemos ter um código legado que não podemos alterar facilmente, então temos que mantê-lo por um tempo. Nesses casos, temos esses subdomínios em um único projeto (monólito), com cada subdomínio em uma pasta ou pacote separado.
