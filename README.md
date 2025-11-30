@@ -2171,6 +2171,51 @@ O arquiteto de integração deve considerar os seguintes aspectos para otimizar 
 
 A imagem abaixo ilustra o ponto de vista horizontal.
 
+![1_NLhrGlQLUu8hiyAJmxRbdw](https://github.com/user-attachments/assets/3ec0a018-7e6f-4998-8294-45cc32e937ba)
+
+**Diretrizes**: O arquiteto de integração deve considerar cuidadosamente como tornar a experiência do usuário intuitiva e fluida por meio dos padrões de solução nos pontos de vista #2 e #5, além da gestão de capacidade e desempenho.
+
+**Ponto de Vista 5: Padrões de integração sem estado para aplicações web e digitais**: No mundo da web e dos serviços digitais, ser 'sem estado' é apresentado como uma solução mágica para componentes não persistirem dados ou não se importarem com o passado e o futuro, e magicamente alcançarem alto desempenho, escalabilidade e desenvolvimento ágil. Mas nenhum sistema ou tarefa empresarial útil pode ser sem estado. Seria informe ou preso no tempo e não teria muita utilidade. (Para mais informações, veja este excelente artigo.)
+
+Mas a ideia por trás do equívoco de 'apatridia' é útil quando a desambiguamos. Ela permite que arquiteturas entreguem rapidamente serviços digitais de negócios ao montar serviços web. E aproveita a distribuição cada vez mais igualitária do poder de processamento entre servidores e dispositivos do usuário.
+
+Um modelo proeminente para arquiteturas sem estado é o REST — Transferência de Estado Representacional. Funciona bem com o modelo de arquitetura em camadas do DDD. (Por favor, veja o livro de Vernon 'Implementing DDD' para mais informações sobre isso.)
+
+Vamos analisar a justificativa por trás da apatridia em termos das três decisões arquitetônicas típicas (veja →As 3 Decisões Arquitetônicas Mais Importantes)
+
+1. **Decisão sobre a Arquitetura de Colocação de Funções**:
+**Problema**: Para o mundo digital, web e móvel, como podemos construir serviços backend e parceiros como enxames de unidades de servidores idênticas que crescem suavemente (de algumas para pontuações) com o número de clientes (milhares a centenas de milhões)?
+**Pensamento Arquitetônico**: Se os sistemas de serviço mantêm o estado em tempo real do usuário e da tarefa, a interface deve permanecer no mesmo backend até que a tarefa seja concluída. Isso desperdiça recursos em todo o ecossistema do ecospero, limitando o número de clientes que podem ser atendidos e escalando rapidamente com o número de clientes ativos.
+
+E se transferirmos essa responsabilidade em tempo real sobre o conhecimento do usuário e do estado da tarefa (por exemplo, logado, check-out, etc.) para as camadas de UI e Aplicação (terminologia DDD)? Assim, podemos aliviar a camada de domínio nos sistemas primários e parceiros da necessidade de um estado. Deixe que eles gerenciem apenas o estado de negócio não em tempo real e offline (por exemplo, papel do usuário, status do inventário, etc.) e persistam na camada de infraestrutura.
+
+Quando diferenciamos o estado do usuário/tarefa do estado de negócio e sua natureza em tempo real versus não em tempo real dessa forma, toda a vantagem da apatridia se encaixa.
+
+**Decisão**: Faça da instância cliente da interface o componente fixo ou 'fixo' do ecossistema para manter o contexto da sessão e do estado. Aliviar os componentes do servidor e as aplicações/serviços do ecossistema de suporte da necessidade de persistir ou ficarem pegajosos por meio de conhecer ou ter um estado em tempo real.
+
+2. **Decisão sobre a Arquitetura do Repositório de Informação**: Existem três tipos de informação envolvidos.
+
+1. **Informações de estado em tempo real** — Estado do usuário e da tarefa que muda rapidamente conforme o caso de uso avança, por exemplo, logado, finalizado no pagamento, desconectado, etc. Essa é uma informação temporária e transitória. Mantenha na camada de aplicação cliente (termo DDD) perto da memória.
+2. **Informações de contexto em tempo real** — Informações ambientais e de usuário que mudam menos rapidamente conforme o caso de uso, por exemplo, tipo de dispositivo, sistema operacional, geolocalização, usuário anônimo ou identificado, companhia aérea selecionada, etc. Mantenha isso na camada de aplicação cliente (termo DDD) em lojas locais semi-permanentes como cookies, etc.
+3. **Informações não em tempo real e de longo prazo do Estado dos Negócios** — Informações empresariais que precisam ser mantidas por minutos a anos, por exemplo, usuários, contas, perfis, pedidos, estoque, pagamentos, histórico de serviço, mídia, etc. Mantenha em caches do lado do servidor, RDBMS, arquivos, Hadoop e outros repositórios de armazenamento apropriados.
+Portanto, vemos que a necessidade de informação e seu armazenamento permanece em arquiteturas focadas sem estado. Clientes e sistemas de cache gravam dados temporários na memória ou em armazenamento local em disco.
+
+E a maioria dos serviços backend e parceiros armazena dados de longo prazo em bancos de dados centrais. Esses bancos de dados centrais ainda podem ser um ponto de disponibilidade e problemas de desempenho. No entanto, o compromisso é aceitável pela sua relação custo-benefício, já que os dados de longo prazo são volumosos e não podem ser facilmente replicados como os componentes de lógica de negócios da camada de domínio.
+
+3. **Método de integração Decisão de arquitetura**
+
+**Problema**: (1) Como os clientes com estado devem interagir com backends sem estado e sistemas parceiros? (2) Como os sistemas backend sem estado devem interagir com outros sistemas sem estado?
+
+**Interação com estado**: Essas interações ocorrem entre a camada de aplicação cliente e os componentes sem estado do backend. Informações indicadoras de estado exigidas pelo backend da camada de domínio sem estado ou componentes parceiros são incluídas na chamada de API com estado pelo cliente. Por exemplo, na chamada abaixo solicitando um token de autorização, um token de autenticação válido é necessário e incluído na forma do valor `client_id`.
+
+```url
+https://MyDomainName.my.salesforce.com/services/oauth2/authorize?response_type=token&client_id=3MVG9lKcPoNINVBKV6EgVJiF.snSDwh6_2wSS7BrOhHGEJkC_&redirect_uri=http%3A%2F%2F2www.example.org%2Fqa%2Fsecurity%2Foauth%2Fuseragent_flow_callback.jsp&scope=api%20id%20web
+```
+
+**Interação sem estado**: Na camada de domínio DDD, os componentes interagem sem estado com componentes de outros domínios e sistemas externos. Com base em solicitações da camada de aplicação cliente, as informações são adquiridas pelos componentes do cliente a partir de componentes do servidor na forma de recursos HyperMedia que compreendem informações e hiperlinks para escolhas de ações adicionais. As informações e escolhas são então retornadas ao cliente (aplicações DDD e camadas de UI) para apresentação e próximos passos.
+
+Aqui está um exemplo de uma requisição e uma resposta RESTful sem estado com informações e opções válidas de URI para ação de próximo estado. Ela mostra a essência das informações de 'representação' e 'transferência de estado' que se tornam as escolhas de informação e ações da interface ao longo da camada de aplicação. Este é o projeto Hypermedia as the Engine of Application State (HATEOAS) do padrão da arquitetura REST.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
