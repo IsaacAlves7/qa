@@ -920,13 +920,17 @@ Pouca gente conhece bem essa distinção, embora ela seja bem importante quando 
 
 <img src="https://github.com/user-attachments/assets/914b7a9f-379f-41ba-a549-3c47fdf991f5" align="right" height="177">
 
-Um ***solitary test*** é um teste *totalmente isolado*. Ele testa *apenas uma unidade*, geralmente uma classe, função ou método e substitui todas as suas dependências externas por *test doubles* (como *mocks*, *stubs* ou *fakes*). Assim, o teste verifica exclusivamente o comportamento interno da unidade, sem interações reais com banco de dados, rede, arquivos, APIs ou outros serviços. Esse tipo de teste é o ideal quando se quer garantir **pureza e velocidade** nos testes unitários, pois eles são rápidos, previsíveis e não dependem de contexto externo. Por exemplo: ao testar um `OrderService`, você substitui o `PaymentGateway` por um *mock* que apenas simula o comportamento esperado, sem fazer chamadas reais.
+Um ***solitary test*** é um teste *totalmente isolado*. Ele testa *apenas uma unidade*, geralmente uma classe, função ou método e substitui todas as suas dependências externas por *test doubles* (como *mocks*, *stubs* ou *fakes*). Assim, o teste verifica exclusivamente o comportamento interno da unidade, sem interações reais com banco de dados, rede, arquivos, APIs ou outros serviços. Esse tipo de teste é o ideal quando se quer garantir **pureza e velocidade** nos testes unitários, pois eles são rápidos, previsíveis e não dependem de contexto externo. 
+
+Por exemplo: ao testar um `OrderService`, você substitui o `PaymentGateway` por um *mock* que apenas simula o comportamento esperado, sem fazer chamadas reais.
 
 <img src="https://github.com/user-attachments/assets/720fea8f-7f9c-440f-a159-1edf9dc1e201" align="right" height="177">
 
-Já um ***sociable test*** é o oposto: ele testa uma unidade **em conjunto com suas dependências reais** — ou ao menos com algumas delas. Em vez de isolar completamente a unidade, o teste permite que ela “converse” com outras classes do mesmo módulo, desde que ainda esteja dentro do escopo de uma “unidade lógica”. Por exemplo, um teste que exercita `OrderService` chamando `PaymentGateway` e `EmailNotifier` reais (ou parcialmente reais) é sociável, porque o comportamento observado depende da interação entre várias unidades.
+Já um ***sociable test*** é o oposto: ele testa uma unidade **em conjunto com suas dependências reais** — ou ao menos com algumas delas. Em vez de isolar completamente a unidade, o teste permite que ela “converse” com outras classes do mesmo módulo, desde que ainda esteja dentro do escopo de uma “unidade lógica”. 
 
-A diferença central está na **abordagem de isolamento**. O teste solitário foca em verificar se a unidade funciona corretamente *sozinha*; o sociável foca em verificar se ela funciona *em conjunto* com outras partes confiáveis do sistema. Ambos são considerados **testes unitários**, desde que mantenham o escopo pequeno e rápido, mas o solitário é mais puro e previsível, enquanto o sociável tende a ser mais próximo da realidade, embora menos determinístico.
+Por exemplo, um teste que exercita `OrderService` chamando `PaymentGateway` e `EmailNotifier` reais (ou parcialmente reais) é sociável, porque o comportamento observado depende da interação entre várias unidades.
+
+A diferença central está na *abordagem de isolamento*. O teste solitário foca em verificar se a unidade funciona corretamente *sozinha*; o sociável foca em verificar se ela funciona *em conjunto* com outras partes confiáveis do sistema. Ambos são considerados *testes unitários*, desde que mantenham o escopo pequeno e rápido, mas o solitário é mais puro e previsível, enquanto o sociável tende a ser mais próximo da realidade, embora menos determinístico.
 
 Na prática, bons conjuntos de testes costumam mesclar os dois: **solitary tests** para garantir o comportamento interno de cada componente de forma isolada e rápida, e **sociable tests** para verificar a integração leve entre partes da aplicação que, juntas, compõem uma unidade funcional.
 
