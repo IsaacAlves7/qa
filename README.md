@@ -2152,6 +2152,25 @@ O teste de tornasol mostrado abaixo nos ajuda a identificar a necessidade de apo
 
 A maior parte da integração horizontal da camada de interface é realizada pela integração horizontal da camada de aplicação (DDD) conforme abaixo, incluindo projetos como portais com uma coleção de portlets de diferentes sistemas.
 
+**Integração horizontal na camada de aplicação**: Eric Evans define a camada de aplicação para DDD como 'Define os trabalhos que o software deve realizar e objetos de domínio expressivos para resolver problemas. As tarefas pelas quais essa camada é responsável são significativas para o negócio ou necessárias para a interação com as camadas de aplicação de outros sistemas. Essa camada é mantida fina. Ele não contém regras de negócio ou conhecimento, mas apenas coordena tarefas e delega trabalho para colaborações de objetos de domínio na camada seguinte. Não possui um estado que reflita a situação do negócio, mas pode ter um estado que reflita o progresso de uma tarefa para o usuário ou para o programa.'
+
+Por sua natureza, a camada de aplicação pode se integrar horizontalmente a sistemas externos, desde que haja pouca ou nenhuma necessidade de preparar os dados para a camada de apresentação ou de persistir dados conforme as regras de negócio no backend. Esse tipo de integração horizontal da camada de aplicação (por exemplo, Javascript rodando no navegador) está aumentando, impulsionado pela tendência de 'montar' aplicações combinando serviços prontos a usar, como catálogos de produtos e serviços, eKYC, verificações de crédito, APIs de pagamento, etc. Um exemplo de padrão para isso é o CORS - Cross-Origin Resource Sharing.
+
+**Integração horizontal na camada de domínio**: Esse ainda é o padrão de integração horizontal mais comum. Objetos da camada de domínio podem ser criados especificamente para chamar principalmente sistemas externos, preparar a resposta para as camadas de aplicação e UI, e atualizar o estado do negócio no armazenamento persistente na camada de infraestrutura. Objetos de negócios focados em domínio também podem precisar fazer chamadas externas como parte de seu processamento.
+
+**(Infraestrutura) Integração horizontal da camada de persistência**: A integração horizontal de repositórios de dados persistentes na camada de infraestrutura é necessária e inevitável. Por favor, veja este artigo meu para entender as motivações para integrações de dados → Padrões e Progressão do Repositório de Dados Corporativos.
+
+O arquiteto de integração deve considerar os seguintes aspectos para otimizar o design da integração e selecionar os métodos, protocolos e tecnologias apropriados.
+
+- Os dados podem se mover em forma bruta, modificada ou enriquecida entre sistemas
+- Pode ser um subconjunto (geralmente) ou todos os dados originais
+- Modificações ou transformações podem ser feitas na fonte, no caminho ou no sistema receptor
+- Ele pode se mover em tempo real, quase em tempo real ou com atraso (também podemos falar disso como online vs offline; ou tempo real vs lote)
+- Pode ser o dado unitário ou agregado (estes últimos por tamanho ou tempo)
+- Requisitos de criptografia, compressão e segurança
+
+A imagem abaixo ilustra o ponto de vista horizontal.
+
 ## [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
