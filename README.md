@@ -443,7 +443,9 @@ Tal procedimento, gera muito mais eficácia e agilidade na etapa de testes, perm
 
 > Quando o profissional notar que está gastando muito tempo com tarefas repetitivas e quando o software está muito grande, pode ser a hora de automatizar. Mas, é necessário também questionar a viabilidade dessa ação, sendo essencial analisar se com a automação a equipe irá obter ganho de tempo e se conseguirão reduzir custos e manter a qualidade.
 
-Testes automatizados são uma das práticas mais fundamentais no desenvolvimento de software moderno, pois garantem confiabilidade, reduzem bugs em produção, facilitam refatorações e melhoram a documentação viva do sistema. Para construir testes automatizados realmente bons, é preciso compreender não só as ferramentas, mas também o processo como um todo — desde a fase de planejamento até a execução contínua. Tudo começa pela compreensão dos **níveis de teste**: 
+Testes automatizados são uma das práticas mais fundamentais no desenvolvimento de software moderno, pois garantem confiabilidade, reduzem bugs em produção, facilitam refatorações e melhoram a documentação viva do sistema. 
+
+Para construir testes automatizados realmente bons, é preciso compreender não só as ferramentas, mas também o processo como um todo, desde a fase de planejamento até a execução contínua. Tudo começa pela compreensão dos **níveis de teste**: 
 
 <img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="277" align="right"> 
 
