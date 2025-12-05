@@ -2519,7 +2519,7 @@ Cenário: Buscar produto com sucesso
 
    - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
-![test-tube-3d-icon-png-download-9707694](https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c)
+<img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
 
 
 ## [QA] ATDD - Acceptance Test-Driven Development
