@@ -1138,9 +1138,9 @@ Assim, eles caminham juntos, se alimentam um do outro, mas ocupam categorias dif
 
 O que é importante pensarmos é no tempo de execução de testes que teremos. Os testes de unidade existem desde o início do projeto, qualquer commit deveria ser acompanhada por um teste.
 
-É comum que o desenvolvedor que queria concluir um projeto rapidamente deixe de fazer testes para otimizar o tempo. Como resolver esse impasse? Antes do commit, devemos executar todos os testes, embora saibamos que isso é em um plano ideal, e muitas vezes desnecessário dependendo da modificação que foi realizada. Até mesmo executar todos os testes unitários pode ser complicado.
-
 <img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
+
+É comum que o desenvolvedor que queria concluir um projeto rapidamente deixe de fazer testes para otimizar o tempo. Como resolver esse impasse? Antes do commit, devemos executar todos os testes, embora saibamos que isso é em um plano ideal, e muitas vezes desnecessário dependendo da modificação que foi realizada. Até mesmo executar todos os testes unitários pode ser complicado.
 
 Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
 
