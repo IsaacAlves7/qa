@@ -79,6 +79,9 @@ O que é mais natural é utilizar um repositório para cada projeto, de um taman
 
 No entanto, nos últimos anos, surgiu uma nova forma de organização dos nossos projetos dentro de repositórios. Empresas grandes de tecnologia como Google e Facebook não utilizam o esquema Multi-repo, porque são empresas que trabalham em inúmeros projetos de maneira concomitante. Empresas que atuam com outra dimensão de projetos utilizam o **Mono-repo**, ou seja, um único e gigantesco repositório que acumula todos os projetos.
 
+> [!Note]
+> Mono-repo e multi-repo são conceitos centrais e amplamente adotados no ecossistema de micro-frontends, justamente porque a forma como o código é organizado tem impacto direto na autonomia das equipes, no deploy independente e na escalabilidade do projeto — pilares dos micro-frontends. E microserviços também adotam amplamente os modelos de mono-repo e multi-repo, e nesse contexto a escolha é tão ou até mais estratégica do que em micro-frontends, porque afeta diretamente autonomia operacional, versionamento, esteira de deploy, governança de APIs e isolamento entre times. Em microserviços, a estrutura do repositório se torna praticamente parte do design arquitetural, e as empresas costumam escolher um modelo de acordo com o nível de independência desejado, maturidade do time e complexidade do domínio.
+
 A desvantagem do segundo modelo é o repositório precisará ser realmente grande, e o *build* pode ser lento, talvez nem o Git seja mais a ferramenta adequada para fazer o controle de versões para esta situação. Contudo, como temos apenas um grande repositório temos uma administração relativamente mais simples, então a verificação de padrões é facilitada. As refatorações são globais, afinal estão todos dentro da mesma base.
 
 Vamos trabalhar com o Multi-repo, afinal é o mais comum no dia a dia da maioria dos desenvolvedores.
