@@ -12,7 +12,7 @@
 # QA/QC - Quality Assurance and Quality Control 👨🏾‍🔬
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white">
 
-<a href=""><img src="https://em-content.zobj.net/source/microsoft-teams/363/man-scientist-medium-dark-skin-tone_1f468-1f3fe-200d-1f52c.png" align="right" height="77"></a>
+<a href="https://medium.com/the-tech-collective/a-day-in-my-life-as-a-qa-manager-3832eaf39965"><img src="https://em-content.zobj.net/source/microsoft-teams/363/man-scientist-medium-dark-skin-tone_1f468-1f3fe-200d-1f52c.png" align="right" height="77"></a>
 
 Imagine-se como um entusiasta da tecnologia, ansioso por entender como um software pode ser eficaz e confiável. Como garantir que um software atenda às expectativas dos usuários e funcione sem falhas? Esse dilema cria um conflito cognitivo que nos impulsiona a mergulhar mais fundo.
 
