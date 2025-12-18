@@ -485,254 +485,6 @@ Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipel
 
 5. Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
-## [QA] Functional Testing
-<img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
-
-Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída. É a técnica mais utilizada no dia a dia. Responsável: Analista de Qualidade
-
-Functional Testing e Black-box Testing não são a mesma coisa, embora estejam intimamente relacionados. A melhor forma de entender é pensar que um deles é um tipo de teste, enquanto o outro é uma abordagem que pode ser aplicada a vários tipos de testes. Explicando em um textão fluido.
-
-Quando você fala de Functional Testing, você está se referindo à prática de testar o que o software faz, ou seja, suas funcionalidades, requisitos, comportamentos esperados, regras de negócio, entradas e saídas. Nesse tipo de teste, o objetivo não é saber como o código foi escrito, mas sim verificar se o sistema cumpre aquilo que promete. Functional Testing é, portanto, uma categoria de testes, englobando vários métodos como testes de sistema, testes de integração funcional, testes de aceitação, testes E2E e até cenários automatizados que validam fluxos completos. Ele sempre olha o software de fora para dentro, garantindo que cada ação realizada devolva o resultado esperado.
-
-Black-box Testing, por outro lado, é um **método**, uma forma de enxergar o sistema. É uma abordagem onde você não olha o código interno, não vê classes, funções, bancos de dados, nem algoritmos. Você apenas observa entradas e saídas, como uma caixa preta. Vários tipos de teste podem ser feitos como caixa preta: testes funcionais, testes não funcionais, testes de usabilidade, testes de performance em nível de comportamento e até testes exploratórios. A caixa preta significa ignorar o interior e se concentrar apenas na interação externa. Portanto, Black-box é um estilo de avaliação que pode ser aplicado a várias categorias de teste, e não um tipo de teste em si.
-
-O ponto de união entre os dois é que, na prática de mercado, **quase todo teste funcional é executado como Black-box**, porque testar funcionalidades sem olhar o código faz parte da natureza desses testes. Contudo, isso não significa que eles sejam sinônimos. Todo Functional Testing utiliza a abordagem Black-box, mas nem todo Black-box Testing é necessariamente funcional. Por exemplo, um teste de performance que mede tempo de resposta sem olhar o código é caixa preta, mas não é funcional. Da mesma forma, um teste de usabilidade, um teste de segurança black-box ou um teste de carga são todos caixa preta sem serem testes funcionais. Pense em Functional Testing como o “o que testar” e Black-box como o “como testar”.
-
-Assim, eles caminham juntos, se alimentam um do outro, mas ocupam categorias diferentes dentro da engenharia de software.
-
-O que é importante pensarmos é no tempo de execução de testes que teremos. Os testes de unidade existem desde o início do projeto, qualquer commit deveria ser acompanhada por um teste.
-
-<img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
-
-É comum que o desenvolvedor que queria concluir um projeto rapidamente deixe de fazer testes para otimizar o tempo. Como resolver esse impasse? Antes do commit, devemos executar todos os testes, embora saibamos que isso é em um plano ideal, e muitas vezes desnecessário dependendo da modificação que foi realizada. Até mesmo executar todos os testes unitários pode ser complicado.
-
-Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
-
-Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
-
-## [QA] White-box testing
-<img src="https://github.com/user-attachments/assets/990d67a2-0bb0-4066-900f-ff760507fe39" align="right" height="77">
-
-O **Teste da Caixa Branca**, também conhecido como Teste de Caixa de Vidro ou Estrutural, é uma abordagem de teste de software que examina as entranhas do sistema, sua estrutura interna, sua lógica de programação e seu código-fonte. Diferente do Teste da Caixa Preta, onde o testador enxerga o software apenas como um usuário final, sem conhecimento da implementação interna, o teste de caixa branca exige que o profissional tenha acesso e compreensão profunda do código, dos algoritmos, dos fluxos de dados e da arquitetura do sistema. 
-
-O seu nome é uma analogia direta: se na caixa preta você testa sem ver o que há dentro, na caixa branca a caixa é transparente, e você analisa minuciosamente os mecanismos internos para garantir que cada engrenagem funcione corretamente.
-
-Testa tendo conhecimento do código fonte, os resultados esperados de acordo com os requisitos acordados, padrões adotados. Deve-se passar por todos os fluxos esperados. Responsável: Desenvolvedor
-
-O objetivo central deste teste é validar a qualidade interna do software. Ele busca encontrar erros em estruturas de controle, em loops infinitos, em condições de borda não tratadas, em caminhos lógicos nunca executados, em vazamentos de memória e em más práticas de codificação. Para isso, o testador projeta casos de teste baseados diretamente no código-fonte, garantindo que todos os caminhos possíveis dentro da aplicação sejam exercitados. As métricas de cobertura são fundamentais nesse processo, pois elas quantificam o quanto do código foi testado. A cobertura de instruções mede a porcentagem de linhas de código executadas, a cobertura de decisão verifica se todos os resultados possíveis de uma condição booleana foram testados, a cobertura de caminhos é mais complexa e visa exercitar todos os caminhos lógicos independentes dentro de um módulo, e a cobertura de condição vai além, avaliando todas as combinações possíveis de subcondições dentro de uma decisão.
-
-A execução do teste de caixa branca é geralmente realizada em fases iniciais do ciclo de desenvolvimento, frequentemente integrada à fase de codificação. Os próprios desenvolvedores costumam realizá-lo, ou engenheiros de qualidade de software com fortes habilidades de programação, utilizando ferramentas especializadas para análise estática e dinâmica. As ferramentas de análise estática examinam o código sem executá-lo, procurando por violações de padrões de codificação, possíveis bugs e vulnerabilidades de segurança. Já as ferramentas de análise dinâmica exigem que o código seja executado, permitindo a medição da cobertura de testes e a identificação de problemas de desempenho e vazamento de recursos em tempo de execução.
-
-As vantagens desta abordagem são profundas. Ela permite a identificação precoce de defeitos, o que reduz significativamente o custo de sua correção, e otimiza o código, eliminando trechos mortos ou redundantes. No entanto, os desafios são igualmente significativos. O teste é complexo e requer um testador altamente qualificado, que seja tanto um engenheiro de qualidade quanto um programador competente. Além disso, testar exaustivamente todos os caminhos de um software minimamente complexo pode ser uma tarefa praticamente impossível devido à explosão combinatória de possibilidades, tornando-o uma atividade que busca a máxima cobertura dentro de limites de tempo e orçamento realistas. Em essência, o Teste da Caixa Branca é um exercício de engenharia de precisão, focado na saúde interna do software, assegurando que a fundação sobre a qual a aplicação é construída seja sólida, eficiente e segura.
-
-## [QA] Regression testing
-<img src="https://github.com/user-attachments/assets/056ece14-8797-4926-b30e-e4aeb6490ca4" align="right" height="77">
-
-O **teste de regressão** é uma técnica do teste de software que consiste na aplicação de versões mais recentes do software, para garantir que não surgiram novos defeitos em componentes já analisados. Regression testing, ou teste de regressão, é um tipo de teste de software realizado para garantir que mudanças recentes no código, como correções de bugs, novas funcionalidades ou outras modificações, não introduzam novos defeitos ou causem falhas em partes já existentes do software. Este processo é essencial para manter a integridade do software após qualquer tipo de alteração. 
-
-Em resumo, regression testing é uma prática crucial no desenvolvimento de software que visa assegurar que novas mudanças não comprometam funcionalidades existentes, contribuindo para a estabilidade e qualidade contínua do sistema.
-
-Objetivos do Regression Testing:
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/8d0cb7bf-a902-4268-8633-73d0e06a2adc" align="right" height="177">
-
-1. **Verificar Estabilidade**: Assegurar que as novas mudanças não impactaram negativamente o comportamento existente do software.
-
-2. **Identificar Regressões**: Detectar rapidamente qualquer falha que possa ter sido introduzida devido a mudanças recentes.
-
-3. **Manter Qualidade**: Garantir que o software continua funcionando conforme esperado, mantendo a qualidade e a confiabilidade.
-
-Quando Realizar Regression Testing:
-
-- **Após Correções de Bugs**: Sempre que um bug é corrigido, é importante garantir que a correção não tenha introduzido novos problemas.
-
-- **Após Adição de Novas Funcionalidades**: Novas funcionalidades podem afetar o funcionamento existente, por isso testes de regressão são necessários.
-
-- **Durante Refatoração de Código**: A refatoração melhora o design interno do código, mas pode inadvertidamente introduzir erros.
-
-- **Em Atualizações de Dependências**: Mudanças em bibliotecas ou frameworks subjacentes podem afetar o comportamento do software.
-
-Métodos de Regression Testing:
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/6e1292a6-9162-44e2-89c6-30d003f0867f" />
-
-1. **Reexecução Completa**: Executar todos os testes existentes para garantir que o software inteiro funcione corretamente. Isso é muitas vezes impraticável para grandes sistemas devido ao tempo e recursos necessários.
-
-2. **Seleção de Casos de Teste**: Escolher um subconjunto de testes que são mais relevantes para as áreas do código que foram alteradas.
-
-3. **Teste de Prioridade**: Focar nos testes mais críticos e mais propensos a serem afetados pelas mudanças.
-
-4. **Automação de Testes**: Usar ferramentas de automação para executar testes de regressão de forma eficiente e repetível.
-
-Ferramentas Comuns para Regression Testing:
-
-- **Selenium**: Para automação de testes de interface de usuário em aplicações web.
-
-- **JUnit/NUnit/PyTest**: Para testes unitários automatizados.
-
-- **Jenkins/GitLab CI**: Para integração contínua e execução automatizada de testes.
-
-- **Robot Framework**: Para testes automatizados em diversos contextos.
-
-- **TestNG**: Para organização e execução de testes em Java.
-
-Benefícios do Regression Testing:
-
-<img height="277" align="right" src="https://github.com/user-attachments/assets/c15d4ab9-69c4-4633-84ba-0387ddde2908" />
-
-- **Detecção Precoce de Defeitos**: Permite a identificação e correção rápida de novos problemas.
-
-- **Redução de Riscos**: Minimiza o risco de introdução de erros ao modificar o software.
-
-- **Qualidade Contínua**: Mantém a qualidade do software ao longo de todo o ciclo de desenvolvimento.
-
-Desafios do Regression Testing:
-
-- **Manutenção de Testes**: Manter um conjunto de testes atualizado pode ser desafiador à medida que o software evolui.
-
-- **Tempo e Recursos**: A execução de um grande conjunto de testes pode ser demorada e consumir muitos recursos.
-
-- **Falsos Positivos/Negativos**: Pode haver casos onde testes falham ou passam erroneamente, exigindo investigação adicional.
-
-## [QA] Performance testing
-<img height="77" align="right" src="https://github.com/user-attachments/assets/9d6f0110-c613-4a90-868e-ce8afb413656" />
-
-**Testes de performance** são uma categoria de testes cujo foco não está na lógica funcional do software, mas na sua capacidade de operar sob condições reais ou extremas de uso, revelando como o sistema se comporta quando é pressionado, forçado, saturado ou submetido a cargas crescentes de usuários, requisições, dados ou processamento. Eles não buscam apenas descobrir se algo funciona, mas se funciona bem, rápido, de forma estável e consistente mesmo quando o mundo real faz força contra ele. 
-
-A essência desse tipo de teste é observar o comportamento sistêmico, medindo tempos de resposta, consumo de recursos, throughput, concorrência, latência, estabilidade e capacidade de absorver picos sem degradação crítica. Ao contrário dos testes funcionais, que respondem “o sistema faz o que deveria?”, os testes de performance respondem “ele continua fazendo o que deveria quando é estressado, pressionado e exigido no limite?”.
-
-Responsável: Analista de Qualidade com acompanhamento do time de Infra/ Banco/ Desenvolvimento e em alguns casos DevOps
-
-<img height="77" align="right" src="https://github.com/user-attachments/assets/02b287c1-adc4-4db5-aaac-7bb33c17c663" />
-
-Esse tipo de teste investiga nuances invisíveis no dia a dia do desenvolvimento, mas extremamente importantes quando sistemas entram em produção. Imagine uma API que responde perfeitamente em ambiente de testes, mas colapsa quando recebe cinquenta requisições simultâneas. Ou um fluxo de pagamento que funciona sem falhas durante simulações, mas se torna lento e inconsistente quando mil usuários clicam ao mesmo tempo em “finalizar compra” durante uma promoção. A performance, nesse sentido, não é apenas velocidade, mas previsibilidade, estabilidade e capacidade de manter a mesma qualidade enquanto a carga aumenta. O software robusto não é aquele que funciona só no cenário ideal, mas o que continua funcionando no cenário real.
-
-Quando falamos de testes de performance em profundidade, entramos em conceitos como teste de carga, teste de estresse, teste de volume, teste de pico e teste de resistência. Ainda que cada um tenha sua nuance, todos fazem parte da mesma família cujo propósito é revelar gargalos e limites. Testes de performance ajudam a descobrir, por exemplo, que uma consulta ao banco degrada exponencialmente com mais usuários, que o pool de conexões não está dimensionado, que um microserviço fica saturado porque outro envia requisições em rajadas, que um evento é processado mais lentamente do que o throughput esperado ou que um único ponto de estrangulamento coloca toda a arquitetura sob risco. A performance revela a verdade estrutural do software, expondo tudo o que o uso real amplifica.
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/ad467c3f-adea-40a6-8b43-b9892c19b30b" />
-
-Em arquiteturas distribuídas, especialmente quando você trabalha com mensageria, filas, pipelines, APIs, serviços de alto throughput, ingestão de eventos ou microserviços em cadeia, testes de performance se tornam ainda mais cruciais. Você mede não apenas o tempo individual de resposta, mas o fluxo completo: a latência entre serviços, a velocidade de propagação de eventos, o consumo simultâneo de mensagens no RabbitMQ, o comportamento do cluster sob saturação, o tempo de estabilização dos pods depois de um pico, o impacto da serialização e desserialização, a saúde do garbage collector, o efeito de caches, o custo de I/O, entre dezenas de variáveis que só emergem quando tudo está funcionando ao mesmo tempo. É nesse momento que o software revela se a arquitetura foi bem dimensionada ou se apenas parecia bonita no papel.
-
-Ferramentas como JMeter, k6, Gatling, Locust e Artillery entram justamente nesse contexto, permitindo simular cenários realistas, configurar ramp-ups de usuários, gerar tráfego intenso, acompanhar métricas e observar o comportamento do sistema enquanto é pressionado. Esses testes produzem relatórios com tempos de resposta, percentis, falhas, saturação de CPU e memória, filas acumuladas, concorrência atingida e outros indicadores que ajudam o time a tomar decisões técnicas fundamentadas, seja otimizando queries, refatorando partes críticas, ajustando parâmetros de infraestrutura, redistribuindo carga ou adicionando mecanismos de escalabilidade.
-
-Testes de performance, portanto, não são apenas uma atividade complementar, mas uma forma de garantir que o software sobreviva ao mundo real. Eles antecipam falhas antes que os usuários as vivam, ajudam a dimensionar infraestruturas, revelam gargalos invisíveis no desenvolvimento, evitam que sistemas caiam em momentos críticos, fortalecem a confiabilidade e tornam previsível o comportamento de uma aplicação quando a demanda aumenta. No final, mais do que medir números, eles medem maturidade, robustez e resiliência de um sistema.
-
-<img src="https://github.com/user-attachments/assets/302f9516-4729-4517-80a2-a9fea7e8d554" align="right" height="177">
-
-- Teste de Carga: Testa o software sob as condições normais de uso. Ex.: tempo de resposta, número de transações por minuto, usuários simultâneos, etc.
-
-- Teste de Stress: Testa o software sob condições extremas  de uso. Grande volume de transações e usuários simultâneos. Picos excessivos de carga em curtos períodos de tempo.
-
-- Teste de Estabilidade: Testa se o sistema se mantém funcionando de maneira satisfatória após um período de uso.
-
-## [QA] System testing
-<img height="77" align="right" src="https://github.com/user-attachments/assets/7def68be-e65a-413f-af11-774ae592b7c3" />
-
-**Teste de sistema** é uma etapa da qualidade de software em que você avalia o produto inteiro funcionando como um todo, exatamente como um usuário ou outro sistema o utilizaria, verificando se todos os componentes front-end, back-end, banco de dados, integrações, filas, APIs externas, autenticação, permissões, serviços…estão cooperando corretamente.
-
-É o primeiro momento em que o software é testado **de ponta a ponta**, já integrado, e não mais isolado em módulos individuais.
-
-Num textão contínuo, como você prefere, a ideia central do teste de sistema é garantir que o comportamento observado corresponde ao comportamento esperado quando todos os elementos estão reunidos. Em contraste com o teste unitário, que valida partes pequenas e isoladas, e o teste de integração, que valida dois ou mais módulos conversando entre si, o teste de sistema procura validar o fluxo completo. Isso inclui desde a interface visual até o armazenamento de dados e a comunicação com serviços externos. 
-
-Ele é executado em um ambiente que simula o mais fielmente possível o ambiente de produção, com configurações reais de rede, segurança, dependências e infraestrutura. Seu objetivo não é apenas encontrar defeitos funcionais, mas também falhas de usabilidade, desempenho, estabilidade e comportamento sob carga, além de verificar regras de negócio em contextos complexos, edge cases que só aparecem quando vários módulos se combinam e dependências externas que podem falhar ou se comportar de forma inesperada. 
-
-O teste de sistema é essencial porque confirma que o produto final atende aos requisitos especificados — requisitos que, muitas vezes, só fazem sentido quando vistos como um fluxo contínuo. Ele também serve como uma última proteção antes do teste de aceitação do usuário, onde o cliente ou área de negócio valida se aquilo corresponde ao necessário. Em suma, teste de sistema é a verificação holística do software funcionando completamente integrado, garantindo que o resultado global do sistema seja confiável, coerente e pronto para ser apresentado ao usuário real.
-
-<img height="77" align="right" src="https://github.com/user-attachments/assets/0a580dcb-a6b3-4396-8b93-c4d032a9cea2" />
-
-Ferramentas de **teste de sistema** variam conforme o tipo de aplicação (web, desktop, mobile, APIs, microserviços, filas, integrações), mas existem plataformas amplamente usadas para validar o sistema completo, ponta a ponta, simulando exatamente o que um usuário real ou outro sistema faria. Abaixo vai um textão contínuo, sem tópicos, como você prefere.
-
-Quando falamos de teste de sistema, entramos no território de ferramentas capazes de orquestrar fluxos completos, interagir com interfaces reais, executar chamadas autenticadas, validar integrações, lidar com filas como RabbitMQ ou Kafka, e observar o comportamento do sistema como um todo. No universo de aplicações web, por exemplo, Selenium se tornou um clássico porque permite controlar navegadores reais e validar o comportamento da aplicação como um usuário. Hoje, ferramentas modernas como Cypress oferecem testes mais rápidos, estáveis e com integração profunda com JavaScript, além de uma experiência visual forte, sendo amplamente usadas para testes End-to-End que também funcionam como testes de sistema. 
-
-<img src="https://github.com/user-attachments/assets/3dc426c6-4eb9-4bc8-8aca-ed0473c0ebd9" align="right" height="77">
-
-Playwright é outra evolução desse conceito, permitindo testar múltiplos navegadores com mais confiabilidade, além de suportar testes em APIs, mobile web e fluxos completos. Quando o sistema possui APIs e múltiplos serviços, ferramentas como Postman e sua versão automatizada, o Newman, permitem rodar coleções completas de chamadas simulando sequências reais do sistema, sendo muito usadas em pipelines CI/CD. Para validar comportamento distribuído, ferramentas como K6 permitem simular usuários simultâneos e comportamentos sob carga, atuando tanto como teste de sistema quanto de performance. Em ambientes corporativos e integrações pesadas, SoapUI e ReadyAPI são fortes, pois fazem testes completos de SOAP, REST, GraphQL, autenticação complexa e cenários de orquestração. Para aplicações mobile, Appium permite testar o sistema inteiro interagindo com apps Android e iOS reais. 
-
-<img height="77" align="right" src="https://github.com/user-attachments/assets/2a6f0cbe-4f5b-4e1f-a934-f41dd7599944" />
-
-Quando há robôs de interface que automatizam fluxos completos, RPA como UiPath podem executar testes de sistema em nível empresarial. No mundo .NET, é comum usar Playwright, Selenium ou Cypress integrados ao pipeline do Azure DevOps, GitHub Actions ou GitLab CI, validando a aplicação como um todo após o deploy em ambiente de staging. Para microserviços orquestrados com Docker Compose ou Kubernetes, a combinação de testes em Postman/Newman, Karate DSL e ferramentas de workflow como Robot Framework fornece um arsenal capaz de simular fluxos complexos de ponta a ponta, incluindo eventos em fila, mensagens assíncronas e APIs encadeadas. Finalmente, para sistemas que exigem automação de tela desktop, existem soluções como WinAppDriver ou TestComplete.
-
-<img height="77" align="right" src="https://github.com/user-attachments/assets/cc567416-c3a9-4106-b037-32a77b1804ee" />
-
-Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilham a mesma essência: validar que o sistema completo funciona integrado, como um organismo vivo, garantindo que a experiência final seja coerente, confiável e alinhada ao que o usuário espera.
-
-## [QA] E2E - End-to-end testing
-<img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/5c4e2a17-1197-42fb-b43a-d32d15bf5be5" align="right" height="77">
-
-O **E2E - End-to-end** refere-se a um tipo de teste ou processo que envolve a verificação de um sistema ou fluxo de trabalho em sua totalidade, desde o início até o fim, simulando as condições reais de uso pelo usuário final. Em resumo, "end-to-end" se refere à abordagem de teste que abrange todo o sistema ou processo, do início ao fim, para garantir seu funcionamento correto e eficaz.
-
-O E2E verifica se todos os componentes de um sistema (front-end, back-end, bancos de dados, APIs externas, etc.) funcionam juntos conforme esperado, do início ao fim. Em um contexto de desenvolvimento de software, os testes end-to-end são realizados para garantir que todas as partes do sistema estejam funcionando corretamente juntas, desde a interface do usuário até o backend, incluindo integrações com outros sistemas, se aplicável. Isso é feito para garantir que o sistema esteja se comportando conforme o esperado e atendendo aos requisitos do usuário final.
-
-Os testes end-to-end são frequentemente usados para validar fluxos de trabalho completos em um aplicativo ou site, simulando a interação do usuário final com o sistema. Eles podem envolver a automação de cliques de mouse, preenchimento de formulários, navegação entre páginas e verificação de resultados. No entanto, a validação é um conceito que se aplica a múltiplos níveis de teste, incluindo o E2E, mas não é exclusiva dele. 
-
-As principais ferramentas para testes *E2E (End-to-End)* e soluções complementares (como Zod) para validação de dados, organizadas por contexto de uso:
-
-Ferramentas Especializadas em E2E:
-
-<img height="277" align="right" src="https://github.com/user-attachments/assets/b2033462-bc2a-46e7-bdaf-2db51a548358" />
-
-1. **Para Aplicações Web**  
-   - **Cypress**: Framework completo para testes E2E em navegadores, com suporte a simulação de interações (cliques, formulários) e debug em tempo real. Inclui **Cypress Testing Library** para boas práticas de seleção de elementos.  
-
-   - **Playwright**: Suporta múltiplos navegadores (Chromium, Firefox, WebKit) e linguagens (JS/TS, Python, .NET). Recursos como auto-wait, gravação de testes e testes em paralelo. O Playwright é uma biblioteca de automação de código aberto para testes de navegador e web scraping desenvolvida pela Microsoft e lançada em 31 de janeiro de 2020, que desde então se tornou popular entre programadores e desenvolvedores web.
-
-    - **Selenium**: Mais antigo, mas ainda usado em projetos legados. Requer mais configuração (WebDriver).  
-
-3. **Para APIs**  
-   - **Supertest** (Node.js): Biblioteca para testar APIs HTTP integrada ao Jest/Mocha. Valida status codes, responses e headers.  
-   - **Postman/Newman**: Coleções de requisições podem ser automatizadas como testes E2E (com scripts em JavaScript).  
-
-4. **Para Mobile**  
-   - **Appium**: Framework open-source para testes E2E em aplicativos Android/iOS.  
-   - **Detox**: Focado em React Native e aplicações nativas, com suporte a sincronização automática.  
-
-5. **Para Desktop**  
-   - **Spectron** (para Electron): Integra Selenium com o Electron para testar aplicações desktop.  
-
-Ferramentas Complementares (como Zod):
-
-1. **Validação de Dados em Testes E2E**  
-   - **Zod**: Valida esquemas de respostas de API ou estados da UI durante testes. Exemplo:  
-       ```typescript  
-       const LoginResponseSchema = z.object({ token: z.string() });  
-       const data = LoginResponseSchema.parse(await response.json());  
-       ```  
-   - **Joi**: Similar ao Zod, mas mais usado em back-end (Node.js) para validar objetos.  
-
-2. **Mock de Dados/APIs**  
-   - **MSW (Mock Service Worker)**: Intercepta requisições HTTP em testes E2E para simular APIs sem depender do back-end real.  
-
-   - **JSON Server**: Cria uma API fake baseada em um arquivo JSON para testes iniciais.  
-
-4. **Asserções Avançadas**  
-   - **Jest/Vitest**: Oferecem matchers (como `.toMatchObject()`) para validar estruturas de dados em testes.  
-
-   - **Chai**: Biblioteca de asserções para Mocha, com sintaxe legível (ex.: `expect(user).to.have.property('name')`).  
-
-6. **Monitoramento e Relatórios**  
-   - **Allure Report**: Gera relatórios visuais detalhados de testes E2E.  
-
-   - **Sentry**: Captura erros em tempo real durante testes (útil para debug em CI/CD).  
-
-Exemplo de Fluxo com Ferramentas Combinadas
-
-1. **Playwright** simula um usuário fazendo login.  
-2. **MSW** mocka a API de login (opcional).  
-3. **Zod** valida se a resposta da API contém `{ token: string }`.  
-4. **Allure Report** gera um dashboard com os resultados.  
-
-Quando Usar Cada Uma?
-
-- **Testes de UI Completa**: Cypress/Playwright.  
-- **APIs**: Supertest + Zod/Joi.  
-- **Mobile**: Appium/Detox.  
-- **Validação de Dados**: Zod (TypeScript) ou Joi (JavaScript).  
-- **Mock**: MSW ou JSON Server.  
-
-Essas ferramentas podem ser combinadas para cobrir todos os aspectos de testes E2E, desde a interação do usuário até a integridade dos dados.
-
 # 🎡 DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
@@ -2442,6 +2194,254 @@ Para testes de integração, você pode optar por:
 | Multi     | Postman/Newman, Testcontainers, Docker Compose |
 | E2E web   | Playwright, Cypress, Puppeteer                 |
 | APIs      | RestAssured, Insomnia, HTTPX, Supertest        |
+
+## [TDD] Functional Testing
+<img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
+
+Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída. É a técnica mais utilizada no dia a dia. Responsável: Analista de Qualidade
+
+Functional Testing e Black-box Testing não são a mesma coisa, embora estejam intimamente relacionados. A melhor forma de entender é pensar que um deles é um tipo de teste, enquanto o outro é uma abordagem que pode ser aplicada a vários tipos de testes. Explicando em um textão fluido.
+
+Quando você fala de Functional Testing, você está se referindo à prática de testar o que o software faz, ou seja, suas funcionalidades, requisitos, comportamentos esperados, regras de negócio, entradas e saídas. Nesse tipo de teste, o objetivo não é saber como o código foi escrito, mas sim verificar se o sistema cumpre aquilo que promete. Functional Testing é, portanto, uma categoria de testes, englobando vários métodos como testes de sistema, testes de integração funcional, testes de aceitação, testes E2E e até cenários automatizados que validam fluxos completos. Ele sempre olha o software de fora para dentro, garantindo que cada ação realizada devolva o resultado esperado.
+
+Black-box Testing, por outro lado, é um **método**, uma forma de enxergar o sistema. É uma abordagem onde você não olha o código interno, não vê classes, funções, bancos de dados, nem algoritmos. Você apenas observa entradas e saídas, como uma caixa preta. Vários tipos de teste podem ser feitos como caixa preta: testes funcionais, testes não funcionais, testes de usabilidade, testes de performance em nível de comportamento e até testes exploratórios. A caixa preta significa ignorar o interior e se concentrar apenas na interação externa. Portanto, Black-box é um estilo de avaliação que pode ser aplicado a várias categorias de teste, e não um tipo de teste em si.
+
+O ponto de união entre os dois é que, na prática de mercado, **quase todo teste funcional é executado como Black-box**, porque testar funcionalidades sem olhar o código faz parte da natureza desses testes. Contudo, isso não significa que eles sejam sinônimos. Todo Functional Testing utiliza a abordagem Black-box, mas nem todo Black-box Testing é necessariamente funcional. Por exemplo, um teste de performance que mede tempo de resposta sem olhar o código é caixa preta, mas não é funcional. Da mesma forma, um teste de usabilidade, um teste de segurança black-box ou um teste de carga são todos caixa preta sem serem testes funcionais. Pense em Functional Testing como o “o que testar” e Black-box como o “como testar”.
+
+Assim, eles caminham juntos, se alimentam um do outro, mas ocupam categorias diferentes dentro da engenharia de software.
+
+O que é importante pensarmos é no tempo de execução de testes que teremos. Os testes de unidade existem desde o início do projeto, qualquer commit deveria ser acompanhada por um teste.
+
+<img src="https://www.zucisystems.com/wp-content/uploads/2020/06/3-Types-of-Functional-Testing.png" height="277" align="right">
+
+É comum que o desenvolvedor que queria concluir um projeto rapidamente deixe de fazer testes para otimizar o tempo. Como resolver esse impasse? Antes do commit, devemos executar todos os testes, embora saibamos que isso é em um plano ideal, e muitas vezes desnecessário dependendo da modificação que foi realizada. Até mesmo executar todos os testes unitários pode ser complicado.
+
+Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
+
+Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
+
+## [TDD] White-box testing
+<img src="https://github.com/user-attachments/assets/990d67a2-0bb0-4066-900f-ff760507fe39" align="right" height="77">
+
+O **Teste da Caixa Branca**, também conhecido como Teste de Caixa de Vidro ou Estrutural, é uma abordagem de teste de software que examina as entranhas do sistema, sua estrutura interna, sua lógica de programação e seu código-fonte. Diferente do Teste da Caixa Preta, onde o testador enxerga o software apenas como um usuário final, sem conhecimento da implementação interna, o teste de caixa branca exige que o profissional tenha acesso e compreensão profunda do código, dos algoritmos, dos fluxos de dados e da arquitetura do sistema. 
+
+O seu nome é uma analogia direta: se na caixa preta você testa sem ver o que há dentro, na caixa branca a caixa é transparente, e você analisa minuciosamente os mecanismos internos para garantir que cada engrenagem funcione corretamente.
+
+Testa tendo conhecimento do código fonte, os resultados esperados de acordo com os requisitos acordados, padrões adotados. Deve-se passar por todos os fluxos esperados. Responsável: Desenvolvedor
+
+O objetivo central deste teste é validar a qualidade interna do software. Ele busca encontrar erros em estruturas de controle, em loops infinitos, em condições de borda não tratadas, em caminhos lógicos nunca executados, em vazamentos de memória e em más práticas de codificação. Para isso, o testador projeta casos de teste baseados diretamente no código-fonte, garantindo que todos os caminhos possíveis dentro da aplicação sejam exercitados. As métricas de cobertura são fundamentais nesse processo, pois elas quantificam o quanto do código foi testado. A cobertura de instruções mede a porcentagem de linhas de código executadas, a cobertura de decisão verifica se todos os resultados possíveis de uma condição booleana foram testados, a cobertura de caminhos é mais complexa e visa exercitar todos os caminhos lógicos independentes dentro de um módulo, e a cobertura de condição vai além, avaliando todas as combinações possíveis de subcondições dentro de uma decisão.
+
+A execução do teste de caixa branca é geralmente realizada em fases iniciais do ciclo de desenvolvimento, frequentemente integrada à fase de codificação. Os próprios desenvolvedores costumam realizá-lo, ou engenheiros de qualidade de software com fortes habilidades de programação, utilizando ferramentas especializadas para análise estática e dinâmica. As ferramentas de análise estática examinam o código sem executá-lo, procurando por violações de padrões de codificação, possíveis bugs e vulnerabilidades de segurança. Já as ferramentas de análise dinâmica exigem que o código seja executado, permitindo a medição da cobertura de testes e a identificação de problemas de desempenho e vazamento de recursos em tempo de execução.
+
+As vantagens desta abordagem são profundas. Ela permite a identificação precoce de defeitos, o que reduz significativamente o custo de sua correção, e otimiza o código, eliminando trechos mortos ou redundantes. No entanto, os desafios são igualmente significativos. O teste é complexo e requer um testador altamente qualificado, que seja tanto um engenheiro de qualidade quanto um programador competente. Além disso, testar exaustivamente todos os caminhos de um software minimamente complexo pode ser uma tarefa praticamente impossível devido à explosão combinatória de possibilidades, tornando-o uma atividade que busca a máxima cobertura dentro de limites de tempo e orçamento realistas. Em essência, o Teste da Caixa Branca é um exercício de engenharia de precisão, focado na saúde interna do software, assegurando que a fundação sobre a qual a aplicação é construída seja sólida, eficiente e segura.
+
+## [TDD] Regression testing
+<img src="https://github.com/user-attachments/assets/056ece14-8797-4926-b30e-e4aeb6490ca4" align="right" height="77">
+
+O **teste de regressão** é uma técnica do teste de software que consiste na aplicação de versões mais recentes do software, para garantir que não surgiram novos defeitos em componentes já analisados. Regression testing, ou teste de regressão, é um tipo de teste de software realizado para garantir que mudanças recentes no código, como correções de bugs, novas funcionalidades ou outras modificações, não introduzam novos defeitos ou causem falhas em partes já existentes do software. Este processo é essencial para manter a integridade do software após qualquer tipo de alteração. 
+
+Em resumo, regression testing é uma prática crucial no desenvolvimento de software que visa assegurar que novas mudanças não comprometam funcionalidades existentes, contribuindo para a estabilidade e qualidade contínua do sistema.
+
+Objetivos do Regression Testing:
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/8d0cb7bf-a902-4268-8633-73d0e06a2adc" align="right" height="177">
+
+1. **Verificar Estabilidade**: Assegurar que as novas mudanças não impactaram negativamente o comportamento existente do software.
+
+2. **Identificar Regressões**: Detectar rapidamente qualquer falha que possa ter sido introduzida devido a mudanças recentes.
+
+3. **Manter Qualidade**: Garantir que o software continua funcionando conforme esperado, mantendo a qualidade e a confiabilidade.
+
+Quando Realizar Regression Testing:
+
+- **Após Correções de Bugs**: Sempre que um bug é corrigido, é importante garantir que a correção não tenha introduzido novos problemas.
+
+- **Após Adição de Novas Funcionalidades**: Novas funcionalidades podem afetar o funcionamento existente, por isso testes de regressão são necessários.
+
+- **Durante Refatoração de Código**: A refatoração melhora o design interno do código, mas pode inadvertidamente introduzir erros.
+
+- **Em Atualizações de Dependências**: Mudanças em bibliotecas ou frameworks subjacentes podem afetar o comportamento do software.
+
+Métodos de Regression Testing:
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/6e1292a6-9162-44e2-89c6-30d003f0867f" />
+
+1. **Reexecução Completa**: Executar todos os testes existentes para garantir que o software inteiro funcione corretamente. Isso é muitas vezes impraticável para grandes sistemas devido ao tempo e recursos necessários.
+
+2. **Seleção de Casos de Teste**: Escolher um subconjunto de testes que são mais relevantes para as áreas do código que foram alteradas.
+
+3. **Teste de Prioridade**: Focar nos testes mais críticos e mais propensos a serem afetados pelas mudanças.
+
+4. **Automação de Testes**: Usar ferramentas de automação para executar testes de regressão de forma eficiente e repetível.
+
+Ferramentas Comuns para Regression Testing:
+
+- **Selenium**: Para automação de testes de interface de usuário em aplicações web.
+
+- **JUnit/NUnit/PyTest**: Para testes unitários automatizados.
+
+- **Jenkins/GitLab CI**: Para integração contínua e execução automatizada de testes.
+
+- **Robot Framework**: Para testes automatizados em diversos contextos.
+
+- **TestNG**: Para organização e execução de testes em Java.
+
+Benefícios do Regression Testing:
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/c15d4ab9-69c4-4633-84ba-0387ddde2908" />
+
+- **Detecção Precoce de Defeitos**: Permite a identificação e correção rápida de novos problemas.
+
+- **Redução de Riscos**: Minimiza o risco de introdução de erros ao modificar o software.
+
+- **Qualidade Contínua**: Mantém a qualidade do software ao longo de todo o ciclo de desenvolvimento.
+
+Desafios do Regression Testing:
+
+- **Manutenção de Testes**: Manter um conjunto de testes atualizado pode ser desafiador à medida que o software evolui.
+
+- **Tempo e Recursos**: A execução de um grande conjunto de testes pode ser demorada e consumir muitos recursos.
+
+- **Falsos Positivos/Negativos**: Pode haver casos onde testes falham ou passam erroneamente, exigindo investigação adicional.
+
+## [TDD] Performance testing
+<img height="77" align="right" src="https://github.com/user-attachments/assets/9d6f0110-c613-4a90-868e-ce8afb413656" />
+
+**Testes de performance** são uma categoria de testes cujo foco não está na lógica funcional do software, mas na sua capacidade de operar sob condições reais ou extremas de uso, revelando como o sistema se comporta quando é pressionado, forçado, saturado ou submetido a cargas crescentes de usuários, requisições, dados ou processamento. Eles não buscam apenas descobrir se algo funciona, mas se funciona bem, rápido, de forma estável e consistente mesmo quando o mundo real faz força contra ele. 
+
+A essência desse tipo de teste é observar o comportamento sistêmico, medindo tempos de resposta, consumo de recursos, throughput, concorrência, latência, estabilidade e capacidade de absorver picos sem degradação crítica. Ao contrário dos testes funcionais, que respondem “o sistema faz o que deveria?”, os testes de performance respondem “ele continua fazendo o que deveria quando é estressado, pressionado e exigido no limite?”.
+
+Responsável: Analista de Qualidade com acompanhamento do time de Infra/ Banco/ Desenvolvimento e em alguns casos DevOps
+
+<img height="77" align="right" src="https://github.com/user-attachments/assets/02b287c1-adc4-4db5-aaac-7bb33c17c663" />
+
+Esse tipo de teste investiga nuances invisíveis no dia a dia do desenvolvimento, mas extremamente importantes quando sistemas entram em produção. Imagine uma API que responde perfeitamente em ambiente de testes, mas colapsa quando recebe cinquenta requisições simultâneas. Ou um fluxo de pagamento que funciona sem falhas durante simulações, mas se torna lento e inconsistente quando mil usuários clicam ao mesmo tempo em “finalizar compra” durante uma promoção. A performance, nesse sentido, não é apenas velocidade, mas previsibilidade, estabilidade e capacidade de manter a mesma qualidade enquanto a carga aumenta. O software robusto não é aquele que funciona só no cenário ideal, mas o que continua funcionando no cenário real.
+
+Quando falamos de testes de performance em profundidade, entramos em conceitos como teste de carga, teste de estresse, teste de volume, teste de pico e teste de resistência. Ainda que cada um tenha sua nuance, todos fazem parte da mesma família cujo propósito é revelar gargalos e limites. Testes de performance ajudam a descobrir, por exemplo, que uma consulta ao banco degrada exponencialmente com mais usuários, que o pool de conexões não está dimensionado, que um microserviço fica saturado porque outro envia requisições em rajadas, que um evento é processado mais lentamente do que o throughput esperado ou que um único ponto de estrangulamento coloca toda a arquitetura sob risco. A performance revela a verdade estrutural do software, expondo tudo o que o uso real amplifica.
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/ad467c3f-adea-40a6-8b43-b9892c19b30b" />
+
+Em arquiteturas distribuídas, especialmente quando você trabalha com mensageria, filas, pipelines, APIs, serviços de alto throughput, ingestão de eventos ou microserviços em cadeia, testes de performance se tornam ainda mais cruciais. Você mede não apenas o tempo individual de resposta, mas o fluxo completo: a latência entre serviços, a velocidade de propagação de eventos, o consumo simultâneo de mensagens no RabbitMQ, o comportamento do cluster sob saturação, o tempo de estabilização dos pods depois de um pico, o impacto da serialização e desserialização, a saúde do garbage collector, o efeito de caches, o custo de I/O, entre dezenas de variáveis que só emergem quando tudo está funcionando ao mesmo tempo. É nesse momento que o software revela se a arquitetura foi bem dimensionada ou se apenas parecia bonita no papel.
+
+Ferramentas como JMeter, k6, Gatling, Locust e Artillery entram justamente nesse contexto, permitindo simular cenários realistas, configurar ramp-ups de usuários, gerar tráfego intenso, acompanhar métricas e observar o comportamento do sistema enquanto é pressionado. Esses testes produzem relatórios com tempos de resposta, percentis, falhas, saturação de CPU e memória, filas acumuladas, concorrência atingida e outros indicadores que ajudam o time a tomar decisões técnicas fundamentadas, seja otimizando queries, refatorando partes críticas, ajustando parâmetros de infraestrutura, redistribuindo carga ou adicionando mecanismos de escalabilidade.
+
+Testes de performance, portanto, não são apenas uma atividade complementar, mas uma forma de garantir que o software sobreviva ao mundo real. Eles antecipam falhas antes que os usuários as vivam, ajudam a dimensionar infraestruturas, revelam gargalos invisíveis no desenvolvimento, evitam que sistemas caiam em momentos críticos, fortalecem a confiabilidade e tornam previsível o comportamento de uma aplicação quando a demanda aumenta. No final, mais do que medir números, eles medem maturidade, robustez e resiliência de um sistema.
+
+<img src="https://github.com/user-attachments/assets/302f9516-4729-4517-80a2-a9fea7e8d554" align="right" height="177">
+
+- Teste de Carga: Testa o software sob as condições normais de uso. Ex.: tempo de resposta, número de transações por minuto, usuários simultâneos, etc.
+
+- Teste de Stress: Testa o software sob condições extremas  de uso. Grande volume de transações e usuários simultâneos. Picos excessivos de carga em curtos períodos de tempo.
+
+- Teste de Estabilidade: Testa se o sistema se mantém funcionando de maneira satisfatória após um período de uso.
+
+## [TDD] System testing
+<img height="77" align="right" src="https://github.com/user-attachments/assets/7def68be-e65a-413f-af11-774ae592b7c3" />
+
+**Teste de sistema** é uma etapa da qualidade de software em que você avalia o produto inteiro funcionando como um todo, exatamente como um usuário ou outro sistema o utilizaria, verificando se todos os componentes front-end, back-end, banco de dados, integrações, filas, APIs externas, autenticação, permissões, serviços…estão cooperando corretamente.
+
+É o primeiro momento em que o software é testado **de ponta a ponta**, já integrado, e não mais isolado em módulos individuais.
+
+Num textão contínuo, como você prefere, a ideia central do teste de sistema é garantir que o comportamento observado corresponde ao comportamento esperado quando todos os elementos estão reunidos. Em contraste com o teste unitário, que valida partes pequenas e isoladas, e o teste de integração, que valida dois ou mais módulos conversando entre si, o teste de sistema procura validar o fluxo completo. Isso inclui desde a interface visual até o armazenamento de dados e a comunicação com serviços externos. 
+
+Ele é executado em um ambiente que simula o mais fielmente possível o ambiente de produção, com configurações reais de rede, segurança, dependências e infraestrutura. Seu objetivo não é apenas encontrar defeitos funcionais, mas também falhas de usabilidade, desempenho, estabilidade e comportamento sob carga, além de verificar regras de negócio em contextos complexos, edge cases que só aparecem quando vários módulos se combinam e dependências externas que podem falhar ou se comportar de forma inesperada. 
+
+O teste de sistema é essencial porque confirma que o produto final atende aos requisitos especificados — requisitos que, muitas vezes, só fazem sentido quando vistos como um fluxo contínuo. Ele também serve como uma última proteção antes do teste de aceitação do usuário, onde o cliente ou área de negócio valida se aquilo corresponde ao necessário. Em suma, teste de sistema é a verificação holística do software funcionando completamente integrado, garantindo que o resultado global do sistema seja confiável, coerente e pronto para ser apresentado ao usuário real.
+
+<img height="77" align="right" src="https://github.com/user-attachments/assets/0a580dcb-a6b3-4396-8b93-c4d032a9cea2" />
+
+Ferramentas de **teste de sistema** variam conforme o tipo de aplicação (web, desktop, mobile, APIs, microserviços, filas, integrações), mas existem plataformas amplamente usadas para validar o sistema completo, ponta a ponta, simulando exatamente o que um usuário real ou outro sistema faria. Abaixo vai um textão contínuo, sem tópicos, como você prefere.
+
+Quando falamos de teste de sistema, entramos no território de ferramentas capazes de orquestrar fluxos completos, interagir com interfaces reais, executar chamadas autenticadas, validar integrações, lidar com filas como RabbitMQ ou Kafka, e observar o comportamento do sistema como um todo. No universo de aplicações web, por exemplo, Selenium se tornou um clássico porque permite controlar navegadores reais e validar o comportamento da aplicação como um usuário. Hoje, ferramentas modernas como Cypress oferecem testes mais rápidos, estáveis e com integração profunda com JavaScript, além de uma experiência visual forte, sendo amplamente usadas para testes End-to-End que também funcionam como testes de sistema. 
+
+<img src="https://github.com/user-attachments/assets/3dc426c6-4eb9-4bc8-8aca-ed0473c0ebd9" align="right" height="77">
+
+Playwright é outra evolução desse conceito, permitindo testar múltiplos navegadores com mais confiabilidade, além de suportar testes em APIs, mobile web e fluxos completos. Quando o sistema possui APIs e múltiplos serviços, ferramentas como Postman e sua versão automatizada, o Newman, permitem rodar coleções completas de chamadas simulando sequências reais do sistema, sendo muito usadas em pipelines CI/CD. Para validar comportamento distribuído, ferramentas como K6 permitem simular usuários simultâneos e comportamentos sob carga, atuando tanto como teste de sistema quanto de performance. Em ambientes corporativos e integrações pesadas, SoapUI e ReadyAPI são fortes, pois fazem testes completos de SOAP, REST, GraphQL, autenticação complexa e cenários de orquestração. Para aplicações mobile, Appium permite testar o sistema inteiro interagindo com apps Android e iOS reais. 
+
+<img height="77" align="right" src="https://github.com/user-attachments/assets/2a6f0cbe-4f5b-4e1f-a934-f41dd7599944" />
+
+Quando há robôs de interface que automatizam fluxos completos, RPA como UiPath podem executar testes de sistema em nível empresarial. No mundo .NET, é comum usar Playwright, Selenium ou Cypress integrados ao pipeline do Azure DevOps, GitHub Actions ou GitLab CI, validando a aplicação como um todo após o deploy em ambiente de staging. Para microserviços orquestrados com Docker Compose ou Kubernetes, a combinação de testes em Postman/Newman, Karate DSL e ferramentas de workflow como Robot Framework fornece um arsenal capaz de simular fluxos complexos de ponta a ponta, incluindo eventos em fila, mensagens assíncronas e APIs encadeadas. Finalmente, para sistemas que exigem automação de tela desktop, existem soluções como WinAppDriver ou TestComplete.
+
+<img height="77" align="right" src="https://github.com/user-attachments/assets/cc567416-c3a9-4106-b037-32a77b1804ee" />
+
+Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilham a mesma essência: validar que o sistema completo funciona integrado, como um organismo vivo, garantindo que a experiência final seja coerente, confiável e alinhada ao que o usuário espera.
+
+## [TDD] E2E - End-to-end testing
+<img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/5c4e2a17-1197-42fb-b43a-d32d15bf5be5" align="right" height="77">
+
+O **E2E - End-to-end** refere-se a um tipo de teste ou processo que envolve a verificação de um sistema ou fluxo de trabalho em sua totalidade, desde o início até o fim, simulando as condições reais de uso pelo usuário final. Em resumo, "end-to-end" se refere à abordagem de teste que abrange todo o sistema ou processo, do início ao fim, para garantir seu funcionamento correto e eficaz.
+
+O E2E verifica se todos os componentes de um sistema (front-end, back-end, bancos de dados, APIs externas, etc.) funcionam juntos conforme esperado, do início ao fim. Em um contexto de desenvolvimento de software, os testes end-to-end são realizados para garantir que todas as partes do sistema estejam funcionando corretamente juntas, desde a interface do usuário até o backend, incluindo integrações com outros sistemas, se aplicável. Isso é feito para garantir que o sistema esteja se comportando conforme o esperado e atendendo aos requisitos do usuário final.
+
+Os testes end-to-end são frequentemente usados para validar fluxos de trabalho completos em um aplicativo ou site, simulando a interação do usuário final com o sistema. Eles podem envolver a automação de cliques de mouse, preenchimento de formulários, navegação entre páginas e verificação de resultados. No entanto, a validação é um conceito que se aplica a múltiplos níveis de teste, incluindo o E2E, mas não é exclusiva dele. 
+
+As principais ferramentas para testes *E2E (End-to-End)* e soluções complementares (como Zod) para validação de dados, organizadas por contexto de uso:
+
+Ferramentas Especializadas em E2E:
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/b2033462-bc2a-46e7-bdaf-2db51a548358" />
+
+1. **Para Aplicações Web**  
+   - **Cypress**: Framework completo para testes E2E em navegadores, com suporte a simulação de interações (cliques, formulários) e debug em tempo real. Inclui **Cypress Testing Library** para boas práticas de seleção de elementos.  
+
+   - **Playwright**: Suporta múltiplos navegadores (Chromium, Firefox, WebKit) e linguagens (JS/TS, Python, .NET). Recursos como auto-wait, gravação de testes e testes em paralelo. O Playwright é uma biblioteca de automação de código aberto para testes de navegador e web scraping desenvolvida pela Microsoft e lançada em 31 de janeiro de 2020, que desde então se tornou popular entre programadores e desenvolvedores web.
+
+    - **Selenium**: Mais antigo, mas ainda usado em projetos legados. Requer mais configuração (WebDriver).  
+
+3. **Para APIs**  
+   - **Supertest** (Node.js): Biblioteca para testar APIs HTTP integrada ao Jest/Mocha. Valida status codes, responses e headers.  
+   - **Postman/Newman**: Coleções de requisições podem ser automatizadas como testes E2E (com scripts em JavaScript).  
+
+4. **Para Mobile**  
+   - **Appium**: Framework open-source para testes E2E em aplicativos Android/iOS.  
+   - **Detox**: Focado em React Native e aplicações nativas, com suporte a sincronização automática.  
+
+5. **Para Desktop**  
+   - **Spectron** (para Electron): Integra Selenium com o Electron para testar aplicações desktop.  
+
+Ferramentas Complementares (como Zod):
+
+1. **Validação de Dados em Testes E2E**  
+   - **Zod**: Valida esquemas de respostas de API ou estados da UI durante testes. Exemplo:  
+       ```typescript  
+       const LoginResponseSchema = z.object({ token: z.string() });  
+       const data = LoginResponseSchema.parse(await response.json());  
+       ```  
+   - **Joi**: Similar ao Zod, mas mais usado em back-end (Node.js) para validar objetos.  
+
+2. **Mock de Dados/APIs**  
+   - **MSW (Mock Service Worker)**: Intercepta requisições HTTP em testes E2E para simular APIs sem depender do back-end real.  
+
+   - **JSON Server**: Cria uma API fake baseada em um arquivo JSON para testes iniciais.  
+
+4. **Asserções Avançadas**  
+   - **Jest/Vitest**: Oferecem matchers (como `.toMatchObject()`) para validar estruturas de dados em testes.  
+
+   - **Chai**: Biblioteca de asserções para Mocha, com sintaxe legível (ex.: `expect(user).to.have.property('name')`).  
+
+6. **Monitoramento e Relatórios**  
+   - **Allure Report**: Gera relatórios visuais detalhados de testes E2E.  
+
+   - **Sentry**: Captura erros em tempo real durante testes (útil para debug em CI/CD).  
+
+Exemplo de Fluxo com Ferramentas Combinadas
+
+1. **Playwright** simula um usuário fazendo login.  
+2. **MSW** mocka a API de login (opcional).  
+3. **Zod** valida se a resposta da API contém `{ token: string }`.  
+4. **Allure Report** gera um dashboard com os resultados.  
+
+Quando Usar Cada Uma?
+
+- **Testes de UI Completa**: Cypress/Playwright.  
+- **APIs**: Supertest + Zod/Joi.  
+- **Mobile**: Appium/Detox.  
+- **Validação de Dados**: Zod (TypeScript) ou Joi (JavaScript).  
+- **Mock**: MSW ou JSON Server.  
+
+Essas ferramentas podem ser combinadas para cobrir todos os aspectos de testes E2E, desde a interação do usuário até a integridade dos dados.
 
 # 🧪 BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
