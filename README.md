@@ -98,6 +98,30 @@ Vamos trabalhar com o Multi-repo, afinal é o mais comum no dia a dia da maioria
 
 ![b8c290d4d4680506a14e00e58a4e0c72](https://github.com/user-attachments/assets/6402db4f-2617-4038-8526-6952c1f14bad)
 
+O melhor nome de branch no Git é aquele que **comunica intenção, escopo e temporalidade**, sem ambiguidade. Como você está falando de **testes** (automatizados ou manuais, unitários ou de integração), o nome da branch deve deixar claro **o tipo de teste** e **o objetivo**, não apenas “teste” de forma genérica.
+
+Na prática, a convenção mais aceita hoje segue a ideia de **prefixo semântico**, muito alinhada com Git Flow, Trunk-Based ou variações modernas.
+
+Para **testes automatizados**, o termo mais claro e profissional é usar `test/`, porque comunica que a branch existe para validar comportamento, não para feature nem correção pontual. Exemplos bem aceitos seriam algo como `test/unit-order-service`, quando o foco é teste unitário de um contexto específico, ou `test/integration-payment-flow`, quando o objetivo é validar integração entre componentes ou serviços. Isso deixa explícito que a branch é temporária e experimental.
+
+Se o foco for **testes manuais**, geralmente não se cria branch só para isso, porque testes manuais normalmente validam código já integrado. Mas se houver necessidade — por exemplo, para QA ou homologação isolada —, nomes como `qa/manual-tests` ou `test/manual-regression` fazem mais sentido do que algo genérico. A palavra `qa` costuma ser usada exatamente para esse contexto de validação humana.
+
+Para **testes unitários**, o mais limpo é explicitar `unit`, porque isso evita confusão com testes mais pesados. Algo como `test/unit-auth-module` comunica imediatamente o escopo técnico e reduz ruído na revisão de PR. Já para **testes de integração**, `test/integration` ou `test/it-*` (IT = Integration Tests) é uma convenção bastante comum em times mais maduros, especialmente em ambientes com microsserviços.
+
+Se você quiser algo ainda mais alinhado com engenharia de software e menos “acadêmico”, pode usar nomes como `validation/` ou `verification/`, mas isso só funciona bem se todo o time estiver alinhado, senão gera confusão. Em times menores ou projetos pessoais, `test/` é direto e suficiente.
+
+Em resumo, o melhor nome não é “teste” puro. É algo que diga claramente **o que está sendo testado e como**. Algo como `test/unit`, `test/integration` ou `qa/manual` é muito mais legível, profissional e sustentável do que `branch-teste` ou variações vagas. Então, resumindo de forma direta: `test/` é o padrão mais correto, mais neutro e mais alinhado com práticas modernas de versionamento. `tests/` é aceitável, mas menos comum. `tdd/` e `bdd/` não são bons nomes de branch, porque descrevem processo mental, não objetivo técnico.
+
+Pensando como engenheiro e não de preferência pessoal, o melhor padrão é **`test/`**, não `tests/`, e evitar `tdd/` ou `bdd/` como prefixo de branch. Isso não é porque TDD ou BDD sejam ruins, mas porque **branch nomeia intenção operacional**, não metodologia.
+
+`test/` funciona melhor porque a branch representa uma **atividade de validação** temporária. Ela existe para testar algo, validar comportamento, rodar suites, ajustar cenários e depois morrer. `tests/` no plural costuma ser usado para **pastas no código**, não para fluxo de versionamento, e acaba misturando semânticas.
+
+`tdd/` e `bdd/` são ainda menos adequados como prefixo de branch porque **TDD e BDD são estratégias de desenvolvimento**, não tipos de branch. Você pode perfeitamente estar fazendo TDD dentro de uma `feature/` ou até numa `fix/`. Criar uma branch `tdd/` dá a falsa impressão de que só ali se pratica TDD, o que conceitualmente não faz sentido.
+
+O que realmente comunica bem é combinar `test/` com o **nível do teste** e, se necessário, com o **contexto do sistema**. Algo como `test/unit-auth`, `test/integration-payment-flow` ou `test/e2e-checkout`. Isso deixa claro para qualquer pessoa do time que aquela branch não entrega funcionalidade nova, não corrige bug produtivo e não é release — ela existe para validar.
+
+Se a distinção for entre **manual e automatizado**, o mais limpo é explicitar isso no sufixo quando realmente necessário, como `test/manual-regression` ou `test/automation-smoke`. Mas, na prática, testes manuais quase nunca justificam branch própria; eles validam código já integrado.
+
 > [!Note]
 > **FUNDAMENTOS DA QUALIDADE DE SOFTWARE**: Incluem a definição de requisitos, o planejamento de testes e a execução de testes de forma sistemática. Esses processos são essenciais para garantir que o software desenvolvido atenda às necessidades do usuário e atinja a qualidade esperada.
 
