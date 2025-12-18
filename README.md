@@ -1343,6 +1343,8 @@ Ferramentas de **teste de sistema** variam conforme o tipo de aplicação (web, 
 
 Quando falamos de teste de sistema, entramos no território de ferramentas capazes de orquestrar fluxos completos, interagir com interfaces reais, executar chamadas autenticadas, validar integrações, lidar com filas como RabbitMQ ou Kafka, e observar o comportamento do sistema como um todo. No universo de aplicações web, por exemplo, Selenium se tornou um clássico porque permite controlar navegadores reais e validar o comportamento da aplicação como um usuário. Hoje, ferramentas modernas como Cypress oferecem testes mais rápidos, estáveis e com integração profunda com JavaScript, além de uma experiência visual forte, sendo amplamente usadas para testes End-to-End que também funcionam como testes de sistema. 
 
+<img src="https://github.com/user-attachments/assets/3dc426c6-4eb9-4bc8-8aca-ed0473c0ebd9" align="right" height="77">
+
 Playwright é outra evolução desse conceito, permitindo testar múltiplos navegadores com mais confiabilidade, além de suportar testes em APIs, mobile web e fluxos completos. Quando o sistema possui APIs e múltiplos serviços, ferramentas como Postman e sua versão automatizada, o Newman, permitem rodar coleções completas de chamadas simulando sequências reais do sistema, sendo muito usadas em pipelines CI/CD. Para validar comportamento distribuído, ferramentas como K6 permitem simular usuários simultâneos e comportamentos sob carga, atuando tanto como teste de sistema quanto de performance. Em ambientes corporativos e integrações pesadas, SoapUI e ReadyAPI são fortes, pois fazem testes completos de SOAP, REST, GraphQL, autenticação complexa e cenários de orquestração. Para aplicações mobile, Appium permite testar o sistema inteiro interagindo com apps Android e iOS reais. 
 
 <img height="77" align="right" src="https://github.com/user-attachments/assets/2a6f0cbe-4f5b-4e1f-a934-f41dd7599944" />
@@ -1352,8 +1354,6 @@ Quando há robôs de interface que automatizam fluxos completos, RPA como UiPath
 <img height="77" align="right" src="https://github.com/user-attachments/assets/cc567416-c3a9-4106-b037-32a77b1804ee" />
 
 Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilham a mesma essência: validar que o sistema completo funciona integrado, como um organismo vivo, garantindo que a experiência final seja coerente, confiável e alinhada ao que o usuário espera.
-
-![chemical-reaction-3d-icon-png-download-12568930](https://github.com/user-attachments/assets/3dc426c6-4eb9-4bc8-8aca-ed0473c0ebd9)
 
 ## [QA] E2E - End-to-end testing
 <img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
