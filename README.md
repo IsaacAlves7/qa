@@ -485,180 +485,6 @@ Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipel
 
 5. Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
-## [QA] Automation testing
-![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
-![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
-![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
-![xUnit](https://img.shields.io/badge/-xUnit-EF2D5E?style=badge&logo=.NET&logoColor=white) 
-![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white)
-![Selenium](https://img.shields.io/badge/-Selenium-limegreen?style=badge&logo=Selenium&logoColor=white)
-![Appium](https://img.shields.io/badge/-Appium-EE376D?style=badge&logo=Appium&logoColor=white)
-![Apache JMeter](https://img.shields.io/badge/-Apache_JMeter-D22128?style=badge&logo=apachejmeter&logoColor=white)
-![Cypress](https://img.shields.io/badge/-Cypress-505050?style=badge&logo=cypress&logoColor=white)
-![Robot Framework](https://img.shields.io/badge/-Robot_Framework-000000?style=badge&logo=robotframework&logoColor=white)
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/7ae43145-a45f-49a5-98ae-693912faae5d" align="right" height="77">
-
-Uma vez que o código é integrado, a próxima etapa é o **teste automatizado** (automation testing) que envolve a execução de um conjunto de testes para garantir que as alterações de código sejam funcionais, atendam aos padrões de qualidade esperados e estejam livres de defeitos. Essa etapa ajuda a identificar problemas no início do processo de desenvolvimento, permitindo que os desenvolvedores os corrijam de maneira rápida e eficiente.
-
-Conforme o tempo passa a tecnologia segue avançando e os sistemas que são desenvolvidos por pessoas da área de TI estão cada vez mais completos. Antigamente os testes manuais eram os mais utilizados, mas eles já não suprem mais às demandas das empresas e acabam sendo suscetíveis a erros. Então, as organizações precisam desenvolver mais e com melhor qualidade, é aí que entram os *testes automatizados* que são programas que executam testes em softwares que estão em construção de uma forma padronizada, sem ser necessário a intervenção humana.
-
-Pois, tais testes possuem funcionalidades capazes de testar de forma automática todos os aspectos de uma plataforma, com o intuito de assegurar um desempenho adequado. Ou seja, a automação de teste é o uso de software para controlar a execução do teste de software, a comparação dos resultados esperados com os resultados reais, a configuração das pré-condições de teste e outras funções de controle e relatório de teste. 
-
-Tal procedimento, gera muito mais eficácia e agilidade na etapa de testes, permitindo que o profissional encontre de uma maneira mais fácil as falhas de segurança, bugs e demais erros que possam comprometer o uso da aplicação.
-
-> Quando o profissional notar que está gastando muito tempo com tarefas repetitivas e quando o software está muito grande, pode ser a hora de automatizar. Mas, é necessário também questionar a viabilidade dessa ação, sendo essencial analisar se com a automação a equipe irá obter ganho de tempo e se conseguirão reduzir custos e manter a qualidade.
-
-Testes automatizados são uma das práticas mais fundamentais no desenvolvimento de software moderno, pois garantem confiabilidade, reduzem bugs em produção, facilitam refatorações e melhoram a documentação viva do sistema. 
-
-Para construir testes automatizados realmente bons, é preciso compreender não só as ferramentas, mas também o processo como um todo, desde a fase de planejamento até a execução contínua. Tudo começa pela compreensão dos **níveis de teste**: 
-
-<img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="277" align="right"> 
-
-1. **Testes de unidade** (isolam pequenas partes do código),
-
-2. **Testes de integração** (verificam a comunicação entre partes),
-
-3. **Testes funcionais** (validam funções específicas do sistema a partir dos requisitos, checando o que o software deve fazer, independentemente de como é implementado),
-
-4. **Testes de sistema** (validam o sistema como um todo),
-
-5. **Testes end-to-end** (simulam o comportamento real do usuário).
-
-Cada nível exige atenção diferente e ferramentas específicas: No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios claros de cobertura: o que está sendo testado, por que está sendo testado e o que não precisa ser testado. 
-
-Bons testes não são só aqueles que passam, mas aqueles que falham quando o comportamento do código foge do esperado. Para isso, as asserções precisam ser claras, específicas e rastreáveis. Boas práticas incluem escrever testes que sejam rápidos, isolados, determinísticos e legíveis. Um teste bom é aquele que alguém consegue entender o que ele verifica só de ler o seu nome e o corpo, sem necessidade de ir até a implementação testada.
-
-A fase de ferramentas é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="377" align="right"> 
-
-Na construção de um bom teste automatizado:
-
-1. o primeiro passo é nomear corretamente o que está sendo testado, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim.
-
-2. Depois, seguir o <a href="https://github.com/IsaacAlves7/qa?tab=readme-ov-file#qa-unit-testing">padrão AAA (Arrange, Act, Assert)</a> é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado.
-
-3. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
-
-4. Outro pilar crucial é a **integração com pipelines de CI/CD**: Automatizar os testes via GitHub Actions, GitLab CI, Jenkins ou Azure DevOps garante que os testes rodam a cada push ou PR, evitando regressões. Um teste que só roda localmente é praticamente inútil em um time com múltiplos desenvolvedores.
-
-Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de coverage (cobertura de código) como **Istanbul**, **Coverlet** ou **Codecov** ajudam a visualizar o quanto do código está sendo testado, embora **cobertura alta não signifique qualidade alta** é possível ter 100% de cobertura e testes inúteis. O ideal é buscar cobertura útil, ou seja, testes que validam fluxos importantes, limites, erros e casos reais de uso.
-
-Por fim, construir um teste automatizado bom exige prática, disciplina e conhecimento. Não é só sobre ferramentas, mas sobre escrever código de teste que seja confiável, fácil de manter e que reflita as regras de negócio do sistema. É preciso ter clareza sobre o que vale a pena testar, manter a suíte de testes rápida e identificar o ponto de equilíbrio entre cobertura e custo de manutenção. Testes automatizados são investimento — e como todo investimento, precisam de foco, consistência e revisão contínua para darem retorno real.
-
-O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes. Veja algumas ferramentas para automação de testes:
-
-<img src="https://github.com/user-attachments/assets/3c87b05b-6715-4178-8166-9bf528c4e3ff" height="77" align="right"> 
-
-1. **Selenium**: é um framework portátil para testar aplicativos web. O Selenium fornece uma ferramenta de reprodução para a criação de testes funcionais sem a necessidade de aprender uma linguagem de script de teste. É provavelmente a ferramenta de automação de testes mais conhecida e utilizada no mundo, especialmente quando o foco são aplicações web. Diferente de soluções comerciais como Ranorex, UFT ou TestComplete, ele é open source, o que significa que não há custo de licença e ele pode ser adaptado de acordo com as necessidades do time. Esse fator, aliado à sua flexibilidade, fez do Selenium uma espécie de padrão de fato em automação de testes web, sendo adotado desde startups até grandes corporações.
-
-<img width="877" height="490" alt="Captura de tela 2025-11-20 202956" src="https://github.com/user-attachments/assets/e01f55a4-7d95-465a-b8c1-156c3874152f" />
-
-2. **Robot Framework**: é uma estrutura genérica de automação de teste para testes de aceitação e desenvolvimento orientado a testes de aceitação. É uma estrutura de teste orientada por palavras-chave que usa a sintaxe de dados de teste tabular. 
-
-3. **Robotium**: é um framework open source de automação de testes voltado especificamente para aplicações Android. Ele surgiu como uma resposta à necessidade de se criar testes funcionais e de interface de forma mais prática e menos trabalhosa do que o que era oferecido nativamente pela API de testes do Android. Diferente de soluções que focam em testes unitários ou apenas em pequenas partes da aplicação, o Robotium foi desenhado para permitir que você crie testes que simulam a interação real de um usuário com o aplicativo, clicando em botões, digitando em campos, navegando por telas e validando os resultados exibidos. Ele funciona essencialmente como uma camada que se apoia no JUnit e traz uma API mais rica e amigável para lidar com a interface de usuário.
-
-4. **Cucumber**: é uma ferramenta de automação de testes que se popularizou por trazer uma abordagem muito forte de BDD (Behavior-Driven Development) para o dia a dia do desenvolvimento de software. Diferente de frameworks mais técnicos, que focam em testes unitários ou funcionais a partir do código, o Cucumber tem como diferencial a ideia de que os testes devem ser escritos em uma linguagem acessível a todos do time — não apenas a desenvolvedores. Ele utiliza a sintaxe Gherkin, que é baseada em descrições de comportamento no formato de cenários, usando estruturas como Dado–Quando–Então. Isso permite que pessoas de negócio, analistas de QA e desenvolvedores conversem sobre o sistema usando a mesma forma de especificação, diminuindo ambiguidades e garantindo que todos entendam da mesma maneira o que está sendo implementado.
-
-5. **Playwright**: é uma ferramenta criada com foco em testes automatizados de aplicações web, mas seu propósito vai um pouco além disso, porque ele também pode ser usado como uma biblioteca de automação de navegação. A origem dele está na mesma equipe que desenvolveu o Puppeteer, do Google, mas a Microsoft o criou para oferecer mais robustez, abrangência e recursos modernos. O Playwright permite em testes com Cross-browser (Chrome Firefox etc) para aplicações web, emulação Mobile para simular dispositivos móveis, e testes de API trata requisições HTTP.
-
-6. TestComplete: é uma ferramenta comercial de automação de testes desenvolvida pela SmartBear que tem como foco facilitar a criação, execução e manutenção de testes funcionais em diferentes tipos de aplicações, desde desktop, web até mobile. A grande proposta dela é oferecer uma plataforma robusta que permite tanto a quem tem experiência em programação quanto a quem não programa criar testes de forma eficiente. Isso é possível porque ela oferece duas formas de trabalho: por um lado, há a possibilidade de construir scripts completos em linguagens como Python, JavaScript, VBScript e outras suportadas, o que dá liberdade total para quem tem familiaridade com código; por outro lado, ela também disponibiliza recursos de gravação e reprodução, em que o testador interage com a aplicação e o TestComplete grava essas interações para gerar um script automaticamente, que depois pode ser reutilizado e refinado.
-
-7. Telerik Test Studio: é uma ferramenta de automação de testes desenvolvida pela Progress, criada para simplificar e acelerar o processo de validação de software em diferentes tipos de aplicações, desde web, desktop até aplicativos responsivos e mobile. O grande diferencial dela é o foco em ser acessível para equipes que não necessariamente têm profundo conhecimento em programação, ao mesmo tempo em que entrega recursos avançados que podem ser explorados por engenheiros de testes mais experientes. Assim como outras soluções comerciais, a proposta é unir praticidade, estabilidade e integração com o ciclo de desenvolvimento.
-
-8. HPE Unified Functional Testing: anteriormente conhecido como HP QuickTest Professional (QTP), é uma das ferramentas mais tradicionais e consolidadas de automação de testes funcionais. Ele foi desenvolvido pela Hewlett-Packard (hoje Micro Focus, depois da aquisição da divisão de software da HPE) e é amplamente utilizado em grandes corporações que precisam validar aplicações complexas, que muitas vezes envolvem uma mistura de sistemas legados, aplicações web modernas e até integrações entre diferentes tecnologias. O grande diferencial do UFT sempre foi a abrangência tecnológica: ele suporta automação em aplicações desktop, web, SAP, Oracle, PeopleSoft, aplicações client-server, APIs e até mobile, tudo em uma única plataforma, reduzindo a necessidade de várias ferramentas diferentes.
-
-9. Ranorex: é uma ferramenta comercial de automação de testes que ganhou bastante destaque justamente por tentar simplificar e unificar a automação em diferentes tipos de aplicações, cobrindo desde softwares desktop, sistemas web até aplicativos mobile. Ele é muito utilizado em ambientes corporativos onde existe a necessidade de automatizar aplicações complexas, que muitas vezes envolvem tecnologias legadas misturadas com plataformas modernas. Seu grande diferencial é oferecer uma interface visual poderosa, que permite a criação de testes sem exigir conhecimento avançado em programação, mas ao mesmo tempo dar liberdade para quem domina código escrever scripts mais sofisticados em linguagens como C# e VB.NET, já que o Ranorex é baseado no ecossistema .NET.
-
-10. Visual Studio Test Professional: é uma edição do Visual Studio voltada especificamente para gestão e execução de testes de software dentro do ecossistema da Microsoft. Ele não é apenas um IDE, mas uma suíte de ferramentas pensada para equipes de QA e de desenvolvimento que precisam trabalhar de forma integrada em projetos com práticas ágeis e DevOps. Enquanto versões como o Visual Studio Enterprise são mais amplas e englobam todo o ciclo de desenvolvimento, o Test Professional é um produto direcionado para o ciclo de vida de testes, oferecendo recursos de planejamento, acompanhamento e execução.
-
-11. TestingWhiz: é uma ferramenta de automação de testes voltada principalmente para equipes que buscam praticidade e velocidade na criação de testes, sem depender fortemente de programação. Diferente de frameworks open source como Selenium, que exigem bastante conhecimento técnico e montagem de infraestrutura, o TestingWhiz aposta em uma abordagem codeless, baseada em uma interface visual intuitiva onde o testador pode construir fluxos de teste arrastando e configurando blocos de ações pré-definidas. Isso o torna bastante atraente para equipes de QA funcionais ou para empresas que querem introduzir automação de forma rápida, sem exigir que todo o time saiba programar.
-
-Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
-
-<img height="377" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
-
-1. **Frameworks de Teste Unitário**:
-   - **JUnit**: Framework de testes unitários para Java. 
-  
-   - **NUnit**: Framework de testes unitários para .NET.
-
-   - **PyTest**: Framework de testes para Python.
-
-   - **Mocha**: Framework de testes para JavaScript e Node.js.
-  
-   - **RSpec**: Framework de testes para Ruby.
-
-   - **TestNG**: Outro framework de testes para Java.
-
-2. **Ferramentas de Teste de Integração e Funcional**:
-
-   - **Selenium**: Automação de navegadores para testes de aplicações web.
-  
-   - **Cypress**: Ferramenta de teste de front-end para aplicações web modernas.
-   
-   - **Protractor**: Ferramenta de teste de end-to-end para aplicações Angular.
-
-   - **Watir**: Ferramenta de automação de testes para aplicações web.
-
-3. **Ferramentas de Teste de Interface de Usuário (UI)**:
-  
-   - **Appium**: Framework de automação para aplicações móveis (iOS e Android).
-   
-   - **TestComplete**: Ferramenta de automação de testes para aplicações desktop, web e móveis.
-  
-   - **Ranorex**: Ferramenta de automação de testes para desktop, web e dispositivos móveis.
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/348f013b-b987-414b-9761-d50698a99649" />
-
-4. **Ferramentas de Teste de Performance e Carga**:
-  
-   - **JMeter**: Ferramenta para testes de carga e performance.
-  
-   - **Gatling**: Ferramenta de teste de carga focada em aplicações web.
-  
-   - **LoadRunner**: Ferramenta de teste de carga e performance da Micro Focus.
-
-5. **Ferramentas de Teste de Segurança**:
-  
-   - **OWASP ZAP**: Ferramenta para testes de penetração de aplicações web.
-  
-   - **Burp Suite**: Ferramenta de teste de segurança para aplicações web.
-  
-   - **Acunetix**: Ferramenta de varredura de segurança para aplicações web.
-
-6. **Ferramentas de Teste de APIs**:
-  
-   - **Postman**: Ferramenta para teste de APIs RESTful.
-  
-   - **SoapUI**: Ferramenta de teste para serviços web SOAP e REST.
-  
-   - **RestAssured**: Biblioteca para teste de APIs REST em Java.
-
-7. **Ferramentas de Integração Contínua**:
-<img height="450" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" />
-
-   - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
-  
-   - **GitHub Actions**: Serviço de integração e entrega contínua integrado ao GitHub.
-
-   - **GitLab CI/CD**: Ferramenta de integração contínua e entrega contínua do GitLab.
-
-   - **CircleCI**: Serviço de integração contínua e entrega contínua.
-
-8. **Ferramentas de Análise de Código e Cobertura de Testes**:
-
-   - **SonarQube**: Ferramenta de análise estática de código que também mede a cobertura de testes.
-
-   - **JaCoCo**: Ferramenta de cobertura de testes para Java.
-
-   - **Cobertura**: Ferramenta de cobertura de testes para Java.
-
-   - **Istanbul**: Ferramenta de cobertura de testes para JavaScript.
-
-Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
-
 ## [QA] Integration Testing
 <img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
 
@@ -2031,7 +1857,7 @@ Sendo um ensaio de arquitetura, não discutiremos os mecanismos e tecnologias do
 > [!Note]
 > Esses padrões e pontos de vista da arquitetura de integração resistirão ao teste do tempo. Gosto de estudar e descrever ideias estáveis pelo seu valor prático. Veja as formas fundamentais pelas quais as coisas interagem; Tudo flui a partir daí. Vá em frente e arquitete, arquiteto.
 
-# 🧪 [QA] TDD - Test-Driven Development 
+# 🧪 TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
 ![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
@@ -2586,6 +2412,179 @@ Cenário: Buscar produto com sucesso
 
 <img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
 
+## [QA] Automation testing
+![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
+![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
+![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
+![xUnit](https://img.shields.io/badge/-xUnit-EF2D5E?style=badge&logo=.NET&logoColor=white) 
+![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white)
+![Selenium](https://img.shields.io/badge/-Selenium-limegreen?style=badge&logo=Selenium&logoColor=white)
+![Appium](https://img.shields.io/badge/-Appium-EE376D?style=badge&logo=Appium&logoColor=white)
+![Apache JMeter](https://img.shields.io/badge/-Apache_JMeter-D22128?style=badge&logo=apachejmeter&logoColor=white)
+![Cypress](https://img.shields.io/badge/-Cypress-505050?style=badge&logo=cypress&logoColor=white)
+![Robot Framework](https://img.shields.io/badge/-Robot_Framework-000000?style=badge&logo=robotframework&logoColor=white)
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/7ae43145-a45f-49a5-98ae-693912faae5d" align="right" height="77">
+
+Uma vez que o código é integrado, a próxima etapa é o **teste automatizado** (automation testing) que envolve a execução de um conjunto de testes para garantir que as alterações de código sejam funcionais, atendam aos padrões de qualidade esperados e estejam livres de defeitos. Essa etapa ajuda a identificar problemas no início do processo de desenvolvimento, permitindo que os desenvolvedores os corrijam de maneira rápida e eficiente.
+
+Conforme o tempo passa a tecnologia segue avançando e os sistemas que são desenvolvidos por pessoas da área de TI estão cada vez mais completos. Antigamente os testes manuais eram os mais utilizados, mas eles já não suprem mais às demandas das empresas e acabam sendo suscetíveis a erros. Então, as organizações precisam desenvolver mais e com melhor qualidade, é aí que entram os *testes automatizados* que são programas que executam testes em softwares que estão em construção de uma forma padronizada, sem ser necessário a intervenção humana.
+
+Pois, tais testes possuem funcionalidades capazes de testar de forma automática todos os aspectos de uma plataforma, com o intuito de assegurar um desempenho adequado. Ou seja, a automação de teste é o uso de software para controlar a execução do teste de software, a comparação dos resultados esperados com os resultados reais, a configuração das pré-condições de teste e outras funções de controle e relatório de teste. 
+
+Tal procedimento, gera muito mais eficácia e agilidade na etapa de testes, permitindo que o profissional encontre de uma maneira mais fácil as falhas de segurança, bugs e demais erros que possam comprometer o uso da aplicação.
+
+> Quando o profissional notar que está gastando muito tempo com tarefas repetitivas e quando o software está muito grande, pode ser a hora de automatizar. Mas, é necessário também questionar a viabilidade dessa ação, sendo essencial analisar se com a automação a equipe irá obter ganho de tempo e se conseguirão reduzir custos e manter a qualidade.
+
+Testes automatizados são uma das práticas mais fundamentais no desenvolvimento de software moderno, pois garantem confiabilidade, reduzem bugs em produção, facilitam refatorações e melhoram a documentação viva do sistema. 
+
+Para construir testes automatizados realmente bons, é preciso compreender não só as ferramentas, mas também o processo como um todo, desde a fase de planejamento até a execução contínua. Tudo começa pela compreensão dos **níveis de teste**: 
+
+<img src="https://user-images.githubusercontent.com/61624336/128188070-c1fff724-f895-4501-bdca-dbab78dca6b1.png" height="277" align="right"> 
+
+1. **Testes de unidade** (isolam pequenas partes do código),
+
+2. **Testes de integração** (verificam a comunicação entre partes),
+
+3. **Testes funcionais** (validam funções específicas do sistema a partir dos requisitos, checando o que o software deve fazer, independentemente de como é implementado),
+
+4. **Testes de sistema** (validam o sistema como um todo),
+
+5. **Testes end-to-end** (simulam o comportamento real do usuário).
+
+Cada nível exige atenção diferente e ferramentas específicas: No início do ciclo, o **desenho dos testes** precisa ser baseado em critérios claros de cobertura: o que está sendo testado, por que está sendo testado e o que não precisa ser testado. 
+
+Bons testes não são só aqueles que passam, mas aqueles que falham quando o comportamento do código foge do esperado. Para isso, as asserções precisam ser claras, específicas e rastreáveis. Boas práticas incluem escrever testes que sejam rápidos, isolados, determinísticos e legíveis. Um teste bom é aquele que alguém consegue entender o que ele verifica só de ler o seu nome e o corpo, sem necessidade de ir até a implementação testada.
+
+A fase de ferramentas é tão importante quanto o planejamento. Para testes de unidade, temos ferramentas como **JUnit** (Java), **xUnit** (C#), **pytest** (Python), **Jest** e **Vitest** (JavaScript/TypeScript), **Elixir ExUnit**, entre outras. Para mocks e test doubles, usamos bibliotecas como **Moq**, **Sinon**, **Mockito** ou **NSubstitute**, que ajudam a isolar dependências externas, como chamadas a APIs, bancos de dados e arquivos. Em testes de integração, frameworks como **TestContainers**, **WireMock** ou bancos de dados em memória ajudam a montar ambientes realistas. Para testes de aceitação e end-to-end, ferramentas como **Cypress**, **Playwright**, **Selenium** e **Puppeteer** são as mais utilizadas, permitindo testes que interagem com o navegador ou sistema completo, validando fluxos reais.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/52a5bb6f-070c-4635-8de1-43db6d07500d" height="377" align="right"> 
+
+Na construção de um bom teste automatizado:
+
+1. o primeiro passo é nomear corretamente o que está sendo testado, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim.
+
+2. Depois, seguir o <a href="https://github.com/IsaacAlves7/qa?tab=readme-ov-file#qa-unit-testing">padrão AAA (Arrange, Act, Assert)</a> é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado.
+
+3. Também é essencial não testar lógica interna demais (isso gera testes frágeis), mas focar no comportamento observável da função ou componente.
+
+4. Outro pilar crucial é a **integração com pipelines de CI/CD**: Automatizar os testes via GitHub Actions, GitLab CI, Jenkins ou Azure DevOps garante que os testes rodam a cada push ou PR, evitando regressões. Um teste que só roda localmente é praticamente inútil em um time com múltiplos desenvolvedores.
+
+Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de coverage (cobertura de código) como **Istanbul**, **Coverlet** ou **Codecov** ajudam a visualizar o quanto do código está sendo testado, embora **cobertura alta não signifique qualidade alta** é possível ter 100% de cobertura e testes inúteis. O ideal é buscar cobertura útil, ou seja, testes que validam fluxos importantes, limites, erros e casos reais de uso.
+
+Por fim, construir um teste automatizado bom exige prática, disciplina e conhecimento. Não é só sobre ferramentas, mas sobre escrever código de teste que seja confiável, fácil de manter e que reflita as regras de negócio do sistema. É preciso ter clareza sobre o que vale a pena testar, manter a suíte de testes rápida e identificar o ponto de equilíbrio entre cobertura e custo de manutenção. Testes automatizados são investimento — e como todo investimento, precisam de foco, consistência e revisão contínua para darem retorno real.
+
+O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes. Veja algumas ferramentas para automação de testes:
+
+<img src="https://github.com/user-attachments/assets/3c87b05b-6715-4178-8166-9bf528c4e3ff" height="77" align="right"> 
+
+1. **Selenium**: é um framework portátil para testar aplicativos web. O Selenium fornece uma ferramenta de reprodução para a criação de testes funcionais sem a necessidade de aprender uma linguagem de script de teste. É provavelmente a ferramenta de automação de testes mais conhecida e utilizada no mundo, especialmente quando o foco são aplicações web. Diferente de soluções comerciais como Ranorex, UFT ou TestComplete, ele é open source, o que significa que não há custo de licença e ele pode ser adaptado de acordo com as necessidades do time. Esse fator, aliado à sua flexibilidade, fez do Selenium uma espécie de padrão de fato em automação de testes web, sendo adotado desde startups até grandes corporações.
+
+<img width="877" height="490" alt="Captura de tela 2025-11-20 202956" src="https://github.com/user-attachments/assets/e01f55a4-7d95-465a-b8c1-156c3874152f" />
+
+2. **Robot Framework**: é uma estrutura genérica de automação de teste para testes de aceitação e desenvolvimento orientado a testes de aceitação. É uma estrutura de teste orientada por palavras-chave que usa a sintaxe de dados de teste tabular. 
+
+3. **Robotium**: é um framework open source de automação de testes voltado especificamente para aplicações Android. Ele surgiu como uma resposta à necessidade de se criar testes funcionais e de interface de forma mais prática e menos trabalhosa do que o que era oferecido nativamente pela API de testes do Android. Diferente de soluções que focam em testes unitários ou apenas em pequenas partes da aplicação, o Robotium foi desenhado para permitir que você crie testes que simulam a interação real de um usuário com o aplicativo, clicando em botões, digitando em campos, navegando por telas e validando os resultados exibidos. Ele funciona essencialmente como uma camada que se apoia no JUnit e traz uma API mais rica e amigável para lidar com a interface de usuário.
+
+4. **Cucumber**: é uma ferramenta de automação de testes que se popularizou por trazer uma abordagem muito forte de BDD (Behavior-Driven Development) para o dia a dia do desenvolvimento de software. Diferente de frameworks mais técnicos, que focam em testes unitários ou funcionais a partir do código, o Cucumber tem como diferencial a ideia de que os testes devem ser escritos em uma linguagem acessível a todos do time — não apenas a desenvolvedores. Ele utiliza a sintaxe Gherkin, que é baseada em descrições de comportamento no formato de cenários, usando estruturas como Dado–Quando–Então. Isso permite que pessoas de negócio, analistas de QA e desenvolvedores conversem sobre o sistema usando a mesma forma de especificação, diminuindo ambiguidades e garantindo que todos entendam da mesma maneira o que está sendo implementado.
+
+5. **Playwright**: é uma ferramenta criada com foco em testes automatizados de aplicações web, mas seu propósito vai um pouco além disso, porque ele também pode ser usado como uma biblioteca de automação de navegação. A origem dele está na mesma equipe que desenvolveu o Puppeteer, do Google, mas a Microsoft o criou para oferecer mais robustez, abrangência e recursos modernos. O Playwright permite em testes com Cross-browser (Chrome Firefox etc) para aplicações web, emulação Mobile para simular dispositivos móveis, e testes de API trata requisições HTTP.
+
+6. TestComplete: é uma ferramenta comercial de automação de testes desenvolvida pela SmartBear que tem como foco facilitar a criação, execução e manutenção de testes funcionais em diferentes tipos de aplicações, desde desktop, web até mobile. A grande proposta dela é oferecer uma plataforma robusta que permite tanto a quem tem experiência em programação quanto a quem não programa criar testes de forma eficiente. Isso é possível porque ela oferece duas formas de trabalho: por um lado, há a possibilidade de construir scripts completos em linguagens como Python, JavaScript, VBScript e outras suportadas, o que dá liberdade total para quem tem familiaridade com código; por outro lado, ela também disponibiliza recursos de gravação e reprodução, em que o testador interage com a aplicação e o TestComplete grava essas interações para gerar um script automaticamente, que depois pode ser reutilizado e refinado.
+
+7. Telerik Test Studio: é uma ferramenta de automação de testes desenvolvida pela Progress, criada para simplificar e acelerar o processo de validação de software em diferentes tipos de aplicações, desde web, desktop até aplicativos responsivos e mobile. O grande diferencial dela é o foco em ser acessível para equipes que não necessariamente têm profundo conhecimento em programação, ao mesmo tempo em que entrega recursos avançados que podem ser explorados por engenheiros de testes mais experientes. Assim como outras soluções comerciais, a proposta é unir praticidade, estabilidade e integração com o ciclo de desenvolvimento.
+
+8. HPE Unified Functional Testing: anteriormente conhecido como HP QuickTest Professional (QTP), é uma das ferramentas mais tradicionais e consolidadas de automação de testes funcionais. Ele foi desenvolvido pela Hewlett-Packard (hoje Micro Focus, depois da aquisição da divisão de software da HPE) e é amplamente utilizado em grandes corporações que precisam validar aplicações complexas, que muitas vezes envolvem uma mistura de sistemas legados, aplicações web modernas e até integrações entre diferentes tecnologias. O grande diferencial do UFT sempre foi a abrangência tecnológica: ele suporta automação em aplicações desktop, web, SAP, Oracle, PeopleSoft, aplicações client-server, APIs e até mobile, tudo em uma única plataforma, reduzindo a necessidade de várias ferramentas diferentes.
+
+9. Ranorex: é uma ferramenta comercial de automação de testes que ganhou bastante destaque justamente por tentar simplificar e unificar a automação em diferentes tipos de aplicações, cobrindo desde softwares desktop, sistemas web até aplicativos mobile. Ele é muito utilizado em ambientes corporativos onde existe a necessidade de automatizar aplicações complexas, que muitas vezes envolvem tecnologias legadas misturadas com plataformas modernas. Seu grande diferencial é oferecer uma interface visual poderosa, que permite a criação de testes sem exigir conhecimento avançado em programação, mas ao mesmo tempo dar liberdade para quem domina código escrever scripts mais sofisticados em linguagens como C# e VB.NET, já que o Ranorex é baseado no ecossistema .NET.
+
+10. Visual Studio Test Professional: é uma edição do Visual Studio voltada especificamente para gestão e execução de testes de software dentro do ecossistema da Microsoft. Ele não é apenas um IDE, mas uma suíte de ferramentas pensada para equipes de QA e de desenvolvimento que precisam trabalhar de forma integrada em projetos com práticas ágeis e DevOps. Enquanto versões como o Visual Studio Enterprise são mais amplas e englobam todo o ciclo de desenvolvimento, o Test Professional é um produto direcionado para o ciclo de vida de testes, oferecendo recursos de planejamento, acompanhamento e execução.
+
+11. TestingWhiz: é uma ferramenta de automação de testes voltada principalmente para equipes que buscam praticidade e velocidade na criação de testes, sem depender fortemente de programação. Diferente de frameworks open source como Selenium, que exigem bastante conhecimento técnico e montagem de infraestrutura, o TestingWhiz aposta em uma abordagem codeless, baseada em uma interface visual intuitiva onde o testador pode construir fluxos de teste arrastando e configurando blocos de ações pré-definidas. Isso o torna bastante atraente para equipes de QA funcionais ou para empresas que querem introduzir automação de forma rápida, sem exigir que todo o time saiba programar.
+
+Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
+
+<img height="377" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
+
+1. **Frameworks de Teste Unitário**:
+   - **JUnit**: Framework de testes unitários para Java. 
+  
+   - **NUnit**: Framework de testes unitários para .NET.
+
+   - **PyTest**: Framework de testes para Python.
+
+   - **Mocha**: Framework de testes para JavaScript e Node.js.
+  
+   - **RSpec**: Framework de testes para Ruby.
+
+   - **TestNG**: Outro framework de testes para Java.
+
+2. **Ferramentas de Teste de Integração e Funcional**:
+
+   - **Selenium**: Automação de navegadores para testes de aplicações web.
+  
+   - **Cypress**: Ferramenta de teste de front-end para aplicações web modernas.
+   
+   - **Protractor**: Ferramenta de teste de end-to-end para aplicações Angular.
+
+   - **Watir**: Ferramenta de automação de testes para aplicações web.
+
+3. **Ferramentas de Teste de Interface de Usuário (UI)**:
+  
+   - **Appium**: Framework de automação para aplicações móveis (iOS e Android).
+   
+   - **TestComplete**: Ferramenta de automação de testes para aplicações desktop, web e móveis.
+  
+   - **Ranorex**: Ferramenta de automação de testes para desktop, web e dispositivos móveis.
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/348f013b-b987-414b-9761-d50698a99649" />
+
+4. **Ferramentas de Teste de Performance e Carga**:
+  
+   - **JMeter**: Ferramenta para testes de carga e performance.
+  
+   - **Gatling**: Ferramenta de teste de carga focada em aplicações web.
+  
+   - **LoadRunner**: Ferramenta de teste de carga e performance da Micro Focus.
+
+5. **Ferramentas de Teste de Segurança**:
+  
+   - **OWASP ZAP**: Ferramenta para testes de penetração de aplicações web.
+  
+   - **Burp Suite**: Ferramenta de teste de segurança para aplicações web.
+  
+   - **Acunetix**: Ferramenta de varredura de segurança para aplicações web.
+
+6. **Ferramentas de Teste de APIs**:
+  
+   - **Postman**: Ferramenta para teste de APIs RESTful.
+  
+   - **SoapUI**: Ferramenta de teste para serviços web SOAP e REST.
+  
+   - **RestAssured**: Biblioteca para teste de APIs REST em Java.
+
+7. **Ferramentas de Integração Contínua**:
+<img height="450" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" />
+
+   - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
+  
+   - **GitHub Actions**: Serviço de integração e entrega contínua integrado ao GitHub.
+
+   - **GitLab CI/CD**: Ferramenta de integração contínua e entrega contínua do GitLab.
+
+   - **CircleCI**: Serviço de integração contínua e entrega contínua.
+
+8. **Ferramentas de Análise de Código e Cobertura de Testes**:
+
+   - **SonarQube**: Ferramenta de análise estática de código que também mede a cobertura de testes.
+
+   - **JaCoCo**: Ferramenta de cobertura de testes para Java.
+
+   - **Cobertura**: Ferramenta de cobertura de testes para Java.
+
+   - **Istanbul**: Ferramenta de cobertura de testes para JavaScript.
+
+Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
 
 ## [QA] ATDD - Acceptance Test-Driven Development
 <img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
