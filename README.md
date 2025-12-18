@@ -9,6 +9,13 @@
 
 > Versículo chave: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." - Provérbios 16:3
 
+# It's a repository of QA/QC - Quality Assurance and Quality Control 🧪
+<a href="https://github.com/ryanmcdermott/clean-code-javascript"><img src="https://img.shields.io/badge/Clean_Code-JS-ECD53F?style=flat&logo=JavaScript&logoColor=white"></a> <a href="https://github.com/labs42io/clean-code-typescript"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> 
+
+> 🧪 **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.).
+
+<div align="center"><img height="177" src="https://github.com/user-attachments/assets/9ace00f2-6c79-43b6-a6ca-fa295eff4e1c" /></div>
+
 Profissional de QA/QC com experiência multidisciplinar e visão sistêmica da qualidade de software ao longo de todo o ciclo de vida do produto, atuando de forma estratégica na prevenção de defeitos (Quality Assurance) e de forma operacional na detecção e controle da qualidade (Quality Control). Minha atuação não se limita à fase final do desenvolvimento, mas começa desde o entendimento de requisitos, regras de negócio e riscos, garantindo que a qualidade seja construída desde a concepção até a entrega e operação do software.
 
 No contexto de Quality Assurance, trabalho com definição e evolução de processos de qualidade, estabelecendo padrões, critérios de aceitação e estratégias de teste alinhadas aos objetivos do negócio. Aplico princípios como shift-left testing, prevenção de defeitos, melhoria contínua e gestão de riscos, colaborando diretamente com times de produto, design e engenharia para garantir requisitos claros, testáveis e rastreáveis. Atuo com abordagens como TDD, BDD e ATDD, promovendo testes orientados a comportamento e valor de negócio, além de apoiar a adoção de boas práticas como pirâmide de testes, testabilidade de software e quality gates integrados ao CI/CD.
@@ -21,7 +28,7 @@ Ao longo das fases do desenvolvimento, participo ativamente de planejamento, ref
 
 Além disso, atuo na validação da experiência do usuário e do comportamento do sistema em produção, colaborando com monitoramento, observabilidade e análise de incidentes para retroalimentar o processo de qualidade. A qualidade não termina no deploy, mas continua no acompanhamento do uso real do software, garantindo confiabilidade, segurança e evolução sustentável. Dessa forma, QA/QC se tornam pilares estratégicos para a entrega de software robusto, previsível e alinhado às expectativas técnicas e de negócio.
 
-# QA/QC - Quality Assurance and Quality Control 👨🏾‍🔬
+# 👨🏾‍🔬 QA/QC - Quality Assurance and Quality Control
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white">
 
 <a href="https://medium.com/the-tech-collective/a-day-in-my-life-as-a-qa-manager-3832eaf39965"><img src="https://em-content.zobj.net/source/microsoft-teams/363/man-scientist-medium-dark-skin-tone_1f468-1f3fe-200d-1f52c.png" align="right" height="77"></a>
