@@ -131,11 +131,11 @@ Se você quiser algo ainda mais alinhado com engenharia de software e menos “a
 
 Em resumo, o melhor nome não é “teste” puro. É algo que diga claramente **o que está sendo testado e como**. Algo como `test/unit`, `test/integration` ou `qa/manual` é muito mais legível, profissional e sustentável do que `branch-teste` ou variações vagas. Então, resumindo de forma direta: `test/` é o padrão mais correto, mais neutro e mais alinhado com práticas modernas de versionamento. `tests/` é aceitável, mas menos comum. `tdd/` e `bdd/` não são bons nomes de branch, porque descrevem processo mental, não objetivo técnico.
 
-Pensando como engenheiro e não de preferência pessoal, o melhor padrão é **`test/`**, não `tests/`, e evitar `tdd/` ou `bdd/` como prefixo de branch. Isso não é porque TDD ou BDD sejam ruins, mas porque **branch nomeia intenção operacional**, não metodologia.
+Pensando como engenheiro e não de preferência pessoal, o melhor padrão é **`test/`**, não `tests/`, e evitar `tdd/` ou `bdd/` como prefixo de branch. Isso não é porque TDD ou BDD sejam ruins, mas porque **branch nomeia intenção operacional**, não metodologia:
 
-`test/` funciona melhor porque a branch representa uma **atividade de validação** temporária. Ela existe para testar algo, validar comportamento, rodar suites, ajustar cenários e depois morrer. `tests/` no plural costuma ser usado para **pastas no código**, não para fluxo de versionamento, e acaba misturando semânticas.
+- [x] `test/` funciona melhor porque a branch representa uma **atividade de validação** temporária. Ela existe para testar algo, validar comportamento, rodar suites, ajustar cenários e depois morrer. `tests/` no plural costuma ser usado para **pastas no código**, não para fluxo de versionamento, e acaba misturando semânticas.
 
-`tdd/` e `bdd/` são ainda menos adequados como prefixo de branch porque *TDD e BDD são estratégias de desenvolvimento*, não tipos de branch. Você pode perfeitamente estar fazendo TDD dentro de uma `feature/` ou até numa `fix/`. Criar uma branch `tdd/` dá a falsa impressão de que só ali se pratica TDD, o que conceitualmente não faz sentido.
+- [ ] `tdd/` e `bdd/` são ainda menos adequados como prefixo de branch porque *TDD e BDD são estratégias de desenvolvimento*, não tipos de branch. Você pode perfeitamente estar fazendo TDD dentro de uma `feature/` ou até numa `fix/`. Criar uma branch `tdd/` dá a falsa impressão de que só ali se pratica TDD, o que conceitualmente não faz sentido.
 
 O que realmente comunica bem é combinar `test/` com o **nível do teste** e, se necessário, com o **contexto do sistema**. Algo como `test/unit-auth`, `test/integration-payment-flow` ou `test/e2e-checkout`. Isso deixa claro para qualquer pessoa do time que aquela branch não entrega funcionalidade nova, não corrige bug produtivo e não é release — ela existe para validar.
 
