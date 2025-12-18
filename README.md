@@ -890,102 +890,6 @@ Quando Usar Cada Uma?
 
 Essas ferramentas podem ser combinadas para cobrir todos os aspectos de testes E2E, desde a interação do usuário até a integridade dos dados.
 
-## [QA] UAT - User Acceptance Testing
-<img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
-
-<img src="https://github.com/user-attachments/assets/280f6440-0109-4b54-98b4-f664b2e9af9b" align="right" height="77">
-
-O **User Acceptance Testing (UAT)**, ou Teste de Aceitação do Usuário, é uma etapa final e crucial dentro do ciclo de testes de software. Ele acontece quando o sistema já passou por testes internos como unitários, de integração, funcionais e de sistema e está teoricamente pronto para ser colocado em produção. 
-
-A ideia do UAT é validar se o software realmente atende às necessidades do usuário final e aos requisitos de negócio. Aqui, o foco não é tanto verificar se o código funciona sem erros técnicos, mas se a solução é útil, intuitiva e cumpre aquilo que foi solicitado e esperado. Por isso, normalmente é realizado pelos próprios usuários, clientes, stakeholders ou representantes do negócio, com o suporte da equipe de QA.
-
-Dentro do ecossistema de QA, o UAT se integra como a camada de validação final que coroa todo o pipeline de testes. Em um fluxo típico, o software passa por testes unitários para verificar pequenos blocos de código isolados, depois vai para testes de integração para garantir que os módulos funcionem em conjunto, segue para testes funcionais e de sistema que avaliam requisitos e comportamento completo, pode ainda passar por testes não funcionais como performance, segurança e usabilidade. Só depois desse ciclo é que entra o UAT, pois não faria sentido colocar o usuário para validar algo que ainda tem falhas básicas de funcionamento ou de estabilidade.
-
-O UAT funciona quase como um “filtro de realidade”: ele conecta a linguagem técnica do QA com a linguagem de negócio do cliente. Muitas vezes, mesmo um sistema tecnicamente correto pode falhar no UAT se não atender ao fluxo real que o usuário precisa seguir no dia a dia. É comum, por exemplo, que durante o UAT se descubra que um processo está tecnicamente certo, mas exige muitos cliques desnecessários, ou não reflete a forma como o trabalho é feito na prática. Assim, ele serve para alinhar expectativas, corrigir ajustes de usabilidade e garantir que, no momento do go-live, o software não só funcione, mas também seja aceito pelo público a que se destina.
-
-Em termos de QA, você pode pensar no UAT como o elo entre testes de qualidade técnica e testes de valor de negócio. Ele não substitui os outros, mas se apoia neles: se os testes anteriores garantem que o software é confiável, o UAT garante que ele é útil e aprovado pelo cliente.
-
-Muita gente acaba confundindo os papéis de **UAT, MVP, Release e Continuous Delivery**, porque todos estão ligados à entrega e validação do software, mas cada um tem uma posição e função distintas dentro do ciclo de desenvolvimento. Para não misturar os conceitos, vale enxergar como uma sequência natural, onde cada etapa se apoia na anterior.
-
-O ciclo começa antes mesmo do UAT, com a concepção do **MVP (Minimum Viable Product)**. Aqui o objetivo é construir a versão mínima do produto que já entrega valor real para o usuário, mesmo que com funcionalidades limitadas. Esse MVP é fruto de testes técnicos e de negócio, mas ainda não é a versão que vai para produção de forma plena — ele serve como uma forma de validar hipóteses, ganhar feedback rápido e evitar investimentos pesados em algo que o usuário não queira.
-
-Uma vez que o MVP esteja pronto em termos técnicos, entra o *UAT (User Acceptance Testing)*. É nessa fase que o usuário final, ou representantes de negócio, testam se o que foi construído atende de fato às suas necessidades. É o momento de validar se o software não só funciona, mas se está *apto a ser aceito*. Esse ponto é delicado: não se deve liberar uma Release ou acionar um pipeline de Continuous Delivery antes de o UAT aprovar. O UAT funciona como um “checkpoint” de aceitação.
-
-Com o UAT aprovado, abre-se espaço para a **Release**, que é a entrega oficial de uma versão do software. A Release pode ser do próprio MVP (caso aprovado), ou de incrementos posteriores. Aqui o software deixa o ambiente de homologação/teste e vai para produção. É importante diferenciar: Release não é sinônimo de deploy. O deploy pode ser frequente (parte do CD), mas a Release é uma decisão de negócio, de colocar uma versão nas mãos do cliente com um pacote de funcionalidades definido.
-
-O **Continuous Delivery (CD)** é a engrenagem que sustenta tudo isso. Ele garante que o software esteja sempre em condição de ser liberado: builds automatizados, testes automatizados, pipelines de integração e entrega prontos. O CD assegura que qualquer mudança de código possa ser validada e empacotada rapidamente para uma possível Release, mas não substitui a decisão de liberar, que continua dependendo de critérios como UAT e estratégia de produto.
-
-O passo a passo adequado, sem bagunça, pode ser entendido assim: primeiro você constrói o MVP para validar hipóteses → depois submete esse MVP (ou incrementos subsequentes) ao UAT para validação de negócio → com o UAT aprovado, gera uma Release oficial que pode ser entregue aos usuários finais → e todo esse processo é sustentado pelo Continuous Delivery, que dá agilidade e confiabilidade ao ciclo.
-
-Ou seja, MVP é o “o quê” inicial, UAT é o “pode ser aceito?”, Release é o “vai para produção”, e Continuous Delivery é o “como fazer isso de forma contínua e confiável”.
-
-Nos diferentes ecossistemas de linguagens, o conceito de testes de aceitação varia bastante, mas em geral envolve frameworks que permitem validar o comportamento da aplicação do ponto de vista do usuário final, muitas vezes com suporte a **BDD (Behavior Driven Development)** ou integração com navegadores. Vou listar os mais conhecidos em cada um dos ecossistemas:
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/f21ec8fe-f144-45dd-a1e3-2278ed47db76" />
-
-**C/C++** Como o foco dessas linguagens é mais baixo nível, há menos ferramentas prontas para testes de aceitação de aplicações web. Ainda assim, existem opções:
-
-* **CppUnit** – mais voltado para testes de unidade, mas pode ser usado em cenários de aceitação.
-* **Cucumber-Cpp** – integração do Cucumber com C++, permite escrever testes de aceitação em Gherkin.
-* **GoogleTest (gtest)** – é mais unitário, mas com a disciplina certa pode ser usado para aceitação.
-
-**C# (.NET)** O ecossistema .NET tem um conjunto forte de ferramentas de testes de aceitação:
-
-* **SpecFlow** – equivalente ao Cucumber, usa Gherkin para BDD.
-* **Selenium WebDriver** – para testes de aceitação de interfaces web.
-* **Playwright for .NET** – automação de browsers moderna, usada também em testes de aceitação.
-* **xBehave.net** – extensão do xUnit para BDD.
-
-**Ruby** É um dos ecossistemas mais ricos nesse aspecto:
-
-* **Capybara** – padrão de fato em Rails para testes de aceitação.
-* **Cucumber** – BDD com escrita em Gherkin.
-* **RSpec + Capybara** – combinação clássica para acceptance testing.
-* **Turnip** – DSL alternativa integrada ao RSpec para cenários de aceitação.
-
-**PHP** A comunidade PHP tem boas ferramentas para BDD e acceptance testing:
-
-* **Behat** – inspirado no Cucumber, usa Gherkin.
-* **Codeception** – framework poderoso que cobre testes unitários, funcionais e de aceitação.
-* **Laravel Dusk** – no ecossistema Laravel, usado para testes de aceitação com browser automation.
-
-**JavaScript (Node.js e frontend)** Um dos ecossistemas mais ativos em testes de aceitação:
-
-* **Cypress** – muito popular para testes end-to-end e aceitação de aplicações web.
-* **Playwright** – concorrente moderno do Cypress, altamente estável.
-* **Puppeteer** – automação do Chrome/Chromium, usado para acceptance testing.
-* **Nightwatch.js** – framework baseado em Selenium.
-* **Jest + Testing Library (React Testing Library, por exemplo)** – pode ser usado para acceptance em SPAs.
-
-**Python** A comunidade Python também é forte em BDD e testes de aceitação:
-
-* **Behave** – equivalente ao Cucumber, usa Gherkin.
-* **Lettuce** – BDD inspirado no Cucumber.
-* **Robot Framework** – muito popular para acceptance testing, com DSL própria.
-* **pytest-bdd** – extensão do pytest para BDD.
-* **Selenium / Playwright Python** – para automação de browser em testes de aceitação.
-
-**Go (Golang)** Go tende a ser mais pragmático, mas há bibliotecas para acceptance/BDD:
-
-* **Godog** – equivalente ao Cucumber, com Gherkin.
-* **Agouti** – para acceptance testing com integração a Selenium e PhantomJS.
-* **Ginkgo** – framework BDD muito usado, ainda que mais comum em unit/integração.
-
-**Rust** Rust ainda está amadurecendo em testes de aceitação, mas já há ferramentas:
-
-* **Cucumber-rs** – implementação do Cucumber para Rust.
-* **cucumber (new)** – projeto moderno para BDD em Rust.
-* **assert\_cmd** + **predicates** – muitas vezes usados juntos para acceptance testing de CLIs.
-* **Thirtyfour** – WebDriver client para Rust (similar ao Selenium).
-
-**Elixir** O ecossistema Elixir tem boas ferramentas alinhadas ao Phoenix (framework web):
-
-* **Wallaby** – biblioteca para acceptance testing de aplicações web com browser automation.
-* **Hound** – wrapper em Elixir para Selenium/WebDriver.
-* **ExUnit + BDD-style DSLs** – muitas vezes usado diretamente com helpers de alto nível.
-
-Se você reparar, há um padrão: quase todos os ecossistemas têm algum tipo de integração com **Cucumber/Gherkin** para cenários de aceitação e ferramentas ligadas a **browser automation** (Selenium, Playwright, Cypress etc.), e depois cada comunidade cria bibliotecas mais idiomáticas para seu ambiente.
-
 # 🎡 DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
@@ -2610,9 +2514,104 @@ Cenário: Buscar produto com sucesso
 <img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
 
 # 📦 ATDD - Acceptance Test-Driven Development
-<img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
+<img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
+
+<img src="https://github.com/user-attachments/assets/280f6440-0109-4b54-98b4-f664b2e9af9b" align="right" height="77">
 
 O **ATDD - Acceptance Test-Driven Development** é uma prática e uma variação do desenvolvimento orientado a testes (TDD) que coloca o **teste de aceitação** como ponto central do ciclo. Enquanto no TDD tradicional o desenvolvedor escreve primeiro testes unitários para depois implementar o código que os satisfaz, no ATTD o processo começa com a definição dos testes de aceitação, geralmente descritos em linguagem mais próxima do negócio, representando os critérios que o sistema precisa cumprir para ser aceito pelo cliente ou pelo usuário final.
+
+O **User Acceptance Testing (UAT)**, ou Teste de Aceitação do Usuário, é uma etapa final e crucial dentro do ciclo de testes de software. Ele acontece quando o sistema já passou por testes internos como unitários, de integração, funcionais e de sistema e está teoricamente pronto para ser colocado em produção. 
+
+A ideia do UAT é validar se o software realmente atende às necessidades do usuário final e aos requisitos de negócio. Aqui, o foco não é tanto verificar se o código funciona sem erros técnicos, mas se a solução é útil, intuitiva e cumpre aquilo que foi solicitado e esperado. Por isso, normalmente é realizado pelos próprios usuários, clientes, stakeholders ou representantes do negócio, com o suporte da equipe de QA.
+
+Dentro do ecossistema de QA, o UAT se integra como a camada de validação final que coroa todo o pipeline de testes. Em um fluxo típico, o software passa por testes unitários para verificar pequenos blocos de código isolados, depois vai para testes de integração para garantir que os módulos funcionem em conjunto, segue para testes funcionais e de sistema que avaliam requisitos e comportamento completo, pode ainda passar por testes não funcionais como performance, segurança e usabilidade. Só depois desse ciclo é que entra o UAT, pois não faria sentido colocar o usuário para validar algo que ainda tem falhas básicas de funcionamento ou de estabilidade.
+
+O UAT funciona quase como um “filtro de realidade”: ele conecta a linguagem técnica do QA com a linguagem de negócio do cliente. Muitas vezes, mesmo um sistema tecnicamente correto pode falhar no UAT se não atender ao fluxo real que o usuário precisa seguir no dia a dia. É comum, por exemplo, que durante o UAT se descubra que um processo está tecnicamente certo, mas exige muitos cliques desnecessários, ou não reflete a forma como o trabalho é feito na prática. Assim, ele serve para alinhar expectativas, corrigir ajustes de usabilidade e garantir que, no momento do go-live, o software não só funcione, mas também seja aceito pelo público a que se destina.
+
+<img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
+
+Em termos de QA, você pode pensar no UAT como o elo entre testes de qualidade técnica e testes de valor de negócio. Ele não substitui os outros, mas se apoia neles: se os testes anteriores garantem que o software é confiável, o UAT garante que ele é útil e aprovado pelo cliente.
+
+Muita gente acaba confundindo os papéis de **UAT, MVP, Release e Continuous Delivery**, porque todos estão ligados à entrega e validação do software, mas cada um tem uma posição e função distintas dentro do ciclo de desenvolvimento. Para não misturar os conceitos, vale enxergar como uma sequência natural, onde cada etapa se apoia na anterior.
+
+O ciclo começa antes mesmo do UAT, com a concepção do **MVP (Minimum Viable Product)**. Aqui o objetivo é construir a versão mínima do produto que já entrega valor real para o usuário, mesmo que com funcionalidades limitadas. Esse MVP é fruto de testes técnicos e de negócio, mas ainda não é a versão que vai para produção de forma plena — ele serve como uma forma de validar hipóteses, ganhar feedback rápido e evitar investimentos pesados em algo que o usuário não queira.
+
+Uma vez que o MVP esteja pronto em termos técnicos, entra o *UAT (User Acceptance Testing)*. É nessa fase que o usuário final, ou representantes de negócio, testam se o que foi construído atende de fato às suas necessidades. É o momento de validar se o software não só funciona, mas se está *apto a ser aceito*. Esse ponto é delicado: não se deve liberar uma Release ou acionar um pipeline de Continuous Delivery antes de o UAT aprovar. O UAT funciona como um “checkpoint” de aceitação.
+
+Com o UAT aprovado, abre-se espaço para a **Release**, que é a entrega oficial de uma versão do software. A Release pode ser do próprio MVP (caso aprovado), ou de incrementos posteriores. Aqui o software deixa o ambiente de homologação/teste e vai para produção. É importante diferenciar: Release não é sinônimo de deploy. O deploy pode ser frequente (parte do CD), mas a Release é uma decisão de negócio, de colocar uma versão nas mãos do cliente com um pacote de funcionalidades definido.
+
+O **Continuous Delivery (CD)** é a engrenagem que sustenta tudo isso. Ele garante que o software esteja sempre em condição de ser liberado: builds automatizados, testes automatizados, pipelines de integração e entrega prontos. O CD assegura que qualquer mudança de código possa ser validada e empacotada rapidamente para uma possível Release, mas não substitui a decisão de liberar, que continua dependendo de critérios como UAT e estratégia de produto.
+
+O passo a passo adequado, sem bagunça, pode ser entendido assim: primeiro você constrói o MVP para validar hipóteses → depois submete esse MVP (ou incrementos subsequentes) ao UAT para validação de negócio → com o UAT aprovado, gera uma Release oficial que pode ser entregue aos usuários finais → e todo esse processo é sustentado pelo Continuous Delivery, que dá agilidade e confiabilidade ao ciclo.
+
+Ou seja, MVP é o “o quê” inicial, UAT é o “pode ser aceito?”, Release é o “vai para produção”, e Continuous Delivery é o “como fazer isso de forma contínua e confiável”.
+
+Nos diferentes ecossistemas de linguagens, o conceito de testes de aceitação varia bastante, mas em geral envolve frameworks que permitem validar o comportamento da aplicação do ponto de vista do usuário final, muitas vezes com suporte a **BDD (Behavior Driven Development)** ou integração com navegadores. Vou listar os mais conhecidos em cada um dos ecossistemas:
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/f21ec8fe-f144-45dd-a1e3-2278ed47db76" />
+
+**C/C++** Como o foco dessas linguagens é mais baixo nível, há menos ferramentas prontas para testes de aceitação de aplicações web. Ainda assim, existem opções:
+
+* **CppUnit** – mais voltado para testes de unidade, mas pode ser usado em cenários de aceitação.
+* **Cucumber-Cpp** – integração do Cucumber com C++, permite escrever testes de aceitação em Gherkin.
+* **GoogleTest (gtest)** – é mais unitário, mas com a disciplina certa pode ser usado para aceitação.
+
+**C# (.NET)** O ecossistema .NET tem um conjunto forte de ferramentas de testes de aceitação:
+
+* **SpecFlow** – equivalente ao Cucumber, usa Gherkin para BDD.
+* **Selenium WebDriver** – para testes de aceitação de interfaces web.
+* **Playwright for .NET** – automação de browsers moderna, usada também em testes de aceitação.
+* **xBehave.net** – extensão do xUnit para BDD.
+
+**Ruby** É um dos ecossistemas mais ricos nesse aspecto:
+
+* **Capybara** – padrão de fato em Rails para testes de aceitação.
+* **Cucumber** – BDD com escrita em Gherkin.
+* **RSpec + Capybara** – combinação clássica para acceptance testing.
+* **Turnip** – DSL alternativa integrada ao RSpec para cenários de aceitação.
+
+**PHP** A comunidade PHP tem boas ferramentas para BDD e acceptance testing:
+
+* **Behat** – inspirado no Cucumber, usa Gherkin.
+* **Codeception** – framework poderoso que cobre testes unitários, funcionais e de aceitação.
+* **Laravel Dusk** – no ecossistema Laravel, usado para testes de aceitação com browser automation.
+
+**JavaScript (Node.js e frontend)** Um dos ecossistemas mais ativos em testes de aceitação:
+
+* **Cypress** – muito popular para testes end-to-end e aceitação de aplicações web.
+* **Playwright** – concorrente moderno do Cypress, altamente estável.
+* **Puppeteer** – automação do Chrome/Chromium, usado para acceptance testing.
+* **Nightwatch.js** – framework baseado em Selenium.
+* **Jest + Testing Library (React Testing Library, por exemplo)** – pode ser usado para acceptance em SPAs.
+
+**Python** A comunidade Python também é forte em BDD e testes de aceitação:
+
+* **Behave** – equivalente ao Cucumber, usa Gherkin.
+* **Lettuce** – BDD inspirado no Cucumber.
+* **Robot Framework** – muito popular para acceptance testing, com DSL própria.
+* **pytest-bdd** – extensão do pytest para BDD.
+* **Selenium / Playwright Python** – para automação de browser em testes de aceitação.
+
+**Go (Golang)** Go tende a ser mais pragmático, mas há bibliotecas para acceptance/BDD:
+
+* **Godog** – equivalente ao Cucumber, com Gherkin.
+* **Agouti** – para acceptance testing com integração a Selenium e PhantomJS.
+* **Ginkgo** – framework BDD muito usado, ainda que mais comum em unit/integração.
+
+**Rust** Rust ainda está amadurecendo em testes de aceitação, mas já há ferramentas:
+
+* **Cucumber-rs** – implementação do Cucumber para Rust.
+* **cucumber (new)** – projeto moderno para BDD em Rust.
+* **assert\_cmd** + **predicates** – muitas vezes usados juntos para acceptance testing de CLIs.
+* **Thirtyfour** – WebDriver client para Rust (similar ao Selenium).
+
+**Elixir** O ecossistema Elixir tem boas ferramentas alinhadas ao Phoenix (framework web):
+
+* **Wallaby** – biblioteca para acceptance testing de aplicações web com browser automation.
+* **Hound** – wrapper em Elixir para Selenium/WebDriver.
+* **ExUnit + BDD-style DSLs** – muitas vezes usado diretamente com helpers de alto nível.
+
+Se você reparar, há um padrão: quase todos os ecossistemas têm algum tipo de integração com **Cucumber/Gherkin** para cenários de aceitação e ferramentas ligadas a **browser automation** (Selenium, Playwright, Cypress etc.), e depois cada comunidade cria bibliotecas mais idiomáticas para seu ambiente.
 
 A ideia é alinhar desde o início o que será construído com o que realmente tem valor para o negócio. Os testes de aceitação funcionam como especificações executáveis: descrevem cenários, entradas, saídas e comportamentos esperados do sistema em termos que os stakeholders entendem. Depois disso, os desenvolvedores implementam o código necessário para fazer esses testes passarem. Em muitos casos, ferramentas como Cucumber, SpecFlow ou Behave são usadas para escrever cenários em Gherkin (“`Given`, `When`, `Then`”), permitindo que as próprias partes interessadas consigam validar e até revisar os testes.
 
