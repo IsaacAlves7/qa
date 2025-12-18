@@ -2586,7 +2586,7 @@ Cenário: Buscar produto com sucesso
 
 <img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
 
-## [QA] ATDD - Acceptance Test-Driven Development
+# 📦 ATDD - Acceptance Test-Driven Development
 <img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
 
 O **ATDD - Acceptance Test-Driven Development** é uma prática e uma variação do desenvolvimento orientado a testes (TDD) que coloca o **teste de aceitação** como ponto central do ciclo. Enquanto no TDD tradicional o desenvolvedor escreve primeiro testes unitários para depois implementar o código que os satisfaz, no ATTD o processo começa com a definição dos testes de aceitação, geralmente descritos em linguagem mais próxima do negócio, representando os critérios que o sistema precisa cumprir para ser aceito pelo cliente ou pelo usuário final.
