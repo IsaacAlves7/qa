@@ -659,374 +659,6 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
 
 Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
 
-## [QA] Unit testing
-<img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Mock-pass-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white">
-
-<img src="https://em-content.zobj.net/source/microsoft-teams/363/test-tube_1f9ea.png" height="77" align="right">
-
-Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). O teste unitário é uma verificação feita com uma pequena porção de código, uma unidade de um software. Ou seja, é diferente do teste geral, que se dedica a testar o fluxo do sistema, com as funcionalidades principais.
-
-Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
-
-No unitário, cada parte do sistema ganha uma atenção devida e detalhada, de modo a otimizar o processo de identificação de erros. O objetivo é ajudar a rastrear os bugs e impedir que eles retornem depois que alterações forem feitas no produto.
-
-Portanto, são testes que verificam se uma parte específica do código, costumeiramente a nível de função, está funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. 
-
-> 🧪 Os testes de unidade verificam unidades, como métodos, funções e componentes dentro do software. São os testes mais rápidos, baratos de escrever e sua manutenção é simples. Para verificar o <a href="">comportamento</a> dessas pequenas partes isoladas do sistema sem dependências externas como banco de dados, APIs, arquivos ou rede. Por isso, eles são rápidos de executar, baratos de manter e oferecem feedback imediato durante o desenvolvimento. Como testam unidades isoladas, são fundamentais para garantir a estabilidade do código à medida que ele evolui.
-
-Uma **unidade** (unit) é a menor parte testável de um programa de computador, no programação procedural uma unidade pode ser uma função individual ou um procedimento do nosso código, imagine que toda função é uma pequena fábrica que fabrica alguma coisa que pode sair, sem a necessidade de entrar algo. Idealmente, cada teste de unidade é independente dos demais, o que possibilita ao programador testar cada módulo isoladamente.
-
-Relação de conceitos de testes de unidade: 
-
-**I/O Input-Output** (Entrada e Saída): são todas as entradas e saídas existentes na programação. Portanto, os testes de unidade servem para front-end e back-end. Eles são uma prática essencial no desenvolvimento de software, pois ajudam a garantir a qualidade do código e a facilitar a manutenção. Os testes de unidade são realizados em pequenas unidades de código, como funções, componentes ou módulos. Eles são projetados para testar a funcionalidade e a lógica dessas unidades de forma isolada. Isso significa que os testes de unidade não dependem de outros componentes ou módulos para funcionar.
-
-No **front-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de componentes de interface do usuário, como botões, formulários e listas. Eles também são usados para testar a interação entre componentes.
-
-No **back-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de serviços, APIs e outros componentes de back-end. Eles também são usados para testar a integração entre componentes de back-end.
-
-Os testes de unidade oferecem uma série de benefícios, incluindo:
-
-<img src="https://uploads.toptal.io/blog/image/91302/toptal-blog-image-1434578005589-4e6897ec04cc0b3c7075b9b011ee915c.gif" height="377" align="right">
-
-- Aumento da qualidade do código: Os testes de unidade ajudam a identificar erros e bugs no código antes que eles sejam integrados ao sistema. Isso resulta em um código mais confiável e estável.
-
-- Facilidade de manutenção: Os testes de unidade facilitam a manutenção do código, pois permitem verificar se as alterações não afetaram o funcionamento de outras partes do código.
-
-- Agilidade no desenvolvimento: Os testes de unidade permitem que os desenvolvedores tenham mais confiança ao realizar refatorações ou adicionar novos recursos. Isso permite que as equipes desenvolvam de forma mais rápida e eficiente.
-
-Portanto, os testes de unidade são uma prática importante para qualquer desenvolvedor, independentemente da área de atuação. 
-
-Sobre os processos de desenvolvimento de software, no terceiro passo no nível de queda do modelo cascata e no quarto passo do modelo RAPID, entramos na parte de codificação e testes unitários. Ou seja, é a construção do sistema em si. Então, só depois de eu entender todo o problema, só depois de eu saber das necessidades e se é possível ou viável para começar a desenvolver. Muitas vezes, para começar a gente se pergunta se é para pegar logo no processo de codificação, ou seja, a desenvolver logo a aplicação o mais rápido possível. No entanto, percebe-se que o tanto de retrabalho que isso gerava, fazia não valer a pena. E fazia com que estourasse muito o orçamento nesse custo. Então, depois deu definir os requisitos, depois de realizar meus modelos de projetos e provar que aquilo é viável, eu então começo o desenvolvimento do meu software em si.
-
-Após o desenvolvimento e junto com o desenvolvimento, entram os testes unitários (unit tests - testes de unidade) que são definidos pelo próprio desenvolvedor onde eles tendem a testar a menor unidade do sistema. Por exemplo: Se eu estou desenvolvendo um sistema de cadastro de cliente, não importa o tipo do sistema (mercadinho, farmácia, padaria, comércio ou de uma grande empresa) e esse desenvolvedor que está escrevendo essas linhas de código de cadastrar um único usuário ou funcionário, por exemplo, ele vai desenvolver um caso de teste para que dado uma entrada (input), ele possa receber uma saída (output) esperada que seria: "usuário cadastrado com sucesso".
-
-Os frameworks de teste de unidade mais populares para **React.js** são:
-
-- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele é rápido, fácil de usar e oferece uma variedade de recursos, como testes de snapshot, mocking e asserções.
-
-- <a href="">Testing Library</a>: A Testing Library é uma biblioteca de utilitários para testes de componentes React. Ela fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
-
-- <a href="">Enzyme</a>: O Enzyme é uma biblioteca de teste de componentes React que fornece uma API poderosa e flexível para manipular o DOM e testar eventos.
-
-A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Jest é uma boa opção para projetos simples, enquanto frameworks como a Testing Library ou o Enzyme podem ser mais adequados para projetos mais complexos.
-
-Os frameworks de teste de unidade mais populares para **Vue.js** são:
-
-- <a href="">Vue Test Utils</a>: O Vue Test Utils é um conjunto de utilitários para testes de componentes Vue.js. Ele fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
-
-- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele também pode ser usado para testes de unidade em Vue.js.
-
-- <a href="">Karma</a>: O Karma é um framework de teste de unidade JavaScript que pode ser usado para executar testes em uma variedade de navegadores. Ele também pode ser usado para testes de unidade em Vue.js.
-
-A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Vue Test Utils é uma boa opção para projetos simples, enquanto frameworks como o Jest ou o Karma podem ser mais adequados para projetos mais complexos.
-
-O framework Python para web back-end chamado **Django** fornece um framework de teste padrão, chamado de **unittest**. Esse framework é baseado na biblioteca padrão unittest do Python e é adequado para testes unitários e de integração.
-
-Além do unittest, existem outros frameworks de teste de unidade disponíveis para Django. Alguns dos frameworks mais populares incluem:
-
-- <a href="">Pytest</a>: O Pytest é um framework de teste de unidade completo e flexível que oferece uma variedade de recursos, como assertion fixtures, parametrização de testes e testes de desempenho.
-
-- <a href="">Mock</a>: O Mock é um framework de mocking que permite simular o comportamento de objetos externos. Isso pode ser útil para testar a funcionalidade de componentes que dependem de outros componentes ou APIs externas.
-
-- <a href="">Selenium</a>: O Selenium é um framework de automação de testes que permite testar a interação com um navegador web. Isso pode ser útil para testar a funcionalidade de componentes de front-end.
-
-A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O unittest é uma boa opção para projetos simples, enquanto frameworks como Pytest e Mock podem ser mais adequados para projetos mais complexos.
-
-Lembre-se das seguintes diretrizes ao escrever testes para seus métodos:
-
-- Teste se a saída esperada de um método corresponde à saída real.
-- Teste se as funções chamadas dentro do método estão ocorrendo o número desejado de vezes.
-- Não tente testar código que não faça parte do método que está sendo testado.
-- Não faça chamadas de API, conexões de banco de dados ou solicitações de rede ao escrever seus testes.
-
-Sobre os conceitos técnicos a respeito de testes de unidades, temos:
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/f92b16ca-c0a0-40ab-ab33-f8ec9f4cf619" height="77" align="right">
-
-✅ **Testes Válidos** (`pass`): São entradas e saídas de dados comuns ao sistema e pertencem ao processo normal. Não apresentam tratamento além do normal já programado. No caso de retorno deverá seguir os padrões estabelecidos e não permitir retornos fora das regras especificadas. Em testes unitários, estamos nos referindo a casos de teste que exercitam o comportamento correto e esperado da unidade de código sob condições normais (válidas), ou seja: Situações em que tudo ocorre como deveria. São aqueles testes que usam entradas válidas e esperadas, esperam resultados corretos, sem exceções ou erros. Confirmam que o comportamento da função está conforme o esperado.
-
-Características de testes válidos:
-
-| Característica              | Exemplo prático                                           |
-| --------------------------- | --------------------------------------------------------- |
-| Entrada no domínio esperado | CPF válido, número positivo, email formatado corretamente |
-| Estado inicial válido       | Usuário existente, banco conectado, produto em estoque    |
-| Fluxo normal do código      | Sem exceções, erros, ou retornos inesperados              |
-| Resultado esperado          | Retorno certo, estado alterado corretamente               |
-
-Exemplo: Teste manual simples em JavaScript - Aqui, `2` e `3` são valores válidos, e o retorno esperado (`5`) confirma o comportamento correto da função.
-
-<img src="https://img.shields.io/badge/Jest-1_pass_0_fail-limegreen?style=flat&logo=jest&logoColor=white">
-
-```javascript
-function somar(a: number, b: number): number {
-  return a + b;
-}
-
-test("soma dois números positivos", () => {
-  expect(somar(2, 3)).toBe(5); // ✅ teste válido
-});
-```
-
-As _afirmações_ (em inglês, **assertions**) determinam se seu teste é `aprovado` ou `reprovado`. Elas comparam o valor de retorno esperado de um método com o valor real. Há uma série de afirmações que você pode fazer no final do seu teste.
-
-A classe `Assertions` no JUnit consiste em métodos estáticos que fornecem várias condições para decidir se o teste é aprovado ou não. Veremos esses métodos à medida que eu o guie por cada exemplo.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/1e50bc84-048c-40c7-b7b8-98dfdeec38a2" height="77" align="right">
-
-❌ **Testes Inválidos** (`fail`): São entradas e saídas de dados não comuns ao sistema. Apresentam tratamento para validar o tipo de dado inválido ou situação. Pode apresentar até dois retornos, uma mensagem para um log no sistema e uma mensagem com formatação e escrita adequada ao usuário. São tão importantes quanto os testes válidos, porque ajudam a garantir que sua função se defenda bem contra entradas erradas, estados incorretos ou fluxos inesperados. São testes que usam entradas inválidas, incorretas ou fora do esperado; Esperam que o código falhe corretamente (com exceção, erro, ou retorno de falha); Verificam se o sistema é robusto contra dados errados ou uso indevido da função.
-
-Exemplo:
-
-```txt
-Dividir (x int,y int)=z int
-```
-
-Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma mensagem ao usuário, avisando que a operação é inválida. Caso a expressão seja um dado comum do sistema, a autorização para tal validação deverá ser do usuário, pois faz parte do conjunto de regras de negócio. Não existe retorno inválido sem um tratamento. O tratamento genérico será apenas para condições não visíveis na regra e uso do sistema.
-
-<img src="https://github.com/user-attachments/assets/e80b1013-dd61-4dc1-a997-8addb2209c4e" height="177" align="right">
-
-👁️‍🗨️ **Domínio**: No domínio de testes, usamos testes unitários para validar a funcionalidade de cada componente do nosso domínio de negócio, refere-se à parte do sistema que é testada para garantir que a lógica de negócio e a funcionalidade do código estão corretas, os testes unitários focam em componentes individuais desse domínio.
-
-> [!Important]
-> É importante ressaltar sobre um termo muito conhecido em ciência da computação, chamado **domínio** (domain), cujo a diferença está no nível de abstração e no foco de cada conceito. A palavra "domínio" realmente aparece em contextos diferentes e pode causar confusão se não for bem delimitada.
-
-No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes, ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
-
-Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso, é a área de interesse do sistema, como logística, financeiro, saúde, etc.
-
-No caso de arquiteturas como Clean Architecture ou Ports & Adapters, "domínio" é uma camada bem definida e isolada que representa as regras puras do negócio, ou seja, aquilo que não muda mesmo que a tecnologia mude; é o núcleo da aplicação.
-
-<img src="https://github.com/user-attachments/assets/7a218751-4342-464b-a375-c0528a72dc50" align="right" height="177">
-
-Já em TDD e BDD, o termo "domínio" aparece implicitamente quando você escreve testes voltados para comportamentos do sistema, especialmente no BDD que foca na linguagem ubíqua e no comportamento esperado do domínio de negócio, enquanto o TDD tende a atuar mais no detalhe técnico e no design emergente.
-
-Por fim, em design de software e design patterns, o "domínio" pode surgir como contexto onde os padrões são aplicados, mas o foco desses conceitos é mais estrutural e de solução técnica do que modelagem de negócio em si.
-
-Então, "domínio" em DDD e arquiteturas limpas é o coração das regras do negócio, enquanto em testes e padrões, é mais o cenário onde você aplica as práticas, muitas vezes sem foco explícito em representar o negócio como um modelo coeso.
-
-Você pode dizer: 
-
-> "Nos nossos testes de unidade, verificamos se os métodos da entidade `Pedido` calculam corretamente o total do pedido."
-
-Focado na verificação da funcionalidade de unidades isoladas de código (geralmente métodos ou funções), tem como objetivo garantir que cada parte do software funcione conforme esperado de maneira isolada. O contexto aqui é mais técnico e voltado para a qualidade do código e a prevenção de regressões.
-
-Pode ser um campo, uma assinatura, um I/O, ou qualquer tipo de local que receba valores externos ao sistema. Todo domínio deve realizar consistências de dados válidos e inválidos. Um domínio só permite dados com a formatação igual ao que será armazenado.
-
-Ex.: Campo DDD deverá permitir números de até quatro casas não negativas ou a base de dados deve impedir a entrada de valores inválidos. Receber e guardar o mesmo tipo de dado, o tamanho do campo que recebe os dados deve ser menor ou igual ao campo que irá armazenar os dados (em raros casos os campos de armazenamento são menores que os de exibição).
-
-Em suma, domínio é o tipo de valor válido para cada campo. Como exemplo podemos citar: 
-
-```txt
-Campo nome: Dominio = tipo: string; tamanho:50
-```
-
-Ao aplicarmos o particionamento por equivalência e a análise por valor limite, poderemos criar as seguintes classes de testes.
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/ff8414d7-6bb9-402e-9e02-75ee279d3008" />
-
-Particionamento por Equivalência: campo `nome`:
-
-```diff
-- valor em branco (BLANK); Cenário Negativo
-- valor > 50; Cenário Negativo
-+ qualquer valor de 1 a 50; Cenário Positivo
-```
-
-Análise por Valor Limite:
-
-```txt
-campo nome: valor em branco; valores 49,50,51; 
-```
-
-Usamos um valor exatamente inferior e exatamente posterior ao valor do campo, devido ao fato dos erros aparecerem nas fronteiras da aplicação.
-
-O domínio de testes unitários, o domínio de DDD (Domain-Driven Design) e o domínio de microsserviços podem estar inter-relacionados, mas não são exatamente o mesmo domínio. Embora o domínio de testes unitários, o domínio de DDD e o domínio de microsserviços não sejam exatamente o mesmo, eles estão inter-relacionados e podem se complementar. Testes unitários verificam a funcionalidade do código, DDD foca na modelagem do domínio de negócios, e microsserviços organizam a aplicação em componentes pequenos e independentes. Quando usados juntos, esses conceitos podem ajudar a criar sistemas robustos, bem projetados e testados. Você pode ter uma comunicação mais assertiva com o seu time falando da maneira proposta acima que eles irão entender de qual tipo de domínio se trata.
-
-Quando você combina esses três conceitos, você pode comunicar algo como: 
-
-> [!Tip]
-> "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
-
-Agora, imagine que você precisa validar o funcionamento de sua aplicação em um determinado cenário, mas este cenário só funciona se integrado com uma aplicação de terceiros específica, a qual você não tem total acesso.
-
-O fato de você não ter acesso traz um dilema: ou você ignora a integração e roda o teste, inviabilizando a obtenção de resultados assertivos, ou não testa de modo algum.
-
-Nenhuma das opções é realmente a escolha ideal, mesmo se você encarar aquele ditado “feito é melhor que perfeito”. Afinal, é muito tênue a linha entre não trazer os resultados corretos e não testar.
-
-O ideal seria existir algo que possibilitasse que os testes trouxessem os melhores resultados, mesmo sem acesso à tecnologia necessária. A boa notícia é que existe! Estamos falando dos _test doubles_.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/3963eb3d-ea61-4557-92cb-2f097cfed79a" height="77" align="right">
-
-Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste. Termo genérico para qualquer substituição de objeto de produção em testes.
-
-De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro. O termo vem da analogia com os “dublês de cinema”: quando você não pode (ou não deve) usar um componente real em um teste, você o substitui por uma versão simulada que cumpre o mesmo papel de forma controlada e previsível. Os *test doubles* podem ser aplicados **a qualquer dependência externa ou componente cuja execução real atrapalhe o isolamento do teste**.
-
-<img height="277" align="right" src="https://github.com/user-attachments/assets/b3dfda90-1d63-4672-adfe-67e334ee45cd" />
-
-Em resumo, as duplicatas de teste (test doubles) são usadas para criar testes rápidos, independentes, determinísticos e confiáveis. Eles representam componentes reais, semelhante à forma como os dublês são usados nos filmes. Um test double pode ser usado para simplificar testes, aumentar a velocidade de execução ou permitir resultados determinísticos de uma ação.
-
-Na prática, isso inclui **APIs externas**, **bancos de dados**, **requisições HTTP**, **filas de mensageria (como RabbitMQ)**, **sistemas de cache (Redis, por exemplo)**, **consultas SQL complexas**, **chamadas a LLMs (modelos de linguagem)** e até **funções, classes e métodos internos** que geram efeitos colaterais ou dependem de recursos não determinísticos (como hora do sistema, aleatoriedade, IO ou threads).
-
-Por exemplo, em um teste unitário que precisa validar a lógica de negócio de uma função que consome uma API REST, você não quer depender de uma chamada real — isso tornaria o teste lento, sujeito a falhas de rede e dependente de algo fora do seu controle. Nesse caso, você cria um **mock** da API, que retorna uma resposta previsível. Da mesma forma, se a função lê dados de um banco, você cria um **stub** ou **fake** para simular a consulta.
-
-<img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
-
-Então, resumindo: o conceito de *test doubles* se aplica a **qualquer camada do sistema** — desde uma função pura até integrações complexas com APIs, bancos ou modelos de IA — sempre que o objetivo é **isolar o teste da dependência real** para torná-lo **determinístico, rápido e confiável**.
-
-Por exemplo, um programa que utiliza um servidor de banco de dados é relativamente lento e consome recursos significativos do sistema, o que prejudica a produtividade dos testes. Um teste pode exigir dados do banco de dados que, sob atividade normal do sistema, estão em constante alteração, fornecendo, assim, saídas não determinísticas para qualquer consulta. Um test double pode fornecer um valor estático em vez de acessar um banco de dados real, evitando tanto chamadas de rede ou do sistema quanto dados em constante mudança.
-
-Um test double também pode ser usado para testar parte do sistema que está pronta para teste, mesmo que suas dependências não estejam.
-
-Por exemplo, em um sistema com os módulos `Login`, `Home` e `User`, suponha que `Login` esteja pronto para teste, mas os outros dois não. As funções consumidas de `Home` e `User` podem ser implementadas como test doubles para que `Login` possa ser testado.
-
-Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar. 
-
-Fazendo um paralelo simplista, eles são como dublês de atores em um filme: substituem aplicações reais durante a realização de um teste por simular sua aparência e comportamento. Isso traz menos complexidade ao teste, além de permitir verificar uma parte de um sistema sem ficar preso em todas as suas outras porções.
-
-Advertências: Embora os test doubles sejam frequentemente usados para facilitar o teste de unidade, existem limitações em seu uso, a principal sendo que a conectividade real ao banco de dados ou outros acessos externos não é comprovada por esses testes. Para evitar erros que podem passar despercebidos por isso, são necessários outros testes que instanciem o código com as implementações "reais" das interfaces mencionadas acima. Esses riscos de integração geralmente são cobertos por testes de integração, testes de sistema ou testes de integração de sistema.
-
-Talvez você não esteja familiarizado com o termo test double. É que, às vezes, eles são generalizados pela palavra mock, ou então pela expressão “mockar” . O fato é que mock é apenas um dos exemplos de test doubles dentro de uma família muito maior. Além dos mocks, existem, por exemplo, os fakes, os stubs, os dummies… Abaixo, explico alguns deles.
-
-Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
-
-Martin Fowler classifica os test doubles em cinco tipos, que são os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas:
-
-<a href="https://pt.slideshare.net/slideshow/sc-mad-tdd-workshop-test-doubles-36543998/36543998"><img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right"></a>
-
-1. `Dummy` (Boneco de simulação): Passado mas nunca usado; listas de parâmetros de preenchimentos. Usado apenas para preencher parâmetros, sem comportamento algum. Objetos de preenchimento e sem funcionalidade.
-
-2. `Fake` (Falso): tem uma implementação funcional, mas não é adequado para produção. Que tem uma implementação funcional, mas simplificada (por exemplo, um banco de dados em memória). Implementação simplificada e funcionalidade básica.
-
-3. `Stub` (Simulacro): Fornece respostas prontas para chamadas feitas durante o teste. Que retorna respostas fixas ou predefinidas. Respostas pré-determinadas e imita o comportamento real.
-
-4. `Spy` (Espião): Um esboço que registra informações sobre como foi chamado. Que registra chamadas e argumentos para verificação posterior. Monitoramento de interações e observa o comportamento.
-
-5. `Mock` (Simulado): Pré-programado com expectativas, formando uma especificação das chamadas esperadas. Que define expectativas explícitas de comportamento (quantas vezes deve ser chamado, com quais parâmetros etc.). Verificação de comportamento e rastreamento de chamadas de métodos.
-
-O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
-
-Os dummies são dados que substituem dados reais, mas que não chegam a ser realmente utilizados no teste. São normalmente usados para satisfazer determinados parâmetros.
-
-Como uso de dummies é possível diminuir a complexidade durante a escrita de um teste, ignorando o que não é relevante no cenário e focando no que realmente importa.
-
-<img height="277" align="right" alt="fake" src="https://github.com/user-attachments/assets/f81524ad-936f-4b9e-9822-05c32d02489c" />
-
-Os **fakes** são test doubles que têm implementações reais diferentes àquelas que existem em produção. é uma implementação funcional simplificada de um componente real. Ele realmente executa algo, mas de maneira controlada e menos complexa.
-
-Um exemplo clássico é um banco de dados em memória usado nos testes em vez de um banco de produção, ou um servidor HTTP falso que responde rapidamente sem precisar de rede. 
-
-Os fakes aceleram os testes e evitam dependências externas pesadas. Podemos considerá-los como um “atalho”, algo implementado para deixar a execução do teste mais dinâmica frente ao que é colocado no ar de fato.
-
-Basicamente, não há lógica em um fake — ele retorna um valor determinado por quem o implementa e, justamente por isso, não é um elemento adequado para ir à produção. Contudo, ele elimina a necessidade de implementar uma funcionalidade real, o que seria bem mais complexo.
-
-<img height="277" align="right" src="https://github.com/user-attachments/assets/4f994eed-d9b0-44fd-8272-3d54b28a4e27" />
-
-O **Stub** é um objeto que fornece respostas pré-determinadas para chamadas feitas durante o teste. Ele não tem lógica real, apenas retorna o que foi configurado. Os stubs são muito úteis quando você quer garantir que o teste receba certos dados sem depender de sistemas externos, como simular uma API retornando um JSON fixo.
-
-São similares aos fakes e aos spies, mas, ao contrário destes, ele consegue alterar seu comportamento com base na maneira como ele foi chamado no teste.
-
-O stub também é uma forma de teste duplo usado para fornecer uma resposta controlada das dependências de um componente. Esse tipo de teste duplo pode ser usado para fornecer uma resposta controlada sem fazer nenhuma lógica real. Os stubs geralmente não dão nenhuma resposta fora do que está programado no teste. Isso permite que mais de um cenário para uma única dependência seja representado no teste.
-
-As dependências externas podem não se limitar apenas às classes, mas também a certos métodos. O **stubbing de método** deve ser feito quando sua função está chamando uma função externa em sua implementação. Nesse caso, você faz com que essa função retorne o valor que você deseja em vez de chamar o método real.
-
-Por exemplo, o método que você está testando (A) está chamando um método externo (B) em sua implementação. B faz uma consulta ao banco de dados, buscando todos os alunos com notas maiores que 80. Fazer uma chamada real ao banco de dados não é uma boa prática aqui. Portanto, você faz um stub do método e o faz retornar uma lista fictícia de alunos que você precisa para testar.
-
-Qual é a diferença entre Mock e Stub? A julgar pela definição de mock e stub, parece que mock e stub são a mesma coisa. Isso ocorre porque uma simulação pode ser considerada uma extensão de um esboço. Um stub é apenas uma implementação simples usada para fornecer uma resposta controlada. Enquanto isso, a simulação não funciona apenas como um stub, mas também verifica o comportamento de um componente e sua interação com o objeto que a simulação cria.
-
-<img src="https://github.com/user-attachments/assets/4024470e-6396-4b5b-849c-ec7a86e2bc54" height="277" align="right">
-
-Os **mocks** tem expectativas sobre o jeito que deve ser chamado e, caso ele não seja chamado da forma correta, o teste deve falhar. Eles são usados para testar interações entre métodos e são úteis onde não há como verificar algumas mudanças de estado ou retornos do método testado diretamente.
-
-**Mocking** (Mockado) é uma técnica usada em testes de software para simular o comportamento de dependências externas, como serviços, bancos de dados, ou APIs, dentro de uma unidade de código que você está testando. Ao invés de usar as implementações reais dessas dependências, você cria "mocks" (objetos falsos) que imitam o comportamento esperado, permitindo testar o código de forma isolada. 
-
-O principal benefício do mocking é garantir que o teste foque apenas no comportamento da unidade de código em questão, sem se preocupar com o comportamento ou estado das dependências externas. A classe cujos métodos você está testando pode ter algumas dependências externas. Como mencionado anteriormente, você não deve tentar testar código que não faça parte da função que está sendo testada.
-
-Nos casos em que sua função usa uma classe externa, porém, é uma boa prática fazer um mock dessa classe, ou seja, ter valores de mock-up (algo como "simulações", em português) em vez dos valores reais. Usaremos a biblioteca **Mockito** para esse fim.
-
-Exemplo: Se você estiver testando um serviço que depende de um repositório de dados, você pode usar um mock para simular as respostas do repositório, em vez de acessar o banco de dados real.
-
-Mocking e testes unitários são diferentes, mas se complementam para testar unidades isoladas do código. Os testes unitários tem o objetivo de testar uma unidade de código (como uma função ou método) de forma independente, garantindo que ela funcione corretamente em diferentes cenários. Em um teste unitário, você se preocupa apenas com o comportamento interno dessa unidade. 
-
-Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
-
-<img src="https://github.com/user-attachments/assets/0f2ecf0d-35de-4fe4-a7b7-24530745efd0" height="277" align="right">
-
-Por fim, existe o **Spy**, que é uma espécie de híbrido. Ele é um objeto real, mas que tem a capacidade de registrar as chamadas que recebeu, permitindo inspecionar posteriormente como foi utilizado. Diferente do mock, o spy não necessariamente substitui a lógica real; ele executa de verdade, mas deixa rastros que podem ser verificados.
-
-Um spy age como um espião sob a implementação real e, como o mock, consegue verificar as interações entre os métodos.
-
-A diferença para o mock é que o spy chama a implementação real para todos os métodos da interface mockada, a não ser que para algum método este seja configurado para retornar algo específico diferente da implementação real.
-
-<img height="210" align="right" src="https://github.com/user-attachments/assets/369cf343-df3c-484d-9611-10042be783e4" />
-
-Existem boas práticas bem consolidadas no uso de *test doubles*, e as imagens refletem parte disso. A primeira mostra uma distinção clássica: **mocks (e spies)** são usados mais em **commands** (ações que mudam estado), enquanto **stubs (stubs, dummies, fakes)** são usados em **queries** (consultas que retornam dados). Essa prática vem da ideia de **Command Query Separation (CQS)**, que sugere que comandos devem ter efeitos colaterais e não retornar valores, enquanto queries retornam valores mas não mudam estado. Se você usa stubs para queries, você só garante dados de entrada controlados; já mocks para comandos te permitem verificar se uma ação realmente ocorreu.
-
-Na segunda imagem, vemos os test doubles categorizados em um “universo” com sobreposições. A ideia é reforçar que **Dummy, Stub, Fake, Spy e Mock** são variações de substitutos que usamos em testes, mas cada um tem um propósito específico. A boa prática aqui é **usar o double mais simples possível que resolva o problema do teste**. Por exemplo, se você só precisa preencher um parâmetro, use um dummy. Se precisa de dados controlados, use um stub. Se quer uma implementação leve mas funcional (como um banco em memória), use um fake. Se precisa verificar chamadas, use um mock. Se precisa capturar interações sem substituir toda a lógica, use um spy. O erro comum é usar mocks para tudo, gerando testes frágeis, acoplados demais ao código interno.
-
-Outra boa prática é manter os doubles **próximos do contexto do teste** e não generalizá-los cedo demais. Doubles genéricos compartilhados entre muitos testes podem virar fonte de inconsistência ou dificultar a leitura. Em TDD, por exemplo, é comum criar o double dentro do próprio teste e só refatorar para reaproveitar se realmente houver repetição.
-
-<table>
- <tr>
-  <td><img width="734" height="361" alt="image_thumb_1789" src="https://github.com/user-attachments/assets/e6816068-49e9-4e62-aee1-690b4c834267" /></td>
-  <td><img width="729" height="356" alt="image_thumb_2124" src="https://github.com/user-attachments/assets/a82df8dd-4b3f-444a-bbae-667bef34d27a" /></td>
-  <td><img width="733" height="362" alt="image_thumb124" src="https://github.com/user-attachments/assets/56f79bdd-c770-4a02-af69-6b08a4623f24" /></td>
-  <td><img width="734" height="341" alt="image_thumb789" src="https://github.com/user-attachments/assets/ed92616b-0163-4fd5-946c-a8277d867352" /></td>
-  <td><img width="727" height="497" alt="image_thumbqqq" src="https://github.com/user-attachments/assets/e8328b45-74e9-49f6-9470-1c115b57d299" /></td>
- </tr>
-</table>
-
-Também é importante lembrar que test doubles são **ferramentas para testes de unidade**, onde o isolamento é crucial. Em testes de integração ou end-to-end, eles devem ser usados com cautela, pois nesses níveis o objetivo é justamente validar a interação real entre componentes. Usar doubles nesses contextos pode dar uma falsa sensação de segurança, porque o código passa no teste, mas falha no ambiente real.
-
-Por fim, existe uma máxima importante: **“don’t mock what you don’t own”** — ou seja, evite criar mocks para dependências externas de terceiros, como APIs de bibliotecas que você não controla. Isso acopla seus testes a detalhes que podem mudar fora do seu controle. Em vez disso, prefira abstrair essas dependências atrás de interfaces próprias e mockar essas interfaces. Isso deixa seus testes mais estáveis e mantém o acoplamento sob seu domínio.
-
-Ou seja, as boas práticas são: usar mocks para comandos e stubs para queries, escolher o double mais simples possível para o cenário, não abusar de mocks em todos os lugares, restringir o uso a testes de unidade, e nunca mockar diretamente dependências externas que você não controla.
-
-<div align="center"><img alt="sociable-vs-solitary" src="https://github.com/user-attachments/assets/c355f0c9-a037-42cb-83a9-bdf46e865df5" /></div>
-
-Pouca gente conhece bem essa distinção, embora ela seja bem importante quando o assunto é qualidade e isolamento de testes unitários. Os termos *solitary tests* e *sociable tests* vêm de uma classificação proposta por **Gerard Meszaros** no livro *xUnit Test Patterns*. A ideia é entender como os testes unitários se relacionam com outras unidades de código e até que ponto o teste realmente está isolando a unidade sob teste (o chamado *System Under Test* — SUT). A diferença entre sociable tests e solitary tests praticamente gira em torno de quando e como você usa test doubles.
-
-<img src="https://github.com/user-attachments/assets/914b7a9f-379f-41ba-a549-3c47fdf991f5" align="right" height="177">
-
-Um ***solitary test*** é um teste *totalmente isolado*. Ele testa *apenas uma unidade*, geralmente uma classe, função ou método e substitui todas as suas dependências externas por *test doubles* (como *mocks*, *stubs* ou *fakes*). Assim, o teste verifica exclusivamente o comportamento interno da unidade, sem interações reais com banco de dados, rede, arquivos, APIs ou outros serviços. Esse tipo de teste é o ideal quando se quer garantir **pureza e velocidade** nos testes unitários, pois eles são rápidos, previsíveis e não dependem de contexto externo. 
-
-Por exemplo: ao testar um `OrderService`, você substitui o `PaymentGateway` por um *mock* que apenas simula o comportamento esperado, sem fazer chamadas reais.
-
-<img src="https://github.com/user-attachments/assets/720fea8f-7f9c-440f-a159-1edf9dc1e201" align="right" height="177">
-
-Já um ***sociable test*** é o oposto: ele testa uma unidade **em conjunto com suas dependências reais** — ou ao menos com algumas delas. Em vez de isolar completamente a unidade, o teste permite que ela “converse” com outras classes do mesmo módulo, desde que ainda esteja dentro do escopo de uma “unidade lógica”. 
-
-Por exemplo, um teste que exercita `OrderService` chamando `PaymentGateway` e `EmailNotifier` reais (ou parcialmente reais) é sociável, porque o comportamento observado depende da interação entre várias unidades.
-
-A diferença central está na *abordagem de isolamento*. O teste solitário foca em verificar se a unidade funciona corretamente *sozinha*; o sociável foca em verificar se ela funciona *em conjunto* com outras partes confiáveis do sistema. Ambos são considerados *testes unitários*, desde que mantenham o escopo pequeno e rápido, mas o solitário é mais puro e previsível, enquanto o sociável tende a ser mais próximo da realidade, embora menos determinístico.
-
-Na prática, bons conjuntos de testes costumam mesclar os dois: **solitary tests** para garantir o comportamento interno de cada componente de forma isolada e rápida, e **sociable tests** para verificar a integração leve entre partes da aplicação que, juntas, compõem uma unidade funcional.
-
-<img height="277" align="right" src="https://github.com/user-attachments/assets/2ce9382a-b065-4853-a708-6f41db155961" />
-
-O **Arrange–Act–Assert Pattern (AAA)** é um padrão de estruturação de testes extremamente usado em <a href="https://github.com/IsaacAlves7/qa?tab=readme-ov-file#qa-tdd---test-driven-development">TDD</a>, **unit tests** e qualquer cenário onde você quer garantir clareza, previsibilidade e legibilidade nos testes. Ele não é um framework nem uma tecnologia, mas sim uma *disciplina mental*, uma *organização lógica* para que cada teste seja fácil de entender, manter e evoluir. A ideia é que, em vez de escrever um teste como um bloco monolítico confuso, você o divide em três momentos distintos que imitam o raciocínio humano ao validar um comportamento.
-
-O padrão Arrange-Act-Assert, também conhecido como padrão AAA ou 3A, é uma abordagem amplamente reconhecida para estruturar testes. Foi originalmente proposto por Bill Wake em 2001 e depois mencionado no influente livro de Kent Beck, "Test Driven Development: By Example", em 2002.
-
-O padrão AAA promove clareza ao recomendar que os testes sejam estruturados em três fases distintas:
-
-1. No primeiro momento, o **Arrange**, você prepara o ambiente. Organize tudo o que for necessário para realizar o teste. Isso envolve criar os objetos, configurar estado, definir entradas, mocks, fakes, stubs ou qualquer dependência necessária para que a ação principal do teste aconteça de forma isolada. Aqui você estabelece as pré-condições do cenário. Em outras palavras, é onde você monta o palco antes da cena começar. Um bom *Arrange* não tem lógica demais; ele apenas prepara o terreno para que o teste tenha um contexto claro.
-
-2. Depois vem o **Act**, que é o coração do teste. Aja com base no código alvo a ser testado executando-o. Aqui você executa exatamente uma ação, a ação que deseja validar. Esse ponto é crucial: o *Act* não deve ser poluído com outras chamadas ou verificações, e não deve fazer múltiplas coisas. É a chamada do método, função ou endpoint que você está testando. Num teste de unidade bem modelado, esse bloco costuma ser uma única linha. A simplicidade aqui é o segredo: quando se faz mais de uma ação, perde-se precisão e fica difícil identificar por que um teste falha.
-
-3. Por fim, o **Assert** é o momento de verificar se o comportamento observado corresponde ao comportamento esperado. Afirme os resultados esperados. É onde você compara o resultado com o valor correto, valida estado final, confirma se exceções foram lançadas, ou se eventos foram registrados. É nesse bloco que você diz explicitamente qual era o contrato esperado daquele código. E, por isso, todo *Assert* deve ser claro e direto: um teste que não deixa explícito o que está sendo validado é um teste que não comunica nada.
-
-<img src="https://github.com/user-attachments/assets/72cd305f-1b35-4cab-92c8-b461eb7bce1f" align="right" height="177">
-
-O padrão AAA melhora a legibilidade e a manutenibilidade, espelhando de perto a estrutura Given-What-When-Then desenvolvida por Daniel Terhorst-North e Chris Matts como parte do BDD (Behavior-Driven Development). Hoje, quase todas as ferramentas modernas de teste unitário com sintaxe BDD incentivam o uso do padrão AAA.
-
-A beleza do AAA é que ele espelha como pensamos quando analisamos um comportamento: primeiro preparamos, depois fazemos, depois verificamos. É tão natural que, quando bem aplicado, qualquer pessoa — até alguém que nunca viu o projeto — consegue ler e entender o teste como se estivesse lendo uma narrativa estruturada. Além disso, frameworks como xUnit, NUnit, JUnit, Jest, PyTest e tantos outros encaixam-se naturalmente nele, porque a ideia é totalmente agnóstica de linguagem.
-
-O padrão AAA também ajuda a evitar testes frágeis e difíceis de manter, porque desencoraja misturar lógica dentro dos asserts, evita efeitos colaterais no *Act* e obriga você a ser explícito sobre as condições iniciais no *Arrange*. Isso leva a testes mais puros, mais isolados e menos vulneráveis ao tempo.
-
-No fim das contas, o AAA transforma testes em pequenas histórias de causa e efeito. Isso é fundamental em um ambiente profissional, especialmente no desenvolvimento orientado a testes, porque permite que o teste seja mais do que um instrumento técnico — ele se torna documentação viva, alinhando comportamentos esperados com a intenção original do desenvolvedor.
-
-
 ## [QA] Integration Testing
 <img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
 
@@ -2399,7 +2031,7 @@ Sendo um ensaio de arquitetura, não discutiremos os mecanismos e tecnologias do
 > [!Note]
 > Esses padrões e pontos de vista da arquitetura de integração resistirão ao teste do tempo. Gosto de estudar e descrever ideias estáveis pelo seu valor prático. Veja as formas fundamentais pelas quais as coisas interagem; Tudo flui a partir daí. Vá em frente e arquitete, arquiteto.
 
-## [QA] TDD - Test-Driven Development 
+# 🧪 [QA] TDD - Test-Driven Development 
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
 ![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
@@ -2516,6 +2148,373 @@ Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–c
 <img width="450" height="450" alt="chemistry-3d-icon-png-download-9544280" src="https://github.com/user-attachments/assets/1f1e90ed-6d18-4742-b426-d470c6833a50" />
 
 <img width="450" height="450" alt="laboratory-3d-icon-png-download-9544272" src="https://github.com/user-attachments/assets/ab2c41b2-7dd4-43d1-9299-5347f3387434" />
+
+## [TDD] Unit testing
+<img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Mock-pass-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white">
+
+<img src="https://em-content.zobj.net/source/microsoft-teams/363/test-tube_1f9ea.png" height="77" align="right">
+
+Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). O teste unitário é uma verificação feita com uma pequena porção de código, uma unidade de um software. Ou seja, é diferente do teste geral, que se dedica a testar o fluxo do sistema, com as funcionalidades principais.
+
+Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
+
+No unitário, cada parte do sistema ganha uma atenção devida e detalhada, de modo a otimizar o processo de identificação de erros. O objetivo é ajudar a rastrear os bugs e impedir que eles retornem depois que alterações forem feitas no produto.
+
+Portanto, são testes que verificam se uma parte específica do código, costumeiramente a nível de função, está funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. 
+
+> 🧪 Os testes de unidade verificam unidades, como métodos, funções e componentes dentro do software. São os testes mais rápidos, baratos de escrever e sua manutenção é simples. Para verificar o <a href="">comportamento</a> dessas pequenas partes isoladas do sistema sem dependências externas como banco de dados, APIs, arquivos ou rede. Por isso, eles são rápidos de executar, baratos de manter e oferecem feedback imediato durante o desenvolvimento. Como testam unidades isoladas, são fundamentais para garantir a estabilidade do código à medida que ele evolui.
+
+Uma **unidade** (unit) é a menor parte testável de um programa de computador, no programação procedural uma unidade pode ser uma função individual ou um procedimento do nosso código, imagine que toda função é uma pequena fábrica que fabrica alguma coisa que pode sair, sem a necessidade de entrar algo. Idealmente, cada teste de unidade é independente dos demais, o que possibilita ao programador testar cada módulo isoladamente.
+
+Relação de conceitos de testes de unidade: 
+
+**I/O Input-Output** (Entrada e Saída): são todas as entradas e saídas existentes na programação. Portanto, os testes de unidade servem para front-end e back-end. Eles são uma prática essencial no desenvolvimento de software, pois ajudam a garantir a qualidade do código e a facilitar a manutenção. Os testes de unidade são realizados em pequenas unidades de código, como funções, componentes ou módulos. Eles são projetados para testar a funcionalidade e a lógica dessas unidades de forma isolada. Isso significa que os testes de unidade não dependem de outros componentes ou módulos para funcionar.
+
+No **front-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de componentes de interface do usuário, como botões, formulários e listas. Eles também são usados para testar a interação entre componentes.
+
+No **back-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de serviços, APIs e outros componentes de back-end. Eles também são usados para testar a integração entre componentes de back-end.
+
+Os testes de unidade oferecem uma série de benefícios, incluindo:
+
+<img src="https://uploads.toptal.io/blog/image/91302/toptal-blog-image-1434578005589-4e6897ec04cc0b3c7075b9b011ee915c.gif" height="377" align="right">
+
+- Aumento da qualidade do código: Os testes de unidade ajudam a identificar erros e bugs no código antes que eles sejam integrados ao sistema. Isso resulta em um código mais confiável e estável.
+
+- Facilidade de manutenção: Os testes de unidade facilitam a manutenção do código, pois permitem verificar se as alterações não afetaram o funcionamento de outras partes do código.
+
+- Agilidade no desenvolvimento: Os testes de unidade permitem que os desenvolvedores tenham mais confiança ao realizar refatorações ou adicionar novos recursos. Isso permite que as equipes desenvolvam de forma mais rápida e eficiente.
+
+Portanto, os testes de unidade são uma prática importante para qualquer desenvolvedor, independentemente da área de atuação. 
+
+Sobre os processos de desenvolvimento de software, no terceiro passo no nível de queda do modelo cascata e no quarto passo do modelo RAPID, entramos na parte de codificação e testes unitários. Ou seja, é a construção do sistema em si. Então, só depois de eu entender todo o problema, só depois de eu saber das necessidades e se é possível ou viável para começar a desenvolver. Muitas vezes, para começar a gente se pergunta se é para pegar logo no processo de codificação, ou seja, a desenvolver logo a aplicação o mais rápido possível. No entanto, percebe-se que o tanto de retrabalho que isso gerava, fazia não valer a pena. E fazia com que estourasse muito o orçamento nesse custo. Então, depois deu definir os requisitos, depois de realizar meus modelos de projetos e provar que aquilo é viável, eu então começo o desenvolvimento do meu software em si.
+
+Após o desenvolvimento e junto com o desenvolvimento, entram os testes unitários (unit tests - testes de unidade) que são definidos pelo próprio desenvolvedor onde eles tendem a testar a menor unidade do sistema. Por exemplo: Se eu estou desenvolvendo um sistema de cadastro de cliente, não importa o tipo do sistema (mercadinho, farmácia, padaria, comércio ou de uma grande empresa) e esse desenvolvedor que está escrevendo essas linhas de código de cadastrar um único usuário ou funcionário, por exemplo, ele vai desenvolver um caso de teste para que dado uma entrada (input), ele possa receber uma saída (output) esperada que seria: "usuário cadastrado com sucesso".
+
+Os frameworks de teste de unidade mais populares para **React.js** são:
+
+- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele é rápido, fácil de usar e oferece uma variedade de recursos, como testes de snapshot, mocking e asserções.
+
+- <a href="">Testing Library</a>: A Testing Library é uma biblioteca de utilitários para testes de componentes React. Ela fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
+
+- <a href="">Enzyme</a>: O Enzyme é uma biblioteca de teste de componentes React que fornece uma API poderosa e flexível para manipular o DOM e testar eventos.
+
+A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Jest é uma boa opção para projetos simples, enquanto frameworks como a Testing Library ou o Enzyme podem ser mais adequados para projetos mais complexos.
+
+Os frameworks de teste de unidade mais populares para **Vue.js** são:
+
+- <a href="">Vue Test Utils</a>: O Vue Test Utils é um conjunto de utilitários para testes de componentes Vue.js. Ele fornece uma API simples e intuitiva que permite testar componentes sem depender dos detalhes de implementação.
+
+- <a href="">Jest</a>: O Jest é um framework de teste de unidade JavaScript criado pelo Facebook. Ele também pode ser usado para testes de unidade em Vue.js.
+
+- <a href="">Karma</a>: O Karma é um framework de teste de unidade JavaScript que pode ser usado para executar testes em uma variedade de navegadores. Ele também pode ser usado para testes de unidade em Vue.js.
+
+A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O Vue Test Utils é uma boa opção para projetos simples, enquanto frameworks como o Jest ou o Karma podem ser mais adequados para projetos mais complexos.
+
+O framework Python para web back-end chamado **Django** fornece um framework de teste padrão, chamado de **unittest**. Esse framework é baseado na biblioteca padrão unittest do Python e é adequado para testes unitários e de integração.
+
+Além do unittest, existem outros frameworks de teste de unidade disponíveis para Django. Alguns dos frameworks mais populares incluem:
+
+- <a href="">Pytest</a>: O Pytest é um framework de teste de unidade completo e flexível que oferece uma variedade de recursos, como assertion fixtures, parametrização de testes e testes de desempenho.
+
+- <a href="">Mock</a>: O Mock é um framework de mocking que permite simular o comportamento de objetos externos. Isso pode ser útil para testar a funcionalidade de componentes que dependem de outros componentes ou APIs externas.
+
+- <a href="">Selenium</a>: O Selenium é um framework de automação de testes que permite testar a interação com um navegador web. Isso pode ser útil para testar a funcionalidade de componentes de front-end.
+
+A escolha do framework de teste de unidade mais adequado depende das necessidades específicas do projeto. O unittest é uma boa opção para projetos simples, enquanto frameworks como Pytest e Mock podem ser mais adequados para projetos mais complexos.
+
+Lembre-se das seguintes diretrizes ao escrever testes para seus métodos:
+
+- Teste se a saída esperada de um método corresponde à saída real.
+- Teste se as funções chamadas dentro do método estão ocorrendo o número desejado de vezes.
+- Não tente testar código que não faça parte do método que está sendo testado.
+- Não faça chamadas de API, conexões de banco de dados ou solicitações de rede ao escrever seus testes.
+
+Sobre os conceitos técnicos a respeito de testes de unidades, temos:
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/f92b16ca-c0a0-40ab-ab33-f8ec9f4cf619" height="77" align="right">
+
+✅ **Testes Válidos** (`pass`): São entradas e saídas de dados comuns ao sistema e pertencem ao processo normal. Não apresentam tratamento além do normal já programado. No caso de retorno deverá seguir os padrões estabelecidos e não permitir retornos fora das regras especificadas. Em testes unitários, estamos nos referindo a casos de teste que exercitam o comportamento correto e esperado da unidade de código sob condições normais (válidas), ou seja: Situações em que tudo ocorre como deveria. São aqueles testes que usam entradas válidas e esperadas, esperam resultados corretos, sem exceções ou erros. Confirmam que o comportamento da função está conforme o esperado.
+
+Características de testes válidos:
+
+| Característica              | Exemplo prático                                           |
+| --------------------------- | --------------------------------------------------------- |
+| Entrada no domínio esperado | CPF válido, número positivo, email formatado corretamente |
+| Estado inicial válido       | Usuário existente, banco conectado, produto em estoque    |
+| Fluxo normal do código      | Sem exceções, erros, ou retornos inesperados              |
+| Resultado esperado          | Retorno certo, estado alterado corretamente               |
+
+Exemplo: Teste manual simples em JavaScript - Aqui, `2` e `3` são valores válidos, e o retorno esperado (`5`) confirma o comportamento correto da função.
+
+<img src="https://img.shields.io/badge/Jest-1_pass_0_fail-limegreen?style=flat&logo=jest&logoColor=white">
+
+```javascript
+function somar(a: number, b: number): number {
+  return a + b;
+}
+
+test("soma dois números positivos", () => {
+  expect(somar(2, 3)).toBe(5); // ✅ teste válido
+});
+```
+
+As _afirmações_ (em inglês, **assertions**) determinam se seu teste é `aprovado` ou `reprovado`. Elas comparam o valor de retorno esperado de um método com o valor real. Há uma série de afirmações que você pode fazer no final do seu teste.
+
+A classe `Assertions` no JUnit consiste em métodos estáticos que fornecem várias condições para decidir se o teste é aprovado ou não. Veremos esses métodos à medida que eu o guie por cada exemplo.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/1e50bc84-048c-40c7-b7b8-98dfdeec38a2" height="77" align="right">
+
+❌ **Testes Inválidos** (`fail`): São entradas e saídas de dados não comuns ao sistema. Apresentam tratamento para validar o tipo de dado inválido ou situação. Pode apresentar até dois retornos, uma mensagem para um log no sistema e uma mensagem com formatação e escrita adequada ao usuário. São tão importantes quanto os testes válidos, porque ajudam a garantir que sua função se defenda bem contra entradas erradas, estados incorretos ou fluxos inesperados. São testes que usam entradas inválidas, incorretas ou fora do esperado; Esperam que o código falhe corretamente (com exceção, erro, ou retorno de falha); Verificam se o sistema é robusto contra dados errados ou uso indevido da função.
+
+Exemplo:
+
+```txt
+Dividir (x int,y int)=z int
+```
+
+Caso tenhamos `x=1` e `y=0`, `z` será um valor com erro e deverá retornar uma mensagem ao usuário, avisando que a operação é inválida. Caso a expressão seja um dado comum do sistema, a autorização para tal validação deverá ser do usuário, pois faz parte do conjunto de regras de negócio. Não existe retorno inválido sem um tratamento. O tratamento genérico será apenas para condições não visíveis na regra e uso do sistema.
+
+<img src="https://github.com/user-attachments/assets/e80b1013-dd61-4dc1-a997-8addb2209c4e" height="177" align="right">
+
+👁️‍🗨️ **Domínio**: No domínio de testes, usamos testes unitários para validar a funcionalidade de cada componente do nosso domínio de negócio, refere-se à parte do sistema que é testada para garantir que a lógica de negócio e a funcionalidade do código estão corretas, os testes unitários focam em componentes individuais desse domínio.
+
+> [!Important]
+> É importante ressaltar sobre um termo muito conhecido em ciência da computação, chamado **domínio** (domain), cujo a diferença está no nível de abstração e no foco de cada conceito. A palavra "domínio" realmente aparece em contextos diferentes e pode causar confusão se não for bem delimitada.
+
+No contexto de testes unitários, "domínio" pode se referir genericamente à camada de regras de negócio ou lógica principal da aplicação, que é o alvo ideal desses testes, ou seja, testar a lógica do domínio sem envolver infraestrutura, banco de dados ou interface.
+
+Já em DDD (Domain-Driven Design), "domínio" é o conceito central: é o conhecimento do negócio que está sendo modelado, e tudo gira em torno disso, é a área de interesse do sistema, como logística, financeiro, saúde, etc.
+
+No caso de arquiteturas como Clean Architecture ou Ports & Adapters, "domínio" é uma camada bem definida e isolada que representa as regras puras do negócio, ou seja, aquilo que não muda mesmo que a tecnologia mude; é o núcleo da aplicação.
+
+<img src="https://github.com/user-attachments/assets/7a218751-4342-464b-a375-c0528a72dc50" align="right" height="177">
+
+Já em TDD e BDD, o termo "domínio" aparece implicitamente quando você escreve testes voltados para comportamentos do sistema, especialmente no BDD que foca na linguagem ubíqua e no comportamento esperado do domínio de negócio, enquanto o TDD tende a atuar mais no detalhe técnico e no design emergente.
+
+Por fim, em design de software e design patterns, o "domínio" pode surgir como contexto onde os padrões são aplicados, mas o foco desses conceitos é mais estrutural e de solução técnica do que modelagem de negócio em si.
+
+Então, "domínio" em DDD e arquiteturas limpas é o coração das regras do negócio, enquanto em testes e padrões, é mais o cenário onde você aplica as práticas, muitas vezes sem foco explícito em representar o negócio como um modelo coeso.
+
+Você pode dizer: 
+
+> "Nos nossos testes de unidade, verificamos se os métodos da entidade `Pedido` calculam corretamente o total do pedido."
+
+Focado na verificação da funcionalidade de unidades isoladas de código (geralmente métodos ou funções), tem como objetivo garantir que cada parte do software funcione conforme esperado de maneira isolada. O contexto aqui é mais técnico e voltado para a qualidade do código e a prevenção de regressões.
+
+Pode ser um campo, uma assinatura, um I/O, ou qualquer tipo de local que receba valores externos ao sistema. Todo domínio deve realizar consistências de dados válidos e inválidos. Um domínio só permite dados com a formatação igual ao que será armazenado.
+
+Ex.: Campo DDD deverá permitir números de até quatro casas não negativas ou a base de dados deve impedir a entrada de valores inválidos. Receber e guardar o mesmo tipo de dado, o tamanho do campo que recebe os dados deve ser menor ou igual ao campo que irá armazenar os dados (em raros casos os campos de armazenamento são menores que os de exibição).
+
+Em suma, domínio é o tipo de valor válido para cada campo. Como exemplo podemos citar: 
+
+```txt
+Campo nome: Dominio = tipo: string; tamanho:50
+```
+
+Ao aplicarmos o particionamento por equivalência e a análise por valor limite, poderemos criar as seguintes classes de testes.
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/ff8414d7-6bb9-402e-9e02-75ee279d3008" />
+
+Particionamento por Equivalência: campo `nome`:
+
+```diff
+- valor em branco (BLANK); Cenário Negativo
+- valor > 50; Cenário Negativo
++ qualquer valor de 1 a 50; Cenário Positivo
+```
+
+Análise por Valor Limite:
+
+```txt
+campo nome: valor em branco; valores 49,50,51; 
+```
+
+Usamos um valor exatamente inferior e exatamente posterior ao valor do campo, devido ao fato dos erros aparecerem nas fronteiras da aplicação.
+
+O domínio de testes unitários, o domínio de DDD (Domain-Driven Design) e o domínio de microsserviços podem estar inter-relacionados, mas não são exatamente o mesmo domínio. Embora o domínio de testes unitários, o domínio de DDD e o domínio de microsserviços não sejam exatamente o mesmo, eles estão inter-relacionados e podem se complementar. Testes unitários verificam a funcionalidade do código, DDD foca na modelagem do domínio de negócios, e microsserviços organizam a aplicação em componentes pequenos e independentes. Quando usados juntos, esses conceitos podem ajudar a criar sistemas robustos, bem projetados e testados. Você pode ter uma comunicação mais assertiva com o seu time falando da maneira proposta acima que eles irão entender de qual tipo de domínio se trata.
+
+Quando você combina esses três conceitos, você pode comunicar algo como: 
+
+> [!Tip]
+> "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
+
+Agora, imagine que você precisa validar o funcionamento de sua aplicação em um determinado cenário, mas este cenário só funciona se integrado com uma aplicação de terceiros específica, a qual você não tem total acesso.
+
+O fato de você não ter acesso traz um dilema: ou você ignora a integração e roda o teste, inviabilizando a obtenção de resultados assertivos, ou não testa de modo algum.
+
+Nenhuma das opções é realmente a escolha ideal, mesmo se você encarar aquele ditado “feito é melhor que perfeito”. Afinal, é muito tênue a linha entre não trazer os resultados corretos e não testar.
+
+O ideal seria existir algo que possibilitasse que os testes trouxessem os melhores resultados, mesmo sem acesso à tecnologia necessária. A boa notícia é que existe! Estamos falando dos _test doubles_.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/3963eb3d-ea61-4557-92cb-2f097cfed79a" height="77" align="right">
+
+Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste. Termo genérico para qualquer substituição de objeto de produção em testes.
+
+De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro. O termo vem da analogia com os “dublês de cinema”: quando você não pode (ou não deve) usar um componente real em um teste, você o substitui por uma versão simulada que cumpre o mesmo papel de forma controlada e previsível. Os *test doubles* podem ser aplicados **a qualquer dependência externa ou componente cuja execução real atrapalhe o isolamento do teste**.
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/b3dfda90-1d63-4672-adfe-67e334ee45cd" />
+
+Em resumo, as duplicatas de teste (test doubles) são usadas para criar testes rápidos, independentes, determinísticos e confiáveis. Eles representam componentes reais, semelhante à forma como os dublês são usados nos filmes. Um test double pode ser usado para simplificar testes, aumentar a velocidade de execução ou permitir resultados determinísticos de uma ação.
+
+Na prática, isso inclui **APIs externas**, **bancos de dados**, **requisições HTTP**, **filas de mensageria (como RabbitMQ)**, **sistemas de cache (Redis, por exemplo)**, **consultas SQL complexas**, **chamadas a LLMs (modelos de linguagem)** e até **funções, classes e métodos internos** que geram efeitos colaterais ou dependem de recursos não determinísticos (como hora do sistema, aleatoriedade, IO ou threads).
+
+Por exemplo, em um teste unitário que precisa validar a lógica de negócio de uma função que consome uma API REST, você não quer depender de uma chamada real — isso tornaria o teste lento, sujeito a falhas de rede e dependente de algo fora do seu controle. Nesse caso, você cria um **mock** da API, que retorna uma resposta previsível. Da mesma forma, se a função lê dados de um banco, você cria um **stub** ou **fake** para simular a consulta.
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/22e14580-ed05-4d76-a49f-04f073454f55" />
+
+Então, resumindo: o conceito de *test doubles* se aplica a **qualquer camada do sistema** — desde uma função pura até integrações complexas com APIs, bancos ou modelos de IA — sempre que o objetivo é **isolar o teste da dependência real** para torná-lo **determinístico, rápido e confiável**.
+
+Por exemplo, um programa que utiliza um servidor de banco de dados é relativamente lento e consome recursos significativos do sistema, o que prejudica a produtividade dos testes. Um teste pode exigir dados do banco de dados que, sob atividade normal do sistema, estão em constante alteração, fornecendo, assim, saídas não determinísticas para qualquer consulta. Um test double pode fornecer um valor estático em vez de acessar um banco de dados real, evitando tanto chamadas de rede ou do sistema quanto dados em constante mudança.
+
+Um test double também pode ser usado para testar parte do sistema que está pronta para teste, mesmo que suas dependências não estejam.
+
+Por exemplo, em um sistema com os módulos `Login`, `Home` e `User`, suponha que `Login` esteja pronto para teste, mas os outros dois não. As funções consumidas de `Home` e `User` podem ser implementadas como test doubles para que `Login` possa ser testado.
+
+Quando falamos em Test Doubles, estamos nos referindo a objetos “substitutos” que criamos para simular comportamentos em testes, especialmente quando não queremos ou não podemos usar a implementação real de uma dependência. O nome vem de uma analogia com o “stunt double” do cinema, o dublê que substitui o ator em cenas perigosas. Em testes de software, um test double substitui um componente real para que possamos isolar o código que queremos validar. 
+
+Fazendo um paralelo simplista, eles são como dublês de atores em um filme: substituem aplicações reais durante a realização de um teste por simular sua aparência e comportamento. Isso traz menos complexidade ao teste, além de permitir verificar uma parte de um sistema sem ficar preso em todas as suas outras porções.
+
+Advertências: Embora os test doubles sejam frequentemente usados para facilitar o teste de unidade, existem limitações em seu uso, a principal sendo que a conectividade real ao banco de dados ou outros acessos externos não é comprovada por esses testes. Para evitar erros que podem passar despercebidos por isso, são necessários outros testes que instanciem o código com as implementações "reais" das interfaces mencionadas acima. Esses riscos de integração geralmente são cobertos por testes de integração, testes de sistema ou testes de integração de sistema.
+
+Talvez você não esteja familiarizado com o termo test double. É que, às vezes, eles são generalizados pela palavra mock, ou então pela expressão “mockar” . O fato é que mock é apenas um dos exemplos de test doubles dentro de uma família muito maior. Além dos mocks, existem, por exemplo, os fakes, os stubs, os dummies… Abaixo, explico alguns deles.
+
+Eles são fundamentais para testes automatizados, principalmente testes unitários, e ajudam a focar apenas na lógica que você está testando, sem interferência de outras partes do sistema. 
+
+Martin Fowler classifica os test doubles em cinco tipos, que são os tipos mais comuns de Test Doubles são geralmente organizados em cinco categorias clássicas:
+
+<a href="https://pt.slideshare.net/slideshow/sc-mad-tdd-workshop-test-doubles-36543998/36543998"><img src="https://github.com/user-attachments/assets/633f5cc2-e3ff-46ea-a801-44b80ddca48e" height="277" align="right"></a>
+
+1. `Dummy` (Boneco de simulação): Passado mas nunca usado; listas de parâmetros de preenchimentos. Usado apenas para preencher parâmetros, sem comportamento algum. Objetos de preenchimento e sem funcionalidade.
+
+2. `Fake` (Falso): tem uma implementação funcional, mas não é adequado para produção. Que tem uma implementação funcional, mas simplificada (por exemplo, um banco de dados em memória). Implementação simplificada e funcionalidade básica.
+
+3. `Stub` (Simulacro): Fornece respostas prontas para chamadas feitas durante o teste. Que retorna respostas fixas ou predefinidas. Respostas pré-determinadas e imita o comportamento real.
+
+4. `Spy` (Espião): Um esboço que registra informações sobre como foi chamado. Que registra chamadas e argumentos para verificação posterior. Monitoramento de interações e observa o comportamento.
+
+5. `Mock` (Simulado): Pré-programado com expectativas, formando uma especificação das chamadas esperadas. Que define expectativas explícitas de comportamento (quantas vezes deve ser chamado, com quais parâmetros etc.). Verificação de comportamento e rastreamento de chamadas de métodos.
+
+O primeiro é o **Dummy**, que é o mais simples: são objetos criados apenas para preencher parâmetros ou satisfazer assinaturas de métodos, mas que nunca são realmente usados. Eles existem para evitar nulls ou falhas de compilação, mas não participam da lógica do teste.
+
+Os dummies são dados que substituem dados reais, mas que não chegam a ser realmente utilizados no teste. São normalmente usados para satisfazer determinados parâmetros.
+
+Como uso de dummies é possível diminuir a complexidade durante a escrita de um teste, ignorando o que não é relevante no cenário e focando no que realmente importa.
+
+<img height="277" align="right" alt="fake" src="https://github.com/user-attachments/assets/f81524ad-936f-4b9e-9822-05c32d02489c" />
+
+Os **fakes** são test doubles que têm implementações reais diferentes àquelas que existem em produção. é uma implementação funcional simplificada de um componente real. Ele realmente executa algo, mas de maneira controlada e menos complexa.
+
+Um exemplo clássico é um banco de dados em memória usado nos testes em vez de um banco de produção, ou um servidor HTTP falso que responde rapidamente sem precisar de rede. 
+
+Os fakes aceleram os testes e evitam dependências externas pesadas. Podemos considerá-los como um “atalho”, algo implementado para deixar a execução do teste mais dinâmica frente ao que é colocado no ar de fato.
+
+Basicamente, não há lógica em um fake — ele retorna um valor determinado por quem o implementa e, justamente por isso, não é um elemento adequado para ir à produção. Contudo, ele elimina a necessidade de implementar uma funcionalidade real, o que seria bem mais complexo.
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/4f994eed-d9b0-44fd-8272-3d54b28a4e27" />
+
+O **Stub** é um objeto que fornece respostas pré-determinadas para chamadas feitas durante o teste. Ele não tem lógica real, apenas retorna o que foi configurado. Os stubs são muito úteis quando você quer garantir que o teste receba certos dados sem depender de sistemas externos, como simular uma API retornando um JSON fixo.
+
+São similares aos fakes e aos spies, mas, ao contrário destes, ele consegue alterar seu comportamento com base na maneira como ele foi chamado no teste.
+
+O stub também é uma forma de teste duplo usado para fornecer uma resposta controlada das dependências de um componente. Esse tipo de teste duplo pode ser usado para fornecer uma resposta controlada sem fazer nenhuma lógica real. Os stubs geralmente não dão nenhuma resposta fora do que está programado no teste. Isso permite que mais de um cenário para uma única dependência seja representado no teste.
+
+As dependências externas podem não se limitar apenas às classes, mas também a certos métodos. O **stubbing de método** deve ser feito quando sua função está chamando uma função externa em sua implementação. Nesse caso, você faz com que essa função retorne o valor que você deseja em vez de chamar o método real.
+
+Por exemplo, o método que você está testando (A) está chamando um método externo (B) em sua implementação. B faz uma consulta ao banco de dados, buscando todos os alunos com notas maiores que 80. Fazer uma chamada real ao banco de dados não é uma boa prática aqui. Portanto, você faz um stub do método e o faz retornar uma lista fictícia de alunos que você precisa para testar.
+
+Qual é a diferença entre Mock e Stub? A julgar pela definição de mock e stub, parece que mock e stub são a mesma coisa. Isso ocorre porque uma simulação pode ser considerada uma extensão de um esboço. Um stub é apenas uma implementação simples usada para fornecer uma resposta controlada. Enquanto isso, a simulação não funciona apenas como um stub, mas também verifica o comportamento de um componente e sua interação com o objeto que a simulação cria.
+
+<img src="https://github.com/user-attachments/assets/4024470e-6396-4b5b-849c-ec7a86e2bc54" height="277" align="right">
+
+Os **mocks** tem expectativas sobre o jeito que deve ser chamado e, caso ele não seja chamado da forma correta, o teste deve falhar. Eles são usados para testar interações entre métodos e são úteis onde não há como verificar algumas mudanças de estado ou retornos do método testado diretamente.
+
+**Mocking** (Mockado) é uma técnica usada em testes de software para simular o comportamento de dependências externas, como serviços, bancos de dados, ou APIs, dentro de uma unidade de código que você está testando. Ao invés de usar as implementações reais dessas dependências, você cria "mocks" (objetos falsos) que imitam o comportamento esperado, permitindo testar o código de forma isolada. 
+
+O principal benefício do mocking é garantir que o teste foque apenas no comportamento da unidade de código em questão, sem se preocupar com o comportamento ou estado das dependências externas. A classe cujos métodos você está testando pode ter algumas dependências externas. Como mencionado anteriormente, você não deve tentar testar código que não faça parte da função que está sendo testada.
+
+Nos casos em que sua função usa uma classe externa, porém, é uma boa prática fazer um mock dessa classe, ou seja, ter valores de mock-up (algo como "simulações", em português) em vez dos valores reais. Usaremos a biblioteca **Mockito** para esse fim.
+
+Exemplo: Se você estiver testando um serviço que depende de um repositório de dados, você pode usar um mock para simular as respostas do repositório, em vez de acessar o banco de dados real.
+
+Mocking e testes unitários são diferentes, mas se complementam para testar unidades isoladas do código. Os testes unitários tem o objetivo de testar uma unidade de código (como uma função ou método) de forma independente, garantindo que ela funcione corretamente em diferentes cenários. Em um teste unitário, você se preocupa apenas com o comportamento interno dessa unidade. 
+
+Já o mocking é uma técnica usada nos testes unitários para simular (mockar) dependências externas da unidade que está sendo testada. Isso permite que você foque exclusivamente na lógica interna da unidade, sem se preocupar com o comportamento ou estado de serviços, bancos de dados ou APIs reais. Em resumo, os mocks ajudam a garantir que os testes unitários sejam realmente isolados e focados na unidade de código que está sendo testada, sem interferências externas.
+
+<img src="https://github.com/user-attachments/assets/0f2ecf0d-35de-4fe4-a7b7-24530745efd0" height="277" align="right">
+
+Por fim, existe o **Spy**, que é uma espécie de híbrido. Ele é um objeto real, mas que tem a capacidade de registrar as chamadas que recebeu, permitindo inspecionar posteriormente como foi utilizado. Diferente do mock, o spy não necessariamente substitui a lógica real; ele executa de verdade, mas deixa rastros que podem ser verificados.
+
+Um spy age como um espião sob a implementação real e, como o mock, consegue verificar as interações entre os métodos.
+
+A diferença para o mock é que o spy chama a implementação real para todos os métodos da interface mockada, a não ser que para algum método este seja configurado para retornar algo específico diferente da implementação real.
+
+<img height="210" align="right" src="https://github.com/user-attachments/assets/369cf343-df3c-484d-9611-10042be783e4" />
+
+Existem boas práticas bem consolidadas no uso de *test doubles*, e as imagens refletem parte disso. A primeira mostra uma distinção clássica: **mocks (e spies)** são usados mais em **commands** (ações que mudam estado), enquanto **stubs (stubs, dummies, fakes)** são usados em **queries** (consultas que retornam dados). Essa prática vem da ideia de **Command Query Separation (CQS)**, que sugere que comandos devem ter efeitos colaterais e não retornar valores, enquanto queries retornam valores mas não mudam estado. Se você usa stubs para queries, você só garante dados de entrada controlados; já mocks para comandos te permitem verificar se uma ação realmente ocorreu.
+
+Na segunda imagem, vemos os test doubles categorizados em um “universo” com sobreposições. A ideia é reforçar que **Dummy, Stub, Fake, Spy e Mock** são variações de substitutos que usamos em testes, mas cada um tem um propósito específico. A boa prática aqui é **usar o double mais simples possível que resolva o problema do teste**. Por exemplo, se você só precisa preencher um parâmetro, use um dummy. Se precisa de dados controlados, use um stub. Se quer uma implementação leve mas funcional (como um banco em memória), use um fake. Se precisa verificar chamadas, use um mock. Se precisa capturar interações sem substituir toda a lógica, use um spy. O erro comum é usar mocks para tudo, gerando testes frágeis, acoplados demais ao código interno.
+
+Outra boa prática é manter os doubles **próximos do contexto do teste** e não generalizá-los cedo demais. Doubles genéricos compartilhados entre muitos testes podem virar fonte de inconsistência ou dificultar a leitura. Em TDD, por exemplo, é comum criar o double dentro do próprio teste e só refatorar para reaproveitar se realmente houver repetição.
+
+<table>
+ <tr>
+  <td><img width="734" height="361" alt="image_thumb_1789" src="https://github.com/user-attachments/assets/e6816068-49e9-4e62-aee1-690b4c834267" /></td>
+  <td><img width="729" height="356" alt="image_thumb_2124" src="https://github.com/user-attachments/assets/a82df8dd-4b3f-444a-bbae-667bef34d27a" /></td>
+  <td><img width="733" height="362" alt="image_thumb124" src="https://github.com/user-attachments/assets/56f79bdd-c770-4a02-af69-6b08a4623f24" /></td>
+  <td><img width="734" height="341" alt="image_thumb789" src="https://github.com/user-attachments/assets/ed92616b-0163-4fd5-946c-a8277d867352" /></td>
+  <td><img width="727" height="497" alt="image_thumbqqq" src="https://github.com/user-attachments/assets/e8328b45-74e9-49f6-9470-1c115b57d299" /></td>
+ </tr>
+</table>
+
+Também é importante lembrar que test doubles são **ferramentas para testes de unidade**, onde o isolamento é crucial. Em testes de integração ou end-to-end, eles devem ser usados com cautela, pois nesses níveis o objetivo é justamente validar a interação real entre componentes. Usar doubles nesses contextos pode dar uma falsa sensação de segurança, porque o código passa no teste, mas falha no ambiente real.
+
+Por fim, existe uma máxima importante: **“don’t mock what you don’t own”** — ou seja, evite criar mocks para dependências externas de terceiros, como APIs de bibliotecas que você não controla. Isso acopla seus testes a detalhes que podem mudar fora do seu controle. Em vez disso, prefira abstrair essas dependências atrás de interfaces próprias e mockar essas interfaces. Isso deixa seus testes mais estáveis e mantém o acoplamento sob seu domínio.
+
+Ou seja, as boas práticas são: usar mocks para comandos e stubs para queries, escolher o double mais simples possível para o cenário, não abusar de mocks em todos os lugares, restringir o uso a testes de unidade, e nunca mockar diretamente dependências externas que você não controla.
+
+<div align="center"><img alt="sociable-vs-solitary" src="https://github.com/user-attachments/assets/c355f0c9-a037-42cb-83a9-bdf46e865df5" /></div>
+
+Pouca gente conhece bem essa distinção, embora ela seja bem importante quando o assunto é qualidade e isolamento de testes unitários. Os termos *solitary tests* e *sociable tests* vêm de uma classificação proposta por **Gerard Meszaros** no livro *xUnit Test Patterns*. A ideia é entender como os testes unitários se relacionam com outras unidades de código e até que ponto o teste realmente está isolando a unidade sob teste (o chamado *System Under Test* — SUT). A diferença entre sociable tests e solitary tests praticamente gira em torno de quando e como você usa test doubles.
+
+<img src="https://github.com/user-attachments/assets/914b7a9f-379f-41ba-a549-3c47fdf991f5" align="right" height="177">
+
+Um ***solitary test*** é um teste *totalmente isolado*. Ele testa *apenas uma unidade*, geralmente uma classe, função ou método e substitui todas as suas dependências externas por *test doubles* (como *mocks*, *stubs* ou *fakes*). Assim, o teste verifica exclusivamente o comportamento interno da unidade, sem interações reais com banco de dados, rede, arquivos, APIs ou outros serviços. Esse tipo de teste é o ideal quando se quer garantir **pureza e velocidade** nos testes unitários, pois eles são rápidos, previsíveis e não dependem de contexto externo. 
+
+Por exemplo: ao testar um `OrderService`, você substitui o `PaymentGateway` por um *mock* que apenas simula o comportamento esperado, sem fazer chamadas reais.
+
+<img src="https://github.com/user-attachments/assets/720fea8f-7f9c-440f-a159-1edf9dc1e201" align="right" height="177">
+
+Já um ***sociable test*** é o oposto: ele testa uma unidade **em conjunto com suas dependências reais** — ou ao menos com algumas delas. Em vez de isolar completamente a unidade, o teste permite que ela “converse” com outras classes do mesmo módulo, desde que ainda esteja dentro do escopo de uma “unidade lógica”. 
+
+Por exemplo, um teste que exercita `OrderService` chamando `PaymentGateway` e `EmailNotifier` reais (ou parcialmente reais) é sociável, porque o comportamento observado depende da interação entre várias unidades.
+
+A diferença central está na *abordagem de isolamento*. O teste solitário foca em verificar se a unidade funciona corretamente *sozinha*; o sociável foca em verificar se ela funciona *em conjunto* com outras partes confiáveis do sistema. Ambos são considerados *testes unitários*, desde que mantenham o escopo pequeno e rápido, mas o solitário é mais puro e previsível, enquanto o sociável tende a ser mais próximo da realidade, embora menos determinístico.
+
+Na prática, bons conjuntos de testes costumam mesclar os dois: **solitary tests** para garantir o comportamento interno de cada componente de forma isolada e rápida, e **sociable tests** para verificar a integração leve entre partes da aplicação que, juntas, compõem uma unidade funcional.
+
+<img height="277" align="right" src="https://github.com/user-attachments/assets/2ce9382a-b065-4853-a708-6f41db155961" />
+
+O **Arrange–Act–Assert Pattern (AAA)** é um padrão de estruturação de testes extremamente usado em <a href="https://github.com/IsaacAlves7/qa?tab=readme-ov-file#qa-tdd---test-driven-development">TDD</a>, **unit tests** e qualquer cenário onde você quer garantir clareza, previsibilidade e legibilidade nos testes. Ele não é um framework nem uma tecnologia, mas sim uma *disciplina mental*, uma *organização lógica* para que cada teste seja fácil de entender, manter e evoluir. A ideia é que, em vez de escrever um teste como um bloco monolítico confuso, você o divide em três momentos distintos que imitam o raciocínio humano ao validar um comportamento.
+
+O padrão Arrange-Act-Assert, também conhecido como padrão AAA ou 3A, é uma abordagem amplamente reconhecida para estruturar testes. Foi originalmente proposto por Bill Wake em 2001 e depois mencionado no influente livro de Kent Beck, "Test Driven Development: By Example", em 2002.
+
+O padrão AAA promove clareza ao recomendar que os testes sejam estruturados em três fases distintas:
+
+1. No primeiro momento, o **Arrange**, você prepara o ambiente. Organize tudo o que for necessário para realizar o teste. Isso envolve criar os objetos, configurar estado, definir entradas, mocks, fakes, stubs ou qualquer dependência necessária para que a ação principal do teste aconteça de forma isolada. Aqui você estabelece as pré-condições do cenário. Em outras palavras, é onde você monta o palco antes da cena começar. Um bom *Arrange* não tem lógica demais; ele apenas prepara o terreno para que o teste tenha um contexto claro.
+
+2. Depois vem o **Act**, que é o coração do teste. Aja com base no código alvo a ser testado executando-o. Aqui você executa exatamente uma ação, a ação que deseja validar. Esse ponto é crucial: o *Act* não deve ser poluído com outras chamadas ou verificações, e não deve fazer múltiplas coisas. É a chamada do método, função ou endpoint que você está testando. Num teste de unidade bem modelado, esse bloco costuma ser uma única linha. A simplicidade aqui é o segredo: quando se faz mais de uma ação, perde-se precisão e fica difícil identificar por que um teste falha.
+
+3. Por fim, o **Assert** é o momento de verificar se o comportamento observado corresponde ao comportamento esperado. Afirme os resultados esperados. É onde você compara o resultado com o valor correto, valida estado final, confirma se exceções foram lançadas, ou se eventos foram registrados. É nesse bloco que você diz explicitamente qual era o contrato esperado daquele código. E, por isso, todo *Assert* deve ser claro e direto: um teste que não deixa explícito o que está sendo validado é um teste que não comunica nada.
+
+<img src="https://github.com/user-attachments/assets/72cd305f-1b35-4cab-92c8-b461eb7bce1f" align="right" height="177">
+
+O padrão AAA melhora a legibilidade e a manutenibilidade, espelhando de perto a estrutura Given-What-When-Then desenvolvida por Daniel Terhorst-North e Chris Matts como parte do BDD (Behavior-Driven Development). Hoje, quase todas as ferramentas modernas de teste unitário com sintaxe BDD incentivam o uso do padrão AAA.
+
+A beleza do AAA é que ele espelha como pensamos quando analisamos um comportamento: primeiro preparamos, depois fazemos, depois verificamos. É tão natural que, quando bem aplicado, qualquer pessoa — até alguém que nunca viu o projeto — consegue ler e entender o teste como se estivesse lendo uma narrativa estruturada. Além disso, frameworks como xUnit, NUnit, JUnit, Jest, PyTest e tantos outros encaixam-se naturalmente nele, porque a ideia é totalmente agnóstica de linguagem.
+
+O padrão AAA também ajuda a evitar testes frágeis e difíceis de manter, porque desencoraja misturar lógica dentro dos asserts, evita efeitos colaterais no *Act* e obriga você a ser explícito sobre as condições iniciais no *Arrange*. Isso leva a testes mais puros, mais isolados e menos vulneráveis ao tempo.
+
+No fim das contas, o AAA transforma testes em pequenas histórias de causa e efeito. Isso é fundamental em um ambiente profissional, especialmente no desenvolvimento orientado a testes, porque permite que o teste seja mais do que um instrumento técnico — ele se torna documentação viva, alinhando comportamentos esperados com a intenção original do desenvolvedor.
 
 ## [QA] BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
