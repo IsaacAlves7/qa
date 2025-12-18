@@ -485,163 +485,6 @@ Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipel
 
 5. Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
-## [QA] Integration Testing
-<img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
-
-<a href="https://martinfowler.com/bliki/IntegrationTest.html"><img src="https://em-content.zobj.net/source/microsoft-teams/400/woman-and-man-holding-hands_1f46b.png" align="right" height="77"></a>
-
-Os **testes de integração** (integration testing) são de um nível mais alto, e testam a relação de elementos, como por exemplo um banco de dados e o software. A realização destes testes é mais lenta, afinal possuem um outro grau de complexidade. É um teste em grupos que valida a integração de um sistema com outros sistemas ou banco de dados, é feito pelo desenvolvedor para validar se existe falha de dados entre integrações nos sistemas e se está com o comportamento correto.
-
-São testes que verificam se _módulos_ diferentes do sistema funcionam corretamente juntos, por exemplo: back-end + banco de dados, API + autenticação, ou microsserviços se comunicando via fila ou HTTP.
-
-No contexto de testes de integração, **módulos** são partes distintas de um sistema que têm responsabilidade própria (ex: autenticação, pagamentos, cadastro), podem ou não ser executadas separadamente e precisam se comunicar entre si para o sistema funcionar corretamente. Módulo, em testes de integração, se refere a qualquer parte autônoma do sistema (seja uma classe, serviço, camada ou microserviço) que precisa se comunicar com outras partes para o sistema funcionar. Testes de integração são o que garantem que essas partes realmente funcionam bem juntas, usando dados reais, banco de dados, APIs, filas, etc. Os testes de integração avaliam se a comunicação entre esses módulos está funcionando como esperado.
-
-Em testes de integração, módulos são as **unidades de software intermediárias**, partes funcionais do sistema que já foram testadas isoladamente (em testes de unidade) e agora precisam ser verificadas em conjunto para garantir que **interajam corretamente** umas com as outras. Em outras palavras, quando falamos em módulos, estamos nos referindo a componentes do sistema que possuem fronteiras bem definidas e trocam dados entre si, como classes, serviços, APIs, repositórios, adaptadores, filas, ou até microservices.
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
-
-Por exemplo, imagine uma aplicação ASP.NET Core com RabbitMQ. Você pode ter:
-
-* Um **módulo de Producer**, responsável por publicar mensagens.
-* Um **módulo de Consumer**, responsável por ler e processar essas mensagens.
-* Um **módulo de persistência**, que grava os dados no banco.
-  Cada um desses módulos pode ser testado separadamente (testes unitários), mas o **teste de integração** se preocupa em verificar o comportamento **entre eles**, por exemplo, se o producer realmente publica no RabbitMQ e se o consumer consome e processa corretamente a mensagem publicada.
-
-O conceito de módulo em integração é relativo: em um projeto monolítico, um módulo pode ser um **conjunto de classes coesas**; em uma arquitetura de microsserviços, um módulo pode ser **um serviço inteiro**. O importante é que o módulo tenha **interfaces de comunicação claras** (como endpoints HTTP, filas, métodos públicos, etc.), porque os testes de integração se baseiam exatamente nessas fronteiras.
-
-No fundo, o teste de integração responde à pergunta: 
-
-> “Esses módulos, quando combinados, ainda funcionam corretamente como um todo?” — garantindo que o comportamento do sistema emergente seja coerente, e que os dados fluam corretamente entre as partes.
-
-Portanto, testes de integração são uma fase do processo de teste de software em que módulos ou componentes são combinados e testados em grupo. Ela sucede o teste de unidade, em que os módulos são testados individualmente, e antecede o teste de sistema, em que o sistema completo é testado num ambiente que simula o ambiente de produção. Os testes de integração têm como objetivo verificar a funcionalidade e a comunicação entre módulos. Eles são projetados para identificar erros de integração, que são erros que ocorrem quando dois ou mais módulos são combinados.
-
-Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/2fcdee58-77a5-42d9-a61f-9b07aab4f16c" />
-
-- `Módulo A`: Autenticação
-
-- `Módulo B`: Catálogo de produtos
-
-- `Módulo C`: Carrinho de compras
-
-- `Módulo D`: Pagamento
-
-No teste de integração, você testaria coisas como: 
-
-- ✅ Se um usuário autenticado consegue adicionar produtos ao carrinho (A + C).
-
-- ✅ Se o sistema só libera o pagamento se os produtos forem válidos (B + D).
-
-- ✅ Se o pedido final é registrado no banco com todas as dependências funcionando (A + B + C + D).
-
-Dependendo do contexto, módulo pode significar:
-
-| Contexto               | O que é o "módulo"?                                           | Exemplo prático                                           |
-| ---------------------- | ------------------------------------------------------------- | --------------------------------------------------------- |
-| Back-end (monolito)    | Um **componente separado** (serviço, classe, camada)          | Módulo de usuários vs módulo de produtos                  |
-| Microserviços          | Um **serviço inteiro** com banco próprio e API                | Serviço de checkout vs serviço de catálogo                |
-| Front-end modularizado | Um conjunto de **funções ou hooks reutilizáveis**             | Módulo de autenticação + módulo de requisições            |
-| Arquitetura em camadas | Uma **camada** da aplicação (Controller, Service, Repository) | Controller depende do Repository funcionando corretamente |
-
-Então, nos testes de integração, o objetivo é:
-
-- Testar a colaboração entre módulos reais, sem mocks.
-- Verificar se integrações entre módulos distintos (por código, HTTP, fila, banco) estão funcionando.
-- Detectar problemas de acoplamento, dependência ou contrato entre partes do sistema.
-
-Se você quer conhecer todas as principais ferramentas e frameworks de testes de integração, aqui vai um apanhado completo, organizado e atualizado, abrangendo múltiplas linguagens e stacks modernas — incluindo ferramentas de propósito geral, específicas para APIs, banco de dados, E2E (fim a fim), e ambientes complexos como microserviços.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/fc63a3ad-8a9f-4841-bc0c-9855af158009" align="right" height="377">
-
-**JavaScript / TypeScript**:
-
-- **Jest** embora seja popular para testes de unidade, também permite testes de integração. Suporte a mocking, spies, e `supertest` para testes de API.
-
-- **Supertest** testa endpoints HTTP diretamente em apps Node.js/Express/Koa. Muito usado com Jest ou Mocha.
-
-- **Mocha + Chai** flexível e modular. Excelente para testes de integração com `chai-http` e `supertest`.
-
-- **Playwright / Puppeteer** usados para testes de integração **em aplicações web** (navegador). Permitem verificar o fluxo do usuário entre frontend e backend.
-
-- **Vitest** suporte moderno e rápido a testes de integração com foco em performance. Alternativa moderna ao Jest com suporte a ES Modules.
-
-Deno com `deno test` embutido no runtime. Suporte nativo a testes de integração (com `fetch`, banco, etc.). Test libraries auxiliares: `assert` (de `std`) e não precisa de Supertest: pode usar `fetch` diretamente no servidor rodando em teste.
-
-**Python**:
-
-- **Pytest** um dos frameworks mais completos. Com plugins como `pytest-django`, `pytest-flask`, `pytest-asyncio`, cobre testes de integração completos.
-
-- **Requests / HTTPX** combinados com `pytest`, são ótimos para testar APIs REST ou FastAPI/Flask/Django.
-
-- **Behave / Lettuce** estilo BDD com testes de integração escritos em Gherkin.
-
-**Java / Kotlin**:
-
-- **JUnit (5+)** com Spring Boot Test: realiza testes de integração com o contexto da aplicação.
-
-- **Testcontainers** executa serviços reais (como PostgreSQL, Kafka, Redis) em containers Docker nos testes.
-
-- **RestAssured** framework fluente para testar endpoints REST em Java.
-
-**Go**:
-
-- **testing + httptest** padrão da linguagem. Cria servidores HTTP fake para testar integração de APIs.
-
-- **GoConvey** framework para escrever testes BDD e de integração.
-
-- **Testcontainers-Go** integra serviços externos com Docker no teste (como bancos, filas, etc).
-
-**Rust**:
-
-- `#[tokio::test]`, `reqwest`, `warp::test` ferramentas nativas para rodar testes async com HTTP, banco etc.
-
-- **Testcontainers-rs** similar ao de outras linguagens: banco de dados real em Docker.
-
-**PHP**:
-
-- **PHPUnit** com Laravel ou Symfony, permite testes de integração completos com banco de dados e API.
-
-- **Codeception** específico para testes de integração e E2E. Robusto e com suporte a múltiplos módulos (HTTP, DB, etc).
-
-**Ruby**:
-
-- **RSpec + Capybara** usado em Rails para testes de integração web.
-
-- **Minitest** leve e nativo do Ruby. Com suporte a integração com bancos e HTTP.
-
-Ferramentas genéricas de integração / multi-linguagem:
-
-- **Postman + Newman** ideal para testar APIs REST/GraphQL com fluxo, autenticação, tokens, etc.
-
-- **Insomnia Tests** alternativa ao Postman com foco em GraphQL e REST.
-
-- 🧪 **Cypress** (E2E com integração real) testa interface, mas também valida backend real.
-
-- 🐳 **Testcontainers** (multi-language: Java, Node, Go, Rust, .NET, etc) executa serviços reais (Redis, MySQL, RabbitMQ) em Docker, durante os testes.
-
-- **WireMock / MockServer**: Simulam serviços externos para testar integração sem dependências reais.
-
-- **Docker Compose** (para orquestrar múltiplos serviços nos testes), muito usado para testes de integração entre microsserviços.
-
-Em casos especiais, testes com fila e mensageria (Kafka, RabbitMQ):
-
-* `Testcontainers` (com RabbitMQ/Kafka)
-* `docker-compose` para subir o ambiente
-* Bibliotecas nativas da linguagem para consumir/produzir
-
-Para testes de integração, você pode optar por:
-
-| Categoria | Ferramentas-chave                              |
-| --------- | ---------------------------------------------- |
-| Node.js   | Jest + Supertest, Mocha, Vitest                |
-| Deno      | `deno test` + `fetch/assert`                   |
-| Python    | Pytest + HTTPX + Testcontainers                |
-| Java      | JUnit + SpringBootTest + Testcontainers        |
-| Multi     | Postman/Newman, Testcontainers, Docker Compose |
-| E2E web   | Playwright, Cypress, Puppeteer                 |
-| APIs      | RestAssured, Insomnia, HTTPX, Supertest        |
-
 ## [QA] Functional Testing
 <img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
 
@@ -2442,6 +2285,163 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
    - **Istanbul**: Ferramenta de cobertura de testes para JavaScript.
 
 Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
+
+## [TDD] Integration Testing
+<img src="https://img.shields.io/badge/Jest-fail-%23C21325?style=flat&logo=jest&logoColor=white"> <img src="https://img.shields.io/badge/Cypress-passing-gray?style=flat&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Mock-passing-chocolate?style=flat&logo=Mock&logoColor=white"> <img src="https://img.shields.io/badge/Go-passing-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHPUnit-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/-Pytest-blue?style=badge&logo=Pytest&logoColor=white"> <img src="https://img.shields.io/badge/JUnit5-passing-25A162?style=flat&logo=JUnit5&logoColor=white"> <img src="https://img.shields.io/badge/xUnit.net-8_pass_0_fail-512BD4?style=flat&logo=DotNet&logoColor=white"> ![xUnit.net](https://img.shields.io/badge/-Moq-512BD4?style=badge&logo=.NET&logoColor=white)
+
+<a href="https://martinfowler.com/bliki/IntegrationTest.html"><img src="https://em-content.zobj.net/source/microsoft-teams/400/woman-and-man-holding-hands_1f46b.png" align="right" height="77"></a>
+
+Os **testes de integração** (integration testing) são de um nível mais alto, e testam a relação de elementos, como por exemplo um banco de dados e o software. A realização destes testes é mais lenta, afinal possuem um outro grau de complexidade. É um teste em grupos que valida a integração de um sistema com outros sistemas ou banco de dados, é feito pelo desenvolvedor para validar se existe falha de dados entre integrações nos sistemas e se está com o comportamento correto.
+
+São testes que verificam se _módulos_ diferentes do sistema funcionam corretamente juntos, por exemplo: back-end + banco de dados, API + autenticação, ou microsserviços se comunicando via fila ou HTTP.
+
+No contexto de testes de integração, **módulos** são partes distintas de um sistema que têm responsabilidade própria (ex: autenticação, pagamentos, cadastro), podem ou não ser executadas separadamente e precisam se comunicar entre si para o sistema funcionar corretamente. Módulo, em testes de integração, se refere a qualquer parte autônoma do sistema (seja uma classe, serviço, camada ou microserviço) que precisa se comunicar com outras partes para o sistema funcionar. Testes de integração são o que garantem que essas partes realmente funcionam bem juntas, usando dados reais, banco de dados, APIs, filas, etc. Os testes de integração avaliam se a comunicação entre esses módulos está funcionando como esperado.
+
+Em testes de integração, módulos são as **unidades de software intermediárias**, partes funcionais do sistema que já foram testadas isoladamente (em testes de unidade) e agora precisam ser verificadas em conjunto para garantir que **interajam corretamente** umas com as outras. Em outras palavras, quando falamos em módulos, estamos nos referindo a componentes do sistema que possuem fronteiras bem definidas e trocam dados entre si, como classes, serviços, APIs, repositórios, adaptadores, filas, ou até microservices.
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/7a6de244-4564-4677-abdc-6f2a87551938" />
+
+Por exemplo, imagine uma aplicação ASP.NET Core com RabbitMQ. Você pode ter:
+
+* Um **módulo de Producer**, responsável por publicar mensagens.
+* Um **módulo de Consumer**, responsável por ler e processar essas mensagens.
+* Um **módulo de persistência**, que grava os dados no banco.
+  Cada um desses módulos pode ser testado separadamente (testes unitários), mas o **teste de integração** se preocupa em verificar o comportamento **entre eles**, por exemplo, se o producer realmente publica no RabbitMQ e se o consumer consome e processa corretamente a mensagem publicada.
+
+O conceito de módulo em integração é relativo: em um projeto monolítico, um módulo pode ser um **conjunto de classes coesas**; em uma arquitetura de microsserviços, um módulo pode ser **um serviço inteiro**. O importante é que o módulo tenha **interfaces de comunicação claras** (como endpoints HTTP, filas, métodos públicos, etc.), porque os testes de integração se baseiam exatamente nessas fronteiras.
+
+No fundo, o teste de integração responde à pergunta: 
+
+> “Esses módulos, quando combinados, ainda funcionam corretamente como um todo?” — garantindo que o comportamento do sistema emergente seja coerente, e que os dados fluam corretamente entre as partes.
+
+Portanto, testes de integração são uma fase do processo de teste de software em que módulos ou componentes são combinados e testados em grupo. Ela sucede o teste de unidade, em que os módulos são testados individualmente, e antecede o teste de sistema, em que o sistema completo é testado num ambiente que simula o ambiente de produção. Os testes de integração têm como objetivo verificar a funcionalidade e a comunicação entre módulos. Eles são projetados para identificar erros de integração, que são erros que ocorrem quando dois ou mais módulos são combinados.
+
+Exemplo em um sistema web: Suponha que você tenha um sistema de e-commerce com:
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/2fcdee58-77a5-42d9-a61f-9b07aab4f16c" />
+
+- `Módulo A`: Autenticação
+
+- `Módulo B`: Catálogo de produtos
+
+- `Módulo C`: Carrinho de compras
+
+- `Módulo D`: Pagamento
+
+No teste de integração, você testaria coisas como: 
+
+- ✅ Se um usuário autenticado consegue adicionar produtos ao carrinho (A + C).
+
+- ✅ Se o sistema só libera o pagamento se os produtos forem válidos (B + D).
+
+- ✅ Se o pedido final é registrado no banco com todas as dependências funcionando (A + B + C + D).
+
+Dependendo do contexto, módulo pode significar:
+
+| Contexto               | O que é o "módulo"?                                           | Exemplo prático                                           |
+| ---------------------- | ------------------------------------------------------------- | --------------------------------------------------------- |
+| Back-end (monolito)    | Um **componente separado** (serviço, classe, camada)          | Módulo de usuários vs módulo de produtos                  |
+| Microserviços          | Um **serviço inteiro** com banco próprio e API                | Serviço de checkout vs serviço de catálogo                |
+| Front-end modularizado | Um conjunto de **funções ou hooks reutilizáveis**             | Módulo de autenticação + módulo de requisições            |
+| Arquitetura em camadas | Uma **camada** da aplicação (Controller, Service, Repository) | Controller depende do Repository funcionando corretamente |
+
+Então, nos testes de integração, o objetivo é:
+
+- Testar a colaboração entre módulos reais, sem mocks.
+- Verificar se integrações entre módulos distintos (por código, HTTP, fila, banco) estão funcionando.
+- Detectar problemas de acoplamento, dependência ou contrato entre partes do sistema.
+
+Se você quer conhecer todas as principais ferramentas e frameworks de testes de integração, aqui vai um apanhado completo, organizado e atualizado, abrangendo múltiplas linguagens e stacks modernas — incluindo ferramentas de propósito geral, específicas para APIs, banco de dados, E2E (fim a fim), e ambientes complexos como microserviços.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/fc63a3ad-8a9f-4841-bc0c-9855af158009" align="right" height="377">
+
+**JavaScript / TypeScript**:
+
+- **Jest** embora seja popular para testes de unidade, também permite testes de integração. Suporte a mocking, spies, e `supertest` para testes de API.
+
+- **Supertest** testa endpoints HTTP diretamente em apps Node.js/Express/Koa. Muito usado com Jest ou Mocha.
+
+- **Mocha + Chai** flexível e modular. Excelente para testes de integração com `chai-http` e `supertest`.
+
+- **Playwright / Puppeteer** usados para testes de integração **em aplicações web** (navegador). Permitem verificar o fluxo do usuário entre frontend e backend.
+
+- **Vitest** suporte moderno e rápido a testes de integração com foco em performance. Alternativa moderna ao Jest com suporte a ES Modules.
+
+Deno com `deno test` embutido no runtime. Suporte nativo a testes de integração (com `fetch`, banco, etc.). Test libraries auxiliares: `assert` (de `std`) e não precisa de Supertest: pode usar `fetch` diretamente no servidor rodando em teste.
+
+**Python**:
+
+- **Pytest** um dos frameworks mais completos. Com plugins como `pytest-django`, `pytest-flask`, `pytest-asyncio`, cobre testes de integração completos.
+
+- **Requests / HTTPX** combinados com `pytest`, são ótimos para testar APIs REST ou FastAPI/Flask/Django.
+
+- **Behave / Lettuce** estilo BDD com testes de integração escritos em Gherkin.
+
+**Java / Kotlin**:
+
+- **JUnit (5+)** com Spring Boot Test: realiza testes de integração com o contexto da aplicação.
+
+- **Testcontainers** executa serviços reais (como PostgreSQL, Kafka, Redis) em containers Docker nos testes.
+
+- **RestAssured** framework fluente para testar endpoints REST em Java.
+
+**Go**:
+
+- **testing + httptest** padrão da linguagem. Cria servidores HTTP fake para testar integração de APIs.
+
+- **GoConvey** framework para escrever testes BDD e de integração.
+
+- **Testcontainers-Go** integra serviços externos com Docker no teste (como bancos, filas, etc).
+
+**Rust**:
+
+- `#[tokio::test]`, `reqwest`, `warp::test` ferramentas nativas para rodar testes async com HTTP, banco etc.
+
+- **Testcontainers-rs** similar ao de outras linguagens: banco de dados real em Docker.
+
+**PHP**:
+
+- **PHPUnit** com Laravel ou Symfony, permite testes de integração completos com banco de dados e API.
+
+- **Codeception** específico para testes de integração e E2E. Robusto e com suporte a múltiplos módulos (HTTP, DB, etc).
+
+**Ruby**:
+
+- **RSpec + Capybara** usado em Rails para testes de integração web.
+
+- **Minitest** leve e nativo do Ruby. Com suporte a integração com bancos e HTTP.
+
+Ferramentas genéricas de integração / multi-linguagem:
+
+- **Postman + Newman** ideal para testar APIs REST/GraphQL com fluxo, autenticação, tokens, etc.
+
+- **Insomnia Tests** alternativa ao Postman com foco em GraphQL e REST.
+
+- 🧪 **Cypress** (E2E com integração real) testa interface, mas também valida backend real.
+
+- 🐳 **Testcontainers** (multi-language: Java, Node, Go, Rust, .NET, etc) executa serviços reais (Redis, MySQL, RabbitMQ) em Docker, durante os testes.
+
+- **WireMock / MockServer**: Simulam serviços externos para testar integração sem dependências reais.
+
+- **Docker Compose** (para orquestrar múltiplos serviços nos testes), muito usado para testes de integração entre microsserviços.
+
+Em casos especiais, testes com fila e mensageria (Kafka, RabbitMQ):
+
+* `Testcontainers` (com RabbitMQ/Kafka)
+* `docker-compose` para subir o ambiente
+* Bibliotecas nativas da linguagem para consumir/produzir
+
+Para testes de integração, você pode optar por:
+
+| Categoria | Ferramentas-chave                              |
+| --------- | ---------------------------------------------- |
+| Node.js   | Jest + Supertest, Mocha, Vitest                |
+| Deno      | `deno test` + `fetch/assert`                   |
+| Python    | Pytest + HTTPX + Testcontainers                |
+| Java      | JUnit + SpringBootTest + Testcontainers        |
+| Multi     | Postman/Newman, Testcontainers, Docker Compose |
+| E2E web   | Playwright, Cypress, Puppeteer                 |
+| APIs      | RestAssured, Insomnia, HTTPX, Supertest        |
 
 # 🧪 BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
