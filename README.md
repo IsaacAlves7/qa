@@ -2342,77 +2342,7 @@ O padrão AAA também ajuda a evitar testes frágeis e difíceis de manter, porq
 
 No fim das contas, o AAA transforma testes em pequenas histórias de causa e efeito. Isso é fundamental em um ambiente profissional, especialmente no desenvolvimento orientado a testes, porque permite que o teste seja mais do que um instrumento técnico — ele se torna documentação viva, alinhando comportamentos esperados com a intenção original do desenvolvedor.
 
-## [QA] BDD - Behavior-Driven Development
-![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
-
-<img src="https://github.com/user-attachments/assets/51f4d9a0-47ce-49a9-baeb-f8b9d4c15b3e" align="right" height="77">
-
-O **BDD - Behavior-Driven Development** (Desenvolvimento Orientado a Comportamento), é uma metodologia de desenvolvimento ágil que tem como foco a colaboração entre desenvolvedores, QA (Quality Assurance) e partes interessadas não técnicas para criar uma compreensão compartilhada do comportamento desejado de um software. O BDD é uma evolução do TDD (Test-Driven Development) e adiciona uma ênfase maior na comunicação e na clareza dos requisitos.
-
-Em resumo, o BDD promove uma abordagem colaborativa para o desenvolvimento de software, focando em comportamentos e resultados esperados do sistema, o que ajuda a garantir que o software entregue atenda às necessidades reais dos usuários e stakeholders.
-
-Aqui estão os componentes chave do BDD:
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/1886b145-5f12-4bc5-b096-fe3d0849e991" />
-
-1. **Foco no Comportamento**: Em vez de se concentrar apenas na implementação técnica e nos testes de unidade, o BDD foca em como o software deve se comportar sob várias condições, incluindo o comportamento do usuário final.
-
-2. **Linguagem Ubíqua (Ubiquitous Language)**: Utiliza uma linguagem comum (frequentemente baseada em linguagens naturais como o inglês) que pode ser compreendida por todos os membros da equipe, incluindo desenvolvedores, QA, e stakeholders não técnicos. Isso ajuda a reduzir ambiguidades e garantir que todos tenham a mesma compreensão dos requisitos. A Linguagem Ubíqua (Ubiquitous Language) é um conceito central no <a href="">Design Orientado a Domínio (DDD)</a> que visa criar uma linguagem comum entre todos os envolvidos em um projeto, seja para os especialistas no domínio, desenvolvedores, ou mesmo os usuários finais. Essa linguagem comum facilita a comunicação e colaboração, reduzindo a possibilidade de mal-entendidos e melhorando a qualidade do desenvolvimento. 
-
-3. **Especificações Executáveis**: No BDD, os requisitos são escritos em forma de especificações que podem ser executadas como testes. Essas especificações geralmente seguem um formato estruturado, como <a href="">Gherkin</a> que é uma linguagem de domínio específico usada para descrever comportamentos esperados de um sistema de forma clara e compreensível por todos os envolvidos no desenvolvimento de software, incluindo pessoas não técnicas, que usa palavras-chave como "`Given`" (Dado), "`When`" (Quando), e "`Then`" (Então) para descrever cenários de teste:
-
-   - `Given` (Dado): Descreve o contexto inicial ou o estado do sistema antes de uma ação específica.
-
-   - `When` (Quando): Descreve a ação ou evento que ocorre.
-
-   - `Then` (Então): Descreve o resultado esperado ou o comportamento do sistema após a ação.
-
-Exemplo: Login no Sistema
-
-[![Login.feature](https://img.shields.io/badge/-Login.feature-pink?style=social&logo=googledocs&logoColor=purple)](#)
-
-```gherkin
-Feature: Login no Sistema
-
-Scenario: Login com credenciais válidas
-  Given: o usuário está na página de login
-  When: o usuário insere suas credenciais válidas
-  Then: o usuário é redirecionado para a página inicial
-```
-
-Exemplo 2: Pesquisar produto
-
-[![Pesquisar.feature](https://img.shields.io/badge/-Pesquisar.feature-pink?style=social&logo=googledocs&logoColor=purple)](#)
-
-```gherkin
-Funcionalidade: Pesquisar produto
-  Eu como cliente
-  Quero fazer pesquisas no site da OLX
-  Para buscar por produtos
-
-Cenário: Buscar produto com sucesso
-  Dado que estou no site da OLX como um comprador de SP
-  Quando eu fizer uma busca por um produto
-  Então serão exibidos os resultados de busca para o produto em SP
-```
-
-5. **Ferramentas de BDD**: Existem várias ferramentas que suportam BDD, ajudando a automatizar as especificações executáveis. Algumas das ferramentas populares incluem <a href="">Cucumber</a> (para várias linguagens como Java, Ruby), <a href="">SpecFlow</a> (para .NET), <a href="">Behave</a> (para Python), entre outras.
-
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/93228869-20dc-414f-b89e-4ae549ac96b4" align="right" height="277">
-
-5. **Benefícios do BDD**: Uma das maiores virtudes do BDD - Behavior-Driven Development é unir os dois mundos TDD e DDD, de fato é representar uma interseção entre TDD (Test-Driven Development) e DDD (Domain-Driven Design), pois ele nasce da necessidade de alinhar o desenvolvimento técnico com o entendimento do negócio, garantindo que o software reflita o comportamento esperado do sistema a partir da perspectiva do usuário ou domínio. BDD pode ser visto como a interseção onde a clareza de intenção do domínio (trazida pelo DDD) se encontra com a prática de testar antes de desenvolver (como propõe o TDD).
-
-   - **Melhor Comunicação**: Facilita a comunicação entre todos os membros da equipe, garantindo que todos entendam os requisitos de maneira clara e compartilhada.
-
-   - **Desenvolvimento Orientado a Valor**: Foca no que realmente importa para os usuários finais e stakeholders, ajudando a priorizar o desenvolvimento de funcionalidades de maior valor.
-
-   - **Menos Retrabalho**: Reduz ambiguidades nos requisitos, diminuindo o risco de desenvolvimento de funcionalidades incorretas ou desnecessárias.
-
-   - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
-
-<img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
-
-## [QA] Automation testing
+## [TDD] Automation testing
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
 ![Mocha](https://img.shields.io/badge/-Mocha-EF2D5E?style=badge&logo=mocha&logoColor=white)
 ![JUnit5](https://img.shields.io/badge/-JUnit5-EF2D5E?style=badge&logo=JUnit5&logoColor=white) 
@@ -2585,6 +2515,76 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
    - **Istanbul**: Ferramenta de cobertura de testes para JavaScript.
 
 Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
+
+# 🧪 BDD - Behavior-Driven Development
+![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
+
+<img src="https://github.com/user-attachments/assets/51f4d9a0-47ce-49a9-baeb-f8b9d4c15b3e" align="right" height="77">
+
+O **BDD - Behavior-Driven Development** (Desenvolvimento Orientado a Comportamento), é uma metodologia de desenvolvimento ágil que tem como foco a colaboração entre desenvolvedores, QA (Quality Assurance) e partes interessadas não técnicas para criar uma compreensão compartilhada do comportamento desejado de um software. O BDD é uma evolução do TDD (Test-Driven Development) e adiciona uma ênfase maior na comunicação e na clareza dos requisitos.
+
+Em resumo, o BDD promove uma abordagem colaborativa para o desenvolvimento de software, focando em comportamentos e resultados esperados do sistema, o que ajuda a garantir que o software entregue atenda às necessidades reais dos usuários e stakeholders.
+
+Aqui estão os componentes chave do BDD:
+
+<img height="177" align="right" src="https://github.com/user-attachments/assets/1886b145-5f12-4bc5-b096-fe3d0849e991" />
+
+1. **Foco no Comportamento**: Em vez de se concentrar apenas na implementação técnica e nos testes de unidade, o BDD foca em como o software deve se comportar sob várias condições, incluindo o comportamento do usuário final.
+
+2. **Linguagem Ubíqua (Ubiquitous Language)**: Utiliza uma linguagem comum (frequentemente baseada em linguagens naturais como o inglês) que pode ser compreendida por todos os membros da equipe, incluindo desenvolvedores, QA, e stakeholders não técnicos. Isso ajuda a reduzir ambiguidades e garantir que todos tenham a mesma compreensão dos requisitos. A Linguagem Ubíqua (Ubiquitous Language) é um conceito central no <a href="">Design Orientado a Domínio (DDD)</a> que visa criar uma linguagem comum entre todos os envolvidos em um projeto, seja para os especialistas no domínio, desenvolvedores, ou mesmo os usuários finais. Essa linguagem comum facilita a comunicação e colaboração, reduzindo a possibilidade de mal-entendidos e melhorando a qualidade do desenvolvimento. 
+
+3. **Especificações Executáveis**: No BDD, os requisitos são escritos em forma de especificações que podem ser executadas como testes. Essas especificações geralmente seguem um formato estruturado, como <a href="">Gherkin</a> que é uma linguagem de domínio específico usada para descrever comportamentos esperados de um sistema de forma clara e compreensível por todos os envolvidos no desenvolvimento de software, incluindo pessoas não técnicas, que usa palavras-chave como "`Given`" (Dado), "`When`" (Quando), e "`Then`" (Então) para descrever cenários de teste:
+
+   - `Given` (Dado): Descreve o contexto inicial ou o estado do sistema antes de uma ação específica.
+
+   - `When` (Quando): Descreve a ação ou evento que ocorre.
+
+   - `Then` (Então): Descreve o resultado esperado ou o comportamento do sistema após a ação.
+
+Exemplo: Login no Sistema
+
+[![Login.feature](https://img.shields.io/badge/-Login.feature-pink?style=social&logo=googledocs&logoColor=purple)](#)
+
+```gherkin
+Feature: Login no Sistema
+
+Scenario: Login com credenciais válidas
+  Given: o usuário está na página de login
+  When: o usuário insere suas credenciais válidas
+  Then: o usuário é redirecionado para a página inicial
+```
+
+Exemplo 2: Pesquisar produto
+
+[![Pesquisar.feature](https://img.shields.io/badge/-Pesquisar.feature-pink?style=social&logo=googledocs&logoColor=purple)](#)
+
+```gherkin
+Funcionalidade: Pesquisar produto
+  Eu como cliente
+  Quero fazer pesquisas no site da OLX
+  Para buscar por produtos
+
+Cenário: Buscar produto com sucesso
+  Dado que estou no site da OLX como um comprador de SP
+  Quando eu fizer uma busca por um produto
+  Então serão exibidos os resultados de busca para o produto em SP
+```
+
+5. **Ferramentas de BDD**: Existem várias ferramentas que suportam BDD, ajudando a automatizar as especificações executáveis. Algumas das ferramentas populares incluem <a href="">Cucumber</a> (para várias linguagens como Java, Ruby), <a href="">SpecFlow</a> (para .NET), <a href="">Behave</a> (para Python), entre outras.
+
+<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/93228869-20dc-414f-b89e-4ae549ac96b4" align="right" height="277">
+
+5. **Benefícios do BDD**: Uma das maiores virtudes do BDD - Behavior-Driven Development é unir os dois mundos TDD e DDD, de fato é representar uma interseção entre TDD (Test-Driven Development) e DDD (Domain-Driven Design), pois ele nasce da necessidade de alinhar o desenvolvimento técnico com o entendimento do negócio, garantindo que o software reflita o comportamento esperado do sistema a partir da perspectiva do usuário ou domínio. BDD pode ser visto como a interseção onde a clareza de intenção do domínio (trazida pelo DDD) se encontra com a prática de testar antes de desenvolver (como propõe o TDD).
+
+   - **Melhor Comunicação**: Facilita a comunicação entre todos os membros da equipe, garantindo que todos entendam os requisitos de maneira clara e compartilhada.
+
+   - **Desenvolvimento Orientado a Valor**: Foca no que realmente importa para os usuários finais e stakeholders, ajudando a priorizar o desenvolvimento de funcionalidades de maior valor.
+
+   - **Menos Retrabalho**: Reduz ambiguidades nos requisitos, diminuindo o risco de desenvolvimento de funcionalidades incorretas ou desnecessárias.
+
+   - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
+
+<img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
 
 ## [QA] ATDD - Acceptance Test-Driven Development
 <img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
