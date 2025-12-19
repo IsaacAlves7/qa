@@ -2511,8 +2511,6 @@ Cenário: Buscar produto com sucesso
 
    - **Documentação Viva**: As especificações atuam como uma documentação viva que está sempre em sincronia com o comportamento atual do sistema.
 
-<img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
-
 # 📦 ATDD - Acceptance Test-Driven Development
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
@@ -2610,6 +2608,8 @@ Nos diferentes ecossistemas de linguagens, o conceito de testes de aceitação v
 * **Wallaby** – biblioteca para acceptance testing de aplicações web com browser automation.
 * **Hound** – wrapper em Elixir para Selenium/WebDriver.
 * **ExUnit + BDD-style DSLs** – muitas vezes usado diretamente com helpers de alto nível.
+
+<img src="https://github.com/user-attachments/assets/156bd531-9694-487b-893d-b42522b5bc0c" align="right" height="177">
 
 Se você reparar, há um padrão: quase todos os ecossistemas têm algum tipo de integração com **Cucumber/Gherkin** para cenários de aceitação e ferramentas ligadas a **browser automation** (Selenium, Playwright, Cypress etc.), e depois cada comunidade cria bibliotecas mais idiomáticas para seu ambiente.
 
