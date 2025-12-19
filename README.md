@@ -10,7 +10,7 @@
 > Versículo chave: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." - Provérbios 16:3
 
 # It's a repository of QA/QC from scratch 🧪
-<a href="https://github.com/ryanmcdermott/clean-code-javascript"><img src="https://img.shields.io/badge/Clean_Code-JS-ECD53F?style=flat&logo=JavaScript&logoColor=white"></a> <a href="https://github.com/labs42io/clean-code-typescript"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> 
+<a href="https://github.com/ryanmcdermott/clean-code-javascript"><img src="https://img.shields.io/badge/Clean_Code-JS-ECD53F?style=flat&logo=JavaScript&logoColor=white"></a> <a href="https://github.com/labs42io/clean-code-typescript"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-Spring_Boot-limegreen?style=flat&logo=SpringBoot&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-.NET-purple?style=flat&logo=.NET&logoColor=white"></a> 
 
 > 🧪 **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.).
 
