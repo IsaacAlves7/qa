@@ -129,7 +129,8 @@ Para **testes unitários**, o mais limpo é explicitar `unit`, porque isso evita
 
 Se você quiser algo ainda mais alinhado com engenharia de software e menos “acadêmico”, pode usar nomes como `validation/` ou `verification/`, mas isso só funciona bem se todo o time estiver alinhado, senão gera confusão. Em times menores ou projetos pessoais, `test/` é direto e suficiente.
 
-Em resumo, o melhor nome não é “teste” puro. É algo que diga claramente **o que está sendo testado e como**. Algo como `test/unit`, `test/integration` ou `qa/manual` é muito mais legível, profissional e sustentável do que `branch-teste` ou variações vagas. Então, resumindo de forma direta: `test/` é o padrão mais correto, mais neutro e mais alinhado com práticas modernas de versionamento. `tests/` é aceitável, mas menos comum. `tdd/` e `bdd/` não são bons nomes de branch, porque descrevem processo mental, não objetivo técnico.
+> [!Note]
+> Em resumo, o melhor nome não é “teste” puro. É algo que diga claramente **o que está sendo testado e como**. Algo como `test/unit`, `test/integration` ou `qa/manual` é muito mais legível, profissional e sustentável do que `branch-teste` ou variações vagas. Então, resumindo de forma direta: `test/` é o padrão mais correto, mais neutro e mais alinhado com práticas modernas de versionamento. `tests/` é aceitável, mas menos comum. `tdd/` e `bdd/` não são bons nomes de branch, porque descrevem processo mental, não objetivo técnico.
 
 Pensando como engenheiro e não de preferência pessoal, o melhor padrão é **`test/`**, não `tests/`, e evitar `tdd/` ou `bdd/` como prefixo de branch. Isso não é porque TDD ou BDD sejam ruins, mas porque **branch nomeia intenção operacional**, não metodologia:
 
