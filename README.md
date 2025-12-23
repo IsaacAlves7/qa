@@ -779,7 +779,7 @@ Implementação de domínio é a criação de um processo e de ferramentas para 
 
 Um domínio bem modelado só tem efeito se o design de software respeita a coesão do modelo, preserva invariantes, mantém consistência interna e evita que detalhes técnicos vazem para áreas onde não deveriam. Se o design de software decide misturar responsabilidades, criar acoplamentos arbitrários, espalhar regras por camadas que não conversam com o domínio ou ignorar o Ubiquitous Language, então o DDD perde força, porque o código deixa de refletir as estruturas conceituais. O resultado é um sistema que só “parece DDD no papel”, mas opera como um monólito acoplado, com entidades sem significado e casos de uso sem fronteiras.
 
-<img height="413" align="right" src="https://github.com/user-attachments/assets/d4500284-4180-420e-b551-056dbe5a17d0" />
+<img height="277" align="right" src="https://github.com/user-attachments/assets/d4500284-4180-420e-b551-056dbe5a17d0" />
 
 Ao mesmo tempo, DDD também depende do design de sistemas, porque os **Bounded Contexts** (Contextos limitados), para existirem de verdade, precisam de fronteiras técnicas: precisam ser isolados, ter seus próprios modelos, seus próprios fluxos de dados, sua própria vida. É o <a href="">design de sistemas (System design)</a> que decide como esses contextos conversam, se por eventos, filas, APIs, contratos assíncronos ou mensagens. O DDD diz *“esses dois contextos são independentes e têm linguagens diferentes”*; o design de sistemas transforma essa independência em topologia real e se ele falha nisso, os contextos se fundem, o sistema fica acoplado e a proposta de modularidade do DDD desaparece.
 
