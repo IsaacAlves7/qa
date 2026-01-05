@@ -1719,11 +1719,15 @@ Após o desenvolvimento e junto com o desenvolvimento, entram os testes unitári
 
 Por exemplo: Se eu estou desenvolvendo um sistema de cadastro de cliente, não importa o tipo do sistema (mercadinho, farmácia, padaria, comércio ou de uma grande empresa) e esse desenvolvedor que está escrevendo essas linhas de código de cadastrar um único usuário ou funcionário, por exemplo, ele vai desenvolver um caso de teste para que dado uma entrada (input), ele possa receber uma saída (output) esperada que seria: "usuário cadastrado com sucesso".
 
-| Prós                                  | Contras                                         |
-| ------------------------------------- | ----------------------------------------------- |
-| São executados em s. ou ms.           | Não simulam o uso da aplicação de ponta-a-ponta |
-| Provêm feedback imediato              |                                                 |
-| Isolamento de falhas/fácil de depurar |                                                 |
+| Prós                                                | Contras                                                      |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| São executados em s. ou ms.                         | Não simulam o uso da aplicação de ponta-a-ponta (integração) |
+| Provêm feedback imediato (rápido na manutenção)     |                                                              |
+| Isolamento de falhas/fácil de depurar               |                                                              |
+| São confiáveis                                      |                                                              |
+| Guiam o desenvolvimento (TDD)                       |                                                              |
+| Ajudam na refatoração                               |                                                              |
+| Podem existir tanto no back-end quanto no front-end |                                                              |
 
 Os frameworks de teste de unidade mais populares para **React.js** são:
 
