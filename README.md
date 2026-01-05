@@ -1695,11 +1695,11 @@ Uma **unidade** (unit) é a menor parte testável de um programa de computador, 
 
 Relação de conceitos de testes de unidade: 
 
-**I/O Input-Output** (Entrada e Saída): são todas as entradas e saídas existentes na programação. Portanto, os testes de unidade servem para front-end e back-end. Eles são uma prática essencial no desenvolvimento de software, pois ajudam a garantir a qualidade do código e a facilitar a manutenção. Os testes de unidade são realizados em pequenas unidades de código, como funções, componentes ou módulos. Eles são projetados para testar a funcionalidade e a lógica dessas unidades de forma isolada. Isso significa que os testes de unidade não dependem de outros componentes ou módulos para funcionar.
+- **I/O Input-Output** (Entrada e Saída): são todas as entradas e saídas existentes na programação. Portanto, os testes de unidade servem para front-end e back-end. Eles são uma prática essencial no desenvolvimento de software, pois ajudam a garantir a qualidade do código e a facilitar a manutenção. Os testes de unidade são realizados em pequenas unidades de código, como funções, componentes ou módulos. Eles são projetados para testar a funcionalidade e a lógica dessas unidades de forma isolada. Isso significa que os testes de unidade não dependem de outros componentes ou módulos para funcionar.
 
-No **front-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de componentes de interface do usuário, como botões, formulários e listas. Eles também são usados para testar a interação entre componentes.
+- No **front-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de componentes de interface do usuário, como botões, formulários e listas. Eles também são usados para testar a interação entre componentes.
 
-No **back-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de serviços, APIs e outros componentes de back-end. Eles também são usados para testar a integração entre componentes de back-end.
+- No **back-end**, os testes de unidade são usados para testar a funcionalidade e a lógica de serviços, APIs e outros componentes de back-end. Eles também são usados para testar a integração entre componentes de back-end.
 
 Os testes de unidade oferecem uma série de benefícios, incluindo:
 
