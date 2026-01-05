@@ -433,7 +433,11 @@ Dentro desse conceito, **testes automatizados** são o núcleo natural do self-t
 
 Já os **testes manuais** também podem existir em um cenário de self-testing, mas não cumprem totalmente a proposta. Eles servem bem em situações exploratórias, de usabilidade ou de descoberta de casos não previstos, mas não garantem a automação e a repetibilidade que o conceito prega. Em outras palavras, um sistema pode até contar com testes manuais complementares, mas não se considera realmente “self-testing” se depende só deles, porque não há como o software se validar sozinho sem a intervenção humana.
 
-Portanto, podemos dizer que o self-testing **aceita testes manuais como complemento**, mas a essência dele está nos **testes automatizados**, preferencialmente guiados por boas práticas como TDD ou ATDD, que dão disciplina e cobertura consistente ao ciclo de desenvolvimento.
+Portanto, podemos dizer que o self-testing *aceita testes manuais como complemento*, mas a essência dele está nos **testes automatizados**, preferencialmente guiados por boas práticas como TDD ou ATDD, que dão disciplina e cobertura consistente ao ciclo de desenvolvimento.
+
+Então, a base da pirâmide se chama **unidade**, são os <a href="">testes de unidade</a>, é um processo de desenvolvimento de software em que as menores partes testáveis de uma aplicação, chamadas unidades, são examinadas individual e independentemente para uma operação.
+
+Ao utilizar este processo é possível obter testes contínuos e revisão do que acabou de ser alterado na aplicação, evitando quebrar funcionalidades que já estavam funcionando. Além disso, são normalmente rápidos e fáceis de depurar.
 
 Estudamos os branches, os workflows e concluímos que dentro da prática da integração contínua, devemos nos afastar o mínimo possível do nosso trunk master principal.
 
