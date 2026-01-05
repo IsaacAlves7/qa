@@ -1715,7 +1715,15 @@ Portanto, os testes de unidade são uma prática importante para qualquer desenv
 
 Sobre os processos de desenvolvimento de software, no terceiro passo no nível de queda do modelo cascata e no quarto passo do modelo RAPID, entramos na parte de codificação e testes unitários. Ou seja, é a construção do sistema em si. Então, só depois de eu entender todo o problema, só depois de eu saber das necessidades e se é possível ou viável para começar a desenvolver. Muitas vezes, para começar a gente se pergunta se é para pegar logo no processo de codificação, ou seja, a desenvolver logo a aplicação o mais rápido possível. No entanto, percebe-se que o tanto de retrabalho que isso gerava, fazia não valer a pena. E fazia com que estourasse muito o orçamento nesse custo. Então, depois deu definir os requisitos, depois de realizar meus modelos de projetos e provar que aquilo é viável, eu então começo o desenvolvimento do meu software em si.
 
-Após o desenvolvimento e junto com o desenvolvimento, entram os testes unitários (unit tests - testes de unidade) que são definidos pelo próprio desenvolvedor onde eles tendem a testar a menor unidade do sistema. Por exemplo: Se eu estou desenvolvendo um sistema de cadastro de cliente, não importa o tipo do sistema (mercadinho, farmácia, padaria, comércio ou de uma grande empresa) e esse desenvolvedor que está escrevendo essas linhas de código de cadastrar um único usuário ou funcionário, por exemplo, ele vai desenvolver um caso de teste para que dado uma entrada (input), ele possa receber uma saída (output) esperada que seria: "usuário cadastrado com sucesso".
+Após o desenvolvimento e junto com o desenvolvimento, entram os testes unitários (unit tests - testes de unidade) que são definidos pelo próprio desenvolvedor onde eles tendem a testar a menor unidade do sistema. 
+
+Por exemplo: Se eu estou desenvolvendo um sistema de cadastro de cliente, não importa o tipo do sistema (mercadinho, farmácia, padaria, comércio ou de uma grande empresa) e esse desenvolvedor que está escrevendo essas linhas de código de cadastrar um único usuário ou funcionário, por exemplo, ele vai desenvolver um caso de teste para que dado uma entrada (input), ele possa receber uma saída (output) esperada que seria: "usuário cadastrado com sucesso".
+
+| Prós                                  | Contras                                         |
+| ------------------------------------- | ----------------------------------------------- |
+| São executados em s. ou ms.           | Não simulam o uso da aplicação de ponta-a-ponta |
+| Provêm feedback imediato              |                                                 |
+| Isolamento de falhas/fácil de depurar |                                                 |
 
 Os frameworks de teste de unidade mais populares para **React.js** são:
 
