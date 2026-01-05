@@ -2238,6 +2238,8 @@ Para testes de integração, você pode optar por:
 
 Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída. É a técnica mais utilizada no dia a dia. Responsável: Analista de Qualidade
 
+> Isso verifica se a API executa corretamente suas funções pretendidas. Testes funcionais garantem que a API entregue os resultados esperados para as entradas específicas. Ele foca em verificar funcionalidades centrais sem entrar em desempenho ou segurança.
+
 Functional Testing e Black-box Testing não são a mesma coisa, embora estejam intimamente relacionados. A melhor forma de entender é pensar que um deles é um tipo de teste, enquanto o outro é uma abordagem que pode ser aplicada a vários tipos de testes. Explicando em um textão fluido.
 
 Quando você fala de Functional Testing, você está se referindo à prática de testar o que o software faz, ou seja, suas funcionalidades, requisitos, comportamentos esperados, regras de negócio, entradas e saídas. Nesse tipo de teste, o objetivo não é saber como o código foi escrito, mas sim verificar se o sistema cumpre aquilo que promete. Functional Testing é, portanto, uma categoria de testes, englobando vários métodos como testes de sistema, testes de integração funcional, testes de aceitação, testes E2E e até cenários automatizados que validam fluxos completos. Ele sempre olha o software de fora para dentro, garantindo que cada ação realizada devolva o resultado esperado.
@@ -2257,6 +2259,32 @@ O que é importante pensarmos é no tempo de execução de testes que teremos. O
 Uma técnica comum é executar o que chamamos de **smoke tests**. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente. Esses testes avaliam um conjunto menor de elementos, por isso são mais rápidos, e dessa maneira teremos a garantia de que o software está operante em sua estrutura básica. Depois disso, podemos aplicar todos os testes e garantir uma varredura maior de erros.
 
 Em resumo, devemos observar a categoria de cada teste; em ambientes diferentes fazer escolhas de desempenho e que melhor atendam nossa demanda; aplicar boas práticas de testes ( testes isolados, legíveis, expressivos); realizar testes na parte de build e adquirir feedbacks o mais rápido o possível.
+
+<img width="1280" height="1664" alt="image" src="https://github.com/user-attachments/assets/73999f41-bb47-4f16-9a51-4f020c8c1c18" />
+
+APIs são a espinha dorsal das aplicações modernas, permitindo a comunicação entre diferentes sistemas de software. Para garantir que sejam confiáveis, seguros e de alto desempenho, testes de API são essenciais. Aqui está uma visão abrangente dos vários tipos de testes de API, com exemplos e explicações ampliadas para destacar sua importância.
+
+Exemplo de API:
+
+Endpoint:
+Corpo da Requisição: `POST /users/create`
+
+```json
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+```
+Resposta esperada:
+
+```json
+{
+  "id": 101,
+  "name": "John Doe",
+  "email": "john.doe@example.com"
+}
+```
 
 ## [TDD] White-box testing
 <img src="https://github.com/user-attachments/assets/990d67a2-0bb0-4066-900f-ff760507fe39" align="right" height="77">
