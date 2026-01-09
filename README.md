@@ -617,6 +617,8 @@ TestingWhiz: é uma ferramenta de automação de testes voltada principalmente p
 
 Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" />
+
 1. **Frameworks de Teste Unitário**:
    - **JUnit**: Framework de testes unitários para Java. 
   
@@ -675,7 +677,6 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
    - **RestAssured**: Biblioteca para teste de APIs REST em Java.
 
 7. **Ferramentas de Integração Contínua**:
-<img height="450" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" />
 
    - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
   
