@@ -348,6 +348,8 @@ Portanto, observabilidade pode ser vista como complementar ao QA, não substitui
 
 No cenário acelerado de software atual, as equipes de garantia de qualidade enfrentam uma pressão intensa para entregar lançamentos de alta qualidade de forma mais rápida e econômica (impactqa.com, bugraptors.com).
 
+<img height="377" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
+
 A **hiperautomação** (Hyperautomation) surgiu como uma resposta estratégica: em vez de simplesmente executar testes roteirizados, ela une ferramentas avançadas para automatizar inteiramente fluxos de trabalho de QA de forma inteligente (dev.toimpactqa.com).
 
 Essa abordagem utiliza IA, aprendizado de máquina (ML), automação robótica de processos (RPA) e até plataformas low-code para construir processos de teste autônomos que abrangem tudo, desde requisitos até implantação (dev.togenqe.ai).
@@ -614,8 +616,6 @@ Visual Studio Test Professional: é uma edição do Visual Studio voltada especi
 TestingWhiz: é uma ferramenta de automação de testes voltada principalmente para equipes que buscam praticidade e velocidade na criação de testes, sem depender fortemente de programação. Diferente de frameworks open source como Selenium, que exigem bastante conhecimento técnico e montagem de infraestrutura, o TestingWhiz aposta em uma abordagem codeless, baseada em uma interface visual intuitiva onde o testador pode construir fluxos de teste arrastando e configurando blocos de ações pré-definidas. Isso o torna bastante atraente para equipes de QA funcionais ou para empresas que querem introduzir automação de forma rápida, sem exigir que todo o time saiba programar.
 
 Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
-
-<img height="377" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
 
 1. **Frameworks de Teste Unitário**:
    - **JUnit**: Framework de testes unitários para Java. 
