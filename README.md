@@ -28,6 +28,8 @@ Ao longo das fases do desenvolvimento, participo ativamente de planejamento, ref
 
 Além disso, atuo na validação da experiência do usuário e do comportamento do sistema em produção, colaborando com monitoramento, observabilidade e análise de incidentes para retroalimentar o processo de qualidade. A qualidade não termina no deploy, mas continua no acompanhamento do uso real do software, garantindo confiabilidade, segurança e evolução sustentável. Dessa forma, QA/QC se tornam pilares estratégicos para a entrega de software robusto, previsível e alinhado às expectativas técnicas e de negócio.
 
+- https://medium.com/@n-demia/10-github-repositories-for-software-testers-121ff3b84fe1?source=email-afeafff77325-1699769789726-digest.reader--121ff3b84fe1----13-102------------------3e6a1339_641a_4699_9f6d_fd3dd3bcfe52-1
+
 # 👨🏾‍🔬 QA/QC - Quality Assurance and Quality Control
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white">
 
