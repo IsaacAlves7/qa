@@ -334,7 +334,12 @@ Para aprofundar seu conhecimento sobre atividades de apoio da qualidade de softw
 
 Além disso, uma ilustração útil pode ser um diagrama que mostre a relação entre as atividades de apoio da qualidade de software e outras atividades do ciclo de vida do software, como desenvolvimento, teste e implantação. Isso pode ajudar a entender como as atividades de apoio se encaixam no processo geral de desenvolvimento de software e como elas podem contribuir para a melhoria da qualidade do produto final.
 
-<div align="center"><img width="551" height="351" alt="image" src="https://github.com/user-attachments/assets/d9decc9c-a526-4733-bf66-c5cd63aaba1e" /></div>
+<table>
+ <tr>
+  <td><img width="551" height="351" alt="image" src="https://github.com/user-attachments/assets/d9decc9c-a526-4733-bf66-c5cd63aaba1e" /></td>
+  <td><img src="https://github.com/user-attachments/assets/6b8225e9-6b6d-42ac-9bdc-405bf64fa1e2"></td>
+ </tr>
+</table>
 
 <a href="https://github.com/IsaacAlves7/observability"><img src="https://em-content.zobj.net/source/microsoft-teams/400/magnifying-glass-tilted-left_1f50d.png" align="right" height="77"></a>
 
