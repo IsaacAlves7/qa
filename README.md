@@ -371,6 +371,8 @@ A hiperautomação representa uma mudança de paradigma para o QA: de testes rot
 
 À medida que o desenvolvimento acelera, o QA não pode permanecer manual ou estático. Adotar a hiperautomação faz dos testes um facilitador estratégico da transformação digital. Organizações que integram com sucesso a automação inteligente ao QA entregarão software de maior qualidade em alta velocidade e navegarão com confiança pela complexidade das aplicações modernas (testingxperts.com, testingxperts.com).
 
+![FB_IMG_1724894624003](https://github.com/user-attachments/assets/7653dd5d-daac-48dd-85e0-0fe89da88cd3)
+
 ## [QA] Custos x Fases
 <img width="524" height="241" align="right" src="https://github.com/user-attachments/assets/a3aaded7-0fad-4ba5-9b0a-9d664bf0dc8e" />
 
