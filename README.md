@@ -1693,6 +1693,8 @@ Já o **BDD (Behavior-Driven Development)** nasceu como uma evolução do TDD, c
 
 Quando você junta as três abordagens, tem um fluxo bastante poderoso: o DDD te ajuda a entender e modelar corretamente o domínio; o BDD garante que os comportamentos mais importantes estejam claros e validados com o negócio; e o TDD dá a base técnica para implementar cada parte com qualidade e segurança. Assim, você cobre desde a concepção do sistema até a implementação e os testes, reduzindo riscos, aumentando a clareza e facilitando a manutenção e evolução ao longo do tempo.
 
+![hq720](https://github.com/user-attachments/assets/15ad63be-235e-4e05-9271-434204dae391)
+
 Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-refactor” clássico, conectando os diferentes níveis de testes (caixa preta, cinza e branca) dentro do ciclo de desenvolvimento. Destrinchando o que ele está representando:
 
 <img width="1200" height="635" alt="Test-driven-development-cycle-Cybus-Nordic-APIs" src="https://github.com/user-attachments/assets/c1a8a96e-1c48-4152-95e3-003afbdcd210" /><br />
