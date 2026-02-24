@@ -505,11 +505,33 @@ Ou seja:
 
 Então, tecnicamente: o **build vem antes do teste**, mas no mundo real de pipelines, eles caminham juntos, porque é mais eficiente falhar cedo se os testes não passarem.
 
+Melhores maneiras de testar a funcionalidade do sistema - Testar a funcionalidade do sistema é uma etapa crucial nos processos de desenvolvimento e engenharia de software.
+
+![unnamed](https://github.com/user-attachments/assets/ce75ad26-7ad4-4ef9-9224-d32f4fc9a2cb)
+
+Ela garante que um sistema ou aplicativo de software funcione conforme esperado, atenda aos requisitos do usuário e opere de forma confiável.
+
+Aqui vamos explorar as melhores maneiras:
+
+- Testes Unitários: Garante que componentes individuais do código funcionem corretamente isoladamente.
+
+- Testes de Integração: Verifica que diferentes partes do sistema funcionam perfeitamente juntas.
+
+- Testes do Sistema: Avalia a conformidade de todo o sistema com os requisitos e o desempenho do usuário.
+
+- Teste de Carga: Testa a capacidade de um sistema de lidar com altas cargas de trabalho e identifica problemas de desempenho.
+
+- Teste de Erro: Avalie como o software lida com entradas inválidas e condições de erro.
+
+- Automação de Testes: Automatiza a execução do caso de teste para eficiência, repetibilidade e redução de erros.
+
+A sua conversa: Como você aborda a funcionalidade de sistemas de teste em seus projetos de desenvolvimento de software ou engenharia?
+
 <img height="177" align="right" src="https://github.com/user-attachments/assets/b22f3aba-0a19-43b7-9da4-fdca9afa4231" />
 
-1. **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. E mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”.;
+1. **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. E mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”;
 
-2. **Devem ser realizados antes do commit**: Aqui você está descrevendo o que chamamos de pré-validação local. O ideal é que o desenvolvedor rode testes (unitários pelo menos) antes de commitar, garantindo que não quebrou nada básico. Isso pode ser cultural (boa prática individual) ou técnico (com pre-commit hooks no Git, que bloqueiam commit se os testes falharem). Dessa forma, o código que chega ao repositório central já tem uma garantia mínima.;
+2. **Devem ser realizados antes do commit**: Aqui você está descrevendo o que chamamos de pré-validação local. O ideal é que o desenvolvedor rode testes (unitários pelo menos) antes de commitar, garantindo que não quebrou nada básico. Isso pode ser cultural (boa prática individual) ou técnico (com pre-commit hooks no Git, que bloqueiam commit se os testes falharem). Dessa forma, o código que chega ao repositório central já tem uma garantia mínima;
 
 3. TDD pode ajudar neste processo;
 
