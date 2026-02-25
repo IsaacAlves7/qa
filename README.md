@@ -2233,6 +2233,8 @@ Deno com `deno test` embutido no runtime. Suporte nativo a testes de integraçã
 
 **Go**:
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/1f49b3c9-c8b8-4511-a588-f8174937e027" />
+
 - **testing + httptest** padrão da linguagem. Cria servidores HTTP fake para testar integração de APIs.
 
 - **GoConvey** framework para escrever testes BDD e de integração.
