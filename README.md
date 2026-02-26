@@ -119,6 +119,30 @@ Vamos trabalhar com o Multi-repo, afinal é o mais comum no dia a dia da maioria
 
 ![b8c290d4d4680506a14e00e58a4e0c72](https://github.com/user-attachments/assets/6402db4f-2617-4038-8526-6952c1f14bad)
 
+Monorepo vs. Microrepo. Qual é o melhor? Por que diferentes empresas escolhem opções diferentes?
+
+**Monorepo** não é novidade; Linux e Windows foram ambos criados usando Monorepo. Para melhorar a escalabilidade e a velocidade de construção, o Google desenvolveu sua cadeia interna de ferramentas dedicada para escalá-la mais rapidamente e padrões rigorosos de qualidade de codificação para mantê-la consistente.
+
+Amazon e Netflix são grandes embaixadoras da filosofia dos Microserviços. Essa abordagem naturalmente separa o código de serviço em repositórios separados. Escala mais rápido, mas pode causar problemas de governança no futuro.
+
+Dentro do Monorepo, cada serviço é uma pasta, e cada pasta tem uma configuração BUILD e controle de permissões OWNERS. Cada membro do serviço é responsável por sua própria pasta.
+
+Por outro lado, no Microrepo, cada serviço é responsável por seu repositório, com a configuração de compilação e as permissões normalmente definidas para todo o repositório.
+
+No Monorepo, as dependências são compartilhadas por todo o código de código, independentemente do seu negócio, então quando há uma atualização de versão, cada base de código atualiza sua versão.
+
+No **Microrepo**, as dependências são controladas dentro de cada repositório. As empresas escolhem quando atualizar suas versões com base em seus próprios cronogramas.
+
+A Monorepo tem um padrão para check-ins. O processo de revisão de código do Google é famoso por estabelecer um padrão elevado, garantindo um padrão de qualidade coerente para o Monorepo, independentemente do negócio.
+
+A Microrepo pode definir seu próprio padrão ou adotar um padrão compartilhado incorporando as melhores práticas. Pode escalar mais rápido para negócios, mas a qualidade do código pode ser um pouco diferente.
+
+Engenheiros do Google construíram Bazel, e a Meta construiu Buck. Existem outras ferramentas de código aberto disponíveis, incluindo Nix, Lerna e outras.
+
+Ao longo dos anos, o Microrepo teve mais ferramentas suportadas, incluindo Maven e Gradle para Java, NPM para NodeJS e CMake para C/C++, entre outras.
+
+Deixando você: Qual opção você acha melhor? Qual estratégia de repositório de código sua empresa utiliza?
+
 O melhor nome de branch no Git é aquele que **comunica intenção, escopo e temporalidade**, sem ambiguidade. Como você está falando de **testes** (automatizados ou manuais, unitários ou de integração), o nome da branch deve deixar claro **o tipo de teste** e **o objetivo**, não apenas “teste” de forma genérica.
 
 Na prática, a convenção mais aceita hoje segue a ideia de **prefixo semântico**, muito alinhada com Git Flow, Trunk-Based ou variações modernas.
