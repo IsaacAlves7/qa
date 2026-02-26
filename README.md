@@ -176,6 +176,8 @@ Por isso, a aprovação de PRs normalmente envolve múltiplos olhares: alguém a
 
 Quando entram conceitos como Arquitetura Limpa e DDD, o nível de exigência sobe ainda mais. Não basta escrever código “bonito”; é preciso garantir que as regras de negócio estejam isoladas, que dependências estejam apontando na direção correta e que o modelo de domínio continue expressivo e coerente com a linguagem do negócio. O PR passa a ser um espaço de discussão técnica profunda, onde se questiona se aquela abstração faz sentido, se aquele serviço realmente pertence àquele contexto ou se aquilo é apenas um atalho que vai custar caro depois.
 
+<img width="1280" height="1186" alt="unnamed" src="https://github.com/user-attachments/assets/f28e94e7-b18f-4a5b-bb58-7cf3619dc6b3" />
+
 No fim das contas, esse modelo de gestão de repositórios e revisões é justamente o que diferencia times que vivem apagando incêndio de times que conseguem evoluir sistemas grandes sem perder controle. A fábrica de software não produz apenas código que roda hoje, mas código que continua compreensível, sustentável e confiável daqui a anos, mesmo com pessoas entrando e saindo do time. É uma visão menos imediatista e muito mais estratégica da engenharia de software.
 
 > [!Note]
