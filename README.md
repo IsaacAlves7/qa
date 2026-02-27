@@ -141,9 +141,23 @@ Engenheiros do Google construíram Bazel, e a Meta construiu Buck. Existem outra
 
 Ao longo dos anos, o Microrepo teve mais ferramentas suportadas, incluindo Maven e Gradle para Java, NPM para NodeJS e CMake para C/C++, entre outras.
 
-Deixando você: Qual opção você acha melhor? Qual estratégia de repositório de código sua empresa utiliza?
+> Deixando você: Qual opção você acha melhor? Qual estratégia de repositório de código sua empresa utiliza? Quais ferramentas sua equipe usa para enviar o código para produção e garantir a qualidade do código?
 
-O melhor nome de branch no Git é aquele que **comunica intenção, escopo e temporalidade**, sem ambiguidade. Como você está falando de **testes** (automatizados ou manuais, unitários ou de integração), o nome da branch deve deixar claro **o tipo de teste** e **o objetivo**, não apenas “teste” de forma genérica.
+A abordagem geralmente depende do tamanho da empresa. Não existe uma solução única para todos, mas tentamos oferecer uma visão geral.
+
+![unnamed](https://github.com/user-attachments/assets/f9c70590-04a5-4f6d-96a3-eee38d23948c)
+
+1-10 funcionários: Nos estágios iniciais de uma empresa, o foco é encontrar um ajuste produto-mercado. A ênfase está principalmente na entrega e experimentação. Utilizando ferramentas gratuitas ou de baixo custo existentes, os desenvolvedores cuidam dos testes e da implantação. Eles também prestam muita atenção ao feedback e aos relatórios dos clientes.
+
+10-100 funcionários: Uma vez encontrado o ajuste produto-mercado, as empresas buscam escalar. Eles conseguem investir mais em qualidade para funcionalidades críticas e criar processos de evolução rápida, como implantações programadas e procedimentos de teste. As empresas também estabelecem proativamente processos de suporte ao cliente para lidar com problemas e fornecem alertas proativos.
+
+100-1.000 funcionários: Quando a estratégia de entrada no mercado de uma empresa se mostra bem-sucedida e o produto escala e cresce rapidamente, ela começa a otimizar sua eficiência de engenharia. Mais ferramentas comerciais podem ser adquiridas, como produtos Atlassian. Um certo nível de padronização entre as ferramentas é introduzido, e a automação entra em ação.
+
+1.000-10.000+ funcionários: Grandes empresas de tecnologia desenvolvem ferramentas experimentais e automação para garantir qualidade e coletar feedback dos clientes em larga escala. A Netflix, por exemplo, é bem conhecida por sua estratégia de "Teste em Produção", que realiza tudo por meio de experimentos.
+
+> Deixa você: cada empresa é única. Em que estágio sua empresa está atualmente e quais ferramentas você usa?
+
+O melhor nome de branch no Git é aquele que *comunica intenção, escopo e temporalidade*, sem ambiguidade. Como você está falando de testes (automatizados ou manuais, unitários ou de integração), o nome da branch deve deixar claro *o tipo de teste* e *o objetivo*, não apenas “teste” de forma genérica.
 
 Na prática, a convenção mais aceita hoje segue a ideia de **prefixo semântico**, muito alinhada com Git Flow, Trunk-Based ou variações modernas.
 
