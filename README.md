@@ -288,8 +288,6 @@ Já o “caminho testável” (alternativo ou inesperado) pode ter interpretaç�
 
 Portanto, quando você ouve falar de “caminho feliz”, é um subconjunto do “caminho testável”. O caminho feliz prova que o básico funciona; o caminho testável inclui todas as outras possibilidades para dar robustez à aplicação. Ou seja, o usuário é inesperado, então vamos precisar "preparar" a aplicação para coisas inesperadas.
 
-<img height="377" align="right" src="https://github.com/user-attachments/assets/0ec5b719-1df3-47b4-9d9d-b8c2db2adb1c" />
-
 No universo do desenvolvimento de software, a qualidade é um objetivo primordial, e dois termos frequentemente se entrelaçam nesse contexto: Quality Assurance (QA) e Quality Control (QC). Embora muitas vezes usados como sinônimos, esses conceitos representam abordagens distintas, porém complementares, para garantir que o produto final atenda aos mais altos padrões de excelência.
 
 **Quality Assurance (QA)**: Prevenindo os Erros Antes que Eles Acontecçam
@@ -314,7 +312,12 @@ O QC atua como um detetive, buscando por bugs e falhas que podem comprometer a q
 - Verificar as correções: Após a correção dos bugs, o QC realiza novos testes para garantir que os problemas foram resolvidos e que não foram introduzidos novos bugs.
 - Monitorar a qualidade do software: Acompanhar o desempenho do software em produção, coletando dados e feedback dos usuários para identificar e corrigir problemas.
 
-<img src="https://github.com/user-attachments/assets/7f699e28-254b-4bdd-9028-c2c2b7b75ac0" align="right" height="377">
+<table>
+ <tr>
+  <td><img src="https://github.com/user-attachments/assets/0ec5b719-1df3-47b4-9d9d-b8c2db2adb1c" /></td>
+  <td><img src="https://github.com/user-attachments/assets/7f699e28-254b-4bdd-9028-c2c2b7b75ac0"></td>
+ </tr>
+</table>
 
 QA e QC: Um Time Imbatível. QA e QC são como duas faces da mesma moeda, trabalhando em conjunto para garantir a qualidade do software. Enquanto o QA se concentra na prevenção de defeitos, o QC se concentra na detecção e correção dos problemas. A sinergia entre esses dois processos é essencial para construir um software robusto, confiável e que atenda às expectativas dos usuários.
 
