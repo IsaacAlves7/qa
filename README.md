@@ -143,6 +143,8 @@ Ao longo dos anos, o Microrepo teve mais ferramentas suportadas, incluindo Maven
 
 > Deixando você: Qual opção você acha melhor? Qual estratégia de repositório de código sua empresa utiliza? Quais ferramentas sua equipe usa para enviar o código para produção e garantir a qualidade do código?
 
+Quais ferramentas sua equipe usa para enviar o código para produção e garantir a qualidade do código?
+
 A abordagem geralmente depende do tamanho da empresa. Não existe uma solução única para todos, mas tentamos oferecer uma visão geral.
 
 ![unnamed](https://github.com/user-attachments/assets/f9c70590-04a5-4f6d-96a3-eee38d23948c)
