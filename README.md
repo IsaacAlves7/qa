@@ -554,6 +554,7 @@ Melhores maneiras de testar a funcionalidade do sistema - Testar a funcionalidad
 <table>
  <tr>
   <td><img src="https://github.com/user-attachments/assets/ce75ad26-7ad4-4ef9-9224-d32f4fc9a2cb"></td>
+  <td><img src="https://github.com/user-attachments/assets/2ef59741-bc7a-4a90-9c60-398e5d4be77f"></td>
   <td><img src="https://github.com/user-attachments/assets/9ef3e58e-fcc5-4514-99f8-641583f8ee6e"></td>
  </tr>
 </table>
