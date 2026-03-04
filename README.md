@@ -228,6 +228,24 @@ No início da década de 1980, o governo dos Estados Unidos reconheceu a necessi
 
 A partir de então, a qualidade de software se tornou um foco importante na indústria de TI e foi acompanhada pelo surgimento de várias ferramentas e técnicas de teste e garantia de qualidade de software. A demanda por softwares confiáveis e de alta qualidade é cada vez maior, uma vez que muitos negócios e serviços dependem de sistemas de software em seus processos diários.
 
+![unnamed](https://github.com/user-attachments/assets/271ded8f-78fa-4729-81b3-25795a6c13c4)
+
+Mudança de Paradigma: Como a Relação Desenvolvedor-Testador Mudou de 1:1 para 100:1
+
+Proporção 1:1 (~1997) - Softwares costumavam ser gravados em CDs físicos e entregues aos clientes. O processo de desenvolvimento era em estilo cascata, as versões eram certificadas e as versões eram lançadas aproximadamente a cada três anos. Se você tivesse um inseto, esse inseto viveria para sempre. Só anos depois as empresas adicionaram a capacidade de software para pingar a internet em busca de atualizações e instalá-las automaticamente.
+
+Relação 10:1 (~2009) - Por volta de 2009, a velocidade de lançamento para produção aumentou significativamente. Patches podiam ser instalados em poucas semanas, e o movimento ágil, junto com o desenvolvimento orientado por iterações, mudou o processo de desenvolvimento. Por exemplo, na Amazon, os serviços web são principalmente desenvolvidos e testados pelos desenvolvedores. Eles também são responsáveis por lidar com questões de produção, e os recursos de teste estão sobrecarregados (proporção 10:1).
+
+Proporção 100:1 (~2020) - Por volta de 2015, grandes empresas de tecnologia como Google e Microsoft removeram os títulos SDET ou SETI, e a Amazon desacelerou a contratação de SDETs.
+
+Mas como isso vai funcionar para as grandes empresas de tecnologia em termos de testes?
+
+Primeiramente, o aspecto de teste do software evoluiu para ferramentas de teste altamente escaláveis e padronizadas. Essas ferramentas foram amplamente adotadas por desenvolvedores para construir seus próprios testes automatizados.
+
+Em segundo lugar, testar o conhecimento é disseminado por meio de educação e consultoria.
+
+Juntos, esses fatores facilitaram uma transição suave para a proporção de testes de 100:1 que vemos hoje.
+
 <img height="177" align="right" src="https://github.com/user-attachments/assets/f8eb96da-4172-4942-b93d-621e9941605e" />
 
 Hoje em dia, a busca pela qualidade de software continua em constante evolução, com a introdução de novas tecnologias e metodologias, como a integração contínua e o desenvolvimento ágil, e inteligência artificial que buscam garantir a qualidade do software de forma mais eficiente e rápida.
