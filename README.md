@@ -577,6 +577,7 @@ Melhores maneiras de testar a funcionalidade do sistema - Testar a funcionalidad
   <td><img src="https://github.com/user-attachments/assets/ce75ad26-7ad4-4ef9-9224-d32f4fc9a2cb"></td>
   <td><img src="https://github.com/user-attachments/assets/2ef59741-bc7a-4a90-9c60-398e5d4be77f"></td>
   <td><img src="https://github.com/user-attachments/assets/9ef3e58e-fcc5-4514-99f8-641583f8ee6e"></td>
+  <td><img src="https://github.com/user-attachments/assets/d36899f4-79b0-4caa-8142-58abc271ee92"></td>
  </tr>
 </table>
 
@@ -597,6 +598,26 @@ Aqui vamos explorar as melhores maneiras:
 - Automação de Testes: Automatiza a execução do caso de teste para eficiência, repetibilidade e redução de erros.
 
 A sua conversa: Como você aborda a funcionalidade de sistemas de teste em seus projetos de desenvolvimento de software ou engenharia?
+
+Explicando 9 tipos de testes de API:
+
+- Teste de Fumaça Isso é feito após o desenvolvimento da API ser concluído. Basta validar se as APIs estão funcionando e nada quebra.
+
+- Testes Funcionais Isso cria um plano de teste baseado nos requisitos funcionais e compara os resultados com os esperados.
+
+- Testes de Integração Este teste combina várias chamadas de API para realizar testes de ponta a ponta. As comunicações e transmissões de dados dentro do serviço são testadas.
+
+- Testes de Regressão Este teste garante que correções de bugs ou novos recursos não devam quebrar os comportamentos existentes das APIs.
+
+- Teste de Carga Isso testa o desempenho das aplicações simulando diferentes cargas. Depois, podemos calcular a capacidade da aplicação.
+
+- Testes de Estresse Criamos deliberadamente altas cargas nas APIs e testamos se elas conseguem funcionar normalmente.
+
+- Testes de Segurança Isso testa as APIs contra todas as possíveis ameaças externas.
+
+- Teste de UI Isso testa as interações da interface com as APIs para garantir que os dados possam ser exibidos corretamente.
+
+- Teste de Fuzz Isso injeta dados de entrada inválidos ou inesperados na API e tenta fazer a API travar. Dessa forma, ele identifica as vulnerabilidades da API.
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/b22f3aba-0a19-43b7-9da4-fdca9afa4231" />
 
