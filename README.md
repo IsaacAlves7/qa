@@ -232,11 +232,11 @@ A partir de então, a qualidade de software se tornou um foco importante na ind�
 
 Mudança de Paradigma: Como a Relação Desenvolvedor-Testador Mudou de 1:1 para 100:1
 
-Proporção 1:1 (~1997) - Softwares costumavam ser gravados em CDs físicos e entregues aos clientes. O processo de desenvolvimento era em estilo cascata, as versões eram certificadas e as versões eram lançadas aproximadamente a cada três anos. Se você tivesse um inseto, esse inseto viveria para sempre. Só anos depois as empresas adicionaram a capacidade de software para pingar a internet em busca de atualizações e instalá-las automaticamente.
+1:1 ratio (~1997) - Softwares costumavam ser gravados em CDs físicos e entregues aos clientes. O processo de desenvolvimento era em estilo cascata, as versões eram certificadas e as versões eram lançadas aproximadamente a cada três anos. Se você tivesse um inseto, esse inseto viveria para sempre. Só anos depois as empresas adicionaram a capacidade de software para pingar a internet em busca de atualizações e instalá-las automaticamente.
 
-Relação 10:1 (~2009) - Por volta de 2009, a velocidade de lançamento para produção aumentou significativamente. Patches podiam ser instalados em poucas semanas, e o movimento ágil, junto com o desenvolvimento orientado por iterações, mudou o processo de desenvolvimento. Por exemplo, na Amazon, os serviços web são principalmente desenvolvidos e testados pelos desenvolvedores. Eles também são responsáveis por lidar com questões de produção, e os recursos de teste estão sobrecarregados (proporção 10:1).
+10:1 ratio (~2009) - Por volta de 2009, a velocidade de lançamento para produção aumentou significativamente. Patches podiam ser instalados em poucas semanas, e o movimento ágil, junto com o desenvolvimento orientado por iterações, mudou o processo de desenvolvimento. Por exemplo, na Amazon, os serviços web são principalmente desenvolvidos e testados pelos desenvolvedores. Eles também são responsáveis por lidar com questões de produção, e os recursos de teste estão sobrecarregados (proporção 10:1).
 
-Proporção 100:1 (~2020) - Por volta de 2015, grandes empresas de tecnologia como Google e Microsoft removeram os títulos SDET ou SETI, e a Amazon desacelerou a contratação de SDETs.
+100:1 ratio (~2020) - Por volta de 2015, grandes empresas de tecnologia como Google e Microsoft removeram os títulos SDET ou SETI, e a Amazon desacelerou a contratação de SDETs.
 
 Mas como isso vai funcionar para as grandes empresas de tecnologia em termos de testes?
 
