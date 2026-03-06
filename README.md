@@ -32,6 +32,29 @@ Além disso, atuo na validação da experiência do usuário e do comportamento 
 - https://youtu.be/x3cANGNPyx0
 - https://substack.com/redirect/7de16a93-4fc6-4656-a50c-b1bfe73d5399?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
 
+Top AI Coding Tools for Developers You Can Use in 2025:
+
+![unnamed](https://github.com/user-attachments/assets/d3d9ca9f-6fc6-4e85-bd93-a36e89587d5c)
+
+1. AI Code Assistants
+   - GitHub Copilot: Ferramenta de completação de código e programação automática.
+   - ChatGPT: Ajuda a escrever e depurar código com os modelos mais recentes.
+   - Claude: Conhecimento recente e especializado de programação para gerar código preciso e atualizado.
+   - Amazon CodeWhisperer: Assistente de IA no IDE
+
+2. Curredor de IDEs
+   - Alimentados por IA: IDE com IA para Windows, macOS e Linux.
+   - Windsurf: IDE alimentado por IA que lida com tarefas complexas de forma independente.
+   - Replit: Crie aplicativos totalmente funcionais para entrar no ar rapidamente.
+
+3. Team Productivity
+   - Cody: O assistente de código de IA corporativa para escrever, corrigir e manter código.
+   - Pieces: Ferramenta de produtividade habilitada por IA para ajudar desenvolvedores a gerenciar trechos de código.
+   - Visual Copilot: Converta designs Figma em código React, Vue, Svelte, Angular ou HTML.
+
+4. Qualidade e Conclusão do Código
+   - Snyk: Varredura em tempo real de vulnerabilidades de código gerado por humanos e IA.
+
 # 👨🏾‍🔬 QA/QC - Quality Assurance and Quality Control
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white">
 
