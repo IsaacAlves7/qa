@@ -588,49 +588,39 @@ Aqui vamos explorar as melhores maneiras:
 
 - Testes Unitários: Garante que componentes individuais do código funcionem corretamente isoladamente.
 
-- Testes de Integração: Verifica que diferentes partes do sistema funcionam perfeitamente juntas.
+- Testes de Integração: Verifica que diferentes partes do sistema funcionam perfeitamente juntas. Este teste combina várias chamadas de API para realizar testes de ponta a ponta. As comunicações e transmissões de dados dentro do serviço são testadas.
 
 - Testes do Sistema: Avalia a conformidade de todo o sistema com os requisitos e o desempenho do usuário.
 
-- Teste de Carga: Testa a capacidade de um sistema de lidar com altas cargas de trabalho e identifica problemas de desempenho.
-
-- Teste de Erro: Avalie como o software lida com entradas inválidas e condições de erro.
-
-- Automação de Testes: Automatiza a execução do caso de teste para eficiência, repetibilidade e redução de erros.
-
-A sua conversa: Como você aborda a funcionalidade de sistemas de teste em seus projetos de desenvolvimento de software ou engenharia?
-
-Explicando 9 tipos de testes de API:
+- Teste de Carga: Testa a capacidade de um sistema de lidar com altas cargas de trabalho e identifica problemas de desempenho. Isso testa o desempenho das aplicações simulando diferentes cargas. Depois, podemos calcular a capacidade da aplicação.
 
 - Teste de Fumaça Isso é feito após o desenvolvimento da API ser concluído. Basta validar se as APIs estão funcionando e nada quebra.
 
 - Testes Funcionais Isso cria um plano de teste baseado nos requisitos funcionais e compara os resultados com os esperados.
 
-- Testes de Integração Este teste combina várias chamadas de API para realizar testes de ponta a ponta. As comunicações e transmissões de dados dentro do serviço são testadas.
-
 - Testes de Regressão Este teste garante que correções de bugs ou novos recursos não devam quebrar os comportamentos existentes das APIs.
 
-- Teste de Carga Isso testa o desempenho das aplicações simulando diferentes cargas. Depois, podemos calcular a capacidade da aplicação.
-
+- Teste de Fuzz Isso injeta dados de entrada inválidos ou inesperados na API e tenta fazer a API travar. Dessa forma, ele identifica as vulnerabilidades da API.
+ 
 - Testes de Estresse Criamos deliberadamente altas cargas nas APIs e testamos se elas conseguem funcionar normalmente.
+
+- Teste de Erro: Avalie como o software lida com entradas inválidas e condições de erro.
 
 - Testes de Segurança Isso testa as APIs contra todas as possíveis ameaças externas.
 
 - Teste de UI Isso testa as interações da interface com as APIs para garantir que os dados possam ser exibidos corretamente.
 
-- Teste de Fuzz Isso injeta dados de entrada inválidos ou inesperados na API e tenta fazer a API travar. Dessa forma, ele identifica as vulnerabilidades da API.
+- Automação de Testes: Automatiza a execução do caso de teste para eficiência, repetibilidade e redução de erros.
+
+> A sua conversa: Como você aborda a funcionalidade de sistemas de teste em seus projetos de desenvolvimento de software ou engenharia?
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/b22f3aba-0a19-43b7-9da4-fdca9afa4231" />
 
-1. **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. E mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”;
+1. **Testes fazem parte da construção do software**: Num fluxo de desenvolvimento saudável, os testes não são “um passo depois que o código já está pronto”, mas um componente do próprio processo de criação. A ideia do TDD (Test-Driven Development), por exemplo, é justamente colocar o teste como motor do design do código. TDD pode ajudar neste processo, e mesmo fora do TDD, testes unitários, estáticos e até linters fazem parte do que chamamos de build saudável. É por isso que pipelines modernos acoplam testes ao build: sem eles, o artefato até compila, mas não é considerado “construído de verdade”;
 
 2. **Devem ser realizados antes do commit**: Aqui você está descrevendo o que chamamos de pré-validação local. O ideal é que o desenvolvedor rode testes (unitários pelo menos) antes de commitar, garantindo que não quebrou nada básico. Isso pode ser cultural (boa prática individual) ou técnico (com pre-commit hooks no Git, que bloqueiam commit se os testes falharem). Dessa forma, o código que chega ao repositório central já tem uma garantia mínima;
 
-3. TDD pode ajudar neste processo;
-
-4. Desempenho bom em testes;
-
-5. Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
+3. **Desempenho bom em testes**: Os testes demorados podem ser uma barreira para a integração contínua, por isso precisamos ficar atentos.
 
 ## [QA] Automation testing
 ![Jest](https://img.shields.io/badge/-Jest-EF2D5E?style=badge&logo=jest&logoColor=white)
