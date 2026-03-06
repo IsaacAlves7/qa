@@ -173,7 +173,26 @@ Ao longo dos anos, o Microrepo teve mais ferramentas suportadas, incluindo Maven
 
 > Deixando você: Qual opção você acha melhor? Qual estratégia de repositório de código sua empresa utiliza? Quais ferramentas sua equipe usa para enviar o código para produção e garantir a qualidade do código?
 
-Quais ferramentas sua equipe usa para enviar o código para produção e garantir a qualidade do código?
+Como o TikTok gerencia um monorepo frontend de 200 mil arquivos? Um MonoRepo, abreviação de repositório monolítico, é uma estratégia de desenvolvimento de software onde um único repositório contém múltiplos projetos, bibliotecas e serviços.
+
+As partes boas de um MonoRepo são:
+
+- Melhor compartilhamento de código
+- Gerenciamento simplificado de dependências
+- Uma visão unificada da base de código
+
+No entanto, quanto maior o MonoRepo fica, mais lentas são as várias operações do Git.
+
+O TikTok enfrentou uma mudança semelhante com seu frontend TypeScript MonoRepo com 200 mil arquivos.
+
+Para lidar com isso, o TikTok desenvolveu uma ferramenta chamada Sparo que otimiza o desempenho das operações do Git para grandes MonoRepos frontend.
+
+A Sparo melhorou dramaticamente o desempenho das operações do Git. Algumas estatísticas são as seguintes
+
+- O tempo de clonagem do Git passou de 40 minutos para apenas 2 minutos.
+- O check-out foi de 1,5 minutos para 30 segundos.
+- O status foi de 7 segundos para 1 segundo.
+- O tempo de commit do git passou de 15 segundos para 11 segundos.
 
 A abordagem geralmente depende do tamanho da empresa. Não existe uma solução única para todos, mas tentamos oferecer uma visão geral.
 
