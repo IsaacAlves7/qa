@@ -428,7 +428,7 @@ Além disso, uma ilustração útil pode ser um diagrama que mostre a relação 
 <table>
  <tr>
   <td>Tipos, técnicas e níveis de testes</td>
-  <td>Ferramentas para testes</td>
+  <td>Ferramentas para testes (CI/CD Pipeline)</td>
  </tr>
  <tr>
   <td><img width="551" height="351" alt="image" src="https://github.com/user-attachments/assets/d9decc9c-a526-4733-bf66-c5cd63aaba1e" /></td>
