@@ -144,8 +144,8 @@ Vamos trabalhar com o Multi-repo, afinal é o mais comum no dia a dia da maioria
 
 <table>
    <tr>
-      <td><img src="https://github.com/user-attachments/assets/6402db4f-2617-4038-8526-6952c1f14bad"></td>
-      <td><img src="https://github.com/user-attachments/assets/2ea47efb-9c50-459a-9110-ae969807f984"></td>
+      <td><img src="https://github.com/user-attachments/assets/6402db4f-2617-4038-8526-6952c1f14bad" height="677"></td>
+      <td><img src="https://github.com/user-attachments/assets/2ea47efb-9c50-459a-9110-ae969807f984" height="677"></td>
    </tr>
 </table>
 
