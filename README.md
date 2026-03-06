@@ -142,7 +142,12 @@ A desvantagem do segundo modelo é o repositório precisará ser realmente grand
 
 Vamos trabalhar com o Multi-repo, afinal é o mais comum no dia a dia da maioria dos desenvolvedores.
 
-![b8c290d4d4680506a14e00e58a4e0c72](https://github.com/user-attachments/assets/6402db4f-2617-4038-8526-6952c1f14bad)
+<table>
+   <tr>
+      <td><img src="https://github.com/user-attachments/assets/6402db4f-2617-4038-8526-6952c1f14bad"></td>
+      <td><img src="https://github.com/user-attachments/assets/2ea47efb-9c50-459a-9110-ae969807f984"></td>
+   </tr>
+</table>
 
 Monorepo vs. Microrepo. Qual é o melhor? Por que diferentes empresas escolhem opções diferentes?
 
