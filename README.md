@@ -1817,7 +1817,7 @@ Após ler este livro, você será capaz de:
 
 - Entenda o processo e os princípios básicos da refatoração;
 - Aplique rapidamente refatorações convenientes para deixar um programa mais fácil de entender e de alterar;
-- Reconheça “maus cheiros” no código que sinalizam oportunidades para refatorar;
+- Reconheça “maus cheiros” no código (Code Smells) que sinalizam oportunidades para refatorar;
 - Explore as refatorações, cada uma com suas explicações, a motivação, o mecanismo e exemplos simples;
 - Escreva testes robustos para suas refatorações;
 - Reconheça as contrapartidas e os obstáculos para a refatoração.
