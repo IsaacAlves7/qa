@@ -474,6 +474,30 @@ Portanto, observabilidade pode ser vista como complementar ao QA, não substitui
 
 No cenário acelerado de software atual, as equipes de garantia de qualidade enfrentam uma pressão intensa para entregar lançamentos de alta qualidade de forma mais rápida e econômica (impactqa.com, bugraptors.com).
 
+Como as empresas enviam código para produção? O diagrama abaixo ilustra o fluxo de trabalho típico.
+
+![unnamed](https://github.com/user-attachments/assets/e32bba83-cde7-4108-a7b0-8d769b2f1421)
+
+Passo 1: O processo começa com um product owner criando user stories baseadas em requisitos.
+
+Passo 2: A equipe de desenvolvimento pega as histórias de usuário do backlog e as coloca em um sprint por um ciclo de desenvolvimento de duas semanas.
+
+Passo 3: Os desenvolvedores commetem o código-fonte no repositório de código Git.
+
+Passo 4: Uma build é acionada em Jenkins. O código-fonte deve passar por testes unitários, limiar de cobertura de código e portas no SonarQube.
+
+Passo 5: Uma vez que a build é bem-sucedida, ela é armazenada no artefactory. Depois, a build é implantada no ambiente de desenvolvimento.
+
+Passo 6: Pode haver várias equipes de desenvolvimento trabalhando em diferentes recursos. Os recursos precisam ser testados de forma independente, então são implantados no QA1 e QA2.
+
+Passo 7: A equipe de QA adota os novos ambientes de QA e realiza testes de QA, testes de regressão e testes de desempenho.
+
+Etapas 8: Uma vez que as builds de QA passam pela verificação da equipe de QA, elas são implantadas no ambiente UAT.
+
+Passo 9: Se o teste do UAT for bem-sucedido, as versões se tornam candidatas a lançamento e serão implantadas no ambiente de produção conforme o cronograma.
+
+Passo 10: A equipe SRE (Site Reliability Engineering) é responsável pelo monitoramento de produção.
+
 <img height="377" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
 
 A **hiperautomação** (Hyperautomation) surgiu como uma resposta estratégica: em vez de simplesmente executar testes roteirizados, ela une ferramentas avançadas para automatizar inteiramente fluxos de trabalho de QA de forma inteligente (dev.toimpactqa.com).
