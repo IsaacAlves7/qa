@@ -476,6 +476,17 @@ No cenário acelerado de software atual, as equipes de garantia de qualidade enf
 
 Como as empresas enviam código para produção? O diagrama abaixo ilustra o fluxo de trabalho típico.
 
+<table>
+   <tr>
+      <td>APIs and Web Applications</td>
+      <td>App Mobile</td>
+   </tr>
+   <tr>
+      <td><img src="https://github.com/user-attachments/assets/e32bba83-cde7-4108-a7b0-8d769b2f1421"></td>
+      <td><img src="https://github.com/user-attachments/assets/372076c1-6083-4ee2-abaf-105171d763ef"></td>
+   </tr>
+</table>
+
 ![unnamed](https://github.com/user-attachments/assets/e32bba83-cde7-4108-a7b0-8d769b2f1421)
 
 Passo 1: O processo começa com um product owner criando user stories baseadas em requisitos.
