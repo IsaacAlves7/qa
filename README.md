@@ -519,6 +519,38 @@ A hiperautomação representa uma mudança de paradigma para o QA: de testes rot
 
 À medida que o desenvolvimento acelera, o QA não pode permanecer manual ou estático. Adotar a hiperautomação faz dos testes um facilitador estratégico da transformação digital. Organizações que integram com sucesso a automação inteligente ao QA entregarão software de maior qualidade em alta velocidade e navegarão com confiança pela complexidade das aplicações modernas (testingxperts.com, testingxperts.com).
 
+Correção Automatizada de Bugs em Escala do Facebook: Se tem uma coisa que a maioria dos desenvolvedores realmente odeia, é depuração (debugging).
+
+Embora depurar programas pequenos não seja divertido, pode ficar extremamente irritante quando você precisa depurar milhões de linhas de código numa sexta-feira à noite para encontrar aquele bug tão difícil de encontrar.
+
+Para piorar, bugs (de software ou não) são persistentes.
+
+Você se livra de um e mais dois aparecem. Quando você acha que finalmente resolveu o problema e começou a testar, percebe que o patch que você acabou de fazer está causando outro travamento em outro lugar dentro dessas milhões de linhas.
+
+Antes que perceba, você já está caminhando por mais uma caçada ao inseto.
+
+É aí que o SapFix se projeta como uma ferramenta revolucionária no campo da correção automática de bugs.
+
+É uma nova ferramenta híbrida de IA criada pelo Facebook com o objetivo de reduzir o tempo que os engenheiros gastam com depuração.
+
+O SapFix facilita a depuração ao gerar automaticamente correções para problemas específicos e propor essas correções aos engenheiros para aprovação e implantação em produção.
+
+O diagrama abaixo mostra o fluxo de trabalho do SapFix em um nível geral. Em uma seção posterior, veremos todo o processo com ainda mais detalhes.
+
+<img width="1408" height="789" alt="unnamed" src="https://github.com/user-attachments/assets/ddfd7af1-f9ee-48cf-8bf4-9abba4451c8b" />
+
+Dizer que a SapFix mostrou potencial seria pouco. Aqui estão alguns fatos que valem a pena considerar:
+
+O SapFix tem sido usado para sugerir correções para seis aplicativos-chave do Android na família de aplicativos do Facebook.
+
+Os aplicativos são Facebook, Messenger, Instagram, FBLite, Workplace e Workchat.
+
+Juntos, esses aplicativos consistem em dezenas de milhões de linhas de código e são usados diariamente por centenas de milhões de usuários ao redor do mundo.
+
+Se você pensar bem, são 6 bases de código de vários milhões de linhas e ainda estamos nos primeiros dias de desenvolvimento do SapFix!
+
+Neste ponto, você pode se perguntar como a SapFix consegue gerar correções para tantos aplicativos diversos com usos tão variados, que vão desde comunicação até redes sociais e construção de comunidades.
+
 ## [QA] Custos x Fases
 <img width="524" height="241" align="right" src="https://github.com/user-attachments/assets/a3aaded7-0fad-4ba5-9b0a-9d664bf0dc8e" />
 
