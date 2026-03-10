@@ -2867,8 +2867,6 @@ As principais ferramentas para testes *E2E (End-to-End)* e soluções complement
 
 Ferramentas Especializadas em E2E:
 
-<img height="277" align="right" src="https://github.com/user-attachments/assets/b2033462-bc2a-46e7-bdaf-2db51a548358" />
-
 1. **Para Aplicações Web**  
    - **Cypress**: Framework completo para testes E2E em navegadores, com suporte a simulação de interações (cliques, formulários) e debug em tempo real. Inclui **Cypress Testing Library** para boas práticas de seleção de elementos.  
 
@@ -2889,13 +2887,18 @@ Ferramentas Especializadas em E2E:
 
 Ferramentas Complementares (como Zod):
 
-1. **Validação de Dados em Testes E2E**  
-   - **Zod**: Valida esquemas de respostas de API ou estados da UI durante testes. Exemplo:  
-       ```typescript  
-       const LoginResponseSchema = z.object({ token: z.string() });  
-       const data = LoginResponseSchema.parse(await response.json());  
-       ```  
-   - **Joi**: Similar ao Zod, mas mais usado em back-end (Node.js) para validar objetos.  
+<img height="277" align="right" src="https://github.com/user-attachments/assets/b2033462-bc2a-46e7-bdaf-2db51a548358" />
+
+1. **Validação de Dados em Testes E2E**
+
+**Zod**: Valida esquemas de respostas de API ou estados da UI durante testes. Exemplo:  
+
+```typescript  
+const LoginResponseSchema = z.object({ token: z.string() });  
+const data = LoginResponseSchema.parse(await response.json());  
+```  
+
+**Joi**: Similar ao Zod, mas mais usado em back-end (Node.js) para validar objetos.  
 
 2. **Mock de Dados/APIs**  
    - **MSW (Mock Service Worker)**: Intercepta requisições HTTP em testes E2E para simular APIs sem depender do back-end real.  
