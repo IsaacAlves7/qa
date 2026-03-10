@@ -2806,6 +2806,90 @@ Essa estrutura é totalmente descartável. Nossos desenvolvedores podem desmonta
 
 O autoescalonador de cluster da GKE escala os nós quentes do cluster runner para cima e para baixo conforme a demanda.
 
+A Aplicação Voltada para o Cliente
+A aplicação voltada para o cliente é um IDE especializado onde nossos engenheiros de QA podem escrever, rodar e manter testes Playwright. Possui views para gerenciar configurações e integrações de terceiros com dashboards de visualização.
+
+![unnamed](https://github.com/user-attachments/assets/c85fc913-4473-4c32-bc29-9066a690bcab)
+
+Testes de Escrita
+Os testes construídos e mantidos pelos nossos engenheiros internos de QA são autônomos, isolados, idempotentes e atômicos, podendo rodar de forma previsível em um contexto totalmente paralelizado.
+
+Quando um engenheiro de QA salva um teste, a aplicação persiste o código do teste no GCS com seus assistentes correspondentes e qualquer configuração de análise sintética necessária para executá-lo no Playwright. Este é o Arquivo de Dados de Execução do teste. Caso você não saiba, GCS é o equivalente GCP ao AWS S3.
+
+![unnamed](https://github.com/user-attachments/assets/42bdf9e4-254c-40a0-b827-5aae1c8e3c8e)
+
+Na implementação inicial, tentamos passar o Arquivo de Dados Executados como um payload em HTML, mas o payload contendo o código de teste de todos os testes em uma execução era grande demais para Kubernetes etc. Para contornar isso, escolhemos o caminho de menor resistência escrevendo todo o código em um arquivo central e dando ao cliente uma referência à localização do arquivo para repassar ao aplicativo.
+
+O Fluxo de Execução
+Como mencionado anteriormente, orquestramos execuções com fluxos de trabalho Argo porque ele pode rodar em um cluster Kubernetes sem dependências externas.
+
+Clientes ou engenheiros de QA podem usar um agendador na aplicação ou uma chamada de API para iniciar um teste. Quando uma execução de teste é acionada, a aplicação reúne as localizações de todos os Arquivos de Dados de Execução necessários. Também cria um novo registro de banco de dados para cada execução de teste, incluindo um número de compilação único que atua como identificador para a solicitação de execução de teste. A aplicação usa o número de compilação posteriormente para associar logs do sistema e localizações de vídeo.
+
+Por fim, ele passa a lista de localizações de arquivos Run Data para o serviço Run Director.
+
+O diagrama abaixo mostra todo o fluxo de execução em um nível geral.
+
+<img width="1305" height="1077" alt="unnamed" src="https://github.com/user-attachments/assets/26b65d64-8a2e-4d44-bdce-0ec7179e4a1a" />
+
+O Diretor de Corrida
+O Run Director é um serviço HTTP simples, duradouro e escalável horizontalmente.
+
+Quando invocado, o Run Director reporta o status inicial da execução de teste para a aplicação via webhook e o número da compilação. Para cada local na lista, o Run Director invoca um template de Workflows do Argo e o hidrata com o arquivo Run Data nesse local. Ao realizar ambas as ações simultaneamente, os testes individuais podem ser iniciados mais rapidamente, permitindo que todos os testes na execução sejam concluídos mais rapidamente.
+
+O Fluxo de Trabalho Argo então fornece um pod Kubernetes para cada execução de teste solicitada dos nós quentes disponíveis. Ele anexa o código de cada teste a um volume em um recipiente correspondente no pod. Essa abordagem nos permite usar a mesma build de contêiner para cada execução de teste. Se não houver pods suficientes para rodar em nós quentes, a GKE usa autoscaling de cluster para atender à demanda.
+
+Cada teste roda em seu próprio pod e container, o que isola os testes e facilita para os desenvolvedores solucioná-los. Executar testes assim também limita os problemas de consumo de recursos ao nó onde os testes específicos estão tendo dificuldades.
+
+O código de teste é executado a partir do ponto de entrada do contêiner. O Argo Workflow conduz o processo de provisionamento e inicia cada container com a ajuda do Kubernetes
+
+O aplicativo executa todos os testes em navegadores com cabeçalho. Isso é importante porque o contêiner é destruído após o término do teste, e o navegador com cabeçalho possibilita capturar vídeos dos testes. Os vídeos são uma ferramenta essencial de depuração para saber o que aconteceu no momento, especialmente em casos em que é difícil recriar uma falha específica.
+
+Devido ao alto padrão de autoria de testes e confiabilidade da infraestrutura, a principal causa de falha nos testes ocorre quando o sistema em fase de teste (SUT) não está otimizado para testes. Faz sentido quando você pensa bem. Quanto mais lento for o SUT, mais o teste é necessário para sondar, aumentando a demanda sobre o processador que executa o teste. Embora não possamos dizer ao cliente como construir sua aplicação para melhorar o desempenho dos testes, podemos isolar o consumo de recursos de cada teste para evitar que ele impacte outros testes.
+
+A Detecção de Flocos
+Mantemos um padrão muito alto de autoria em testes, o que nos permite fazer certas suposições.
+
+Como espera-se que os testes passem, podemos assumir com segurança que uma falha ou erro de teste é devido a uma anomalia, como um SUT temporariamente indisponível. A aplicação agenda essas falhas para retentativas automáticas. Ele sinaliza qualquer outra falha – como suspeita de problema de infraestrutura – para investigação e não tenta novamente. O Argo Workflows tentará executar um teste falhado três vezes.
+
+![unnamed](https://github.com/user-attachments/assets/ea846410-5c52-4a4e-9004-db75fa6538b5)
+
+Se os testes passarem na tentativa novamente, a aplicação é retomada normalmente e assume que a falha foi anômala. Caso todas as tentativas falham, o sistema cria um relatório de defeito, e um engenheiro de QA investiga para confirmar se a falha se deve a um bug na aplicação ou a algum outro problema.
+
+Os Agrupamentos de Fragmentos de Corrida
+Uma das vantagens mais significativas do serviço Run Director é o conceito de Run Shard Clusters.
+
+A estratégia de fragmentação nos permite distribuir os vários testes entre clusters localizados ao redor do mundo. Temos um VPC global do GCP com várias sub-redes diferentes em diferentes regiões. Isso possibilita provisionar clusters de fragmentação em diferentes regiões que podem ser acessados de forma privada via o serviço Run Director.
+
+Agrupamentos de fragmentos oferecem várias vantagens, tais como:
+
+Alta disponibilidade replicada - Se uma região cair, nem tudo para.
+
+Testes mais próximos de casa - A capacidade de realizar testes de clientes próximos à região de origem resulta em um desempenho mais preciso de suas aplicações e sistemas.
+
+Experimentação - Podemos experimentar diferentes versões da nossa implementação do Argo Workflows ou diferentes motores de execução sem reduzir o tráfego total para a mesma versão. Isso também nos permite experimentar medidas de economia de custos, como instâncias localizadas.
+
+Relatórios
+
+![unnamed](https://github.com/user-attachments/assets/19fb1782-4f6c-4ac0-86a7-4b305b94521a)
+
+Claro, nossos clientes também querem ver os resultados dos testes, então precisávamos criar um sistema confiável que permitisse isso.
+
+Quando o teste termina de rodar e tentar novamente (se necessário), o template do Argo Workflow faz upload de quaisquer artefatos de execução salvos pelo Playwright de volta para o GCS usando o número da compilação. Algumas dessas informações serão agregadas e aparecerão no painel da nossa aplicação. Outras informações desses artefatos são exibidas no nível de teste, como registros e histórico de execuções.
+
+<img width="317" height="494" alt="unnamed" src="https://github.com/user-attachments/assets/ed7a60c2-d8f5-4071-b7ff-437f9a75646e" />
+
+No lado da infraestrutura, o Fluxo de Trabalho Argo aciona o Kubernetes para desligar o container e desanexar o volume, garantindo que o sistema não deixe recursos desnecessários rodando. Isso ajuda a manter os custos operacionais baixos.
+
+Conclusão
+Nossa abordagem única foi desenvolvida para atender às necessidades dos clientes em termos de velocidade, disponibilidade e confiabilidade. Somos uma das poucas empresas rodando testes e2e nessa escala, então precisávamos descobrir como criar um sistema que suportasse isso por meio de tentativa e erro; Por isso, projetamos nosso sistema para também suportar iterações rápidas. Nossa execução de testes paralelos completos e econômica é a espinha dorsal da nossa aplicação, e vemos que ela entrega valor aos nossos clientes diariamente.
+
+Se você quiser saber mais sobre a infraestrutura de testes do QA Wolf ou como ela pode ajudar a lançar mais rápido com menos escapes, visite o site deles para agendar uma demonstração.
+
+https://substack.com/redirect/6437c130-a4f1-4b9f-a5b0-5123061d3441?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/b8ad2d42-a425-477b-a742-d59ee8ba9d8e?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/103a08f5-3961-42ca-9068-227e2d318b5e?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
 
 # 🧪 BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
