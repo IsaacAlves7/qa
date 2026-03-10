@@ -2729,6 +2729,84 @@ Quando Usar Cada Uma?
 
 Essas ferramentas podem ser combinadas para cobrir todos os aspectos de testes E2E, desde a interação do usuário até a integridade dos dados.
 
+Como Executar Testes de Ponta a Ponta em Escala: Rodar testes E2E de forma confiável e eficiente é uma peça crítica do quebra-cabeça para qualquer organização de software.
+
+Existem principalmente duas expectativas que as equipes de software têm quando se trata de testes:
+
+- Envie o mais rápido possível sem introduzir (ou reintroduzir) bugs
+- Realize os testes o mais barato possível, sem comprometer a qualidade.
+
+Na edição de hoje, temos a sorte de receber o autor convidado John Gluck, Principal Defensor de Testes da QA Wolf. Ele compartilhará insights sobre a infraestrutura especializada da QA Wolf, capaz de executar milhares de testes E2E simultâneos em apenas alguns minutos e atender às expectativas de seus clientes.
+
+QA Wolf é uma solução de serviço completo para equipes de produto de médio a grande porte que desejam acelerar seus ciclos de QA e reduzir o custo de construir, executar e manter uma cobertura abrangente de testes de regressão.
+
+Além disso, Mufav Onus, da QA Wolf, falou no Kubecon 2024 em Paris sobre como eles retomam automaticamente os pods em momentos pontuais após paralisações inesperadas. Dá uma olhada.
+
+O Desafio de Realizar Testes E2E
+Rodar testes E2E de forma eficiente é um desafio para qualquer organização. Os runners tendem a causar picos de recursos, o que faz com que testes e aplicações se comportem de forma imprevisível. Por isso, é bastante comum que grandes equipes de produto programem estrategicamente seus testes. À medida que o número de testes e de execuções aumenta, os desafios se tornam exponencialmente mais difíceis de superar.
+
+Enquanto as maiores empresas do mundo podem realizar 10.000 testes de ponta a ponta por mês, e algumas poucas executam 100.000, a QA Wolf administra mais de 2 milhões. Em nossa escala, para suportar o número de clientes que atendemos, nossa infraestrutura precisa abordar três grandes preocupações:
+
+Disponibilidade - Os clientes podem executar seus testes a qualquer momento, sem restrições quanto ao número ou frequência das execuções paralelas. O sistema deve estar altamente disponível. Não podemos usar truques de agendamento para resolver isso.
+
+Velocidade - Os testes precisam rodar rápido. A DORA recomenda 30 minutos como tempo máximo para execução do conjunto de testes, e os clientes querem seguir esse princípio.
+
+Confiabilidade - Problemas de contenda de nós, sequestro de instâncias e falhas na execução do sistema de teste (as coisas que arquitetos de teste internos lidam regularmente) simplesmente não são toleráveis quando as pessoas estão pagando para executar seus testes.
+
+Para o bem ou para o mal, o StackOverflow não tinha projetos para o tipo de infraestrutura de execução de testes que precisávamos construir. O sucesso veio de muita experimentação e refinamento constante.
+
+Neste post, discutimos os problemas que enfrentamos e as decisões que tomamos para que pudéssemos resolvê-los por meio de experimentação.
+
+A Quebra da Stack Tecnológica
+
+![unnamed](https://github.com/user-attachments/assets/b935ae57-7ddc-4064-b3d2-eebb13f90cbd)
+
+Para contextualizar, somos totalmente nativos da nuvem e construímos nossa infraestrutura na Google Cloud Platform (GCP).
+
+Optamos pelo GCP por sua implementação GKE (Kubernetes) e capacidades de autoscaling de cluster, que são críticas para lidar com a demanda por nós de execução de testes. Existem ferramentas semelhantes por aí, mas nossos engenheiros também tinham experiência prévia com GCP, o que nos ajudou a começar.
+
+Adotamos uma abordagem GitOps para poder executar muitos experimentos de configuração em nossa infraestrutura de forma rápida e segura, sem interromper as operações em andamento.
+
+O Argo CD foi uma boa escolha por seu suporte a GitOps e Kubernetes. Uma combinação dos fluxos de trabalho Helm e Argo ajuda a tornar o processo de implantação consistente e organizado. Usamos os Conjuntos de Aplicações de CD Argo e os padrões App of Apps, que são considerados melhores práticas.
+
+Para o IaC, escolhemos o Pulumi porque é open source e, ao contrário do Terraform, ele não obriga os desenvolvedores a adotarem outra DSL (Linguagem Específica de Domínio)
+
+Por fim, usamos o Typescript para escrever os testes. Nossos clientes analisam o código de teste escrito para eles, e o Typescript facilita a compreensão. Escolhemos o Playwright como executor de testes e framework de teste por vários motivos, tais como:
+
+A Playwright pode lidar com os testes complexos que os clientes podem precisar automatizar.
+
+APIs mais simples e uma instalação mais fácil impedem que os clientes fiquem presos à nossa solução.
+
+Ele conta com o apoio da Microsoft, e o desenvolvimento mais ativo está ampliando a lista de capacidades nativas.
+
+O Ecossistema
+Para o ecossistema de infraestrutura, optamos por um VPC e três clusters principais de aplicações.
+
+Cada um dos três clusters tem um papel específico:
+
+O cluster de aplicações
+
+A instância de teste ou cluster runner
+
+Cluster de operações
+
+O cluster de operações é o cluster principal e gerencia os outros dois clusters. O Argo CD roda dentro desse cluster.
+
+Veja o diagrama abaixo que mostra essa disposição.
+
+<img width="980" height="597" alt="unnamed" src="https://github.com/user-attachments/assets/b9eeb655-3ac0-4d7d-8b41-6974a35b3dd1" />
+
+No momento da inicialização, o cluster de operações cria tanto o cluster de aplicação quanto o de runner. Ele fornece nós quentes no cluster runner, cada um contendo dois pods, e cada pod é construído sobre uma única imagem de container.
+
+Veja o diagrama abaixo para referência:
+
+<img width="1432" height="872" alt="unnamed" src="https://github.com/user-attachments/assets/7d4644cb-f2ee-4b57-8a0e-c248bd8dc50c" />
+
+Essa estrutura é totalmente descartável. Nossos desenvolvedores podem desmontar todo o sistema e reconstruí-lo do zero com o toque de um botão, o que aumenta a previsibilidade para os desenvolvedores e também é ótimo para apoiar a recuperação de desastres.
+
+O autoescalonador de cluster da GKE escala os nós quentes do cluster runner para cima e para baixo conforme a demanda.
+
+
 # 🧪 BDD - Behavior-Driven Development
 ![Cucumber](https://img.shields.io/badge/-Cucumber-23D96C?style=badge&logo=cucumber&logoColor=white) ![Behave](https://img.shields.io/badge/-Behave-00D564?style=Behave&logo=Python&logoColor=white) ![Specflow](https://img.shields.io/badge/-Specflow-00D564?style=badge&logo=.NET&logoColor=white) ![Speculate](https://img.shields.io/badge/-Speculate-00D564?style=badge&logo=Rust&logoColor=white) ![Mocha](https://img.shields.io/badge/-Mocha-00D564?style=badge&logo=Mocha&logoColor=white) ![Chai](https://img.shields.io/badge/-Chai-00D564?style=badge&logo=Chai&logoColor=white) ![Jest](https://img.shields.io/badge/-Jest-00D564?style=badge&logo=Jest&logoColor=white) ![Sinon](https://img.shields.io/badge/-Sinon-00D564?style=badge&logo=Node.js&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) ![Gherkin](https://img.shields.io/badge/-Gherkin-00D564?style=badge&logo=Gherkin&logoColor=white) 
 
