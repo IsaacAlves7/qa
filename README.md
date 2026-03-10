@@ -551,6 +551,174 @@ Se você pensar bem, são 6 bases de código de vários milhões de linhas e ain
 
 Neste ponto, você pode se perguntar como a SapFix consegue gerar correções para tantos aplicativos diversos com usos tão variados, que vão desde comunicação até redes sociais e construção de comunidades.
 
+O Papel de Sapienz e Infer
+O segredo do SapFix é a adoção de técnicas automatizadas de reparo de programas.
+
+Essas técnicas são baseadas em algoritmos para identificar, analisar e corrigir bugs de software conhecidos sem intervenção humana. Uma das abordagens mais utilizadas depende de testes de software para direcionar o processo de reparo.
+
+É aí que o Facebook utiliza seu sistema automatizado de design de casos de teste, conhecido como Sapienz.
+
+A Sapienz utiliza Engenharia de Software baseada em Busca (SBSE) para projetar automaticamente casos de teste em nível de sistema para aplicativos móveis. Executar esses casos permite que a Sapienz encontre centenas de falhas por mês mesmo antes que possam ser descobertas pelos testadores humanos internos do Facebook.
+
+Pense no SBSE como se tivesse um assistente super inteligente que analisa todas as linhas de código e tenta diferentes combinações para resolver um problema. É muito parecido com quando você tenta diferentes peças de um quebra-cabeça até que elas se encaixem perfeitamente.
+
+Como estimativa, os engenheiros do Facebook conseguiram corrigir 75% das falhas relatadas pela Sapienz. Isso indica uma relação sinal-ruído muito alta para os relatórios de bugs gerados pelo Sapienz.
+
+No entanto, para melhorar ainda mais esse número, o Facebook também usa o Infer.
+
+Infer é uma ferramenta de código aberto que auxilia na localização e análise estática das correções propostas. Assim como o Sapienz, o Infer também é implantado diretamente no sistema interno de integração contínua do Facebook e tem acesso à maior parte da base de código do Facebook.
+
+Sapienz e Infer colaboram entre si para fornecer informações aos desenvolvedores sobre possíveis bugs como:
+
+Localização da provável causa raiz
+
+O cenário de teste de falha que ajudou a identificar o bug
+
+<img width="912" height="760" alt="unnamed" src="https://github.com/user-attachments/assets/19fce2e2-5730-4e26-b482-ced05364c00f" />
+
+No entanto, Sapienz e Infer só podem fornecer informações e não economizam tempo para o desenvolvedor realmente corrigir o problema. Claro, a colaboração deles ajuda a identificar bugs e a localização deles no código, mas a maior parte do trabalho envolvido para corrigir esses bugs ainda cabe ao desenvolvedor.
+
+É aí que o SapFix entra e combina três componentes importantes para fornecer um sistema automatizado de reparo de ponta a ponta:
+
+Técnica baseada em mutação apoiada por padrões gerados a partir de correções humanas anteriores
+
+O projeto automatizado de testes do Sapienz
+
+Infraestrutura de análise estática e localização da Infer
+
+Desde a escolha dos casos de teste que detectam o crash até a correção do problema e reteste, o SapFix cuida de todo o processo como parte do sistema contínuo de integração e implantação do Facebook.
+
+O Fluxo de Trabalho SapFix
+Como o SapFix realmente funciona?
+
+Existem quatro tipos de correções realizadas pela SapFix:
+
+Correção do Modelo
+
+Correção de Mutação
+
+Diff Revert
+
+Revert Parcial de Diferença
+
+Abaixo está um diagrama que mostra todo o fluxo de trabalho de como o SapFix lida com o processo de correção de um problema com base nesses tipos.
+
+<img width="1302" height="1600" alt="unnamed" src="https://github.com/user-attachments/assets/a0dfee40-afc6-4299-bec7-9a6940c56266" />
+
+No fundo, o processo é extremamente simples de entender.
+
+O processo de criação de correções recebe a entrada abaixo:
+
+A revisão com bugs e o arquivo culpado que contém o local do crash
+
+A linha culpada onde o acidente deveria estar acontecendo
+
+Rastreamento da pilha do crash
+
+O id único do acidente
+
+Autor da revisão bugada (o desenvolvedor que criou o Diff)
+
+Expressões com bugs fornecidas pelo Infer (isso é nulo quando os dados do Infer não estão disponíveis)
+
+Com base nessa informação, o SapFix gera uma lista de revisões que podem corrigir o crash. Esta lista é criada após o SapFix ter testado essas revisões minuciosamente.
+
+Da entrada à saída, há várias etapas envolvidas:
+
+Desenvolvedores submetem alterações (chamadas de 'Diffs') para serem revisadas usando o Phabricator (o sistema de integração contínua do Facebook)
+
+O SapFix usa o Sapienz para selecionar alguns casos de teste a serem executados em cada Diff submetido para revisão.
+
+Quando o Sapienz identifica um travamento específico para o Diff dado, o SapFix estabelece a prioridade dos tipos de correção (template, mutação, revert, etc).
+
+O SapFix tenta gerar múltiplas possíveis correções por bug e depois avalia sua qualidade.
+
+Para isso, ele executa testes existentes, escritos por desenvolvedores, junto com testes criados pela Sapienz nas versões atualizadas. Esse processo de validação é autônomo e isolado da base de código maior.
+
+Em essência, o SapFix é meio que depurar a base de código, assim como os desenvolvedores fazem atualmente. Pense na abordagem de resolução de quebra-cabeças que mencionamos antes. No entanto, ao contrário dos desenvolvedores, o SapFix não pode implantar a correção em produção sozinho.
+
+Uma vez testados os patches, o SapFix seleciona um dos corredores candidatos e solicita que um revisor humano revise a alteração pelo sistema de revisão de código Phabricator. O revisor é escolhido para ser o engenheiro de software que realmente enviou o Diff que o SapFix tentou corrigir.
+
+Esse é o engenheiro que provavelmente tem o melhor contexto técnico para avaliar o patch. No entanto, outros engenheiros relevantes também estão inscritos em cada Diff com base nos padrões de revisão de código do Facebook. Isso significa que todos os Diffs propostos pelo SapFix têm garantia de ter pelo menos um revisor humano qualificado.
+
+O fluxo acima pode parecer simples, mas há algumas nuances adicionais, e entendê-las torna as coisas mais claras.
+
+Correção de Template e Correção de Mutação
+Como o nome sugere, as estratégias de correção modelo e correção de mutação escolhem entre correções modelo e baseadas em mutação.
+
+Correções baseadas em templates são favorecidas quando todos os outros parâmetros são iguais.
+
+Mas de onde vêm esses modelos?
+
+Correções de templates vêm de outra ferramenta chamada Getafix, que gera patches semelhantes aos que desenvolvedores humanos produziram no passado. Do ponto de vista do SapFix, o Getafix é uma caixa-preta que contém vários padrões de correção modelo colhidos de correções anteriores bem-sucedidas.
+
+<img width="1440" height="761" alt="unnamed" src="https://github.com/user-attachments/assets/0e208d78-62d4-408b-8d8c-deb2c45a5f3d" />
+
+No que diz respeito à estratégia de correção de mutação, o SapFix atualmente só suporta correção de travamentos de Exceção de Ponteiro Nulo (NPE). Embora o Facebook tenha um plano para cobrir mais estratégias de mutação, focar apenas no NPE também trouxe bastante sucesso.
+
+Altos Acidentes de Disparo
+Se nem estratégias baseadas em templates nem em mutações produzirem um patch que passe em todos os testes, o SapFix tenta reverter Diffs que resultam em travamentos de alta execução.
+
+Travamento de alta execução é um bug de software que ocorre com frequência ou afeta um grande número de usuários.
+
+Existem alguns motivos para reverter o diferencial em vez de tentar fazer patch:
+
+Quedas de alta intensidade podem bloquear o Sapienz e outras tecnologias de teste. Portanto, é importante excluí-los ou revertê-los da build principal o quanto antes.
+
+Bugs de alta capacidade têm um impacto potencial maior na estabilidade e confiabilidade da aplicação.
+
+As estratégias de reverter (total e parcial) basicamente apagam a mudança feita no diferencial. Na prática, reverter pode significar exclusão, adição ou substituição de código na versão atual do sistema.
+
+Entre os dois tipos de estratégias de revert, o SapFix geralmente prefere o revert total de diff porque o revert parcial tem maior probabilidade de efeitos colaterais colaterais.
+
+No entanto, novos Diffs são gerados a cada poucos segundos e reverts completos de diff também podem falhar devido a conflitos de fusão com outras revisões. Nesses casos, o SapFix tenta optar por reverter parcialmente por diferenças, já que as mudanças produzidas são menores e menos propensas a conflitos de fusão.
+
+Resultados da Adoção do SapFix
+Ao longo de 3 meses, após a adoção do SapFix, ele foi tratado de 57 falhas relacionadas a Exceções de Null-Pointer (NPE).
+
+Para lidar com esses travamentos, foram criados 165 patches (aproximadamente metade de template e metade de reparos baseados em mutações). Desses 165 patches, 131 foram construídos corretamente e passaram em todos os testes. Finalmente, 55 foram reportados aos desenvolvedores.
+
+Além disso, as reações iniciais dos desenvolvedores foram bastante positivas. Ao passar pelo primeiro patch proposto pelo SapFix, os desenvolvedores tiveram a sensação de "viver no futuro".
+
+No entanto, o tempo necessário para gerar uma correção apresentava um problema um pouco diferente.
+
+O tempo mediano entre a detecção de falhas e a publicação da correção para o desenvolvedor foi de 69 minutos. O pior caso foi aproximadamente 1,5 hora e o mais rápido foi 37 minutos após a primeira detecção do acidente.
+
+<img width="1432" height="1123" alt="unnamed" src="https://github.com/user-attachments/assets/f0c71fe1-6911-4e3e-8ab8-eec8fb97ff7f" />
+
+Como você também pode ver, a faixa geral de valores observados é bem ampla.
+
+A principal razão para isso é a complexidade computacional de corrigir um problema e a variação das cargas de trabalho no sistema CI/CD.
+
+Como o SapFix é implantado em um ambiente altamente paralelo e assíncrono, o tempo desde a detecção até a publicação é influenciado pela demanda atual no sistema e pela disponibilidade de recursos computacionais.
+
+Lições Aprendidas com o SapFix
+A principal filosofia do Facebook por trás do SapFix foi focar na implantação industrial de um sistema automatizado de reparos, em vez de pesquisa acadêmica. Portanto, a maioria das decisões foi focada nesse objetivo.
+
+Embora ainda haja muito a ser feito, o Facebook também aprendeu muitas lições com o SapFix que compartilhou.
+
+Aqui estão alguns importantes:
+
+Reparos automatizados de ponta a ponta podem funcionar em escala industrial
+
+O papel dos desenvolvedores como o último guardião é fundamental para o sucesso do SapFix. Ainda há muito trabalho necessário para ter oráculos automatizados.
+
+Reverter diferenciais é útil para travamentos de alta disparo na versão master do sistema
+
+O SapFix funciona melhor com falhas ou travamentos recém-surgidos. Com travamentos pré-existentes, a relevância é reduzida porque o desenvolvedor que revisa o patch pode não ter uma visão geral suficiente do código.
+
+A sociologia do desenvolvedor é importante de ser considerada. Apesar da SapFix fornecer patches prontos para uso, os desenvolvedores ainda podem preferir clonar e assumir as mudanças em vez de simplesmente lançar os patches sugeridos pelo SapFix.
+
+Os desenvolvedores demonstraram um bom interesse em interagir com o bot SapFix.
+
+O SapFix foca mais em remover o sintoma do que em tratar a causa raiz. Isso precisa de mais trabalho em termos de identificar a causa raiz das falhas e tentar corrigi-las.
+
+https://substack.com/redirect/02c7b17d-5cfa-4dd1-87ed-8051c3cd2d77?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/3cc38820-faab-4859-9a51-c0bd4ea69ded?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/4cd9f703-69d3-4d29-87ec-4a2e8e1ce8c7?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
 ## [QA] Custos x Fases
 <img width="524" height="241" align="right" src="https://github.com/user-attachments/assets/a3aaded7-0fad-4ba5-9b0a-9d664bf0dc8e" />
 
