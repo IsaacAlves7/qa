@@ -511,7 +511,7 @@ Passo 10: A equipe SRE (Site Reliability Engineering) é responsável pelo monit
 
 A **hiperautomação** (Hyperautomation) surgiu como uma resposta estratégica: em vez de simplesmente executar testes roteirizados, ela une ferramentas avançadas para automatizar inteiramente fluxos de trabalho de QA de forma inteligente (dev.toimpactqa.com).
 
-Essa abordagem utiliza IA, aprendizado de máquina (ML), automação robótica de processos (RPA) e até plataformas low-code para construir processos de teste autônomos que abrangem tudo, desde requisitos até implantação (dev.togenqe.ai).
+Essa abordagem utiliza IA, aprendizado de máquina (ML), workflows, automação robótica de processos (RPA) e até plataformas low-code para construir processos de teste autônomos que abrangem tudo, desde requisitos até implantação (dev.togenqe.ai).
 
 Em outras palavras, hiperautomação em QA significa criar um ecossistema autônomo de testes onde os sistemas não apenas executam testes, mas também decidem o que testar, como se adaptar quando o código muda e quando executar testes, tudo isso com intervenção humana mínima (dev.toimpactqa.com).
 
@@ -519,7 +519,7 @@ A hiperautomação representa uma mudança de paradigma para o QA: de testes rot
 
 À medida que o desenvolvimento acelera, o QA não pode permanecer manual ou estático. Adotar a hiperautomação faz dos testes um facilitador estratégico da transformação digital. Organizações que integram com sucesso a automação inteligente ao QA entregarão software de maior qualidade em alta velocidade e navegarão com confiança pela complexidade das aplicações modernas (testingxperts.com, testingxperts.com).
 
-Correção Automatizada de Bugs em Escala do Facebook: Se tem uma coisa que a maioria dos desenvolvedores realmente odeia, é depuração (debugging).
+**Correção Automatizada de Bugs em Escala do Facebook**: Se tem uma coisa que a maioria dos desenvolvedores realmente odeia, é depuração (debugging).
 
 Embora depurar programas pequenos não seja divertido, pode ficar extremamente irritante quando você precisa depurar milhões de linhas de código numa sexta-feira à noite para encontrar aquele bug tão difícil de encontrar.
 
