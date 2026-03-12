@@ -161,6 +161,156 @@ Por outro lado, no Microrepo, cada serviço é responsável por seu repositório
 
 No Monorepo, as dependências são compartilhadas por todo o código de código, independentemente do seu negócio, então quando há uma atualização de versão, cada base de código atualiza sua versão.
 
+Como o TikTok gerencia um MonoRepositor de 200K com o Sparo: 
+
+Aviso: Os detalhes deste post foram derivados do TikTok Developer Blog. Todo o crédito pelos detalhes técnicos vai para a equipe de engenharia do TikTok. Os links para os artigos originais estão presentes na seção de referências ao final do post. Tentamos analisar os detalhes e dar nossa opinião sobre eles. Se você encontrar alguma imprecisão ou omissão, por favor, deixe um comentário e faremos o possível para corrigi-las.
+
+O TikTok, a popular plataforma de compartilhamento de vídeos de formato curto, possui uma base de código grande e em rápido crescimento para seu front-end web. Este aplicativo de interface é construído usando TypeScript e está organizado como um monorepo – um único repositório Git contendo código para múltiplos projetos e bibliotecas.
+
+À medida que a equipe de engenharia frontend e o conjunto de recursos do TikTok cresciam, também cresciam o tamanho e a complexidade desse mono-repo.
+
+Com o tempo, expandiu-se para conter mais de 1.000 projetos separados e mais de 200.000 arquivos fonte. Embora a arquitetura monorepo oferecesse benefícios como código compartilhado e ferramentas, também começou a causar problemas significativos de desempenho.
+
+Os desenvolvedores começaram a perceber lentidão nas operações comuns do Git, que são essenciais para seus fluxos de trabalho diários. Essas desacelerações foram um grande peso para a produtividade, desperdiçando tempo valioso de engenharia e prejudicando a experiência de desenvolvimento.
+
+Os problemas vinham do tamanho enorme do código que o Git precisava processar para cada operação. Para resolver esse problema, a equipe de infraestrutura frontend do TikTok começou a explorar soluções. Eles experimentaram os recursos de desempenho embutidos do Git, como clones parciais, clones superficiais e o Git LFS, mas descobriram que eram insuficientes para a escala e taxa de crescimento do monorepo.
+
+Por fim, a equipe desenvolveu uma ferramenta interna chamada Sparo para enfrentar os desafios de desempenho do monorepo. Eles também acabaram tornando o Sparo open-source.
+
+Neste artigo, vamos explorar como o Sparo funciona e os benefícios que ele trouxe para a equipe de engenharia front-end do TikTok.
+
+O problema da lentidão do git em monorepos grandes
+Um monorepo, abreviação de repositório monolítico, é uma estratégia de desenvolvimento de software onde um único repositório contém múltiplos projetos, bibliotecas e serviços, frequentemente mantidos por diferentes equipes. Isso contrasta com a abordagem multi-repositório, onde cada projeto tem seu repositório separado.
+
+O diagrama abaixo mostra a diferença entre monorepos, multirepos e bases de código monolíticos.
+
+<img width="1600" height="1016" alt="unnamed" src="https://github.com/user-attachments/assets/64f64111-94ec-413a-83ba-9e88cec51785" />
+
+Os monorepos ganharam popularidade entre grandes empresas de tecnologia como Google, Facebook e Microsoft por vários motivos.
+
+Primeiramente, os monorepos permitem melhor compartilhamento de código e reutilização entre projetos, reduzindo duplicações e promovendo a padronização.
+
+Em segundo lugar, eles simplificam o gerenciamento de dependências, já que projetos dentro do monorepo podem facilmente se referenciar e usar uns aos outros.
+
+Terceiro, os monorepos fornecem uma visão unificada de toda a base de código, facilitando a realização de mudanças transversais e a manutenção de uma infraestrutura consistente de construção e teste.
+
+No entanto, à medida que os monorepos crescem em tamanho e complexidade, as operações do Git se tornam cada vez mais lentas para todos.
+
+Foi exatamente isso que aconteceu no TikTok. Comandos como git clone para baixar uma cópia do repositório, git checkout para alternar entre branches, git status para ver as mudanças atuais e git commit para salvar novas mudanças demoraram muito mais do que antes.
+
+Aqui estão algumas estatísticas interessantes das observações deles:
+
+Clonar o repositório para começar a trabalhar nele pode levar mais de 40 minutos para desenvolvedores com conexões de rede mais lentas. Mesmo em conexões rápidas, um clone completo levava mais de 20 minutos.
+
+Conhecer uma agência diferente levou mais de um minuto e meio.
+
+Só rodar o status git para ver o estado atual da cópia funcional levou 7 segundos, interrompendo o fluxo dos desenvolvedores.
+
+Fazer commit de alterações no código também era doloroso, com cerca de 15 segundos por commit.
+
+Como o Sparo melhora o desempenho do MonoRepo?
+No seu cerne, o Sparo aproveita dois recursos avançados do Git para acelerar drasticamente operações comuns em monorepos grandes: verificação esparsa e clone parcial.
+
+Vamos analisar ambos em detalhes.
+
+Checkout Esparso
+O recurso de checkout esparso do Git permite especificar um subconjunto de arquivos ou diretórios para ser desligado de um repositório, em vez de buscar todo o código base. O Sparo usa isso para apenas verificar os arquivos necessários para construir uma aplicação específica – ou seja, o projeto e suas dependências.
+
+Em um monorepo com centenas ou milhares de projetos, os arquivos necessários para qualquer projeto são um subconjunto relativamente pequeno e de crescimento lento em comparação com o repositório como um todo.
+
+Ao usar checkout esparso para limitar a cópia funcional a apenas esse subconjunto, o Sparo reduz significativamente a quantidade de dados que precisam ser buscados e o número de arquivos que as operações Git precisam processar. Isso resulta em tempos de finalização muito mais rápidos.
+
+Veja o diagrama abaixo que explica o conceito de checkout esparso no Git, no qual o desenvolvedor só precisa trabalhar no Desenvolvimento de Cliente Android.
+
+<img width="1600" height="1017" alt="unnamed" src="https://github.com/user-attachments/assets/b4021881-7a72-4395-a20e-751575f6b837" />
+
+Clones Parciais
+Embora o checkout esparso reduza o número de arquivos na cópia funcional, um clone padrão do Git ainda recupera o conteúdo de todos os arquivos no repositório e seu histórico completo.
+
+Para repositórios grandes, isso ainda significa uma quantidade considerável de transferência de dados e uso de disco, mesmo que grande parte não seja necessária localmente.
+
+O recurso de clonagem parcial do Git, habilitado ao passar a opção --filter=blob:none para o clone do git, otimiza isso ao buscar o conteúdo dos arquivos sob demanda conforme necessário, e excluindo objetos que não são acessíveis por nenhuma referência. Isso reduz o tamanho do clone inicial e acelera as buscas subsequentes.
+
+Veja o diagrama abaixo para uma representação visual do mesmo.
+
+<img width="799" height="414" alt="unnamed" src="https://github.com/user-attachments/assets/9b785bfb-2678-4286-ba3d-173c4e6cc0ec" />
+
+Diferente de um clone superficial, a história completa ainda está disponível se necessário, só que não é baixada com entusiasmo. Além disso, diferente do Git LFS, o clone parcial funciona automaticamente para todos os arquivos, sem um sistema de armazenamento separado.
+
+Melhorias adicionais do Sparo
+O Sparo adiciona algumas melhorias além de aproveitar esses dois recursos principais do Git.
+
+Confira Perfis
+O Sparo introduz o conceito de perfis de checkout, que são conjuntos pré-definidos de diretórios para serem incluídos em um checkout esparso. Perfis funcionam como um ponto de partida fácil para novos contratados ou colaboradores descobrirem qual parte do código é relevante para uma determinada equipe.
+
+Por exemplo, uma equipe frontend pode definir um perfil que verifica seus cinco projetos mais desenvolvidos, as dependências desses projetos e alguns diretórios adicionais como docs e config.
+
+Esses perfis são definidos em um arquivo JSON e registrados no repositório, facilitando para os desenvolvedores compartilharem perfis e configurarem rapidamente sua cópia de trabalho para corresponder ao ambiente padrão da equipe.
+
+Veja o exemplo do arquivo de perfil:
+
+```
+{
+  "selections": [
+    {
+      "selector": "--to",
+      "argument": "project-a"
+    },
+    {
+      "selector": "--to", 
+      "argument": "project-b"
+    },
+    {
+      "selector": "folder",
+      "argument": "docs"
+    }
+  ]
+}
+```
+
+Esse perfil ajudaria os desenvolvedores a conferir projeto-a, projeto-b e a pasta docs.
+
+Com o perfil criado, os desenvolvedores podem usar o sparo checkout --profile para acessar o repositório de acordo com o perfil. Isso verifica apenas os projetos e pastas especificados, reduzindo significativamente os dados obtidos e o tempo levado.
+
+Comandos Espelhados
+Para tornar a adoção sem atritos, o Sparo fornece sua interface de linha de comando que visa ser uma substituição direta para a CLI padrão do Git. Em outras palavras, o Sparo é totalmente compatível com o Git, então as equipes podem adotá-lo incrementalmente enquanto ainda interoperam com o uso padrão do Git.
+
+Ao espelhar a interface Git, o Sparo minimiza a curva de aprendizado e permite que ela seja gradualmente adotada nos fluxos de trabalho existentes. Comandos familiares como clone, checkout, status, add, commit, etc., são todos fornecidos com a mesma sintaxe que seus equivalentes no Git.
+
+Os desenvolvedores podem usar as versões Sparo dos comandos para aproveitar o desempenho otimizado, enquanto ainda recorrem aos comandos Git regulares, se necessário, para casos avançados.
+
+Por trás do capot, as versões Sparo desses comandos configuram automaticamente as configurações apropriadas para permitir clones parciais e checkout esparso com base no perfil ativo. Eles também permitem coletar telemetria de uso anônimo para alimentar dashboards para monitorar a adoção e o desempenho da ferramenta.
+
+Ganhos de desempenho em Sparo
+A equipe do TikTok teve melhorias dramáticas no desempenho após adotar o Sparo:
+
+O tempo de clonagem caiu de 23 minutos para apenas 2 minutos
+
+O tempo de finalização do check-in passou de 1,5 minuto para 30 segundos
+
+O tempo de comando de status foi reduzido de 7 segundos para 1 segundo
+
+O tempo de commit melhorou de 15 segundos para 11 segundos
+
+Essas melhorias têm um enorme impacto na produtividade e experiência dos desenvolvedores. Em vez de esperar minutos para as operações do Git serem concluídas, os desenvolvedores podem iterar e comprometer mudanças rapidamente, mantendo seu fluxo e foco.
+
+Conclusão
+À medida que os monorepos crescem em tamanho e complexidade, manter um bom desempenho para operações comuns no Git torna-se cada vez mais desafiador. A equipe frontend do TikTok experimentou isso em primeira mão, já que seu monorepo TypeScript ultrapassou 1.000 projetos e 200.000 arquivos-fonte, levando a quedas significativas em comandos como clone, checkout, status e commit.
+
+Para resolver esse problema, a equipe do TikTok desenvolveu o Sparo, uma ferramenta de código aberto que aproveita os recursos de checkout e clones parciais do Git para acelerar as operações do Git em grandes monorepos.
+
+A trajetória da equipe de engenharia do TikTok com a Sparo destaca a importância de abordar proativamente os problemas de desempenho em bases de código em rápido crescimento.
+
+O roadmap da Spo inclui um sistema de plugins de telemetria para monitoramento e suporte a sistemas adicionais de construção front-end. À medida que mais empresas enfrentam desafios de desempenho com monorepos gigantes, ferramentas como o Sparo podem se tornar cada vez mais importantes para manter a produtividade dos desenvolvedores.
+
+https://substack.com/redirect/4f2fff31-8d87-484a-b108-605db7358f27?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/9e89a07f-e5db-49a4-b476-e21d2e838e4d?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/3fa0d3d9-d399-4682-84a5-7f81721564f0?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
+https://substack.com/redirect/d6624c1e-bda9-4a4e-9783-7fbf34c16c6d?j=eyJ1IjoiMmRpcmZwIn0.DgQpD9vnxeDXnbOGqr5r4QICWGtxf2wFAnKNG8yY6Aw
+
 No **Microrepo**, as dependências são controladas dentro de cada repositório. As empresas escolhem quando atualizar suas versões com base em seus próprios cronogramas.
 
 A Monorepo tem um padrão para check-ins. O processo de revisão de código do Google é famoso por estabelecer um padrão elevado, garantindo um padrão de qualidade coerente para o Monorepo, independentemente do negócio.
