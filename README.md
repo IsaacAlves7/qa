@@ -237,9 +237,6 @@ A realidade de times maduros em empresas grandes, especialmente aquelas que trat
 
 Em ambientes assim, seja em multirepos ou monorepos, cada repositório costuma representar um domínio, um bounded context ou ao menos uma responsabilidade bem definida dentro do ecossistema. Isso faz com que commits e PRs - pull requests não sejam avaliados apenas pelo “funciona ou não funciona”, mas pelo impacto estrutural que aquele código terá no médio e longo prazo. O code review deixa de ser cosmético e passa a ser um mecanismo de proteção do sistema contra degradação técnica, acúmulo de dívidas e introdução silenciosa de code smells que, no começo, parecem inofensivos, mas que no futuro comprometem legibilidade, manutenibilidade e estabilidade.
 
-> [!Note]
-> **Real-Time Code Reviews Powered by AI**: O Slack tornou a colaboração em tempo real fluida para as equipes. A CodeRabbit traz esse mesmo espírito para as revisões de código (Code Reviews). Ele analisa cada PR usando IA consciente do contexto que entende sua base de código, sugerindo mudanças, detectando bugs e até fazendo perguntas quando algo está errado. Perfeito para equipes rápidas que querem revisões de código de qualidade sem desacelerar. Integrado ao GitHub, GitLab, é como um engenheiro sênior revisando com você em cada commit. Gratuito para código aberto.
-
 Por isso, a aprovação de PRs normalmente envolve múltiplos olhares: alguém atento à aderência a princípios como Clean Code e SOLID, alguém com visão mais arquitetural avaliando se aquela mudança respeita os limites do domínio e não viola decisões já consolidadas, e muitas vezes alguém com contexto histórico do sistema, capaz de identificar se aquilo está reforçando um legado problemático ou ajudando a reduzir complexidade. Em times mais avançados, esse processo não é visto como burocracia, mas como um filtro essencial para manter a saúde do software ao longo do tempo.
 
 Quando entram conceitos como Arquitetura Limpa e DDD, o nível de exigência sobe ainda mais. Não basta escrever código “bonito”; é preciso garantir que as regras de negócio estejam isoladas, que dependências estejam apontando na direção correta e que o modelo de domínio continue expressivo e coerente com a linguagem do negócio. O PR passa a ser um espaço de discussão técnica profunda, onde se questiona se aquela abstração faz sentido, se aquele serviço realmente pertence àquele contexto ou se aquilo é apenas um atalho que vai custar caro depois.
@@ -428,10 +425,28 @@ Dessa forma, garantimos:
 
 As atividades de apoio da qualidade de software, como revisões, auditorias e inspeções, são essenciais para garantir que o software seja produzido de acordo com os padrões de qualidade estabelecidos. Essas atividades podem ser realizadas em diferentes momentos do ciclo de vida do software, desde a análise de requisitos até a manutenção.
 
-As **revisões** são uma das atividades de apoio mais comuns e envolvem a análise do software por um grupo de pessoas para detectar erros e possíveis me
-lhorias. Existem diferentes tipos de revisões, como revisões de código (Code Reviews), revisões de documentos e revisões de design.
+As **revisões** são uma das atividades de apoio mais comuns e envolvem a análise do software por um grupo de pessoas para detectar erros e possíveis melhorias. Existem diferentes tipos de revisões, como revisões de código (Code Reviews), revisões de documentos e revisões de design.
 
 <img src="https://github.com/user-attachments/assets/db8e6f84-e537-4e7d-86a8-904f7d2ad212">
+
+<img width="2400" height="1446" alt="unnamed" src="https://github.com/user-attachments/assets/45968025-568e-4f3c-87dd-f97d29cf0c00" />
+
+> [!Note]
+> **Real-Time Code Reviews Powered by AI**: O Slack tornou a colaboração em tempo real fluida para as equipes. A CodeRabbit traz esse mesmo espírito para as revisões de código (Code Reviews). Ele analisa cada PR usando IA consciente do contexto que entende sua base de código, sugerindo mudanças, detectando bugs e até fazendo perguntas quando algo está errado. Perfeito para equipes rápidas que querem revisões de código de qualidade sem desacelerar. Integrado ao GitHub, GitLab, é como um engenheiro sênior revisando com você em cada commit. Gratuito para código aberto.
+
+A **CodeRabbit** é um revisor de código com IA que ajuda você ou sua equipe a mesclar suas alterações de código mais rápido com qualidade superior. O CodeRabbit não aponta apenas problemas; Ele sugere, corrige e explica o raciocínio por trás das sugestões. Eleve a qualidade do código com análises baseadas em IA, conscientes do contexto, e correções em um clique.
+
+O CodeRabbit oferece:
+
+• Resumos automáticos de PR e guias de troca de arquivos.
+
+• Roda linters populares como Biome, Ruff, PHPStan, etc.
+
+• Destaca questões de segurança de código e configuração.
+
+• Permite que você escreva instruções personalizadas de revisão de código e regras grep do AST.
+
+Até o momento, o CodeRabbit já analisou mais de 5 milhões de PRs, está instalado em um milhão de repositórios, tem 15k+ interações diárias com desenvolvedores e é usado por 1000+ organizações.
 
 As **auditorias** são semelhantes às revisões, mas geralmente são realizadas por equipes independentes de pessoas com habilidades específicas para avaliar o software em relação a padrões e regulamentações específicos. As auditorias podem ser internas ou externas e podem ser realizadas em diferentes fases do ciclo de vida do software (BRITO, 2006).
 
