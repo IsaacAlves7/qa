@@ -1,0 +1,25 @@
+| 2024-02-24 06:27:45 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:41) - Starting Chrome browser... 
+| 2024-02-24 06:30:07 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:41) - Starting Chrome browser... 
+| 2024-02-24 07:16:32 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:41) - Starting Chrome browser... 
+| 2024-02-24 07:16:42 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:77) - Waiting for 30 Seconds.. 
+| 2024-02-24 07:16:48 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:125) - Confirming Visibility of Element: 
+| 2024-02-24 07:16:49 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:224) - Checking from list Exact Match of: 
+| 2024-02-24 07:16:50 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:224) - Checking from list Exact Match of: 
+| 2024-02-24 07:17:07 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:224) - Checking from list Exact Match of: 
+| 2024-02-24 07:17:08 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:224) - Checking from list Exact Match of: 
+| 2024-02-24 07:17:17 | INFO  | [main] library.Base (Base.java:52) - Waiting for 5 Seconds.. 
+| 2024-02-24 07:25:30 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:41) - Starting Chrome browser... 
+| 2024-02-24 07:25:40 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:77) - Waiting for 30 Seconds.. 
+| 2024-02-24 07:25:46 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:125) - Confirming Visibility of Element: 
+| 2024-02-24 07:25:46 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:107) - Clicking button:  Products
+| 2024-02-24 07:25:46 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:236) - Checking from list contains of: h&m
+| 2024-02-24 07:25:54 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:125) - Confirming Visibility of Element: Rs. 400
+Men Tshirt
+Add to cart
+View Product
+| 2024-02-24 07:25:54 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:236) - Checking from list contains of: kookie kids
+| 2024-02-24 07:25:58 | INFO  | [main] library.GlobalSelenium (GlobalSelenium.java:125) - Confirming Visibility of Element: Rs. 679
+Full Sleeves Top Cherry - Pink
+Add to cart
+View Product
+| 2024-02-24 07:26:03 | INFO  | [main] library.Base (Base.java:52) - Waiting for 5 Seconds.. 

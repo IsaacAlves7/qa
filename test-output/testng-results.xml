@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-24T07:25:30 GMT-05:00" name="Default suite" finished-at="2024-02-24T07:26:04 GMT-05:00" duration-ms="33831">
+    <groups>
+    </groups>
+    <test started-at="2024-02-24T07:25:30 GMT-05:00" name="Default test" finished-at="2024-02-24T07:26:04 GMT-05:00" duration-ms="33831">
+      <class name="com.automationexercise.tests.Test19ViewCartBrandProducts">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.automationexercise.tests.Test19ViewCartBrandProducts@30b19518]" started-at="2024-02-24T07:25:30 GMT-05:00" name="beforeClass" finished-at="2024-02-24T07:25:30 GMT-05:00" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:com.automationexercise.tests.Test19ViewCartBrandProducts@30b19518]" started-at="2024-02-24T07:25:30 GMT-05:00" name="beforeEachTest" finished-at="2024-02-24T07:25:40 GMT-05:00" duration-ms="9507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="ViewCartBrandProducts()[pri:0, instance:com.automationexercise.tests.Test19ViewCartBrandProducts@30b19518]" started-at="2024-02-24T07:25:40 GMT-05:00" name="ViewCartBrandProducts" finished-at="2024-02-24T07:25:58 GMT-05:00" duration-ms="18725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewCartBrandProducts -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:com.automationexercise.tests.Test19ViewCartBrandProducts@30b19518]" started-at="2024-02-24T07:25:58 GMT-05:00" name="afterEachTest" finished-at="2024-02-24T07:26:04 GMT-05:00" duration-ms="5508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.automationexercise.tests.Test19ViewCartBrandProducts@30b19518]" started-at="2024-02-24T07:26:04 GMT-05:00" name="afterClass" finished-at="2024-02-24T07:26:04 GMT-05:00" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.automationexercise.tests.Test19ViewCartBrandProducts -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
