@@ -688,6 +688,8 @@ A hiperautomação representa uma mudança de paradigma para o QA: de testes rot
 
 **Correção Automatizada de Bugs em Escala do Facebook**: Se tem uma coisa que a maioria dos desenvolvedores realmente odeia, é depuração (debugging).
 
+![sfd](https://github.com/user-attachments/assets/22602b9e-8794-455f-b8af-bef839f3b5cb)
+
 Embora depurar programas pequenos não seja divertido, pode ficar extremamente irritante quando você precisa depurar milhões de linhas de código numa sexta-feira à noite para encontrar aquele bug tão difícil de encontrar.
 
 Para piorar, bugs (de software ou não) são persistentes.
