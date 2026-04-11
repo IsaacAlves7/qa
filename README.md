@@ -618,10 +618,12 @@ Além disso, uma ilustração útil pode ser um diagrama que mostre a relação 
  <tr>
   <td>Tipos, técnicas e níveis de testes</td>
   <td>Ferramentas para testes (CI/CD Pipeline)</td>
+  <td>Ferramentas para testes (CI/CD Pipeline)</td>
  </tr>
  <tr>
   <td><img width="551" height="351" alt="image" src="https://github.com/user-attachments/assets/d9decc9c-a526-4733-bf66-c5cd63aaba1e" /></td>
   <td><img src="https://github.com/user-attachments/assets/7c3bfb38-06b3-4adb-8fe4-4b1784019de1"></td>
+  <td><img src="https://github.com/user-attachments/assets/7ca22f4f-d743-42cd-b3ce-7567b0504616"></td>
  </tr>
 </table>
 
