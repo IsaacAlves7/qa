@@ -2179,7 +2179,7 @@ Essa abordagem é especialmente útil em domínios onde erros de interpretação
 ![JUnit5](https://img.shields.io/badge/-JUnit5-FFDF6F?style=badge&logo=JUnit5&logoColor=black) 
 ![JUnit5](https://img.shields.io/badge/-xUnit-FFDF6F?style=badge&logo=.NET&logoColor=black) 
 
-<img src="https://github.com/user-attachments/assets/59807ada-826a-46ea-9873-7a1dc5f4c916" align="right" height="177">
+<a href="https://www.programonaut.com/a-practical-example-of-test-drive-development/"><img src="https://github.com/user-attachments/assets/59807ada-826a-46ea-9873-7a1dc5f4c916" align="right" height="77"></a>
 
 O **TDD - Test-Driven Development**, ou em português "Desenvolvimento guiado por testes" ou Desenvolvimento Orientado a testes ou Desenvolvimento digirido por testes, é uma técnica de desenvolvimento de software que se relaciona com o conceito de verificação e validação e se baseia em um ciclo curto de repetições: Primeiramente o desenvolvedor escreve um caso de teste automatizado que define uma melhoria desejada ou uma nova funcionalidade. Logo, é produzido código que possa ser validado pelo teste para posteriormente o código ser refatorado para um código sob padrões aceitáveis. 
 
@@ -2196,7 +2196,7 @@ Kent Beck, considerado o criador ou o 'descobridor' da técnica, declarou em 200
 
 O TDD segue a lógica do ciclo: Red, Green e Refactor. Este ciclo é uma abordagem estruturada para escrever e melhorar código de software de maneira incremental, garantindo que ele seja testável, funcional e de alta qualidade. Aqui está uma explicação detalhada de cada fase do ciclo:
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/63318aff-ad59-4c3e-b858-172ec4154f85" align="right" height="277">
+<img src="https://github.com/user-attachments/assets/7859eca1-7839-47b5-ab08-0323bf7e2069" align="right" height="277">
 
 🔴 **Red**: Escreva um teste que apresenta erros, que falhe. Ação: você começa escrevendo um teste automatizado para a funcionalidade que deseja implementar. Este teste é baseado nos requisitos e especificações do que o código deve fazer. Resultado: O teste falha, pois a funcionalidade ainda não foi implementada. A falha confirma que o teste é válido e que a funcionalidade não existe no momento.
 
