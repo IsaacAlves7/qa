@@ -2256,7 +2256,11 @@ Já o **BDD (Behavior-Driven Development)** nasceu como uma evolução do TDD, c
 
 Quando você junta as três abordagens, tem um fluxo bastante poderoso: o DDD te ajuda a entender e modelar corretamente o domínio; o BDD garante que os comportamentos mais importantes estejam claros e validados com o negócio; e o TDD dá a base técnica para implementar cada parte com qualidade e segurança. Assim, você cobre desde a concepção do sistema até a implementação e os testes, reduzindo riscos, aumentando a clareza e facilitando a manutenção e evolução ao longo do tempo.
 
-![hq720](https://github.com/user-attachments/assets/15ad63be-235e-4e05-9271-434204dae391)
+| Característica | TDD (Desenvolvimento Orientado a Testes) | BDD (Desenvolvimento Orientado a Comportamento) | DDD (Design Orientado a Domínio) |
+|---|---|---|---|
+| **Ferramentas Comuns** | JUnit, NUnit, pytest | Cucumber, SpecFlow, JBehave | Nenhuma ferramenta específica, frameworks de modelagem de domínio |
+| **Benefícios** | Maior qualidade do código, feedback rápido, melhor design | Melhor comunicação, requisitos claros, testes eficazes, documentação executável | Software alinhado ao negócio, melhor comunicação, gerenciamento de complexidade |
+| **Relação** | Base para o BDD | Amplia o TDD, focado no comportamento | Abordagem de design que pode ser usada com TDD e BDD |
 
 Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-refactor” clássico, conectando os diferentes níveis de testes (caixa preta, cinza e branca) dentro do ciclo de desenvolvimento. Destrinchando o que ele está representando:
 
