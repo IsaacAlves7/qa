@@ -2179,7 +2179,7 @@ Essa abordagem é especialmente útil em domínios onde erros de interpretação
 ![JUnit5](https://img.shields.io/badge/-JUnit5-FFDF6F?style=badge&logo=JUnit5&logoColor=black) 
 ![JUnit5](https://img.shields.io/badge/-xUnit-FFDF6F?style=badge&logo=.NET&logoColor=black) 
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/555d9d87-5698-46e3-b39f-713da277205e" align="right" height="77">
+<img src="https://github.com/user-attachments/assets/59807ada-826a-46ea-9873-7a1dc5f4c916" align="right" height="177">
 
 O **TDD - Test-Driven Development**, ou em português "Desenvolvimento guiado por testes" ou Desenvolvimento Orientado a testes ou Desenvolvimento digirido por testes, é uma técnica de desenvolvimento de software que se relaciona com o conceito de verificação e validação e se baseia em um ciclo curto de repetições: Primeiramente o desenvolvedor escreve um caso de teste automatizado que define uma melhoria desejada ou uma nova funcionalidade. Logo, é produzido código que possa ser validado pelo teste para posteriormente o código ser refatorado para um código sob padrões aceitáveis. 
 
