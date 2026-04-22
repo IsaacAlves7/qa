@@ -2250,6 +2250,8 @@ O **DDD (Domain-Driven Design)**, por sua vez, é mais abrangente, é uma forma 
 
 O **TDD (Test-Driven Development)** é uma prática focada no ciclo de escrita de testes antes da implementação do código. A ideia central é escrever primeiro um teste que falha porque a funcionalidade ainda não existe, depois escrever o código mínimo necessário para fazê-lo passar e, em seguida, refatorar para manter a qualidade. Esse ciclo de “red, green, refactor” garante que o sistema nasça já com testes cobrindo a funcionalidade, evita sobrecarga de bugs e mantém o design do código limpo e orientado ao que realmente precisa ser implementado. Com o tempo, você ganha confiança para refatorar e evoluir a aplicação porque sabe que os testes automatizados garantem que nada quebrou.
 
+<img height="77" align="right" src="https://github.com/user-attachments/assets/1f1e90ed-6d18-4742-b426-d470c6833a50" />
+
 Já o **BDD (Behavior-Driven Development)** nasceu como uma evolução do TDD, com foco maior na comunicação entre time de negócios e desenvolvimento. A ideia é descrever o comportamento esperado do sistema em linguagem natural, geralmente em formato de cenários (“Dado que”, “Quando”, “Então”), o que torna os testes legíveis até para quem não programa. Isso aproxima desenvolvedores, QA, product owners e até clientes, porque todos falam a mesma língua sobre o que o software deve fazer. Enquanto o TDD guia o código a partir de testes técnicos, o BDD guia o código a partir do comportamento esperado do usuário ou do negócio, trazendo clareza e diminuindo ambiguidades nos requisitos.
 
 Quando você junta as três abordagens, tem um fluxo bastante poderoso: o DDD te ajuda a entender e modelar corretamente o domínio; o BDD garante que os comportamentos mais importantes estejam claros e validados com o negócio; e o TDD dá a base técnica para implementar cada parte com qualidade e segurança. Assim, você cobre desde a concepção do sistema até a implementação e os testes, reduzindo riscos, aumentando a clareza e facilitando a manutenção e evolução ao longo do tempo.
@@ -2290,8 +2292,6 @@ Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–c
 Kent também foi uma figura chave na redescoberta do desenvolvimento orientado por testes (TDD) na indústria. TDD é uma prática de desenvolvimento de software que enfatiza a escrita de testes antes de escrever o código.
 
 Ao longo de sua carreira, Kent trabalhou em várias empresas de destaque, incluindo Facebook, Apple Computer e Gusto. Além de seu trabalho profissional, Kent também é um escritor ativo. Ele publica um boletim informativo intitulado "Design de Software: Arrumação Primeiro?" que explora vários aspectos do design e desenvolvimento de software. Para leitores interessados em assinar, aqui está uma oferta de 20% de desconto.
-
-<img width="450" height="450" alt="chemistry-3d-icon-png-download-9544280" src="https://github.com/user-attachments/assets/1f1e90ed-6d18-4742-b426-d470c6833a50" />
 
 <img width="450" height="450" alt="laboratory-3d-icon-png-download-9544272" src="https://github.com/user-attachments/assets/ab2c41b2-7dd4-43d1-9299-5347f3387434" />
 
