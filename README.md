@@ -2282,6 +2282,15 @@ Esse diagrama mostra o **ciclo do TDD** expandido para além do “red-green-ref
 
 Resumindo: o ciclo mostra que o TDD não vive só no nível unitário (teste–código–refatora), mas pode ser entendido como um **encadeamento de ciclos em diferentes camadas**: começa com aceitação (visão do usuário), vai para funcional (visão do sistema), integrações (módulos se falando) e finalmente unidades (blocos de código). É um processo iterativo que desce do mais abstrato até o mais concreto e depois sobe de volta, validando em todos os níveis.
 
+<img height="177" align="right" src="https://github.com/user-attachments/assets/ff698567-9f12-406f-a744-54abdb2f9987" />
+
+> [!Important]
+> Encontrei meu novo livro favorito sobre refatoração de código. É "Tidy First" (Arrumação primeiro?) por Kent Beck. Kent Beck é uma figura renomada na indústria de software. Uma das contribuições notáveis de Kent é seu papel como signatário do Manifesto Ágil, criado em 2001 e que lançou as bases para a metodologia ágil de desenvolvimento de software.
+
+Kent também foi uma figura chave na redescoberta do desenvolvimento orientado por testes (TDD) na indústria. TDD é uma prática de desenvolvimento de software que enfatiza a escrita de testes antes de escrever o código.
+
+Ao longo de sua carreira, Kent trabalhou em várias empresas de destaque, incluindo Facebook, Apple Computer e Gusto. Além de seu trabalho profissional, Kent também é um escritor ativo. Ele publica um boletim informativo intitulado "Design de Software: Arrumação Primeiro?" que explora vários aspectos do design e desenvolvimento de software. Para leitores interessados em assinar, aqui está uma oferta de 20% de desconto.
+
 <img width="450" height="450" alt="chemistry-3d-icon-png-download-9544280" src="https://github.com/user-attachments/assets/1f1e90ed-6d18-4742-b426-d470c6833a50" />
 
 <img width="450" height="450" alt="laboratory-3d-icon-png-download-9544272" src="https://github.com/user-attachments/assets/ab2c41b2-7dd4-43d1-9299-5347f3387434" />
