@@ -34,7 +34,37 @@ Além disso, atuo na validação da experiência do usuário e do comportamento 
 
 Top AI Coding Tools for Developers You Can Use in 2025:
 
+<img width="550" height="672" alt="unnamed" src="https://github.com/user-attachments/assets/2350c645-b153-4a9e-98c5-efe2a94a8704" />
+
 ![unnamed](https://github.com/user-attachments/assets/d3d9ca9f-6fc6-4e85-bd93-a36e89587d5c)
+
+Here are our favorite dev tools:
+
+Development Environment
+A good local dev environment is a force multiplier. Powerful IDEs like VSCode, IntelliJ IDEA, Notepad++, Vim, PyCharm & Jupyter Notebook can make your life easy.
+
+Diagramming
+Showcase your ideas visually with diagramming tools like DrawIO, Excalidraw, mindmap, Mermaid, PlantUML, Microsoft Visio, and Miro
+
+AI Tools
+AI can boost your productivity. Don’t ignore tools like ChatGPT, GitHub Copilot, Tabnine, Claude, Ollama, Midjourney, and Stable Diffusion.
+
+Hosting and Deployment
+For hosting your applications, explore solutions like AWS, Cloudflare, GitHub, Fly, Heroku, and Digital Ocean.
+
+Code Quality
+Quality code is a great differentiator. Leverage tools like Jest, ESLint, Selenium, SonarQube, FindBugs, and Checkstyle to ensure top-notch quality.
+
+Security
+Don’t ignore the security aspects and use solutions like 1Password, LastPass, OWASP, Snyk, and Nmap.
+
+Note-taking
+Your notes are a reflection of your knowledge. Streamline your note-taking with Notion, Markdown, Obsidian, Roam, Logseq, and Tiddly Wiki.
+
+Design
+Elevate your visual game with design tools like Figma, Sketch, Adobe Illustrator, Canva, and Adobe Photoshop.
+
+Over to you: Which dev tools do you use?
 
 1. AI Code Assistants
    - GitHub Copilot: Ferramenta de completação de código e programação automática.
