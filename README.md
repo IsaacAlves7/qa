@@ -483,6 +483,142 @@ Para aprofundar seus conhecimentos sobre qualidade de software, você pode se pe
  
 Uma ilustração que pode ajudar a entender a importância da qualidade de software é pensar em um aplicativo de banco que apresenta erros constantemente. Isso certamente afetaria a confiança do usuário no aplicativo e, consequentemente, na instituição financeira. Por isso, a qualidade do software é fundamental para garantir a satisfação e fidelização do usuário.
 
+Um livro que eu esperava há muito tempo finalmente saiu: The Software Engineer's Guidebook, escrito por Gergely Orosz, engenheiro de software e autor do 'The Pragmatic Engineer Newsletter'.
+
+Como o livro já saiu, entrei em contato com Gergely para saber se ele estaria disposto a compartilhar um capítulo com o público do boletim. Para minha alegria, ele gentilmente concordou. O capítulo que escolhi é 'Enviando para a Produção'. Espero que você goste.
+
+Você pode conferir o livro aqui: O Guia do Engenheiro de Software
+
+Como líder técnico, espera-se que você coloque o trabalho da sua equipe em produção de forma rápida e confiável. Mas como isso acontece e quais princípios você deve seguir? Isso depende de vários fatores: o ambiente, a maturidade do produto em desenvolvimento, o quão caros são as interrupções e se é mais importante mover rápido ou não ter problemas de confiabilidade.
+
+Este capítulo aborda o envio para produção de forma confiável em diferentes ambientes. Ele destaca abordagens comuns em toda a indústria e ajuda você a aprimorar como sua equipe pensa sobre esse processo. Abordamos:
+
+Extremos no transporte até a produção
+
+Processos típicos de envio em diferentes tipos de empresas
+
+Princípios e ferramentas para o envio responsável para produção
+
+Camadas adicionais de verificação e proteções
+
+Assumindo riscos pragmáticos para agir mais rápido
+
+Considerações adicionais para definir um processo de implantação
+
+Seleção de uma abordagem
+
+1. EXTREMOS NO TRANSPORTE ATÉ A PRODUÇÃO
+Vamos começar com dois "extremos" do envio para produção:
+
+Transporte YOLO
+A abordagem Você Só Vive Uma Vez (YOLO) é usada em muitos protótipos, projetos paralelos e produtos instáveis como versões alfa/beta. Também é assim que algumas mudanças urgentes entram em produção.
+
+A ideia é simples: faça uma mudança na produção e verifique se funciona na produção. Exemplos de envio YOLO incluem:
+
+SSH em um servidor de produção → abrir um editor (por exemplo, vim) → fazer uma alteração em um arquivo → salvar o arquivo e/ou reiniciar o servidor → ver se a mudança funciona.
+
+Faça uma alteração em um arquivo de código-fonte → force essa mudança sem uma revisão de código → envie uma nova implantação de um serviço.
+
+Acesse o banco de dados de produção → execute uma consulta de produção para corrigir um problema de dados (por exemplo, modificar registros com problemas) → torça para que isso resolva o problema.
+
+O envio do YOLO é o mais rápido possível ao enviar uma mudança para produção. No entanto, ele também tem o maior risco de introduzir novos problemas na produção porque não há rede de segurança. Para produtos com poucos ou nenhum usuário de produção, o dano causado pela introdução de bugs na produção pode ser baixo, então essa abordagem é justificável.
+
+Lançamentos YOLO são comuns para:
+
+Projetos paralelos
+
+Startups em estágio inicial sem clientes
+
+Empresas de médio porte com práticas de engenharia ruins
+
+Resolver incidentes urgentes em locais sem práticas bem definidas de manejo de incidentes
+
+À medida que um produto de software cresce e mais clientes dependem dele, as alterações no código precisam passar por validação extra antes da produção. Vamos para o outro extremo: uma equipe obcecada em fazer tudo o que for possível para não enviar bugs para produção.
+
+Verificação completa por várias etapas
+Essa é uma abordagem usada para produtos maduros com muitos clientes valiosos, onde um único bug pode causar grandes problemas. Essa abordagem rigorosa é usada se bugs puderem resultar em clientes perdendo dinheiro ou fazê-los mudarem para a oferta de um concorrente.
+
+Várias camadas de verificação estão em funcionamento, com o objetivo de simular o mundo real com maior precisão, tais como:
+
+Validação local. Ferramentas para engenheiros de software detectarem problemas óbvios.
+
+Validação de CI. Testes automatizados como testes unitários e linting em cada pull request.
+
+Automação antes de implantar em um ambiente de teste. Testes mais caros, como testes de integração ou testes de ponta a ponta, antes da implantação para o próximo ambiente.
+
+Ambiente de teste #1. Testes mais automatizados, como testes de fumaça. Engenheiros de garantia de qualidade podem exercitar manualmente o produto, rodando testes manuais e fazendo testes exploratórios.
+
+Ambiente de teste #2. Um ambiente onde um subconjunto de usuários reais – como usuários internos da empresa ou beta testadores pagos – exerce o produto. O ambiente é combinado com monitoramento e a implementação é interrompida em caso de sinal de regressão.
+
+Ambiente de pré-produção. Um ambiente no qual o conjunto final de validações é executado. Isso geralmente significa rodar outro conjunto de testes automáticos e manuais.
+
+Implementação escalonada. Um pequeno grupo de usuários recebe as mudanças, e a equipe monitora métricas-chave para se manter saudável e verifica o feedback dos clientes. Uma estratégia de implementação em etapas depende do risco da mudança que está sendo feita.
+
+Implementação completa. À medida que a implementação em etapas aumenta, em algum momento mudanças são empurradas para todos os clientes.
+
+Pós-lançamento. Surgem problemas na produção, para os quais monitoramento e alertas são configurados, além de um ciclo de feedback com os clientes. Se houver um problema, ele é tratado pelo processo padrão de plantão. Discutimos esse processo mais detalhadamente na Parte 5: "Engenharia de software confiável."
+
+Um processo de liberação de peso pesado é utilizado por:
+
+Setores altamente regulados, como saúde, aviação ou automotiva.
+
+Provedores de telecomunicações, onde é comum ter ~6 meses de testes rigorosos das mudanças antes que as grandes mudanças sejam enviadas aos clientes.
+
+Bancos, onde insetos podem causar prejuízos financeiros.
+
+Empresas tradicionais com bases de código legadas e poucos testes automatizados. Esses lugares querem manter a qualidade alta e estão felizes em retardar os lançamentos adicionando etapas de verificação.
+
+2. PROCESSOS TÍPICOS DE ENVIO
+Diferentes empresas tendem a tomar etapas distintas no envio para a produção. Abaixo está um resumo das abordagens típicas, destacando a variedade de processos:
+
+<img width="1324" height="1391" alt="unnamed" src="https://github.com/user-attachments/assets/b22e2a32-fa11-49b8-8737-777471fe1103" />
+
+Como as várias empresas normalmente enviam para produção? Uma tentativa, admitidamente imperfeita, de visualizar as abordagens comuns – e suas diferenças. Caixas pontilhadas significam "frequentemente, mas nem sempre."
+Startups
+Startups normalmente fazem menos verificações de qualidade. Essas empresas tendem a priorizar o movimento rápido e a iteração rápida, e muitas vezes fazem isso sem muita rede de segurança. Isso faz todo sentido se elas ainda não têm clientes. À medida que os clientes chegam, as equipes precisam encontrar maneiras de evitar regressões e o envio de bugs.
+
+Startups geralmente são pequenas demais para investir em automação, então a maioria faz QA manual – incluindo os fundadores sendo os 'testadores finais', enquanto alguns lugares contratam profissionais dedicados ao QA. À medida que uma empresa encontra seu produto com o mercado, é mais comum investir em automação. E em startups de tecnologia que contratam talentos de engenharia fortes, essas equipes podem implementar testes automatizados desde o primeiro dia.
+
+Empresas tradicionais
+Esses lugares tendem a depender mais das equipes de QA. A automação às vezes está presente em empresas mais tradicionais, mas normalmente dependem de grandes equipes de QA para verificar o que é construído. Trabalhar em filiais também é comum; é raro ter desenvolvimento baseado em troncos.
+
+O código geralmente é empurrado para produção em um cronograma semanal ou até menos frequentemente, depois que a equipe de QA verifica a funcionalidade.
+
+Ambientes de staging e UAT (Teste de Aceitação do Usuário) são mais comuns, assim como mudanças maiores e agrupadas enviadas entre ambientes. É necessário aprovar a equipe de QA, o gerente de produto ou o gerente de projeto, para avançar o lançamento para a próxima etapa.
+
+Grandes empresas de tecnologia
+Esses locais normalmente investem fortemente em infraestrutura e automação relacionadas ao transporte marítimo com confiança. Esses investimentos frequentemente incluem testes automatizados que rodam rapidamente e entregam feedback rápido, canário, flags de funcionalidades e lançamentos em etapas.
+
+Essas empresas buscam uma barra de alta qualidade, mas também enviar imediatamente após as verificações de qualidade serem concluídas, trabalhando no trunk. Ferramentas para lidar com conflitos de fusão se tornam importantes, já que alguns lugares podem fazer mais de 100 alterações no trunk por dia. Para detalhes sobre QA nas Big Techs, veja o artigo Como as Big Tech fazem QA.
+
+Produto principal da Meta
+O Facebook, como equipe de produto e engenharia, merece menção separada, porque essa organização tem uma abordagem sofisticada e eficaz que poucas outras empresas utilizam.
+
+Esse produto Meta tem menos testes automatizados do que muitos imaginam, mas, por outro lado, o Facebook possui uma funcionalidade excepcional de canário automatizado, onde o código é lançado em 4 ambientes: de um ambiente de testes com automação, passando por um que todos os funcionários usam, depois por um mercado de testes em uma região geográfica menor, e finalmente para todos os usuários. Em cada etapa, o lançamento para automaticamente se as métricas estiverem erradas.
+
+3. PRINCÍPIOS E FERRAMENTAS
+Quais são princípios e abordagens que valem a pena seguir para enviar mudanças à produção de forma responsável? Considere estes:
+
+Ambientes de desenvolvimento
+Use um ambiente de desenvolvimento local ou isolado. Engenheiros devem ser capazes de fazer alterações em sua máquina local ou em um ambiente isolado e único para eles. É mais comum que desenvolvedores trabalhem em ambientes locais. No entanto, lugares como a Meta estão migrando para servidores remotos para cada engenheiro. Do artigo, Dentro da cultura de engenharia do Facebook:
+
+"A maioria dos desenvolvedores trabalha com um servidor remoto, não localmente. A partir de 2019, todo o desenvolvimento web e backend é feito remotamente, sem código copiado localmente, e o Nuclide facilitando esse fluxo de trabalho. No fundo, o Nuclide usava máquinas virtuais (VMs) inicialmente, depois migrando para instâncias OnDemand – semelhante ao funcionamento do GitHub Codespaces hoje – anos antes do lançamento do GitHub Codespaces.
+
+O desenvolvimento móvel ainda é feito principalmente em máquinas locais, pois fazer isso em uma configuração remota, assim como na web e backend, apresenta desafios de ferramentas."
+
+Verifique localmente. Depois de escrever o código, faça um teste local para garantir que funciona como esperado.
+
+Testes e verificação
+Considere casos extremos e teste para eles. Quais casos obscuros sua alteração de código precisa considerar? Quais casos de uso reais você ainda não considerou?
+
+Antes de finalizar o trabalho na mudança, compile uma lista de casos limites. Considere escrever testes automatizados para eles, se possível. Pelo menos faça testes manuais. Elaborar uma lista de casos extremos não convencionais é uma tarefa para a qual engenheiros ou testadores de QA podem ser muito úteis.
+
+Escreva testes automatizados para validar suas alterações. Depois de verificar manualmente suas alterações, exercite-as com testes automatizados. Se seguir uma metodologia como desenvolvimento orientado a testes (TDD), você pode fazer isso ao contrário, escrevendo primeiro testes automatizados e depois verificando se sua alteração de código passa por eles.
+
+Outro par de olhos: uma revisão de código. Com suas alterações de código concluídas, faça um pull requests e peça para alguém com contexto analisar suas alterações no código. Escreva uma descrição clara e concisa das mudanças, quais casos específicos serão testados e faça uma revisão de código.
+
+Todos os testes automatizados são aprovados, minimizando o risco de regressões. Antes de enviar o código, execute todos os testes existentes para a base de código. Isso normalmente é feito automaticamente, via o sistema CI/CD (integração contínua/implantação contínua).
+
 Os fundamentos de **teste de software** (Software Testing) se referem a um conjunto de práticas e técnicas utilizadas para garantir que um software seja capaz de atender aos requisitos e expectativas dos usuários, além de estar livre de erros e falhas. Para ser eficaz, o teste de software deve ser planejado, executado e gerenciado de forma adequada. Isso envolve identificar e definir os objetivos do teste, estabelecer critérios de aceitação, selecionar as técnicas e ferramentas adequadas e documentar todo o processo.
 
 Entre os fundamentos do teste de software estão:
