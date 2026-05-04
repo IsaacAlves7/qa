@@ -411,6 +411,8 @@ Pensando como engenheiro e não de preferência pessoal, o melhor padrão é **`
 
 O que realmente comunica bem é combinar `test/` com o **nível do teste** e, se necessário, com o **contexto do sistema**. Algo como `test/unit-auth`, `test/integration-payment-flow` ou `test/e2e-checkout`. Isso deixa claro para qualquer pessoa do time que aquela branch não entrega funcionalidade nova, não corrige bug produtivo e não é release — ela existe para validar.
 
+<img width="578" height="454" alt="Captura de tela 2025-05-05 164742" src="https://github.com/user-attachments/assets/6d7ff5f3-b576-4596-834b-2f2e03d0687f" />
+
 Se a distinção for entre *manual e automatizado*, o mais limpo é explicitar isso no sufixo quando realmente necessário, como `test/manual-regression` ou `test/automation-smoke`. Mas, na prática, testes manuais quase nunca justificam branch própria; eles validam código já integrado.
 
 A realidade de times maduros em empresas grandes, especialmente aquelas que tratam engenharia de software como uma verdadeira **fábrica de software** (Lean Startup), e não apenas como entrega pontual de features. Quando a organização atinge certo nível de complexidade técnica e de negócio, o repositório deixa de ser apenas um lugar para “guardar código” e passa a ser um ativo crítico, governado por processos, padrões e decisões arquiteturais conscientes.
