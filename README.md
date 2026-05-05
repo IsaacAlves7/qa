@@ -34,9 +34,12 @@ Além disso, atuo na validação da experiência do usuário e do comportamento 
 
 Top AI Coding Tools for Developers You Can Use in 2025:
 
-<img width="550" height="672" alt="unnamed" src="https://github.com/user-attachments/assets/2350c645-b153-4a9e-98c5-efe2a94a8704" />
-
-![unnamed](https://github.com/user-attachments/assets/d3d9ca9f-6fc6-4e85-bd93-a36e89587d5c)
+<table>
+   <tr>
+      <td><img width="550" height="672" alt="unnamed" src="https://github.com/user-attachments/assets/2350c645-b153-4a9e-98c5-efe2a94a8704" /></td>
+      <td><img src="https://github.com/user-attachments/assets/d3d9ca9f-6fc6-4e85-bd93-a36e89587d5c" /></td>
+   </tr>
+</table>
 
 Here are our favorite dev tools:
 
