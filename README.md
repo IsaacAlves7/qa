@@ -1255,7 +1255,7 @@ Aqui vamos explorar as melhores maneiras:
 ![Cypress](https://img.shields.io/badge/-Cypress-505050?style=badge&logo=cypress&logoColor=white)
 ![Robot Framework](https://img.shields.io/badge/-Robot_Framework-000000?style=badge&logo=robotframework&logoColor=white)
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/7ae43145-a45f-49a5-98ae-693912faae5d" align="right" height="77">
+<img height="177" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" align="right" />
 
 Uma vez que o código é integrado, a próxima etapa é o **teste automatizado** (automation testing) que envolve a execução de um conjunto de testes para garantir que as alterações de código sejam funcionais, atendam aos padrões de qualidade esperados e estejam livres de defeitos. Essa etapa ajuda a identificar problemas no início do processo de desenvolvimento, permitindo que os desenvolvedores os corrijam de maneira rápida e eficiente.
 
@@ -1355,8 +1355,6 @@ Visual Studio Test Professional: é uma edição do Visual Studio voltada especi
 TestingWhiz: é uma ferramenta de automação de testes voltada principalmente para equipes que buscam praticidade e velocidade na criação de testes, sem depender fortemente de programação. Diferente de frameworks open source como Selenium, que exigem bastante conhecimento técnico e montagem de infraestrutura, o TestingWhiz aposta em uma abordagem codeless, baseada em uma interface visual intuitiva onde o testador pode construir fluxos de teste arrastando e configurando blocos de ações pré-definidas. Isso o torna bastante atraente para equipes de QA funcionais ou para empresas que querem introduzir automação de forma rápida, sem exigir que todo o time saiba programar.
 
 Existem muitas ferramentas de testes automatizados disponíveis para diversas linguagens de programação e tipos de testes. Aqui estão algumas das mais populares, categorizadas por seu propósito principal:
-
-<img height="177" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" />
 
 1. **Frameworks de Teste Unitário**:
    - **JUnit**: Framework de testes unitários para Java. 
