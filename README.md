@@ -112,8 +112,6 @@ Primeiro, precisamos entender que a qualidade de software é uma área de grande
 > [!Important]
 > **Definição**: Qualidade é a característica ou atributo que define algo ou alguém em termos de excelência, valor, ou nível de desempenho. Pode se referir a propriedades como durabilidade, eficiência, eficácia, ou valor percebido. “Qualidade é a medida de quanto um projeto atende aos requisitos especificados no escopo.”
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/ff221b02-782f-4525-8375-b3d672c6eb05" align="right" height="77">
-
 Desde muito tempo, muitos engenheiros de software e empresas desenvolveram softwares de modo casual, por acreditarem que a criação de programas não podia seguir regras, normas ou padrões. Porém, o poder da comunidade eletrônica característica do século XXI, criada por redes de computadores e softwares, instituiu a era da troca de informação e conhecimentos em todo o mundo.
 
 Sendo assim, destaca-se a área de Engenharia de Software, que auxilia o entendimento do processo de desenvolvimento de softwares. Desta forma, nos processos de qualidade de software, a gerência de risco e o teste de software são pontos fundamentais para a garantia da qualidade do produto gerado.
