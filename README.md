@@ -416,6 +416,8 @@ O que realmente comunica bem é combinar `test/` com o **nível do teste** e, se
 
 <img width="876" height="852" alt="Captura de tela 2026-03-13 212300" src="https://github.com/user-attachments/assets/95d311fa-ec9f-4485-8b17-f54d33232e49" />
 
+<img width="720" height="834" alt="Screenshot_20241120-221158_Instagram" src="https://github.com/user-attachments/assets/332741fe-8770-49d2-99b9-3a99dbd8bb73" />
+
 Se a distinção for entre *manual e automatizado*, o mais limpo é explicitar isso no sufixo quando realmente necessário, como `test/manual-regression` ou `test/automation-smoke`. Mas, na prática, testes manuais quase nunca justificam branch própria; eles validam código já integrado.
 
 A realidade de times maduros em empresas grandes, especialmente aquelas que tratam engenharia de software como uma verdadeira **fábrica de software** (Lean Startup), e não apenas como entrega pontual de features. Quando a organização atinge certo nível de complexidade técnica e de negócio, o repositório deixa de ser apenas um lugar para “guardar código” e passa a ser um ativo crítico, governado por processos, padrões e decisões arquiteturais conscientes.
