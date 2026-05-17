@@ -512,6 +512,8 @@ Assumindo riscos pragmáticos para agir mais rápido
 
 Considerações adicionais para definir um processo de implantação
 
+<img width="720" height="1010" alt="Screenshot_20240729-151549_Instagram" src="https://github.com/user-attachments/assets/0bab53ac-6010-41d9-a38f-62a57465f8e1" />
+
 Seleção de uma abordagem
 
 1. EXTREMOS NO TRANSPORTE ATÉ A PRODUÇÃO
