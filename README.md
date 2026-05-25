@@ -414,11 +414,13 @@ Pensando como engenheiro e não de preferência pessoal, o melhor padrão é **`
 
 O que realmente comunica bem é combinar `test/` com o **nível do teste** e, se necessário, com o **contexto do sistema**. Algo como `test/unit-auth`, `test/integration-payment-flow` ou `test/e2e-checkout`. Isso deixa claro para qualquer pessoa do time que aquela branch não entrega funcionalidade nova, não corrige bug produtivo e não é release — ela existe para validar.
 
-<img width="578" height="454" alt="Captura de tela 2025-05-05 164742" src="https://github.com/user-attachments/assets/6d7ff5f3-b576-4596-834b-2f2e03d0687f" />
-
-<img width="876" height="852" alt="Captura de tela 2026-03-13 212300" src="https://github.com/user-attachments/assets/95d311fa-ec9f-4485-8b17-f54d33232e49" />
-
-<img width="720" height="834" alt="Screenshot_20241120-221158_Instagram" src="https://github.com/user-attachments/assets/332741fe-8770-49d2-99b9-3a99dbd8bb73" />
+<table>
+   <tr>
+      <td><img width="578" height="454" alt="Captura de tela 2025-05-05 164742" src="https://github.com/user-attachments/assets/6d7ff5f3-b576-4596-834b-2f2e03d0687f" /></td>
+      <td><img width="876" height="852" alt="Captura de tela 2026-03-13 212300" src="https://github.com/user-attachments/assets/95d311fa-ec9f-4485-8b17-f54d33232e49" /></td>
+      <td><img width="720" height="834" alt="Screenshot_20241120-221158_Instagram" src="https://github.com/user-attachments/assets/332741fe-8770-49d2-99b9-3a99dbd8bb73" /></td>
+   </tr>
+</table>
 
 Se a distinção for entre *manual e automatizado*, o mais limpo é explicitar isso no sufixo quando realmente necessário, como `test/manual-regression` ou `test/automation-smoke`. Mas, na prática, testes manuais quase nunca justificam branch própria; eles validam código já integrado.
 
