@@ -101,7 +101,7 @@ Imagine que você é um membro de uma equipe de desenvolvimento de software. Voc
 
 Ao concluir as revisões e auditorias, você reflete sobre os processos e a eficácia das técnicas aplicadas. Reconhece a importância de identificar falhas cedo e como as revisões sistemáticas podem prevenir erros custosos. Você compreende que, assim como o software, o aprendizado é um processo contínuo (Continuous Learning). E à medida que você assimila esses conceitos, torna-se mais apto a contribuir para o desenvolvimento de software de alta qualidade, solidificando sua jornada na compreensão da Qualidade de Software.
 
-Portanto, o profissional que atua nesta área vai além de só testar aplicações, o analista de qualidade é responsável pelo processo e pela entrega do início ao fim, participa das reuniões com o time e testa os vários níveis das aplicações.
+Portanto, o profissional que atua nesta área vai além de só testar aplicações, o analista de qualidade é responsável pelo processo e pela entrega do início ao fim, participa das reuniões com o time e testa os vários níveis das aplicações e monitora o software (produto) em produção.
 
 > [!Note]
 > Esse conteúdo é geralmente abordado no final das graduações da área de TI, ou seja, é um módulo avançado e atua com boas práticas do mercado. Então eu vou supor que todos já sabem desenvolver softwares e pular toda a parte de codificação com metodologias ágeis e ciclo de vida de desenvolvimento para partir pro ponto de qualidade de software. As abordagens e princípios de qualidade de software serão os pontos chaves para o ciclo de desenvolvimento, não o que prende cada conceito, mas o essencial para que todo fluxo de desenvolvimento funcione conforme o esperado.
