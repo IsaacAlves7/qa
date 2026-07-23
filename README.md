@@ -3089,8 +3089,6 @@ Em resumo, regression testing é uma prática crucial no desenvolvimento de soft
 
 Objetivos do Regression Testing:
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/8d0cb7bf-a902-4268-8633-73d0e06a2adc" align="right" height="177">
-
 1. **Verificar Estabilidade**: Assegurar que as novas mudanças não impactaram negativamente o comportamento existente do software.
 
 2. **Identificar Regressões**: Detectar rapidamente qualquer falha que possa ter sido introduzida devido a mudanças recentes.
