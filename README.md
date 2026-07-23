@@ -2490,9 +2490,13 @@ Testes unitários são métodos que verificam o funcionamento de unidades de có
 
 No unitário, cada parte do sistema ganha uma atenção devida e detalhada, de modo a otimizar o processo de identificação de erros. O objetivo é ajudar a rastrear os bugs e impedir que eles retornem depois que alterações forem feitas no produto.
 
-Portanto, são testes que verificam se uma parte específica do código, costumeiramente a nível de função, está funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. 
+Portanto, são testes que testam as menores unidades de código e que verificam uma parte específica do código, costumeiramente a nível de função ou métodos, se estão funcionando corretamente. Em um ambiente orientado a objetos (OOP) é usualmente a nível de classes e a mínima unidade de testes inclui construtores e destrutores. Esses testes acontecem de maneira isolada. 
 
 > 🧪 Os testes de unidade verificam unidades, como **métodos e classes** (OOP), **funções** (Funcional) e **componentes** (Front-end) dentro do software. São os testes mais rápidos, baratos de escrever e sua manutenção é simples. Para verificar o <a href="">comportamento</a> dessas pequenas partes isoladas do sistema sem dependências externas como banco de dados, APIs, arquivos ou rede. Por isso, eles são rápidos de executar, baratos de manter e oferecem feedback imediato durante o desenvolvimento. Como testam unidades isoladas, são fundamentais para garantir a estabilidade do código à medida que ele evolui.
+
+Exemplo: Eu não vou testar todo o processo de cálculo de uma média. Eu posso ter algumas funções: uma que valida os dados, outra que soma, outra que divide, etc. O teste só testa uma única função, ele não sabe, e não quer saber, das outras funções envolvidas no processo. Mas claro que eu posso, e devo, testar todas cada uma com seu próprio teste. Mesmo os testes sendo individuais eles, normalmente, fazem parte de uma suíte, um conjunto, de testes. O que quero deixar claro é que cada teste é independente e não enxerga o outro.
+
+Então, no exemplo do cálculo da média eu faço um teste para testar a soma, outro teste para testar a divisão, desde que eles estejam em funções separadas e independentes.
 
 Uma **unidade** (unit) é a menor parte testável de um programa de computador, no programação procedural uma unidade pode ser uma função individual ou um procedimento do nosso código, imagine que toda função é uma pequena fábrica que fabrica alguma coisa que pode sair, sem a necessidade de entrar algo. Idealmente, cada teste de unidade é independente dos demais, o que possibilita ao programador testar cada módulo isoladamente.
 
