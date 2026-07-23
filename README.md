@@ -2421,8 +2421,6 @@ Legal mas o que isso quer dizer? Quer dizer que, quando trabalhando no desenvolv
 
 Então, o DDD, TDD e BDD são três abordagens diferentes que se complementam no desenvolvimento de software:
 
-![tdd,bdd,ddd](https://github.com/user-attachments/assets/999df44a-f250-4287-b80c-e7725401d917)
-
 <img height="277" align="right" src="https://github.com/user-attachments/assets/35be875e-12ff-40ad-8042-0ef55700f62b" />
 
 O **DDD (Domain-Driven Design)**, por sua vez, é mais abrangente, é uma forma de estruturar todo o sistema a partir do domínio de negócio. O ponto central é que o design da aplicação deve emergir do entendimento profundo do problema que se quer resolver, criando um modelo de domínio claro, organizado e rico, que reflete a realidade do negócio. DDD traz conceitos como entidades, agregados, value objects, bounded contexts e ubiquitous language, para garantir que o código represente fielmente as regras do domínio e que diferentes partes do sistema conversem de forma coerente. Ele não é uma técnica de testes como TDD ou BDD, mas sim uma filosofia arquitetural que ajuda a manter a complexidade sob controle e tornar o software mais alinhado às necessidades reais do negócio. Por isso, o DDD é amplamente adotado em Code Reviews.
