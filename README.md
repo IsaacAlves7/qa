@@ -516,7 +516,12 @@ Assumindo riscos pragmáticos para agir mais rápido
 
 Considerações adicionais para definir um processo de implantação
 
-<img width="720" height="1010" alt="Screenshot_20240729-151549_Instagram" src="https://github.com/user-attachments/assets/0bab53ac-6010-41d9-a38f-62a57465f8e1" />
+<table>
+   <tr>
+      <td><img width="720" height="1010" alt="Screenshot_20240729-151549_Instagram" src="https://github.com/user-attachments/assets/0bab53ac-6010-41d9-a38f-62a57465f8e1" /></td>
+      <td><img width="720" height="833" alt="Screenshot_20240606-111700_Instagram" src="https://github.com/user-attachments/assets/dc9ebf82-3b9f-4f0d-bcd3-56cd9982ac7b" /></td>
+   </tr>
+</table>
 
 Seleção de uma abordagem
 
