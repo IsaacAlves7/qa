@@ -2869,9 +2869,11 @@ No fim das contas, o AAA transforma testes em pequenas histórias de causa e efe
 
 Os **testes de integração** (integration testing) são de um nível mais alto, e testam a relação de elementos, como por exemplo um banco de dados e o software. A realização destes testes é mais lenta, afinal possuem um outro grau de complexidade. É um teste em grupos que valida a integração de um sistema com outros sistemas ou banco de dados, é feito pelo desenvolvedor para validar se existe falha de dados entre integrações nos sistemas e se está com o comportamento correto.
 
-São testes que verificam se _módulos_ diferentes do sistema funcionam corretamente juntos, por exemplo: back-end + banco de dados, API + autenticação, ou microsserviços se comunicando via fila ou HTTP.
+O teste de integração já tem o objetivo de testar módulos ou serviços do seu sistema. São testes que verificam se _módulos_ diferentes do sistema funcionam corretamente juntos, por exemplo: back-end + banco de dados, API + autenticação, ou microsserviços se comunicando via fila ou HTTP.
 
 No contexto de testes de integração, **módulos** são partes distintas de um sistema que têm responsabilidade própria (ex: autenticação, pagamentos, cadastro), podem ou não ser executadas separadamente e precisam se comunicar entre si para o sistema funcionar corretamente. Módulo, em testes de integração, se refere a qualquer parte autônoma do sistema (seja uma classe, serviço, camada ou microserviço) que precisa se comunicar com outras partes para o sistema funcionar. Testes de integração são o que garantem que essas partes realmente funcionam bem juntas, usando dados reais, banco de dados, APIs, filas, etc. Os testes de integração avaliam se a comunicação entre esses módulos está funcionando como esperado.
+
+Exemplo: Validar se a sua API está conversando normalmente com o banco de dados e se está recebendo os dados esperados.
 
 Em testes de integração, módulos são as **unidades de software intermediárias**, partes funcionais do sistema que já foram testadas isoladamente (em testes de unidade) e agora precisam ser verificadas em conjunto para garantir que **interajam corretamente** umas com as outras. Em outras palavras, quando falamos em módulos, estamos nos referindo a componentes do sistema que possuem fronteiras bem definidas e trocam dados entre si, como classes, serviços, APIs, repositórios, adaptadores, filas, ou até microservices.
 
