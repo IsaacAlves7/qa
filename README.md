@@ -3223,7 +3223,7 @@ Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilha
 ## [TDD] E2E - End-to-end testing
 <img src="https://img.shields.io/badge/Cypress-E2E-gray?style=badge&logo=Cypress&logoColor=white"> <img src="https://img.shields.io/badge/Playwright-E2E-red?style=badge&logo=Playwright&logoColor=white"> <img src="https://img.shields.io/badge/Zod-E2E-blue?style=badge&logo=Zod&logoColor=white"> <img src="https://img.shields.io/badge/Selenium-E2E-lime?style=badge&logo=Selenium&logoColor=white"> <img src="https://img.shields.io/badge/Appium-E2E-silver?style=badge&logo=Appium&logoColor=white"> <img src="https://img.shields.io/badge/Moqups-E2E-blue?style=badge&logo=Moqups&logoColor=white"> <img src="https://img.shields.io/badge/Mural-E2E-tomato?style=badge&logo=Mural&logoColor=white">
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/5c4e2a17-1197-42fb-b43a-d32d15bf5be5" align="right" height="77">
+<img height="77" align="right" src="https://github.com/user-attachments/assets/b2033462-bc2a-46e7-bdaf-2db51a548358" />
 
 O **E2E - End-to-end** refere-se a um tipo de teste ou processo que envolve a verificação de um sistema ou fluxo de trabalho em sua totalidade, desde o início até o fim, simulando as condições reais de uso pelo usuário final. Em resumo, "end-to-end" se refere à abordagem de teste que abrange todo o sistema ou processo, do início ao fim, para garantir seu funcionamento correto e eficaz.
 
@@ -3254,8 +3254,6 @@ Ferramentas Especializadas em E2E:
    - **Spectron** (para Electron): Integra Selenium com o Electron para testar aplicações desktop.  
 
 Ferramentas Complementares (como Zod):
-
-<img height="277" align="right" src="https://github.com/user-attachments/assets/b2033462-bc2a-46e7-bdaf-2db51a548358" />
 
 1. **Validação de Dados em Testes E2E**
 
