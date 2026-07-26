@@ -3565,6 +3565,8 @@ O passo a passo adequado, sem bagunça, pode ser entendido assim: primeiro você
 
 Ou seja, MVP é o “o quê” inicial, UAT é o “pode ser aceito?”, Release é o “vai para produção”, e Continuous Delivery é o “como fazer isso de forma contínua e confiável”.
 
+<img width="1200" height="353" alt="image" src="https://github.com/user-attachments/assets/672ef7ec-564b-421d-8180-a204eb53676b" />
+
 Nos diferentes ecossistemas de linguagens, o conceito de testes de aceitação varia bastante, mas em geral envolve frameworks que permitem validar o comportamento da aplicação do ponto de vista do usuário final, muitas vezes com suporte a **BDD (Behavior Driven Development)** ou integração com navegadores. Vou listar os mais conhecidos em cada um dos ecossistemas:
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/f21ec8fe-f144-45dd-a1e3-2278ed47db76" />
