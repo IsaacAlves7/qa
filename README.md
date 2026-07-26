@@ -2424,6 +2424,8 @@ Bom, muito provavelmente não fui eu quem inventou o nome Ciclo de Feedback para
 
 Legal mas o que isso quer dizer? Quer dizer que, quando trabalhando no desenvolvimento de uma tarefa qualquer, que seja guiada a testes, nós temos que trabalhar em cima do feedback que os testes nos trazem e não com o pensamento de que temos apenas que codar a `feature` e adicionar testes para garanti-las. Realizar uma tarefa guiada a testes com esse pensamento é disperdiçar boa parte do potencial da abordagem do TDD.
 
+<img width="1240" height="437" alt="d646ce70-6e29-41c8-b8ee-db00ea865bd2" src="https://github.com/user-attachments/assets/87b1b060-a6d8-416a-86fe-8a8b8e761d87" />
+
 Então, o DDD, TDD e BDD são três abordagens diferentes que se complementam no desenvolvimento de software:
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/35be875e-12ff-40ad-8042-0ef55700f62b" />
