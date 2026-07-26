@@ -3518,7 +3518,7 @@ Cenário: Buscar produto com sucesso
 
 5. **Ferramentas de BDD**: Existem várias ferramentas que suportam BDD, ajudando a automatizar as especificações executáveis. Algumas das ferramentas populares incluem <a href="">Cucumber</a> (para várias linguagens como Java, Ruby), <a href="">SpecFlow</a> (para .NET), <a href="">Behave</a> (para Python), entre outras.
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/93228869-20dc-414f-b89e-4ae549ac96b4" align="right" height="277">
+<img width="1920" height="600" alt="cucumber-approval-vt-hero" src="https://github.com/user-attachments/assets/5760eeda-31fb-4914-8875-57a79789ed2d" />
 
 5. **Benefícios do BDD**: Uma das maiores virtudes do BDD - Behavior-Driven Development é unir os dois mundos TDD e DDD, de fato é representar uma interseção entre TDD (Test-Driven Development) e DDD (Domain-Driven Design), pois ele nasce da necessidade de alinhar o desenvolvimento técnico com o entendimento do negócio, garantindo que o software reflita o comportamento esperado do sistema a partir da perspectiva do usuário ou domínio. BDD pode ser visto como a interseção onde a clareza de intenção do domínio (trazida pelo DDD) se encontra com a prática de testar antes de desenvolver (como propõe o TDD).
 
