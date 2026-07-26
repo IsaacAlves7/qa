@@ -2694,7 +2694,7 @@ Nenhuma das opções é realmente a escolha ideal, mesmo se você encarar aquele
 
 O ideal seria existir algo que possibilitasse que os testes trouxessem os melhores resultados, mesmo sem acesso à tecnologia necessária. A boa notícia é que existe! Estamos falando dos _test doubles_.
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/3963eb3d-ea61-4557-92cb-2f097cfed79a" height="77" align="right">
+<img src="https://github.com/user-attachments/assets/f7825a2d-8e93-4ba9-a537-5b3e11af4c03" height="77" align="right">
 
 Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste. Termo genérico para qualquer substituição de objeto de produção em testes.
 
