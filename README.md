@@ -3547,11 +3547,11 @@ Dentro do ecossistema de QA, o UAT se integra como a camada de validação final
 
 O UAT funciona quase como um “filtro de realidade”: ele conecta a linguagem técnica do QA com a linguagem de negócio do cliente. Muitas vezes, mesmo um sistema tecnicamente correto pode falhar no UAT se não atender ao fluxo real que o usuário precisa seguir no dia a dia. É comum, por exemplo, que durante o UAT se descubra que um processo está tecnicamente certo, mas exige muitos cliques desnecessários, ou não reflete a forma como o trabalho é feito na prática. Assim, ele serve para alinhar expectativas, corrigir ajustes de usabilidade e garantir que, no momento do go-live, o software não só funcione, mas também seja aceito pelo público a que se destina.
 
-<img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
-
 Em termos de QA, você pode pensar no UAT como o elo entre testes de qualidade técnica e testes de valor de negócio. Ele não substitui os outros, mas se apoia neles: se os testes anteriores garantem que o software é confiável, o UAT garante que ele é útil e aprovado pelo cliente.
 
 Muita gente acaba confundindo os papéis de **UAT, MVP, Release e Continuous Delivery**, porque todos estão ligados à entrega e validação do software, mas cada um tem uma posição e função distintas dentro do ciclo de desenvolvimento. Para não misturar os conceitos, vale enxergar como uma sequência natural, onde cada etapa se apoia na anterior.
+
+<img src="https://github.com/user-attachments/assets/dcf5ece6-9b99-4a82-aca2-4af7351d944a" align="right" height="277">
 
 O ciclo começa antes mesmo do UAT, com a concepção do **MVP (Minimum Viable Product)**. Aqui o objetivo é construir a versão mínima do produto que já entrega valor real para o usuário, mesmo que com funcionalidades limitadas. Esse MVP é fruto de testes técnicos e de negócio, mas ainda não é a versão que vai para produção de forma plena — ele serve como uma forma de validar hipóteses, ganhar feedback rápido e evitar investimentos pesados em algo que o usuário não queira.
 
