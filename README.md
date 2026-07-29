@@ -1305,6 +1305,8 @@ A fase de ferramentas é tão importante quanto o planejamento. Para testes de u
 
 Na construção de um bom teste automatizado:
 
+<img width="1434" height="710" alt="Automation-Testing-Lifecycle" src="https://github.com/user-attachments/assets/b629d564-408e-466f-98fc-b8c4dc7af379" />
+
 1. o primeiro passo é nomear corretamente o que está sendo testado, depois criar um ambiente previsível para que os testes não tenham falsos positivos ou negativos. Um teste que falha às vezes é um teste ruim.
 
 2. Depois, seguir o <a href="https://github.com/IsaacAlves7/qa?tab=readme-ov-file#tdd-unit-testing">padrão AAA (Arrange, Act, Assert)</a> é uma boa prática: configurar os dados e dependências, executar o comportamento que está sendo testado, e por fim verificar o resultado.
