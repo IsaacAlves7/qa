@@ -1313,6 +1313,8 @@ Na construção de um bom teste automatizado:
 
 4. Outro pilar crucial é a **integração com pipelines de CI/CD**: Automatizar os testes via GitHub Actions, GitLab CI, Jenkins ou Azure DevOps garante que os testes rodam a cada push ou PR, evitando regressões. Um teste que só roda localmente é praticamente inútil em um time com múltiplos desenvolvedores.
 
+<img width="1024" height="1024" alt="image1-1-1024x1024" src="https://github.com/user-attachments/assets/5e6f2897-0852-4849-b429-9afc6bdcd93d" />
+
 <img width="670" height="780" alt="5f74b2aa4eae01b22b653776_mrmJubJsNknIwXf-czazkMq9e_I6f3NbEGzNcg5-BVGpFqSLZvmWU0VQEZ9gcfhZcCIaJKQlfYhVLnf1-YWNJ4G9es8jlCnDoeqeRtxa_s4Xjz_j-Ht_skqd1wArRrJoCx8AWMhs" src="https://github.com/user-attachments/assets/150f1127-ea4c-491e-b6e4-26a93bb45d18" />
 
 Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de coverage (cobertura de código) como **Istanbul**, **Coverlet** ou **Codecov** ajudam a visualizar o quanto do código está sendo testado, embora **cobertura alta não signifique qualidade alta** é possível ter 100% de cobertura e testes inúteis. O ideal é buscar cobertura útil, ou seja, testes que validam fluxos importantes, limites, erros e casos reais de uso.
