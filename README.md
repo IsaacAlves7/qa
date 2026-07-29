@@ -1422,7 +1422,9 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
    - **Acunetix**: Ferramenta de varredura de segurança para aplicações web.
 
 6. **Ferramentas de Teste de APIs**:
-  
+
+  <img height="450" align="right" src="https://github.com/user-attachments/assets/0ff86a51-9f42-46df-93c5-2e5ded0b1b06" />
+
    - **Postman**: Ferramenta para teste de APIs RESTful.
   
    - **SoapUI**: Ferramenta de teste para serviços web SOAP e REST.
