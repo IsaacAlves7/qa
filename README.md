@@ -2400,7 +2400,9 @@ Ela costuma envolver a remoção de duplicação de código, simplificação de 
 
 Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decisões de design ou implementação apressadas criam problemas futuros. Em metodologias ágeis, a refatoração é geralmente integrada ao processo de desenvolvimento contínuo, sendo realizada entre ciclos de implementação de novas funcionalidades. Portanto, a refatoração se encaixa como uma prática regular dentro da fase de desenvolvimento, especificamente na etapa de Integração Contínua (CI), que foca na qualidade do código e na automação de testes.
 
-<img src="https://github.com/user-attachments/assets/620b69eb-5d3b-4339-ad75-7d4dc78839d1" align="right" height="177">
+<img width="720" height="616" alt="sem volta" src="https://github.com/user-attachments/assets/d98c2b3d-5a24-4249-b74c-9e5ccd078d78" />
+
+<img src="https://github.com/user-attachments/assets/deeffd8c-8d4d-44d8-9618-c3b6bf5e1c6d" align="right" height="177">
 
 > [!Important]
 > Por mais de vinte anos, programadores experientes no mundo inteiro contaram com o livro **Refatoração: Aperfeiçoando o Design de Códigos Existentes** de Martin Fowler para aperfeiçoar o design de códigos existentes e melhorar a manutenibilidade do software, assim como para deixar o código existente mais fácil de entender. Essa nova edição ansiosamente esperada foi atualizada por completo para refletir mudanças vitais no domínio da programação. Refatoração 2ª edição contém um catálogo atualizado das refatorações e inclui exemplos de código JavaScript bem como novos exemplos funcionais que demonstram a refatoração sem classes. Assim como na edição original, este livro explica o que é refatoração, por que você deve refatorar, como reorganizar um código que precise de refatoração e como fazer isso de forma bem-sucedida, independentemente da linguagem usada. Para aperfeiçoar o design de códigos existentes e melhorar a manutenibilidade de software, assim como para deixar o código existente mais fácil de entender.
