@@ -163,6 +163,8 @@ No entanto, nos últimos anos, surgiu uma nova forma de organização dos nossos
 
 Quando você fala de *features* como componentes dentro de uma **plataforma componível**, você está descrevendo exatamente o movimento moderno de arquitetura modular que unifica **microserviços**, **microfrontends** e **evolução contínua de produto** (Lean Manufacturing + Agile + Spotify Squad) em um ecossistema onde cada parte é independente, substituível e expansível. E sim: nesse cenário, cada *feature* deixa de ser apenas uma “função nova” e passa a ser uma *unidade de evolução do produto*, quase como um “módulo de negócios” versionado, isolado, escalável e plugável.
 
+<img width="576" height="716" alt="1e16f687-ca98-42d1-8542-6b87a1cbba00" src="https://github.com/user-attachments/assets/b7fea1d8-8b6c-4f62-92e1-4142963b00c7" />
+
 A ideia é que cada *feature* não seja só um pedaço de UI ou uma rota de API, mas um **componente de domínio** inteiro: comportamento, dados, lógica, integrações e interface. Em uma plataforma componível, isso vira um bloco arquitetural — uma peça que pode ser combinada com outras, assim como peças de LEGO, para formar um produto vivo.
 
 Quando você expande isso para o mundo real, especialmente no contexto de **microserviços** e **microfrontends**, cada feature se transforma naturalmente em um **building block** que pode ser desenvolvido, implantado, versionado e escalado de forma independente. Um módulo do domínio, como “Billing”, “Checkout”, “User Profile”, “Recommendations”, “Inventory”, por exemplo, é tratado como uma feature-mãe, que por sua vez contém subfeatures. Essa modularidade profunda é o que permite a evolução contínua do produto sem criar aquele monolito rígido que só cresce e nunca melhora.
