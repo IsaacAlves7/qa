@@ -862,6 +862,10 @@ Passo 9: Se o teste do UAT for bem-sucedido, as versões se tornam candidatas a 
 
 Passo 10: A equipe SRE (Site Reliability Engineering) é responsável pelo monitoramento de produção.
 
+Ciclo PDCA Estratégico para QA:
+
+<img width="1219" height="673" alt="image" src="https://github.com/user-attachments/assets/e16072b1-9a8d-4387-b584-0728c751ed73" />
+
 <img height="377" align="right" src="https://github.com/user-attachments/assets/48562bf1-72a0-453b-aa21-cc58155a6a3c" />
 
 A **hiperautomação** (Hyperautomation) surgiu como uma resposta estratégica: em vez de simplesmente executar testes roteirizados, ela une ferramentas avançadas para automatizar inteiramente fluxos de trabalho de QA de forma inteligente (dev.toimpactqa.com).
