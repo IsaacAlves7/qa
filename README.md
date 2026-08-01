@@ -862,7 +862,7 @@ Passo 9: Se o teste do UAT for bem-sucedido, as versões se tornam candidatas a 
 
 Passo 10: A equipe SRE (Site Reliability Engineering) é responsável pelo monitoramento de produção.
 
-Ciclo PDCA Estratégico para QA:
+Ciclo PDCA + PEEE para QA:
 
 <img width="1219" height="673" alt="image" src="https://github.com/user-attachments/assets/e16072b1-9a8d-4387-b584-0728c751ed73" />
 
