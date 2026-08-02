@@ -1099,6 +1099,8 @@ Já as **falhas externas** são aquelas que ocorrem após a entrega do produto f
 
 A **Regra 10 de Myers**, criada em 2004 por Glenford Myers, é uma importante diretriz para os analistas de teste de software. Essa regra afirma que toda falha no software deve ser rastreável a uma ação ou decisão específica tomada durante o desenvolvimento do software.
 
+<img width="1090" height="556" alt="image" src="https://github.com/user-attachments/assets/6459c4fc-2f1f-43c1-af38-f5355328a189" />
+
 <a href=""><img src="https://github.com/user-attachments/assets/4d60adb8-9629-4605-ae7f-8b97798f7699" /></a>
 
 > A ilustração mostra um gráfico que representa os custos de correção associados a cada estágio do ciclo de desenvolvimento de software. No lado esquerdo, há uma linha vertical que corresponde ao eixo Y, onde está inscrito "Custo da correção do defeito". Na parte inferior, há uma linha horizontal que se junta à linha vertical, formando uma grade para marcar os estágios do ciclo no eixo X. Abaixo dessa linha vertical está escrito da esquerda para a direita: Análise, Especificação, Construção, Testes e Produção. No interior do gráfico há uma linha vermelha com cinco círculos amarelos.
@@ -2504,9 +2506,9 @@ Ao longo de sua carreira, Kent trabalhou em várias empresas de destaque, inclui
 
 <img src="https://em-content.zobj.net/source/microsoft-teams/363/test-tube_1f9ea.png" height="77" align="right">
 
-Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). O teste unitário é uma verificação feita com uma pequena porção de código, uma unidade de um software. Ou seja, é diferente do teste geral, que se dedica a testar o fluxo do sistema, com as funcionalidades principais.
+Os **testes unitários** ou **testes de unidade** (unit tests) é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste (QA). O teste unitário é uma verificação feita com uma pequena porção de código, uma unidade de um software. Ou seja, é diferente do teste geral, que se dedica a testar o fluxo do sistema, com as funcionalidades principais. Responsável: Desenvolvedor
 
-Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
+O programador testa o seu próprio código (Ex.: Teste de componente) e a integridade do mesmo, verificando pequenas falhas. Não exige que o software esteja maduro para ser realizado. Testes unitários são métodos que verificam o funcionamento de unidades de código, vulgo métodos, e seus objetos associados. O grande objetivo, por incrível que pareça, não é ter uma grande cobertura, e sim resultar em uma arquitetura melhor, menos acoplada, e de melhor manutenção. Classes com muitas depêndencias são muito difíceis de testar. Métrica utilizada: cobertura de código. 
 
 No unitário, cada parte do sistema ganha uma atenção devida e detalhada, de modo a otimizar o processo de identificação de erros. O objetivo é ajudar a rastrear os bugs e impedir que eles retornem depois que alterações forem feitas no produto.
 
@@ -2887,7 +2889,7 @@ No fim das contas, o AAA transforma testes em pequenas histórias de causa e efe
 
 <a href="https://martinfowler.com/bliki/IntegrationTest.html"><img src="https://em-content.zobj.net/source/microsoft-teams/400/woman-and-man-holding-hands_1f46b.png" align="right" height="77"></a>
 
-Os **testes de integração** (integration testing) são de um nível mais alto, e testam a relação de elementos, como por exemplo um banco de dados e o software. A realização destes testes é mais lenta, afinal possuem um outro grau de complexidade. É um teste em grupos que valida a integração de um sistema com outros sistemas ou banco de dados, é feito pelo desenvolvedor para validar se existe falha de dados entre integrações nos sistemas e se está com o comportamento correto.
+Os **testes de integração** (integration testing) são de um nível mais alto, e testam a relação de elementos, como por exemplo um banco de dados e o software. A realização destes testes é mais lenta, afinal possuem um outro grau de complexidade. É um teste em grupos que valida a integração de um sistema com outros sistemas ou banco de dados, é feito pelo desenvolvedor para validar se existe falha de dados entre integrações nos sistemas e se está com o comportamento correto. Responsável: Desenvolvedor / Analista de Qualidade
 
 O teste de integração já tem o objetivo de testar módulos ou serviços do seu sistema. São testes que verificam se _módulos_ diferentes do sistema funcionam corretamente juntos, por exemplo: back-end + banco de dados, API + autenticação, ou microsserviços se comunicando via fila ou HTTP.
 
