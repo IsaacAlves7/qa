@@ -1126,6 +1126,48 @@ O grande benefício é que, quanto mais cedo um bug é descoberto, menor o impac
 > [!Important]
 > **Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção**: Para aprofundar seus conhecimentos sobre avaliação de atributos de qualidade, recomendamos a leitura do livro Qualidade De Software Na Prática - Como Reduzir O Custo De Manutenção é um livro escrito por Alexandre Kherroubi e Adalberto Cavalcanti. O livro aborda a importância da qualidade de software na redução dos custos de manutenção e explora estratégias práticas para melhorar a qualidade do software, resultando em um impacto positivo nos custos de manutenção ao longo do ciclo de vida do software.
 
+<img width="1219" height="651" alt="image" src="https://github.com/user-attachments/assets/d37e66a1-a2a9-4450-8757-0ada6cf51e81" />
+
+A comunicação é essencial para conseguir os envolvidos entendam suas sugestões/críticas/dúvidas. É essencial para o engajamento entre os membros da equipe com o projeto (Sempre no canal, quase nunca no privado).
+
+Missão do time de QA: O QA precisa estar sempre pronto para aprender e se profissionalizar com as inovações, Novos conhecimentos aumentam a produtividade, A diversificação de conhecimento nas metodologias de teste/desenvolvimento o valoriza perante a equipe.
+
+> Não testamos para encontrar defeitos, testamos para garantir a qualidade. - Time de QA
+
+Mapeamento das Responsabilidades do QA no modelo Spotify Squad:
+
+- QA alocado em Squad, participação em cerimônias ágeis;
+- Realiza o entendimento das Histórias
+- Realiza o planejamento e modelagem dos casos de testes
+- Envia a estimativa de conclusão dos testes
+- Prepara a execução dos testes manuais (Devices / Web ambiente)
+- Executa os testes no ambiente de QA / Homologação
+- Retesta os BUGS corrigidos pelo time de desenvolvimento
+
+Q-Ágil: O que ganhamos com a atuação do QA no time ágil?
+
+- Entregas com maior valor agregado;
+- Otimização do tempo;
+- Maior evangelização das práticas de qualidade durante todo projeto;
+- Menor número de incidentes críticos na reta final do produto;
+- Redução de custo pela antecipação dos bugs encontrados durante o projeto;
+- Incentivo em melhorar o processo continuamente. 
+
+https://blog.cedrotech.com/o-qa-dentro-de-um-time-agil-scrum/#:~:text=A%20defini%C3%A7%C3%A3o%20de%20%E2%80%9Cpronto%E2%80%9D%20nada,uma%20User%20Story%20est%C3%A1%20completa.&text=Maior%20qualidade%20do%20time%3B,testada%20e%20com%20aceite%20formal.
+
+A definição de “pronto” nada mais é do que um contrato firmado entre o time e o PO, que lista de forma clara os requisitos que determinam que uma User Story está completa.
+
+E a resposta é simples: normalmente, quando perguntam se uma funcionalidade ou story está pronta, respondem: “sim, mas falta testar…”.
+
+Isso significa que ao definir o conceito de “pronto”, é importante que o QA – que faz parte do time – esteja envolvido e possa sensibilizar os membros do time e PO para que os testes façam parte deste conceito.
+
+Dessa forma, garantimos:
+
+- Integração entre desenvolvedores e QA;
+- Maior qualidade do time;
+- Que não haja desentendimentos desnecessários;
+- Story testada e com aceite formal. 
+
 ## [QA] Padrões de Qualidade de Software
 <img height="177" align="right" src="https://github.com/user-attachments/assets/23634a8a-fa08-411f-b723-7115f8b03f9b" />
 
