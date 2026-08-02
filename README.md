@@ -3046,7 +3046,7 @@ Para testes de integração, você pode optar por:
 ## [TDD] Functional Testing
 <img height="77" align="right" src="https://github.com/user-attachments/assets/3b2e49dc-7c5b-4746-bf6e-2081c3bd0a98" />
 
-Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída. É a técnica mais utilizada no dia a dia. Responsável: Analista de Qualidade
+Testes de um nível ainda maior, são os **functional tests**, que testam o sistema completo e garante a correção de funcionalidades no ponto de vista do cliente. Teste em que não é necessário conhecer a estrutura interna de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída. É a técnica mais utilizada no dia a dia. Testa os requisitos funcionais, as funções e os casos de uso. “A aplicação faz o que deveria fazer?”. Responsável: Analista de Qualidade
 
 > Isso verifica se a API executa corretamente suas funções pretendidas. Testes funcionais garantem que a API entregue os resultados esperados para as entradas específicas. Ele foca em verificar funcionalidades centrais sem entrar em desempenho ou segurança.
 
