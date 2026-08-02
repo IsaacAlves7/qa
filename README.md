@@ -1277,7 +1277,7 @@ Aqui vamos explorar as melhores maneiras:
 
 <img height="177" align="right" src="https://github.com/user-attachments/assets/7ba18f0f-f97a-43de-8edb-cd3bc540fdd1" align="right" />
 
-Uma vez que o código é integrado, a próxima etapa é o **teste automatizado** (automation testing) que envolve a execução de um conjunto de testes para garantir que as alterações de código sejam funcionais, atendam aos padrões de qualidade esperados e estejam livres de defeitos. Essa etapa ajuda a identificar problemas no início do processo de desenvolvimento, permitindo que os desenvolvedores os corrijam de maneira rápida e eficiente.
+Anteriormente, falamos de testes manuais, porém uma vez que o código é integrado, a próxima etapa é o **teste automatizado** (automation testing) que envolve a execução de um conjunto de testes para garantir que as alterações de código sejam funcionais, atendam aos padrões de qualidade esperados e estejam livres de defeitos. Essa etapa ajuda a identificar problemas no início do processo de desenvolvimento, permitindo que os desenvolvedores os corrijam de maneira rápida e eficiente.
 
 Conforme o tempo passa a tecnologia segue avançando e os sistemas que são desenvolvidos por pessoas da área de TI estão cada vez mais completos. Antigamente os testes manuais eram os mais utilizados, mas eles já não suprem mais às demandas das empresas e acabam sendo suscetíveis a erros. Então, as organizações precisam desenvolver mais e com melhor qualidade, é aí que entram os *testes automatizados* que são programas que executam testes em softwares que estão em construção de uma forma padronizada, sem ser necessário a intervenção humana.
 
