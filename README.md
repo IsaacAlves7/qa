@@ -2477,11 +2477,14 @@ A **Refatoração** é o processo de reestruturar o código de um software para 
 
 Ela costuma envolver a remoção de duplicação de código, simplificação de estruturas complexas, e melhoria na nomenclatura de variáveis, classes e funções, além de aplicar padrões de design e princípios como o <a href="">SOLID</a>. 
 
-<img width="720" height="616" alt="sem volta" src="https://github.com/user-attachments/assets/d98c2b3d-5a24-4249-b74c-9e5ccd078d78" />
+<table>
+   <tr>
+      <td><img width="463" height="575" alt="image" src="https://github.com/user-attachments/assets/4bf18991-0fcd-485b-b454-b9c847a52da0" /></td>
+      <td><img width="720" height="616" alt="sem volta" src="https://github.com/user-attachments/assets/d98c2b3d-5a24-4249-b74c-9e5ccd078d78" /></td>
+   </tr>
+</table>
 
-<img width="463" height="575" alt="image" src="https://github.com/user-attachments/assets/4bf18991-0fcd-485b-b454-b9c847a52da0" />
-
-Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decisões de design ou implementação apressadas criam problemas futuros. Em metodologias ágeis, a refatoração é geralmente integrada ao processo de desenvolvimento contínuo, sendo realizada entre ciclos de implementação de novas funcionalidades. Portanto, a refatoração se encaixa como uma prática regular dentro da fase de desenvolvimento, especificamente na etapa de Integração Contínua (CI), que foca na qualidade do código e na automação de testes.
+Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decisões de design ou implementação apressadas criam problemas futuros. Em metodologias ágeis, a refatoração é geralmente integrada ao processo de desenvolvimento contínuo, sendo realizada entre ciclos de implementação de novas funcionalidades. Portanto, a refatoração se encaixa como uma prática regular dentro da fase de desenvolvimento, especificamente na etapa de Integração Contínua (CI), que foca na qualidade do código e na automação de testes. A refatoração está de forma intríseca ligada ao conceito de Lean Manufacturing e Lean Startup, para redução de desperdícios, melhoria contínua e identificação de Code Smells.
 
 <img src="https://github.com/user-attachments/assets/deeffd8c-8d4d-44d8-9618-c3b6bf5e1c6d" align="right" height="177">
 
