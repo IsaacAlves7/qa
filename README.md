@@ -3281,6 +3281,9 @@ Testes de performance, portanto, não são apenas uma atividade complementar, ma
 
 É o primeiro momento em que o software é testado **de ponta a ponta**, já integrado, e não mais isolado em módulos individuais.
 
+Realizado pela equipe de Qualidade de Software com base na escrita dos cenários de testes que foi escritos de acordo com a documentação  ou estórias. É verificado se o 
+software esta de acordo com a documentação. E é executado sob um ponto de vista de um usuário final. Responsável: Analista de Qualidade
+
 Num textão contínuo, como você prefere, a ideia central do teste de sistema é garantir que o comportamento observado corresponde ao comportamento esperado quando todos os elementos estão reunidos. Em contraste com o teste unitário, que valida partes pequenas e isoladas, e o teste de integração, que valida dois ou mais módulos conversando entre si, o teste de sistema procura validar o fluxo completo. Isso inclui desde a interface visual até o armazenamento de dados e a comunicação com serviços externos. 
 
 Ele é executado em um ambiente que simula o mais fielmente possível o ambiente de produção, com configurações reais de rede, segurança, dependências e infraestrutura. Seu objetivo não é apenas encontrar defeitos funcionais, mas também falhas de usabilidade, desempenho, estabilidade e comportamento sob carga, além de verificar regras de negócio em contextos complexos, edge cases que só aparecem quando vários módulos se combinam e dependências externas que podem falhar ou se comportar de forma inesperada. 
