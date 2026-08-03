@@ -3272,6 +3272,10 @@ Testa se o sistema e os dados são acessados de maneira segura, apenas pelo auto
 ## [TDD] Usability testing
 Teste focado na experiência do usuário, consistência da interface, layout, acesso às funcionalidades, etc. Responsável: Analista de Qualidade em conjunto com o Time de UX
 
+<img width="416" height="373" alt="Screenshot_20231205-134557_Instagram" src="https://github.com/user-attachments/assets/4944f5c0-d6af-46b4-b51b-42b7782f5d14" />
+
+teste.ai
+
 ## [TDD] Volume testing
 Testa o comportamento do sistema operando com o volume “normal”  de dados  e transações envolvendo o banco de dados durante um longo período de tempo. Responsável: Analista de Qualidade com acompanhamento do time de Infra/ Banco/ Desenv e em alguns casos DevOps
 
