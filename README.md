@@ -3652,7 +3652,7 @@ Por exemplo, imagine um sistema bancário:
 
 Portanto, se você ouvir alguém dizer "vamos fazer o UAT", normalmente significa que o sistema será validado pelos usuários de negócio. Já "Teste de Aceitação" pode ser usado tanto como sinônimo de UAT quanto como um termo guarda-chuva que engloba outras formas de aceitação antes da entrega final. Em muitas empresas brasileiras, especialmente em projetos ágeis, os dois termos acabam sendo utilizados de forma intercambiável.
 
-O **User Acceptance Testing (UAT)**, ou Teste de Aceitação do Usuário, é uma etapa final e crucial dentro do ciclo de testes de software. Ele acontece quando o sistema já passou por testes internos como unitários, de integração, funcionais e de sistema e está teoricamente pronto para ser colocado em produção. 
+O **User Acceptance Testing (UAT)**, ou Teste de Aceitação do Usuário, é uma etapa final e crucial dentro do ciclo de testes de software. Ele acontece quando o sistema já passou por testes internos como unitários, de integração, funcionais e de sistema e está teoricamente pronto para ser colocado em produção. É um teste que é executado pelo cliente final, no caso de modelo ágil os PO’s são responsáveis por esses testes, dando o ok final. Responsável: PO’s / Stakeholders
 
 A ideia do UAT é validar se o software realmente atende às necessidades do usuário final e aos requisitos de negócio. Aqui, o foco não é tanto verificar se o código funciona sem erros técnicos, mas se a solução é útil, intuitiva e cumpre aquilo que foi solicitado e esperado. Por isso, normalmente é realizado pelos próprios usuários, clientes, stakeholders ou representantes do negócio, com o suporte da equipe de QA.
 
