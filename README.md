@@ -1161,6 +1161,8 @@ Missão do time de QA: O QA precisa estar sempre pronto para aprender e se profi
 
 Mapeamento das Responsabilidades do QA no modelo Spotify Squad:
 
+<img width="459" height="459" alt="servicos-qa-grafico" src="https://github.com/user-attachments/assets/b1cb2139-d1e7-4f76-8afb-7675e95c9427" />
+
 - QA alocado em Squad, participação em cerimônias ágeis;
 - Realiza o entendimento das Histórias
 - Realiza o planejamento e modelagem dos casos de testes
@@ -1401,6 +1403,8 @@ Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de cove
 Por fim, construir um teste automatizado bom exige prática, disciplina e conhecimento. Não é só sobre ferramentas, mas sobre escrever código de teste que seja confiável, fácil de manter e que reflita as regras de negócio do sistema. É preciso ter clareza sobre o que vale a pena testar, manter a suíte de testes rápida e identificar o ponto de equilíbrio entre cobertura e custo de manutenção. Testes automatizados são investimento — e como todo investimento, precisam de foco, consistência e revisão contínua para darem retorno real.
 
 O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes. Veja algumas ferramentas para automação de testes:
+
+<img width="1028" height="560" alt="servicos-qa-testes-por-camada" src="https://github.com/user-attachments/assets/ed239152-39e5-48fd-81c4-3a2492b99324" />
 
 <img src="https://github.com/user-attachments/assets/3c87b05b-6715-4178-8166-9bf528c4e3ff" height="77" align="right"> 
 
@@ -2484,7 +2488,7 @@ Ela costuma envolver a remoção de duplicação de código, simplificação de 
    </tr>
 </table>
 
-Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decisões de design ou implementação apressadas criam problemas futuros. Em metodologias ágeis, a refatoração é geralmente integrada ao processo de desenvolvimento contínuo, sendo realizada entre ciclos de implementação de novas funcionalidades. Portanto, a refatoração se encaixa como uma prática regular dentro da fase de desenvolvimento, especificamente na etapa de Integração Contínua (CI), que foca na qualidade do código e na automação de testes. A refatoração está de forma intríseca ligada ao conceito de Lean Manufacturing e Lean Startup, para redução de desperdícios, melhoria contínua e identificação de Code Smells.
+Refatorar também ajuda a prevenir a "dívida técnica", que ocorre quando decisões de design ou implementação apressadas criam problemas futuros. Em metodologias ágeis, a refatoração é geralmente integrada ao processo de desenvolvimento contínuo, sendo realizada entre ciclos de implementação de novas funcionalidades. Portanto, a refatoração se encaixa como uma prática regular dentro da fase de desenvolvimento, especificamente na etapa de Integração Contínua (CI), que foca na qualidade do código e na automação de testes. A refatoração compartilha os mesmos princípios de Lean Manufacturing e Lean Startup, para eliminação de desperdícios, melhoria contínua e identificação de Code Smells. Lean inspirou diversas práticas da Engenharia de Software (como Lean Software Development), mas a refatoração surgiu e é estudada principalmente no contexto de boas práticas de programação, especialmente com os trabalhos de Martin Fowler e Kent Beck.
 
 <img src="https://github.com/user-attachments/assets/deeffd8c-8d4d-44d8-9618-c3b6bf5e1c6d" align="right" height="177">
 
