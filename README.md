@@ -1427,6 +1427,8 @@ XPath relativo: Localiza um elemento usando qualquer atributo, sem precisar espe
 //input[@id='username']
 ```
 
+<img height="140" align="right" src="https://github.com/user-attachments/assets/b6255eb7-53e3-489c-86ce-6cab4baa738d" />
+
 **Robot Framework**: é uma estrutura genérica de automação de teste para testes de aceitação e desenvolvimento orientado a testes de aceitação. É uma estrutura de teste orientada por palavras-chave que usa a sintaxe de dados de teste tabular. 
 
 **Robotium**: é um framework open source de automação de testes voltado especificamente para aplicações Android. Ele surgiu como uma resposta à necessidade de se criar testes funcionais e de interface de forma mais prática e menos trabalhosa do que o que era oferecido nativamente pela API de testes do Android. Diferente de soluções que focam em testes unitários ou apenas em pequenas partes da aplicação, o Robotium foi desenhado para permitir que você crie testes que simulam a interação real de um usuário com o aplicativo, clicando em botões, digitando em campos, navegando por telas e validando os resultados exibidos. Ele funciona essencialmente como uma camada que se apoia no JUnit e traz uma API mais rica e amigável para lidar com a interface de usuário.
