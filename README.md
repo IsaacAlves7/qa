@@ -3132,6 +3132,13 @@ Quando você fala de Functional Testing, você está se referindo à prática de
 
 **Black-box Testing**, por outro lado, é um *método*, uma forma de enxergar o sistema. É uma abordagem onde você não olha o código interno, não vê classes, funções, bancos de dados, nem algoritmos. Você apenas observa entradas e saídas, como uma caixa preta. Vários tipos de teste podem ser feitos como caixa preta: testes funcionais, testes não funcionais, testes de usabilidade, testes de performance em nível de comportamento e até testes exploratórios. A caixa preta significa ignorar o interior e se concentrar apenas na interação externa. Portanto, Black-box é um estilo de avaliação que pode ser aplicado a várias categorias de teste, e não um tipo de teste em si. Teste em que não é necessário conhecer a estrutura interna  de como o código fonte foi implementado. É basicamente baseado em valores de entrada e saída. É a técnica mais utilizada no dia a dia. Responsável: Analista de Qualidade
 
+O teste Black-Box trata o software como uma "caixa preta", sem conhecimento do seu código interno. Os testadores se concentram em avaliar a funcionalidade, as entradas e as saídas da aplicação, sem entender a implementação subjacente. Essa abordagem simula o comportamento do usuário final, sendo ideal para detectar problemas de usabilidade, entradas inválidas e falhas de integração de sistemas.
+
+NÍVEL DE CONHECIMENTO: Nenhum conhecimento do código interno.
+FOCO: Funcionalidade, entradas e saídas.
+PROFUNDIDADE DO TESTE: Teste superficial, baseado em especificações.
+CASOS DE USO: Interfaces de usuário, integração de sistemas.
+
 O ponto de união entre os dois é que, na prática de mercado, **quase todo teste funcional é executado como Black-box**, porque testar funcionalidades sem olhar o código faz parte da natureza desses testes. Contudo, isso não significa que eles sejam sinônimos. Todo Functional Testing utiliza a abordagem Black-box, mas nem todo Black-box Testing é necessariamente funcional. Por exemplo, um teste de performance que mede tempo de resposta sem olhar o código é caixa preta, mas não é funcional. Da mesma forma, um teste de usabilidade, um teste de segurança black-box ou um teste de carga são todos caixa preta sem serem testes funcionais. Pense em Functional Testing como o “o que testar” e Black-box como o “como testar”.
 
 Assim, eles caminham juntos, se alimentam um do outro, mas ocupam categorias diferentes dentro da engenharia de software.
@@ -3181,11 +3188,32 @@ O seu nome é uma analogia direta: se na caixa preta você testa sem ver o que h
 
 Testa tendo conhecimento do código fonte, os resultados esperados de acordo com os requisitos acordados, padrões adotados. Deve-se passar por todos os fluxos esperados. Responsável: Desenvolvedor
 
+O teste White-Box envolve examinar a lógica interna, a estrutura de código e os algoritmos do software. Os testadores têm visibilidade total sobre a arquitetura da aplicação, o que lhes permite desenhar casos de teste com base na cobertura de código e nos caminhos internos. Esse método é eficaz para detectar erros de lógica e validar funcionalidades específicas.
+
+NÍVEL DE CONHECIMENTO: Alto conhecimento do código interno.
+FOCO: Lógica interna, estrutura do código.
+PROFUNDIDADE DO TESTE: Teste profundo, ampla cobertura de código.
+CASOS DE USO: Sistemas críticos, aplicações com uso intensivo de algoritmos.
+
 O objetivo central deste teste é validar a qualidade interna do software. Ele busca encontrar erros em estruturas de controle, em loops infinitos, em condições de borda não tratadas, em caminhos lógicos nunca executados, em vazamentos de memória e em más práticas de codificação. Para isso, o testador projeta casos de teste baseados diretamente no código-fonte, garantindo que todos os caminhos possíveis dentro da aplicação sejam exercitados. As métricas de cobertura são fundamentais nesse processo, pois elas quantificam o quanto do código foi testado. A cobertura de instruções mede a porcentagem de linhas de código executadas, a cobertura de decisão verifica se todos os resultados possíveis de uma condição booleana foram testados, a cobertura de caminhos é mais complexa e visa exercitar todos os caminhos lógicos independentes dentro de um módulo, e a cobertura de condição vai além, avaliando todas as combinações possíveis de subcondições dentro de uma decisão.
 
 A execução do teste de caixa branca é geralmente realizada em fases iniciais do ciclo de desenvolvimento, frequentemente integrada à fase de codificação. Os próprios desenvolvedores costumam realizá-lo, ou engenheiros de qualidade de software com fortes habilidades de programação, utilizando ferramentas especializadas para análise estática e dinâmica. As ferramentas de análise estática examinam o código sem executá-lo, procurando por violações de padrões de codificação, possíveis bugs e vulnerabilidades de segurança. Já as ferramentas de análise dinâmica exigem que o código seja executado, permitindo a medição da cobertura de testes e a identificação de problemas de desempenho e vazamento de recursos em tempo de execução.
 
 As vantagens desta abordagem são profundas. Ela permite a identificação precoce de defeitos, o que reduz significativamente o custo de sua correção, e otimiza o código, eliminando trechos mortos ou redundantes. No entanto, os desafios são igualmente significativos. O teste é complexo e requer um testador altamente qualificado, que seja tanto um engenheiro de qualidade quanto um programador competente. Além disso, testar exaustivamente todos os caminhos de um software minimamente complexo pode ser uma tarefa praticamente impossível devido à explosão combinatória de possibilidades, tornando-o uma atividade que busca a máxima cobertura dentro de limites de tempo e orçamento realistas. Em essência, o Teste da Caixa Branca é um exercício de engenharia de precisão, focado na saúde interna do software, assegurando que a fundação sobre a qual a aplicação é construída seja sólida, eficiente e segura.
+
+## [TDD] Grey-box testing
+O teste Grey-Box combina elementos dos testes White-Box e Black-Box. Os testadores têm conhecimento parcial do funcionamento interno, equilibrando o exame detalhado do código com o teste da funcionalidade externa. Essa abordagem permite um escopo mais amplo de cenários de teste, abordando tanto os aspectos estruturais quanto funcionais do software.
+
+NÍVEL DE CONHECIMENTO: Conhecimento parcial do código interno.
+FOCO: Tanto a lógica interna quanto a funcionalidade externa.
+PROFUNDIDADE DO TESTE: Teste equilibrado, combinando profundidade e amplitude.
+CASOS DE USO: Teste abrangente com conhecimento parcial do código.
+
+Cada abordagem de teste tem seu próprio conjunto de vantagens e desvantagens. O teste White-Box, por exemplo, oferece cobertura aprofundada e é eficaz para detectar erros de lógica, mas pode exigir tempo e recursos significativos. Por outro lado, o teste Black-Box é excelente para simular o comportamento do usuário final e encontrar problemas de usabilidade, mas pode deixar passar certos problemas em nível de código. O teste Grey-Box busca um equilíbrio, mas exige um cuidado delicado no compartilhamento de conhecimento dentro da equipe de testes.
+
+Em conclusão, a escolha de uma abordagem de teste é fundamental e depende dos requisitos específicos, dos recursos disponíveis e da profundidade de teste desejada para o projeto. Os métodos de teste White-Box, Black-Box e Grey-Box contribuem, cada um à sua maneira, para garantir a qualidade do software, abordando aspectos específicos do processo de desenvolvimento. A flexibilidade oferecida por essas abordagens permite que as equipes adaptem suas estratégias de teste às necessidades dinâmicas de projetos diversos.
+
+Cybershield Insights por Irudaya Praveen
 
 ## [TDD] Regression testing
 <img src="https://github.com/user-attachments/assets/056ece14-8797-4926-b30e-e4aeb6490ca4" align="right" height="77">
