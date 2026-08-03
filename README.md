@@ -3243,6 +3243,32 @@ Desafios do Regression Testing:
 
 - **Falsos Positivos/Negativos**: Pode haver casos onde testes falham ou passam erroneamente, exigindo investigação adicional.
 
+## [TDD] Robustness testing
+Testa a resistência do software à falhas (robustez). Responsável: Equipe de SI (Segurança da Informação) / Analista de Qualidade
+
+Robustness Testing (Teste de Robustez) verifica como o software se comporta diante de condições inesperadas, entradas inválidas, falhas de infraestrutura ou situações extremas, avaliando sua capacidade de continuar operando de forma segura e previsível, sem corrupção de dados ou interrupções indevidas. Responsáveis: Equipe de Qualidade (QA), Engenheiros de Teste e, em alguns cenários, equipes de SRE ou Engenharia de Plataforma.
+
+## [TDD] Integrity testing
+Integrity Testing é um tipo de teste cujo objetivo é verificar se a integridade dos dados e das operações é preservada durante o funcionamento do sistema. Ele procura responder perguntas como:
+
+- Os dados permaneceram consistentes após uma falha?
+- Uma transação bancária debitou e creditou corretamente?
+- Houve corrupção de dados?
+- O banco permaneceu em um estado consistente?
+- As mensagens foram processadas apenas uma vez (ou conforme esperado)?
+- A sincronização entre CRM e ERP manteve os dados íntegros?
+
+É muito comum em sistemas financeiros, ERPs, CRMs, sistemas de saúde e aplicações distribuídas.
+
+## [TDD] Security testing
+Testa se o sistema e os dados são acessados de maneira segura, apenas pelo autor das ações, em conformidade com a LGPD: Lei Geral de Proteção de Dados. Responsável: Equipe de SI (Segurança da Informação)
+
+## [TDD] Usability testing
+Teste focado na experiência do usuário, consistência da interface, layout, acesso às funcionalidades, etc. Responsável: Analista de Qualidade em conjunto com o Time de UX
+
+## [TDD] Volume testing
+Testa o comportamento do sistema operando com o volume “normal”  de dados  e transações envolvendo o banco de dados durante um longo período de tempo. Responsável: Analista de Qualidade com acompanhamento do time de Infra/ Banco/ Desenv e em alguns casos DevOps
+
 ## [TDD] Performance testing
 <img height="77" align="right" src="https://github.com/user-attachments/assets/9d6f0110-c613-4a90-868e-ce8afb413656" />
 
