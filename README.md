@@ -791,9 +791,11 @@ As **revisões** são uma das atividades de apoio mais comuns e envolvem a anál
 > [!Note]
 > **Real-Time Code Reviews Powered by AI**: O Slack tornou a colaboração em tempo real fluida para as equipes. A CodeRabbit traz esse mesmo espírito para as revisões de código (Code Reviews). Ele analisa cada PR usando IA consciente do contexto que entende sua base de código, sugerindo mudanças, detectando bugs e até fazendo perguntas quando algo está errado. Perfeito para equipes rápidas que querem revisões de código de qualidade sem desacelerar. Integrado ao GitHub, GitLab, é como um engenheiro sênior revisando com você em cada commit. Gratuito para código aberto.
 
-<img width="2400" height="1446" alt="unnamed" src="https://github.com/user-attachments/assets/45968025-568e-4f3c-87dd-f97d29cf0c00" />
+<img width="720" height="543" alt="Code Reviews" src="https://github.com/user-attachments/assets/ef571446-e7d4-4966-82da-b744af7656e7" />
 
 A **CodeRabbit** é um revisor de código com IA que ajuda você ou sua equipe a mesclar suas alterações de código mais rápido com qualidade superior. O CodeRabbit não aponta apenas problemas; Ele sugere, corrige e explica o raciocínio por trás das sugestões. Eleve a qualidade do código com análises baseadas em IA, conscientes do contexto, e correções em um clique.
+
+<img width="2400" height="1446" alt="unnamed" src="https://github.com/user-attachments/assets/45968025-568e-4f3c-87dd-f97d29cf0c00" />
 
 O CodeRabbit oferece:
 
