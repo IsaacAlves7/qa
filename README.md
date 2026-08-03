@@ -3373,6 +3373,8 @@ Ferramentas Especializadas em E2E:
 5. **Para Desktop**  
    - **Spectron** (para Electron): Integra Selenium com o Electron para testar aplicações desktop.  
 
+<img width="720" height="377" alt="Screenshot_20221226-192710_LinkedIn" src="https://github.com/user-attachments/assets/e42e1ace-a022-47b5-8f36-b947ad433519" />
+
 Ferramentas Complementares (como Zod):
 
 1. **Validação de Dados em Testes E2E**
