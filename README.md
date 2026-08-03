@@ -673,7 +673,7 @@ Portanto, o teste de software (Software testing) para os profissionais de QA’s
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/156de8a8-38de-4fc1-9920-aa8cb2c75f38" />
 
-O **teste de software** é a prática concreta que os profissionais de QA (no papel de testers, engenheiros de teste ou SDETs) usam para avaliar se o produto realmente cumpre o que deveria cumprir, tanto sob o ponto de vista técnico (estabilidade, performance, segurança) quanto funcional (se as regras de negócio e requisitos do usuário estão atendidos).
+O **teste de software** é a prática concreta que os profissionais de QA (no papel de testers, engenheiros de teste ou SDETs) usam para avaliar se o produto realmente cumpre o que deveria cumprir, tanto sob o ponto de vista técnico (estabilidade, performance, segurança) quanto funcional (se as regras de negócio e requisitos do usuário estão atendidos). Para nós QA’s é a forma que utilizamos para avaliar um software, com um objetivo de assegurar e garantir a qualidade do mesmo, nos pontos de vista técnico e funcional.
 
 O desenvolvimento de software tem várias fases. Quando começamos a construir software, primeiro precisamos definir o que planejamos construir. Definimos alguns limites para o escopo do software que estamos construindo, definimos processos intermediários e marcos para colocar alguns pontos de verificação sobre se estamos indo na direção certa durante o processo de desenvolvimento e definimos critérios de sucesso para que o software saiba o que construímos é o que queríamos. 
 
@@ -750,6 +750,8 @@ E dentro da distinção clássica entre *QA (Quality Assurance)* e *QC (Quality 
 
 QA olha mais para os processos, prevenindo defeitos ao longo do ciclo (definição de padrões, auditorias de qualidade, práticas de engenharia), enquanto QC foca em detectar e validar defeitos no resultado tangível — o software em execução, as integrações funcionando, os requisitos sendo cumpridos.
 
+<img width="1180" height="659" alt="image" src="https://github.com/user-attachments/assets/d580d4d0-3e5d-45dd-bca4-296d60299a0a" />
+
 Portanto, sim: quando falamos em **testes manuais, automatizados, de integração, de aceitação, de regressão, de performance, etc.**, estamos atuando dentro da **camada de QC**. Eles são o mecanismo pelo qual conseguimos transformar “expectativas de qualidade” em **evidências objetivas** de que o software funciona (ou não) como esperado.
 
 <img src="https://github.com/user-attachments/assets/bcc83195-9916-4d3a-8fe9-22a87ccf18f8" align="right" height="177">
@@ -825,7 +827,7 @@ Além disso, uma ilustração útil pode ser um diagrama que mostre a relação 
  <tr>
   <td>Tipos, técnicas e níveis de testes</td>
   <td>Tipos de testes</td>
-  <td>Ferramentas para testes (CI/CD Pipeline)</td>
+  <td>Frameworks de testes</td>
   <td>Ferramentas para testes (CI/CD Pipeline)</td>
  </tr>
  <tr>
