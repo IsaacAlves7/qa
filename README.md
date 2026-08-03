@@ -793,6 +793,20 @@ As **revisões** são uma das atividades de apoio mais comuns e envolvem a anál
 
 <img width="720" height="543" alt="Code Reviews" src="https://github.com/user-attachments/assets/ef571446-e7d4-4966-82da-b744af7656e7" />
 
+Assegurar a qualidade do código vai além de encontrar bugs. Envolve prevenir riscos futuros e manter a equipe alinhada às melhores práticas.
+
+Mesmo com revisões de código, problemas persistentes de qualidade e segurança podem passar despercebidos, gerando falhas críticas no futuro. Códigos mal avaliados causam mais do que falhas técnicas, eles aumentam a carga de manutenção e podem prejudicar toda a dinâmica da equipe.
+
+No topo desta pirâmide está o Code Style, garantindo consistência e legibilidade, fundamentais para a manutenção a longo prazo.
+
+Logo abaixo, temos os Testes, que asseguram que o novo código não introduzirá bugs ou comportamentos inesperados.
+
+O terceiro degrau, Documentação, é onde asseguramos que o conhecimento é compartilhado e que o código pode ser entendido por qualquer pessoa nova no projeto.
+
+Performance é o quarto degrau, focado em otimizar o código para eficiência, crucial para a escalabilidade e a experiência do usuário.
+
+Em seguida vem o degrau de SOLID, Clean Code, princípios que sustentam um código bem estruturado e manutenível, evitando o acúmulo de dívida técnicas.
+
 A **CodeRabbit** é um revisor de código com IA que ajuda você ou sua equipe a mesclar suas alterações de código mais rápido com qualidade superior. O CodeRabbit não aponta apenas problemas; Ele sugere, corrige e explica o raciocínio por trás das sugestões. Eleve a qualidade do código com análises baseadas em IA, conscientes do contexto, e correções em um clique.
 
 <img width="2400" height="1446" alt="unnamed" src="https://github.com/user-attachments/assets/45968025-568e-4f3c-87dd-f97d29cf0c00" />
