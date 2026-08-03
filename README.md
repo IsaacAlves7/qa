@@ -706,6 +706,24 @@ O QA atua como um guardião da qualidade, definindo e implementando processos, p
 - Prevenir defeitos: Implementar medidas preventivas para evitar que erros e defeitos sejam introduzidos no software, como revisões de código, testes unitários e análise estática de código.
 - Promover a cultura de qualidade: Incentivar a colaboração, a comunicação e o feedback entre os membros da equipe, criando um ambiente onde a qualidade é valorizada e priorizada.
 
+Além de conhecimentos técnicos sobre todo o processo de desenvolvimento de um software, tipos diferentes de testes e ferramentas e metodologias de automação de testes, validação de processos, o analista QA precisa ter características pessoais que são diferenciais para o sucesso de sua participação nos projetos, como:
+
+- Ser detalhista: Conhecer o Sistema nos detalhes, Entendimento do Negócio (relevante para dados, UX e DDD), maior chance de encontrar bugs e/ou melhorias.
+
+- Ser comunicativo (Comunicação assertiva e não agressiva)
+
+- Se atualizar (Aprendizado contínuo)
+
+- Saber abstrair (Pensamento conceitual)
+
+- Ser curioso: Não testar somente o “caminho feliz”, Questionar sempre: “Não existe pergunta idiota” (Pensamento crítico)
+
+- Pensar como técnico (Toda habilidade técnica válida nesse cenário, até com experiências passadas)
+
+- Pensar como usuário (Relevante para UI/UX Design)
+
+- Ter objetividade (Foco e determinação)
+
 **Quality Control (QC)**: Detectando e Corrigindo os Bugs
 
 Agora, imagine um inspetor de qualidade que examina cada cômodo da casa já construída, verificando se tudo está de acordo com o projeto e se não há nenhum problema. Essa é a essência do QC, um processo reativo que se concentra em detectar e corrigir defeitos no software após ele ter sido desenvolvido.
@@ -726,7 +744,7 @@ O QC atua como um detetive, buscando por bugs e falhas que podem comprometer a q
 
 QA e QC: Um Time Imbatível. QA e QC são como duas faces da mesma moeda, trabalhando em conjunto para garantir a qualidade do software. Enquanto o QA se concentra na prevenção de defeitos, o QC se concentra na detecção e correção dos problemas. A sinergia entre esses dois processos é essencial para construir um software robusto, confiável e que atenda às expectativas dos usuários.
 
-Compreender a diferença entre QA e QC é fundamental para construir uma estratégia de qualidade de software eficaz. Ao integrar as práticas de QA e QC em todo o ciclo de desenvolvimento, as empresas podem garantir que seus softwares sejam desenvolvidos com qualidade, eficiência e segurança, satisfazendo os usuários e impulsionando o sucesso do negócio.
+Compreender a diferença entre QA e QC é fundamental para construir uma estratégia de *qualidade de software* eficaz. **Qualidade de Software** é a investigação do software a fim de fornecer informações sobre sua qualidade em relação ao contexto em que ele deve operar. Ao integrar as práticas de QA e QC em todo o ciclo de desenvolvimento, as empresas podem garantir que seus softwares sejam desenvolvidos com qualidade, eficiência e segurança, satisfazendo os usuários e impulsionando o sucesso do negócio.
 
 E dentro da distinção clássica entre *QA (Quality Assurance)* e *QC (Quality Control)*, os **testes de software** se enquadram como atividades de QC, porque estão no nível da inspeção e verificação do produto final. 
 
