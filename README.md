@@ -3623,6 +3623,35 @@ Cenário: Buscar produto com sucesso
 
 O **ATDD - Acceptance Test-Driven Development** é uma prática e uma variação do desenvolvimento orientado a testes (TDD) que coloca o **teste de aceitação** como ponto central do ciclo. Enquanto no TDD tradicional o desenvolvedor escreve primeiro testes unitários para depois implementar o código que os satisfaz, no ATTD o processo começa com a definição dos testes de aceitação, geralmente descritos em linguagem mais próxima do negócio, representando os critérios que o sistema precisa cumprir para ser aceito pelo cliente ou pelo usuário final.
 
+Na maioria dos contextos, User Acceptance Testing (UAT) e Teste de Aceitação referem-se à mesma fase do processo de testes, mas existe uma pequena nuance que vale conhecer.
+
+Teste de Aceitação é o termo genérico para os testes realizados com o objetivo de verificar se o sistema atende aos critérios de aceitação e às necessidades do negócio. Ele responde à pergunta:
+
+> "O software está pronto para ser aceito?"
+
+Já User Acceptance Testing (UAT) é um tipo específico de teste de aceitação, no qual os usuários finais, clientes ou representantes do negócio validam se o sistema atende às suas expectativas e aos requisitos definidos.
+
+Na prática, muitas empresas usam os termos como sinônimos porque o tipo de teste de aceitação mais comum é justamente o UAT.
+
+Porém, em Engenharia de Software, "Teste de Aceitação" é um conceito mais amplo. Ele pode incluir diferentes modalidades, como:
+
+1. User Acceptance Testing (UAT): realizado por usuários ou representantes do negócio.
+2. Operational Acceptance Testing (OAT): verifica se o sistema está preparado para operar em produção (backup, monitoramento, recuperação, segurança, infraestrutura etc.).
+3. Contract Acceptance Testing (CAT): valida se o sistema cumpre requisitos contratuais estabelecidos entre cliente e fornecedor.
+4. Regulatory Acceptance Testing (RAT): verifica conformidade com normas, leis e regulamentações.
+
+Por exemplo, imagine um sistema bancário:
+
+1. Primeiro, a equipe de QA executa testes funcionais, integração e regressão.
+
+2. Depois, os analistas de negócio e alguns funcionários da agência realizam o UAT, confirmando que abertura de conta, transferências e pagamentos funcionam conforme esperado pelos usuários.
+
+3. Em seguida, a equipe de infraestrutura executa o OAT, verificando monitoramento, logs, backups, recuperação de desastres e disponibilidade.
+
+4. Somente após todas essas etapas o sistema é considerado apto para entrar em produção.
+
+Portanto, se você ouvir alguém dizer "vamos fazer o UAT", normalmente significa que o sistema será validado pelos usuários de negócio. Já "Teste de Aceitação" pode ser usado tanto como sinônimo de UAT quanto como um termo guarda-chuva que engloba outras formas de aceitação antes da entrega final. Em muitas empresas brasileiras, especialmente em projetos ágeis, os dois termos acabam sendo utilizados de forma intercambiável.
+
 O **User Acceptance Testing (UAT)**, ou Teste de Aceitação do Usuário, é uma etapa final e crucial dentro do ciclo de testes de software. Ele acontece quando o sistema já passou por testes internos como unitários, de integração, funcionais e de sistema e está teoricamente pronto para ser colocado em produção. 
 
 A ideia do UAT é validar se o software realmente atende às necessidades do usuário final e aos requisitos de negócio. Aqui, o foco não é tanto verificar se o código funciona sem erros técnicos, mas se a solução é útil, intuitiva e cumpre aquilo que foi solicitado e esperado. Por isso, normalmente é realizado pelos próprios usuários, clientes, stakeholders ou representantes do negócio, com o suporte da equipe de QA.
