@@ -1571,7 +1571,7 @@ O **CT - Continuous Testing** (teste contínuo) é o processo de execução de t
 
 > Você pode se confundir com a etapa de CI - Continuous Integration onde fazemos os testes automatizados antes de fazermos o deploy da nossa aplicação em CI/CD Pipeline, mas não é a mesma definição de Continuous Testing.
 
-<img width="1920" height="961" alt="testing-stack@4x" src="https://github.com/user-attachments/assets/4154bec9-bc1d-4f4d-84bc-5a2eb822d957" />
+<img height="777" align="right" src="https://github.com/user-attachments/assets/4154bec9-bc1d-4f4d-84bc-5a2eb822d957" />
 
 A ideia do Continuous Testing é que em cada etapa do desenvolvimento do software deverá haver testes, seja na branch que estamos usando ao desenvolver o código, seja no processo de build do nosso código, seja no processo de testes automatizados, seja no processo do código já estar rodando em produção, onde podemos monitorar e testar ele. Ou seja, o CT lida diretamente com todo o ciclo de DevOps Pipeline (Code, Build, Plan, Release, Monitor, Operate e Deploy), onde há um teste em cada uma dessas etapas.
 
