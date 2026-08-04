@@ -1419,9 +1419,16 @@ Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de cove
 
 Por fim, construir um teste automatizado bom exige prática, disciplina e conhecimento. Não é só sobre ferramentas, mas sobre escrever código de teste que seja confiável, fácil de manter e que reflita as regras de negócio do sistema. É preciso ter clareza sobre o que vale a pena testar, manter a suíte de testes rápida e identificar o ponto de equilíbrio entre cobertura e custo de manutenção. Testes automatizados são investimento — e como todo investimento, precisam de foco, consistência e revisão contínua para darem retorno real.
 
-O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes. Veja algumas ferramentas para automação de testes:
+O desenvolvimento, inspeção e o teste de unidade são as três partes do teste de códigos. Numa era onde tudo é automatizado, testadores de software tem demandado cada vez mais ferramentas de automação de testes.
 
-<img width="1028" height="560" alt="servicos-qa-testes-por-camada" src="https://github.com/user-attachments/assets/ed239152-39e5-48fd-81c4-3a2492b99324" />
+<table>
+   <tr>
+      <td><img width="1028" height="560" alt="servicos-qa-testes-por-camada" src="https://github.com/user-attachments/assets/ed239152-39e5-48fd-81c4-3a2492b99324" /></td>
+      <td><img width="1276" height="718" alt="Captura de tela 2026-07-26 171912" src="https://github.com/user-attachments/assets/83bf6f5b-aa7a-4044-b684-def23d608fa0" /></td>
+   </tr>
+</table>
+
+Veja algumas ferramentas para automação de testes:
 
 <img src="https://github.com/user-attachments/assets/3c87b05b-6715-4178-8166-9bf528c4e3ff" height="77" align="right"> 
 
