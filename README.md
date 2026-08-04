@@ -1540,7 +1540,6 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
   
    - **RestAssured**: Biblioteca para teste de APIs REST em Java.
 
-
 7. **Ferramentas de Integração Contínua**:
 
    - **Jenkins**: Ferramenta de integração contínua que pode ser usada para executar testes automatizados.
@@ -1564,6 +1563,73 @@ Existem muitas ferramentas de testes automatizados disponíveis para diversas li
    - **Istanbul**: Ferramenta de cobertura de testes para JavaScript.
 
 Essas ferramentas ajudam a automatizar diferentes tipos de testes, desde testes unitários básicos até testes de performance e segurança, garantindo a qualidade e a estabilidade do software durante todo o ciclo de desenvolvimento.
+
+## [QA] CT - Continuous testing
+<div align="center"><img src="https://user-images.githubusercontent.com/61624336/235341039-415972c1-3301-49bb-8fe3-0df44be04201.jpg"></div><br />
+
+O **CT - Continuous Testing** (teste contínuo) é o processo de execução de testes automatizados como parte do pipeline de entrega de software para obter feedback imediato sobre os riscos de negócios associados a um candidato a lançamento de software. 
+
+> Você pode se confundir com a etapa de CI - Continuous Integration onde fazemos os testes automatizados antes de fazermos o deploy da nossa aplicação em CI/CD Pipeline, mas não é a mesma definição de Continuous Testing.
+
+<img width="1920" height="961" alt="testing-stack@4x" src="https://github.com/user-attachments/assets/4154bec9-bc1d-4f4d-84bc-5a2eb822d957" />
+
+A ideia do Continuous Testing é que em cada etapa do desenvolvimento do software deverá haver testes, seja na branch que estamos usando ao desenvolver o código, seja no processo de build do nosso código, seja no processo de testes automatizados, seja no processo do código já estar rodando em produção, onde podemos monitorar e testar ele. Ou seja, o CT lida diretamente com todo o ciclo de DevOps Pipeline (Code, Build, Plan, Release, Monitor, Operate e Deploy), onde há um teste em cada uma dessas etapas.
+
+> Ou seja, o CT é uma cultura de testes para o desenvolvimento de software, priorizando eles em todas as etapas.
+
+- **Code**: Testes de unidade, integração, E2E;
+
+- **Build**: Cobertura de código, testes de mutação;
+
+- **Test**: Testes exploratórios, testes de UX;
+
+- **Deploy**: Versões beta, testes A/B, crowdtesting.
+
+A **depuração** (debugging) é uma atividade fundamental que permeia vários tipos de testes de software, mas está mais diretamente associada a alguns tipos específicos de testes. A depuração é uma atividade transversal e essencial em várias fases e tipos de testes de software. Embora seja mais intensamente utilizada durante o desenvolvimento e testes unitários, sua aplicação é crucial em qualquer estágio onde problemas ou defeitos precisam ser investigados e corrigidos. A eficiência da depuração muitas vezes determina a rapidez com que os problemas podem ser resolvidos, contribuindo para a estabilidade e qualidade do software.
+
+Aqui está um detalhamento de como a depuração se relaciona com diferentes tipos de testes de software:
+
+1. **Testes Unitários**:
+
+  - **Depuração durante o Desenvolvimento**: Durante o desenvolvimento de testes unitários, os desenvolvedores frequentemente usam depuradores para entender e corrigir problemas no código de pequenas unidades (módulos, funções ou classes).
+
+  - **Localização de Bugs**: Quando um teste unitário falha, a depuração ajuda a identificar a causa exata do problema.
+
+2. **Testes de Integração**:
+
+  - **Verificação de Interações**: A depuração é usada para garantir que diferentes módulos ou componentes do sistema interajam corretamente. Isso é crucial quando testes de integração falham, indicando problemas na comunicação entre componentes.
+
+3. **Testes Funcionais**:
+
+  - **Validação de Funcionalidades**: Quando testes funcionais (também conhecidos como testes de caixa preta) detectam que uma funcionalidade não está operando como esperado, a depuração ajuda a investigar e resolver a causa raiz do problema.
+
+  - **Correção de Defeitos**: Após a identificação de defeitos em funcionalidades específicas, a depuração é essencial para corrigir esses defeitos.
+
+4. **Testes de Sistema**:
+  
+  - **Diagnóstico de Problemas Complexos**: Em testes de sistema, onde o software completo é testado, a depuração ajuda a diagnosticar problemas que podem surgir de interações complexas entre diferentes partes do sistema.
+
+5. **Testes de Aceitação**:
+  
+  - **Validação Final**: Antes que o software seja aceito pelo cliente ou pelo usuário final, a depuração pode ser utilizada para resolver problemas finais identificados durante os testes de aceitação.
+
+6. **Testes de Regressão**:
+
+  - **Identificação de Regressões**: Quando testes de regressão detectam que uma funcionalidade previamente funcionando está falhando, a depuração é usada para identificar e corrigir a regressão.
+
+7. **Testes de Performance**:
+  
+  - **Análise de Gargalos**: A depuração pode ser usada em combinação com ferramentas de perfilamento para identificar e corrigir gargalos de desempenho.
+
+  - **Correção de Problemas de Performance**: Problemas detectados durante testes de carga e stress podem requerer depuração para otimizar o código.
+
+Ferramentas Comuns de Depuração:
+
+- **IDEs (Ambientes de Desenvolvimento Integrados)**: A maioria dos IDEs modernos, como IntelliJ IDEA, Visual Studio, PyCharm, Eclipse, etc., possuem ferramentas integradas de depuração que permitem inspeção de variáveis, configuração de pontos de interrupção (breakpoints) e execução passo a passo do código.
+
+- **Depuradores Específicos de Linguagem**: GDB para C/C++, pdb para Python, jdb para Java, entre outros.
+
+- **Ferramentas de Perfilamento e Monitoramento**: Ferramentas como VisualVM (para Java), Py-Spy (para Python), e Chrome DevTools (para JavaScript) combinam capacidades de depuração e análise de desempenho.
 
 # 🎡 DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
