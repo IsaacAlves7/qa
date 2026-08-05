@@ -1415,6 +1415,9 @@ Na construção de um bom teste automatizado:
 
 Além disso, não se deve esquecer do **relato dos testes**. Ferramentas de coverage (cobertura de código) como **Istanbul**, **Coverlet** ou **Codecov** ajudam a visualizar o quanto do código está sendo testado, embora **cobertura alta não signifique qualidade alta** é possível ter 100% de cobertura e testes inúteis. O ideal é buscar cobertura útil, ou seja, testes que validam fluxos importantes, limites, erros e casos reais de uso.
 
+> [!Note]
+> Os testes automatizados normalmente exigem adaptações tanto na aplicação quanto na pipeline de CI/CD. O arquivo `.yml` apenas orquestra a execução dos testes; ele não substitui a implementação nem a preparação do software para ser testado. O arquivo `.yml` (GitHub Actions, GitLab CI, Azure Pipelines etc.) é apenas o "maestro" da orquestral, apenas automatiza a execução, mas a qualidade dos testes depende da arquitetura do software, da organização do código e da estratégia de testes adotada. Ele faz coisas como: instalar dependências; iniciar banco de dados; subir containers; executar `npm test`, `dotnet test`, `pytest`; gerar relatórios; publicar cobertura de código. Ele não cria os testes nem torna uma aplicação testável. Essa visão está alinhada com práticas como TDD, BDD, Testabilidade, Clean Architecture e Quality Engineering, nas quais a preocupação com testes começa no design da aplicação, e não apenas na pipeline de integração contínua no sentido absoluto.
+
 <img width="1873" height="709" alt="Automation-Test-Strategy" src="https://github.com/user-attachments/assets/d66dc721-506b-4701-ab1b-d5e7287d58bd" />
 
 Por fim, construir um teste automatizado bom exige prática, disciplina e conhecimento. Não é só sobre ferramentas, mas sobre escrever código de teste que seja confiável, fácil de manter e que reflita as regras de negócio do sistema. É preciso ter clareza sobre o que vale a pena testar, manter a suíte de testes rápida e identificar o ponto de equilíbrio entre cobertura e custo de manutenção. Testes automatizados são investimento — e como todo investimento, precisam de foco, consistência e revisão contínua para darem retorno real.
@@ -2872,6 +2875,64 @@ Quando você combina esses três conceitos, você pode comunicar algo como:
 > [!Tip]
 > "No nosso sistema, utilizamos uma abordagem de Domain-Driven Design (DDD) para modelar nosso domínio de negócio. Cada parte do domínio de negócio é implementada como um microsserviço independente, permitindo escalabilidade e independência de desenvolvimento. Além disso, garantimos a qualidade e a correção da lógica de negócio com testes unitários abrangentes, que validam cada componente do nosso domínio de negócio."
 
+Um comando muito útil para testes é o `test.each` que é usado em testes unitários (e também funciona bem em testes de integração), e é um recurso disponível em frameworks de teste JavaScript como **Jest** e **Vitest** (o Mocha tem equivalente parecido).
+
+Para que serve: Ele resolve um problema comum: quando você precisa testar a **mesma lógica** com **entradas diferentes**, sem copiar e colar o mesmo bloco de teste várias vezes.
+
+Sem test.each (repetitivo):
+
+```javascript
+test('soma 1 + 2 deve ser 3', () => {
+  expect(soma(1, 2)).toBe(3);
+});
+
+test('soma 2 + 2 deve ser 4', () => {
+  expect(soma(2, 2)).toBe(4);
+});
+
+test('soma -1 + 1 deve ser 0', () => {
+  expect(soma(-1, 1)).toBe(0);
+});
+```
+
+Com `test.each` (limpo e escalável):
+
+```javascript
+test.each([
+  [1, 2, 3],
+  [2, 2, 4],
+  [-1, 1, 0],
+])('soma %i + %i deve ser %i', (a, b, esperado) => {
+  expect(soma(a, b)).toBe(esperado);
+});
+```
+
+Como funciona:
+
+- O primeiro argumento é um **array de arrays** (ou de objetos), onde cada item representa um caso de teste.
+- O Jest gera **um teste separado para cada linha** — ou seja, no exemplo acima, você tem 3 testes distintos, cada um aparecendo individualmente no relatório.
+- Os `%i`, `%s`, `%o` etc. na string do título são placeholders que o Jest substitui automaticamente pelos valores (número, string, objeto...).
+
+Também funciona com objetos (mais legível em casos complexos):
+
+```javascript
+test.each([
+  { a: 1, b: 2, esperado: 3 },
+  { a: 2, b: 2, esperado: 4 },
+])('soma $a + $b deve ser $esperado', ({ a, b, esperado }) => {
+  expect(soma(a, b)).toBe(esperado);
+});
+```
+
+Por que isso importa na prática:
+
+1. **DRY (Don't Repeat Yourself)** — você escreve a lógica de asserção uma única vez.
+2. **Cobertura fácil de aumentar** — adicionar um novo caso de teste é só adicionar uma linha no array, não escrever um `test()` inteiro novo.
+3. **Legibilidade** — fica claro, de forma tabular, quais são as entradas e saídas esperadas — funciona quase como uma tabela de casos de teste.
+4. **Facilita testar edge cases** — números negativos, zero, valores nulos, strings vazias, etc., tudo junto e organizado.
+
+Isso conecta diretamente com aquele print anterior: **"com o test.each, você ganha tempo na escrita dos cenários de testes"** — porque você para de escrever testes repetitivos e passa a focar em *quais casos* precisam ser cobertos, não em *como* escrever cada teste individualmente. Dessa forma, podemos testar essa condição para vários casos sem repetir o código do teste! Com o "test.each", você ganha tempo na escrita dos cenarios de testes!
+
 Agora, imagine que você precisa validar o funcionamento de sua aplicação em um determinado cenário, mas este cenário só funciona se integrado com uma aplicação de terceiros específica, a qual você não tem total acesso.
 
 O fato de você não ter acesso traz um dilema: ou você ignora a integração e roda o teste, inviabilizando a obtenção de resultados assertivos, ou não testa de modo algum.
@@ -2884,7 +2945,7 @@ O ideal seria existir algo que possibilitasse que os testes trouxessem os melhor
 
 Os **Test doubles** são objetos usados em testes de software para substituir componentes reais que um sistema ou módulo depende, permitindo que os testes sejam mais controláveis, isolados, rápidos e confiáveis. O nome “double” vem da ideia de um “dublê” no cinema: alguém que substitui o ator em cenas arriscadas. No código, os test doubles substituem partes reais (como um banco de dados, uma API externa ou até um serviço interno) que você não quer ou não pode usar diretamente durante o teste. Termo genérico para qualquer substituição de objeto de produção em testes.
 
-De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro. O termo vem da analogia com os “dublês de cinema”: quando você não pode (ou não deve) usar um componente real em um teste, você o substitui por uma versão simulada que cumpre o mesmo papel de forma controlada e previsível. Os *test doubles* podem ser aplicados **a qualquer dependência externa ou componente cuja execução real atrapalhe o isolamento do teste**.
+De acordo com Martin Fowler, test doubles é um conceito usado quando, para viabilizar a realização de testes, algum objeto em produção precisa ser substituído por outro. O termo vem da analogia com os “dublês de cinema”: quando você não pode (ou não deve) usar um componente real em um teste, você o substitui por uma versão simulada que cumpre o mesmo papel de forma controlada e previsível. Os *test doubles* podem ser aplicados a qualquer dependência externa ou componente cuja execução real atrapalhe o isolamento do teste.
 
 <img height="277" align="right" src="https://github.com/user-attachments/assets/b3dfda90-1d63-4672-adfe-67e334ee45cd" />
 
