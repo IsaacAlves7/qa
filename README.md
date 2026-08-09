@@ -1616,6 +1616,113 @@ Ferramentas Comuns de Depuração:
 
 - **Ferramentas de Perfilamento e Monitoramento**: Ferramentas como VisualVM (para Java), Py-Spy (para Python), e Chrome DevTools (para JavaScript) combinam capacidades de depuração e análise de desempenho.
 
+Para realização de todos esses testes, o ciclo de condução de uma sessão de testes é necessário, muito associado a **testes exploratórios (Exploratory Testing)**. Ele representa o fluxo de preparação, execução, análise e aprendizado durante uma sessão de teste. A sequência é:
+
+```
+1. Charter → 2. Session → 3. Report → 4. Debrief → 5. Parsing Results → volta ao Charter
+```
+
+Charter: É a **missão/objetivo da sessão de teste**. Define o que será explorado, qual área do sistema será investigada e quais perguntas o teste pretende responder.
+
+Exemplo:
+
+> "Explorar o fluxo de checkout, procurando problemas relacionados a cupons, pagamentos e cálculo de frete."
+
+Não é necessariamente um roteiro rígido; é mais uma **direção para a investigação**.
+
+Session
+
+É a **execução da sessão de testes**. O testador interage com o sistema, experimenta diferentes cenários, cria hipóteses e observa comportamentos.
+
+Aqui entra bastante a característica do **Exploratory Testing**: teste e aprendizado acontecem simultaneamente.
+
+```text
+Explorar → observar → formular hipótese → testar → aprender → explorar novamente
+```
+
+Report
+
+Depois da sessão, são registrados os **resultados encontrados**: bugs, comportamentos interessantes, riscos, evidências, dúvidas etc.
+
+Por exemplo:
+
+```text
+Checkout
+ ├── Cupom válido → OK
+ ├── Cupom expirado → OK
+ ├── Cupom + frete grátis → comportamento inesperado
+ └── Pagamento recusado → mensagem inconsistente
+```
+
+ Debrief
+
+É a **conversa/análise após a sessão**.
+
+O objetivo é discutir o que foi descoberto, o que ficou sem resposta, quais riscos apareceram e quais testes deveriam ser realizados posteriormente.
+
+É uma etapa importante porque transforma a execução em **conhecimento compartilhado**.
+
+Parsing Results
+
+Aqui ocorre a **análise/interpretação dos resultados coletados**. Você procura padrões, tendências, problemas recorrentes e informações que possam orientar as próximas sessões.
+
+Por exemplo:
+
+> "Vários problemas encontrados durante a exploração acontecem quando duas regras de negócio são aplicadas simultaneamente."
+
+Isso pode gerar uma nova hipótese.
+
+E então o ciclo retorna para:
+
+**novo Charter → nova Session → Report → Debrief → análise → novo Charter...**
+
+A ideia central
+
+Esse ciclo é diferente de simplesmente:
+
+```text
+Escrever teste
+   ↓
+Executar
+   ↓
+Passou/Falhou
+```
+
+Ele é mais próximo de: DDD, TDD e BDD
+
+```text
+        ┌──────────────┐
+        │    Charter   │
+        │   objetivo   │
+        └──────┬───────┘
+               ↓
+        ┌──────────────┐
+        │    Session   │
+        │   explorar   │
+        └──────┬───────┘
+               ↓
+        ┌──────────────┐
+        │    Report    │
+        │   resultados │
+        └──────┬───────┘
+               ↓
+        ┌──────────────┐
+        │   Debrief    │
+        │    discutir  │
+        └──────┬───────┘
+               ↓
+        ┌──────────────┐
+        │Parse Results │
+        │   analisar   │
+        └──────┬───────┘
+               │
+               └──────→ novo Charter
+```
+
+Ou seja, é um ciclo de aprendizado baseado em sessões de teste exploratório. O resultado de uma sessão alimenta a próxima, fazendo com que o teste seja adaptativo em vez de seguir exclusivamente um roteiro previamente definido.
+
+E isso combina bastante com a filosofia de **Exploratory Testing**: **planejar, testar, observar e aprender acontecem de forma contínua**, em vez de serem fases completamente separadas.
+
 # 🎡 DDD - Domain-Driven Design
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
