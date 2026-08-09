@@ -3943,6 +3943,75 @@ Cenário: Buscar produto com sucesso
 
 <img width="627" height="713" alt="MicrosoftTeams-image" src="https://github.com/user-attachments/assets/3983addb-c8ba-40c2-ab0e-d9ea1063971e" />
 
+Esse ciclo é o **BDD (Behavior-Driven Development)**, mais especificamente o ciclo de desenvolvimento orientado por comportamento conhecido como **“Red → Green”** dentro de uma abordagem BDD.
+
+A sequência da imagem representa:
+
+1. **Decide Behavior** → define o comportamento esperado do sistema.
+2. **Write Step Definition** → escreve a definição dos passos que representam esse comportamento.
+3. **Run + Fail** → executa e inicialmente **falha**, porque o comportamento ainda não está implementado.
+4. **Write code to make step pass** → implementa o código necessário para satisfazer o comportamento.
+5. **Run + Pass** → executa novamente e o teste **passa**.
+
+Em termos de fluxo:
+
+```text
+Decide Behavior
+       ↓
+Write Step Definition
+       ↓
+   Run + Fail       ← RED
+       ↓
+Write code to
+make step pass
+       ↓
+   Run + Pass       ← GREEN
+       ↺
+```
+
+Isso é muito próximo do ciclo clássico do **TDD**:
+
+```sh
+RED → GREEN → REFACTOR
+```
+
+A diferença é que, no **BDD**, o ponto de partida é o **comportamento observável do sistema**, normalmente descrito em linguagem próxima da linguagem de negócio, frequentemente usando **Gherkin**:
+
+```gherkin
+Given ...
+When ...
+Then ...
+```
+
+Por exemplo:
+
+```gherkin
+Feature: Login
+
+Scenario: Usuário informa credenciais válidas
+  Given que o usuário está na tela de login
+  When ele informa credenciais válidas
+  Then deve acessar sua conta
+```
+
+Depois você cria as **step definitions** correspondentes:
+
+```text
+Given → implementação do contexto
+When  → implementação da ação
+Then  → implementação da verificação
+```
+
+Executa → **falha** → implementa a funcionalidade → executa → **passa**.
+
+Então, se você estiver classificando os ciclos:
+
+**TDD:** `Red → Green → Refactor`
+
+**BDD:** `Behavior → Step Definition → Fail → Implementation → Pass`
+
+E o ciclo da imagem é uma forma visual de representar BDD usando uma dinâmica semelhante ao Red/Green do TDD, com o foco deslocado de "qual código preciso escrever?" para "qual comportamento o sistema deve apresentar?".
+
 # 📦 ATDD - Acceptance Test-Driven Development
 <img src="https://img.shields.io/badge/Python-3.10.7-3776AB?style=flat&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-16.17.0-339933?style=flat&logo=Node.js&logoColor=white"> <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=flat&logo=Ruby&logoColor=white"> <img src="https://img.shields.io/badge/Go-1.21-00ADD8?style=flat&logo=Go&logoColor=white"> <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=PHP&logoColor=white"> <img src="https://img.shields.io/badge/C++-23-F5455C?style=flat&logo=CPlusPlus&logoColor=white"> <img src="https://img.shields.io/badge/Java-22.0.1-chocolate?style=flat&logo=OpenJDK&logoColor=white"> <img src="https://img.shields.io/badge/.NET-8.0.300-512BD4?style=flat&logo=DotNet&logoColor=white"> <img src="https://img.shields.io/badge/Rust-1.82.0-dda584?style=flat&logo=Rust&logoColor=white"> <img src="https://img.shields.io/badge/UML-diagrams-purple?style=flat&logo=UML&logoColor=white"> 
 
