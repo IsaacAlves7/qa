@@ -1688,7 +1688,7 @@ Executar
 Passou/Falhou
 ```
 
-Ele é mais próximo de: DDD, TDD e BDD
+Ele é mais próximo de:
 
 ```text
         ┌──────────────┐
