@@ -1592,39 +1592,21 @@ A **depuração** (debugging) é uma atividade fundamental que permeia vários t
 
 Aqui está um detalhamento de como a depuração se relaciona com diferentes tipos de testes de software:
 
-1. **Testes Unitários**:
+<img width="905" height="504" alt="servicos-qa-automacao" src="https://github.com/user-attachments/assets/a1d1d884-9de0-4d31-958e-7cce72bc5985" />
 
-  - **Depuração durante o Desenvolvimento**: Durante o desenvolvimento de testes unitários, os desenvolvedores frequentemente usam depuradores para entender e corrigir problemas no código de pequenas unidades (módulos, funções ou classes).
+1. **Testes Unitários**: **Depuração durante o Desenvolvimento**: Durante o desenvolvimento de testes unitários, os desenvolvedores frequentemente usam depuradores para entender e corrigir problemas no código de pequenas unidades (módulos, funções ou classes). **Localização de Bugs**: Quando um teste unitário falha, a depuração ajuda a identificar a causa exata do problema.
 
-  - **Localização de Bugs**: Quando um teste unitário falha, a depuração ajuda a identificar a causa exata do problema.
+2. **Testes de Integração**: **Verificação de Interações**: A depuração é usada para garantir que diferentes módulos ou componentes do sistema interajam corretamente. Isso é crucial quando testes de integração falham, indicando problemas na comunicação entre componentes.
 
-2. **Testes de Integração**:
+3. **Testes Funcionais**: **Validação de Funcionalidades**: Quando testes funcionais (também conhecidos como testes de caixa preta) detectam que uma funcionalidade não está operando como esperado, a depuração ajuda a investigar e resolver a causa raiz do problema. **Correção de Defeitos**: Após a identificação de defeitos em funcionalidades específicas, a depuração é essencial para corrigir esses defeitos.
 
-  - **Verificação de Interações**: A depuração é usada para garantir que diferentes módulos ou componentes do sistema interajam corretamente. Isso é crucial quando testes de integração falham, indicando problemas na comunicação entre componentes.
+4. **Testes de Sistema**: **Diagnóstico de Problemas Complexos**: Em testes de sistema, onde o software completo é testado, a depuração ajuda a diagnosticar problemas que podem surgir de interações complexas entre diferentes partes do sistema.
 
-3. **Testes Funcionais**:
+5. **Testes de Aceitação**: **Validação Final**: Antes que o software seja aceito pelo cliente ou pelo usuário final, a depuração pode ser utilizada para resolver problemas finais identificados durante os testes de aceitação.
 
-  - **Validação de Funcionalidades**: Quando testes funcionais (também conhecidos como testes de caixa preta) detectam que uma funcionalidade não está operando como esperado, a depuração ajuda a investigar e resolver a causa raiz do problema.
+6. **Testes de Regressão**: **Identificação de Regressões**: Quando testes de regressão detectam que uma funcionalidade previamente funcionando está falhando, a depuração é usada para identificar e corrigir a regressão.
 
-  - **Correção de Defeitos**: Após a identificação de defeitos em funcionalidades específicas, a depuração é essencial para corrigir esses defeitos.
-
-4. **Testes de Sistema**:
-  
-  - **Diagnóstico de Problemas Complexos**: Em testes de sistema, onde o software completo é testado, a depuração ajuda a diagnosticar problemas que podem surgir de interações complexas entre diferentes partes do sistema.
-
-5. **Testes de Aceitação**:
-  
-  - **Validação Final**: Antes que o software seja aceito pelo cliente ou pelo usuário final, a depuração pode ser utilizada para resolver problemas finais identificados durante os testes de aceitação.
-
-6. **Testes de Regressão**:
-
-  - **Identificação de Regressões**: Quando testes de regressão detectam que uma funcionalidade previamente funcionando está falhando, a depuração é usada para identificar e corrigir a regressão.
-
-7. **Testes de Performance**:
-  
-  - **Análise de Gargalos**: A depuração pode ser usada em combinação com ferramentas de perfilamento para identificar e corrigir gargalos de desempenho.
-
-  - **Correção de Problemas de Performance**: Problemas detectados durante testes de carga e stress podem requerer depuração para otimizar o código.
+7. **Testes de Performance**: **Análise de Gargalos**: A depuração pode ser usada em combinação com ferramentas de perfilamento para identificar e corrigir gargalos de desempenho. **Correção de Problemas de Performance**: Problemas detectados durante testes de carga e stress podem requerer depuração para otimizar o código.
 
 Ferramentas Comuns de Depuração:
 
