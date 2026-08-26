@@ -10,6 +10,7 @@
 > Versículo chave: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." - Provérbios 16:3
 
 # It's a repository of QA/QC from scratch 🧪
+
 <a href="https://github.com/ryanmcdermott/clean-code-javascript"><img src="https://img.shields.io/badge/Clean_Code-JS-ECD53F?style=flat&logo=JavaScript&logoColor=white"></a> <a href="https://github.com/labs42io/clean-code-typescript"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-TS-blue?style=flat&logo=TypeScript&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-Spring_Boot-limegreen?style=flat&logo=SpringBoot&logoColor=white"></a> <a href="https://github.com/rmanguinho/clean-ts-api"><img src="https://img.shields.io/badge/Clean_Code-.NET-purple?style=flat&logo=.NET&logoColor=white"></a> 
 
 > 🧪 **Preparação**: Para este conteúdo, o aluno deverá dispor de um computador com acesso à internet, um web browser com suporte a HTML 5 (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera etc.), um editor de texto ou IDE (VSCode etc.).
@@ -525,6 +526,7 @@ Considerações adicionais para definir um processo de implantação
    <tr>
       <td><img width="720" height="1010" alt="Screenshot_20240729-151549_Instagram" src="https://github.com/user-attachments/assets/0bab53ac-6010-41d9-a38f-62a57465f8e1" /></td>
       <td><img width="720" height="833" alt="Screenshot_20240606-111700_Instagram" src="https://github.com/user-attachments/assets/dc9ebf82-3b9f-4f0d-bcd3-56cd9982ac7b" /></td>
+      <td><img width="720" height="720" alt="5cbea72c-8d48-432b-a4a0-d3086dba8949" src="https://github.com/user-attachments/assets/dfe57d9a-df72-44e4-ab8b-39145417db5f" /></td>
    </tr>
 </table>
 
