@@ -445,6 +445,8 @@ No fim das contas, esse modelo de gestão de repositórios e revisões é justam
 > [!Note]
 > **FUNDAMENTOS DA QUALIDADE DE SOFTWARE**: Incluem a definição de requisitos, o planejamento de testes e a execução de testes de forma sistemática. Esses processos são essenciais para garantir que o software desenvolvido atenda às necessidades do usuário e atinja a qualidade esperada.
 
+Criada pelo filósofo Cícero a palavra qualidade vem do latim: _qualitas_ ou _qualitatem_. _qualis_ significa “de que natureza”, “A qualidade representa as características e propriedades de uma realidade que é observável. Em seu nível mais elevado, conduz à excelência, que pode ser caracterizada como um nível de qualidade superior.
+
 No antigo Egito, há aproximadamente 4 mil anos, para que as construções fossem feitas com **qualidade**, definiu-se o cúbito, que era a distância do cotovelo à ponta do indicador do faraó. Uma das primeiras tentativas da humanidade de _padronizar_ as medidas, gerando qualidade nas construções.
 
 Nesta escultura, temos na base um compilado com as regras e leis a serem seguidas, impostas por Hamurabi, Rei da Babilônia, que era aplicada a cidadãos livres, comerciantes, escravos, etc. Uma das primeiras tentativas de _padronizar_ as regras de convívio da sociedade, há aproximadamente 3.800 anos atrás.
@@ -463,8 +465,15 @@ Mas foi somente com a Segunda Guerra Mundial que a qualidade passou a ser vista 
 
 4. **QUALIDADE TOTAL**: Teve início na década de 1980, trouxe a ideia de que a qualidade não é responsabilidade apenas da área de desenvolvimento de software, mas sim de toda a organização. Foram estabelecidos processos de melhoria contínua e a necessidade de se envolver todos os departamentos e funcionários na busca pela qualidade.
 
-5. **QUALIDADE DE SOFTWARE**: Teve início nos anos 1990, trouxe a necessidade de se preocupar com a qualidade do processo de desenvolvimento do software, e não apenas com o produto final. Surgiram novas metodologias e modelos de maturidade, como o Capability Matu
-rity Model Integration (CMMI) e o ISO/IEC 12207, que buscam garantir a qualidade do processo de desenvolvimento.
+5. **QUALIDADE DE SOFTWARE**: Teve início nos anos 1990, trouxe a necessidade de se preocupar com a qualidade do processo de desenvolvimento do software, e não apenas com o produto final. Surgiram novas metodologias e modelos de maturidade, como o Capability Maturity Model Integration (CMMI) e o ISO/IEC 12207, que buscam garantir a qualidade do processo de desenvolvimento.
+
+O que é Qualidade?
+
+- ISO - Qualidade consiste na totalidade de recursos e características de um produto ou serviço que influenciam sua capacidade de satisfazer necessidades declaradas ou implícitas
+
+- ISTQB - Grau até o qual um componente, sistema ou processo atende aos requisitos especificados e/ou às necessidades e expectativas do usuário/consumidor.
+
+- ISO/IEC 9126 – Qualidade em um software deve ser correto, manutenível, confiável, flexível, eficiente, testável, integro, portável, fácil de usar, reutilizável e interoperável
 
 No início da década de 1980, o governo dos Estados Unidos reconheceu a necessidade de padronizar a qualidade do software. Em 1986, foi publicado o padrão IEEE 610.12, que definiu a terminologia básica usada em engenharia de software, incluindo definições de qualidade de software. Essas definições incluem “qualidade de software” como o grau em que um sistema, componente ou processo atende aos requisitos especificados e/ou implícitos e às necessidades ou expectativas do usuário.
 
