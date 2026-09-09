@@ -3648,9 +3648,16 @@ Cada uma dessas ferramentas atende a cenários diferentes, mas todas compartilha
 
 O **E2E - End-to-end** refere-se a um tipo de teste ou processo que envolve a verificação de um sistema ou fluxo de trabalho em sua totalidade, desde o início até o fim, simulando as condições reais de uso pelo usuário final. Em resumo, "end-to-end" se refere à abordagem de teste que abrange todo o sistema ou processo, do início ao fim, para garantir seu funcionamento correto e eficaz.
 
+Pode gerar confusão porque as pessoas usam "E2E" como sinônimo de "teste de UI", mas não é a mesma coisa. E2E é sobre o fluxo completo, não sobre a camada. "End-to-end" significa testar o fluxo de negócio inteiro, do início ao fim, atravessando todas as camadas reais do sistema (não mockadas). A UI é só uma forma de disparar esse fluxo — não é obrigatória. 
+
 O E2E verifica se todos os componentes de um sistema (front-end, back-end, bancos de dados, APIs externas, etc.) funcionam juntos conforme esperado, do início ao fim. Em um contexto de desenvolvimento de software, os testes end-to-end são realizados para garantir que todas as partes do sistema estejam funcionando corretamente juntas, desde a interface do usuário até o backend, incluindo integrações com outros sistemas, se aplicável. Isso é feito para garantir que o sistema esteja se comportando conforme o esperado e atendendo aos requisitos do usuário final.
 
 Os testes end-to-end são frequentemente usados para validar fluxos de trabalho completos em um aplicativo ou site, simulando a interação do usuário final com o sistema. Eles podem envolver a automação de cliques de mouse, preenchimento de formulários, navegação entre páginas e verificação de resultados. No entanto, a validação é um conceito que se aplica a múltiplos níveis de teste, incluindo o E2E, mas não é exclusiva dele. 
+
+Dado que seu perfil é mais backend-leaning (Java/Spring/Quarkus, .NET, Go, Python), o tipo de teste automatizado que você provavelmente mais escreve no dia a dia é o de API/integração — é o que dá melhor custo-benefício para validar regras de negócio sem o overhead e a fragilidade de manter testes de UI. Nesse contexto (backend-leaning, microsserviços), é bem comum fazer E2E via API mesmo, especialmente quando o sistema não tem UI própria ou quando o time de backend quer validar o fluxo sem depender do front. Então, se você mexe com vários desses estilos (tem projeto de microsserviços multi-banco, API monolítica, pipeline com arquitetura hexagonal, monolíticos modulares), isso é bem aplicável no seu contexto — inclusive dá pra pensar em como estruturar a suíte de testes de cada projeto seu de acordo com o nível arquitetural dele, em vez de aplicar a mesma estratégia de teste pra tudo.
+
+> [!Tip]
+> É interessante então automatizar a mesma aplicação com automação de testes, E2E, e usando diferentes níveis arquiteturais (microserviços, bff, monolítico, monoliticos modulares).
 
 As principais ferramentas para testes *E2E (End-to-End)* e soluções complementares (como Zod) para validação de dados, organizadas por contexto de uso:
 
