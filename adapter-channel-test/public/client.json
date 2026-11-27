@@ -1,0 +1,21 @@
+{
+    "runtime": {
+        "arguments": "--v=1",
+        "version": "alpha"
+    },
+    "platform": {
+        "uuid": "AdapterChannelTest",
+        "applicationIcon": "https://openfin.github.io/golden-prototype/favicon.ico",
+        "autoShow": false,
+        "providerUrl": "${APP_ROOT_URL}/provider.html",
+        "contextMenu": true,
+        "defaultWidth": 600,
+        "defaultHeight": 600,
+        "defaultLeft": 0,
+        "defaultTop": 0,
+        "saveWindowState": false,
+        "backgroundThrottling": true,
+        "minHeight": 445,
+        "minWidth": 354
+    }
+}

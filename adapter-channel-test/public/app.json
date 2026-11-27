@@ -1,0 +1,21 @@
+{
+    "runtime": {
+        "arguments": "--v=1",
+        "version": "canary"
+    },
+    "startup_app": {
+        "uuid": "AdapterChannelTest",
+        "applicationIcon": "https://openfin.github.io/golden-prototype/favicon.ico",
+        "autoShow": true,
+        "url": "${APP_ROOT_URL}/index.html",
+        "contextMenu": true,
+        "defaultWidth": 600,
+        "defaultHeight": 600,
+        "defaultLeft": 0,
+        "defaultTop": 0,
+        "saveWindowState": false,
+        "backgroundThrottling": true,
+        "minHeight": 445,
+        "minWidth": 354
+    }
+}

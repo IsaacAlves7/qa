@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="sample.jnlp">
+  <information>
+    <title>SampleApp</title>
+    <vendor>OpenFin</vendor>
+    <description>Sample</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="openfin-desktop-java-example-7.1.1.jar" size="222876" download="null" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="com.openfin.desktop.demo.OpenFinDesktopDemo"  name="Sample" />
+  <update check="background"/>
+</jnlp>
